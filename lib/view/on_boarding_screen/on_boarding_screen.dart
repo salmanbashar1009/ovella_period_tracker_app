@@ -4,6 +4,8 @@ import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
 import 'package:ovella_period_tracker_app/view/on_boarding_screen/widgets/on_boarding_points.dart';
 
+import '../../theme/constant/images.dart';
+
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
 
@@ -17,6 +19,7 @@ class OnBoardingScreen extends StatelessWidget {
       backgroundColor: Colors.blue,
       body: Stack(
         children: [
+          Image.asset(AppImages.screenBackground),
           Positioned(
             bottom: 0,
             left: 0,
