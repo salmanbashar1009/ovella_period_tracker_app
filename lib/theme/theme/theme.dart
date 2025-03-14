@@ -37,7 +37,7 @@ class AppTheme {
 
       brightness: Brightness.light,
       textTheme: AppTextThemes.lightTextTheme,
-      scaffoldBackgroundColor: Colors.white,
+      scaffoldBackgroundColor: Colors.transparent,
       inputDecorationTheme:AppInputDecorationTheme.lightInputDecorationTheme
   );
 }
