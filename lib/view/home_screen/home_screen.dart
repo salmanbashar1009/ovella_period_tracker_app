@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
+import 'package:ovella_period_tracker_app/view/home_screen/widgets/header.dart';
 
 class HomeScreen extends StatelessWidget{
   const HomeScreen({super.key});
@@ -13,7 +14,7 @@ class HomeScreen extends StatelessWidget{
             child: SingleChildScrollView(
               child: Column(
                 children: [
-
+                  Header(),
                 ],
               ),
             ),

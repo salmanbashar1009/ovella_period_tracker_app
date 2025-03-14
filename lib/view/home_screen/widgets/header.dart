@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
 
-class HomeScreen extends StatelessWidget{
+class Header extends StatelessWidget{
+  const Header({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Row(
