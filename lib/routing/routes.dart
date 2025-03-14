@@ -9,7 +9,7 @@ class AppRoutes{
   static Map<String, WidgetBuilder> getRoutes(){
     return{
       RouteName.home : (context) => HomeScreen(),
-      RouteName.commuinty: (context)=>CommunityScreen(),
+      RouteName.community: (context)=>CommunityScreen(),
     };
   }
 }

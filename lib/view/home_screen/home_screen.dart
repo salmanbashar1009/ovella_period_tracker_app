@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ovella_period_tracker_app/constant/padding.dart';
 
 class HomeScreen extends StatelessWidget{
   const HomeScreen({super.key});
@@ -6,8 +7,17 @@ class HomeScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text("Home Screen"),
+      body: SafeArea(
+          child: Padding(
+              padding: AppPadding.screenPadding,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+
+                ],
+              ),
+            ),
+          ),
       ),
     );
   }
