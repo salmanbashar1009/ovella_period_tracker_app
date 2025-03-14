@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/view/community_screen/widget/inputDecoration.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/segment_button.dart';
 
 class CommunityScreen extends StatelessWidget {
@@ -11,7 +12,7 @@ class CommunityScreen extends StatelessWidget {
     
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(left: 20, right: 20),
+          padding: EdgeInsets.only(left: 24, right: 24),
           child: Column(
             children: [
               SizedBox(height: 22.h,),
@@ -66,9 +67,14 @@ class CommunityScreen extends StatelessWidget {
                     CustomSegmentedControl(
                       options: ["Forum","Groups","Events"], 
                       selectedIndex: 0,
-                       onSelectionChanged: (value){}
-                       
-                       ),
+                       onSelectionChanged: (value){}),
+                       SizedBox(height: 16.h,),
+
+        //-----------search-------------------------------------------------------
+                 TextFormField(
+                 decoration: inputDecoration(context,"Finds topics, groups and discussions",null,Icon(Icons.search),120.0)
+                 )
+
             ],
           ),
         ),
