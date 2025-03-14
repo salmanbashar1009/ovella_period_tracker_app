@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 
 class Utils{
@@ -11,7 +12,7 @@ class Utils{
     return GestureDetector(
       onTap: ()=>Navigator.pop(context),
       child: Container(
-        padding: EdgeInsets.all(14.r),
+        padding: AppPadding.iconPadding,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: Colors.white,
@@ -24,6 +25,16 @@ class Utils{
     );
   }
 
-  static Widget
+  /// Circle Container for icon
+  static Widget circleContainer({required Icon icon}){
+    return Container(
+      padding: AppPadding.iconPadding,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: Colors.white,
+      ),
+      child:  icon,
+    );
+  }
 
 }
