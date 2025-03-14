@@ -1,0 +1,91 @@
+import 'package:flutter/material.dart';
+import 'package:ovella_period_tracker_app/routing/route_name.dart';
+import 'package:ovella_period_tracker_app/utility/utils.dart';
+import 'package:ovella_period_tracker_app/view/on_boarding_screen/widgets/on_boarding_points.dart';
+
+class OnBoardingScreen extends StatelessWidget {
+  const OnBoardingScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    TextTheme textTheme = Theme.of(context).textTheme;
+    ColorScheme colorScheme = Theme.of(context).colorScheme;
+    return Scaffold(
+      backgroundColor: Colors.blue,
+      body: Stack(
+        children: [
+          Positioned(
+            bottom: 0,
+            left: 0,
+            child: Container(
+              height: height * 0.5,
+              width: width,
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(24),
+                  topRight: Radius.circular(24),
+                ),
+              ),
+              child: Column(
+                children: [
+                  Text("Your Circle, Your Circle, Your Circle"),
+                  SizedBox(height: 12),
+                  OnBoardingPoints(
+                    pointTitle: 'Smart cycle & Ovulation Tracking ',
+                  ),
+                  OnBoardingPoints(
+                    pointTitle: 'Smart cycle & Ovulation Tracking ',
+                  ),
+                  OnBoardingPoints(
+                    pointTitle: 'Smart cycle & Ovulation Tracking ',
+                  ),
+                  OnBoardingPoints(
+                    pointTitle: 'Smart cycle & Ovulation Tracking ',
+                  ),
+                  OnBoardingPoints(
+                    pointTitle: 'Smart cycle & Ovulation Tracking ',
+                  ),
+                  SizedBox(height: 24),
+                  Utils.primaryButton(
+                    title: 'Get Started',
+                    textTheme: textTheme,
+                    colorScheme: colorScheme,
+                    onTap: () {
+                      Navigator.pushNamed(context, RouteName.stepScreen);
+                    },
+                  ),
+                  RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'Already have an account? ',
+                          style: TextStyle(
+                            // Ensure text is visible
+                            fontSize: 16,
+                            color: Colors.black, // Change color based on theme
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Login here',
+                          style: TextStyle(
+                            // Ensure text is visible
+                            fontSize: 16,
+                            color: Colors.orange, // Change color based on theme
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
