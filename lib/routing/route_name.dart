@@ -5,4 +5,5 @@ class RouteName{
   static const String loginScreen = '/loginScreen';
   static const String home = '/homeScreen';
   static const String community ='/community';
+  static const String stepScreen = '/stepScreen';
 }
