@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
 import 'package:ovella_period_tracker_app/view/on_boarding_screen/widgets/on_boarding_points.dart';
@@ -32,22 +33,25 @@ class OnBoardingScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  Text("Your Circle, Your Circle, Your Circle"),
+                  Text("Your Cycle, Your Fertility, Your Way",style: textTheme.headlineMedium!.copyWith(fontWeight: FontWeight.w500),),
                   SizedBox(height: 12),
                   OnBoardingPoints(
-                    pointTitle: 'Smart cycle & Ovulation Tracking ',
+                    pointTitle: 'Smart Cycle & Ovulation Tracking',
                   ),
                   OnBoardingPoints(
-                    pointTitle: 'Smart cycle & Ovulation Tracking ',
+                    pointTitle: 'AI Health Assistant for Women’s Fertility',
                   ),
                   OnBoardingPoints(
-                    pointTitle: 'Smart cycle & Ovulation Tracking ',
+                    pointTitle: 'Fertility Insights & Conception Planning',
                   ),
                   OnBoardingPoints(
-                    pointTitle: 'Smart cycle & Ovulation Tracking ',
+                    pointTitle: 'Pregnancy Tracking & Support',
                   ),
                   OnBoardingPoints(
-                    pointTitle: 'Smart cycle & Ovulation Tracking ',
+                    pointTitle: 'Mental Well-being Guidance',
+                  ),
+                  OnBoardingPoints(
+                    pointTitle: 'Accessible & Affordable Reproductive Care',
                   ),
                   SizedBox(height: 24),
                   Utils.primaryButton(
@@ -58,6 +62,8 @@ class OnBoardingScreen extends StatelessWidget {
                       Navigator.pushNamed(context, RouteName.stepScreen);
                     },
                   ),
+
+                  SizedBox(height: 12.h,),
                   RichText(
                     text: TextSpan(
                       children: [
@@ -74,7 +80,7 @@ class OnBoardingScreen extends StatelessWidget {
                           style: TextStyle(
                             // Ensure text is visible
                             fontSize: 16,
-                            color: Colors.orange, // Change color based on theme
+                            color: colorScheme.secondary, // Change color based on theme
                           ),
                         ),
                       ],
