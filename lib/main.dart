@@ -9,6 +9,8 @@ import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/splash_onboarding_view_model_provider.dart';
 import 'package:provider/provider.dart';
 
+import 'view_model/step_screen_provider.dart';
+
 void main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,6 +38,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider<HomeScreenProvider>(create: (_)=> HomeScreenProvider(),),
         ChangeNotifierProvider<SplashOnBoardViewModelProvider>(create: (_)=> SplashOnBoardViewModelProvider(),),
+        ChangeNotifierProvider<StepScreenProvider>(create: (_)=> StepScreenProvider(),),
       ],
       child: ScreenUtilInit(
         designSize: const Size(deviceWidth, deviceHeight),
@@ -46,7 +49,11 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
             theme: AppTheme.lightTheme,
+
             initialRoute: RouteName.community,
+
+ 
+
             routes: AppRoutes.getRoutes(),
           );
         }

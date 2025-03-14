@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnBoardingPoints extends StatelessWidget {
   final String pointTitle;
@@ -7,12 +8,15 @@ class OnBoardingPoints extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    return Row(
-      children: [
-        Image.network('https://static.thenounproject.com/png/1019007-200.png',height: 24,width: 24,),
-        SizedBox(width: 12,),
-        Text(pointTitle,style: textTheme.bodyMedium,)
-      ],
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 5.h),
+      child: Row(
+        children: [
+          Image.asset('assets/images/on_boarding_screen/point_check.png',height: 24.h,width: 24.w,),
+          SizedBox(width: 12,),
+          Text(pointTitle,style: textTheme.bodyMedium,)
+        ],
+      ),
     );
   }
 }
