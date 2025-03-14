@@ -15,9 +15,6 @@ class PeriodTipsContainer extends StatelessWidget{
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20.r),
-          border: Border.all(
-            color: Colors.grey.withOpacity(0.08),
-          )
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,

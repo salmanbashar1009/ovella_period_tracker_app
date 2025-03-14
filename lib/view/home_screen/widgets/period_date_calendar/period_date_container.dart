@@ -44,7 +44,6 @@ class PeriodDateContainer extends StatelessWidget{
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24.r),
         color: Colors.white,
-        border: Border.all(color: Colors.grey.withOpacity(0.4),)
       ),
       child: Column(
         children: [
