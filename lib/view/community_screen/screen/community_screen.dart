@@ -20,12 +20,22 @@ class CommunityScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+
+                  ClipOval(child: Image.asset("assets/images/black3.jpeg",
+                  height: 48.h,
+                  width: 48.w,
+                  )),
+                  Expanded(child: SizedBox()),
                    Center(child: Text("Community",
                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                    fontSize: 19.sp,
                    fontWeight: FontWeight.w500,
                    color: Color(0xff1E1E1E)
-                   )))]),
+                   ))),
+                   Expanded(child: SizedBox()),
+                   Icon(Icons.ac_unit_rounded)
+                   
+                   ]),
               SizedBox(height:21.5.sp ,),
     //---------Sub title section----------------------------------
                    Align(
@@ -83,7 +93,13 @@ class CommunityScreen extends StatelessWidget {
                   fontWeight: FontWeight.w600
                  ),),
                   Expanded(child: SizedBox()),
-                 Text("See all")
+
+      //-------------See all -----------------------------------------------------
+                 GestureDetector(
+                  onTap: () {
+                    
+                  },
+                  child: Text("See all"))
         ] 
         
         ),
