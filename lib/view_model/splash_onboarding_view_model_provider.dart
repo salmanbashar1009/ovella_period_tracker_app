@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ovella_period_tracker_app/view/on_boarding_screen/on_boarding_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../routing/route_name.dart';
+
 class SplashOnBoardViewModelProvider extends ChangeNotifier{
 
   Future<void> splashController(BuildContext context) async {
@@ -11,8 +13,9 @@ class SplashOnBoardViewModelProvider extends ChangeNotifier{
     if (!context.mounted) return;
     if(isOpenFirst==null){
       prefs.setBool('isOpenFirst', true);
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>OnBoardingScreen()));
+      Navigator.pushNamed(context, RouteName.onboardingScreen);
     }else{
+      Navigator.pushNamed(context, RouteName.onboardingScreen);
     }
   }
 }
