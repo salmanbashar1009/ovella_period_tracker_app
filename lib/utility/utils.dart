@@ -37,4 +37,18 @@ class Utils{
     );
   }
 
+
+  /// primary Button
+  static Widget primaryButton({required String title,required TextTheme textTheme,required ColorScheme colorScheme}) {
+    return Container(
+      height: 56.h,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: Colors.black,
+        borderRadius: BorderRadius.circular(24),
+      ),
+      child: Center(child: Text(title, style: textTheme.bodyLarge!.copyWith(fontWeight: FontWeight.w500,color: colorScheme.onPrimary,))),
+    );
+  }
+
 }
