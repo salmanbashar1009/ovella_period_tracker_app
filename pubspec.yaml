@@ -34,6 +34,13 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  provider: ^6.1.2
+  flutter_screenutil: ^5.9.3
+  blur: ^4.0.0
+  http: ^1.3.0
+  shared_preferences: ^2.5.2
+  hive_flutter: ^1.1.0
+  intl: ^0.20.2
 
 dev_dependencies:
   flutter_test:
@@ -73,10 +80,18 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: CarosSoft
+      fonts:
+        - asset: assets/fonts/caros-soft/CarosSoft.otf
+        - asset: assets/fonts/caros-soft/CarosSoftBlack.otf
+        - asset: assets/fonts/caros-soft/CarosSoftLight.otf
+        - asset: assets/fonts/caros-soft/CarosSoftExtraLight.otf
+        - asset: assets/fonts/caros-soft/CarosSoftBold.otf
+        - asset: assets/fonts/caros-soft/CarosSoftExtraBold.otf
+        - asset: assets/fonts/caros-soft/CarosSoftHeavy.otf
+        - asset: assets/fonts/caros-soft/CarosSoftMedium.otf
+        - asset: assets/fonts/caros-soft/CarosSoftThin.otf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
