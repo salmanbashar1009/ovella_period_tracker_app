@@ -10,6 +10,8 @@ class AppRoutes{
     return{
       RouteName.home : (context) => HomeScreen(),
       RouteName.community: (context)=>CommunityScreen(),
+      RouteName.stepScreen : (context) => StepScreen(),
+      RouteName.onboardingScreen : (context) => OnBoardingScreen(),
     };
   }
 }
