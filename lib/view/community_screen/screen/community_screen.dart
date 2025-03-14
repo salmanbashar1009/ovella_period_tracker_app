@@ -73,7 +73,21 @@ class CommunityScreen extends StatelessWidget {
         //-----------search-------------------------------------------------------
                  TextFormField(
                  decoration: inputDecoration(context,"Finds topics, groups and discussions",null,Icon(Icons.search),120.0)
-                 )
+                 ),
+                 SizedBox(height: 24.h,),
+        //-----------catagory section----------------------------------------------
+        Row(children:[
+                 Text("Menstrual Health",
+                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  fontSize: 17.sp,
+                  fontWeight: FontWeight.w600
+                 ),),
+                  Expanded(child: SizedBox()),
+                 Text("See all")
+        ] 
+        
+        ),
+
 
             ],
           ),
