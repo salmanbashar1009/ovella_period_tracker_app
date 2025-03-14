@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ovella_period_tracker_app/routing/route_name.dart';
+import 'package:ovella_period_tracker_app/utility/utils.dart';
 import 'package:ovella_period_tracker_app/view/on_boarding_screen/widgets/on_boarding_points.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -8,6 +10,8 @@ class OnBoardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
+    TextTheme textTheme = Theme.of(context).textTheme;
+    ColorScheme colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       backgroundColor: Colors.blue,
       body: Stack(
@@ -30,25 +34,45 @@ class OnBoardingScreen extends StatelessWidget {
                 children: [
                   Text("Your Circle, Your Circle, Your Circle"),
                   SizedBox(height: 12),
-                  OnBoardingPoints(pointTitle: 'Smart cycle & Ovulation Tracking ',),
-                  OnBoardingPoints(pointTitle: 'Smart cycle & Ovulation Tracking ',),
-                  OnBoardingPoints(pointTitle: 'Smart cycle & Ovulation Tracking ',),
-                  OnBoardingPoints(pointTitle: 'Smart cycle & Ovulation Tracking ',),
-                  OnBoardingPoints(pointTitle: 'Smart cycle & Ovulation Tracking ',),
+                  OnBoardingPoints(
+                    pointTitle: 'Smart cycle & Ovulation Tracking ',
+                  ),
+                  OnBoardingPoints(
+                    pointTitle: 'Smart cycle & Ovulation Tracking ',
+                  ),
+                  OnBoardingPoints(
+                    pointTitle: 'Smart cycle & Ovulation Tracking ',
+                  ),
+                  OnBoardingPoints(
+                    pointTitle: 'Smart cycle & Ovulation Tracking ',
+                  ),
+                  OnBoardingPoints(
+                    pointTitle: 'Smart cycle & Ovulation Tracking ',
+                  ),
                   SizedBox(height: 24),
-                  PrimaryButton(title:'Get Started',),
+                  Utils.primaryButton(
+                    title: 'Get Started',
+                    textTheme: textTheme,
+                    colorScheme: colorScheme,
+                    onTap: () {
+                      Navigator.pushNamed(context, RouteName.stepScreen);
+                    },
+                  ),
                   RichText(
                     text: TextSpan(
                       children: [
                         TextSpan(
                           text: 'Already have an account? ',
-                          style: TextStyle( // Ensure text is visible
+                          style: TextStyle(
+                            // Ensure text is visible
                             fontSize: 16,
                             color: Colors.black, // Change color based on theme
                           ),
-                        ),TextSpan(
+                        ),
+                        TextSpan(
                           text: 'Login here',
-                          style: TextStyle( // Ensure text is visible
+                          style: TextStyle(
+                            // Ensure text is visible
                             fontSize: 16,
                             color: Colors.orange, // Change color based on theme
                           ),
@@ -56,33 +80,12 @@ class OnBoardingScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-
                 ],
               ),
             ),
           ),
         ],
       ),
-    );
-  }
-}
-
-class PrimaryButton extends StatelessWidget {
-  final String title;
-  const PrimaryButton({
-    super.key, required this.title,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 56,
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: Colors.black,
-        borderRadius: BorderRadius.circular(24)
-      ),
-      child: Center(child: Text(title,style: TextStyle(color: Colors.white),)),
     );
   }
 }
