@@ -3,6 +3,8 @@ import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/community_screen.dart';
 
 import '../view/home_screen/home_screen.dart';
+import '../view/on_boarding_screen/on_boarding_screen.dart';
+import '../view/step_screen/step_screen.dart';
 
 class AppRoutes{
 
