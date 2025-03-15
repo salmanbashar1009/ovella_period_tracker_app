@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
-import 'package:ovella_period_tracker_app/theme/constant/images.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/inputDecoration.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/CategoryCard1.dart';
+import 'package:ovella_period_tracker_app/view/community_screen/widget/listviewbuilder.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/segment_button.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 
@@ -121,18 +121,13 @@ class CommunityScreen extends StatelessWidget {
             //-------------List-view-builder---------------------------------------------
               SizedBox(
               height: 270.h, // Define a height to avoid layout issues
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 6,
-                itemBuilder: (BuildContext context, int index) {
-            return CategoryCard(
-              imagePath: "assets/images/black1.jpg",
-              title: "How much period blood is normal",
-              onTap: () {},
-            );
-                },
-              ),
-            ),
+              child: CategoryList(
+                categories: [
+                    {
+                  "imagePath": "assets/images/community/black2.jpeg",
+                  "title": "How much period blood is normal"}
+                ],
+              ),),
             SizedBox(height: 24.h,),
               //--------------------------------fertility- listview - builder---------------------
                   Row(children:[
@@ -156,7 +151,7 @@ class CommunityScreen extends StatelessWidget {
                 itemCount: 6,
                 itemBuilder: (BuildContext context, int index) {
             return CategoryCard(
-              imagePath: "assets/images/black2.jpeg",
+              imagePath: "assets/images/community/black2.jpeg",
               title: "How much period blood is normal",
               onTap: () {},
             );
@@ -188,7 +183,7 @@ class CommunityScreen extends StatelessWidget {
                 itemCount: 6,
                 itemBuilder: (BuildContext context, int index) {
             return CategoryCard(
-              imagePath: "assets/images/black3.jpeg",
+              imagePath: "assets/images/community/black3.jpeg",
               title: "How much period blood is normal",
               onTap: () {},
             );
