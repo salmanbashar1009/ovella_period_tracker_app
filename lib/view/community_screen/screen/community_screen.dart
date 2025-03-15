@@ -4,6 +4,7 @@ import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
+import 'package:ovella_period_tracker_app/view/community_screen/screen/event_screen.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/group_screen.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/categoryList.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/inputDecoration.dart';
@@ -183,6 +184,12 @@ class CommunityScreen extends StatelessWidget {
                     SizedBox(
                       height: 400.h,
                       child: GroupScreen()),
+
+                  SizedBox(height: 24.h,),
+                    SizedBox(
+                      height: 400.h,
+                      child: EventScreen()),
+
                   ],
                 ),
               ),

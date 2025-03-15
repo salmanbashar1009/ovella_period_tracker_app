@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
+import 'package:ovella_period_tracker_app/view/common_health_concerns_screen/common_health_concerns_screen.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/community_screen.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/fertility_screen.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/menstral_screen.dart';
@@ -20,9 +21,8 @@ class AppRoutes{
       RouteName.stepScreen : (context) => StepScreen(),
       RouteName.onboardingScreen : (context) => OnBoardingScreen(),
       RouteName.splashScreen : (context) => SplashScreen(),
-
+      RouteName.commonHealthConcernScreen : (context) => CommonHealthConcernsScreen(),
       RouteName.trackingScreen : (context) => TrackingScreen(),
-
       RouteName.menstralScreen : (context) => MenstralScreen(),
       RouteName.fertilityScreen:(context)=>FertilityScreen(),
       RouteName.sexualScreen:(context)=>SexualScreen(),
