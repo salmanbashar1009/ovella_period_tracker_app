@@ -46,9 +46,16 @@ class CalendarGrid extends StatelessWidget {
         final dayNumber = dayOffset + 1;
         final dayColor = provider.getDayColor(dayNumber);
 
-        return DayCell(
-          day: dayNumber,
-          backgroundColor: dayColor,
+        return Consumer<TrackingScreenProvider>(
+          builder: (context,trackingScreenProvider,child) {
+            return DayCell(
+              day: dayNumber,
+              backgroundColor: dayColor,
+              onTap: (){
+                trackingScreenProvider.onTapPeriodDate(dayNumber);
+              },
+            );
+          }
         );
       },
     );

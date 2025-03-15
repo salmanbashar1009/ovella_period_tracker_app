@@ -5,7 +5,6 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/routing/routes.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme.dart';
-import 'package:ovella_period_tracker_app/view/community_screen/screen/test.dart';
 import 'package:ovella_period_tracker_app/view_model/community_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/splash_onboarding_view_model_provider.dart';

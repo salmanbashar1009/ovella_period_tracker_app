@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/menstrual_fertitily_screen.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/pregnancy_screen.dart';
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
@@ -22,12 +23,12 @@ class _TrackingScreenState extends State<TrackingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: BackgroundWidget(
-        backgroundImage: "assets/images/community/screen_background.png",
+
         child: SafeArea(
           child: Padding(
             padding: AppPadding.screenPadding,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Align(
                   alignment: Alignment.center,
@@ -52,7 +53,7 @@ class _TrackingScreenState extends State<TrackingScreen> {
                   child: Consumer<TrackingScreenProvider>(
                     builder: (context, trackingScreenProvider, child) {
                       // Display different content based on selected tab
-                      return MenstrualFertilityScreen();
+                      return trackingScreenProvider.selectedIndex == 0 ? MenstrualFertilityScreen() : PregnancyScreen();
                     },
                     // Add more content for the selected tab here
                   ),
