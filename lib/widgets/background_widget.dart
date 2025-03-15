@@ -28,9 +28,7 @@ class BackgroundWidget extends StatelessWidget {
             ),
           ),
           Positioned.fill(
-            child: Container(
-              color: Colors.black.withOpacity(0.2),
-            ),
+            child: SizedBox()
           ),
           child, // Main content goes on top
         ],
