@@ -19,9 +19,7 @@ class CommunityScreen extends StatelessWidget {
       body:
       
       //  Stack(
-
         // children:[ 
-          
         //  Positioned.fill(
         //     child: Image.asset(
         //       filterQuality: FilterQuality.high,
@@ -55,7 +53,7 @@ class CommunityScreen extends StatelessWidget {
                          color: Color(0xff1E1E1E)
                          ))),
                         Spacer(),
-                       Utils.circleContainer(icon: Icon(Icons.notifications_none_outlined))
+                       Utils.circleContainer(imagePath: "assets/images/bell.png")
                          
                          ]),
                     SizedBox(height:21.5.sp ,),
