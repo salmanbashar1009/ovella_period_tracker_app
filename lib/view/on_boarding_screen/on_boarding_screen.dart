@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
 import 'package:ovella_period_tracker_app/view/on_boarding_screen/widgets/on_boarding_points.dart';
+import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 
 import '../../theme/constant/images.dart';
 
@@ -17,83 +18,90 @@ class OnBoardingScreen extends StatelessWidget {
     ColorScheme colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       backgroundColor: Colors.blue,
-      body: Stack(
-        children: [
-          Image.asset(AppImages.screenBackground),
-          Positioned(
-            bottom: 0,
-            left: 0,
-            child: Container(
-              height: height * 0.5,
-              width: width,
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(24),
-                  topRight: Radius.circular(24),
+      body: BackgroundWidget(
+        child: Stack(
+          children: [
+            Positioned(
+              bottom: 0,
+              left: 0,
+              child: Container(
+                height: height * 0.5,
+                width: width,
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(24),
+                    topRight: Radius.circular(24),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Text(
+                      "Your Cycle, Your Fertility, Your Way",
+                      style: textTheme.headlineMedium!.copyWith(
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    SizedBox(height: 12),
+                    OnBoardingPoints(
+                      pointTitle: 'Smart Cycle & Ovulation Tracking',
+                    ),
+                    OnBoardingPoints(
+                      pointTitle: 'AI Health Assistant for Women’s Fertility',
+                    ),
+                    OnBoardingPoints(
+                      pointTitle: 'Fertility Insights & Conception Planning',
+                    ),
+                    OnBoardingPoints(
+                      pointTitle: 'Pregnancy Tracking & Support',
+                    ),
+                    OnBoardingPoints(pointTitle: 'Mental Well-being Guidance'),
+                    OnBoardingPoints(
+                      pointTitle: 'Accessible & Affordable Reproductive Care',
+                    ),
+                    SizedBox(height: 24),
+                    Utils.primaryButton(
+                      title: 'Get Started',
+                      textTheme: textTheme,
+                      colorScheme: colorScheme,
+                      onTap: () {
+                        Navigator.pushNamed(context, RouteName.stepScreen);
+                      },
+                    ),
+
+                    SizedBox(height: 12.h),
+                    RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: 'Already have an account? ',
+                            style: TextStyle(
+                              // Ensure text is visible
+                              fontSize: 16,
+                              color:
+                                  Colors.black, // Change color based on theme
+                            ),
+                          ),
+                          TextSpan(
+                            text: 'Login here',
+                            style: TextStyle(
+                              // Ensure text is visible
+                              fontSize: 16,
+                              color:
+                                  colorScheme
+                                      .secondary, // Change color based on theme
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              child: Column(
-                children: [
-                  Text("Your Cycle, Your Fertility, Your Way",style: textTheme.headlineMedium!.copyWith(fontWeight: FontWeight.w500),),
-                  SizedBox(height: 12),
-                  OnBoardingPoints(
-                    pointTitle: 'Smart Cycle & Ovulation Tracking',
-                  ),
-                  OnBoardingPoints(
-                    pointTitle: 'AI Health Assistant for Women’s Fertility',
-                  ),
-                  OnBoardingPoints(
-                    pointTitle: 'Fertility Insights & Conception Planning',
-                  ),
-                  OnBoardingPoints(
-                    pointTitle: 'Pregnancy Tracking & Support',
-                  ),
-                  OnBoardingPoints(
-                    pointTitle: 'Mental Well-being Guidance',
-                  ),
-                  OnBoardingPoints(
-                    pointTitle: 'Accessible & Affordable Reproductive Care',
-                  ),
-                  SizedBox(height: 24),
-                  Utils.primaryButton(
-                    title: 'Get Started',
-                    textTheme: textTheme,
-                    colorScheme: colorScheme,
-                    onTap: () {
-                      Navigator.pushNamed(context, RouteName.stepScreen);
-                    },
-                  ),
-
-                  SizedBox(height: 12.h,),
-                  RichText(
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'Already have an account? ',
-                          style: TextStyle(
-                            // Ensure text is visible
-                            fontSize: 16,
-                            color: Colors.black, // Change color based on theme
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'Login here',
-                          style: TextStyle(
-                            // Ensure text is visible
-                            fontSize: 16,
-                            color: colorScheme.secondary, // Change color based on theme
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
