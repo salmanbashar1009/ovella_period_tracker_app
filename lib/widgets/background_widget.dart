@@ -22,7 +22,7 @@ class BackgroundWidget extends StatelessWidget {
             child: Image.asset(
               height: ScreenUtil().screenHeight,
               width: ScreenUtil().screenWidth,
-              backgroundImage,
+              backgroundImage ,
               fit: BoxFit.cover,
               alignment: Alignment.center,
             ),
