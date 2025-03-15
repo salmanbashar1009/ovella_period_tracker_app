@@ -5,12 +5,19 @@ import '../view/step_screen/widget/Parts/step3.dart';
 
 class StepScreenProvider extends ChangeNotifier{
   int currentIndex = 0;
+  String stepOneMode = 'Default';
+
   final PageController pageController = PageController();
 
   final List<Widget> carouselItems = [Step1(), Step2(), Step3()];
 
   void updateIndex(int index){
     currentIndex = index;
+    notifyListeners();
+  }
+
+  void stepOneModeSelection(String modeName){
+    stepOneMode = modeName;
     notifyListeners();
   }
 

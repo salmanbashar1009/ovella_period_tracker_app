@@ -28,8 +28,9 @@ class _StepScreenState extends State<StepScreen> {
                 child: Column(
                   children: [
                     HeaderWidget(textTheme: textTheme),
+                    SizedBox(height: 22.h),
 
-                    // Page Indicator Dots
+                    // Page Indicator
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: List.generate(
@@ -51,8 +52,8 @@ class _StepScreenState extends State<StepScreen> {
                         },
                       ),
                     ),
+                    SizedBox(height: 20.h),
 
-                    SizedBox(height: 20),
                     // PageView Carousel
                     Expanded(
                       child: PageView.builder(
