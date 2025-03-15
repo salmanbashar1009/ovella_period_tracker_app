@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
+import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
+import 'package:ovella_period_tracker_app/view/community_screen/screen/group_screen.dart';
+import 'package:ovella_period_tracker_app/view/community_screen/widget/categoryList.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/inputDecoration.dart';
-import 'package:ovella_period_tracker_app/view/community_screen/widget/CategoryCard1.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/listviewbuilder.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/segment_button.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
@@ -17,8 +19,7 @@ class CommunityScreen extends StatelessWidget {
     return Scaffold(
     
       body:
-      
-      //  Stack(
+        //  Stack(
         // children:[ 
         //  Positioned.fill(
         //     child: Image.asset(
@@ -41,7 +42,7 @@ class CommunityScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
             
-                        ClipOval(child: Image.asset("assets/images/black3.jpeg",
+                        ClipOval(child: Image.asset("assets/images/community/black3.jpeg",
                         height: 48.h,
                         width: 48.w,
                         )),
@@ -53,7 +54,7 @@ class CommunityScreen extends StatelessWidget {
                          color: Color(0xff1E1E1E)
                          ))),
                         Spacer(),
-                       Utils.circleContainer(imagePath: "assets/images/bell.png")
+                       Utils.circleContainer(imagePath: "assets/images/icons/bell.png")
                          
                          ]),
                     SizedBox(height:21.5.sp ,),
@@ -95,8 +96,7 @@ class CommunityScreen extends StatelessWidget {
             
                           CustomSegmentedControl(
                             options: ["Forum","Groups","Events"], 
-                            selectedIndex: 0,
-                             onSelectionChanged: (value){}),
+                          ),
                              SizedBox(height: 16.h,),
             
               //-----------search-------------------------------------------------------
@@ -104,7 +104,7 @@ class CommunityScreen extends StatelessWidget {
                        decoration: inputDecoration(context,"Finds topics, groups and discussions",null,Icon(Icons.search),120.0)
                        ),
                        SizedBox(height: 24.h,),
-              //-----------catagory section----------------------------------------------
+              //-----------Menstrual catagory section----------------------------------------------
               Row(children:[
                        Text("Menstrual Health",
                        style: Theme.of(context).textTheme.bodyLarge,
@@ -113,7 +113,9 @@ class CommunityScreen extends StatelessWidget {
             
             //-------------See all -----------------------------------------------------
                        GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pushNamed(context, RouteName.menstralScreen);
+                        },
                         child: Text("See all"),
                         
                         )]),
@@ -122,11 +124,10 @@ class CommunityScreen extends StatelessWidget {
               SizedBox(
               height: 270.h, // Define a height to avoid layout issues
               child: CategoryList(
-                categories: [
-                    {
-                  "imagePath": "assets/images/community/black2.jpeg",
-                  "title": "How much period blood is normal"}
-                ],
+                right: 12.w,
+                categories: categories1,
+                
+              
               ),),
             SizedBox(height: 24.h,),
               //--------------------------------fertility- listview - builder---------------------
@@ -138,26 +139,20 @@ class CommunityScreen extends StatelessWidget {
             
             //-------------See all -----------------------------------------------------
                        GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                             Navigator.pushNamed(context, RouteName.fertilityScreen);
+                        },
                         child: Text("See all"),
                         
                         )]),
                         SizedBox(height: 16.h,),
             //-------------Fertility List-view-builder---------------------------------------------
-              SizedBox(
-              height: 270.h, 
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 6,
-                itemBuilder: (BuildContext context, int index) {
-            return CategoryCard(
-              imagePath: "assets/images/community/black2.jpeg",
-              title: "How much period blood is normal",
-              onTap: () {},
-            );
-                },
-              ),
-            ),
+               SizedBox(
+              height: 270.h, // Define a height to avoid layout issues
+              child: CategoryList(
+                right: 12.w,
+                categories: categories2,
+                 )),
             SizedBox(height: 24.h,),
                     
             //-------------------sex - listviewBuilder-----------------------------------
@@ -170,37 +165,31 @@ class CommunityScreen extends StatelessWidget {
             
             //-------------See all -----------------------------------------------------
                        GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                             Navigator.pushNamed(context, RouteName.sexualScreen);
+                        },
                         child: Text("See all"),
                         
                         )]),
                         SizedBox(height: 16.h,),
             //-------------Fertility List-view-builder---------------------------------------------
-              SizedBox(
-              height: 270.h, 
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 6,
-                itemBuilder: (BuildContext context, int index) {
-            return CategoryCard(
-              imagePath: "assets/images/community/black3.jpeg",
-              title: "How much period blood is normal",
-              onTap: () {},
-            );
-                },
-              ),
-            ),
+               SizedBox(
+              height: 270.h, // Define a height to avoid layout issues
+              child: CategoryList(
+                right: 12.w,
+                categories: categories3,
+                 )),
             SizedBox(height: 24.h,),
-                    
+                    SizedBox(
+                      height: 400.h,
+                      child: GroupScreen()),
                   ],
                 ),
               ),
             ),
                     ),
           ),
-    //  ]
-     
-    //  ),
+    //  ]),
     );
   }
 }

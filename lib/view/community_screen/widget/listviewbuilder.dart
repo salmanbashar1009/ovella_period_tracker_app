@@ -1,22 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/CategoryCard1.dart';
+import 'package:ovella_period_tracker_app/model/catagoryModel.dart';
 
+// ignore: must_be_immutable
 class CategoryList extends StatelessWidget {
-  final List<Map<String, String>> categories;
-
-  const CategoryList({Key? key, required this.categories}) : super(key: key);
+  final List<CategoryModel> categories;
+  Axis? scrollDirection;
+  double? size;
+  double? val;
+  double? right;
+   CategoryList({Key? key, required this.categories, this.scrollDirection , this.size, this.val,this.right}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 150, // Adjust height based on your design
+      height: size ?? 150, // Adjust height based on your design
       child: ListView.builder(
-        scrollDirection: Axis.horizontal,
+        scrollDirection: scrollDirection ?? Axis.horizontal,
         itemCount: categories.length,
         itemBuilder: (BuildContext context, int index) {
           return CategoryCard(
-            imagePath: categories[index]['imagePath']!,
-            title: categories[index]['title']!,
+            val: val,
+            right: right,
+            imagePath: categories[index].imagePath,
+            title: categories[index].title,
             onTap: () {}, // Add your onTap functionality here
           );
         },
