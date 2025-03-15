@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/CategoryCard1.dart';
+import 'package:ovella_period_tracker_app/model/catagoryModel.dart';
 
 class CategoryList extends StatelessWidget {
-  final List<Map<String, String>> categories;
+  final List<CategoryModel> categories;
 
   const CategoryList({Key? key, required this.categories}) : super(key: key);
 
@@ -15,8 +16,8 @@ class CategoryList extends StatelessWidget {
         itemCount: categories.length,
         itemBuilder: (BuildContext context, int index) {
           return CategoryCard(
-            imagePath: categories[index]['imagePath']!,
-            title: categories[index]['title']!,
+            imagePath: categories[index].imagePath,
+            title: categories[index].title,
             onTap: () {}, // Add your onTap functionality here
           );
         },
