@@ -6,4 +6,5 @@ class RouteName{
   static const String home = '/homeScreen';
   static const String community ='/community';
   static const String stepScreen = '/stepScreen';
+  static const String commonHealthConcernScreen = '/commonHealthConcernScreen';
 }

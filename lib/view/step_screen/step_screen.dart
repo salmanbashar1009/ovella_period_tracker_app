@@ -26,7 +26,7 @@ class _StepScreenState extends State<StepScreen> {
                 padding: EdgeInsets.symmetric(horizontal: 20.h),
                 child: Column(
                   children: [
-                    HeaderWidget(textTheme: textTheme),
+                    StepScreenHeaderWidget(textTheme: textTheme),
                     SizedBox(height: 22.h),
 
                     // Page Indicator
@@ -42,7 +42,7 @@ class _StepScreenState extends State<StepScreen> {
                             height: 2.h,
                             decoration: BoxDecoration(
                               color:
-                                  stepScreenProvider.currentIndex == index
+                                  stepScreenProvider.currentIndex >= index
                                       ? colorScheme.secondary
                                       : Color(0xff1E1E1E).withOpacity(0.12),
                               borderRadius: BorderRadius.circular(8),
@@ -61,6 +61,7 @@ class _StepScreenState extends State<StepScreen> {
                         onPageChanged: (index) {
                           stepScreenProvider.updateIndex(index);
                         },
+                        physics: NeverScrollableScrollPhysics(), // Disables user swiping
                         itemBuilder: (BuildContext context, int index) {
                           return stepScreenProvider.carouselItems[index];
                         },

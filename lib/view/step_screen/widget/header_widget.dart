@@ -7,8 +7,8 @@ import '../../../constant/padding.dart';
 import '../../../theme/theme/theme_extensions/color_palette.dart';
 import '../../../utility/utils.dart';
 
-class HeaderWidget extends StatelessWidget {
-  const HeaderWidget({super.key, required this.textTheme});
+class StepScreenHeaderWidget extends StatelessWidget {
+  const StepScreenHeaderWidget({super.key, required this.textTheme});
 
   final TextTheme textTheme;
 
@@ -24,26 +24,30 @@ class HeaderWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 GestureDetector(
-                  onTap: (){
-                    if(stepScreenProvider.stepOneMode=="age"){
+                  onTap: () {
+                    if (stepScreenProvider.currentIndex>0) {
+                      stepScreenProvider.updatePage(stepScreenProvider.currentIndex-1);
+                    } else if (stepScreenProvider.stepOneMode == "age") {
                       stepScreenProvider.stepOneModeSelection('default');
-                    }else if(stepScreenProvider.stepOneMode=="language"){
+                    } else if (stepScreenProvider.stepOneMode == "language") {
                       stepScreenProvider.stepOneModeSelection('age');
-                    }else{
+                    } else {
                       Navigator.pop(context);
                     }
                   },
-                    child: Container(
-                      padding: AppPadding.iconPadding,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
-                      ),
-                      child: Icon(Icons.arrow_back_ios_outlined,
-                        color: AppColors.iconColor,
-                        size: 20.r,
-                      ),
-                    )),
+                  child: Container(
+                    padding: AppPadding.iconPadding,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.white,
+                    ),
+                    child: Icon(
+                      Icons.arrow_back_ios_outlined,
+                      color: AppColors.iconColor,
+                      size: 20.r,
+                    ),
+                  ),
+                ),
                 SizedBox(width: 82.h),
                 Text(
                   'Step ${stepScreenProvider.currentIndex + 1} of ${stepScreenProvider.carouselItems.length}',

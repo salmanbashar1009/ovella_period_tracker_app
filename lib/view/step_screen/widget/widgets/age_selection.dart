@@ -44,6 +44,9 @@ class AgeSelection extends StatelessWidget {
             SizedBox(
               height: 302.h,
               child: CupertinoPicker(
+                scrollController: FixedExtentScrollController(
+                  initialItem: _allAges.indexOf(stepScreenProvider.selectedAge), // Initially selected value
+                ),
                 offAxisFraction: 0,
                 magnification: 1.2,
                 squeeze: 1.2,
@@ -75,7 +78,7 @@ class AgeSelection extends StatelessWidget {
         ),
         SizedBox(height: 24.h,),
         Utils.primaryButton(
-          title: 'Next',
+          title: 'Continue',
           textTheme: textTheme,
           colorScheme: colorScheme,
           onTap: () {

@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
             theme: AppTheme.lightTheme,
-            initialRoute: RouteName.stepScreen,
+            initialRoute: RouteName.splashScreen,
             routes: AppRoutes.getRoutes(),
           );
         }

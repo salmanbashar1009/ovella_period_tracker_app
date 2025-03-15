@@ -55,10 +55,18 @@ class Step1 extends StatelessWidget {
                 ),
                 SizedBox(height: 8.h),
                 TextFormField(
+                  controller: stepScreenProvider.nameController,
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return "please enter your Full Name";
+                    } else {
+                      return null;
+                    }
+                  },
                   style: textTheme.bodyMedium!.copyWith(
                     fontWeight: FontWeight.w500,
                   ),
-                  decoration: InputDecoration(hintText: 'Name'),
+                  decoration: InputDecoration(hintText: 'Name',errorStyle: textTheme.bodySmall!.copyWith(color: colorScheme.onError)),
                 ),
                 SizedBox(height: 12.h),
                 Text(
@@ -71,17 +79,27 @@ class Step1 extends StatelessWidget {
                 SizedBox(height: 8.h),
                 GestureDetector(
                   onTap: () {
-                    stepScreenProvider.stepOneModeSelection('age');
+                    if (formkey.currentState!.validate()) {
+                      stepScreenProvider.stepOneModeSelection('age');
+                    }
                   },
                   child: Container(
                     height: 54.h,
                     width: double.infinity,
+                    padding: EdgeInsets.all(16.h),
                     decoration: BoxDecoration(
                       color: AppColors.onPrimary,
                       border: Border.all(
                         color: Color(0xff1E1E1E).withOpacity(0.12),
                       ),
                       borderRadius: BorderRadius.circular(16.r),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(stepScreenProvider.selectedAge.toString(),style: textTheme.bodyMedium,),
+                        Icon(Icons.keyboard_arrow_down_outlined,color: Color(0xff6B788E),)
+                      ],
                     ),
                   ),
                 ),
@@ -96,17 +114,27 @@ class Step1 extends StatelessWidget {
                 SizedBox(height: 8.h),
                 GestureDetector(
                   onTap: () {
-                    stepScreenProvider.stepOneModeSelection('language');
+                    if (formkey.currentState!.validate()) {
+                      stepScreenProvider.stepOneModeSelection('language');
+                    }
                   },
                   child: Container(
                     height: 54.h,
                     width: double.infinity,
+                    padding: EdgeInsets.all(16.h),
                     decoration: BoxDecoration(
                       color: AppColors.onPrimary,
                       border: Border.all(
                         color: Color(0xff1E1E1E).withOpacity(0.12),
                       ),
                       borderRadius: BorderRadius.circular(16.r),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(stepScreenProvider.selectedLanguage,style: textTheme.bodyMedium,),
+                        Icon(Icons.keyboard_arrow_down_outlined,color: Color(0xff6B788E),)
+                      ],
                     ),
                   ),
                 ),
