@@ -26,16 +26,28 @@ class Utils{
   }
 
   /// Circle Container for icon
-  static Widget circleContainer({required Icon icon}){
-    return Container(
-      padding: AppPadding.iconPadding,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: Colors.white,
-      ),
-      child:  icon,
-    );
-  }
+  static Widget circleContainer({Icon? icon, String? imagePath}) {
+  return Container(
+    padding: AppPadding.iconPadding,
+    decoration: const BoxDecoration(
+      shape: BoxShape.circle,
+      color: Colors.white,
+    ),
+    child: icon != null
+        ? icon // Show icon if provided
+        : (imagePath != null
+            ? ClipOval(
+                child: Image.asset(
+                  imagePath,
+                  width: 20, // Adjust size as needed
+                  height: 20,
+                  fit: BoxFit.cover,
+                ),
+              )
+            : const SizedBox()), // Empty widget if neither icon nor image is provided
+  );
+}
+
 
 
   /// primary Button

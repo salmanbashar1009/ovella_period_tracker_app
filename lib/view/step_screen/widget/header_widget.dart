@@ -21,7 +21,11 @@ class HeaderWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Utils.backButton(context),
+                GestureDetector(
+                  onTap: (){
+
+                  },
+                    child: Utils.backButton(context)),
                 SizedBox(width: 82.h),
                 Text(
                   'Step ${stepScreenProvider.currentIndex + 1} of ${stepScreenProvider.carouselItems.length}',
