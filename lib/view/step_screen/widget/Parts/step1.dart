@@ -32,95 +32,97 @@ class Step1 extends StatelessWidget {
         }
         return Form(
           key: formkey,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text("Let's Get to Know You", style: textTheme.headlineLarge),
-              Text(
-                "Share more about yourself to help us tailor your experience",
-                style: textTheme.bodyMedium!.copyWith(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 15.h,
-                ),
-              ),
-              SizedBox(height: 16.h),
-              Text(
-                "Full Name",
-                style: textTheme.bodyMedium!.copyWith(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 15.h,
-                ),
-              ),
-              SizedBox(height: 8.h),
-              TextFormField(
-                style: textTheme.bodyMedium!.copyWith(
-                  fontWeight: FontWeight.w500,
-                ),
-                decoration: InputDecoration(hintText: 'Name'),
-              ),
-              SizedBox(height: 12.h),
-              Text(
-                "Age",
-                style: textTheme.bodyMedium!.copyWith(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 15.h,
-                ),
-              ),
-              SizedBox(height: 8.h),
-              GestureDetector(
-                onTap: () {
-                  stepScreenProvider.stepOneModeSelection('age');
-                },
-                child: Container(
-                  height: 54.h,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: AppColors.onPrimary,
-                    border: Border.all(
-                      color: Color(0xff1E1E1E).withOpacity(0.12),
-                    ),
-                    borderRadius: BorderRadius.circular(16.r),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Let's Get to Know You", style: textTheme.headlineLarge),
+                Text(
+                  "Share more about yourself to help us tailor your experience",
+                  style: textTheme.bodyMedium!.copyWith(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 15.h,
                   ),
                 ),
-              ),
-              SizedBox(height: 12.h),
-              Text(
-                "Preferred Language",
-                style: textTheme.bodyMedium!.copyWith(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 15.h,
-                ),
-              ),
-              SizedBox(height: 8.h),
-              GestureDetector(
-                onTap: () {
-                  stepScreenProvider.stepOneModeSelection('language');
-                },
-                child: Container(
-                  height: 54.h,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: AppColors.onPrimary,
-                    border: Border.all(
-                      color: Color(0xff1E1E1E).withOpacity(0.12),
-                    ),
-                    borderRadius: BorderRadius.circular(16.r),
+                SizedBox(height: 16.h),
+                Text(
+                  "Full Name",
+                  style: textTheme.bodyMedium!.copyWith(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 15.h,
                   ),
                 ),
-              ),
-              SizedBox(height: 24.h,),
-              Utils.primaryButton(
-                title: 'Next',
-                textTheme: textTheme,
-                colorScheme: colorScheme,
-                onTap: () {
-                  if (formkey.currentState!.validate()) {
+                SizedBox(height: 8.h),
+                TextFormField(
+                  style: textTheme.bodyMedium!.copyWith(
+                    fontWeight: FontWeight.w500,
+                  ),
+                  decoration: InputDecoration(hintText: 'Name'),
+                ),
+                SizedBox(height: 12.h),
+                Text(
+                  "Age",
+                  style: textTheme.bodyMedium!.copyWith(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 15.h,
+                  ),
+                ),
+                SizedBox(height: 8.h),
+                GestureDetector(
+                  onTap: () {
                     stepScreenProvider.stepOneModeSelection('age');
-                  }
-                },
-              ),
-            ],
+                  },
+                  child: Container(
+                    height: 54.h,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: AppColors.onPrimary,
+                      border: Border.all(
+                        color: Color(0xff1E1E1E).withOpacity(0.12),
+                      ),
+                      borderRadius: BorderRadius.circular(16.r),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 12.h),
+                Text(
+                  "Preferred Language",
+                  style: textTheme.bodyMedium!.copyWith(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 15.h,
+                  ),
+                ),
+                SizedBox(height: 8.h),
+                GestureDetector(
+                  onTap: () {
+                    stepScreenProvider.stepOneModeSelection('language');
+                  },
+                  child: Container(
+                    height: 54.h,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: AppColors.onPrimary,
+                      border: Border.all(
+                        color: Color(0xff1E1E1E).withOpacity(0.12),
+                      ),
+                      borderRadius: BorderRadius.circular(16.r),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 24.h,),
+                Utils.primaryButton(
+                  title: 'Next',
+                  textTheme: textTheme,
+                  colorScheme: colorScheme,
+                  onTap: () {
+                    if (formkey.currentState!.validate()) {
+                      stepScreenProvider.stepOneModeSelection('age');
+                    }
+                  },
+                ),
+              ],
+            ),
           ),
         );
       },
