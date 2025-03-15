@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/view_model/step_screen_provider.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 import 'package:provider/provider.dart';
-import '../../theme/constant/images.dart';
 import 'widget/header_widget.dart';
 
 class StepScreen extends StatefulWidget {
@@ -27,9 +26,10 @@ class _StepScreenState extends State<StepScreen> {
                 padding: EdgeInsets.symmetric(horizontal: 20.h),
                 child: Column(
                   children: [
-                    HeaderWidget(textTheme: textTheme),
+                    StepScreenHeaderWidget(textTheme: textTheme),
+                    SizedBox(height: 22.h),
 
-                    // Page Indicator Dots
+                    // Page Indicator
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: List.generate(
@@ -42,7 +42,7 @@ class _StepScreenState extends State<StepScreen> {
                             height: 2.h,
                             decoration: BoxDecoration(
                               color:
-                                  stepScreenProvider.currentIndex == index
+                                  stepScreenProvider.currentIndex >= index
                                       ? colorScheme.secondary
                                       : Color(0xff1E1E1E).withOpacity(0.12),
                               borderRadius: BorderRadius.circular(8),
@@ -51,8 +51,8 @@ class _StepScreenState extends State<StepScreen> {
                         },
                       ),
                     ),
+                    SizedBox(height: 20.h),
 
-                    SizedBox(height: 20),
                     // PageView Carousel
                     Expanded(
                       child: PageView.builder(
@@ -61,6 +61,7 @@ class _StepScreenState extends State<StepScreen> {
                         onPageChanged: (index) {
                           stepScreenProvider.updateIndex(index);
                         },
+                        physics: NeverScrollableScrollPhysics(), // Disables user swiping
                         itemBuilder: (BuildContext context, int index) {
                           return stepScreenProvider.carouselItems[index];
                         },

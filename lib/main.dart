@@ -57,12 +57,8 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
             theme: AppTheme.lightTheme,
-
-
-            initialRoute: RouteName.trackingScreen,
-
-
-            routes: AppRoutes.getRoutes(),
+           initialRoute: RouteName.splashScreen,
+           routes: AppRoutes.getRoutes(),
           );
         }
       ),
