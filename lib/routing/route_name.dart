@@ -6,4 +6,7 @@ class RouteName{
   static const String home = '/homeScreen';
   static const String community ='/community';
   static const String stepScreen = '/stepScreen';
+  static const String menstralScreen = '/menstralScreen';
+  static const String fertilityScreen = '/fertilityScreen';
+  static const String sexualScreen ='/sexualScreen';
 }

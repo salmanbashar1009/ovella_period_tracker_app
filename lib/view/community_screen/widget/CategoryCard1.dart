@@ -5,12 +5,15 @@ class CategoryCard extends StatelessWidget {
   final String imagePath;
   final String title;
   final VoidCallback? onTap; 
-
+  final double? val;
+  final double? right;
   const CategoryCard({
     Key? key,
     required this.imagePath,
     required this.title,
     this.onTap,
+    this.val,
+    this.right
   }) : super(key: key);
 
   @override
@@ -19,7 +22,7 @@ class CategoryCard extends StatelessWidget {
       onTap: onTap, 
       child: Container(
         width: 270.w,
-        margin: EdgeInsets.only(right: 12.w),
+        margin: EdgeInsets.only(right: right ?? 0, bottom: val ?? 0),
         padding: EdgeInsets.all(8.w),
         decoration: BoxDecoration(
           color: Colors.white,
@@ -29,7 +32,7 @@ class CategoryCard extends StatelessWidget {
           ],
         ),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(12.r),

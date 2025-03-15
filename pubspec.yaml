@@ -76,6 +76,7 @@ flutter:
     - assets/images/splash_screen/
     - assets/images/community/
     - assets/images/icons/
+    - assets/images/person/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
