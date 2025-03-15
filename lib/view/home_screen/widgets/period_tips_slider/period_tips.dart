@@ -1,7 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ovella_period_tracker_app/view/home_screen/widgets/period_tips_slider/period_tips_container.dart';
 import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:provider/provider.dart';
