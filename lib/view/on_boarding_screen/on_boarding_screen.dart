@@ -28,7 +28,7 @@ class OnBoardingScreen extends StatelessWidget {
             bottom: 0,
             left: 0,
             child: Container(
-              height: height * 0.5,
+              height: 399.h,
               width: width,
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               decoration: BoxDecoration(
