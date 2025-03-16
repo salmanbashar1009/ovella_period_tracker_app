@@ -9,16 +9,10 @@ import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.da
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 import 'package:provider/provider.dart';
 
-class TrackingScreen extends StatefulWidget {
+class TrackingScreen extends StatelessWidget {
   const TrackingScreen({super.key});
 
-  @override
-  State<TrackingScreen> createState() => _TrackingScreenState();
-}
-
-class _TrackingScreenState extends State<TrackingScreen> {
-  int selectedIndex = 0;
-
+  // int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
