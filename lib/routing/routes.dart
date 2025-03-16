@@ -28,11 +28,8 @@ class AppRoutes{
       RouteName.menstrualScreen : (context) => MenstralScreen(),
       RouteName.fertilityScreen:(context)=>FertilityScreen(),
       RouteName.sexualScreen:(context)=>SexualScreen(),
-<<<<<<< HEAD
       RouteName.pregnancyDetailsScreen:(context)=>PregnancyDetailScreen(),
-=======
       RouteName.pregnancyFertilityTracking:(context)=>PregnancyFertilityTracking(),
->>>>>>> b5c5ad6c0914b5dce2c62d34c7fb262c9471309f
     };
   }
 }
