@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../theme/theme/theme_extensions/color_palette.dart';
-import '../../../../utility/utils.dart';
-import '../../../../view_model/step_screen_provider.dart';
+import '../../../theme/theme/theme_extensions/color_palette.dart';
+import '../../../utility/utils.dart';
+import '../../../view_model/step_screen_provider.dart';
 
 class LanguageSelection extends StatelessWidget {
   const LanguageSelection({
@@ -76,13 +76,17 @@ class LanguageSelection extends StatelessWidget {
           ],
         ),
         SizedBox(height: 24.h),
-        Utils.primaryButton(
-          title: 'Continue',
-          textTheme: textTheme,
-          colorScheme: colorScheme,
-          onTap: () {
-            stepScreenProvider.updatePage(stepScreenProvider.currentIndex + 1);
-          },
+        SizedBox(
+          width: double.infinity,
+          child: Utils.primaryButton(
+            title: 'Continue',
+            textTheme: textTheme,
+            colorScheme: colorScheme,
+            padding: EdgeInsets.symmetric(horizontal: 32.w,vertical: 18.h),
+            onTap: () {
+              stepScreenProvider.updatePage(stepScreenProvider.currentIndex + 1);
+            },
+          ),
         ),
       ],
     );

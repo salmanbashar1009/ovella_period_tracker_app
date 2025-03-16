@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import '../view/step_screen/widget/Parts/step1.dart';
-import '../view/step_screen/widget/Parts/step2.dart';
-import '../view/step_screen/widget/Parts/step3.dart';
+
+import '../view/step_screen/Parts/step1.dart';
+import '../view/step_screen/Parts/step2.dart';
+import '../view/step_screen/Parts/step3.dart';
 
 class StepScreenProvider extends ChangeNotifier {
   ///<----------------Step Page -------->

@@ -82,13 +82,17 @@ class CommonHealthConcernsScreen extends StatelessWidget {
                       },
                     ),
                     SizedBox(height: 7.h,),
-                    Utils.primaryButton(
-                      title: 'Continue',
-                      textTheme: textTheme,
-                      colorScheme: colorScheme,
-                      onTap: () {
-                        Navigator.pushNamed(context, RouteName.pregnancyFertilityTracking);
-                      },
+                    SizedBox(
+                      width: double.infinity,
+                      child: Utils.primaryButton(
+                        title: 'Continue',
+                        textTheme: textTheme,
+                        colorScheme: colorScheme,
+                        padding: EdgeInsets.symmetric(horizontal: 32.w,vertical: 18.h),
+                        onTap: () {
+                          Navigator.pushNamed(context, RouteName.pregnancyFertilityTracking);
+                        },
+                      ),
                     ),
                   ],
                 ),
