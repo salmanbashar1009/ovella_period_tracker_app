@@ -133,9 +133,9 @@ class CommunityScreen extends StatelessWidget {
                       if (provider.selectedIndex == 0) {
                         return SizedBox(child: ForumScreen());
                       } else if (provider.selectedIndex == 1) {
-                        return SizedBox(height: 400.h, child: GroupScreen());
+                        return SizedBox(child: GroupScreen());
                       } else {
-                        return SizedBox(height: 300.h, child: EventScreen());
+                        return SizedBox(child: EventScreen());
                       }
                     },
                   ),
