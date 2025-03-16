@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/view_model/create_account_provider.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../utility/utils.dart';
 
-class CreateAccountPasswordForm extends StatelessWidget {
-  const CreateAccountPasswordForm({super.key});
+class LoginForm extends StatelessWidget {
+  const LoginForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class CreateAccountPasswordForm extends StatelessWidget {
           children: [
             SizedBox(height: 16.h),
             Text(
-              "Phone Number",
+              "Email",
               style: textTheme.bodyMedium!.copyWith(
                 fontWeight: FontWeight.w400,
                 fontSize: 15.h,
@@ -29,7 +30,7 @@ class CreateAccountPasswordForm extends StatelessWidget {
             TextFormField(
               validator: (value) {
                 if (value!.isEmpty) {
-                  return "please enter your Full Name";
+                  return "please enter your email";
                 } else {
                   return null;
                 }
@@ -38,7 +39,7 @@ class CreateAccountPasswordForm extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               ),
               decoration: InputDecoration(
-                hintText: 'Phone Number',
+                hintText: 'Email',
                 errorStyle: textTheme.bodySmall!.copyWith(
                   color: colorScheme.onError,
                 ),
@@ -80,50 +81,19 @@ class CreateAccountPasswordForm extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 24.h),
-            Row(
-              children: [
-                Checkbox(
-                  value: createAccountProvider.acceptTermsConditions,
-                  onChanged: createAccountProvider.updateAcceptTeamCondition,
-                ),
-                Expanded(
-                  child: RichText(
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'By signing up, you agree to our ',
-                          style: TextStyle(
-                            fontSize: 13.h,
-                            color: colorScheme.primary,
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'Terms ',
-                          style: TextStyle(
-                            fontSize: 13.h,
-                            color: colorScheme.secondary,
-                          ),
-                        ),
-                        TextSpan(
-                          text: '& ',
-                          style: TextStyle(
-                            fontSize: 13.h,
-                            color: colorScheme.primary,
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'Privacy Policy.',
-                          style: TextStyle(
-                            fontSize: 13.h,
-                            color: colorScheme.secondary,
-                          ),
-                        ),
-                      ],
-                    ),
+            SizedBox(height: 12.h),
+            Align(
+              alignment: Alignment.centerRight,
+              child: GestureDetector(
+                onTap: ()=>Navigator.pushNamed(context, RouteName.resetPasswordScreen),
+                child: Text(
+                  'Forgot Password?',
+                  style: textTheme.bodyMedium!.copyWith(
+                    fontSize: 13.h,
+                    color: Color(0xff676364),
                   ),
                 ),
-              ],
+              ),
             ),
             SizedBox(height: 24.h),
             SizedBox(

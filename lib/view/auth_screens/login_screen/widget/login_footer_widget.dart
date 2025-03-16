@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import '../../../../utility/utils.dart';
 
-class CreateAccountFooterWidget extends StatelessWidget {
-  const CreateAccountFooterWidget({super.key});
+class LoginFooterWidget extends StatelessWidget {
+  const LoginFooterWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,31 +41,24 @@ class CreateAccountFooterWidget extends StatelessWidget {
           ),
         ),
         SizedBox(height: 16.h),
-        InkWell(
-          onTap: (){
-            Navigator.pushNamed(context, RouteName.loginScreen);
-          },
-          child: RichText(
-            text: TextSpan(
-              children: [
-                TextSpan(
-                  text: 'Already have an account? ',
-                  style: TextStyle(
-                    // Ensure text is visible
-                    fontSize: 16,
-                    color: Colors.black, // Change color based on theme
-                  ),
+        RichText(
+          text: TextSpan(
+            children: [
+              TextSpan(
+                text: 'New to Ovella? ',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Color(0xff676364),
                 ),
-                TextSpan(
-                  text: 'Login here',
-                  style: TextStyle(
-                    // Ensure text is visible
-                    fontSize: 16,
-                    color: colorScheme.secondary, // Change color based on theme
-                  ),
+              ),
+              TextSpan(
+                text: 'Create an account',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: colorScheme.secondary,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ],

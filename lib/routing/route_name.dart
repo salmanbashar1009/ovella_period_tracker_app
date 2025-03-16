@@ -13,4 +13,7 @@ class RouteName{
   static const String commonHealthConcernScreen = '/commonHealthConcernScreen';
   static const String pregnancyFertilityTracking = '/pregnancyFertilityTracking';
   static const String createAccountScreen = '/createAccountScreen';
+  static const String resetPasswordScreen = '/resetPassword';
+  static const String otpScreen = '/otpScreen';
+  static const String createNewPassword = '/createNewPassword';
 }

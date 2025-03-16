@@ -33,5 +33,11 @@ class CreateAccountProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  ///<<<--------------
+  ///<<<-------------- Term & condition --------->>
+  bool _acceptTermsConditions = false;
+  bool get acceptTermsConditions => _acceptTermsConditions;
+  void updateAcceptTeamCondition(value){
+    _acceptTermsConditions = value;
+    notifyListeners();
+  }
 }
