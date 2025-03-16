@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:provider/provider.dart';
-
 import '../../../../utility/utils.dart';
 import '../../../../view_model/step_screen_provider.dart';
-import '../widgets/toggle_question_widget.dart';
+import '../widget/toggle_question_widget.dart';
 
 class Step3 extends StatelessWidget {
   const Step3({super.key});
@@ -46,13 +45,17 @@ class Step3 extends StatelessWidget {
             ),
 
             SizedBox(height: 24.h),
-            Utils.primaryButton(
-              title: 'Next',
-              textTheme: textTheme,
-              colorScheme: colorScheme,
-              onTap: () {
-                Navigator.pushNamed(context, RouteName.commonHealthConcernScreen);
-              },
+            SizedBox(
+              width: double.infinity,
+              child: Utils.primaryButton(
+                title: 'Next',
+                textTheme: textTheme,
+                colorScheme: colorScheme,
+                padding: EdgeInsets.symmetric(horizontal: 32.w,vertical: 18.h),
+                onTap: () {
+                  Navigator.pushNamed(context, RouteName.commonHealthConcernScreen);
+                },
+              ),
             ),
           ],
         );

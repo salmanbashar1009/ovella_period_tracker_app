@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/view_model/step_screen_provider.dart';
 import 'package:provider/provider.dart';
 import '../../../../utility/utils.dart';
-import '../widgets/toggle_question_widget.dart';
+import '../widget/toggle_question_widget.dart';
 
 class Step2 extends StatelessWidget {
   const Step2({super.key});
@@ -61,15 +61,19 @@ class Step2 extends StatelessWidget {
                 maxLines: 4,
               ),
               SizedBox(height: 24.h),
-              Utils.primaryButton(
-                title: 'Next',
-                textTheme: textTheme,
-                colorScheme: colorScheme,
-                onTap: () {
-                  stepScreenProvider.updatePage(
-                    stepScreenProvider.currentIndex + 1,
-                  );
-                },
+              SizedBox(
+                width: double.infinity,
+                child: Utils.primaryButton(
+                  title: 'Next',
+                  textTheme: textTheme,
+                  colorScheme: colorScheme,
+                  padding: EdgeInsets.symmetric(horizontal: 32.w,vertical: 18.h),
+                  onTap: () {
+                    stepScreenProvider.updatePage(
+                      stepScreenProvider.currentIndex + 1,
+                    );
+                  },
+                ),
               ),
             ],
           ),

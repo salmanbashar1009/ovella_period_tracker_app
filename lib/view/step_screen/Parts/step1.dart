@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
-import 'package:ovella_period_tracker_app/view/step_screen/widget/widgets/language_selection.dart';
+import 'package:ovella_period_tracker_app/view/step_screen/widget/language_selection.dart';
 import 'package:ovella_period_tracker_app/view_model/step_screen_provider.dart';
 import 'package:provider/provider.dart';
-import '../widgets/age_selection.dart';
+import '../widget/age_selection.dart';
 
 class Step1 extends StatelessWidget {
   const Step1({super.key});
@@ -139,15 +139,19 @@ class Step1 extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 24.h,),
-                Utils.primaryButton(
-                  title: 'Next',
-                  textTheme: textTheme,
-                  colorScheme: colorScheme,
-                  onTap: () {
-                    if (formkey.currentState!.validate()) {
-                      stepScreenProvider.stepOneModeSelection('age');
-                    }
-                  },
+                SizedBox(
+                  width: double.infinity,
+                  child: Utils.primaryButton(
+                    title: 'Next',
+                    textTheme: textTheme,
+                    colorScheme: colorScheme,
+                    padding: EdgeInsets.symmetric(horizontal: 32.w,vertical: 18.h),
+                    onTap: () {
+                      if (formkey.currentState!.validate()) {
+                        stepScreenProvider.stepOneModeSelection('age');
+                      }
+                    },
+                  ),
                 ),
               ],
             ),

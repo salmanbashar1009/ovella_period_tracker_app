@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
-import '../../utility/utils.dart';
-import 'widgets/health_concern_selected_button.dart';
-import 'package:ovella_period_tracker_app/view_model/step_screen_provider.dart';
+import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 import 'package:provider/provider.dart';
-import '../../widgets/background_widget.dart';
-import 'widgets/common_heath_concern_header_widget.dart';
+import '../../utility/utils.dart';
+import '../../view_model/step_screen_provider.dart';
+import '../common_health_concerns_screen/widgets/common_heath_concern_header_widget.dart';
+import '../common_health_concerns_screen/widgets/health_concern_selected_button.dart';
 
-class CommonHealthConcernsScreen extends StatelessWidget {
-  const CommonHealthConcernsScreen({super.key});
+class PregnancyFertilityTracking extends StatelessWidget {
+  const PregnancyFertilityTracking({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,11 +29,11 @@ class CommonHealthConcernsScreen extends StatelessWidget {
                     CommonHeathScreenConcernHeaderWidget(),
                     SizedBox(height: 24.h),
                     Text(
-                      "Let's Get to Know You",
+                      "Pregnancy & Fertility Tracking",
                       style: textTheme.headlineLarge,
                     ),
                     Text(
-                      "Share more about yourself to help us tailor your experience",
+                      "Track your fertility and pregnancy journey with key health insights.",
                       style: textTheme.bodyMedium!.copyWith(
                         fontWeight: FontWeight.w400,
                         fontSize: 15.h,
@@ -41,56 +41,65 @@ class CommonHealthConcernsScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 16.h),
                     HealthConcernSelectedButton(
-                      title: 'Have you been diagnosed with fibroids?',
-                      options: ['Yes', 'No'],
-                      selectedOption: stepScreenProvider.diagnosedWithFibroids,
+                      title: 'Are you actively trying to conceive?',
+                      options: ['Yes', 'No', 'Considering'],
+                      selectedOption:
+                          stepScreenProvider.areYouActivelyTryingToConceive,
                       onOptionSelected: (String newValue) {
-                        stepScreenProvider.updateDiagnosedWithFibroids(
+                        stepScreenProvider.updateAreYouActivelyTryingToConceive(
                           newValue,
                         );
                       },
                     ),
                     HealthConcernSelectedButton(
                       title:
-                          'Have you been diagnosed with PCOS (Polycystic Ovary Syndrome)?',
-                      options: ['Yes', 'No'],
-                      selectedOption: stepScreenProvider.diagnosedWithPCOS,
-                      onOptionSelected: (String newValue) {
-                        stepScreenProvider.updateDiagnosedWithPCOS(newValue);
-                      },
-                    ),
-                    HealthConcernSelectedButton(
-                      title: 'Do you have a history of endometriosis??',
-                      options: ['Yes', 'No'],
-                      selectedOption: stepScreenProvider.historyOfEndometriosis,
-                      onOptionSelected: (String newValue) {
-                        stepScreenProvider.updateHistoryOfEndometriosis(
-                          newValue,
-                        );
-                      },
-                    ),
-                    HealthConcernSelectedButton(
-                      title:
-                          'Do you have a family history of fibroids or reproductive issues?',
+                          'Have you experienced pregnancy loss (miscarriage or stillbirth)?',
                       options: ['Yes', 'No'],
                       selectedOption:
-                          stepScreenProvider.familyHistoryOfFibroids,
+                          stepScreenProvider.haveYouExperiencedPregnancyLoss,
                       onOptionSelected: (String newValue) {
-                        stepScreenProvider.updateFamilyHistoryOfFibroids(
-                          newValue,
-                        );
+                        stepScreenProvider
+                            .updateHaveYouExperiencedPregnancyLoss(newValue);
                       },
                     ),
-                    SizedBox(height: 7.h,),
+                    HealthConcernSelectedButton(
+                      title:
+                          'Do you have a history of high blood pressure or preeclampsia during pregnancy?',
+                      options: ['Yes', 'No'],
+                      selectedOption:
+                          stepScreenProvider
+                              .doYouHaveHistoryOfHighBloodPressure,
+                      onOptionSelected: (String newValue) {
+                        stepScreenProvider
+                            .updateDoYouHaveHistoryOfHighBloodPressure(
+                              newValue,
+                            );
+                      },
+                    ),
+                    HealthConcernSelectedButton(
+                      title:
+                          'Have you been diagnosed with fertility conditions (e.g., low ovarian reserve, unexplained infertility)?',
+                      options: ['Yes', 'No'],
+                      selectedOption:
+                          stepScreenProvider
+                              .haveYouBeenDiagnosedWithFertilityConditions,
+                      onOptionSelected: (String newValue) {
+                        stepScreenProvider
+                            .updateHaveYouBeenDiagnosedWithFertilityConditions(
+                              newValue,
+                            );
+                      },
+                    ),
+                    SizedBox(height: 7.h),
                     SizedBox(
                       width: double.infinity,
                       child: Utils.primaryButton(
-                        title: 'Continue',
+                        title: 'Finish Setup',
                         textTheme: textTheme,
                         colorScheme: colorScheme,
                         padding: EdgeInsets.symmetric(horizontal: 32.w,vertical: 18.h),
                         onTap: () {
-                          Navigator.pushNamed(context, RouteName.pregnancyFertilityTracking);
+                          Navigator.pushNamed(context, RouteName.createAccountScreen);
                         },
                       ),
                     ),
