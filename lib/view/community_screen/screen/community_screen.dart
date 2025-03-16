@@ -115,7 +115,7 @@ class CommunityScreen extends StatelessWidget {
             //-------------See all -----------------------------------------------------
                        GestureDetector(
                         onTap: () {
-                          Navigator.pushNamed(context, RouteName.menstralScreen);
+                          Navigator.pushNamed(context, RouteName.menstrualScreen);
                         },
                         child: Text("See all"),
                         

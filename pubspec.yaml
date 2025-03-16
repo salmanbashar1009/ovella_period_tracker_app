@@ -80,6 +80,9 @@ flutter:
     - assets/images/on_boarding_screen/
     - assets/images/
     - assets/images/splash_screen/
+    - assets/images/community/
+    - assets/images/pregnancy/
+    - assets/images/icons/
     - assets/images/person/
     - assets/images/icons/
     - assets/icons/
