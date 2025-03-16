@@ -15,4 +15,5 @@ class RouteName{
   static const String pregnancyFertilityTracking = '/pregnancyFertilityTracking';
   static const String createAccountScreen = '/createAccountScreen';
   static const String logPeriodScreen = '/logPeriodScreen';
+  static const String addLogScreen = '/addLogScreen';
 }
