@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import '../view/step_screen/widget/Parts/step1.dart';
-import '../view/step_screen/widget/Parts/step2.dart';
-import '../view/step_screen/widget/Parts/step3.dart';
+
+import '../view/step_screen/Parts/step1.dart';
+import '../view/step_screen/Parts/step2.dart';
+import '../view/step_screen/Parts/step3.dart';
 
 class StepScreenProvider extends ChangeNotifier {
   ///<----------------Step Page -------->
@@ -147,6 +148,29 @@ class StepScreenProvider extends ChangeNotifier {
   }
   void updateFamilyHistoryOfFibroids(String value) {
     familyHistoryOfFibroids = value;
+    notifyListeners();
+  }
+
+  ///<------------ Pregnancy & Fertility Tracking
+  String areYouActivelyTryingToConceive = '';
+  String haveYouExperiencedPregnancyLoss = '';
+  String doYouHaveHistoryOfHighBloodPressure = '';
+  String haveYouBeenDiagnosedWithFertilityConditions= '';
+
+  void updateAreYouActivelyTryingToConceive(String value) {
+    areYouActivelyTryingToConceive = value;
+    notifyListeners();
+  }
+  void updateHaveYouExperiencedPregnancyLoss(String value) {
+    haveYouExperiencedPregnancyLoss = value;
+    notifyListeners();
+  }
+  void updateDoYouHaveHistoryOfHighBloodPressure(String value) {
+    doYouHaveHistoryOfHighBloodPressure = value;
+    notifyListeners();
+  }
+  void updateHaveYouBeenDiagnosedWithFertilityConditions(String value) {
+    haveYouBeenDiagnosedWithFertilityConditions = value;
     notifyListeners();
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import '../../utility/utils.dart';
 import 'widgets/health_concern_selected_button.dart';
 import 'package:ovella_period_tracker_app/view_model/step_screen_provider.dart';
@@ -81,11 +82,17 @@ class CommonHealthConcernsScreen extends StatelessWidget {
                       },
                     ),
                     SizedBox(height: 7.h,),
-                    Utils.primaryButton(
-                      title: 'Continue',
-                      textTheme: textTheme,
-                      colorScheme: colorScheme,
-                      onTap: () {},
+                    SizedBox(
+                      width: double.infinity,
+                      child: Utils.primaryButton(
+                        title: 'Continue',
+                        textTheme: textTheme,
+                        colorScheme: colorScheme,
+                        padding: EdgeInsets.symmetric(horizontal: 32.w,vertical: 18.h),
+                        onTap: () {
+                          Navigator.pushNamed(context, RouteName.pregnancyFertilityTracking);
+                        },
+                      ),
                     ),
                   ],
                 ),

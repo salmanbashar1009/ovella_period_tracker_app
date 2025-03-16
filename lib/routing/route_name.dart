@@ -12,4 +12,6 @@ class RouteName{
   static const String fertilityScreen = '/fertilityScreen';
   static const String sexualScreen ='/sexualScreen';
   static const String commonHealthConcernScreen = '/commonHealthConcernScreen';
+  static const String pregnancyFertilityTracking = '/pregnancyFertilityTracking';
+  static const String createAccountScreen = '/createAccountScreen';
 }
