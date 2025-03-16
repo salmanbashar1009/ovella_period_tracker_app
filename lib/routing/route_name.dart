@@ -20,4 +20,5 @@ class RouteName{
   static const String otpScreen = '/otpScreen';
   static const String createNewPassword = '/createNewPassword';
   static const String menstralScreen = '/menstralScreen';
+  static const String parentScreen = '/parentScreen';
 }
