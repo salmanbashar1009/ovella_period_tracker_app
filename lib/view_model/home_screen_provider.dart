@@ -25,8 +25,6 @@ class HomeScreenProvider with ChangeNotifier {
   DateTime? get selectedDate => _selectedDate;
   List<DateTime> get daysInMonth => _getDaysInMonth(_currentDate);
 
-
-
   List<DateTime> _getDaysInMonth(DateTime date) {
     int daysInMonth = DateTime(date.year, date.month + 1, 0).day;
     return List.generate(daysInMonth, (index) => DateTime(date.year, date.month, index + 1));
@@ -52,6 +50,36 @@ class HomeScreenProvider with ChangeNotifier {
 
     double scrollTo = (currentIndex * itemWidth) - (screenWidth / 2) + (itemWidth / 2);
     periodScrollController.jumpTo(scrollTo.clamp(0, periodScrollController.position.maxScrollExtent));
+  }
+
+
+  /// All about log period
+
+  /// List to hold selected days
+  List<DateTime> _selectedDays = [
+    DateTime(2025, 3, 27), // Example existing dates
+    DateTime(2025, 3, 28),
+    DateTime(2025, 3, 29),
+    DateTime(2025, 3, 30),
+  ];
+
+  /// Getter for selected days
+  List<DateTime> get selectedDays => _selectedDays;
+
+  /// Method to toggle selection of a day
+  void toggleSelectedDay(DateTime day) {
+    /// If the day is already selected, remove it, else add it
+    if (_selectedDays.contains(day)) {
+      _selectedDays.remove(day);
+    } else {
+      _selectedDays.add(day);
+    }
+    notifyListeners();
+  }
+
+  /// Method to check if a day is selected
+  bool isSelected(DateTime day) {
+    return _selectedDays.contains(day);
   }
 
 }

@@ -69,10 +69,11 @@ class MenstrualFertilityScreen extends StatelessWidget {
             ],
           ),
           SizedBox(height: 24.h,),
-          LogSymptomsCard(
+          LogCard(
             onAddPressed: () {
 
             },
+            title: 'Log your Symptoms',
           ),
         ],
       ),

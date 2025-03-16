@@ -44,6 +44,7 @@ dependencies:
   smooth_page_indicator: ^1.2.1
   carousel_slider: ^5.0.0
   dots_indicator: ^4.0.1
+  table_calendar: ^3.2.0
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
@@ -79,6 +80,9 @@ flutter:
     - assets/images/on_boarding_screen/
     - assets/images/
     - assets/images/splash_screen/
+    - assets/images/community/
+    - assets/images/pregnancy/
+    - assets/images/icons/
     - assets/images/person/
     - assets/images/icons/
     - assets/icons/
