@@ -51,13 +51,15 @@ class Utils {
     required TextTheme textTheme,
     required ColorScheme colorScheme,
     required onTap,
-    Icon? suffixIcon,
-    Icon? prefixIcon,
+    Widget? suffixIcon,
+    Widget? prefixIcon,
+    Color? color,
+    Color? textColor
   }) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         padding: padding ?? EdgeInsets.zero,
-        backgroundColor: AppColors.primary,
+        backgroundColor: color??AppColors.primary,
           elevation: 0,
           ),
       onPressed: onTap,
@@ -72,7 +74,7 @@ class Utils {
           Text(
             title,
             style: textTheme.bodyMedium!.copyWith(
-              color: colorScheme.onPrimary,
+              color: textColor??colorScheme.onPrimary,
             ),
           ),
 

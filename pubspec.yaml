@@ -44,6 +44,7 @@ dependencies:
   smooth_page_indicator: ^1.2.1
   carousel_slider: ^5.0.0
   dots_indicator: ^4.0.1
+  table_calendar: ^3.2.0
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
@@ -87,6 +88,7 @@ flutter:
     - assets/icons/
     - assets/images/community/
     - assets/images/home_screen/
+    - assets/images/auth_screens/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
