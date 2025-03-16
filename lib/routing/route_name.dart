@@ -16,6 +16,7 @@ class RouteName{
   static const String createAccountScreen = '/createAccountScreen';
   static const String addNoteScreen = '/addNoteScreen';
   static const String logPeriodScreen = '/logPeriodScreen';
+  static const String addLogScreen = '/addLogScreen';
   static const String resetPasswordScreen = '/resetPasswordScreen';
   static const String otpScreen = '/otpScreen';
   static const String createNewPassword = '/createNewPassword';
