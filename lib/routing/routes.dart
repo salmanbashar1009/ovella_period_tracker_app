@@ -5,6 +5,7 @@ import 'package:ovella_period_tracker_app/view/community_screen/screen/community
 import 'package:ovella_period_tracker_app/view/community_screen/screen/fertility_screen.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/menstral_screen.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/sexualhealt.screen.dart';
+import 'package:ovella_period_tracker_app/view/home_screen/log_period_screen/log_period_screen.dart';
 import 'package:ovella_period_tracker_app/view/pregnancy_fertility_tracking/pregnancy_fertility_tracking.dart';
 import 'package:ovella_period_tracker_app/view/splash_screen/splash_screen.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/tracking_screen.dart';
@@ -28,6 +29,7 @@ class AppRoutes{
       RouteName.fertilityScreen:(context)=>FertilityScreen(),
       RouteName.sexualScreen:(context)=>SexualScreen(),
       RouteName.pregnancyFertilityTracking:(context)=>PregnancyFertilityTracking(),
+      RouteName.logPeriodScreen: (context) => LogPeriodScreen(),
     };
   }
 }
