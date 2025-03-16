@@ -7,10 +7,23 @@ class GroupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      return   ListView.builder(
-      itemCount: group1.length,
-      itemBuilder: (BuildContext context, int index) {
-        return GroupCard(group: group1[index]);
-      },
-    );}}
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text("Popular Groups", style: Theme.of(context).textTheme.bodyLarge),
+        SizedBox(height: 10),
 
+        Expanded(
+          child: ListView.builder(
+            itemCount: group1.length,
+            shrinkWrap: true,
+            physics: BouncingScrollPhysics(),
+            itemBuilder: (BuildContext context, int index) {
+              return GroupCard(group: group1[index]);
+            },
+          ),
+        ),
+      ],
+    );
+  }
+}
