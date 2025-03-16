@@ -8,4 +8,5 @@ class RouteName{
   static const String stepScreen = '/stepScreen';
   static const String commonHealthConcernScreen = '/commonHealthConcernScreen';
   static const String pregnancyFertilityTracking = '/pregnancyFertilityTracking';
+  static const String createAccountScreen = '/createAccountScreen';
 }
