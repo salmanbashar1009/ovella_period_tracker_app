@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
+import 'package:ovella_period_tracker_app/utility/utils.dart';
 import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
@@ -105,7 +106,20 @@ class PeriodDateContainer extends StatelessWidget{
                 ),
               );
             }
+          ),
+
+          Spacer(),
+
+          Utils.primaryButton(
+              title: "Log Period",
+              padding: EdgeInsets.symmetric(horizontal: 24.w,vertical: 12.h),
+              textTheme: Theme.of(context).textTheme,
+              colorScheme: Theme.of(context).colorScheme,
+              onTap: (){},
+            suffixIcon: Icon(Icons.add,color: AppColors.onPrimary,)
           )
+
+
         ],
       ),
     );

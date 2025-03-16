@@ -12,4 +12,5 @@ class AppColors{
 
   static const Color iconColor = Color(0xff1E1E1E);
 
+
 }
