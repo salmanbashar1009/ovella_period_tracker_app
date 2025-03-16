@@ -10,6 +10,7 @@ import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/new_password_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/otp_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/splash_onboarding_view_model_provider.dart';
+import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 import 'package:provider/provider.dart';
 
 import 'view_model/step_screen_provider.dart';
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<HomeScreenProvider>(create: (_)=> HomeScreenProvider(),),
         ChangeNotifierProvider<SplashOnBoardViewModelProvider>(create: (_)=> SplashOnBoardViewModelProvider(),),
         ChangeNotifierProvider<StepScreenProvider>(create: (_)=> StepScreenProvider(),),
+        ChangeNotifierProvider<TrackingScreenProvider>(create: (_)=> TrackingScreenProvider(),),
         ChangeNotifierProvider<CreateAccountProvider>(create: (_)=> CreateAccountProvider(),),
         ChangeNotifierProvider<OtpProvider>(create: (_)=> OtpProvider(),),
         ChangeNotifierProvider<NewPasswordProvider>(create: (_)=> NewPasswordProvider(),),

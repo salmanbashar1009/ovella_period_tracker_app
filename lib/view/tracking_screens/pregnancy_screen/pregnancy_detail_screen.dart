@@ -5,6 +5,7 @@ import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_pal
 import 'package:ovella_period_tracker_app/utility/utils.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/widgets/section_header.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/widgets/week_list.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/widgets/screen_header.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 
 class PregnancyDetailScreen extends StatelessWidget {
@@ -20,20 +21,7 @@ class PregnancyDetailScreen extends StatelessWidget {
               children: [
                 Padding(
                   padding: AppPadding.screenPadding,
-                  child: Row(
-                    children: [
-                      Utils.backButton(context),
-                      SizedBox(width: 99.w),
-                      Text(
-                        "Weekly",
-                        style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                          color: AppColors.textColor,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 19.sp,
-                        ),
-                      ),
-                    ],
-                  ),
+                  child: ScreenHeader(title: "Weekly"),
                 ),
                 SizedBox(height: 24.h),
                 WeekList(),
@@ -94,3 +82,4 @@ class PregnancyDetailScreen extends StatelessWidget {
 
   }
 }
+
