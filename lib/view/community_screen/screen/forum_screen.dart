@@ -17,7 +17,7 @@ class ForumScreen extends StatelessWidget {
           CategorySection(
             title: "Menstrual Health",
             categories: categories1,
-            routeName: RouteName.menstrualScreen,
+            routeName: RouteName.menstralScreen,
           ),
           CategorySection(
             title: "Fertility",
