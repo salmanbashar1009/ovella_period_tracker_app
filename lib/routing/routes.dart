@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
+import 'package:ovella_period_tracker_app/view/auth_screens/create_account_screen/create_account_screen.dart';
 import 'package:ovella_period_tracker_app/view/common_health_concerns_screen/common_health_concerns_screen.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/community_screen.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/fertility_screen.dart';
@@ -28,6 +29,7 @@ class AppRoutes{
       RouteName.fertilityScreen:(context)=>FertilityScreen(),
       RouteName.sexualScreen:(context)=>SexualScreen(),
       RouteName.pregnancyFertilityTracking:(context)=>PregnancyFertilityTracking(),
+      RouteName.createAccountScreen:(context)=>CreateAccountScreen(),
     };
   }
 }

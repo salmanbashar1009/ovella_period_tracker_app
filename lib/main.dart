@@ -5,6 +5,7 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/routing/routes.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme.dart';
+import 'package:ovella_period_tracker_app/view_model/create_account_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/splash_onboarding_view_model_provider.dart';
 import 'package:provider/provider.dart';
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<HomeScreenProvider>(create: (_)=> HomeScreenProvider(),),
         ChangeNotifierProvider<SplashOnBoardViewModelProvider>(create: (_)=> SplashOnBoardViewModelProvider(),),
         ChangeNotifierProvider<StepScreenProvider>(create: (_)=> StepScreenProvider(),),
+        ChangeNotifierProvider<CreateAccountProvider>(create: (_)=> CreateAccountProvider(),),
       ],
       child: ScreenUtilInit(
         designSize: const Size(deviceWidth, deviceHeight),
@@ -49,7 +51,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
             theme: AppTheme.lightTheme,
-            initialRoute: RouteName.splashScreen,
+            initialRoute: RouteName.createAccountScreen,
             routes: AppRoutes.getRoutes(),
           );
         }
