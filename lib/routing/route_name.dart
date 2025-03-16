@@ -5,7 +5,7 @@ class RouteName{
   static const String loginScreen = '/loginScreen';
   static const String home = '/homeScreen';
   static const String community ='/community';
-  static const String stepScreen = '/stepScreen';  
+  static const String stepScreen = '/stepScreen';
   static const String trackingScreen = '/trackingScreen';
   static const String pregnancyDetailsScreen = '/pregnancyDetailsScreen';
   static const String menstrualScreen = '/menstrualScreen';
@@ -15,4 +15,8 @@ class RouteName{
   static const String pregnancyFertilityTracking = '/pregnancyFertilityTracking';
   static const String createAccountScreen = '/createAccountScreen';
   static const String logPeriodScreen = '/logPeriodScreen';
+  static const String resetPasswordScreen = '/resetPasswordScreen';
+  static const String otpScreen = '/otpScreen';
+  static const String createNewPassword = '/createNewPassword';
+  static const String menstralScreen = '/menstralScreen';
 }
