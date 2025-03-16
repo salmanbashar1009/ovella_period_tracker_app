@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/view/common_health_concerns_screen/common_health_concerns_screen.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/community_screen.dart';
+import 'package:ovella_period_tracker_app/view/pregnancy_fertility_tracking/pregnancy_fertility_tracking.dart';
 import 'package:ovella_period_tracker_app/view/splash_screen/splash_screen.dart';
 
 import '../view/home_screen/home_screen.dart';
@@ -18,6 +19,7 @@ class AppRoutes{
       RouteName.onboardingScreen : (context) => OnBoardingScreen(),
       RouteName.splashScreen : (context) => SplashScreen(),
       RouteName.commonHealthConcernScreen : (context) => CommonHealthConcernsScreen(),
+      RouteName.pregnancyFertilityTracking : (context) => PregnancyFertilityTracking(),
     };
   }
 }

@@ -149,4 +149,27 @@ class StepScreenProvider extends ChangeNotifier {
     familyHistoryOfFibroids = value;
     notifyListeners();
   }
+
+  ///<------------ Pregnancy & Fertility Tracking
+  String areYouActivelyTryingToConceive = '';
+  String haveYouExperiencedPregnancyLoss = '';
+  String doYouHaveHistoryOfHighBloodPressure = '';
+  String haveYouBeenDiagnosedWithFertilityConditions= '';
+
+  void updateAreYouActivelyTryingToConceive(String value) {
+    areYouActivelyTryingToConceive = value;
+    notifyListeners();
+  }
+  void updateHaveYouExperiencedPregnancyLoss(String value) {
+    haveYouExperiencedPregnancyLoss = value;
+    notifyListeners();
+  }
+  void updateDoYouHaveHistoryOfHighBloodPressure(String value) {
+    doYouHaveHistoryOfHighBloodPressure = value;
+    notifyListeners();
+  }
+  void updateHaveYouBeenDiagnosedWithFertilityConditions(String value) {
+    haveYouBeenDiagnosedWithFertilityConditions = value;
+    notifyListeners();
+  }
 }
