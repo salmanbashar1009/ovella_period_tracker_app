@@ -9,12 +9,19 @@ class CategoryList extends StatelessWidget {
   double? size;
   double? val;
   double? right;
-   CategoryList({Key? key, required this.categories, this.scrollDirection , this.size, this.val,this.right}) : super(key: key);
+  CategoryList({
+    Key? key,
+    required this.categories,
+    this.scrollDirection,
+    this.size,
+    this.val,
+    this.right,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: size ?? 150, // Adjust height based on your design
+      height: size ?? MediaQuery.of(context).size.height,
       child: ListView.builder(
         scrollDirection: scrollDirection ?? Axis.horizontal,
         itemCount: categories.length,
