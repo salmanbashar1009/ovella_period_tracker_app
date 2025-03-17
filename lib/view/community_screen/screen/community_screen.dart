@@ -18,6 +18,10 @@ class CommunityScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: Utils.backButton(context),
+        title: Text("Community"),
+      ),
       body: BackgroundWidget(
         child: SingleChildScrollView(
           child: SafeArea(
