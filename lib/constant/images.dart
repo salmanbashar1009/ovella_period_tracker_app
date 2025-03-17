@@ -18,6 +18,8 @@ class AppImages {
 
   /// Icons path
   static const String homeIcon = 'assets/icons/home.png';
+  static const String sendIcon = 'assets/icons/send.png';
+  static const String microphone = 'assets/icons/microphone.png';
   static const String dotMenuIcon = 'assets/icons/dot_menu.png';
   static const String notificationIcon = 'assets/icons/notification.png';
   static const String trackingIcon = 'assets/icons/tracking.png';

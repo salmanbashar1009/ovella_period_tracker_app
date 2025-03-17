@@ -18,68 +18,66 @@ class MenstrualFertilityScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-         Container(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+       Container(
 
-           padding: EdgeInsets.all(16.r),
+         padding: EdgeInsets.all(16.r),
 
-           decoration: BoxDecoration(
-             borderRadius: BorderRadius.circular(24.r),
-             color: AppColors.onPrimary,
-           ),
-           child: Column(
-             mainAxisAlignment: MainAxisAlignment.center,
-             children: [
-               const MonthHeader(),
-               const SizedBox(height: 20),
-               const WeekdayHeader(),
-               const SizedBox(height: 10),
-               SizedBox(
-                 height: 290.h,
-                 width: double.infinity,
-                 child: Consumer<TrackingScreenProvider>(
-                   builder: (context, provider, _) {
-                     return IgnorePointer(
-                       child: CalendarGrid(
-                         year: provider.selectedMonth.year,
-                         month: provider.selectedMonth.month,
-                       ),
-                     );
-                   },
-                 ),
-               ),
-             ],
-           ),
+         decoration: BoxDecoration(
+           borderRadius: BorderRadius.circular(24.r),
+           color: AppColors.onPrimary,
          ),
+         child: Column(
+           mainAxisAlignment: MainAxisAlignment.center,
+           children: [
+             const MonthHeader(),
+             const SizedBox(height: 20),
+             const WeekdayHeader(),
+             const SizedBox(height: 10),
+             SizedBox(
+               height: 290.h,
+               width: double.infinity,
+               child: Consumer<TrackingScreenProvider>(
+                 builder: (context, provider, _) {
+                   return IgnorePointer(
+                     child: CalendarGrid(
+                       year: provider.selectedMonth.year,
+                       month: provider.selectedMonth.month,
+                     ),
+                   );
+                 },
+               ),
+             ),
+           ],
+         ),
+       ),
 
-          SizedBox(height: 24.h),
-          Row(
-            children: [
-              activityTile(context: context,bgColor: AppColors.secondary, imagePath: "assets/icons/period.png", title: "Period", onTap:(){showPeriodAlertSheet(context);} ),
-              SizedBox(width: 12.w,),
-              activityTile(context: context,bgColor: Color(0xFFF4D1FF), imagePath: "assets/icons/fertile.png", title: "Fertile", onTap:(){} ),
-            ],
-          ),
-          SizedBox(height: 16.w,),
-          Row(
-            children: [
-              activityTile(context: context,bgColor: Color(0xFF25C871), imagePath: "assets/icons/ovulation.png", title: "Ovulation", onTap:(){} ),
-              SizedBox(width: 12.w,),
-              activityTile(context: context,bgColor: Color(0xFFFF9CB6), imagePath: "assets/icons/period.png", title: "Next Period", onTap:(){} ),
-            ],
-          ),
-          SizedBox(height: 24.h,),
-          LogCard(
-            onAddPressed: () {
+        SizedBox(height: 24.h),
+        Row(
+          children: [
+            activityTile(context: context,bgColor: AppColors.secondary, imagePath: "assets/icons/period.png", title: "Period", onTap:(){showPeriodAlertSheet(context);} ),
+            SizedBox(width: 12.w,),
+            activityTile(context: context,bgColor: Color(0xFFF4D1FF), imagePath: "assets/icons/fertile.png", title: "Fertile", onTap:(){} ),
+          ],
+        ),
+        SizedBox(height: 16.w,),
+        Row(
+          children: [
+            activityTile(context: context,bgColor: Color(0xFF25C871), imagePath: "assets/icons/ovulation.png", title: "Ovulation", onTap:(){} ),
+            SizedBox(width: 12.w,),
+            activityTile(context: context,bgColor: Color(0xFFFF9CB6), imagePath: "assets/icons/period.png", title: "Next Period", onTap:(){} ),
+          ],
+        ),
+        SizedBox(height: 24.h,),
+        LogCard(
+          onAddPressed: () {
 
-            },
-            title: 'Log your Symptoms',
-          ),
-        ],
-      ),
+          },
+          title: 'Log your Symptoms',
+        ),
+      ],
     );
   }
 
