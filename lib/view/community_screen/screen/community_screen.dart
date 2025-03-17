@@ -25,38 +25,67 @@ class CommunityScreen extends StatelessWidget {
               padding: AppPadding.screenPadding,
               child: Column(
                 children: [
-                  SizedBox(height: 22.h),
+                  AppBar(
+                    elevation: 0,
+                    surfaceTintColor: Colors.transparent,
+                    leading: ClipOval(
+                      child: Image.asset(
+                        "assets/images/community/black3.jpeg",
+                        height: 48.h,
+                        width: 48.w,
+                      ),
+                    ),
+                    title: Text(
+                      "Community",
+                      style: Theme.of(
+                        context,
+                      ).textTheme.headlineMedium?.copyWith(
+                        fontSize: 19.sp,
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xff1E1E1E),
+                      ),
+                    ),
 
-                  //---------appbar section ------------------------------------
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      ClipOval(
-                        child: Image.asset(
-                          "assets/images/community/black3.jpeg",
-                          height: 48.h,
-                          width: 48.w,
-                        ),
-                      ),
-                      Spacer(),
-                      Center(
-                        child: Text(
-                          "Community",
-                          style: Theme.of(
-                            context,
-                          ).textTheme.headlineMedium?.copyWith(
-                            fontSize: 19.sp,
-                            fontWeight: FontWeight.w500,
-                            color: Color(0xff1E1E1E),
-                          ),
-                        ),
-                      ),
-                      Spacer(),
+                    centerTitle: true,
+
+                    actions: [
                       Utils.circleContainer(
                         imagePath: "assets/images/icons/bell.png",
                       ),
                     ],
                   ),
+                  // SizedBox(height: 22.h),
+
+                  //---------appbar section ------------------------------------
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.center,
+                  //   children: [
+                  //     ClipOval(
+                  //       child: Image.asset(
+                  //         "assets/images/community/black3.jpeg",
+                  //         height: 48.h,
+                  //         width: 48.w,
+                  //       ),
+                  //     ),
+                  //     Spacer(),
+                  //     Center(
+                  //       child: Text(
+                  //         "Community",
+                  //         style: Theme.of(
+                  //           context,
+                  //         ).textTheme.headlineMedium?.copyWith(
+                  //           fontSize: 19.sp,
+                  //           fontWeight: FontWeight.w500,
+                  //           color: Color(0xff1E1E1E),
+                  //         ),
+                  //       ),
+                  //     ),
+                  //     Spacer(),
+                  //     Utils.circleContainer(
+                  //       imagePath: "assets/images/icons/bell.png",
+                  //     ),
+                  //   ],
+                  // ),
                   SizedBox(height: 21.5.sp),
 
                   //---------Sub title section----------------------------------
