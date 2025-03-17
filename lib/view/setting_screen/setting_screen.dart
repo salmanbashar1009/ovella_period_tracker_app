@@ -20,10 +20,10 @@ class SettingScreen extends StatelessWidget {
     ColorScheme colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       body: BackgroundWidget(
-        child: SafeArea(
-          child: Padding(
-            padding: AppPadding.screenHorizontalPadding,
-            child: SingleChildScrollView(
+        child: SingleChildScrollView(
+          child: SafeArea(
+            child: Padding(
+              padding: AppPadding.screenHorizontalPadding,
               child: Column(
                 children: [
                   SizedBox(height: 12.h),
@@ -40,7 +40,7 @@ class SettingScreen extends StatelessWidget {
                   PreferencesNotificationCard(),
                   SizedBox(height: 16.h),
                   PrivacyDataCard(),
-                  SizedBox(height:50.h)
+                  SizedBox(height: 50.h),
                 ],
               ),
             ),
