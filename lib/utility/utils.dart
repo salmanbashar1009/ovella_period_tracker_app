@@ -54,6 +54,7 @@ class Utils {
     Widget? prefixIcon,
     Color? color,
     Color? textColor,
+    Color? borderColor,
     TextStyle? textStyle,
   }) {
     TextTheme textTheme = Theme.of(context).textTheme;
@@ -63,6 +64,7 @@ class Utils {
         padding: padding ?? EdgeInsets.zero,
         backgroundColor: color??AppColors.primary,
           elevation: 0,
+          shape: StadiumBorder(side: BorderSide(color: borderColor??Colors.transparent)),
           ),
       onPressed: onTap,
       child: Row(

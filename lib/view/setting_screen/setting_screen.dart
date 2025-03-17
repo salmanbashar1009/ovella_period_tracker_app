@@ -1,8 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
-import 'package:ovella_period_tracker_app/utility/utils.dart';
+import 'package:ovella_period_tracker_app/view/setting_screen/cards/menstrua_health_details_card/menstrua_health_details_card.dart';
+import 'package:ovella_period_tracker_app/view/setting_screen/cards/preferences_notifications/preferences_notification_card.dart';
+import 'package:ovella_period_tracker_app/view/setting_screen/cards/privacy_data_card/privacy_data_card.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
+import 'cards/invite_partner_card/invite_partner_card.dart';
+import 'cards/personal_information/personal_information_edit_card.dart';
+import 'cards/profile_card/profile_card.dart';
+import 'cards/subscribe_card/subscribe_card.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});
@@ -15,55 +22,27 @@ class SettingScreen extends StatelessWidget {
       body: BackgroundWidget(
         child: SafeArea(
           child: Padding(
-            padding: AppPadding.screenPadding,
-            child: Column(
-              children: [
-                Container(
-                  padding: AppPadding.screenPadding,
-                  decoration: BoxDecoration(
-                    color: colorScheme.onPrimary,
-                    borderRadius: BorderRadius.circular(24.r),
-                  ),
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 60.h,
-                        width: 60.w,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(60.r),
-                          image: DecorationImage(
-                            image: NetworkImage(
-                              'https://www.shutterstock.com/image-photo/studio-shot-red-haired-young-260nw-793320274.jpg',
-                            ),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 12.h),
-                      Text(
-                        'Jane Doe',
-                        style: textTheme.headlineSmall!.copyWith(
-                          fontSize: 17.sp,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Text('janedoe@email.com', style: textTheme.bodySmall),
-                      SizedBox(
-                        width: double.infinity,
-                        child: Utils.primaryButton(
-                          title: 'Edit Profile',
-                          context: context,
-                          color: colorScheme.onPrimary,
-                          textColor: colorScheme.primary,
-                          onTap: (){
-
-                          },
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+            padding: AppPadding.screenHorizontalPadding,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  SizedBox(height: 12.h),
+                  ProfileCard(),
+                  SizedBox(height: 24.h),
+                  SubscribeCard(),
+                  SizedBox(height: 16.h),
+                  InvitePartnerCard(),
+                  SizedBox(height: 16.h),
+                  PersonalInformationEditCard(),
+                  SizedBox(height: 16.h),
+                  MenstrualHealthDetailsCard(),
+                  SizedBox(height: 16.h),
+                  PreferencesNotificationCard(),
+                  SizedBox(height: 16.h),
+                  PrivacyDataCard(),
+                  SizedBox(height:50.h)
+                ],
+              ),
             ),
           ),
         ),

@@ -5,6 +5,12 @@ import 'package:ovella_period_tracker_app/view/auth_screens/create_account_scree
 class CreateAccountProvider extends ChangeNotifier {
   ///<<<------------ Page View Part--------------->>
   int _currentIndex = 0;
+  bool _isExpand=false;
+  bool get isExpand => _isExpand;
+  void changeIsExpand(bool value){
+    _isExpand = value;
+    notifyListeners();
+  }
   final PageController _pageController = PageController();
   final List<Widget> _carouselItems = [
     CreateAccountEmailForm(),
