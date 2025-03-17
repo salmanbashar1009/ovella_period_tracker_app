@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ovella_period_tracker_app/constant/images.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
 
@@ -28,7 +29,7 @@ class Header extends StatelessWidget {
       ),
 
       actions: [
-        Utils.circleContainer(icon: Icon(Icons.notifications_outlined)),
+        Utils.circleContainer(imagePath: AppImages.notificationIcon),
       ],
     );
   }

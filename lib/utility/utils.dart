@@ -34,8 +34,8 @@ class Utils {
                   ? ClipOval(
                     child: Image.asset(
                       imagePath,
-                      width: 20, // Adjust size as needed
-                      height: 20,
+                      width: 20.w, // Adjust size as needed
+                      height: 20.h,
                       fit: BoxFit.cover,
                     ),
                   )

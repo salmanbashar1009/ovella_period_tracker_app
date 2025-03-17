@@ -61,12 +61,20 @@ class AddLogScreen extends StatelessWidget{
                                 spacing: 8.0,
                                 runSpacing: 8.0,
                                 children:
-
+                                    homeScreenProvider.logTo == homeScreenProvider.symptomsLog ?
                                 homeScreenProvider.symptoms.map(
                                         (symptom) =>
                                     BuildLogItem(
-                                      symptom: symptom,
-                                      onSelect: homeScreenProvider.onSelectLog,),).toList(),
+                                      logItem: symptom,
+                                      onSelect: homeScreenProvider.onSelectLog,),).toList()
+                                :
+                                    homeScreenProvider.moods.map(
+                                          (mood) =>
+                                          BuildLogItem(
+                                            logItem: mood,
+                                            onSelect: homeScreenProvider.onSelectLog,),).toList()
+
+                                ,
                               );
                             }
                           ),
