@@ -30,16 +30,18 @@ class Utils {
         shape: BoxShape.circle,
         color: Colors.white,
       ),
-      child: icon ?? (imagePath != null
-                  ? ClipOval(
-                    child: Image.asset(
-                      imagePath,
-                      width: 20, // Adjust size as needed
-                      height: 20,
-                      fit: BoxFit.cover,
-                    ),
-                  )
-                  : const SizedBox()), // Empty widget if neither icon nor image is provided
+      child:
+          icon ??
+          (imagePath != null
+              ? ClipOval(
+                child: Image.asset(
+                  imagePath,
+                  width: 20, // Adjust size as needed
+                  height: 20,
+                  fit: BoxFit.cover,
+                ),
+              )
+              : const SizedBox()), // Empty widget if neither icon nor image is provided
     );
   }
 
@@ -54,34 +56,38 @@ class Utils {
     Widget? prefixIcon,
     Color? color,
     Color? textColor,
+    Color? borderColor,
     TextStyle? textStyle,
   }) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    ColorScheme colorScheme =Theme.of(context).colorScheme;
+    ColorScheme colorScheme = Theme.of(context).colorScheme;
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         padding: padding ?? EdgeInsets.zero,
-        backgroundColor: color??AppColors.primary,
-          elevation: 0,
-          ),
+        backgroundColor: color ?? AppColors.primary,
+        elevation: 0,
+        shape: StadiumBorder(
+          side: BorderSide(color: borderColor ?? Colors.transparent),
+        ),
+      ),
       onPressed: onTap,
       child: Row(
         spacing: 6.w,
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          if(prefixIcon!=null)
-            prefixIcon,
+          if (prefixIcon != null) prefixIcon,
 
           Text(
             title,
-            style: textStyle??textTheme.bodyMedium!.copyWith(
-              color: textColor??colorScheme.onPrimary,
-            ),
+            style:
+                textStyle ??
+                textTheme.bodyMedium!.copyWith(
+                  color: textColor ?? colorScheme.onPrimary,
+                ),
           ),
 
-          if(suffixIcon!=null)
-            suffixIcon,
+          if (suffixIcon != null) suffixIcon,
         ],
       ),
     );

@@ -12,4 +12,10 @@ class AppImages {
 
   //common Heath Concern Screen
   static const String commonHeathConcernAppBarLogo = 'assets/images/logo_for_app_bar.png';
+
+  //settings Screen
+  static const String premiumBadge = 'assets/images/setting_screen/premium_badge.png';
+  static const String coupleImage = 'assets/images/setting_screen/Couple 1.png';
+  static const String editPencil = 'assets/images/setting_screen/pencil-edit-02.png';
+
 }
