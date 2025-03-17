@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import '../../../../constant/images.dart';
 import '../../../../constant/padding.dart';
 import '../../../../utility/utils.dart';
+
 class SubscribeCard extends StatelessWidget {
   const SubscribeCard({super.key});
 
@@ -42,7 +44,9 @@ class SubscribeCard extends StatelessWidget {
               title: 'Subscribe Now',
               context: context,
               padding: EdgeInsets.all(18.w),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, RouteName.subscriptionScreen);
+              },
             ),
           ),
         ],

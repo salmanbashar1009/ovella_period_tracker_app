@@ -26,7 +26,7 @@ class PersonalInformationEditCard extends StatelessWidget {
           Divider(color: Color(0xff1E1E1E).withOpacity(0.12)),
           _buildDetails(
             textTheme: textTheme,
-            title: 'Personal Information',
+            title: 'Age',
             value: '28 Years Old',
           ),
           _buildDetails(textTheme: textTheme, title: 'Gender', value: 'Female'),

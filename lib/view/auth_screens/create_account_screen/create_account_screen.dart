@@ -19,8 +19,12 @@ class CreateAccountScreen extends StatelessWidget {
       body: BackgroundWidget(
         child: SafeArea(
           child: Consumer<CreateAccountProvider>(
-            builder:
-                (BuildContext context, createAccountProvider, Widget? child) {
+            builder: (
+              BuildContext context,
+              createAccountProvider,
+              Widget? child,
+            ) {
+              double expandedHeight = createAccountProvider.isExpand ? 40 : 0;
               return SingleChildScrollView(
                 child: Padding(
                   padding: AppPadding.screenPadding,
@@ -42,14 +46,18 @@ class CreateAccountScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: createAccountProvider.currentIndex==0?262.h:335.h,
+                        height:
+                            createAccountProvider.currentIndex == 0
+                                ? expandedHeight + 262.h
+                                : expandedHeight + 335.h,
                         child: PageView.builder(
                           controller: createAccountProvider.pageController,
                           itemCount: createAccountProvider.carouselItems.length,
                           onPageChanged: (index) {
                             createAccountProvider.updateIndex(index);
                           },
-                          physics: NeverScrollableScrollPhysics(), // Disables user swiping
+                          physics:
+                              NeverScrollableScrollPhysics(), // Disables user swiping
                           itemBuilder: (BuildContext context, int index) {
                             return createAccountProvider.carouselItems[index];
                           },
@@ -60,7 +68,7 @@ class CreateAccountScreen extends StatelessWidget {
                   ),
                 ),
               );
-                },
+            },
           ),
         ),
       ),
