@@ -5,7 +5,7 @@ import 'package:ovella_period_tracker_app/utility/utils.dart';
 import 'package:ovella_period_tracker_app/view/on_boarding_screen/widgets/on_boarding_points.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 
-import '../../theme/constant/images.dart';
+import '../../constant/images.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});

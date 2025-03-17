@@ -5,11 +5,14 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/routing/routes.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme.dart';
+import 'package:ovella_period_tracker_app/view_model/community_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/create_account_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/new_password_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/otp_provider.dart';
+import 'package:ovella_period_tracker_app/view_model/parent_screen_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/splash_onboarding_view_model_provider.dart';
+import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 import 'package:provider/provider.dart';
 import 'view_model/step_screen_provider.dart';
 
@@ -38,7 +41,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider<ParentScreenProvider>(create: (_)=> ParentScreenProvider(),),
         ChangeNotifierProvider<HomeScreenProvider>(create: (_)=> HomeScreenProvider(),),
+        ChangeNotifierProvider<TrackingScreenProvider>(create: (_)=> TrackingScreenProvider(),),
+        ChangeNotifierProvider<CommunityProvider>(create: (_)=> CommunityProvider(),),
         ChangeNotifierProvider<SplashOnBoardViewModelProvider>(create: (_)=> SplashOnBoardViewModelProvider(),),
         ChangeNotifierProvider<StepScreenProvider>(create: (_)=> StepScreenProvider(),),
         ChangeNotifierProvider<CreateAccountProvider>(create: (_)=> CreateAccountProvider(),),
@@ -55,7 +61,7 @@ class MyApp extends StatelessWidget {
             title: 'Flutter Demo',
             theme: AppTheme.lightTheme,
 
-            initialRoute: RouteName.home,
+            initialRoute: RouteName.parentScreen,
 
             routes: AppRoutes.getRoutes(),
           );

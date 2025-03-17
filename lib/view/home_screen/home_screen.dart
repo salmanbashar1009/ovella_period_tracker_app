@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
-import 'package:ovella_period_tracker_app/theme/constant/images.dart';
+import 'package:ovella_period_tracker_app/constant/images.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/view/home_screen/widgets/header.dart';
 import 'package:ovella_period_tracker_app/view/home_screen/widgets/log_widget/log_widget.dart';
@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget{
 
               Expanded(
                 child: Padding(
-                    padding: AppPadding.screenPadding,
+                    padding: AppPadding.screenHorizontalPadding,
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
@@ -130,7 +130,13 @@ class HomeScreen extends StatelessWidget{
 
                         SizedBox(
                             height: 380.h,
-                            child: WellnessTipsList()),
+                            child: WellnessTipsList(),
+                        ),
+
+                        SizedBox(
+                          height: 80.h,
+
+                        ),
 
                       ],
                     ),
