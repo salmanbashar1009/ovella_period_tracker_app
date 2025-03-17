@@ -18,6 +18,7 @@ class AppImages {
 
   /// Icons path
   static const String homeIcon = 'assets/icons/home.png';
+  static const String dotMenuIcon = 'assets/icons/dot_menu.png';
   static const String notificationIcon = 'assets/icons/notification.png';
   static const String trackingIcon = 'assets/icons/tracking.png';
   static const String communityIcon = 'assets/icons/community.png';
