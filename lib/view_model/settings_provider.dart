@@ -17,4 +17,13 @@ class SettingsProvider extends ChangeNotifier{
     _mentalHealth = value;
     notifyListeners();
   }
+
+
+  ///<<<-------------- Term & condition --------->>
+  bool _acceptTermsConditions = false;
+  bool get acceptTermsConditions => _acceptTermsConditions;
+  void updateAcceptTeamCondition(value){
+    _acceptTermsConditions = value;
+    notifyListeners();
+  }
 }
