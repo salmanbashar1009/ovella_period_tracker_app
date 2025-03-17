@@ -75,7 +75,7 @@ class HomeScreen extends StatelessWidget{
                           ],
                         ),
 
-                        SizedBox(height: 16.h,),
+
 
                         Consumer<HomeScreenProvider>(
                           builder: (_, homeScreenProvider, _){
@@ -83,13 +83,21 @@ class HomeScreen extends StatelessWidget{
                             Column(
                               spacing: 12.h,
                               children: [
+                                SizedBox(height: 16.h,),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text("Symptoms",
                                     style: Theme.of(context).textTheme.headlineSmall,),
-                                    Icon(Icons.edit,
-                                    color: AppColors.iconColor,)
+                                    GestureDetector(
+                                        onTap:(){
+                                          debugPrint("\nSymptoms Edit button pressed\n");
+                                        },
+                                        child: Image.asset(AppImages.editIcon,
+                                        width: 24.w,
+                                          height: 24.h,
+                                          fit: BoxFit.cover,
+                                        ),)
                                   ],
                                 ),
                                 Align(
@@ -102,7 +110,52 @@ class HomeScreen extends StatelessWidget{
                                     homeScreenProvider.selectedSymptoms.map(
                                           (symptom) =>
                                           BuildLogItem(
-                                            symptom: symptom,
+                                            logItem: symptom,
+                                            onSelect: homeScreenProvider.onSelectLog,),).toList(),
+                                  ),
+                                ),
+                              ],
+                            ):SizedBox();
+                          },
+                        ),
+
+
+
+                        Consumer<HomeScreenProvider>(
+                          builder: (_, homeScreenProvider, _){
+                            return homeScreenProvider.selectedMoods.isNotEmpty ?
+                            Column(
+                              spacing: 12.h,
+                              children: [
+                                SizedBox(height: 16.h,),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text("Mood",
+                                      style: Theme.of(context).textTheme.headlineSmall,),
+                                    GestureDetector(
+                                      onTap:(){
+                                        debugPrint("\Mood Edit button pressed\n");
+                                      },
+                                      child: Image.asset(AppImages.editIcon,
+                                        width: 24.w,
+                                        height: 24.h,
+                                        fit: BoxFit.cover,
+                                      ),)
+                                  ],
+                                ),
+
+                                Align(
+                                  alignment:Alignment.centerLeft,
+                                  child: Wrap(
+                                    spacing: 8.0,
+                                    runSpacing: 8.0,
+                                    children:
+
+                                    homeScreenProvider.selectedMoods.map(
+                                          (symptom) =>
+                                          BuildLogItem(
+                                            logItem: symptom,
                                             onSelect: homeScreenProvider.onSelectLog,),).toList(),
                                   ),
                                 ),
