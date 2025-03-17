@@ -48,14 +48,16 @@ class Utils {
     required String title,
     double? width,
     EdgeInsets? padding,
-    required TextTheme textTheme,
-    required ColorScheme colorScheme,
     required onTap,
+    required BuildContext context,
     Widget? suffixIcon,
     Widget? prefixIcon,
     Color? color,
-    Color? textColor
+    Color? textColor,
+    TextStyle? textStyle,
   }) {
+    TextTheme textTheme = Theme.of(context).textTheme;
+    ColorScheme colorScheme =Theme.of(context).colorScheme;
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         padding: padding ?? EdgeInsets.zero,
@@ -73,7 +75,7 @@ class Utils {
 
           Text(
             title,
-            style: textTheme.bodyMedium!.copyWith(
+            style: textStyle??textTheme.bodyMedium!.copyWith(
               color: textColor??colorScheme.onPrimary,
             ),
           ),

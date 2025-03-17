@@ -12,4 +12,10 @@ class AppImages {
 
   //common Heath Concern Screen
   static const String commonHeathConcernAppBarLogo = 'assets/images/logo_for_app_bar.png';
+
+  static const String homeIcon = 'assets/icons/home.png';
+  static const String trackingIcon = 'assets/icons/tracking.png';
+  static const String communityIcon = 'assets/icons/community.png';
+  static const String settingsIcon = 'assets/icons/settings.png';
+  static const String aiChatIcon = 'assets/icons/ai-chat-02.png';
 }

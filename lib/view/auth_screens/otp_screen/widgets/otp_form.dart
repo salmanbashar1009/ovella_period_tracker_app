@@ -64,8 +64,7 @@ class OtpForm extends StatelessWidget {
           width: double.infinity,
           child: Utils.primaryButton(
             title: 'Verify & Continue',
-            textTheme: textTheme,
-            colorScheme: colorScheme,
+            context: context,
             padding: EdgeInsets.symmetric(horizontal: 32.w, vertical: 18.h),
             onTap: () => otpProvider.verifyOtp(context),
           ),

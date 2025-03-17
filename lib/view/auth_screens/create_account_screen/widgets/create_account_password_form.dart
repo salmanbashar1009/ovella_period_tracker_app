@@ -130,8 +130,7 @@ class CreateAccountPasswordForm extends StatelessWidget {
               width: double.infinity,
               child: Utils.primaryButton(
                 title: 'Create Account',
-                textTheme: textTheme,
-                colorScheme: colorScheme,
+                context: context,
                 padding: EdgeInsets.symmetric(horizontal: 32.w, vertical: 18.h),
                 onTap: () {},
               ),
