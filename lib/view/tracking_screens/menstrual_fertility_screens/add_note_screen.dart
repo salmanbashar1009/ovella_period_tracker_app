@@ -77,7 +77,7 @@ class AddNoteScreen extends StatelessWidget {
                 SizedBox(
                     width: double.infinity,
                     height: 56.h,
-                    child: Utils.primaryButton(title: "Save", textTheme: Theme.of(context).textTheme , colorScheme: Theme.of(context).colorScheme, onTap: (){},))
+                    child: Utils.primaryButton(title: "Save", context: context, onTap: (){},))
 
               ],
             ),

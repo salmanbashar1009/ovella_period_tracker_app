@@ -86,8 +86,7 @@ class CommonHealthConcernsScreen extends StatelessWidget {
                       width: double.infinity,
                       child: Utils.primaryButton(
                         title: 'Continue',
-                        textTheme: textTheme,
-                        colorScheme: colorScheme,
+                        context: context,
                         padding: EdgeInsets.symmetric(horizontal: 32.w,vertical: 18.h),
                         onTap: () {
                           Navigator.pushNamed(context, RouteName.pregnancyFertilityTracking);

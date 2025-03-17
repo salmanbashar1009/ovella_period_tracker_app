@@ -5,18 +5,16 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/routing/routes.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme.dart';
-import 'package:ovella_period_tracker_app/view_model/community_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/create_account_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/new_password_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/otp_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/splash_onboarding_view_model_provider.dart';
-import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 import 'package:provider/provider.dart';
-
 import 'view_model/step_screen_provider.dart';
 
 void main() async {
+
   WidgetsFlutterBinding.ensureInitialized();
 
   // Set device orientation to portrait
@@ -40,28 +38,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider<HomeScreenProvider>(
-          create: (_) => HomeScreenProvider(),
-        ),
-        ChangeNotifierProvider<SplashOnBoardViewModelProvider>(
-          create: (_) => SplashOnBoardViewModelProvider(),
-        ),
-        ChangeNotifierProvider<StepScreenProvider>(
-          create: (_) => StepScreenProvider(),
-        ),
-        ChangeNotifierProvider<TrackingScreenProvider>(
-          create: (_) => TrackingScreenProvider(),
-        ),
-        ChangeNotifierProvider<CreateAccountProvider>(
-          create: (_) => CreateAccountProvider(),
-        ),
-        ChangeNotifierProvider<OtpProvider>(create: (_) => OtpProvider()),
-        ChangeNotifierProvider<NewPasswordProvider>(
-          create: (_) => NewPasswordProvider(),
-        ),
-        ChangeNotifierProvider<CommunityProvider>(
-          create: (_) => CommunityProvider(),
-        ),
+        ChangeNotifierProvider<HomeScreenProvider>(create: (_)=> HomeScreenProvider(),),
+        ChangeNotifierProvider<SplashOnBoardViewModelProvider>(create: (_)=> SplashOnBoardViewModelProvider(),),
+        ChangeNotifierProvider<StepScreenProvider>(create: (_)=> StepScreenProvider(),),
+        ChangeNotifierProvider<CreateAccountProvider>(create: (_)=> CreateAccountProvider(),),
+        ChangeNotifierProvider<OtpProvider>(create: (_)=> OtpProvider(),),
+        ChangeNotifierProvider<NewPasswordProvider>(create: (_)=> NewPasswordProvider(),),
       ],
       child: ScreenUtilInit(
         designSize: const Size(deviceWidth, deviceHeight),
@@ -72,10 +54,12 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
             theme: AppTheme.lightTheme,
+
             initialRoute: RouteName.home,
+
             routes: AppRoutes.getRoutes(),
           );
-        },
+        }
       ),
     );
   }

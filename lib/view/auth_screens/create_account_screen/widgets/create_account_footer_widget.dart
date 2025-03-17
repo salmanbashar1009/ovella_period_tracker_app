@@ -30,8 +30,7 @@ class CreateAccountFooterWidget extends StatelessWidget {
           width: double.infinity,
           child: Utils.primaryButton(
             title: 'Continue With Google',
-            textTheme: textTheme,
-            colorScheme: colorScheme,
+            context: context,
             color: colorScheme.onPrimary,
             prefixIcon: Image.asset(
               'assets/images/auth_screens/google icon.png',
