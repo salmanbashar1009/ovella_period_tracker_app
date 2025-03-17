@@ -87,6 +87,7 @@ flutter:
     - assets/images/person/
     - assets/images/icons/
     - assets/icons/
+    - assets/emoji/
     - assets/images/community/
     - assets/images/home_screen/
     - assets/images/auth_screens/

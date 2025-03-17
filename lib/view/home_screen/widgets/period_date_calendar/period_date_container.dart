@@ -20,7 +20,7 @@ class PeriodDateContainer extends StatelessWidget{
           color: Colors.transparent,
           shape: BoxShape.circle,
           border: Border.all(
-            color: const Color(0XFF1E1E1E1F),
+            color: const Color(0Xff1e1e1e1f),
           ),
         ),
         child: isLeftButton ? Icon(Icons.arrow_back_ios_rounded,

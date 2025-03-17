@@ -16,135 +16,184 @@ import '../../widgets/background_widget.dart';
 import 'add_log_screen/widget/build_log_item_widget.dart';
 
 class HomeScreen extends StatelessWidget{
-  const HomeScreen({super.key});
+   HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BackgroundWidget(
-      child: SafeArea(
-          child: Column(
-            children: [
+      child: SingleChildScrollView(
+        controller: context.read<HomeScreenProvider>().homeScreenScrollController,
+        child: SafeArea(
+            child: Padding(
+              padding: AppPadding.screenHorizontalPadding,
+              child: Column(
+                children: [
 
-              /// App Bar
-              Padding(
-                  padding: AppPadding.screenHorizontalPadding,
-                child: Header(),
-              ),
+                  /// App Bar
+                  Header(),
 
-              Expanded(
-                child: Padding(
-                    padding: AppPadding.screenHorizontalPadding,
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
+                  Column(
+                    children: [
 
-                        SizedBox(height: 10.h,),
+                      SizedBox(height: 10.h,),
 
-                        /// Page view tips with dot indicator
-                        PeriodTips(),
+                      /// Page view tips with dot indicator
+                      PeriodTips(),
 
-                        /// Period date count Container
-                        PeriodDateContainer(),
+                      /// Period date count Container
+                      PeriodDateContainer(),
 
-                        SizedBox(height: 16.h,),
+                      SizedBox(height: 16.h,),
 
-                        /// Log your symptoms / mood Row
-                        Row(
-                          children: [
-                            Expanded(
-                              child: LogWidget(
-                                text: "Log your\nSymptoms",
-                                onAdd: (){
-                                  final homeScreenProvider =  context.read<HomeScreenProvider>();
-                                  homeScreenProvider.onLog(logTo: homeScreenProvider.symptomsLog);
-                                Navigator.pushNamed(context, RouteName.addLogScreen);
-                                  },
-                              ),
-                            ),
-                            SizedBox(width: 10.w,),
-                            Expanded(
-                              child: LogWidget(
-                                text: "Log your\nMood",
-                                onAdd: (){
-                                  final homeScreenProvider =  context.read<HomeScreenProvider>();
-                                homeScreenProvider.onLog(logTo: homeScreenProvider.moodLog);
-                                  Navigator.pushNamed(context, RouteName.addLogScreen);
+                      /// Log your symptoms / mood Row
+                      Row(
+                        children: [
+                          Expanded(
+                            child: LogWidget(
+                              text: "Log your\nSymptoms",
+                              onAdd: (){
+                                final homeScreenProvider =  context.read<HomeScreenProvider>();
+                                homeScreenProvider.onLog(logTo: homeScreenProvider.symptomsLog);
+                              Navigator.pushNamed(context, RouteName.addLogScreen);
                                 },
-                              ),
                             ),
-                          ],
-                        ),
+                          ),
+                          SizedBox(width: 10.w,),
+                          Expanded(
+                            child: LogWidget(
+                              text: "Log your\nMood",
+                              onAdd: (){
+                                final homeScreenProvider =  context.read<HomeScreenProvider>();
+                              homeScreenProvider.onLog(logTo: homeScreenProvider.moodLog);
+                                Navigator.pushNamed(context, RouteName.addLogScreen);
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
 
-                        SizedBox(height: 16.h,),
 
-                        Consumer<HomeScreenProvider>(
-                          builder: (_, homeScreenProvider, _){
-                            return homeScreenProvider.selectedSymptoms.isNotEmpty ?
-                            Column(
-                              spacing: 12.h,
-                              children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text("Symptoms",
+
+                      Consumer<HomeScreenProvider>(
+                        builder: (_, homeScreenProvider, _){
+                          return homeScreenProvider.selectedSymptoms.isNotEmpty ?
+                          Column(
+                            spacing: 12.h,
+                            children: [
+                              SizedBox(height: 16.h,),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text("Symptoms",
+                                  style: Theme.of(context).textTheme.headlineSmall,),
+                                  GestureDetector(
+                                      onTap:(){
+                                        debugPrint("\nSymptoms Edit button pressed\n");
+                                      },
+                                      child: Image.asset(AppImages.editIcon,
+                                      width: 24.w,
+                                        height: 24.h,
+                                        fit: BoxFit.cover,
+                                      ),)
+                                ],
+                              ),
+                              Align(
+                                alignment:Alignment.centerLeft,
+                                child: Wrap(
+                                  spacing: 8.0,
+                                  runSpacing: 8.0,
+                                  children:
+
+                                  homeScreenProvider.selectedSymptoms.map(
+                                        (symptom) =>
+                                        BuildLogItem(
+                                          logItem: symptom,
+                                          onSelect: homeScreenProvider.onSelectLog,),).toList(),
+                                ),
+                              ),
+                            ],
+                          ):SizedBox();
+                        },
+                      ),
+
+
+
+                      Consumer<HomeScreenProvider>(
+                        builder: (_, homeScreenProvider, _){
+                          return homeScreenProvider.selectedMoods.isNotEmpty ?
+                          Column(
+                            spacing: 12.h,
+                            children: [
+                              SizedBox(height: 16.h,),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text("Mood",
                                     style: Theme.of(context).textTheme.headlineSmall,),
-                                    Icon(Icons.edit,
-                                    color: AppColors.iconColor,)
-                                  ],
+                                  GestureDetector(
+                                    onTap:(){
+                                      debugPrint("\Mood Edit button pressed\n");
+                                    },
+                                    child: Image.asset(AppImages.editIcon,
+                                      width: 24.w,
+                                      height: 24.h,
+                                      fit: BoxFit.cover,
+                                    ),)
+                                ],
+                              ),
+
+                              Align(
+                                alignment:Alignment.centerLeft,
+                                child: Wrap(
+                                  spacing: 8.0,
+                                  runSpacing: 8.0,
+                                  children:
+
+                                  homeScreenProvider.selectedMoods.map(
+                                        (symptom) =>
+                                        BuildLogItem(
+                                          logItem: symptom,
+                                          onSelect: homeScreenProvider.onSelectLog,),).toList(),
                                 ),
-                                Align(
-                                  alignment:Alignment.centerLeft,
-                                  child: Wrap(
-                                    spacing: 8.0,
-                                    runSpacing: 8.0,
-                                    children:
+                              ),
+                            ],
+                          ):SizedBox();
+                        },
+                      ),
 
-                                    homeScreenProvider.selectedSymptoms.map(
-                                          (symptom) =>
-                                          BuildLogItem(
-                                            symptom: symptom,
-                                            onSelect: homeScreenProvider.onSelectLog,),).toList(),
-                                  ),
-                                ),
-                              ],
-                            ):SizedBox();
-                          },
-                        ),
+                      SizedBox(height: 16.h,),
 
-                        SizedBox(height: 16.h,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text("Tailored Wellness\njourney",
+                          style: Theme.of(context).textTheme.headlineLarge,),
 
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text("Tailored Wellness\njourney",
-                            style: Theme.of(context).textTheme.headlineLarge,),
+                          Text("See all",
+                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              color: AppColors.lightTextColor
+                            ),),
+                        ],
+                      ),
 
-                            Text("See all",
-                              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                color: AppColors.lightTextColor
-                              ),),
-                          ],
-                        ),
+                      SizedBox(height: 16.h,),
 
-                        SizedBox(height: 16.h,),
+                      SizedBox(
+                          height: 380.h,
+                          child: WellnessTipsList(),
+                      ),
 
-                        SizedBox(
-                            height: 380.h,
-                            child: WellnessTipsList(),
-                        ),
+                      SizedBox(
+                        height: 80.h,
 
-                        SizedBox(
-                          height: 80.h,
+                      ),
 
-                        ),
-
-                      ],
-                    ),
+                    ],
                   ),
-                ),
+                ],
               ),
-            ],
-          ),
+            ),
+        ),
       ),
     );
   }

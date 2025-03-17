@@ -17,132 +17,124 @@ class CommunityScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BackgroundWidget(
-        child: SingleChildScrollView(
-          child: SafeArea(
-            child: Padding(
-              padding: AppPadding.screenPadding,
-              child: Column(
-                children: [
-                  SizedBox(height: 22.h),
-
-                  //---------appbar section ------------------------------------
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      ClipOval(
-                        child: Image.asset(
-                          "assets/images/community/black3.jpeg",
-                          height: 48.h,
-                          width: 48.w,
-                        ),
-                      ),
-                      Spacer(),
-                      Center(
-                        child: Text(
-                          "Community",
-                          style: Theme.of(
-                            context,
-                          ).textTheme.headlineMedium?.copyWith(
-                            fontSize: 19.sp,
-                            fontWeight: FontWeight.w500,
-                            color: Color(0xff1E1E1E),
-                          ),
-                        ),
-                      ),
-                      Spacer(),
-                      Utils.circleContainer(
-                        imagePath: "assets/images/icons/bell.png",
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 21.5.sp),
-
-                  //---------Sub title section----------------------------------
-                  Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Hey Jane Doe, Welcome to the",
-                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        fontSize: 19.sp,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xff1E1E1E),
-                      ),
+    return BackgroundWidget(
+      child: SingleChildScrollView(
+        child: SafeArea(
+          child: Padding(
+            padding: AppPadding.screenHorizontalPadding,
+            child: Column(
+              children: [
+                AppBar(
+                  elevation: 0,
+                  surfaceTintColor: Colors.transparent,
+                  leading: ClipOval(
+                    child: Image.asset(
+                      "assets/images/community/black3.jpeg",
+                      height: 48.h,
+                      width: 48.w,
                     ),
                   ),
-                  Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Ovella community",
-                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        fontSize: 19.sp,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 8.h),
-
-                  //-------------sub sub title ---------------------------------------------
-                  Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Join discussions, ask questions, and",
-                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w400,
-                        color: AppColors.lightTextColor,
-                      ),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "connect with experts!",
-                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w400,
-                        color: AppColors.lightTextColor,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 28.h),
-
-                  // Segmented Control for Switching Screens
-                  CustomSegmentedControl(
-                    options: ["Forum", "Groups", "Events"],
-                  ),
-                  SizedBox(height: 16.h),
-
-                  //-----------search-------------------------------------------------------
-                  TextFormField(
-                    decoration: inputDecoration(
-                      context,
-                      "Find topics, groups, and discussions",
-                      null,
-                      Icon(Icons.search),
-                      120.0,
+                  title: Text(
+                    "Community",
+                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                      fontSize: 19.sp,
+                      fontWeight: FontWeight.w500,
+                      color: Color(0xff1E1E1E),
                     ),
                   ),
 
-                  SizedBox(height: 24.h),
+                  centerTitle: true,
 
-                  // Dynamically Show the Selected Screen
-                  Consumer<CommunityProvider>(
-                    builder: (context, provider, child) {
-                      if (provider.selectedIndex == 0) {
-                        return SizedBox(child: ForumScreen());
-                      } else if (provider.selectedIndex == 1) {
-                        return SizedBox(child: GroupScreen());
-                      } else {
-                        return SizedBox(child: EventScreen());
-                      }
-                    },
+                  actions: [
+                    Utils.circleContainer(
+                      imagePath: "assets/images/icons/bell.png",
+                    ),
+                  ],
+                ),
+
+                SizedBox(height: 21.5.sp),
+
+                //---------Sub title section----------------------------------
+                Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Hey Jane Doe, Welcome to the",
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                      fontSize: 19.sp,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xff1E1E1E),
+                    ),
                   ),
+                ),
+                Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Ovella community",
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                      fontSize: 19.sp,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 8.h),
 
-                  SizedBox(height: 24.h),
-                ],
-              ),
+                //-------------sub sub title ---------------------------------------------
+                Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Join discussions, ask questions, and",
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                      fontSize: 14.sp,
+                      fontWeight: FontWeight.w400,
+                      color: AppColors.lightTextColor,
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "connect with experts!",
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                      fontSize: 14.sp,
+                      fontWeight: FontWeight.w400,
+                      color: AppColors.lightTextColor,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 28.h),
+
+                // Segmented Control for Switching Screens
+                CustomSegmentedControl(options: ["Forum", "Groups", "Events"]),
+                SizedBox(height: 16.h),
+
+                //-----------search-------------------------------------------------------
+                TextFormField(
+                  decoration: inputDecoration(
+                    context,
+                    "Find topics, groups, and discussions",
+                    null,
+                    Icon(Icons.search),
+                    120.0,
+                  ),
+                ),
+
+                SizedBox(height: 24.h),
+
+                // Dynamically Show the Selected Screen
+                Consumer<CommunityProvider>(
+                  builder: (context, provider, child) {
+                    if (provider.selectedIndex == 0) {
+                      return SizedBox(child: ForumScreen());
+                    } else if (provider.selectedIndex == 1) {
+                      return SizedBox(child: GroupScreen());
+                    } else {
+                      return SizedBox(child: EventScreen());
+                    }
+                  },
+                ),
+
+                SizedBox(height: 24.h),
+              ],
             ),
           ),
         ),
