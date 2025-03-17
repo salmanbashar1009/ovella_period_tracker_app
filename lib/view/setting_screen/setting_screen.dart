@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
-import 'package:ovella_period_tracker_app/theme/constant/images.dart';
 import 'package:ovella_period_tracker_app/view/setting_screen/cards/menstrua_health_details_card/menstrua_health_details_card.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 import 'cards/invite_partner_card/invite_partner_card.dart';

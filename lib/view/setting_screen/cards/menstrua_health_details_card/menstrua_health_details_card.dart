@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../theme/constant/images.dart';
+import '../../../../constant/images.dart';
 
 class MenstrualHealthDetailsCard extends StatelessWidget {
   const MenstrualHealthDetailsCard({super.key});

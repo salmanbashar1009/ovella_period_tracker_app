@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import '../../../../constant/images.dart';
 import '../../../../constant/padding.dart';
-import '../../../../theme/constant/images.dart';
 import '../../../../utility/utils.dart';
 class SubscribeCard extends StatelessWidget {
   const SubscribeCard({super.key});

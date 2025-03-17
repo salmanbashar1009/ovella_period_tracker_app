@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../theme/constant/images.dart';
+import '../constant/images.dart';
 
 class BackgroundWidget extends StatelessWidget {
   final Widget child;
@@ -16,6 +16,7 @@ class BackgroundWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: Stack(
         children: [
           SingleChildScrollView(
