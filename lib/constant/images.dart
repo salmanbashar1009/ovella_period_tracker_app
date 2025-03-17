@@ -26,6 +26,9 @@ class AppImages {
   static const String communityIcon = 'assets/icons/community.png';
   static const String settingsIcon = 'assets/icons/settings.png';
   static const String aiChatIcon = 'assets/icons/ai-chat-02.png';
+  static const String premiumBadge = 'assets/images/setting_screen/premium_badge.png';
+  static const String editPencil = 'assets/images/setting_screen/pencil-edit-02.png';
+  static const String coupleImage = 'assets/images/setting_screen/Couple 1.png';
   static const String editIcon = 'assets/icons/edit.png';
 
 }

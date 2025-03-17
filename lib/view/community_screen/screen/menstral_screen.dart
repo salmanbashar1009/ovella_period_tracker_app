@@ -12,49 +12,59 @@ class MenstralScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:   BackgroundWidget(
-            child: SingleChildScrollView(
-            child: SafeArea(
-              child: Padding(
-                padding: AppPadding.screenPadding,
-                child: Column(
-               crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    SizedBox(height: 22.h,),
-                //---------appbar section ------------------------------------
-            
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+      body: BackgroundWidget(
+        child: SingleChildScrollView(
+          child: SafeArea(
+            child: Padding(
+              padding: AppPadding.screenHorizontalPadding,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(height: 22.h),
+
+                  //---------appbar section ------------------------------------
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
                       GestureDetector(
                         onTap: () {
                           Navigator.pop(context);
                         },
-                        child: Utils.backButton(context)),
-                        Spacer(),
-                         Center(child: Text("Menstrual health",
-                         style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                         fontSize: 19.sp,
-                         fontWeight: FontWeight.w500,
-                         color: Color(0xff1E1E1E)
-                         ))),
-                      
-                   Spacer(),
-                           Text("        "),//paknami korle mair
-                         ]),
+                        child: Utils.backButton(context),
+                      ),
+                      Spacer(),
+                      Center(
+                        child: Text(
+                          "Menstrual health",
+                          style: Theme.of(
+                            context,
+                          ).textTheme.headlineMedium?.copyWith(
+                            fontSize: 19.sp,
+                            fontWeight: FontWeight.w500,
+                            color: Color(0xff1E1E1E),
+                          ),
+                        ),
+                      ),
 
-                    SizedBox(height:17.5.sp ,),
-              
-               CategoryList(
-                size: 600,
-                val: 16,
-                scrollDirection: Axis.vertical,
-                categories: categories1,
-                ),
-              ]),
+                      Spacer(),
+                      Text("        "), //paknami korle mair
+                    ],
+                  ),
+
+                  SizedBox(height: 17.5.sp),
+
+                  CategoryList(
+                    size: 800,
+                    val: 16,
+                    scrollDirection: Axis.vertical,
+                    categories: categories1,
+                  ),
+                ],
+              ),
             ),
-                    ),
-      ))
-   
-);  }
+          ),
+        ),
+      ),
+    );
+  }
 }
