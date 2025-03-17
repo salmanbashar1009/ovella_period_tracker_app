@@ -35,7 +35,7 @@ class LoginScreen extends StatelessWidget {
                   (BuildContext context, createAccountProvider, Widget? child) {
                 return SingleChildScrollView(
                   child: Padding(
-                    padding: AppPadding.screenPadding,
+                    padding: AppPadding.screenHorizontalPadding,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
