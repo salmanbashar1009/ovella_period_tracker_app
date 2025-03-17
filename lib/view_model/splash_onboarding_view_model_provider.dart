@@ -10,13 +10,16 @@ class SplashOnBoardViewModelProvider extends ChangeNotifier{
   Future<void> splashController(BuildContext context) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     bool? isOpenFirst = prefs.getBool(AppKeyName.isOpenFirst);
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(Duration(seconds: 1));
     if (!context.mounted) return;
     if(isOpenFirst==null){
       prefs.setBool(AppKeyName.isOpenFirst, true);
-      Navigator.pushNamed(context, RouteName.onboardingScreen);
+      Navigator.pushNamedAndRemoveUntil(context, RouteName.onboardingScreen,
+      (route) => false,
+      );
     }else{
-      Navigator.pushNamed(context, RouteName.loginScreen);
+      Navigator.pushNamedAndRemoveUntil(context, RouteName.loginScreen,
+            (route) => false,);
     }
   }
 }
