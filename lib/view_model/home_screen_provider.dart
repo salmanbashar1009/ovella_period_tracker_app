@@ -7,6 +7,7 @@ class HomeScreenProvider with ChangeNotifier {
     WidgetsBinding.instance.addPostFrameCallback((_) => _scrollToCurrentDate());
   }
 
+  ScrollController homeScreenScrollController = ScrollController();
 
   /// All about period tips
   int _periodTipsCurrentPage = 0;

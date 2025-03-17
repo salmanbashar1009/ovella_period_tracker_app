@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/images.dart';
+import 'package:ovella_period_tracker_app/utility/utils.dart';
+import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/parent_screen_provider.dart';
 import 'package:provider/provider.dart';
 import '../../theme/theme/theme_extensions/color_palette.dart';
@@ -15,6 +17,8 @@ class ParentScreen extends StatelessWidget {
       floatingActionButton: GestureDetector(
         onTap: (){
           debugPrint("\nAi Chat bot\n");
+          parentProvider.onSelectedIndex(2);
+
         },
         child: Container(
           width: 56,
@@ -75,6 +79,9 @@ class ParentScreen extends StatelessWidget {
                 ],
               ),
               onTap: () {
+                if(parentProvider.selectedIndex == 0){
+                  Utils.scrollToTop(scrollController: context.read<HomeScreenProvider>().homeScreenScrollController);
+                }
                 parentProvider.onSelectedIndex(0);
               },
             ),
@@ -119,40 +126,12 @@ class ParentScreen extends StatelessWidget {
                     width: 20,
                     height: 20,
                     fit: BoxFit.cover,
-                    color: parentProvider.selectedIndex == 2
-                        ? AppColors.secondary
-                        : AppColors.iconColor,
-                  ),
-                  Text(
-                    "Community",
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color:
-                          parentProvider.selectedIndex == 2
-                              ? AppColors.secondary
-                              : AppColors.textColor,
-                    ),
-                  ),
-                ],
-              ),
-              onTap: () {
-                parentProvider.onSelectedIndex(2);
-              },
-            ),
-            Spacer(),
-            GestureDetector(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(AppImages.settingsIcon,
-                    width: 20,
-                    height: 20,
-                    fit: BoxFit.cover,
                     color: parentProvider.selectedIndex == 3
                         ? AppColors.secondary
                         : AppColors.iconColor,
                   ),
                   Text(
-                    "Settings",
+                    "Community",
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       color:
                           parentProvider.selectedIndex == 3
@@ -164,6 +143,34 @@ class ParentScreen extends StatelessWidget {
               ),
               onTap: () {
                 parentProvider.onSelectedIndex(3);
+              },
+            ),
+            Spacer(),
+            GestureDetector(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(AppImages.settingsIcon,
+                    width: 20,
+                    height: 20,
+                    fit: BoxFit.cover,
+                    color: parentProvider.selectedIndex == 4
+                        ? AppColors.secondary
+                        : AppColors.iconColor,
+                  ),
+                  Text(
+                    "Settings",
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      color:
+                          parentProvider.selectedIndex == 4
+                              ? AppColors.secondary
+                              : AppColors.textColor,
+                    ),
+                  ),
+                ],
+              ),
+              onTap: () {
+                parentProvider.onSelectedIndex(4);
               },
             ),
           ],

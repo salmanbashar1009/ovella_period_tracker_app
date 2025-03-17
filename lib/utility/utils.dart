@@ -108,4 +108,14 @@ class Utils {
     //   ),
     // );
   }
+
+  static void scrollToTop({required ScrollController scrollController}){
+    if (scrollController.hasClients) {
+      scrollController.animateTo(
+        0.0,
+        duration: Duration(milliseconds: 250),
+        curve: Curves.easeInOut,
+      );
+    }
+  }
 }
