@@ -17,12 +17,12 @@ class CommunityScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BackgroundWidget(
+    return
+      BackgroundWidget(
         child: SingleChildScrollView(
           child: SafeArea(
             child: Padding(
-              padding: AppPadding.screenPadding,
+              padding: AppPadding.screenHorizontalPadding,
               child: Column(
                 children: [
                   AppBar(
@@ -175,7 +175,7 @@ class CommunityScreen extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
+      );
+
   }
 }
