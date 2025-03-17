@@ -110,7 +110,7 @@ class LogPeriodScreen extends StatelessWidget {
                         title: "Save",
                         textTheme: Theme.of(context).textTheme,
                         colorScheme: Theme.of(context).colorScheme,
-                        onTap: (){},
+                        onTap: (){Navigator.pop(context);},
                       padding: EdgeInsets.symmetric(vertical: 18.h)
                     ),
                   )

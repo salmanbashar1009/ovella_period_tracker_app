@@ -52,6 +52,66 @@ class HomeScreenProvider with ChangeNotifier {
     periodScrollController.jumpTo(scrollTo.clamp(0, periodScrollController.position.maxScrollExtent));
   }
 
+  /// All about add log
+  String symptomsLog = "Symptoms";
+  String moodLog = "Mood";
+  String _logTo = "Symptoms";
+  String get logTo => _logTo;
+  void onLog({required String logTo}){
+    _logTo = logTo;
+    notifyListeners();
+  }
+
+  final List<Map<String, dynamic>> _symptoms =  [
+    {"text": "Everything is fine", "icon": Icons.thumb_up, "selected": false},
+    {"text": "Cramps", "icon": Icons.female, "selected": false},
+    {"text": "Acne", "icon": Icons.face, "selected": false},
+    {"text": "Tender breasts", "icon": Icons.local_florist, "selected": false},
+    {"text": "Milky nipple discharge", "icon": Icons.opacity, "selected": false},
+    {"text": "Abdominal pain", "icon": Icons.warning, "selected": false},
+    {"text": "Fatigue", "icon": Icons.bedtime, "selected": false},
+    {"text": "Sleepiness", "icon": Icons.nightlight_round, "selected": false},
+    {"text": "Backache", "icon": Icons.chair, "selected": false},
+    {"text": "Frequent urination", "icon": Icons.water_drop, "selected": false},
+    {"text": "Cravings", "icon": Icons.fastfood, "selected": false},
+    {"text": "Insomnia", "icon": Icons.visibility_off, "selected": false},
+    {"text": "Headache", "icon": Icons.health_and_safety, "selected": false},
+    {"text": "Leg cramps", "icon": Icons.directions_walk, "selected": false},
+    {"text": "Bleeding gums", "icon": Icons.medical_services, "selected": false},
+  ];
+
+  List<Map<String, dynamic>> get symptoms => _symptoms;
+
+  List<Map<String, dynamic>> _selectedSymptoms = [];
+  List<Map<String, dynamic>> _selectedMoods = [];
+  List<Map<String, dynamic>> get selectedSymptoms => _selectedSymptoms;
+  List<Map<String, dynamic>> get selectedMoods => _selectedMoods;
+
+  void onSelectLog(Map<String,dynamic> item){
+    debugPrint("\nselected item text : ${item["text"]}\nselection : ${item["selected"]}");
+    int index = _symptoms.indexWhere((itm)=>itm["text"] == item["text"]);
+    _symptoms[index]["selected"] = !_symptoms[index]["selected"];
+    if(logTo==symptomsLog){
+      if(_symptoms[index]["selected"]){
+        _selectedSymptoms.add(_symptoms[index]);
+      }
+      else{
+        _selectedSymptoms.remove(_symptoms[index]);
+      }
+
+    }
+    else{
+      if(_symptoms[index]["selected"]){
+        _selectedMoods.add(_symptoms[index]);
+      }
+      else{
+        _selectedMoods.remove(_symptoms[index]);
+      }
+
+    }
+    notifyListeners();
+      }
+
 
   /// All about log period
 

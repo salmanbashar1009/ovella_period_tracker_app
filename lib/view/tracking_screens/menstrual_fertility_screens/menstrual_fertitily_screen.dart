@@ -6,6 +6,7 @@ import 'package:ovella_period_tracker_app/utility/utils.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/calender_grid.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/log_symtoms_card.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/month_header.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/period_alert_sheet.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/week_day_header.dart';
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 import 'package:provider/provider.dart';
@@ -41,9 +42,11 @@ class MenstrualFertilityScreen extends StatelessWidget {
                  width: double.infinity,
                  child: Consumer<TrackingScreenProvider>(
                    builder: (context, provider, _) {
-                     return CalendarGrid(
-                       year: provider.selectedMonth.year,
-                       month: provider.selectedMonth.month,
+                     return IgnorePointer(
+                       child: CalendarGrid(
+                         year: provider.selectedMonth.year,
+                         month: provider.selectedMonth.month,
+                       ),
                      );
                    },
                  ),
@@ -55,7 +58,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
           SizedBox(height: 24.h),
           Row(
             children: [
-              activityTile(context: context,bgColor: AppColors.secondary, imagePath: "assets/icons/period.png", title: "Period", onTap:(){} ),
+              activityTile(context: context,bgColor: AppColors.secondary, imagePath: "assets/icons/period.png", title: "Period", onTap:(){showPeriodAlertSheet(context);} ),
               SizedBox(width: 12.w,),
               activityTile(context: context,bgColor: Color(0xFFF4D1FF), imagePath: "assets/icons/fertile.png", title: "Fertile", onTap:(){} ),
             ],
