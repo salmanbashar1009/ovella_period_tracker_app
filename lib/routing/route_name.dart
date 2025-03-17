@@ -22,4 +22,5 @@ class RouteName{
   static const String createNewPassword = '/createNewPassword';
   static const String menstralScreen = '/menstralScreen';
   static const String parentScreen = '/parentScreen';
+  static const String settingScreen = '/settingScreen';
 }

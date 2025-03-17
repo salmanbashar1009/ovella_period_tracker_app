@@ -59,8 +59,7 @@ class CreateNewPassword extends StatelessWidget {
                           width: double.infinity,
                           child: Utils.primaryButton(
                             title: 'Back to Log in',
-                            textTheme: textTheme,
-                            colorScheme: colorScheme,
+                            context: context,
                             color: Colors.transparent,
                             textColor: colorScheme.primary,
                             padding: EdgeInsets.symmetric(

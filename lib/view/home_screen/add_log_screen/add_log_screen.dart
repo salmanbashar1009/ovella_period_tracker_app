@@ -81,8 +81,7 @@ class AddLogScreen extends StatelessWidget{
                       width: double.infinity,
                       child: Utils.primaryButton(
                         title: "Save",
-                        textTheme: Theme.of(context).textTheme,
-                        colorScheme: Theme.of(context).colorScheme,
+                        context: context,
                         onTap: ()=>Navigator.pop(context),
                         padding: EdgeInsets.symmetric(vertical: 18.h),
                       ),
