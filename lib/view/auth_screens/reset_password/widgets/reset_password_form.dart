@@ -52,8 +52,7 @@ class ResetPasswordForm extends StatelessWidget {
               width: double.infinity,
               child: Utils.primaryButton(
                 title: 'Send Reset Link',
-                textTheme: textTheme,
-                colorScheme: colorScheme,
+                context: context,
                 padding: EdgeInsets.symmetric(horizontal: 32.w, vertical: 18.h),
                 onTap: () {
                   Navigator.pushNamed(context, RouteName.otpScreen);

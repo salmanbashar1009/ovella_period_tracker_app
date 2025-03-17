@@ -203,8 +203,7 @@ class PeriodDateContainer extends StatelessWidget{
           Utils.primaryButton(
               title: "Log Period",
               padding: EdgeInsets.symmetric(horizontal: 24.w,vertical: 12.h),
-              textTheme: Theme.of(context).textTheme,
-              colorScheme: Theme.of(context).colorScheme,
+              context: context,
               onTap: (){
                 Navigator.pushNamed(context, RouteName.logPeriodScreen);
               },

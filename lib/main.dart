@@ -11,7 +11,6 @@ import 'package:ovella_period_tracker_app/view_model/new_password_provider.dart'
 import 'package:ovella_period_tracker_app/view_model/otp_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/splash_onboarding_view_model_provider.dart';
 import 'package:provider/provider.dart';
-
 import 'view_model/step_screen_provider.dart';
 
 void main() async {
@@ -55,7 +54,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
             theme: AppTheme.lightTheme,
-            initialRoute: RouteName.home,
+            initialRoute: RouteName.settingScreen,
             routes: AppRoutes.getRoutes(),
           );
         }
