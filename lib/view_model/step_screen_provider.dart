@@ -36,40 +36,9 @@ class StepScreenProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  // age selection part
-  List<int> allAges = [
-    10,
-    11,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-    20,
-    21,
-    22,
-    23,
-    24,
-    25,
-    26,
-    27,
-    28,
-    29,
-    30,
-    31,
-    32,
-    33,
-    34,
-    35,
-    36,
-    37,
-    38,
-    39,
-    40,
-  ];
+  /// age selection part
+  List<int> allAges = List.generate(31, (i) => i + 10);
+
   int selectedAge = 28;
 
   void ageSelection(int age) {
@@ -77,7 +46,7 @@ class StepScreenProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  //Language selection part
+  ///Language selection part
   String selectedLanguage = 'English';
   List<String> allLanguages = [
     'Bangle',
@@ -91,6 +60,18 @@ class StepScreenProvider extends ChangeNotifier {
   ];
   void languageSelection(String language) {
     selectedLanguage = language;
+    notifyListeners();
+  }
+
+  ///Gender selection part
+  String selectedGender = 'English';
+  List<String> allGender = [
+    'Male',
+    'Female',
+    'Other',
+  ];
+  void genderSelection(String gender) {
+    selectedGender = gender;
     notifyListeners();
   }
 
