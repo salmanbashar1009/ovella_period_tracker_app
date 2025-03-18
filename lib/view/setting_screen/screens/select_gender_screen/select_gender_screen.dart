@@ -5,7 +5,7 @@ import 'package:ovella_period_tracker_app/view/setting_screen/screens/header_wid
 import 'package:ovella_period_tracker_app/view/setting_screen/screens/header_widget/header_widget.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 import 'package:provider/provider.dart';
-import '../../../view_model/step_screen_provider.dart';
+import '../../../../view_model/step_screen_provider.dart';
 
 class SelectGenderScreen extends StatelessWidget {
   const SelectGenderScreen({super.key});
