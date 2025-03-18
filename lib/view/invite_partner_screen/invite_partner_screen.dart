@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ovella_period_tracker_app/constant/padding.dart';
-import 'package:ovella_period_tracker_app/utility/utils.dart';
-import 'package:ovella_period_tracker_app/view/invite_partner_screen/cards/journey_together_card/journey_together_card.dart';
-import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
+import 'package:ovella_period_tracker_app/routing/route_name.dart';
+import 'package:ovella_period_tracker_app/view/invite_partner_screen/cards/FAQ_card/FAQ_card.dart';
+import 'package:ovella_period_tracker_app/view/invite_partner_screen/cards/step_card/step_card.dart';
+import '../../constant/padding.dart';
+import '../../utility/utils.dart';
+import '../../widgets/background_widget.dart';
+import 'cards/journey_together_card/journey_together_card.dart';
+import 'cards/invite_partner_theme_card/invite_partner_theme_card.dart';
+import 'cards/what_your_partner_get/what_your_partner_get.dart';
 
 class InvitePartnerScreen extends StatelessWidget {
   const InvitePartnerScreen({super.key});
@@ -11,69 +16,76 @@ class InvitePartnerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    ColorScheme colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       body: BackgroundWidget(
         child: SafeArea(
           child: Padding(
             padding: AppPadding.screenHorizontalPadding,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: 12.h),
-                Utils.backButton(context),
-                SizedBox(height: 16.h),
-                JourneyTogetherCard(),
-                SizedBox(height: 16.h),
-                Text("What Yor Partner Gets", style: textTheme.headlineSmall),
-                SizedBox(height: 16.h),
-                SizedBox(
-                  height: 250.h,
-                  child: ListView.builder(
-                    itemCount: 7,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 8.h,
-                          vertical: 8.h,
-                        ),
-                        margin: EdgeInsets.symmetric(horizontal: 6.w),
-                        decoration: BoxDecoration(
-                          color: colorScheme.onPrimary,
-                          borderRadius: BorderRadius.circular(24.r),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              height: 186.h,
-                              width: 255.w,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20.r),
-                                image: DecorationImage(
-                                  image: NetworkImage(
-                                    "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
-                                  ),
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            SizedBox(height: 12.h),
-                            Text(
-                              "Confidence In Parenthood.",
-                              style: textTheme.bodyLarge!.copyWith(
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                            SizedBox(height: 8.h),
-                          ],
-                        ),
-                      );
-                    },
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 12.h),
+                  Utils.backButton(context),
+                  SizedBox(height: 16.h),
+                  JourneyTogetherCard(),
+                  SizedBox(height: 16.h),
+                  Text(
+                    "What Your Partner Gets",
+                    style: textTheme.headlineSmall,
                   ),
-                ),
-              ],
+                  SizedBox(height: 16.h),
+                  SizedBox(
+                    height: 250.h,
+                    child: ListView.builder(
+                      itemCount: 10,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (BuildContext context, int index) {
+                        return WhatYourPartnerGets(
+                          image: "assets/images/setting_screen/Frame 280.png",
+                          title: "Confidence In Parenthood.",
+                        );
+                      },
+                    ),
+                  ),
+                  SizedBox(height: 16.h),
+                  InvitePartnerScreenThemeCard(
+                    image:
+                        'assets/images/invite_partner_screen/track_every_stage_together.png',
+                    title: "Track Every Stage Together",
+                    subtitle:
+                        "Share detailed updates with your partner on your baby's growth and development.",
+                  ),
+                  SizedBox(height: 16.h),
+                  InvitePartnerScreenThemeCard(
+                    image:
+                        'assets/images/invite_partner_screen/Timely Pregnancy Notifications.png',
+                    title: 'Timely Pregnancy Notifications',
+                    subtitle:
+                        'Keep your partner informed with alerts for every key pregnancy milestone.',
+                  ),
+                  SizedBox(height: 16.h),
+                  FAQCard(),
+                  SizedBox(height: 16.h),
+                  StepCard(),
+                  SizedBox(height: 50.h),
+                  SizedBox(
+                    width: double.infinity,
+                    child: Utils.primaryButton(
+                      title: 'Send Invite',
+                      onTap: () {
+                        Navigator.pushNamed(context, RouteName.pairingScreen);
+                      },
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 32,
+                        vertical: 18,
+                      ),
+                      context: context,
+                    ),
+                  ),
+                  SizedBox(height: 32.h),
+                ],
+              ),
             ),
           ),
         ),
