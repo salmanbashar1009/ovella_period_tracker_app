@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class PrivacyDataCard extends StatelessWidget {
-  const PrivacyDataCard({super.key});
+class FAQCard extends StatelessWidget {
+  const FAQCard({super.key});
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
@@ -17,13 +17,13 @@ class PrivacyDataCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Privacy & Data', style: textTheme.bodyLarge),
+          Text('FAQ', style: textTheme.bodyLarge),
           SizedBox(height: 10.h),
           Divider(color: Color(0xff1E1E1E).withOpacity(0.12)),
 
-          _buildDetails(title: 'View Data Insights', context: context),
-          _buildDetails(title: 'Export Data', context: context),
-          _buildDetails(title: 'Delete Account', context: context),
+          _buildDetails(title: 'Is My Data Secure', context: context),
+          _buildDetails(title: 'Can I Stop Sharing?', context: context),
+          _buildDetails(title: 'Does My Partner Need the App?', context: context),
         ],
       ),
     );
@@ -37,7 +37,7 @@ class PrivacyDataCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(title, style: textTheme.bodyMedium),
-          Icon(Icons.keyboard_arrow_right_sharp),
+          Icon(Icons.keyboard_arrow_down_outlined),
         ],
       ),
     );

@@ -7,7 +7,7 @@ import 'package:ovella_period_tracker_app/view/auth_screens/login_screen/widget/
 import 'package:ovella_period_tracker_app/view_model/create_account_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
-import '../../common_health_concerns_screen/widgets/common_heath_concern_header_widget.dart';
+import '../../../constant/images.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -40,7 +40,8 @@ class LoginScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        CommonHeathScreenConcernHeaderWidget(),
+                        SizedBox(height: 12.h),
+                        Center(child: Image.asset(AppImages.commonHeathConcernAppBarLogo)),
                         SizedBox(height: 24.h),
                         Text(
                           "Welcome Back to Ovella",
