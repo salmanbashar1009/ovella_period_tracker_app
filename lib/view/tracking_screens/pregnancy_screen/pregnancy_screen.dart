@@ -107,7 +107,7 @@ class PregnancyScreen extends StatelessWidget {
                       final homeScreenProvider =
                           context.read<HomeScreenProvider>();
                       homeScreenProvider.onLog(
-                        logTo: homeScreenProvider.moodLog,
+                        logTo: homeScreenProvider.symptomsLog,
                       );
                       Navigator.pushNamed(context, RouteName.addLogScreen);
                     },
@@ -119,7 +119,7 @@ class PregnancyScreen extends StatelessWidget {
                       final homeScreenProvider =
                           context.read<HomeScreenProvider>();
                       homeScreenProvider.onLog(
-                        logTo: homeScreenProvider.symptomsLog,
+                        logTo: homeScreenProvider.moodLog,
                       );
                       Navigator.pushNamed(context, RouteName.addLogScreen);
                     },
