@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../theme/constant/images.dart';
+import '../../../constant/images.dart';
 import '../../../utility/utils.dart';
 class CommonHeathScreenConcernHeaderWidget extends StatelessWidget {
   const CommonHeathScreenConcernHeaderWidget({

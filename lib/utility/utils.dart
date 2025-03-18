@@ -34,8 +34,8 @@ class Utils {
                   ? ClipOval(
                     child: Image.asset(
                       imagePath,
-                      width: 20, // Adjust size as needed
-                      height: 20,
+                      width: 20.w, // Adjust size as needed
+                      height: 20.h,
                       fit: BoxFit.cover,
                     ),
                   )
@@ -48,19 +48,23 @@ class Utils {
     required String title,
     double? width,
     EdgeInsets? padding,
-    required TextTheme textTheme,
-    required ColorScheme colorScheme,
     required onTap,
+    required BuildContext context,
     Widget? suffixIcon,
     Widget? prefixIcon,
     Color? color,
-    Color? textColor
+    Color? textColor,
+    Color? borderColor,
+    TextStyle? textStyle,
   }) {
+    TextTheme textTheme = Theme.of(context).textTheme;
+    ColorScheme colorScheme =Theme.of(context).colorScheme;
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         padding: padding ?? EdgeInsets.zero,
         backgroundColor: color??AppColors.primary,
           elevation: 0,
+          shape: StadiumBorder(side: BorderSide(color: borderColor??Colors.transparent)),
           ),
       onPressed: onTap,
       child: Row(
@@ -73,7 +77,7 @@ class Utils {
 
           Text(
             title,
-            style: textTheme.bodyMedium!.copyWith(
+            style: textStyle??textTheme.bodyMedium!.copyWith(
               color: textColor??colorScheme.onPrimary,
             ),
           ),
@@ -105,5 +109,15 @@ class Utils {
     //     ),
     //   ),
     // );
+  }
+
+  static void scrollToTop({required ScrollController scrollController}){
+    if (scrollController.hasClients) {
+      scrollController.animateTo(
+        0.0,
+        duration: Duration(milliseconds: 250),
+        curve: Curves.easeInOut,
+      );
+    }
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import '../../../../utility/utils.dart';
 
 class LoginFooterWidget extends StatelessWidget {
@@ -29,8 +30,7 @@ class LoginFooterWidget extends StatelessWidget {
           width: double.infinity,
           child: Utils.primaryButton(
             title: 'Continue With Google',
-            textTheme: textTheme,
-            colorScheme: colorScheme,
+            context: context,
             color: colorScheme.onPrimary,
             prefixIcon: Image.asset(
               'assets/images/auth_screens/google icon.png',
@@ -41,24 +41,27 @@ class LoginFooterWidget extends StatelessWidget {
           ),
         ),
         SizedBox(height: 16.h),
-        RichText(
-          text: TextSpan(
-            children: [
-              TextSpan(
-                text: 'New to Ovella? ',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Color(0xff676364),
+        GestureDetector(
+          onTap: ()=>Navigator.pushNamed(context, RouteName.stepScreen),
+          child: RichText(
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: 'New to Ovella? ',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Color(0xff676364),
+                  ),
                 ),
-              ),
-              TextSpan(
-                text: 'Create an account',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: colorScheme.secondary,
+                TextSpan(
+                  text: 'Create an account',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: colorScheme.secondary,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ],

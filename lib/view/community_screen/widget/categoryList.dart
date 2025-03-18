@@ -1,6 +1,6 @@
 import 'package:ovella_period_tracker_app/model/catagoryModel.dart';
+import 'package:ovella_period_tracker_app/model/eventModel.dart';
 import 'package:ovella_period_tracker_app/model/groupModel.dart';
-
 
 List<CategoryModel> categories1 = [
   CategoryModel(
@@ -19,7 +19,7 @@ List<CategoryModel> categories1 = [
     imagePath: "assets/images/community/blacksis1.png",
     title: "How to reduce and prevent period bloating",
   ),
-   CategoryModel(
+  CategoryModel(
     imagePath: "assets/images/community/clockpad.png",
     title: "How did menstruation become taboo",
   ),
@@ -49,7 +49,6 @@ List<CategoryModel> categories2 = [
 ];
 
 List<CategoryModel> categories3 = [
-
   CategoryModel(
     imagePath: "assets/images/community/pussy.png",
     title: "How many types of female orgasms are there",
@@ -72,37 +71,52 @@ List<CategoryModel> categories3 = [
   ),
 ];
 
-List<GroupModel> group1= [
-      GroupModel(
-        name: "PCOS & Endometriosis Support",
-      
-        memberImages: [
-          "assets/images/person/p1.png",
-          "assets/images/person/p2.png",
-          "assets/images/person/p3.png",
-          "assets/images/person/pall.png"
-        ],
-      ),
+List<GroupModel> group1 = [
+  GroupModel(
+    name: "PCOS & Endometriosis Support",
 
-      GroupModel(
-        name: "Pregnancy Wellness Tips",
-      
-        memberImages: [
-          "assets/images/person/p4.png",
-          "assets/images/person/p5.png",
-          "assets/images/person/p6.png",
-          "assets/images/person/pall2.png"
-        ],
-      ),
+    memberImages: [
+      "assets/images/person/p1.png",
+      "assets/images/person/p2.png",
+      "assets/images/person/p3.png",
+      "assets/images/person/pall.png",
+    ],
+  ),
 
-       GroupModel(
-        name: "Mindfulness & Stress Relief",
-      
-        memberImages: [
-          "assets/images/person/p7.png",
-          "assets/images/person/p8.png",
-          "assets/images/person/p9.png",
-          "assets/images/person/pall3.png"
-        ],
-      ),
-    ];
+  GroupModel(
+    name: "Pregnancy Wellness Tips",
+
+    memberImages: [
+      "assets/images/person/p4.png",
+      "assets/images/person/p5.png",
+      "assets/images/person/p6.png",
+      "assets/images/person/pall2.png",
+    ],
+  ),
+
+  GroupModel(
+    name: "Mindfulness & Stress Relief",
+
+    memberImages: [
+      "assets/images/person/p7.png",
+      "assets/images/person/p8.png",
+      "assets/images/person/p9.png",
+      "assets/images/person/pall3.png",
+    ],
+  ),
+];
+
+final List<Event> events = [
+  Event(
+    imagePath: "assets/images/community/pgcook.png",
+    title: "Pregnancy Nutrition Webinar",
+    date: "20 March 2025",
+    location: "Cairo",
+  ),
+  Event(
+    imagePath: "assets/images/community/pg1.png",
+    title: "Prenatal Yoga Workshop",
+    date: "25 March 2025",
+    location: "New York",
+  ),
+];

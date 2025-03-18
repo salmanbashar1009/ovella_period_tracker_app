@@ -13,9 +13,10 @@ class ScreenHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Utils.backButton(context),
-        SizedBox(width: 99.w),
+        Spacer(),
         Text(
           title,
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
@@ -24,6 +25,8 @@ class ScreenHeader extends StatelessWidget {
             fontSize: 19.sp,
           ),
         ),
+        Spacer(),
+        SizedBox(width: 30.w,)
       ],
     );
   }

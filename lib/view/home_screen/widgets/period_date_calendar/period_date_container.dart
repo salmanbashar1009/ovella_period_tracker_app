@@ -20,7 +20,7 @@ class PeriodDateContainer extends StatelessWidget{
           color: Colors.transparent,
           shape: BoxShape.circle,
           border: Border.all(
-            color: const Color(0XFF1E1E1E1F),
+            color: const Color(0Xff1e1e1e1f),
           ),
         ),
         child: isLeftButton ? Icon(Icons.arrow_back_ios_rounded,
@@ -203,8 +203,7 @@ class PeriodDateContainer extends StatelessWidget{
           Utils.primaryButton(
               title: "Log Period",
               padding: EdgeInsets.symmetric(horizontal: 24.w,vertical: 12.h),
-              textTheme: Theme.of(context).textTheme,
-              colorScheme: Theme.of(context).colorScheme,
+              context: context,
               onTap: (){
                 Navigator.pushNamed(context, RouteName.logPeriodScreen);
               },

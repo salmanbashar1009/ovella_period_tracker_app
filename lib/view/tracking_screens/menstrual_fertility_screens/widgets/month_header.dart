@@ -11,8 +11,8 @@ class MonthHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<TrackingScreenProvider>(
-      builder: (context, provider, _) {
-        final monthYear = DateFormat('MMMM,yyyy').format(provider.selectedMonth);
+      builder: (context, trackingScreenProvider, _) {
+        final monthYear = DateFormat('MMMM,yyyy').format(trackingScreenProvider.selectedMonth);
 
         return Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -20,7 +20,7 @@ class MonthHeader extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  monthYear,
+                  "${DateTime.now().day} $monthYear",
                   style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                     fontSize: 17.sp,
                     fontWeight: FontWeight.w400,
@@ -28,13 +28,13 @@ class MonthHeader extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 8),
-                const Icon(Icons.keyboard_arrow_down),
+                // const Icon(Icons.keyboard_arrow_down),
               ],
             ),
-            IconButton(
-              icon:  Icon(Icons.edit_outlined,),
-              onPressed: () {},
-            ),
+            // IconButton(
+            //   icon:  ImageIcon(AssetImage("assets/icons/edit.png")),
+            //   onPressed: () {},
+            // ),
           ],
         );
       },

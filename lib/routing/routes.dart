@@ -10,12 +10,18 @@ import 'package:ovella_period_tracker_app/view/community_screen/screen/community
 import 'package:ovella_period_tracker_app/view/community_screen/screen/fertility_screen.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/menstral_screen.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/sexualhealt.screen.dart';
+import 'package:ovella_period_tracker_app/view/home_screen/add_log_screen/add_log_screen.dart';
+import 'package:ovella_period_tracker_app/view/home_screen/log_period_screen/log_period_screen.dart';
+import 'package:ovella_period_tracker_app/view/invite_partner_screen/invite_partner_screen.dart';
 import 'package:ovella_period_tracker_app/view/parent_screen/parent_screen.dart';
 import 'package:ovella_period_tracker_app/view/pregnancy_fertility_tracking/pregnancy_fertility_tracking.dart';
+import 'package:ovella_period_tracker_app/view/setting_screen/setting_screen.dart';
 import 'package:ovella_period_tracker_app/view/splash_screen/splash_screen.dart';
+import 'package:ovella_period_tracker_app/view/subscription_screen/subscription_screen.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/add_note_screen.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/edit_calender_screen.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/pregnancy_detail_screen.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/tracking_screen.dart';
-
 import '../view/home_screen/home_screen.dart';
 import '../view/on_boarding_screen/on_boarding_screen.dart';
 import '../view/step_screen/step_screen.dart';
@@ -35,6 +41,8 @@ class AppRoutes{
       RouteName.fertilityScreen:(context)=>FertilityScreen(),
       RouteName.sexualScreen:(context)=>SexualScreen(),
       RouteName.pregnancyFertilityTracking:(context)=>PregnancyFertilityTracking(),
+      RouteName.logPeriodScreen: (context) => LogPeriodScreen(),
+      RouteName.addLogScreen: (context) => AddLogScreen(),
       RouteName.addNoteScreen : (context) => AddNoteScreen(),
       RouteName.createAccountScreen:(context)=>CreateAccountScreen(),
       RouteName.loginScreen:(context)=>LoginScreen(),
@@ -42,6 +50,11 @@ class AppRoutes{
       RouteName.otpScreen:(context)=>OtpScreen(),
       RouteName.createNewPassword:(context)=>CreateNewPassword(),
       RouteName.parentScreen:(context)=>ParentScreen(),
+      RouteName.settingScreen:(context)=>SettingScreen(),
+      RouteName.subscriptionScreen:(context)=>SubscriptionScreen(),
+      RouteName.InvitePartnerScreen:(context)=>InvitePartnerScreen(),
+      RouteName.editCalenderScreen:(context)=> EditCalenderScreen(),
+      RouteName.pregnancyDetailsScreen:(context)=> PregnancyDetailScreen(),
     };
   }
 }

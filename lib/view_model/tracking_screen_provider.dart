@@ -14,7 +14,24 @@ class TrackingScreenProvider extends ChangeNotifier{
 
 
   /// Calender provider
-  DateTime _selectedMonth = DateTime(2025, 3);
+
+  TrackingScreenProvider() {
+    _year = DateTime.now().year;
+    _month = DateTime.now().month;
+    _selectedMonth = DateTime(_year, _month);
+  }
+
+
+  List<int> _monthList = [1,2,3,4,5,5,6,7,8,9,10,11,12];
+  List<int> get months => _monthList;
+
+  late final int _year;
+  int get year => _year;
+
+  late final int _month;
+  int get month => _month;
+
+  late DateTime _selectedMonth;
   final Set<int> _periodDays = {};
   final Set<int> _purpleDays = {12, 13, 14, 15, 16, 18};
   final Set<int> _greenDays = {17};
@@ -23,6 +40,20 @@ class TrackingScreenProvider extends ChangeNotifier{
   Set<int> get redDays => _periodDays;
   Set<int> get purpleDays => _purpleDays;
   Set<int> get greenDays => _greenDays;
+
+  void setYear(int newYear){
+    if(newYear != null){
+      _year = newYear;
+      notifyListeners();
+    }
+  }
+
+  void setMonth(int newMonth){
+    if(newMonth != null){
+      _year = newMonth;
+      notifyListeners();
+    }
+  }
 
   void onTapPeriodDate(int value){
     if (_periodDays.contains(value)) {
