@@ -26,10 +26,13 @@ class _StepScreenState extends State<StepScreen> {
                 padding: EdgeInsets.symmetric(horizontal: 20.h),
                 child: Column(
                   children: [
+                    ///<<--------- screen header------>>>>>>
                     StepScreenHeaderWidget(textTheme: textTheme),
                     SizedBox(height: 22.h),
 
-                    // Page Indicator
+
+
+                    ///<<<<<<--------- Page Indicator--------->>>>>>>
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: List.generate(
@@ -53,7 +56,9 @@ class _StepScreenState extends State<StepScreen> {
                     ),
                     SizedBox(height: 20.h),
 
-                    // PageView Carousel
+
+
+                    ///<<<------------ PageView Slider------------>>>
                     Expanded(
                       child: PageView.builder(
                         controller: stepScreenProvider.pageController,

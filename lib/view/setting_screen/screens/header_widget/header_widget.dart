@@ -1,0 +1,30 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/utility/utils.dart';
+
+import '../../../../constant/padding.dart';
+import '../../../../theme/theme/theme_extensions/color_palette.dart';
+
+class HeaderWidget extends StatelessWidget {
+  const HeaderWidget({super.key, required this.title});
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    TextTheme textTheme = Theme.of(context).textTheme;
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Utils.backButton(context),
+        SizedBox(width: 82.h),
+        Text(
+          title,
+          style: textTheme.headlineSmall!.copyWith(
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ],
+    );
+  }
+}
