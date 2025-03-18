@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
+import 'package:ovella_period_tracker_app/view_model/pregnancy_screen_provider.dart';
+import 'package:provider/provider.dart';
 
 class ImageSlider extends StatelessWidget {
   const ImageSlider({super.key});
@@ -13,34 +15,43 @@ class ImageSlider extends StatelessWidget {
         CarouselSliderController();
     return Stack(
       children: [
-        CarouselSlider(
-          carouselController: carouselController,
-          options: CarouselOptions(
-            height: 200.h,
-            viewportFraction: 1,
-            initialPage: 0,
-          ),
+        Consumer<PregnancyScreenProvider>(
+          builder: (context,pregnancyScreenProvider,child) {
+            return CarouselSlider(
+              carouselController: carouselController,
+              options: CarouselOptions(
+                height: 200.h,
+                viewportFraction: 1,
+                initialPage: 0,
+              ),
 
-          items:
-              [1, 2, 3, 4, 5].map((i) {
-                return Builder(
-                  builder: (BuildContext context) {
-                    return Container(
-                      width: MediaQuery.of(context).size.width,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Color(0xFFFDE7E7),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'text $i',
-                          style: TextStyle(fontSize: 16.0),
-                        ),
-                      ),
+              items:
+                  pregnancyScreenProvider.imagePath.map((imagePath) {
+                    return Builder(
+                      builder: (BuildContext context) {
+                        return Container(
+                          width: MediaQuery.of(context).size.width,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Color(0xFFFDE7E7),
+                          ),
+                          child: Container(
+                            margin: const EdgeInsets.all(8.0),
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: DecorationImage(image: AssetImage(imagePath),
+                                onError: (_,_){
+                                   Icon(Icons.image);
+                                }
+                              )
+                            ),
+                          ),
+                        );
+                      },
                     );
-                  },
-                );
-              }).toList(),
+                  }).toList(),
+            );
+          }
         ),
         buildPositionedNavigation(
           position: 45.w,
