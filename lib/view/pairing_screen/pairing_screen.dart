@@ -28,21 +28,11 @@ class PairingScreen extends StatelessWidget {
                 InvitationSentCard(),
                 SizedBox(height: 16.h),
                 PairingCodeCard(),
-                SizedBox(height: 32.h),
-                SizedBox(
-                  width: double.infinity,
-                  child: Utils.primaryButton(
-                    title: 'Send Invite',
-                    onTap: () {},
-                    padding: EdgeInsets.symmetric(horizontal: 32, vertical: 18),
-                    context: context,
-                  ),
-                ),
                 SizedBox(height: 12.h),
                 SizedBox(
                   width: double.infinity,
                   child: Utils.primaryButton(
-                    title: 'Send Invite',
+                    title: 'Cancel Invitation',
                     onTap: () {},
                     padding: EdgeInsets.symmetric(horizontal: 32, vertical: 18),
                     context: context,
