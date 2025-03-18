@@ -1,6 +1,7 @@
 import 'package:ovella_period_tracker_app/model/catagoryModel.dart';
 import 'package:ovella_period_tracker_app/model/eventModel.dart';
 import 'package:ovella_period_tracker_app/model/groupModel.dart';
+import 'package:ovella_period_tracker_app/model/healthCardModel.dart';
 
 List<CategoryModel> categories1 = [
   CategoryModel(
@@ -112,11 +113,24 @@ final List<Event> events = [
     title: "Pregnancy Nutrition Webinar",
     date: "20 March 2025",
     location: "Cairo",
+    discription:
+        "Join our exclusive session on prenatal nutrition and discover expert-backed tips to nourish your body during pregnancy.",
+    card: healthCard,
   ),
   Event(
     imagePath: "assets/images/community/pg1.png",
     title: "Prenatal Yoga Workshop",
     date: "25 March 2025",
     location: "New York",
+    discription:
+        "Join our exclusive session on prenatal nutrition and discover expert-backed tips to nourish your body during pregnancy.",
+    card: healthCard,
   ),
+];
+
+final List<Healthcardmodel> healthCard = [
+  Healthcardmodel(title: "Importance of prenatal vitamins and supplements"),
+  Healthcardmodel(title: "Healthy meal planning for each trimester"),
+  Healthcardmodel(title: " Foods to avoid and safe alternatives"),
+  Healthcardmodel(title: "Q&A session with a certified nutritionist"),
 ];
