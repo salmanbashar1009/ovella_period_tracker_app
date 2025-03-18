@@ -1,13 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/constant/images.dart';
+import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
+import 'package:ovella_period_tracker_app/view/home_screen/add_log_screen/widget/build_log_item_widget.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/calender_grid.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/log_symtoms_card.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/month_header.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/period_alert_sheet.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/week_day_header.dart';
+import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart' show HomeScreenProvider;
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -73,9 +77,66 @@ class MenstrualFertilityScreen extends StatelessWidget {
         SizedBox(height: 24.h,),
         LogCard(
           onAddPressed: () {
-
+            final homeScreenProvider =
+            context.read<HomeScreenProvider>();
+            homeScreenProvider.onLog(
+              logTo: homeScreenProvider.symptomsLog,
+            );
+            Navigator.pushNamed(context, RouteName.addLogScreen);
           },
           title: 'Log your Symptoms',
+        ),
+        Consumer<HomeScreenProvider>(
+          builder: (_, homeScreenProvider, _) {
+            return homeScreenProvider.selectedSymptoms.isNotEmpty
+                ? Column(
+              spacing: 12.h,
+              children: [
+                SizedBox(height: 16.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Symptoms",
+                      style:
+                      Theme.of(context).textTheme.headlineSmall,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        debugPrint(
+                          "\nSymptoms Edit button pressed\n",
+                        );
+                      },
+                      child: Image.asset(
+                        AppImages.editIcon,
+                        width: 24.w,
+                        height: 24.h,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ],
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Wrap(
+                    spacing: 8.0,
+                    runSpacing: 8.0,
+                    children:
+                    homeScreenProvider.selectedSymptoms
+                        .map(
+                          (symptom) => BuildLogItem(
+                        logItem: symptom,
+                        onSelect:
+                        homeScreenProvider.onSelectLog,
+                      ),
+                    )
+                        .toList(),
+                  ),
+                ),
+              ],
+            )
+                : SizedBox();
+          },
         ),
       ],
     );

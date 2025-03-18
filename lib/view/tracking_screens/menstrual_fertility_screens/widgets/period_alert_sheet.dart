@@ -20,21 +20,21 @@ void showPeriodAlertSheet(BuildContext context) {
                     Navigator.pushNamed(context, RouteName.addNoteScreen);
                      // Close the dialog
                   },
-                  child:  Text('Add Note',style: Theme.of(context).textTheme.bodyMedium,),
+                  child:  Expanded(child: Text('Add Note',style: Theme.of(context).textTheme.bodyMedium,)),
                 ),
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).pop(); // Close the dialog
                     Navigator.pushNamed(context, RouteName.editCalenderScreen);
                   },
-                  child:  Text('Edit Period',style: Theme.of(context).textTheme.bodyMedium,),
+                  child:  Expanded(child: Text('Edit Period',style: Theme.of(context).textTheme.bodyMedium,)),
                 ),
                 TextButton(
                   onPressed: () {
                     // Handle Button 3 action
                     Navigator.of(context).pop(); // Close the dialog
                   },
-                  child:  Text('Remove Period',style: Theme.of(context).textTheme.bodyMedium,),
+                  child:  Expanded(child: Text('Remove Period',style: Theme.of(context).textTheme.bodyMedium,)),
                 ),
               ]
           ),
