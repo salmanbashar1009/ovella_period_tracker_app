@@ -9,14 +9,18 @@ class ImageSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final CarouselSliderController carouselController =
+        CarouselSliderController();
     return Stack(
       children: [
         CarouselSlider(
+          carouselController: carouselController,
           options: CarouselOptions(
             height: 200.h,
             viewportFraction: 1,
             initialPage: 0,
           ),
+
           items:
               [1, 2, 3, 4, 5].map((i) {
                 return Builder(
@@ -38,35 +42,51 @@ class ImageSlider extends StatelessWidget {
                 );
               }).toList(),
         ),
-        buildPositionedNavigation(position:  45.w,icon:  Icons.arrow_back_ios_rounded),
-        buildPositionedNavigation(position:  245.w,icon:  Icons.arrow_forward_ios_rounded),
+        buildPositionedNavigation(
+          position: 45.w,
+          icon: Icons.arrow_back_ios_rounded,
+          onTap: () {
+            carouselController.previousPage();
+          },
+        ),
+        buildPositionedNavigation(
+          position: 245.w,
+          icon: Icons.arrow_forward_ios_rounded,
+          onTap: () {
+            carouselController.nextPage();
+          },
+        ),
       ],
     );
   }
 
-  Positioned buildPositionedNavigation({required double position, required IconData icon}) {
+  Positioned buildPositionedNavigation({
+    required double position,
+    required IconData icon,
+    required onTap,
+  }) {
     return Positioned(
-        bottom: 80.h,
-        left: position,
+      bottom: 80.h,
+      left: position,
+      child: GestureDetector(
+        onTap: onTap,
         child: Container(
-            width: 32.w,
-            height: 32.h,
+          width: 32.w,
+          height: 32.h,
           decoration: BoxDecoration(
             color: AppColors.onPrimary,
             shape: BoxShape.circle,
-            border: Border.all(color: AppColors.textColor.withOpacity(0.12))
+            border: Border.all(color: AppColors.textColor.withOpacity(0.12)),
           ),
-          child: Icon(icon,size: 16.r,),
+          child: Icon(icon, size: 16.r),
         ),
-      );
+      ),
+    );
   }
 }
 
-
 class SliderDetailsButton extends StatelessWidget {
-  const SliderDetailsButton({
-    super.key,
-  });
+  const SliderDetailsButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -74,23 +94,30 @@ class SliderDetailsButton extends StatelessWidget {
       width: 120.w,
       height: 40.h,
       child: ElevatedButton(
-        onPressed: (){
+        onPressed: () {
           Navigator.pushNamed(context, RouteName.pregnancyDetailsScreen);
         },
         style: ElevatedButton.styleFrom(
-            backgroundColor: AppColors.primary,
-            elevation: 0,
-            shadowColor: null
+          backgroundColor: AppColors.primary,
+          elevation: 0,
+          shadowColor: null,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Details",style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+            Text(
+              "Details",
+              style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                 color: AppColors.onPrimary,
-                fontWeight: FontWeight.w400
-            ),),
-            SizedBox(width: 6.w,),
-            Icon(Icons.arrow_forward_ios_rounded,color: AppColors.onPrimary,size: 16.r,)
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+            SizedBox(width: 6.w),
+            Icon(
+              Icons.arrow_forward_ios_rounded,
+              color: AppColors.onPrimary,
+              size: 16.r,
+            ),
           ],
         ),
       ),

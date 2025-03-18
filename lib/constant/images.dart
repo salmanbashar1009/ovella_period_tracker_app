@@ -31,6 +31,9 @@ class AppImages {
   static const String coupleImage = 'assets/images/setting_screen/Couple 1.png';
   static const String editIcon = 'assets/icons/edit.png';
 
+  ///Pairing Screen
+  static const pairingImage = "assets/images/pairing_screen/pairing_image.png";
+
 }
 
 
