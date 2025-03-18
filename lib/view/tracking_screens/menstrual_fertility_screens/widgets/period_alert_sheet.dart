@@ -24,8 +24,8 @@ void showPeriodAlertSheet(BuildContext context) {
                 ),
                 TextButton(
                   onPressed: () {
-                    // Handle Button 2 action
                     Navigator.of(context).pop(); // Close the dialog
+                    Navigator.pushNamed(context, RouteName.editCalenderScreen);
                   },
                   child:  Text('Edit Period',style: Theme.of(context).textTheme.bodyMedium,),
                 ),

@@ -20,6 +20,8 @@ import 'package:ovella_period_tracker_app/view/setting_screen/setting_screen.dar
 import 'package:ovella_period_tracker_app/view/splash_screen/splash_screen.dart';
 import 'package:ovella_period_tracker_app/view/subscription_screen/subscription_screen.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/add_note_screen.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/edit_calender_screen.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/pregnancy_detail_screen.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/tracking_screen.dart';
 import '../view/home_screen/home_screen.dart';
 import '../view/on_boarding_screen/on_boarding_screen.dart';
@@ -51,8 +53,14 @@ class AppRoutes{
       RouteName.parentScreen:(context)=>ParentScreen(),
       RouteName.settingScreen:(context)=>SettingScreen(),
       RouteName.subscriptionScreen:(context)=>SubscriptionScreen(),
+
+      RouteName.InvitePartnerScreen:(context)=>InvitePartnerScreen(),
+      RouteName.editCalenderScreen:(context)=> EditCalenderScreen(),
+      RouteName.pregnancyDetailsScreen:(context)=> PregnancyDetailScreen(),
+
       RouteName.invitePartnerScreen:(context)=>InvitePartnerScreen(),
       RouteName.pairingScreen:(context)=>PairingScreen(),
+
     };
   }
 }

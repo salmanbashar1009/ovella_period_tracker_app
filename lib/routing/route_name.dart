@@ -24,6 +24,10 @@ class RouteName{
   static const String parentScreen = '/parentScreen';
   static const String settingScreen = '/settingScreen';
   static const String subscriptionScreen = '/subscriptionScreen';
+  static const String InvitePartnerScreen = '/learnMoreScreen';
+  static const String editCalenderScreen = '/editCalenderScreen';
+
   static const String invitePartnerScreen = '/learnMoreScreen';
   static const String pairingScreen = '/pairingScreen';
+
 }
