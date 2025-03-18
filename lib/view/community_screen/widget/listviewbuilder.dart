@@ -31,7 +31,7 @@ class CategoryList extends StatelessWidget {
             right: right,
             imagePath: categories[index].imagePath,
             title: categories[index].title,
-            onTap: () {}, // Add your onTap functionality here
+            onTap: () {},
           );
         },
       ),
