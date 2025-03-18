@@ -93,6 +93,7 @@ flutter:
     - assets/images/auth_screens/
     - assets/images/setting_screen/
     - assets/images/invite_partner_screen/
+    - assets/images/pairing_screen/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

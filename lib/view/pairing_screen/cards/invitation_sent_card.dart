@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import '../../../../constant/images.dart';
-import '../../../../utility/utils.dart';
 class InvitationSentCard extends StatelessWidget {
   const InvitationSentCard({super.key});
 
@@ -18,7 +16,7 @@ class InvitationSentCard extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Image.asset(AppImages.coupleImage),
+          Image.asset(AppImages.pairingImage),
           SizedBox(height: 12.h),
           Text(
             'Invitation Sent',
