@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import '../../../../constant/images.dart';
 class PersonalInformationEditCard extends StatelessWidget {
   const PersonalInformationEditCard({super.key});
@@ -19,7 +20,11 @@ class PersonalInformationEditCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text('Personal Information', style: textTheme.bodyLarge),
-              Image.asset(AppImages.editPencil),
+              GestureDetector(
+                onTap: (){
+                  Navigator.pushNamed(context, RouteName.selectGenderScreen);
+                },
+                  child: Image.asset(AppImages.editPencil)),
             ],
           ),
           SizedBox(height: 10.h,),
