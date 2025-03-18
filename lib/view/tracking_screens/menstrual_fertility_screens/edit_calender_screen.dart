@@ -25,11 +25,11 @@ class EditCalenderScreen extends StatelessWidget {
             padding: AppPadding.screenPadding,
             child: Consumer<TrackingScreenProvider>(
               builder: (context,trackingScreenProvider,child) {
-                final monthYear = DateFormat('MMMM,yyyy').format(trackingScreenProvider.selectedMonth);
+                final monthYear = DateFormat('MMMM,yyyy').format(trackingScreenProvider.selectedMonthYear);
 
                 return Column(
                   children: [
-                    ScreenHeader(title: "${DateTime.now().day} $monthYear"),
+                    ScreenHeader(title: monthYear),
                     SizedBox(
                       height: 24.h,
                     ),
@@ -56,8 +56,8 @@ class EditCalenderScreen extends StatelessWidget {
                             height: 290.h,
                             width: double.infinity,
                             child: CalendarGrid(
-                              year: trackingScreenProvider.selectedMonth.year,
-                              month: trackingScreenProvider.selectedMonth.month,
+                              year: trackingScreenProvider.selectedMonthYear.year,
+                              month: trackingScreenProvider.selectedMonthYear.month,
                             ),
                           ),
                         ],
