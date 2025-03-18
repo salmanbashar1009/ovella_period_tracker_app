@@ -16,30 +16,33 @@ class TrackingScreenProvider extends ChangeNotifier{
   /// Calender provider
 
   TrackingScreenProvider() {
-    _year = DateTime.now().year;
-    _month = DateTime.now().month;
-    _selectedMonth = DateTime(_year, _month);
+    setMonthYear();
   }
 
 
   List<int> _monthList = [1,2,3,4,5,5,6,7,8,9,10,11,12];
-  List<int> get months => _monthList;
+  List<int> get monthList => _monthList;
 
-  late final int _year;
+    int _year = DateTime.now().year;
   int get year => _year;
 
-  late final int _month;
+    int _month = DateTime.now().month;
   int get month => _month;
 
-  late DateTime _selectedMonth;
+  late DateTime _selectedMonthYear;
   final Set<int> _periodDays = {};
   final Set<int> _purpleDays = {12, 13, 14, 15, 16, 18};
   final Set<int> _greenDays = {17};
 
-  DateTime get selectedMonth => _selectedMonth;
+  DateTime get selectedMonthYear => _selectedMonthYear;
   Set<int> get redDays => _periodDays;
   Set<int> get purpleDays => _purpleDays;
   Set<int> get greenDays => _greenDays;
+
+  void setMonthYear(){
+    _selectedMonthYear = DateTime(_year,_month);
+    notifyListeners();
+  }
 
   void setYear(int newYear){
     if(newYear != null){
@@ -48,9 +51,11 @@ class TrackingScreenProvider extends ChangeNotifier{
     }
   }
 
+
+
   void setMonth(int newMonth){
     if(newMonth != null){
-      _year = newMonth;
+      _month = newMonth;
       notifyListeners();
     }
   }
@@ -65,22 +70,22 @@ class TrackingScreenProvider extends ChangeNotifier{
   }
 
   void changeMonth(DateTime newMonth) {
-    _selectedMonth = newMonth;
+    _selectedMonthYear = newMonth;
     notifyListeners();
   }
 
   void previousMonth() {
-    _selectedMonth = DateTime(
-      _selectedMonth.year,
-      _selectedMonth.month - 1,
+    _selectedMonthYear = DateTime(
+      _selectedMonthYear.year,
+      _selectedMonthYear.month - 1,
     );
     notifyListeners();
   }
 
   void nextMonth() {
-    _selectedMonth = DateTime(
-      _selectedMonth.year,
-      _selectedMonth.month + 1,
+    _selectedMonthYear = DateTime(
+      _selectedMonthYear.year,
+      _selectedMonthYear.month + 1,
     );
     notifyListeners();
   }

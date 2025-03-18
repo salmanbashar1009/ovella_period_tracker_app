@@ -43,8 +43,8 @@ class MenstrualFertilityScreen extends StatelessWidget {
                  builder: (context, trackingScreenProvider, _) {
                    return IgnorePointer(
                      child: CalendarGrid(
-                       year: trackingScreenProvider.selectedMonth.year,
-                       month: trackingScreenProvider.selectedMonth.month,
+                       year: trackingScreenProvider.selectedMonthYear.year,
+                       month: trackingScreenProvider.selectedMonthYear.month,
                      ),
                    );
                  },
