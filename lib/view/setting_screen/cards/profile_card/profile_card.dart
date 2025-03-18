@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/routing/route_name.dart';
 
 import '../../../../constant/padding.dart';
 import '../../../../utility/utils.dart';
@@ -50,7 +51,9 @@ class ProfileCard extends StatelessWidget {
               textColor: colorScheme.primary,
               textStyle: textTheme.bodyMedium,
               borderColor: Color(0xff1E1E1E).withOpacity(0.12),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, RouteName.editProfileScreen);
+              },
             ),
           ),
         ],
