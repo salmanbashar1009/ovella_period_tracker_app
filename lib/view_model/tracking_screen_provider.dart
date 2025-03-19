@@ -11,6 +11,23 @@ class TrackingScreenProvider extends ChangeNotifier{
     notifyListeners();
   }
 
+  /// added notes
+
+  final List<String> _notes = [];
+  List<String> get notes => _notes;
+
+  void addNotes({required noteText}){
+    if(noteText != null){
+      notes.add(noteText);
+      notifyListeners();
+    }
+  }
+
+  void removeNotes(int index){
+    notes.removeAt(index);
+    notifyListeners();
+  }
+
 
 
 
