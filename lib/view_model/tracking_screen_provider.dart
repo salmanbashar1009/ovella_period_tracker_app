@@ -32,14 +32,14 @@ class TrackingScreenProvider extends ChangeNotifier{
   int get month => _month;
 
   late DateTime _selectedMonthYear;
-  final Set<int> _periodDays = {};
-  final Set<int> _purpleDays = {12, 13, 14, 15, 16, 18};
-  final Set<int> _greenDays = {17};
+  final List<int> _periodDays = [];
+  final List<int> _purpleDays =[12, 13, 14, 15, 16, 18];
+  final List<int> _greenDays = [17];
 
   DateTime get selectedMonthYear => _selectedMonthYear;
-  Set<int> get periodDays => _periodDays;
-  Set<int> get purpleDays => _purpleDays;
-  Set<int> get greenDays => _greenDays;
+  List<int> get periodDays => _periodDays;
+  List<int> get purpleDays => _purpleDays;
+  List<int> get greenDays => _greenDays;
 
   void setMonthYear(){
     _selectedMonthYear = DateTime(_year,_month);
@@ -73,8 +73,8 @@ class TrackingScreenProvider extends ChangeNotifier{
   // }
 
 
-  final Set<int> _borderSet = {};
-  Set<int> get borderSet => _borderSet;
+  final List<int> _borderSet = [];
+  List<int> get borderSet => _borderSet;
 
   void toggleBorder(int day) {
     if (_borderSet.contains(day)) {
@@ -87,8 +87,8 @@ class TrackingScreenProvider extends ChangeNotifier{
     notifyListeners();
   }
 
-  void saveSelectedDays(Set<int> setName) {
-    setName.addAll(_borderSet);
+  void saveSelectedDays(List<int> listName) {
+    listName.addAll(_borderSet);
     _borderSet.clear();
     debugPrint("\nselected period date: $_periodDays");
     notifyListeners();
