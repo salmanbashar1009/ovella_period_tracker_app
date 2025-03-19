@@ -31,72 +31,72 @@ class MenstrualFertilityScreen extends StatelessWidget {
        CustomCalendar(onTap: (numb)=>  trackingScreenProvider.toggleBorder(numb),),
 
         SizedBox(height: 24.h),
-        Container(
-          width: double.infinity,
-          padding: EdgeInsets.all(20.r),
-          decoration: BoxDecoration(
-            color: AppColors.onPrimary,
-            borderRadius: BorderRadius.circular(24.r),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
+        ...List.generate(trackingScreenProvider.notes.length, (index){
+          return GestureDetector(
+            onLongPress: (){
+              trackingScreenProvider.removeNotes(index);
+            },
+            child: Container(
+              width: double.infinity,
+              padding: EdgeInsets.all(20.r),
+              margin: EdgeInsets.only(bottom:  12.h),
+              decoration: BoxDecoration(
+                color: AppColors.onPrimary,
+                borderRadius: BorderRadius.circular(24.r),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    "Note",
-                    style: Theme.of(
-                      context,
-                    ).textTheme.bodyMedium?.copyWith(fontSize: 17.sp),
-                  ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Icon(Icons.calendar_month_outlined),
+                      Text(
+                        "Note",
+                        style: Theme.of(
+                          context,
+                        ).textTheme.bodyMedium?.copyWith(fontSize: 17.sp),
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.calendar_month_outlined,color: AppColors.textColor,),
+                          SizedBox(width: 6.w,),
+                          Text("3 Mar,25", style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              fontSize: 13.sp
+                          ),)
+
+                        ],
+                      )
 
                     ],
-                  )
+                  ),
+                  SizedBox(height: 12.h),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Icon(Icons.edit_calendar_outlined,color: AppColors.textColor,),
+                      SizedBox(width: 10.w),
+                      Expanded(
+                        child: Text(trackingScreenProvider.notes[index],
+                          maxLines: null,
+                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              color: AppColors.lightTextColor,
+                              fontSize: 13.sp,
+                              fontWeight: FontWeight.w400
+                          ),
 
-                ],
-              ),
-              SizedBox(height: 12.h),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding:  EdgeInsets.only(top: 10.0.h),
-                    child: Icon(Icons.edit_calendar_outlined,color: AppColors.primary,),
-                  ),
-                  SizedBox(width: 10.w),
-                  Expanded(
-                    child: TextField(
-                      maxLines: null,
-                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          color: AppColors.lightTextColor,
-                          fontSize: 13.sp,
-                          fontWeight: FontWeight.w400
-                      ),
-                      textAlignVertical: TextAlignVertical.top,
-                      decoration: InputDecoration(
-                        hintText: 'Write your note here...',
-                        hintStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                            color: AppColors.lightTextColor.withOpacity(0.5),
-                            fontSize: 13.sp,
-                            fontWeight: FontWeight.w400
                         ),
-                        enabledBorder: InputBorder.none,
-                        focusedBorder: InputBorder.none,
                       ),
-                    ),
+                    ],
                   ),
                 ],
               ),
-            ],
-          ),
-        ),
-        SizedBox(height: 24.h),
+            ),
+          );
+        }),
+
+        SizedBox(height: 8.h),
         Row(
           children: [
             activityTile(context: context,bgColor: AppColors.secondary, imagePath: "assets/icons/period.png", title: "Period", onTap:(){showPeriodAlertSheet(context);} ),
