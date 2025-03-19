@@ -21,7 +21,7 @@ class PregnancyDetailScreen extends StatelessWidget {
               children: [
                 Padding(
                   padding: AppPadding.screenPadding,
-                  child: ScreenHeader(title: "Weekly"),
+                  child: ScreenHeader(title: "Weekly",onTap: (){Navigator.pop(context);},),
                 ),
                 SizedBox(height: 24.h),
                 WeekList(),
