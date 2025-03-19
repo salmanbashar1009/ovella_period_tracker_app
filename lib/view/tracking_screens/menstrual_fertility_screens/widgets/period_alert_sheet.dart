@@ -9,10 +9,11 @@ void showPeriodAlertSheet(BuildContext context) {
       return AlertDialog(
         title:  Text('Period Ends',style: Theme.of(context).textTheme.bodyMedium,),
         content: SizedBox(
-          height: 140.h,
+          height: 150.h,
           width: 360.w,// Set the desired height
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
                 TextButton(
                   onPressed: () {
