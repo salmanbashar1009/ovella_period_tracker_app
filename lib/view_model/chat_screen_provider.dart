@@ -52,7 +52,7 @@ class ChatScreenProvider with ChangeNotifier {
 
   final List<String> _defaultAnswerList = [
     "Hormonal imbalances, stress, PCOS, thyroid issues, or medications can cause irregular periods. If the irregularity persists or is accompanied by severe symptoms, consult a doctor.",
-    "Early pregnancy symptoms include missed periods, nausea, breast tenderness, fatigue, frequent urination, mood swings, and food cravings or aversions. Some may also experience mild cramping, spotting, bloating, and headaches. These signs vary for each person."
+    "Early pregnancy symptoms include missed periods, nausea, breast tenderness, fatigue, frequent urination, mood swings, and food cravings or aversions. Some may also experience mild cramping, spotting, bloating, and headaches. These signs vary for each person.",
     "My name is Ovella. I am a Period Tracker App, developed by Nahidul Islam Shakin",
     "Cramps are common. Applying a warm compress may help. Would you like medication suggestions?",
     "Yes, it's common. Try light stretching. Want to track this symptom?",
@@ -68,6 +68,8 @@ class ChatScreenProvider with ChangeNotifier {
     int index = -1;
     if (command.isNotEmpty && _defaultQuestionList.contains(command)) {
       index = _defaultQuestionList.indexWhere((item) => item == command);
+      debugPrint("\nquestion list size : ${_defaultQuestionList.length}\nanswer list size : ${_defaultAnswerList.length}\n");
+      debugPrint("\nindex : $index\nquestion : ${_defaultQuestionList[index]}\nanswer : ${_defaultAnswerList[index]}");
         chat.chat?.add(Chat(command: _defaultQuestionList[index],
         reply: _defaultAnswerList[index]
         ),);
