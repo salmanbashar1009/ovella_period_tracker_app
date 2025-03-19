@@ -5,10 +5,21 @@ import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_pal
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 import 'package:provider/provider.dart';
 
-class EditYearPicker extends StatelessWidget {
+class EditYearPicker extends StatefulWidget {
   EditYearPicker({Key? key}) : super(key: key);
 
+  @override
+  State<EditYearPicker> createState() => _EditYearPickerState();
+}
+
+class _EditYearPickerState extends State<EditYearPicker> {
   final FixedExtentScrollController _controller = FixedExtentScrollController();
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +36,7 @@ class EditYearPicker extends StatelessWidget {
       perspective: 0.005,
       diameterRatio: 1.5,
       physics: const FixedExtentScrollPhysics(),
-      dragStartBehavior: DragStartBehavior.down,
+      clipBehavior: Clip.antiAlias,
       onSelectedItemChanged: (index) {
         trackingScreenProvider.setYear(1951 + index); // Start from year 2000
       },

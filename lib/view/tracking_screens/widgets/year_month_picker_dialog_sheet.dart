@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/widgets/month_picker.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/widgets/year_picker.dart';
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
@@ -15,19 +16,19 @@ class YearMonthPickerDialog extends StatelessWidget {
       title: Center(child:  Text('Select Year and Month',style: Theme.of(context).textTheme.bodyLarge,)),
       content: SizedBox(
         width: double.maxFinite,
-        height: 250,
+        height: 250.h,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             // Year picker
             SizedBox(
-              width: 100,
+              width: 120.w,
               child: EditYearPicker(),
             ),
 
             // Month picker
             SizedBox(
-              width: 100,
+              width: 120.w,
               child: EditMonthPicker(),
             ),
           ],

@@ -29,7 +29,7 @@ class CommunityScreen extends StatelessWidget {
                   surfaceTintColor: Colors.transparent,
                   leading: ClipOval(
                     child: Image.asset(
-                      "assets/images/community/black3.jpeg",
+                      "assets/images/person/aunty.png",
                       height: 48.h,
                       width: 48.w,
                     ),

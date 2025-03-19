@@ -19,7 +19,7 @@ class AddNoteScreen extends StatelessWidget {
             padding: AppPadding.screenPadding,
             child: Column(
               children: [
-                ScreenHeader(title: "Mar 3"),
+                ScreenHeader(title: "Mar 3",onTap: (){Navigator.pop(context);},),
                 SizedBox(height: 24.h),
                 Container(
                   width: double.infinity,
