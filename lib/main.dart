@@ -88,7 +88,7 @@ class MyApp extends StatelessWidget {
             title: 'Flutter Demo',
             theme: AppTheme.lightTheme,
 
-            initialRoute: RouteName.community,
+            initialRoute: RouteName.parentScreen,
 
             routes: AppRoutes.getRoutes(),
           );
