@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/images.dart';
@@ -140,7 +141,7 @@ class ChatScreen extends StatelessWidget {
                                                     crossAxisAlignment:
                                                         CrossAxisAlignment.start,
                                                     children: [
-                                                      Text(
+                                                      SelectableText(
                                                         question,
                                                         style:
                                                             Theme.of(context)
@@ -198,13 +199,26 @@ class ChatScreen extends StatelessWidget {
                                                     crossAxisAlignment:
                                                         CrossAxisAlignment.start,
                                                     children: [
-                                                      Text(
-                                                        reply,
-                                                        style:
-                                                            Theme.of(context)
-                                                                .textTheme
-                                                                .bodyMedium,
+                                                      DefaultTextStyle(
+                                                          style: Theme.of(context)
+                                                              .textTheme
+                                                              .bodyMedium!,
+                                                          child: AnimatedTextKit(
+                                                            repeatForever: false,
+                                                              totalRepeatCount: 1,
+                                                              animatedTexts:[
+                                                                TyperAnimatedText(reply,speed: const Duration(milliseconds: 40),
+                                                                )
+                                                              ],
+                                                          ),
                                                       ),
+                                                      // Text(
+                                                      //   reply,
+                                                      //   style:
+                                                      //       Theme.of(context)
+                                                      //           .textTheme
+                                                      //           .bodyMedium,
+                                                      // ),
                                                       Row(
                                                         spacing: 12.w,
                                                         mainAxisAlignment:
