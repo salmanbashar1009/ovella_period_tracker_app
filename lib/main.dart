@@ -8,6 +8,7 @@ import 'package:ovella_period_tracker_app/theme/theme/theme.dart';
 import 'package:ovella_period_tracker_app/view_model/community_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/create_account_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
+import 'package:ovella_period_tracker_app/view_model/listselectionProvider.dart';
 import 'package:ovella_period_tracker_app/view_model/new_password_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/otp_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/pairing_screen_provider.dart';
@@ -76,6 +77,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider<PairingScreenProvider>(
           create: (_) => PairingScreenProvider(),
+        ),
+        ChangeNotifierProvider<CategoryProvider>(
+          create: (_) => CategoryProvider(),
         ),
       ],
       child: ScreenUtilInit(
