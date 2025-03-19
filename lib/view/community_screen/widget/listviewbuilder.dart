@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ovella_period_tracker_app/view/community_screen/screen/Forum_screen/details_screen/mensrualHealth.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/CategoryCard1.dart';
 import 'package:ovella_period_tracker_app/model/catagoryModel.dart';
+import 'package:ovella_period_tracker_app/view/community_screen/widget/categoryList.dart';
 
 // ignore: must_be_immutable
 class CategoryList extends StatelessWidget {
@@ -31,7 +33,18 @@ class CategoryList extends StatelessWidget {
             right: right,
             imagePath: categories[index].imagePath,
             title: categories[index].title,
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder:
+                      (context) => MenstrualHealth(
+                        categories: categories,
+                        selectedIndex: index,
+                      ),
+                ),
+              );
+            },
           );
         },
       ),
