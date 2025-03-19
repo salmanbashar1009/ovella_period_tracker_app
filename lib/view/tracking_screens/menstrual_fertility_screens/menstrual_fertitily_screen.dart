@@ -49,6 +49,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
                      child: CalendarGrid(
                        year: trackingScreenProvider.selectedMonthYear.year,
                        month: trackingScreenProvider.selectedMonthYear.month,
+                      onTap:(numb)=>  trackingScreenProvider.toggleBorder(numb),
                      ),
                    );
                  },

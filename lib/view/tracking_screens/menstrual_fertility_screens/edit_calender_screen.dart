@@ -16,6 +16,8 @@ import 'package:provider/provider.dart';
 class EditCalenderScreen extends StatelessWidget {
   const EditCalenderScreen({super.key});
 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,22 +26,25 @@ class EditCalenderScreen extends StatelessWidget {
           child: Padding(
             padding: AppPadding.screenPadding,
             child: Consumer<TrackingScreenProvider>(
-              builder: (context,trackingScreenProvider,child) {
-                final monthYear = DateFormat('MMMM,yyyy').format(trackingScreenProvider.selectedMonthYear);
+              builder: (context, trackingScreenProvider, child) {
+                final monthYear = DateFormat(
+                  'MMMM,yyyy',
+                ).format(trackingScreenProvider.selectedMonthYear);
 
                 return Column(
                   children: [
-                    ScreenHeader(title: monthYear),
-                    SizedBox(
-                      height: 24.h,
-                    ),
+                    ScreenHeader(title: monthYear,onTap: (){
+                      trackingScreenProvider.clearSelectedDays();
+                      Navigator.pop(context);
+
+                    },),
+                    SizedBox(height: 24.h),
                     Padding(
-                      padding:  EdgeInsets.symmetric(horizontal:  16.0.w),
+                      padding: EdgeInsets.symmetric(horizontal: 16.0.w),
                       child: const WeekdayHeader(),
                     ),
-                     SizedBox(height: 12.h),
+                    SizedBox(height: 12.h),
                     Container(
-
                       padding: EdgeInsets.all(16.r),
 
                       decoration: BoxDecoration(
@@ -50,31 +55,42 @@ class EditCalenderScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           // const MonthHeader(),
-                           SizedBox(height: 20.h),
+                          SizedBox(height: 20.h),
 
                           SizedBox(
                             height: 290.h,
                             width: double.infinity,
                             child: CalendarGrid(
                               year: trackingScreenProvider.selectedMonthYear.year,
-                              month: trackingScreenProvider.selectedMonthYear.month,
+                              month:
+                                  trackingScreenProvider
+                                      .selectedMonthYear
+                                      .month,
+                              onTap:
+                                  (numb) => trackingScreenProvider
+                                      .toggleBorder(numb),
                             ),
                           ),
                         ],
                       ),
                     ),
+                    SizedBox(height: 24.h),
+
                     SizedBox(
-                      height: 24.h,
+                      width: double.infinity,
+                      height: 56.h,
+                      child: Utils.primaryButton(
+                        title: "Save",
+                        context: context,
+                        onTap: () {
+                          trackingScreenProvider.saveSelectedDays(trackingScreenProvider.periodDays);
+                          Navigator.pop(context);
+                        },
+                      ),
                     ),
-
-                    SizedBox(
-                        width: double.infinity,
-                        height: 56.h,
-                        child: Utils.primaryButton(title: "Save", context: context, onTap: (){},))
-
                   ],
                 );
-              }
+              },
             ),
           ),
         ),
