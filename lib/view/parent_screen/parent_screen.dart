@@ -13,6 +13,7 @@ class ParentScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final parentProvider = context.watch<ParentScreenProvider>();
+    final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       floatingActionButton: GestureDetector(
         onTap: (){
@@ -54,124 +55,162 @@ class ParentScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            GestureDetector(
-             // padding: EdgeInsets.zero,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                Image.asset(AppImages.homeIcon,
-                width: 20,
-                  height: 20,
-                  fit: BoxFit.cover,
-                  color: parentProvider.selectedIndex == 0
-                      ? AppColors.secondary
-                      : AppColors.iconColor,
+            Expanded(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 0,
+                    padding: EdgeInsets.zero,
+                  overlayColor: Colors.transparent,
+                    shadowColor: Colors.transparent
                 ),
-                  Text(
-                    "Home",
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color:
-                          parentProvider.selectedIndex == 0
-                              ? AppColors.secondary
-                              : AppColors.textColor,
-                    ),
-                  ),
-                ],
-              ),
-              onTap: () {
-                if(parentProvider.selectedIndex == 0){
-                  Utils.scrollToTop(scrollController: context.read<HomeScreenProvider>().homeScreenScrollController);
-                }
-                parentProvider.onSelectedIndex(0);
-              },
-            ),
-            Spacer(),
-            GestureDetector(
-
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(AppImages.trackingIcon,
-                    width: 20,
-                    height: 20,
+               // padding: EdgeInsets.zero,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                  Image.asset(AppImages.homeIcon,
+                  width: 20.w,
+                    height: 20.h,
                     fit: BoxFit.cover,
-                    color: parentProvider.selectedIndex == 1
+                    color: parentProvider.selectedIndex == 0
                         ? AppColors.secondary
                         : AppColors.iconColor,
                   ),
-                  Text(
-                    "Tracking",
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color:
-                          parentProvider.selectedIndex == 1
-                              ? AppColors.secondary
-                              : AppColors.textColor,
+                    Text(
+                      "Home",
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        fontSize: 10.sp,
+                        color:
+                            parentProvider.selectedIndex == 0
+                                ? AppColors.secondary
+                                : AppColors.textColor,
+                      ),
+                      maxLines: 1,
                     ),
-                  ),
-                ],
+                  ],
+                ),
+                onPressed: () {
+                  if(parentProvider.selectedIndex == 0){
+                    Utils.scrollToTop(scrollController: context.read<HomeScreenProvider>().homeScreenScrollController);
+                  }
+                  parentProvider.onSelectedIndex(0);
+                },
               ),
-              onTap: () {
-                parentProvider.onSelectedIndex(1);
-              },
+            ),
+            //Spacer(),
+            Expanded(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    elevation: 0,
+                    padding: EdgeInsets.zero,
+                    overlayColor: Colors.transparent,
+                    shadowColor: Colors.transparent
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(AppImages.trackingIcon,
+                      width: 20,
+                      height: 20,
+                      fit: BoxFit.cover,
+                      color: parentProvider.selectedIndex == 1
+                          ? AppColors.secondary
+                          : AppColors.iconColor,
+                    ),
+                    Text(
+                      "Tracking",
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color:
+                            parentProvider.selectedIndex == 1
+                                ? AppColors.secondary
+                                : AppColors.textColor,
+                        fontSize: 10.sp,
+                      ),
+                      maxLines: 1,
+                    ),
+                  ],
+                ),
+                onPressed: () {
+                  parentProvider.onSelectedIndex(1);
+                },
+              ),
             ),
          //   SizedBox(width: 48), // Empty space for the FAB
-            Spacer(),
-            Spacer(),
-            GestureDetector(
-
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(AppImages.communityIcon,
-                    width: 20,
-                    height: 20,
-                    fit: BoxFit.cover,
-                    color: parentProvider.selectedIndex == 3
-                        ? AppColors.secondary
-                        : AppColors.iconColor,
-                  ),
-                  Text(
-                    "Community",
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color:
-                          parentProvider.selectedIndex == 3
-                              ? AppColors.secondary
-                              : AppColors.textColor,
+           // Spacer(),
+           // Spacer(),
+            Expanded(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    elevation: 0,
+                    padding: EdgeInsets.zero,
+                    overlayColor: Colors.transparent,
+                    shadowColor: Colors.transparent
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(AppImages.communityIcon,
+                      width: 20,
+                      height: 20,
+                      fit: BoxFit.cover,
+                      color: parentProvider.selectedIndex == 3
+                          ? AppColors.secondary
+                          : AppColors.iconColor,
                     ),
-                  ),
-                ],
+                    Text(
+                      "Community",
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color:
+                            parentProvider.selectedIndex == 3
+                                ? AppColors.secondary
+                                : AppColors.textColor,
+                        fontSize: 10.sp,
+                      ),
+                      maxLines: 1,
+                    ),
+                  ],
+                ),
+                onPressed: () {
+                  parentProvider.onSelectedIndex(3);
+                },
               ),
-              onTap: () {
-                parentProvider.onSelectedIndex(3);
-              },
             ),
-            Spacer(),
-            GestureDetector(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(AppImages.settingsIcon,
-                    width: 20,
-                    height: 20,
-                    fit: BoxFit.cover,
-                    color: parentProvider.selectedIndex == 4
-                        ? AppColors.secondary
-                        : AppColors.iconColor,
-                  ),
-                  Text(
-                    "Settings",
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color:
-                          parentProvider.selectedIndex == 4
-                              ? AppColors.secondary
-                              : AppColors.textColor,
+           // Spacer(),
+            Expanded(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    elevation: 0,
+                  padding: EdgeInsets.zero,
+                    overlayColor: Colors.transparent,
+                  shadowColor: Colors.transparent
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(AppImages.settingsIcon,
+                      width: 20,
+                      height: 20,
+                      fit: BoxFit.cover,
+                      color: parentProvider.selectedIndex == 4
+                          ? AppColors.secondary
+                          : AppColors.iconColor,
                     ),
-                  ),
-                ],
+                    Text(
+                      "Settings",
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color:
+                            parentProvider.selectedIndex == 4
+                                ? AppColors.secondary
+                                : AppColors.textColor,
+                        fontSize: 10.sp,
+                      ),
+                      maxLines: 1,
+                    ),
+                  ],
+                ),
+                onPressed: () {
+                  parentProvider.onSelectedIndex(4);
+                },
               ),
-              onTap: () {
-                parentProvider.onSelectedIndex(4);
-              },
             ),
           ],
         ),
