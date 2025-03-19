@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
@@ -119,5 +120,19 @@ class Utils {
         curve: Curves.easeInOut,
       );
     }
+  }
+
+  static void scrollToBottom({required ScrollController scrollController}){
+    scrollController.animateTo(
+      scrollController.position.minScrollExtent, // Scroll to the bottom
+      duration: Duration(milliseconds: 350),      // Animation duration
+      curve: Curves.easeOut,                      // Animation curve
+    );
+}
+
+
+  static void copyText({required String text}){
+    debugPrint("\nText to copy : $text\n");
+    Clipboard.setData(ClipboardData(text: text));
   }
 }
