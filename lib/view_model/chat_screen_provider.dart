@@ -40,12 +40,12 @@ class ChatScreenProvider with ChangeNotifier {
 
   ChatModel chatModel = ChatModel();
   final List<String> _defaultQuestionList = [
-    "Why is my period irregular?",
-    "What are early pregnancy symptoms?",
-    "What is your name?",
-    "I have severe cramps. What should I do?",
-    "Is back pain normal during pregnancy?",
-    "Who are you?",
+    "why is my period irregular?",
+    "what are early pregnancy symptoms?",
+    "what is your name?",
+    "i have severe cramps. What should I do?",
+    "is back pain normal during pregnancy?",
+    "who are you?",
   ];
 
   List<String> get defaultQuestionList => _defaultQuestionList;
@@ -66,11 +66,11 @@ class ChatScreenProvider with ChangeNotifier {
     final String command = chatController.text.toString();
 
     int index = -1;
-    if (command.isNotEmpty && _defaultQuestionList.contains(command)) {
-      index = _defaultQuestionList.indexWhere((item) => item == command);
+    if (command.isNotEmpty && _defaultQuestionList.contains(command.toLowerCase())) {
+      index = _defaultQuestionList.indexWhere((item) => item == command.toLowerCase());
       debugPrint("\nquestion list size : ${_defaultQuestionList.length}\nanswer list size : ${_defaultAnswerList.length}\n");
       debugPrint("\nindex : $index\nquestion : ${_defaultQuestionList[index]}\nanswer : ${_defaultAnswerList[index]}");
-        chat.chat?.add(Chat(command: _defaultQuestionList[index],
+        chat.chat?.add(Chat(command: command,
         reply: _defaultAnswerList[index]
         ),);
     }
