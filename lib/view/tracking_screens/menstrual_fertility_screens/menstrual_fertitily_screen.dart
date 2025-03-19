@@ -13,6 +13,7 @@ import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertil
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/week_day_header.dart';
 import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart' show HomeScreenProvider;
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
+import 'package:ovella_period_tracker_app/widgets/custom_calendar.dart';
 import 'package:provider/provider.dart';
 
 
@@ -22,41 +23,73 @@ class MenstrualFertilityScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final trackingScreenProvider = Provider.of<TrackingScreenProvider>(context,listen: false);
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-       Container(
+       CustomCalendar(onTap: (numb)=>  trackingScreenProvider.toggleBorder(numb),),
 
-         padding: EdgeInsets.all(16.r),
+        SizedBox(height: 24.h),
+        Container(
+          width: double.infinity,
+          padding: EdgeInsets.all(20.r),
+          decoration: BoxDecoration(
+            color: AppColors.onPrimary,
+            borderRadius: BorderRadius.circular(24.r),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
-         decoration: BoxDecoration(
-           borderRadius: BorderRadius.circular(24.r),
-           color: AppColors.onPrimary,
-         ),
-         child: Column(
-           mainAxisAlignment: MainAxisAlignment.center,
-           children: [
-             const MonthHeader(),
-             const SizedBox(height: 20),
-             const WeekdayHeader(),
-             const SizedBox(height: 10),
-             SizedBox(
-               height: 290.h,
-               width: double.infinity,
-               child: Consumer<TrackingScreenProvider>(
-                 builder: (context, trackingScreenProvider, _) {
-                   return CalendarGrid(
-                     year: trackingScreenProvider.selectedMonthYear.year,
-                     month: trackingScreenProvider.selectedMonthYear.month,
-                    onTap:(numb)=>  trackingScreenProvider.toggleBorder(numb),
-                   );
-                 },
-               ),
-             ),
-           ],
-         ),
-       ),
+                children: [
+                  Text(
+                    "Note",
+                    style: Theme.of(
+                      context,
+                    ).textTheme.bodyMedium?.copyWith(fontSize: 17.sp),
+                  ),
 
+                ],
+              ),
+              SizedBox(height: 12.h),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding:  EdgeInsets.only(top: 10.0.h),
+                    child: Icon(Icons.edit_calendar_outlined,color: AppColors.primary,),
+                  ),
+                  SizedBox(width: 10.w),
+                  Expanded(
+                    child: TextField(
+                      maxLines: null,
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          color: AppColors.lightTextColor,
+                          fontSize: 13.sp,
+                          fontWeight: FontWeight.w400
+                      ),
+                      textAlignVertical: TextAlignVertical.top,
+                      decoration: InputDecoration(
+                        hintText: 'Write your note here...',
+                        hintStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            color: AppColors.lightTextColor.withOpacity(0.5),
+                            fontSize: 13.sp,
+                            fontWeight: FontWeight.w400
+                        ),
+                        enabledBorder: InputBorder.none,
+                        focusedBorder: InputBorder.none,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
         SizedBox(height: 24.h),
         Row(
           children: [
@@ -173,3 +206,5 @@ class MenstrualFertilityScreen extends StatelessWidget {
     );
   }
 }
+
+

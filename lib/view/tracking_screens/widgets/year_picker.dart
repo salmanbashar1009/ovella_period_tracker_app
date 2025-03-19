@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
@@ -6,7 +5,7 @@ import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.da
 import 'package:provider/provider.dart';
 
 class EditYearPicker extends StatefulWidget {
-  EditYearPicker({Key? key}) : super(key: key);
+  const EditYearPicker({super.key});
 
   @override
   State<EditYearPicker> createState() => _EditYearPickerState();
@@ -35,6 +34,7 @@ class _EditYearPickerState extends State<EditYearPicker> {
       itemExtent: 50,
       perspective: 0.005,
       diameterRatio: 1.5,
+      overAndUnderCenterOpacity: 0.5,
       physics: const FixedExtentScrollPhysics(),
       clipBehavior: Clip.antiAlias,
       onSelectedItemChanged: (index) {
