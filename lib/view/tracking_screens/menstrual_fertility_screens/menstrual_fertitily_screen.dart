@@ -52,6 +52,12 @@ class MenstrualFertilityScreen extends StatelessWidget {
                       context,
                     ).textTheme.bodyMedium?.copyWith(fontSize: 17.sp),
                   ),
+                  Row(
+                    children: [
+                      Icon(Icons.calendar_month_outlined),
+
+                    ],
+                  )
 
                 ],
               ),
