@@ -35,7 +35,8 @@ class _EditMonthPickerState extends State<EditMonthPicker> {
       itemExtent: 50,
       perspective: 0.005,
       diameterRatio: 1.5,
-      physics: const FixedExtentScrollPhysics(),
+      overAndUnderCenterOpacity: 0.5,
+      physics:  FixedExtentScrollPhysics(),
       clipBehavior: Clip.antiAlias,
       onSelectedItemChanged: (index) {
         trackingScreenProvider.setMonth(index + 1);
