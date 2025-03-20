@@ -21,19 +21,42 @@ class BackgroundWidget extends StatelessWidget {
       extendBody: true,
       resizeToAvoidBottomInset: resizeToAvoidBottomInset,
       body: Stack(
+        fit: StackFit.expand,
         children: [
-          SingleChildScrollView(
+         Container(
+           width: double.infinity,
+           height: double.infinity,
+           decoration: BoxDecoration(
+             color: Color(0xffF2F0F0),
+           ),
+         ),
+          Positioned(
+            right: 110,
+            top: -80,
             child: Image.asset(
-              height: ScreenUtil().screenHeight,
-              width: ScreenUtil().screenWidth,
-              backgroundImage ,
-              fit: BoxFit.cover,
-              alignment: Alignment.center,
+                AppImages.screenLayer02
             ),
           ),
-          Positioned.fill(
-            child: SizedBox()
+
+          Positioned(
+            left: 120,
+            top: -90,
+            child: Image.asset(
+                AppImages.screenLayer01
+            ),
           ),
+          // SingleChildScrollView(
+          //   child: Image.asset(
+          //     height: ScreenUtil().screenHeight,
+          //     width: ScreenUtil().screenWidth,
+          //     backgroundImage ,
+          //     fit: BoxFit.cover,
+          //     alignment: Alignment.center,
+          //   ),
+          // ),
+          // Positioned.fill(
+          //   child: SizedBox()
+          // ),
           child, // Main content goes on top
         ],
       ),

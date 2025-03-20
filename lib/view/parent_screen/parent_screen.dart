@@ -136,7 +136,7 @@ class ParentScreen extends StatelessWidget {
               ),
             ),
          //   SizedBox(width: 48), // Empty space for the FAB
-           // Spacer(),
+            Spacer(),
            // Spacer(),
             Expanded(
               child: ElevatedButton(
