@@ -11,6 +11,10 @@ import 'package:table_calendar/table_calendar.dart';
 class LogPeriodScreen extends StatelessWidget {
   const LogPeriodScreen({super.key});
 
+  bool isSameDay(DateTime a, DateTime b) {
+    return a.year == b.year && a.month == b.month && a.day == b.day;
+  }
+
   @override
   Widget build(BuildContext context) {
     return BackgroundWidget(
@@ -38,71 +42,201 @@ class LogPeriodScreen extends StatelessWidget {
                   SizedBox(
                     height: 20.h,
                   ),
+
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 16.w),
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(20.r)
+                      borderRadius: BorderRadius.circular(20.r),
                     ),
                     child: Consumer<HomeScreenProvider>(
                       builder: (_, homeScreenProvider, child) {
+                        // Define pre-selected days
+                        final List<DateTime> preSelectedDays = homeScreenProvider.appPredictedPeriodDays;
+
                         return TableCalendar(
-                          firstDay: DateTime.utc(2010, 10, 16),
-                          lastDay: DateTime.utc(2030, 3, 14),
+                          firstDay: DateTime.utc(DateTime.now().year-1, 01, 01),
+                          lastDay: DateTime.utc(DateTime.now().year+1, 12, 31),
                           focusedDay: DateTime.now(),
                           calendarFormat: CalendarFormat.month,
                           selectedDayPredicate: (day) {
-                            /// Check if the day is in the selected days list
-                            return homeScreenProvider.isSelected(day);
+                            return homeScreenProvider.isSelected(day) ||
+                                preSelectedDays.any((d) => isSameDay(d, day));
                           },
-
                           onDaySelected: (selectedDay, focusedDay) {
-                            /// Update the selected days in the ViewModel
-                            homeScreenProvider.toggleSelectedDay(selectedDay);
+                           // if (!preSelectedDays.any((d) => isSameDay(d, selectedDay))) {
+                              homeScreenProvider.toggleSelectedDay(selectedDay);
+                           // }
                           },
-
-                          /// style of calendar
-                          calendarStyle: CalendarStyle(
-                            todayTextStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                                color: AppColors.textColor
-                            ),
-                            defaultDecoration: BoxDecoration(
-                              color: Colors.transparent, // Focused day color
-                              shape: BoxShape.rectangle
-
+                          headerStyle: HeaderStyle(
+                            formatButtonVisible: false, // Hides the "2 weeks" button
+                            titleCentered: false,
+                            titleTextStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                            leftChevronIcon: const Icon(Icons.chevron_left, color: Colors.black),
+                            rightChevronIcon: const Icon(Icons.chevron_right, color: Colors.black),
                           ),
-                            todayDecoration: BoxDecoration(
-                              color: Colors.transparent, // Focused day color
-                              shape: BoxShape.rectangle
-
-                            ),
-                            selectedTextStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                              color: AppColors.textColor
-                            ),
+                          calendarStyle: CalendarStyle(
                             selectedDecoration: BoxDecoration(
-                              color: Colors.transparent, /// Focused day color
-                              borderRadius: BorderRadius.circular(12.r), /// Rounded corners
-                              border: Border.all(
-                                color: AppColors.secondary,
-                                width: 1.5
-                              ),
+                              color: const Color(0xffFF4A7A).withOpacity(0.3), // Updated fill color
+                              shape: BoxShape.rectangle,
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                            selectedTextStyle: const TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            defaultDecoration: const BoxDecoration(
                               shape: BoxShape.rectangle,
                             ),
-                          //  todayDecoration:
-                            // Customizing the focusedDay
-                            // focusedDecoration: BoxDecoration(
-                            //   color: Colors.blue, // Focused day color
-                            //   borderRadius: BorderRadius.circular(12), // Rounded corners
-                            //   border: Border.all(
-                            //     color: Colors.blueAccent, // Border color
-                            //     width: 2, // Border width
-                            //   ),
-                            // ),
+                            todayDecoration: const BoxDecoration(
+                              shape: BoxShape.rectangle,
+                            ),
+                            outsideDecoration: const BoxDecoration(
+                              shape: BoxShape.rectangle,
+                            ),
+                            weekendDecoration: const BoxDecoration(
+                              shape: BoxShape.rectangle,
+                            ),
+                            holidayDecoration: const BoxDecoration(
+                              shape: BoxShape.rectangle,
+                            ),
+                            disabledDecoration: const BoxDecoration(
+                              shape: BoxShape.rectangle,
+                            ),
+                            markerDecoration: const BoxDecoration(
+                              shape: BoxShape.rectangle,
+                            ),
+                          ),
+                          calendarBuilders: CalendarBuilders(
+                            selectedBuilder: (context, day, focusedDay) {
+                              bool isPreSelected = preSelectedDays.any((d) => isSameDay(d, day));
+                              return Container(
+                                margin: const EdgeInsets.all(6.0),
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  color: isPreSelected
+                                      ? const Color(0xffFF4A7A)// Updated fill color
+                                      : null,
+                                  shape: BoxShape.rectangle,
+                                  borderRadius: BorderRadius.circular(11.r),
+                                  border: Border.all(
+                                    color: const Color(0xffFF4A7A), // Updated border color
+                                    width: 1,
+                                  ),
+                                ),
+                                child: Text(
+                                  '${day.day}',
+                                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                    color: isPreSelected
+                                        ? Colors.white : AppColors.textColor,
+                                    fontWeight: FontWeight.w600
+                                  )
+                                ),
+                              );
+                            },
                           ),
                         );
-                      }
+                      },
                     ),
                   ),
+                  // Container(
+                  //   padding: EdgeInsets.symmetric(horizontal: 16.w),
+                  //   decoration: BoxDecoration(
+                  //     color: Colors.white,
+                  //     borderRadius: BorderRadius.circular(20.r)
+                  //   ),
+                  //   child: Consumer<HomeScreenProvider>(
+                  //     builder: (_, homeScreenProvider, child) {
+                  //       return TableCalendar(
+                  //         firstDay: DateTime.utc(2010, 10, 16),
+                  //         lastDay: DateTime.utc(2030, 3, 14),
+                  //         focusedDay: DateTime.now(),
+                  //         calendarFormat: CalendarFormat.month,
+                  //         selectedDayPredicate: (day) {
+                  //           /// Check if the day is in the selected days list
+                  //           return homeScreenProvider.isSelected(day);
+                  //         },
+                  //
+                  //         onDaySelected: (selectedDay, focusedDay) {
+                  //           /// Update the selected days in the ViewModel
+                  //           homeScreenProvider.toggleSelectedDay(selectedDay);
+                  //         },
+                  //
+                  //         /// style of calendar
+                  //         calendarStyle: CalendarStyle(
+                  //           selectedDecoration: BoxDecoration(
+                  //             color: Colors.red.withOpacity(0.3),
+                  //             shape: BoxShape.rectangle,
+                  //             borderRadius: BorderRadius.circular(8.0),
+                  //           ),
+                  //           selectedTextStyle: const TextStyle(
+                  //             color: Colors.black,
+                  //             fontWeight: FontWeight.bold,
+                  //           ),
+                  //           defaultDecoration: const BoxDecoration(
+                  //             shape: BoxShape.rectangle,
+                  //           ),
+                  //           todayDecoration: const BoxDecoration(
+                  //             shape: BoxShape.rectangle,
+                  //           ),
+                  //           outsideDecoration: const BoxDecoration(
+                  //             shape: BoxShape.rectangle,
+                  //           ),
+                  //           weekendDecoration: const BoxDecoration(
+                  //             shape: BoxShape.rectangle,
+                  //           ),
+                  //           holidayDecoration: const BoxDecoration(
+                  //             shape: BoxShape.rectangle,
+                  //           ),
+                  //           // Cover any other special days
+                  //           disabledDecoration: const BoxDecoration(
+                  //             shape: BoxShape.rectangle,
+                  //           ),
+                  //           markerDecoration: const BoxDecoration(
+                  //             shape: BoxShape.rectangle,
+                  //           ),
+                  //         //   todayTextStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  //         //       color: AppColors.textColor
+                  //         //   ),
+                  //         //   defaultDecoration: BoxDecoration(
+                  //         //     color: Colors.transparent, // Focused day color
+                  //         //    // shape: BoxShape.rectangle
+                  //         //     shape: BoxShape.circle,
+                  //         // ),
+                  //         //   todayDecoration: BoxDecoration(
+                  //         //     color: Colors.transparent, // Focused day color
+                  //         //   //  shape: BoxShape.rectangle
+                  //         //     shape: BoxShape.circle,
+                  //         //   ),
+                  //         //   selectedTextStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                  //         //     color: AppColors.textColor
+                  //         //   ),
+                  //         //   selectedDecoration: BoxDecoration(
+                  //         //     color: Colors.transparent, /// Focused day color
+                  //         //    // borderRadius: BorderRadius.circular(12.r), /// Rounded corners
+                  //         //     border: Border.all(
+                  //         //       color: AppColors.secondary,
+                  //         //       width: 1.5
+                  //         //     ),
+                  //         //     shape: BoxShape.circle,
+                  //         //   ),
+                  //         //  todayDecoration:
+                  //           // Customizing the focusedDay
+                  //           // focusedDecoration: BoxDecoration(
+                  //           //   color: Colors.blue, // Focused day color
+                  //           //   borderRadius: BorderRadius.circular(12), // Rounded corners
+                  //           //   border: Border.all(
+                  //           //     color: Colors.blueAccent, // Border color
+                  //           //     width: 2, // Border width
+                  //           //   ),
+                  //           // ),
+                  //         ),
+                  //       );
+                  //     }
+                  //   ),
+                  // ),
+
+
                   SizedBox(height: 24.h,),
                   SizedBox(
                     width: double.infinity,
