@@ -29,5 +29,6 @@ class RouteName{
   static const String pairingScreen = '/pairingScreen';
   static const String selectGenderScreen = '/selectGenderScreen';
   static const String editProfileScreen = '/editProfileScreen';
+  static const String languageSettingScreen = '/languageSettingScreen';
 
 }
