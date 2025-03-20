@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/view_model/settings_provider.dart';
+import 'package:ovella_period_tracker_app/view_model/step_screen_provider.dart';
 import 'package:provider/provider.dart';
 import '../../../../constant/images.dart';
 
@@ -53,19 +55,24 @@ class PreferencesNotificationCard extends StatelessWidget {
                   settingsProvider.updateMentalHealth(value);
                 },
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Language', style: textTheme.bodyMedium),
-                  Row(
+              Consumer<StepScreenProvider>(builder: (_, stepScreenProvider,_) {
+                return GestureDetector(
+                  onTap: ()=>Navigator.pushNamed(context, RouteName.languageSettingScreen),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('English', style: textTheme.bodyMedium),
-                      SizedBox(width: 8.w),
-                      Icon(Icons.keyboard_arrow_right_outlined),
+                      Text('Language', style: textTheme.bodyMedium),
+                      Row(
+                        children: [
+                          Text(stepScreenProvider.selectedLanguage??'English', style: textTheme.bodyMedium),
+                          SizedBox(width: 8.w),
+                          Icon(Icons.keyboard_arrow_right_outlined),
+                        ],
+                      ),
                     ],
                   ),
-                ],
-              ),
+                );
+              },)
             ],
           ),
         );
