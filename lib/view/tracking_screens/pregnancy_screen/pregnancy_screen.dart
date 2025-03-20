@@ -44,7 +44,7 @@ class PregnancyScreen extends StatelessWidget {
               SizedBox(height: 20.h),
               Container(
                 width: 362.w,
-                height: 373.h,
+                // height: 40.h,
                 padding: EdgeInsets.all(20.r),
                 decoration: BoxDecoration(
                   color: AppColors.onPrimary,

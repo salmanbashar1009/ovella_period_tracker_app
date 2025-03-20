@@ -102,7 +102,7 @@ class SliderDetailsButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 120.w,
+      width: MediaQuery.sizeOf(context).width > 750 ? 120.w : 130,
       height: 40.h,
       child: ElevatedButton(
         onPressed: () {

@@ -17,8 +17,8 @@ class CheckupVacationList extends StatelessWidget {
         itemCount: 5,
         itemBuilder: (context,index){
           return Container(
-            width: 271.w,
-            height: 269.h,
+            width: MediaQuery.of(context).size.height > 800 ? 271.w : 220.w,
+            height: MediaQuery.of(context).size.height > 800 ? 269.h : 260.h ,
             padding: EdgeInsets.all(8.r),
             margin: EdgeInsets.only(right: 12),
             decoration: BoxDecoration(
