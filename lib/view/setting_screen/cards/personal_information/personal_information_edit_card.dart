@@ -22,7 +22,7 @@ class PersonalInformationEditCard extends StatelessWidget {
               Text('Personal Information', style: textTheme.bodyLarge),
               GestureDetector(
                 onTap: (){
-                  Navigator.pushNamed(context, RouteName.selectGenderScreen);
+                 Navigator.pushNamed(context, RouteName.personalInformationSettingScreen);
                 },
                   child: Image.asset(AppImages.editPencil)),
             ],

@@ -12,19 +12,15 @@ class HeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Utils.backButton(context),
-        SizedBox(width: 82.h),
-        Text(
-          title,
-          style: textTheme.headlineSmall!.copyWith(
-            fontWeight: FontWeight.w500,
-          ),
+    return AppBar(
+      centerTitle: true,
+      leading: Utils.backButton(context),
+      title: Text(
+        title,
+        style: textTheme.headlineSmall!.copyWith(
+          fontWeight: FontWeight.w500,
         ),
-      ],
+      ),
     );
   }
 }

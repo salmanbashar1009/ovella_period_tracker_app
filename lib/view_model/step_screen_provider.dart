@@ -95,7 +95,7 @@ class StepScreenProvider extends ChangeNotifier {
   }
 
   ///Gender selection part
-  String selectedGender = 'English';
+  String selectedGender = 'Female';
   List<String> allGender = ['Male', 'Female', 'Other'];
   void genderSelection(String gender) {
     selectedGender = gender;
