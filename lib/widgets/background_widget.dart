@@ -6,18 +6,20 @@ import '../constant/images.dart';
 class BackgroundWidget extends StatelessWidget {
   final Widget child;
   final String backgroundImage;
+  final bool resizeToAvoidBottomInset;
 
   const BackgroundWidget({
     super.key,
     required this.child,
     this.backgroundImage = AppImages.screenBackground,
+    this.resizeToAvoidBottomInset = false,
   });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: resizeToAvoidBottomInset,
       body: Stack(
         children: [
           SingleChildScrollView(

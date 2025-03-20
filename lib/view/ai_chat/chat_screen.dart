@@ -16,6 +16,7 @@ class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BackgroundWidget(
+      resizeToAvoidBottomInset: true,
       child: Padding(
         padding: AppPadding.screenHorizontalPadding,
         child: Stack(
@@ -261,7 +262,7 @@ class ChatScreen extends StatelessWidget {
                                   },
                                 ),
 
-                              SizedBox(height: 120.h),
+                              SizedBox(height: 160.h),
                             ],
                           ),
                         );
