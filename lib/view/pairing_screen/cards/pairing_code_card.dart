@@ -3,8 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/view_model/pairing_screen_provider.dart';
 import 'package:provider/provider.dart';
-import 'dart:math';
-
 import '../../../utility/utils.dart';
 
 class PairingCodeCard extends StatelessWidget {

@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:intl/intl.dart';
 
 import '../view/step_screen/Parts/step1.dart';
 import '../view/step_screen/Parts/step2.dart';
@@ -65,11 +66,7 @@ class StepScreenProvider extends ChangeNotifier {
 
   ///Gender selection part
   String selectedGender = 'English';
-  List<String> allGender = [
-    'Male',
-    'Female',
-    'Other',
-  ];
+  List<String> allGender = ['Male', 'Female', 'Other'];
   void genderSelection(String gender) {
     selectedGender = gender;
     notifyListeners();
@@ -92,18 +89,22 @@ class StepScreenProvider extends ChangeNotifier {
     _isRegularCircle = value;
     notifyListeners();
   }
+
   void toggleIsCurrentlyPregnant(bool value) {
     _isCurrentlyPregnant = value;
     notifyListeners();
   }
+
   void toggleIsExperienceIrregularPeriods(bool value) {
     _isExperienceIrregularPeriods = value;
     notifyListeners();
   }
+
   void toggleIsPeriodOvulationReminders(bool value) {
     _isPeriodOvulationReminders = value;
     notifyListeners();
   }
+
   void toggleIsWhatsAppUpdatesHealthTips(bool value) {
     _isWhatsAppUpdatesHealthTips = value;
     notifyListeners();
@@ -119,39 +120,64 @@ class StepScreenProvider extends ChangeNotifier {
     diagnosedWithFibroids = value;
     notifyListeners();
   }
+
   void updateDiagnosedWithPCOS(String value) {
     diagnosedWithPCOS = value;
     notifyListeners();
   }
+
   void updateHistoryOfEndometriosis(String value) {
     historyOfEndometriosis = value;
     notifyListeners();
   }
+
   void updateFamilyHistoryOfFibroids(String value) {
     familyHistoryOfFibroids = value;
     notifyListeners();
   }
 
-  ///<------------ Pregnancy & Fertility Tracking
+  ///<------------ Pregnancy & Fertility Tracking-------------->>
   String areYouActivelyTryingToConceive = '';
   String haveYouExperiencedPregnancyLoss = '';
   String doYouHaveHistoryOfHighBloodPressure = '';
-  String haveYouBeenDiagnosedWithFertilityConditions= '';
+  String haveYouBeenDiagnosedWithFertilityConditions = '';
 
   void updateAreYouActivelyTryingToConceive(String value) {
     areYouActivelyTryingToConceive = value;
     notifyListeners();
   }
+
   void updateHaveYouExperiencedPregnancyLoss(String value) {
     haveYouExperiencedPregnancyLoss = value;
     notifyListeners();
   }
+
   void updateDoYouHaveHistoryOfHighBloodPressure(String value) {
     doYouHaveHistoryOfHighBloodPressure = value;
     notifyListeners();
   }
+
   void updateHaveYouBeenDiagnosedWithFertilityConditions(String value) {
     haveYouBeenDiagnosedWithFertilityConditions = value;
     notifyListeners();
+  }
+
+  ///<------------- length of Cycle & period Date ----------->
+  int selectedCycleLength = 28;
+  DateTime periodStartDate = DateTime.now();
+  DateTime periodEndDate = DateTime.now();
+  List<int> cycleLength = List.generate(35, (i) => i + 14);
+
+  void cycleLengthSelection(int age) {
+    selectedCycleLength = age;
+    notifyListeners();
+  }
+  void setPeriodRangeDate(DateTime start, DateTime end){
+    periodStartDate = start;
+    periodEndDate = end;
+    notifyListeners();
+  }
+  String formatDate(DateTime date) {
+    return DateFormat("MMM dd, yyyy").format(date);
   }
 }

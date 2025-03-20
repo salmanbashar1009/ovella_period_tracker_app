@@ -32,15 +32,23 @@ class LoginForm extends StatelessWidget {
               SizedBox(height: 8.h),
               TextFormField(
                 validator: (value) {
-                  if (value!.isEmpty) {
-                    return "please enter your email";
-                  } else {
-                    return null;
+                  if (value == null || value.isEmpty) {
+                    return "Please enter your email";
                   }
+
+                  // Regular expression for validating an email
+                  final emailRegex = RegExp(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");
+
+                  if (!emailRegex.hasMatch(value)) {
+                    return "Please enter a valid email address";
+                  }
+
+                  return null; // Validation passed
                 },
                 style: textTheme.bodyMedium!.copyWith(
                   fontWeight: FontWeight.w500,
                 ),
+
                 decoration: InputDecoration(
                   hintText: 'Email',
                   errorStyle: textTheme.bodySmall!.copyWith(
