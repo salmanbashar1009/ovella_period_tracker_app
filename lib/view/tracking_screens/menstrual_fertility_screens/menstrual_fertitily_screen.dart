@@ -5,18 +5,21 @@ import 'package:ovella_period_tracker_app/constant/images.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/view/home_screen/add_log_screen/widget/build_log_item_widget.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/calender_grid.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/fertile_alert_sheet.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/log_symtoms_card.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/month_header.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/ovulation_alert_sheet.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/period_alert_sheet.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/week_day_header.dart';
 import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
-import 'package:ovella_period_tracker_app/widgets/custom_calendar.dart';
 import 'package:provider/provider.dart';
 
 
 class MenstrualFertilityScreen extends StatelessWidget {
   const MenstrualFertilityScreen({super.key});
-
-
+  
   @override
   Widget build(BuildContext context) {
     final trackingScreenProvider = Provider.of<TrackingScreenProvider>(context,listen: false);
@@ -24,7 +27,37 @@ class MenstrualFertilityScreen extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-       CustomCalendar(onTap: (numb)=>  trackingScreenProvider.toggleBorder(numb),),
+        Container(
+          padding: EdgeInsets.all(16.r),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(24.r),
+            color: AppColors.onPrimary,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const MonthHeader(),
+              const SizedBox(height: 20),
+              const WeekdayHeader(),
+              const SizedBox(height: 10),
+              SizedBox(
+                height: 275.h,
+                width: double.infinity,
+                child: Consumer<TrackingScreenProvider>(
+                  builder: (context, trackingScreenProvider, _) {
+                    return IgnorePointer(
+                      child: CalendarGrid(
+                        year: trackingScreenProvider.selectedMonthYear.year,
+                        month: trackingScreenProvider.selectedMonthYear.month,
+                        onTap: (numb)=>  trackingScreenProvider.toggleBorder(numb),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
 
         SizedBox(height: 24.h),
 
@@ -96,15 +129,15 @@ class MenstrualFertilityScreen extends StatelessWidget {
         SizedBox(height: 8.h),
         Row(
           children: [
-            activityTile(context: context,bgColor: AppColors.secondary, imagePath: "assets/icons/period.png", title: "Period", onTap:(){showPeriodAlertSheet(context);} ),
+            activityTile(context: context,bgColor: AppColors.secondary, imagePath: "assets/icons/period.png", title: "Period", onTap:(){showPeriodAlertDialogSheet(context);} ),
             SizedBox(width: 12.w,),
-            activityTile(context: context,bgColor: Color(0xFFF4D1FF), imagePath: "assets/icons/fertile.png", title: "Fertile", onTap:(){} ),
+            activityTile(context: context,bgColor: Color(0xFFF4D1FF), imagePath: "assets/icons/fertile.png", title: "Fertile", onTap:(){showFertileAlertDialogSheet(context);} ),
           ],
         ),
         SizedBox(height: 16.w,),
         Row(
           children: [
-            activityTile(context: context,bgColor: Color(0xFF25C871), imagePath: "assets/icons/ovulation.png", title: "Ovulation", onTap:(){} ),
+            activityTile(context: context,bgColor: Color(0xFF25C871), imagePath: "assets/icons/ovulation.png", title: "Ovulation", onTap:(){showOvulationAlertDialogSheet(context);} ),
             SizedBox(width: 12.w,),
             activityTile(context: context,bgColor: Color(0xFFFF9CB6), imagePath: "assets/icons/next-period.png", title: "Next Period", onTap:(){} ),
           ],

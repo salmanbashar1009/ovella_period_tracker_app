@@ -30,7 +30,7 @@ class MonthHeader extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  monthYear,
+                  "${DateTime.now().day} $monthYear",
                   style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                     fontSize: 17.sp,
                     fontWeight: FontWeight.w400,

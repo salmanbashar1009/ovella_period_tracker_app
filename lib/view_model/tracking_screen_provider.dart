@@ -11,11 +11,12 @@ class TrackingScreenProvider extends ChangeNotifier{
     notifyListeners();
   }
 
-  /// added notes
+
 
   final List<String> _notes = [];
   List<String> get notes => _notes;
 
+  /// note added to the note list
   void addNotes({required noteText}){
     if(noteText != null){
       notes.add(noteText);
@@ -23,6 +24,7 @@ class TrackingScreenProvider extends ChangeNotifier{
     }
   }
 
+  /// delete note from the note list
   void removeNotes(int index){
     notes.removeAt(index);
     notifyListeners();
@@ -32,10 +34,8 @@ class TrackingScreenProvider extends ChangeNotifier{
 
 
   /// Calender provider
-
   TrackingScreenProvider() {
     setMonthYear();
-
   }
 
 
@@ -49,14 +49,14 @@ class TrackingScreenProvider extends ChangeNotifier{
   int get month => _month;
 
   late DateTime _selectedMonthYear;
-  final List<int> _periodDays = [];
-  final List<int> _purpleDays =[12, 13, 14, 15, 16, 18];
-  final List<int> _greenDays = [17];
+  final List<DateTime> _periodDates = [];
+  final List<DateTime> _fertileDates =[DateTime(2025,3,5),DateTime(2025,3,12),DateTime(2025,3,1)];
+  final List<DateTime> _ovulationDates = [DateTime(2025,3,10)];
 
   DateTime get selectedMonthYear => _selectedMonthYear;
-  List<int> get periodDays => _periodDays;
-  List<int> get purpleDays => _purpleDays;
-  List<int> get greenDays => _greenDays;
+  List<DateTime> get periodDates => _periodDates;
+  List<DateTime> get fertileDates => _fertileDates;
+  List<DateTime> get ovulationDates => _ovulationDates;
 
   void setMonthYear(){
     _selectedMonthYear = DateTime(_year,_month);
@@ -79,38 +79,50 @@ class TrackingScreenProvider extends ChangeNotifier{
     }
   }
 
-  // void onTapPeriodDate(int value){
-  //   debugPrint("\nvalue : $value\n");
-  //   if (_periodDays.contains(value)) {
-  //     _periodDays.remove(value);
+
+  // void onPeriodDayTap(int day,) {
+  //   DateTime tappedDate = DateTime(_year, _month, day);
+  //
+  //   if (_periodDays.contains(tappedDate)) {
+  //     _periodDays.remove(tappedDate);
   //   } else {
-  //     _periodDays.add(value);
+  //     _periodDays.add(tappedDate);
   //   }
-  //   notifyListeners();
+  //
+  //  notifyListeners();
   // }
 
+  void removePeriodDates(){
+    _periodDates.clear();
+    notifyListeners();
+  }
 
-  final List<int> _borderSet = [];
-  List<int> get borderSet => _borderSet;
+
+  final List<DateTime> _borderSet = [];
+  List<DateTime> get borderSet => _borderSet;
 
   void toggleBorder(int day) {
-    if (_borderSet.contains(day)) {
-      _borderSet.remove(day);
+    DateTime tappedDate = DateTime(_year, _month, day);
+
+    if (_borderSet.contains(tappedDate)) {
+      _borderSet.remove(tappedDate);
       debugPrint("\nRemove date : $day");
     } else {
-      _borderSet.add(day);
+      _borderSet.add(tappedDate);
       debugPrint("\Added date : $day");
     }
     notifyListeners();
   }
 
-  void saveSelectedDays(List<int> listName) {
+  /// save selected dates
+  void saveSelectedDays(List<DateTime> listName) {
     listName.addAll(_borderSet);
     _borderSet.clear();
-    debugPrint("\nselected period date: $_periodDays");
+    debugPrint("\nselected period date: $_periodDates");
     notifyListeners();
   }
 
+  /// clear and doesn't save selected dates
   void clearSelectedDays(){
     _borderSet.clear();
     debugPrint('\n border set has been cleared: -- $_borderSet ');
@@ -118,34 +130,35 @@ class TrackingScreenProvider extends ChangeNotifier{
   }
 
 
-  void changeMonth(DateTime newMonth) {
-    _selectedMonthYear = newMonth;
-    notifyListeners();
-  }
+  // void changeMonth(DateTime newMonth) {
+  //   _selectedMonthYear = newMonth;
+  //   notifyListeners();
+  // }
+  //
+  // void previousMonth() {
+  //   _selectedMonthYear = DateTime(
+  //     _selectedMonthYear.year,
+  //     _selectedMonthYear.month - 1,
+  //   );
+  //   notifyListeners();
+  // }
+  //
+  // void nextMonth() {
+  //   _selectedMonthYear = DateTime(
+  //     _selectedMonthYear.year,
+  //     _selectedMonthYear.month + 1,
+  //   );
+  //   notifyListeners();
+  // }
 
-  void previousMonth() {
-    _selectedMonthYear = DateTime(
-      _selectedMonthYear.year,
-      _selectedMonthYear.month - 1,
-    );
-    notifyListeners();
-  }
 
-  void nextMonth() {
-    _selectedMonthYear = DateTime(
-      _selectedMonthYear.year,
-      _selectedMonthYear.month + 1,
-    );
-    notifyListeners();
-  }
-
-
-  Color? getDayColor(int day ) {              //bool isPeriodDateSaved
-    if (_periodDays.contains(day) ) {         //&& isPeriodDateSaved == true
+  Color? getDayColor(int day ) {
+    DateTime tappedDate = DateTime(_year, _month, day);//bool isPeriodDateSaved
+    if (_periodDates.contains(tappedDate) ) {         //&& isPeriodDateSaved == true
       return const Color(0xFFFF5B79);
-    } else if (_purpleDays.contains(day)) {
+    } else if (_fertileDates.contains(tappedDate)) {
       return const Color(0xFFF4D1FF);
-    } else if (_greenDays.contains(day)) {
+    } else if (_ovulationDates.contains(tappedDate)) {
       return const Color(0xFF27C96A);
     }else{
     return Colors.transparent;
