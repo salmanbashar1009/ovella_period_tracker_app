@@ -5,6 +5,8 @@ import 'package:provider/provider.dart';
 
 class DayCell extends StatelessWidget {
   final int day;
+  final int month;
+  final int year;
   final Color? backgroundColor;
   final VoidCallback onTap;
 
@@ -12,7 +14,7 @@ class DayCell extends StatelessWidget {
   const DayCell({
     Key? key,
     required this.day,
-    this.backgroundColor, required this.onTap,
+    this.backgroundColor, required this.onTap, required this.month, required this.year,
   }) : super(key: key);
 
   @override
@@ -25,7 +27,7 @@ class DayCell extends StatelessWidget {
           decoration: BoxDecoration(
             color: backgroundColor,
             borderRadius: BorderRadius.circular(12.r),
-            border: context.watch<TrackingScreenProvider>().borderSet.contains(day) ? Border.all(color: Colors.black) : null
+            border: context.watch<TrackingScreenProvider>().borderSet.contains(DateTime(year,month,day)) ? Border.all(color: Colors.black) : null
 
           ),
           child: Center(
