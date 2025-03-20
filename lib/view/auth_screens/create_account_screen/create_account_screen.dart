@@ -4,7 +4,6 @@ import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/view/auth_screens/create_account_screen/widgets/create_account_footer_widget.dart';
 import 'package:ovella_period_tracker_app/view_model/create_account_provider.dart';
 import 'package:provider/provider.dart';
-import 'widgets/create_account_email_form.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 import '../../common_health_concerns_screen/widgets/common_heath_concern_header_widget.dart';
 
@@ -24,7 +23,7 @@ class CreateAccountScreen extends StatelessWidget {
               createAccountProvider,
               Widget? child,
             ) {
-              double expandedHeight = createAccountProvider.isExpand ? 40 : 0;
+              double expandedHeight = createAccountProvider.isExpand ? 70 : 0;
               return SingleChildScrollView(
                 child: Padding(
                   padding: AppPadding.screenPadding,
@@ -48,8 +47,8 @@ class CreateAccountScreen extends StatelessWidget {
                       SizedBox(
                         height:
                             createAccountProvider.currentIndex == 0
-                                ? expandedHeight + 262.h
-                                : expandedHeight + 335.h,
+                                ? expandedHeight + 310.h
+                                : expandedHeight + 400.h,
                         child: PageView.builder(
                           controller: createAccountProvider.pageController,
                           itemCount: createAccountProvider.carouselItems.length,

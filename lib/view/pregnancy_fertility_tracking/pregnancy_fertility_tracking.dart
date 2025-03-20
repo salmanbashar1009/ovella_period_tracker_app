@@ -19,90 +19,92 @@ class PregnancyFertilityTracking extends StatelessWidget {
       body: BackgroundWidget(
         child: Consumer<StepScreenProvider>(
           builder: (BuildContext context, stepScreenProvider, Widget? child) {
-            return SafeArea(
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.h),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CommonHeathScreenConcernHeaderWidget(),
-                    SizedBox(height: 24.h),
-                    Text(
-                      "Pregnancy & Fertility Tracking",
-                      style: textTheme.headlineLarge,
-                    ),
-                    Text(
-                      "Track your fertility and pregnancy journey with key health insights.",
-                      style: textTheme.bodyMedium!.copyWith(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 15.h,
+            return SingleChildScrollView(
+              child: SafeArea(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20.h),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CommonHeathScreenConcernHeaderWidget(),
+                      SizedBox(height: 24.h),
+                      Text(
+                        "Pregnancy & Fertility Tracking",
+                        style: textTheme.headlineLarge,
                       ),
-                    ),
-                    SizedBox(height: 16.h),
-                    HealthConcernSelectedButton(
-                      title: 'Are you actively trying to conceive?',
-                      options: ['Yes', 'No', 'Considering'],
-                      selectedOption:
-                          stepScreenProvider.areYouActivelyTryingToConceive,
-                      onOptionSelected: (String newValue) {
-                        stepScreenProvider.updateAreYouActivelyTryingToConceive(
-                          newValue,
-                        );
-                      },
-                    ),
-                    HealthConcernSelectedButton(
-                      title:
-                          'Have you experienced pregnancy loss (miscarriage or stillbirth)?',
-                      options: ['Yes', 'No'],
-                      selectedOption:
-                          stepScreenProvider.haveYouExperiencedPregnancyLoss,
-                      onOptionSelected: (String newValue) {
-                        stepScreenProvider
-                            .updateHaveYouExperiencedPregnancyLoss(newValue);
-                      },
-                    ),
-                    HealthConcernSelectedButton(
-                      title:
-                          'Do you have a history of high blood pressure or preeclampsia during pregnancy?',
-                      options: ['Yes', 'No'],
-                      selectedOption:
-                          stepScreenProvider
-                              .doYouHaveHistoryOfHighBloodPressure,
-                      onOptionSelected: (String newValue) {
-                        stepScreenProvider
-                            .updateDoYouHaveHistoryOfHighBloodPressure(
-                              newValue,
-                            );
-                      },
-                    ),
-                    HealthConcernSelectedButton(
-                      title:
-                          'Have you been diagnosed with fertility conditions (e.g., low ovarian reserve, unexplained infertility)?',
-                      options: ['Yes', 'No'],
-                      selectedOption:
-                          stepScreenProvider
-                              .haveYouBeenDiagnosedWithFertilityConditions,
-                      onOptionSelected: (String newValue) {
-                        stepScreenProvider
-                            .updateHaveYouBeenDiagnosedWithFertilityConditions(
-                              newValue,
-                            );
-                      },
-                    ),
-                    SizedBox(height: 7.h),
-                    SizedBox(
-                      width: double.infinity,
-                      child: Utils.primaryButton(
-                        title: 'Finish Setup',
-                        context: context,
-                        padding: EdgeInsets.symmetric(horizontal: 32.w,vertical: 18.h),
-                        onTap: () {
-                          Navigator.pushNamed(context, RouteName.createAccountScreen);
+                      Text(
+                        "Track your fertility and pregnancy journey with key health insights.",
+                        style: textTheme.bodyMedium!.copyWith(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 15.h,
+                        ),
+                      ),
+                      SizedBox(height: 16.h),
+                      HealthConcernSelectedButton(
+                        title: 'Are you actively trying to conceive?',
+                        options: ['Yes', 'No', 'Considering'],
+                        selectedOption:
+                            stepScreenProvider.areYouActivelyTryingToConceive,
+                        onOptionSelected: (String newValue) {
+                          stepScreenProvider.updateAreYouActivelyTryingToConceive(
+                            newValue,
+                          );
                         },
                       ),
-                    ),
-                  ],
+                      HealthConcernSelectedButton(
+                        title:
+                            'Have you experienced pregnancy loss (miscarriage or stillbirth)?',
+                        options: ['Yes', 'No'],
+                        selectedOption:
+                            stepScreenProvider.haveYouExperiencedPregnancyLoss,
+                        onOptionSelected: (String newValue) {
+                          stepScreenProvider
+                              .updateHaveYouExperiencedPregnancyLoss(newValue);
+                        },
+                      ),
+                      HealthConcernSelectedButton(
+                        title:
+                            'Do you have a history of high blood pressure or preeclampsia during pregnancy?',
+                        options: ['Yes', 'No'],
+                        selectedOption:
+                            stepScreenProvider
+                                .doYouHaveHistoryOfHighBloodPressure,
+                        onOptionSelected: (String newValue) {
+                          stepScreenProvider
+                              .updateDoYouHaveHistoryOfHighBloodPressure(
+                                newValue,
+                              );
+                        },
+                      ),
+                      HealthConcernSelectedButton(
+                        title:
+                            'Have you been diagnosed with fertility conditions (e.g., low ovarian reserve, unexplained infertility)?',
+                        options: ['Yes', 'No'],
+                        selectedOption:
+                            stepScreenProvider
+                                .haveYouBeenDiagnosedWithFertilityConditions,
+                        onOptionSelected: (String newValue) {
+                          stepScreenProvider
+                              .updateHaveYouBeenDiagnosedWithFertilityConditions(
+                                newValue,
+                              );
+                        },
+                      ),
+                      SizedBox(height: 7.h),
+                      SizedBox(
+                        width: double.infinity,
+                        child: Utils.primaryButton(
+                          title: 'Finish Setup',
+                          context: context,
+                          padding: EdgeInsets.symmetric(horizontal: 32.w,vertical: 18.h),
+                          onTap: () {
+                            Navigator.pushNamed(context, RouteName.createAccountScreen);
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             );
