@@ -144,7 +144,7 @@ class TrackingScreenProvider extends ChangeNotifier{
     if (_periodDays.contains(day) ) {         //&& isPeriodDateSaved == true
       return const Color(0xFFFF5B79);
     } else if (_purpleDays.contains(day)) {
-      return const Color(0xFFF2D4F7);
+      return const Color(0xFFF4D1FF);
     } else if (_greenDays.contains(day)) {
       return const Color(0xFF27C96A);
     }else{
