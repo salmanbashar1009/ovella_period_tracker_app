@@ -83,7 +83,7 @@ class EditCalenderScreen extends StatelessWidget {
                         title: "Save",
                         context: context,
                         onTap: () {
-                          trackingScreenProvider.saveSelectedDays(trackingScreenProvider.periodDays);
+                          trackingScreenProvider.saveSelectedDays(trackingScreenProvider.periodDates);
                           Navigator.pop(context);
                         },
                       ),

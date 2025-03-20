@@ -4,6 +4,7 @@ import 'package:ovella_period_tracker_app/view_model/create_account_provider.dar
 import 'package:provider/provider.dart';
 
 import '../../../../utility/utils.dart';
+import 'create_account_footer_widget.dart';
 
 class CreateAccountEmailForm extends StatelessWidget {
   const CreateAccountEmailForm({super.key});
@@ -95,6 +96,7 @@ class CreateAccountEmailForm extends StatelessWidget {
                   },
                 ),
               ),
+              CreateAccountFooterWidget(),
             ],
           ),
         );

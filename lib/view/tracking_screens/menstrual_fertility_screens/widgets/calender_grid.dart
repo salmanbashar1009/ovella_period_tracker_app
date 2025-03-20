@@ -51,7 +51,8 @@ class CalendarGrid extends StatelessWidget {
         return Consumer<TrackingScreenProvider>(
           builder: (context,trackingScreenProvider,child) {
             return DayCell(
-
+              year: year,
+              month: month,
               day: dayNumber,
               backgroundColor: dayColor,
               onTap: (){

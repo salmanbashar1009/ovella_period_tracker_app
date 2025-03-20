@@ -4,23 +4,22 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/images.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
-import 'package:ovella_period_tracker_app/utility/utils.dart';
 import 'package:ovella_period_tracker_app/view/home_screen/add_log_screen/widget/build_log_item_widget.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/calender_grid.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/fertile_alert_sheet.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/log_symtoms_card.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/month_header.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/ovulation_alert_sheet.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/period_alert_sheet.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/week_day_header.dart';
-import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart' show HomeScreenProvider;
+import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
-import 'package:ovella_period_tracker_app/widgets/custom_calendar.dart';
 import 'package:provider/provider.dart';
 
 
 class MenstrualFertilityScreen extends StatelessWidget {
   const MenstrualFertilityScreen({super.key});
-
-
+  
   @override
   Widget build(BuildContext context) {
     final trackingScreenProvider = Provider.of<TrackingScreenProvider>(context,listen: false);
@@ -28,70 +27,101 @@ class MenstrualFertilityScreen extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-       CustomCalendar(onTap: (numb)=>  trackingScreenProvider.toggleBorder(numb),),
+        Container(
+          padding: EdgeInsets.all(16.r),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(24.r),
+            color: AppColors.onPrimary,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const MonthHeader(),
+              const SizedBox(height: 20),
+              const WeekdayHeader(),
+              const SizedBox(height: 10),
+              SizedBox(
+                height: 275.h,
+                width: double.infinity,
+                child: Consumer<TrackingScreenProvider>(
+                  builder: (context, trackingScreenProvider, _) {
+                    return IgnorePointer(
+                      child: CalendarGrid(
+                        year: trackingScreenProvider.selectedMonthYear.year,
+                        month: trackingScreenProvider.selectedMonthYear.month,
+                        onTap: (numb)=>  trackingScreenProvider.toggleBorder(numb),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
 
         SizedBox(height: 24.h),
 
         ...List.generate(trackingScreenProvider.notes.length, (index){
-          return GestureDetector(
-            onLongPress: (){
-              trackingScreenProvider.removeNotes(index);
-            },
-            child: Container(
-              width: double.infinity,
-              padding: EdgeInsets.all(20.r),
-              margin: EdgeInsets.only(bottom:  12.h),
-              decoration: BoxDecoration(
-                color: AppColors.onPrimary,
-                borderRadius: BorderRadius.circular(24.r),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Note",
-                        style: Theme.of(
-                          context,
-                        ).textTheme.bodyMedium?.copyWith(fontSize: 17.sp),
-                      ),
-                      Row(
-                        children: [
-                          Icon(Icons.calendar_month_outlined,color: AppColors.textColor,),
-                          SizedBox(width: 6.w,),
-                          Text("3 Mar,25", style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                              fontSize: 13.sp
-                          ),)
-
-                        ],
-                      )
-
-                    ],
-                  ),
-                  SizedBox(height: 12.h),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(Icons.edit_calendar_outlined,color: AppColors.textColor,),
-                      SizedBox(width: 10.w),
-                      Expanded(
-                        child: Text(trackingScreenProvider.notes[index],
-                          maxLines: null,
-                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                              color: AppColors.lightTextColor,
-                              fontSize: 13.sp,
-                              fontWeight: FontWeight.w400
-                          ),
-
+          return Container(
+            width: double.infinity,
+            padding: EdgeInsets.all(20.r),
+            margin: EdgeInsets.only(bottom:  12.h),
+            decoration: BoxDecoration(
+              color: AppColors.onPrimary,
+              borderRadius: BorderRadius.circular(24.r),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Note",
+                      style: Theme.of(
+                        context,
+                      ).textTheme.bodyMedium?.copyWith(fontSize: 17.sp),
+                    ),
+                    Row(
+                      children: [
+                        Icon(Icons.calendar_month_outlined,color: AppColors.textColor,),
+                        SizedBox(width: 6.w,),
+                        Text("3 Mar,25", style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            fontSize: 13.sp
+                        ),),
+                        SizedBox(
+                          width: 30.w,
                         ),
+                       GestureDetector(
+                           onTap: (){ trackingScreenProvider.removeNotes(index);},
+                           child: Icon(Icons.delete_forever,color: Colors.red,))
+
+                      ],
+                    )
+
+                  ],
+                ),
+                SizedBox(height: 12.h),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(Icons.edit_calendar_outlined,color: AppColors.textColor,),
+                    SizedBox(width: 10.w),
+                    Expanded(
+                      child: Text(trackingScreenProvider.notes[index],
+                        maxLines: null,
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            color: AppColors.lightTextColor,
+                            fontSize: 13.sp,
+                            fontWeight: FontWeight.w400
+                        ),
+
                       ),
-                    ],
-                  ),
-                ],
-              ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           );
         }),
@@ -99,17 +129,17 @@ class MenstrualFertilityScreen extends StatelessWidget {
         SizedBox(height: 8.h),
         Row(
           children: [
-            activityTile(context: context,bgColor: AppColors.secondary, imagePath: "assets/icons/period.png", title: "Period", onTap:(){showPeriodAlertSheet(context);} ),
+            activityTile(context: context,bgColor: AppColors.secondary, imagePath: "assets/icons/period.png", title: "Period", onTap:(){showPeriodAlertDialogSheet(context);} ),
             SizedBox(width: 12.w,),
-            activityTile(context: context,bgColor: Color(0xFFF4D1FF), imagePath: "assets/icons/fertile.png", title: "Fertile", onTap:(){} ),
+            activityTile(context: context,bgColor: Color(0xFFF4D1FF), imagePath: "assets/icons/fertile.png", title: "Fertile", onTap:(){showFertileAlertDialogSheet(context);} ),
           ],
         ),
         SizedBox(height: 16.w,),
         Row(
           children: [
-            activityTile(context: context,bgColor: Color(0xFF25C871), imagePath: "assets/icons/ovulation.png", title: "Ovulation", onTap:(){} ),
+            activityTile(context: context,bgColor: Color(0xFF25C871), imagePath: "assets/icons/ovulation.png", title: "Ovulation", onTap:(){showOvulationAlertDialogSheet(context);} ),
             SizedBox(width: 12.w,),
-            activityTile(context: context,bgColor: Color(0xFFFF9CB6), imagePath: "assets/icons/period.png", title: "Next Period", onTap:(){} ),
+            activityTile(context: context,bgColor: Color(0xFFFF9CB6), imagePath: "assets/icons/next-period.png", title: "Next Period", onTap:(){} ),
           ],
         ),
         SizedBox(height: 24.h,),
@@ -205,7 +235,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
           child: Image(image: AssetImage(imagePath)),
         ),
         title: Text(title,style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-            color: AppColors.onPrimary,
+            color: AppColors.textColor,
             fontWeight: FontWeight.w400
         ),) ,
       ),

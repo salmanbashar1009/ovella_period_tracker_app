@@ -6,7 +6,7 @@ import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_pal
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 import 'package:provider/provider.dart';
 
-void showPeriodAlertDialogSheet(BuildContext context) {
+void showOvulationAlertDialogSheet(BuildContext context) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
@@ -47,14 +47,14 @@ void showPeriodAlertDialogSheet(BuildContext context) {
                         Navigator.of(context).pop(); // Close the dialog
                         Navigator.pushNamed(context, RouteName.editCalenderScreen);
                       },
-                      child:  Text('Edit Period',style: Theme.of(context).textTheme.bodyMedium,),
+                      child:  Text('Edit Ovulation',style: Theme.of(context).textTheme.bodyMedium,),
                     ),
                     TextButton(
                       onPressed: () {
                         Navigator.of(context).pop(); // Close the dialog
                         context.read<TrackingScreenProvider>().removePeriodDates();
                       },
-                      child:  Text('Remove Period',style: Theme.of(context).textTheme.bodyMedium,),
+                      child:  Text('Remove Ovulation',style: Theme.of(context).textTheme.bodyMedium,),
                     ),
                   ]
               ),

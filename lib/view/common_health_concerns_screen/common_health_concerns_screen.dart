@@ -20,80 +20,82 @@ class CommonHealthConcernsScreen extends StatelessWidget {
         child: Consumer<StepScreenProvider>(
           builder: (BuildContext context, stepScreenProvider, Widget? child) {
             return SafeArea(
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.h),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CommonHeathScreenConcernHeaderWidget(),
-                    SizedBox(height: 24.h),
-                    Text(
-                      "Let's Get to Know You",
-                      style: textTheme.headlineLarge,
-                    ),
-                    Text(
-                      "Share more about yourself to help us tailor your experience",
-                      style: textTheme.bodyMedium!.copyWith(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 15.h,
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20.h),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CommonHeathScreenConcernHeaderWidget(),
+                      SizedBox(height: 24.h),
+                      Text(
+                        "Let's Get to Know You",
+                        style: textTheme.headlineLarge,
                       ),
-                    ),
-                    SizedBox(height: 16.h),
-                    HealthConcernSelectedButton(
-                      title: 'Have you been diagnosed with fibroids?',
-                      options: ['Yes', 'No'],
-                      selectedOption: stepScreenProvider.diagnosedWithFibroids,
-                      onOptionSelected: (String newValue) {
-                        stepScreenProvider.updateDiagnosedWithFibroids(
-                          newValue,
-                        );
-                      },
-                    ),
-                    HealthConcernSelectedButton(
-                      title:
-                          'Have you been diagnosed with PCOS (Polycystic Ovary Syndrome)?',
-                      options: ['Yes', 'No'],
-                      selectedOption: stepScreenProvider.diagnosedWithPCOS,
-                      onOptionSelected: (String newValue) {
-                        stepScreenProvider.updateDiagnosedWithPCOS(newValue);
-                      },
-                    ),
-                    HealthConcernSelectedButton(
-                      title: 'Do you have a history of endometriosis??',
-                      options: ['Yes', 'No'],
-                      selectedOption: stepScreenProvider.historyOfEndometriosis,
-                      onOptionSelected: (String newValue) {
-                        stepScreenProvider.updateHistoryOfEndometriosis(
-                          newValue,
-                        );
-                      },
-                    ),
-                    HealthConcernSelectedButton(
-                      title:
-                          'Do you have a family history of fibroids or reproductive issues?',
-                      options: ['Yes', 'No'],
-                      selectedOption:
-                          stepScreenProvider.familyHistoryOfFibroids,
-                      onOptionSelected: (String newValue) {
-                        stepScreenProvider.updateFamilyHistoryOfFibroids(
-                          newValue,
-                        );
-                      },
-                    ),
-                    SizedBox(height: 7.h,),
-                    SizedBox(
-                      width: double.infinity,
-                      child: Utils.primaryButton(
-                        title: 'Continue',
-                        context: context,
-                        padding: EdgeInsets.symmetric(horizontal: 32.w,vertical: 18.h),
-                        onTap: () {
-                          Navigator.pushNamed(context, RouteName.pregnancyFertilityTracking);
+                      Text(
+                        "Share more about yourself to help us tailor your experience",
+                        style: textTheme.bodyMedium!.copyWith(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 15.h,
+                        ),
+                      ),
+                      SizedBox(height: 16.h),
+                      HealthConcernSelectedButton(
+                        title: 'Have you been diagnosed with fibroids?',
+                        options: ['Yes', 'No'],
+                        selectedOption: stepScreenProvider.diagnosedWithFibroids,
+                        onOptionSelected: (String newValue) {
+                          stepScreenProvider.updateDiagnosedWithFibroids(
+                            newValue,
+                          );
                         },
                       ),
-                    ),
-                  ],
+                      HealthConcernSelectedButton(
+                        title:
+                            'Have you been diagnosed with PCOS (Polycystic Ovary Syndrome)?',
+                        options: ['Yes', 'No'],
+                        selectedOption: stepScreenProvider.diagnosedWithPCOS,
+                        onOptionSelected: (String newValue) {
+                          stepScreenProvider.updateDiagnosedWithPCOS(newValue);
+                        },
+                      ),
+                      HealthConcernSelectedButton(
+                        title: 'Do you have a history of endometriosis??',
+                        options: ['Yes', 'No'],
+                        selectedOption: stepScreenProvider.historyOfEndometriosis,
+                        onOptionSelected: (String newValue) {
+                          stepScreenProvider.updateHistoryOfEndometriosis(
+                            newValue,
+                          );
+                        },
+                      ),
+                      HealthConcernSelectedButton(
+                        title:
+                            'Do you have a family history of fibroids or reproductive issues?',
+                        options: ['Yes', 'No'],
+                        selectedOption:
+                            stepScreenProvider.familyHistoryOfFibroids,
+                        onOptionSelected: (String newValue) {
+                          stepScreenProvider.updateFamilyHistoryOfFibroids(
+                            newValue,
+                          );
+                        },
+                      ),
+                      SizedBox(height: 7.h,),
+                      SizedBox(
+                        width: double.infinity,
+                        child: Utils.primaryButton(
+                          title: 'Continue',
+                          context: context,
+                          padding: EdgeInsets.symmetric(horizontal: 32.w,vertical: 18.h),
+                          onTap: () {
+                            Navigator.pushNamed(context, RouteName.pregnancyFertilityTracking);
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             );
