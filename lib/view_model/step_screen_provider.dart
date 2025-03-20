@@ -50,22 +50,52 @@ class StepScreenProvider extends ChangeNotifier {
   ///Language selection part
   String selectedLanguage = 'English';
   List<String> allLanguages = [
-    'Bangle',
-    'English',
-    'Hindi',
-    'Urdu',
+    'Afrikaans',
     'Arabic',
-    'Tamil',
-    'Spanish',
+    'Bengali',
+    'Bulgarian',
+    'Burmese',
+    'Catalan',
+    'Chinese (Mandarin)',
+    'Croatian',
+    'Czech',
+    'Danish',
+    'Dutch',
+    'English',
+    'English(UK)',
+    'Estonian',
+    'Filipino (Tagalog)',
+    'Finnish',
+    'French',
+    'Georgian',
+    'German',
+    'Greek',
     'Gujarati',
+    'Hebrew',
+    'Hindi',
+    'Hungarian',
+    'Icelandic',
+    'Indonesian',
+    'Italian',
+    'Japanese',
+    'Kannada',
   ];
   void languageSelection(String language) {
     selectedLanguage = language;
     notifyListeners();
   }
 
+  //Language searching
+  TextEditingController languageSearchController = TextEditingController();
+  String languageSearchQuery = "";
+
+  void searchingLanguage(String value){
+    languageSearchQuery = value;
+    notifyListeners();
+  }
+
   ///Gender selection part
-  String selectedGender = 'English';
+  String selectedGender = 'Female';
   List<String> allGender = ['Male', 'Female', 'Other'];
   void genderSelection(String gender) {
     selectedGender = gender;
@@ -172,11 +202,13 @@ class StepScreenProvider extends ChangeNotifier {
     selectedCycleLength = age;
     notifyListeners();
   }
-  void setPeriodRangeDate(DateTime start, DateTime end){
+
+  void setPeriodRangeDate(DateTime start, DateTime end) {
     periodStartDate = start;
     periodEndDate = end;
     notifyListeners();
   }
+
   String formatDate(DateTime date) {
     return DateFormat("MMM dd, yyyy").format(date);
   }

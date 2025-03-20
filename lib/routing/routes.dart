@@ -17,7 +17,10 @@ import 'package:ovella_period_tracker_app/view/pairing_screen/pairing_screen.dar
 import 'package:ovella_period_tracker_app/view/parent_screen/parent_screen.dart';
 import 'package:ovella_period_tracker_app/view/pregnancy_fertility_tracking/pregnancy_fertility_tracking.dart';
 import 'package:ovella_period_tracker_app/view/setting_screen/screens/edit_profile_screen/edit_profile_screen.dart';
-import 'package:ovella_period_tracker_app/view/setting_screen/screens/select_gender_screen/select_gender_screen.dart';
+import 'package:ovella_period_tracker_app/view/setting_screen/screens/language_setting_screen/language_setting_screen.dart';
+import 'package:ovella_period_tracker_app/view/setting_screen/screens/personal_information_setting/personal_information_settings.dart';
+import 'package:ovella_period_tracker_app/view/setting_screen/screens/personal_information_setting/select_Age_screen.dart';
+import 'package:ovella_period_tracker_app/view/setting_screen/screens/personal_information_setting/select_gender_screen.dart';
 import 'package:ovella_period_tracker_app/view/setting_screen/setting_screen.dart';
 import 'package:ovella_period_tracker_app/view/splash_screen/splash_screen.dart';
 import 'package:ovella_period_tracker_app/view/subscription_screen/subscription_screen.dart';
@@ -64,6 +67,9 @@ class AppRoutes {
       RouteName.pairingScreen: (context) => PairingScreen(),
       RouteName.selectGenderScreen: (context) => SelectGenderScreen(),
       RouteName.editProfileScreen: (context) => EditProfileScreen(),
+      RouteName.languageSettingScreen: (context) => LanguageSettingScreen(),
+      RouteName.personalInformationSettingScreen: (context) => PersonalInformationSettings(),
+      RouteName.selectAgeScreen: (context) => SelectAgeScreen(),
     };
   }
 }
