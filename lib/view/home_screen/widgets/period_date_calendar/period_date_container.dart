@@ -81,14 +81,14 @@ class PeriodDateContainer extends StatelessWidget{
                           date.year == DateTime.now().year;
                       bool isTodayPeriodDay = false;
                       if(isToday){
-                        isTodayPeriodDay = homeScreenProvider.appPredictedPeriodDays.contains(DateTime(date.year,date.month,date.day));
+                        isTodayPeriodDay = homeScreenProvider.periodInformationModel!.nextPeriodDates.contains(DateTime(date.year,date.month,date.day));
                       }
 
                     return Container(
                       padding: EdgeInsets.all(14.r),
                       margin: EdgeInsets.only(right: 12.w),
                       decoration: BoxDecoration(
-                        color: isToday && isTodayPeriodDay ? AppColors.secondary : isToday && !isTodayPeriodDay ? Color(0xff25C871) : Color(0xffF4F6F6),
+                        color: isToday && isTodayPeriodDay ? AppColors.secondary : Color(0xffF4F6F6),
                         borderRadius: BorderRadius.circular(16.r),
                       ),
                       child: Column(
@@ -152,7 +152,7 @@ class PeriodDateContainer extends StatelessWidget{
 
                         Consumer<HomeScreenProvider>(
                           builder: (_, homeScreenProvider, _) {
-                            return Text("${DateFormat('MMM dd').format(homeScreenProvider.appPredictedPeriodDays[0])} Next Period",
+                            return Text("${DateFormat('MMM dd').format(homeScreenProvider.periodInformationModel!.nextPeriodDates[0])} Next Period",
                               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                                 fontWeight: FontWeight.w400
                               ),);

@@ -52,7 +52,7 @@ class LogPeriodScreen extends StatelessWidget {
                     child: Consumer<HomeScreenProvider>(
                       builder: (_, homeScreenProvider, child) {
                         // Define pre-selected days
-                        final List<DateTime> preSelectedDays = homeScreenProvider.appPredictedPeriodDays;
+                     //   final List<DateTime> preSelectedDays = homeScreenProvider.tempPeriodDaysSelection!;
 
                         return TableCalendar(
                           firstDay: DateTime.utc(DateTime.now().year-1, 01, 01),
@@ -60,12 +60,11 @@ class LogPeriodScreen extends StatelessWidget {
                           focusedDay: DateTime.now(),
                           calendarFormat: CalendarFormat.month,
                           selectedDayPredicate: (day) {
-                            return homeScreenProvider.isSelected(day) ||
-                                preSelectedDays.any((d) => isSameDay(d, day));
+                            return homeScreenProvider.isSelected(day);
                           },
                           onDaySelected: (selectedDay, focusedDay) {
                            // if (!preSelectedDays.any((d) => isSameDay(d, selectedDay))) {
-                              homeScreenProvider.toggleSelectedDay(selectedDay);
+                             homeScreenProvider.toggleSelectedDay(selectedDay);
                            // }
                           },
                           headerStyle: HeaderStyle(
@@ -109,7 +108,7 @@ class LogPeriodScreen extends StatelessWidget {
                           ),
                           calendarBuilders: CalendarBuilders(
                             selectedBuilder: (context, day, focusedDay) {
-                              bool isPreSelected = preSelectedDays.any((d) => isSameDay(d, day));
+                              bool isPreSelected = homeScreenProvider.tempPeriodDaysSelection!.any((d) => isSameDay(d, day));
                               return Container(
                                 margin: const EdgeInsets.all(6.0),
                                 alignment: Alignment.center,
@@ -243,7 +242,11 @@ class LogPeriodScreen extends StatelessWidget {
                     child: Utils.primaryButton(
                         title: "Save",
                         context: context,
-                        onTap: (){Navigator.pop(context);},
+                        onTap: () async {
+                         // debugPrint("\nsaving...\n");
+                         await context.read<HomeScreenProvider>().saveLogPeriod();
+                          Navigator.pop(context);
+                          },
                       padding: EdgeInsets.symmetric(vertical: 18.h)
                     ),
                   )
