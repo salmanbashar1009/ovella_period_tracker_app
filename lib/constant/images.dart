@@ -1,5 +1,7 @@
 class AppImages {
   static const String screenBackground = 'assets/images/screen_background.png';
+  static const String screenLayer01 = 'assets/images/layer_1.png';
+  static const String screenLayer02 = 'assets/images/layer_2.png';
 
   /// OnBoarding Screen
   static const String onBoardingCover =
