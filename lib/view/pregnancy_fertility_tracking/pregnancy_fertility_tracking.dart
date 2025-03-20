@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
+import 'package:ovella_period_tracker_app/view/pregnancy_fertility_tracking/widgets/cycle_select_widget.dart';
+import 'package:ovella_period_tracker_app/view/pregnancy_fertility_tracking/widgets/period_date_range_selection_widget.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 import 'package:provider/provider.dart';
+import '../../theme/theme/theme_extensions/color_palette.dart';
 import '../../utility/utils.dart';
 import '../../view_model/step_screen_provider.dart';
 import '../common_health_concerns_screen/widgets/common_heath_concern_header_widget.dart';
@@ -14,7 +17,6 @@ class PregnancyFertilityTracking extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    ColorScheme colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       body: BackgroundWidget(
         child: Consumer<StepScreenProvider>(
@@ -47,9 +49,8 @@ class PregnancyFertilityTracking extends StatelessWidget {
                         selectedOption:
                             stepScreenProvider.areYouActivelyTryingToConceive,
                         onOptionSelected: (String newValue) {
-                          stepScreenProvider.updateAreYouActivelyTryingToConceive(
-                            newValue,
-                          );
+                          stepScreenProvider
+                              .updateAreYouActivelyTryingToConceive(newValue);
                         },
                       ),
                       HealthConcernSelectedButton(
@@ -91,15 +92,65 @@ class PregnancyFertilityTracking extends StatelessWidget {
                               );
                         },
                       ),
-                      SizedBox(height: 7.h),
+                      SizedBox(height: 8.h),
+                      CycleSelectWidget(
+                        textTheme: textTheme,
+                        stepScreenProvider: stepScreenProvider,
+                      ),
+                      SizedBox(height: 8.h),
+                      GestureDetector(
+                        onTap:
+                            () => selectDateRange(context, stepScreenProvider),
+                        child: Container(
+                          height: 54.h,
+                          width: double.infinity,
+                          padding: EdgeInsets.all(16.h),
+                          decoration: BoxDecoration(
+                            color: AppColors.onPrimary,
+                            border: Border.all(
+                              color: Color(0xff1E1E1E).withOpacity(0.12),
+                            ),
+                            borderRadius: BorderRadius.circular(16.r),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("Last Period"),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    stepScreenProvider.formatDate(
+                                      stepScreenProvider.periodStartDate,
+                                    ),
+                                    style: textTheme.bodyMedium,
+                                  ),
+                                  Icon(
+                                    Icons.keyboard_arrow_right_rounded,
+                                    color: Color(0xff6B788E),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 16.h),
                       SizedBox(
                         width: double.infinity,
                         child: Utils.primaryButton(
                           title: 'Finish Setup',
                           context: context,
-                          padding: EdgeInsets.symmetric(horizontal: 32.w,vertical: 18.h),
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 32.w,
+                            vertical: 18.h,
+                          ),
                           onTap: () {
-                            Navigator.pushNamed(context, RouteName.createAccountScreen);
+                            Navigator.pushNamed(
+                              context,
+                              RouteName.createAccountScreen,
+                            );
                           },
                         ),
                       ),
@@ -113,4 +164,5 @@ class PregnancyFertilityTracking extends StatelessWidget {
       ),
     );
   }
+
 }

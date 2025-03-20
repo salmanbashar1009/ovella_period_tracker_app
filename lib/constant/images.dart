@@ -1,5 +1,7 @@
 class AppImages {
   static const String screenBackground = 'assets/images/screen_background.png';
+  static const String screenLayer01 = 'assets/images/layer_1.png';
+  static const String screenLayer02 = 'assets/images/layer_2.png';
 
   /// OnBoarding Screen
   static const String onBoardingCover =
@@ -16,8 +18,14 @@ class AppImages {
   /// Home screen image
   static const String fibroids = 'assets/images/home_screen/fibroids.png';
 
+  /// ai chat
+  static const String gptProfilePicture = "assets/images/ai_chat/gpt_pp.png";
+  static const String userProfilePicture = "assets/images/ai_chat/user_pp.png";
+
   /// Icons path
   static const String homeIcon = 'assets/icons/home.png';
+  static const String copyIcon = 'assets/icons/copy.png';
+  static const String replyIcon = 'assets/icons/reply.png';
   static const String sendIcon = 'assets/icons/send.png';
   static const String microphone = 'assets/icons/microphone.png';
   static const String dotMenuIcon = 'assets/icons/dot_menu.png';

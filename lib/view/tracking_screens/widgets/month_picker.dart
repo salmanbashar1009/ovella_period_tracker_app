@@ -1,13 +1,25 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 import 'package:provider/provider.dart';
 
-class EditMonthPicker extends StatelessWidget {
+class EditMonthPicker extends StatefulWidget {
   EditMonthPicker({Key? key}) : super(key: key);
 
+  @override
+  State<EditMonthPicker> createState() => _EditMonthPickerState();
+}
+
+class _EditMonthPickerState extends State<EditMonthPicker> {
   final FixedExtentScrollController _controller = FixedExtentScrollController();
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +35,9 @@ class EditMonthPicker extends StatelessWidget {
       itemExtent: 50,
       perspective: 0.005,
       diameterRatio: 1.5,
-      physics: const FixedExtentScrollPhysics(),
+      overAndUnderCenterOpacity: 0.5,
+      physics:  FixedExtentScrollPhysics(),
+      clipBehavior: Clip.antiAlias,
       onSelectedItemChanged: (index) {
         trackingScreenProvider.setMonth(index + 1);
       },

@@ -23,7 +23,6 @@ class CreateAccountScreen extends StatelessWidget {
               createAccountProvider,
               Widget? child,
             ) {
-              double expandedHeight = createAccountProvider.isExpand ? 70 : 0;
               return SingleChildScrollView(
                 child: Padding(
                   padding: AppPadding.screenPadding,
@@ -45,10 +44,7 @@ class CreateAccountScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height:
-                            createAccountProvider.currentIndex == 0
-                                ? expandedHeight + 310.h
-                                : expandedHeight + 400.h,
+                        height: 700.h,
                         child: PageView.builder(
                           controller: createAccountProvider.pageController,
                           itemCount: createAccountProvider.carouselItems.length,
@@ -62,7 +58,6 @@ class CreateAccountScreen extends StatelessWidget {
                           },
                         ),
                       ),
-                      CreateAccountFooterWidget(),
                     ],
                   ),
                 ),

@@ -1,9 +1,7 @@
 import 'package:flutter/widgets.dart';
 
-class CommunityProvider with ChangeNotifier{
-
-
-  int _selectedIndex = 0; 
+class CommunityProvider with ChangeNotifier {
+  int _selectedIndex = 0;
 
   int get selectedIndex => _selectedIndex;
 
@@ -12,6 +10,12 @@ class CommunityProvider with ChangeNotifier{
     notifyListeners();
   }
 
+  int? _index;
 
+  int? get index => _index;
 
+  void selectImage(int index) {
+    _index = index;
+    notifyListeners();
+  }
 }

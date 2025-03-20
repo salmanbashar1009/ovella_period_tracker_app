@@ -5,6 +5,7 @@ import 'package:ovella_period_tracker_app/view_model/create_account_provider.dar
 import 'package:provider/provider.dart';
 
 import '../../../../utility/utils.dart';
+import 'create_account_footer_widget.dart';
 
 class CreateAccountPasswordForm extends StatelessWidget {
   const CreateAccountPasswordForm({super.key});
@@ -147,6 +148,7 @@ class CreateAccountPasswordForm extends StatelessWidget {
                     },
                   ),
                 ),
+                CreateAccountFooterWidget(),
               ],
             ),
           ),

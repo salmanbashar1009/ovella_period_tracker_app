@@ -46,6 +46,7 @@ dependencies:
   dots_indicator: ^4.0.1
   table_calendar: ^3.2.0
   curved_navigation_bar: ^1.0.6
+  animated_text_kit: ^4.2.3
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
@@ -88,6 +89,7 @@ flutter:
     - assets/images/icons/
     - assets/icons/
     - assets/emoji/
+    - assets/images/ai_chat/
     - assets/images/community/
     - assets/images/home_screen/
     - assets/images/auth_screens/

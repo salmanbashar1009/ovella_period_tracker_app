@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class TrackingScreenProvider extends ChangeNotifier{
   int _selectedIndex = 0;
@@ -10,6 +11,23 @@ class TrackingScreenProvider extends ChangeNotifier{
     notifyListeners();
   }
 
+  /// added notes
+
+  final List<String> _notes = [];
+  List<String> get notes => _notes;
+
+  void addNotes({required noteText}){
+    if(noteText != null){
+      notes.add(noteText);
+      notifyListeners();
+    }
+  }
+
+  void removeNotes(int index){
+    notes.removeAt(index);
+    notifyListeners();
+  }
+
 
 
 
@@ -17,6 +35,7 @@ class TrackingScreenProvider extends ChangeNotifier{
 
   TrackingScreenProvider() {
     setMonthYear();
+
   }
 
 
@@ -30,14 +49,14 @@ class TrackingScreenProvider extends ChangeNotifier{
   int get month => _month;
 
   late DateTime _selectedMonthYear;
-  final Set<int> _periodDays = {};
-  final Set<int> _purpleDays = {12, 13, 14, 15, 16, 18};
-  final Set<int> _greenDays = {17};
+  final List<int> _periodDays = [];
+  final List<int> _purpleDays =[12, 13, 14, 15, 16, 18];
+  final List<int> _greenDays = [17];
 
   DateTime get selectedMonthYear => _selectedMonthYear;
-  Set<int> get redDays => _periodDays;
-  Set<int> get purpleDays => _purpleDays;
-  Set<int> get greenDays => _greenDays;
+  List<int> get periodDays => _periodDays;
+  List<int> get purpleDays => _purpleDays;
+  List<int> get greenDays => _greenDays;
 
   void setMonthYear(){
     _selectedMonthYear = DateTime(_year,_month);
@@ -60,14 +79,44 @@ class TrackingScreenProvider extends ChangeNotifier{
     }
   }
 
-  void onTapPeriodDate(int value){
-    if (_periodDays.contains(value)) {
-      _periodDays.remove(value);
+  // void onTapPeriodDate(int value){
+  //   debugPrint("\nvalue : $value\n");
+  //   if (_periodDays.contains(value)) {
+  //     _periodDays.remove(value);
+  //   } else {
+  //     _periodDays.add(value);
+  //   }
+  //   notifyListeners();
+  // }
+
+
+  final List<int> _borderSet = [];
+  List<int> get borderSet => _borderSet;
+
+  void toggleBorder(int day) {
+    if (_borderSet.contains(day)) {
+      _borderSet.remove(day);
+      debugPrint("\nRemove date : $day");
     } else {
-      _periodDays.add(value);
+      _borderSet.add(day);
+      debugPrint("\Added date : $day");
     }
     notifyListeners();
   }
+
+  void saveSelectedDays(List<int> listName) {
+    listName.addAll(_borderSet);
+    _borderSet.clear();
+    debugPrint("\nselected period date: $_periodDays");
+    notifyListeners();
+  }
+
+  void clearSelectedDays(){
+    _borderSet.clear();
+    debugPrint('\n border set has been cleared: -- $_borderSet ');
+    notifyListeners();
+  }
+
 
   void changeMonth(DateTime newMonth) {
     _selectedMonthYear = newMonth;
@@ -90,14 +139,17 @@ class TrackingScreenProvider extends ChangeNotifier{
     notifyListeners();
   }
 
-  Color? getDayColor(int day) {
-    if (_periodDays.contains(day)) {
+
+  Color? getDayColor(int day ) {              //bool isPeriodDateSaved
+    if (_periodDays.contains(day) ) {         //&& isPeriodDateSaved == true
       return const Color(0xFFFF5B79);
     } else if (_purpleDays.contains(day)) {
       return const Color(0xFFF2D4F7);
     } else if (_greenDays.contains(day)) {
       return const Color(0xFF27C96A);
-    }
-    return null;
+    }else{
+    return Colors.transparent;
+  }
+
   }
 }

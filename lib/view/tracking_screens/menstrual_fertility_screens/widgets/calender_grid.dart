@@ -7,16 +7,18 @@ import 'day_cell.dart';
 class CalendarGrid extends StatelessWidget {
   final int year;
   final int month;
+  Function(int)  onTap;
 
-  const CalendarGrid({
-    Key? key,
+   CalendarGrid({
+    super.key,
     required this.year,
-    required this.month,
-  }) : super(key: key);
+    required this.month, //required this.onTap,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<TrackingScreenProvider>(context, listen: false);
+    final trackingScreenProvider = Provider.of<TrackingScreenProvider>(context, listen: false);
 
     // Calculate first day of month
     final firstDayOfMonth = DateTime(year, month, 1);
@@ -44,15 +46,17 @@ class CalendarGrid extends StatelessWidget {
         }
 
         final dayNumber = dayOffset + 1;
-        final dayColor = provider.getDayColor(dayNumber);
+        final dayColor = trackingScreenProvider.getDayColor(dayNumber,);
 
         return Consumer<TrackingScreenProvider>(
           builder: (context,trackingScreenProvider,child) {
             return DayCell(
+
               day: dayNumber,
               backgroundColor: dayColor,
               onTap: (){
-                trackingScreenProvider.onTapPeriodDate(dayNumber);
+                // trackingScreenProvider.toggleBorder(dayNumber);
+                onTap(dayNumber);
               },
             );
           }

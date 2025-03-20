@@ -1,14 +1,24 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 import 'package:provider/provider.dart';
 
-class EditYearPicker extends StatelessWidget {
-  EditYearPicker({Key? key}) : super(key: key);
+class EditYearPicker extends StatefulWidget {
+  const EditYearPicker({super.key});
 
+  @override
+  State<EditYearPicker> createState() => _EditYearPickerState();
+}
+
+class _EditYearPickerState extends State<EditYearPicker> {
   final FixedExtentScrollController _controller = FixedExtentScrollController();
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +34,9 @@ class EditYearPicker extends StatelessWidget {
       itemExtent: 50,
       perspective: 0.005,
       diameterRatio: 1.5,
+      overAndUnderCenterOpacity: 0.5,
       physics: const FixedExtentScrollPhysics(),
-      dragStartBehavior: DragStartBehavior.down,
+      clipBehavior: Clip.antiAlias,
       onSelectedItemChanged: (index) {
         trackingScreenProvider.setYear(1951 + index); // Start from year 2000
       },
