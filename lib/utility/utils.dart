@@ -135,4 +135,9 @@ class Utils {
     debugPrint("\nText to copy : $text\n");
     Clipboard.setData(ClipboardData(text: text));
   }
+
+ static bool isKeyboardOpen({required BuildContext context}) {
+    return MediaQuery.of(context).viewInsets.bottom > 0;
+  }
+
 }

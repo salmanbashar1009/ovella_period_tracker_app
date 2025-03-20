@@ -15,6 +15,7 @@ class ParentScreen extends StatelessWidget {
     final parentProvider = context.watch<ParentScreenProvider>();
     final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       floatingActionButton: GestureDetector(
         onTap: (){
           debugPrint("\nAi Chat bot\n");
@@ -135,7 +136,7 @@ class ParentScreen extends StatelessWidget {
               ),
             ),
          //   SizedBox(width: 48), // Empty space for the FAB
-           // Spacer(),
+            Spacer(),
            // Spacer(),
             Expanded(
               child: ElevatedButton(

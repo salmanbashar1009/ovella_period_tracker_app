@@ -4,6 +4,15 @@ import 'package:ovella_period_tracker_app/model/chat_model.dart';
 import '../utility/utils.dart';
 
 class ChatScreenProvider with ChangeNotifier {
+
+  bool _isKeyboardOpened = false;
+  bool get isKeyboardOpened => _isKeyboardOpened;
+  void onCheckKeyboardOpenedOrNot(BuildContext context){
+    _isKeyboardOpened = Utils.isKeyboardOpen(context: context);
+    notifyListeners();
+  }
+
+
   TextEditingController chatController = TextEditingController();
   FocusNode chatFocusNode = FocusNode();
   ScrollController chatScrollController = ScrollController();
