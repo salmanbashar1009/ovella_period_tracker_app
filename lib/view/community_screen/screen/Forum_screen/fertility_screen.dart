@@ -18,8 +18,6 @@ class FertilityScreen extends StatelessWidget {
             padding: AppPadding.screenHorizontalPadding,
             child: Column(
               children: [
-                SizedBox(height: 22.h),
-
                 //---------appbar section ------------------------------------
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -45,14 +43,14 @@ class FertilityScreen extends StatelessWidget {
                     ),
 
                     Spacer(),
-                    Text("        "), //paknami korle mair
+                    Text("        "),
                   ],
                 ),
 
                 SizedBox(height: 17.5.sp),
 
                 CategoryList(
-                  size: 800,
+                  size: 750,
                   val: 16,
                   right: 0.0,
                   scrollDirection: Axis.vertical,

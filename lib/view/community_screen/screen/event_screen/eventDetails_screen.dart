@@ -26,8 +26,6 @@ class EventdetailsScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 22.h),
-
                 //---------appbar section ------------------------------------
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -255,6 +253,7 @@ class EventdetailsScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(height: 40.h),
               ],
             ),
           ),

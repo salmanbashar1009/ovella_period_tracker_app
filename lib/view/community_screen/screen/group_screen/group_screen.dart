@@ -9,7 +9,7 @@ class GroupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 400.h, // Give it a proper height
+      height: 600.h,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

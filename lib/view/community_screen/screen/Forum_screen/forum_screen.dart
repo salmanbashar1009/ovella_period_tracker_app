@@ -46,7 +46,7 @@ class CategorySection extends StatelessWidget {
     required this.title,
     required this.categories,
     required this.routeName,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
