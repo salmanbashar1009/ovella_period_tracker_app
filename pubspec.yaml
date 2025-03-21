@@ -47,6 +47,7 @@ dependencies:
   table_calendar: ^3.2.0
   curved_navigation_bar: ^1.0.6
   animated_text_kit: ^4.2.3
+  flutter_keyboard_visibility: ^6.0.0
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
