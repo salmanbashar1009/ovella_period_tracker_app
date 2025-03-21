@@ -56,13 +56,13 @@ class Step1 extends StatelessWidget {
                 SizedBox(height: 8.h),
                 TextFormField(
                   controller: stepScreenProvider.nameController,
-                  validator: (value) {
+                  /*validator: (value) {
                     if (value!.isEmpty) {
                       return "please enter your Full Name";
                     } else {
                       return null;
                     }
-                  },
+                  },*/
                   style: textTheme.bodyMedium!.copyWith(
                     fontWeight: FontWeight.w500,
                   ),

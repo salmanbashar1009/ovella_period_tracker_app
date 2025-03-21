@@ -33,13 +33,13 @@ class CreateAccountPasswordForm extends StatelessWidget {
                 ),
                 SizedBox(height: 8.h),
                 TextFormField(
-                  validator: (value) {
+                  /*validator: (value) {
                     if (value!.isEmpty) {
                       return "please enter your Full Name";
                     } else {
                       return null;
                     }
-                  },
+                  },*/
                   style: textTheme.bodyMedium!.copyWith(
                     fontWeight: FontWeight.w500,
                   ),
@@ -60,13 +60,13 @@ class CreateAccountPasswordForm extends StatelessWidget {
                 ),
                 SizedBox(height: 8.h),
                 TextFormField(
-                  validator: (value) {
+                  /*validator: (value) {
                     if (value!.isEmpty) {
                       return "please set your password";
                     } else {
                       return null;
                     }
-                  },
+                  },*/
                   obscureText: createAccountProvider.isObscurePassword,
                   style: textTheme.bodyMedium!.copyWith(
                     fontWeight: FontWeight.w500,

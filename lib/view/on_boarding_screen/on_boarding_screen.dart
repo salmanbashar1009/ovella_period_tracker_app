@@ -78,29 +78,32 @@ class OnBoardingScreen extends StatelessWidget {
                     ),
         
                     SizedBox(height: 12.h),
-                    RichText(
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: 'Already have an account? ',
-                            style: TextStyle(
-                              // Ensure text is visible
-                              fontSize: 16,
-                              color:
-                                  Colors.black, // Change color based on theme
+                    GestureDetector(
+                      onTap: ()=>Navigator.pushNamed(context, RouteName.loginScreen),
+                      child: RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'Already have an account? ',
+                              style: TextStyle(
+                                // Ensure text is visible
+                                fontSize: 16,
+                                color:
+                                    Colors.black, // Change color based on theme
+                              ),
                             ),
-                          ),
-                          TextSpan(
-                            text: 'Login here',
-                            style: TextStyle(
-                              // Ensure text is visible
-                              fontSize: 16,
-                              color:
-                                  colorScheme
-                                      .secondary, // Change color based on theme
+                            TextSpan(
+                              text: 'Login here',
+                              style: TextStyle(
+                                // Ensure text is visible
+                                fontSize: 16,
+                                color:
+                                    colorScheme
+                                        .secondary, // Change color based on theme
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ],

@@ -18,6 +18,7 @@ import 'package:ovella_period_tracker_app/view/parent_screen/parent_screen.dart'
 import 'package:ovella_period_tracker_app/view/pregnancy_fertility_tracking/pregnancy_fertility_tracking.dart';
 import 'package:ovella_period_tracker_app/view/setting_screen/screens/edit_profile_screen/edit_profile_screen.dart';
 import 'package:ovella_period_tracker_app/view/setting_screen/screens/language_setting_screen/language_setting_screen.dart';
+import 'package:ovella_period_tracker_app/view/setting_screen/screens/menstrual_health_details/menstrual_health_details.dart';
 import 'package:ovella_period_tracker_app/view/setting_screen/screens/personal_information_setting/personal_information_settings.dart';
 import 'package:ovella_period_tracker_app/view/setting_screen/screens/personal_information_setting/select_Age_screen.dart';
 import 'package:ovella_period_tracker_app/view/setting_screen/screens/personal_information_setting/select_gender_screen.dart';
@@ -70,6 +71,7 @@ class AppRoutes {
       RouteName.languageSettingScreen: (context) => LanguageSettingScreen(),
       RouteName.personalInformationSettingScreen: (context) => PersonalInformationSettings(),
       RouteName.selectAgeScreen: (context) => SelectAgeScreen(),
+      RouteName.menstrualHealthDetails: (context) => MenstrualHealthDetails(),
     };
   }
 }

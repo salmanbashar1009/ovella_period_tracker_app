@@ -32,5 +32,6 @@ class RouteName{
   static const String languageSettingScreen = '/languageSettingScreen';
   static const String personalInformationSettingScreen = '/personalInformationSettingScreen';
   static const String selectAgeScreen = '/selectAgeScreen';
+  static const String menstrualHealthDetails = '/menstrualHealthDetails';
 
 }
