@@ -29,5 +29,9 @@ class RouteName{
   static const String pairingScreen = '/pairingScreen';
   static const String selectGenderScreen = '/selectGenderScreen';
   static const String editProfileScreen = '/editProfileScreen';
+  static const String languageSettingScreen = '/languageSettingScreen';
+  static const String personalInformationSettingScreen = '/personalInformationSettingScreen';
+  static const String selectAgeScreen = '/selectAgeScreen';
+  static const String menstrualHealthDetails = '/menstrualHealthDetails';
 
 }

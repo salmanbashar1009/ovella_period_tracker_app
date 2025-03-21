@@ -18,20 +18,22 @@ class SelectGenderScreen extends StatelessWidget {
         child: SafeArea(
           child: Padding(
             padding: AppPadding.screenHorizontalPadding,
-            child: Column(
-              children: [
-                SizedBox(height: 12.h),
-                HeaderWidget(title: 'Select Your Age',),
-                Consumer<StepScreenProvider>(
-                  builder: (_, stepScreenProvider, _) {
-                    return GenderSelection(
-                      textTheme: textTheme,
-                      allGender: stepScreenProvider.allGender,
-                      stepScreenProvider: stepScreenProvider,
-                    );
-                  },
-                ),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  SizedBox(height: 12.h),
+                  HeaderWidget(title: 'Select Your Age'),
+                  Consumer<StepScreenProvider>(
+                    builder: (_, stepScreenProvider, _) {
+                      return GenderSelection(
+                        textTheme: textTheme,
+                        allGender: stepScreenProvider.allGender,
+                        stepScreenProvider: stepScreenProvider,
+                      );
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
         ),

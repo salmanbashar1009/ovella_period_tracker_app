@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -41,7 +43,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
               const WeekdayHeader(),
               const SizedBox(height: 10),
               SizedBox(
-                height: 275.h,
+                height: 300.h,
                 width: double.infinity,
                 child: Consumer<TrackingScreenProvider>(
                   builder: (context, trackingScreenProvider, _) {
@@ -212,33 +214,39 @@ class MenstrualFertilityScreen extends StatelessWidget {
 
   Widget activityTile(
       {required BuildContext context,required Color bgColor , required String imagePath,required String title,required VoidCallback onTap,}) {
+    final screenHeight = MediaQuery.of(context).size.height; // Start with a ScreenUtil-based height
+    final responsiveHeight = screenHeight * 0.09; // Clamp between 70.h and 90.h
+
     return Container(
-      padding: EdgeInsets.only(left:12.r,bottom: 12.r,top: 12.r),
+      padding: EdgeInsets.only(left:12.r,bottom: 12.h,top: 12.h),//top: 12.r),
       width: 175.w,
-      height: 70.h,
+      height: responsiveHeight,
       decoration:BoxDecoration (
       color: bgColor,
         borderRadius: BorderRadius.circular(24.r),
       ),
-      child: ListTile(
-        horizontalTitleGap: 6.w,
-        contentPadding: EdgeInsets.zero,
-        onTap: onTap,
-        leading: Container(
-          padding: EdgeInsets.all(10.r),
-          width: 44.w,
-          height: 44.h,
-          decoration: BoxDecoration(
-            color: AppColors.onPrimary,
-            shape: BoxShape.circle,
+      child: Row(
+        children: [
+          GestureDetector(
+            onTap: onTap,
+            child: Container(
+              padding: EdgeInsets.all(10.r),
+              width: responsiveHeight - 30,
+              height: responsiveHeight - 30,
+              decoration: BoxDecoration(
+                color: AppColors.onPrimary,
+                shape: BoxShape.circle,
+              ),
+              child: Image(image: AssetImage(imagePath)),
+            ),
           ),
-          child: Image(image: AssetImage(imagePath)),
-        ),
-        title: Text(title,style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-            color: AppColors.textColor,
-            fontWeight: FontWeight.w400
-        ),) ,
-      ),
+          SizedBox(width: 8.h,),
+          Text(title,style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+              color: AppColors.textColor,
+              fontWeight: FontWeight.w400
+          ),)
+        ],
+      )
     );
   }
 }

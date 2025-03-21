@@ -35,13 +35,13 @@ class CreateAccountEmailForm extends StatelessWidget {
               ),
               SizedBox(height: 8.h),
               TextFormField(
-                validator: (value) {
+                /*validator: (value) {
                   if (value!.isEmpty) {
                     return "please enter your Full Name";
                   } else {
                     return null;
                   }
-                },
+                },*/
                 style: textTheme.bodyMedium!.copyWith(
                   fontWeight: FontWeight.w500,
                 ),
@@ -62,13 +62,13 @@ class CreateAccountEmailForm extends StatelessWidget {
               ),
               SizedBox(height: 8.h),
               TextFormField(
-                validator: (value) {
+                /*validator: (value) {
                   if (value!.isEmpty) {
                     return "please enter your email";
                   } else {
                     return null;
                   }
-                },
+                },*/
                 style: textTheme.bodyMedium!.copyWith(
                   fontWeight: FontWeight.w500,
                 ),

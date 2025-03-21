@@ -28,13 +28,13 @@ class TrackingScreen extends StatelessWidget {
                   Align(
                     alignment: Alignment.center,
                     child: Container(
-                      height: 50.h,
+                      height: 56.h,
                       margin: EdgeInsets.symmetric(horizontal: 12.w),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(32.r),
                         color: AppColors.onSecondary,
                       ),
-                      padding: const EdgeInsets.all(4),
+                      padding:  EdgeInsets.all(4.r),
                       child: Row(
                         children: [
                           _buildSegmentItem(context, 0, "Menstrual & Fertility"),
