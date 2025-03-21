@@ -276,6 +276,11 @@ class HomeScreenProvider with ChangeNotifier {
    // }
   }
 
+  void cancelLogPeriod(){
+    _tempPeriodDaysSelection = List<DateTime>.from(_periodInformationModel!.nextPeriodDates);
+    notifyListeners();
+  }
+
   /// Method to check if a day is selected
   bool isSelected(DateTime day) {
     return _tempPeriodDaysSelection!.contains(day);

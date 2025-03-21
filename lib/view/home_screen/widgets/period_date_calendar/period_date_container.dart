@@ -81,6 +81,7 @@ class PeriodDateContainer extends StatelessWidget{
                           date.year == DateTime.now().year;
                       bool isTodayPeriodDay = false;
                       if(isToday){
+                        debugPrint("\ntoday & list of period dates : ${homeScreenProvider.periodInformationModel!.nextPeriodDates}\n\n");
                         isTodayPeriodDay = homeScreenProvider.periodInformationModel!.nextPeriodDates.contains(DateTime(date.year,date.month,date.day));
                       }
 
@@ -88,7 +89,12 @@ class PeriodDateContainer extends StatelessWidget{
                       padding: EdgeInsets.all(14.r),
                       margin: EdgeInsets.only(right: 12.w),
                       decoration: BoxDecoration(
-                        color: isToday && isTodayPeriodDay ? AppColors.secondary : Color(0xffF4F6F6),
+
+                        color: isToday && isTodayPeriodDay ?
+                        AppColors.secondary :
+                        isToday && isTodayPeriodDay == false ?
+                        Color(0xff25C871) : Color(0xffF4F6F6),
+
                         borderRadius: BorderRadius.circular(16.r),
                       ),
                       child: Column(

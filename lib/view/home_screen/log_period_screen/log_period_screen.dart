@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/constant/images.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
@@ -24,7 +25,15 @@ class LogPeriodScreen extends StatelessWidget {
             Padding(
               padding: AppPadding.screenHorizontalPadding,
               child: AppBar(
-                leading: Utils.backButton(context),
+                leading: GestureDetector(
+                  onTap: (){
+                    context.read<HomeScreenProvider>().cancelLogPeriod();
+                    Navigator.pop(context);
+                  },
+                  child: Utils.circleContainer(
+                    imagePath: AppImages.arrowBackIcon,
+                  ),
+                ),
                 title: Text(
                   "Log Period",
                   style: Theme.of(context).textTheme.headlineMedium,
@@ -63,9 +72,9 @@ class LogPeriodScreen extends StatelessWidget {
                             return homeScreenProvider.isSelected(day);
                           },
                           onDaySelected: (selectedDay, focusedDay) {
-                           // if (!preSelectedDays.any((d) => isSameDay(d, selectedDay))) {
+                           // if (!homeScreenProvider.periodInformationModel!.nextPeriodDates.any((d) => isSameDay(d, selectedDay))) {
                              homeScreenProvider.toggleSelectedDay(selectedDay);
-                           // }
+                          //  }
                           },
                           headerStyle: HeaderStyle(
                             formatButtonVisible: false, // Hides the "2 weeks" button
@@ -108,7 +117,7 @@ class LogPeriodScreen extends StatelessWidget {
                           ),
                           calendarBuilders: CalendarBuilders(
                             selectedBuilder: (context, day, focusedDay) {
-                              bool isPreSelected = homeScreenProvider.tempPeriodDaysSelection!.any((d) => isSameDay(d, day));
+                              bool isPreSelected = homeScreenProvider.periodInformationModel!.nextPeriodDates.any((d) => isSameDay(d, day));
                               return Container(
                                 margin: const EdgeInsets.all(6.0),
                                 alignment: Alignment.center,
@@ -244,8 +253,11 @@ class LogPeriodScreen extends StatelessWidget {
                         context: context,
                         onTap: () async {
                          // debugPrint("\nsaving...\n");
-                         await context.read<HomeScreenProvider>().saveLogPeriod();
-                          Navigator.pop(context);
+                          if(context.read<HomeScreenProvider>().tempPeriodDaysSelection != null && context.read<HomeScreenProvider>().tempPeriodDaysSelection!.isNotEmpty){
+                            await context.read<HomeScreenProvider>().saveLogPeriod();
+                            Navigator.pop(context);
+                          }
+
                           },
                       padding: EdgeInsets.symmetric(vertical: 18.h)
                     ),
