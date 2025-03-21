@@ -15,8 +15,7 @@ class HomeScreenProvider with ChangeNotifier {
     WidgetsBinding.instance.addPostFrameCallback((_) => _scrollToCurrentDate());
 
   //  _appPredictedPeriodDays.sort();
-   // DateTime firstPeriodDate = _appPredictedPeriodDays[0];
-   // _periodDaysLeft = firstPeriodDate.day - DateTime.now().day;
+
    // debugPrint("\nlast period date : ${_appPredictedPeriodDays[0]}\n");
     fetchPeriodInformation();
 
@@ -43,13 +42,13 @@ class HomeScreenProvider with ChangeNotifier {
 
     if(data == null){
       final List<DateTime> nextPeriodDates = [
-        DateTime(DateTime.now().year, DateTime.now().month, 25),
-        DateTime(DateTime.now().year, DateTime.now().month, 20),
-        DateTime(DateTime.now().year, DateTime.now().month, 26),
-        DateTime(DateTime.now().year, DateTime.now().month, 27),
-        DateTime(DateTime.now().year, DateTime.now().month, 28),
+        DateTime(DateTime.now().year, DateTime.now().month+1, 25),
+        DateTime(DateTime.now().year, DateTime.now().month+1, 26),
+        DateTime(DateTime.now().year, DateTime.now().month+1, 27),
+        DateTime(DateTime.now().year, DateTime.now().month+1, 28),
       ];
       nextPeriodDates.sort();
+      debugPrint("\nafter sorting : $nextPeriodDates\n");
       await updatePeriodInformationModel(
         nextPeriodDates: nextPeriodDates,
         cycleLength: 28,
@@ -60,10 +59,15 @@ class HomeScreenProvider with ChangeNotifier {
     }
     else{
       _periodInformationModel =  PeriodInformationModel.fromJson(data);
+      _tempPeriodDaysSelection = List<DateTime>.from(_periodInformationModel!.nextPeriodDates);
+
     }
-    _tempPeriodDaysSelection = List<DateTime>.from(_periodInformationModel!.nextPeriodDates);
-    notifyListeners();
+
     _setOvulationDay();
+    DateTime firstPeriodDate = _tempPeriodDaysSelection![0];
+   Duration difference = firstPeriodDate.difference(DateTime.now());
+     _periodDaysLeft = difference.inDays;
+   notifyListeners();
   }
 
   Future<void> updatePeriodInformationModel({
@@ -80,6 +84,7 @@ class HomeScreenProvider with ChangeNotifier {
     _periodInformationModel?.pregnancyStatus = pregnancyStatus ?? _periodInformationModel!.pregnancyStatus;
     _periodInformationModel?.healthConditions = healthConditions ?? _periodInformationModel!.healthConditions;
     _tempPeriodDaysSelection = List<DateTime>.from(_periodInformationModel!.nextPeriodDates);
+    _setOvulationDay();
     notifyListeners();
     await HiveServices.saveToHive(boxName: BoxName.userBoxName, modelName: ModelName.periodModelName, jsonData: _periodInformationModel!.toJson(),);
   }
@@ -246,20 +251,23 @@ class HomeScreenProvider with ChangeNotifier {
       }
 
     }
+    notifyListeners();
   }
 
   List<DateTime>? _tempPeriodDaysSelection;
   List<DateTime>? get tempPeriodDaysSelection => _tempPeriodDaysSelection;
   /// Method to toggle selection of a day
   void toggleSelectedDay(DateTime day) {
-    debugPrint("\nselected day : $day\n");
+    DateTime localDay = day.toLocal();
+    DateTime strippedLocalDay = DateTime(localDay.year, localDay.month, localDay.day);
+    debugPrint("\nselected day : $strippedLocalDay\n");
    // _tempPeriodDaysSelection ??= [];
     /// If the day is already selected, remove it, else add it
-    if (_tempPeriodDaysSelection!.contains(day)) {
-      _tempPeriodDaysSelection!.remove(day);
+    if (_tempPeriodDaysSelection!.contains(strippedLocalDay)) {
+      _tempPeriodDaysSelection!.remove(strippedLocalDay);
     }
     else {
-      _tempPeriodDaysSelection!.add(day);
+      _tempPeriodDaysSelection!.add(strippedLocalDay);
     }
     debugPrint("\nafter temp selected day : $_tempPeriodDaysSelection\napp selected days : ${periodInformationModel!.nextPeriodDates}\n");
     notifyListeners();
@@ -283,7 +291,16 @@ class HomeScreenProvider with ChangeNotifier {
 
   /// Method to check if a day is selected
   bool isSelected(DateTime day) {
-    return _tempPeriodDaysSelection!.contains(day);
+    /// Convert to local time and strip the time part
+    DateTime localDay = day.toLocal();
+    DateTime strippedLocalDay = DateTime(localDay.year, localDay.month, localDay.day);
+
+   // debugPrint("\nChecking is selected or not for $strippedLocalDay: ${_tempPeriodDaysSelection!.contains(strippedLocalDay)}\n$_tempPeriodDaysSelection\n");
+
+    /// Ensure both the date in the list and the day being checked are in the same time zone (local time with time stripped)
+    return _tempPeriodDaysSelection!
+        .contains(DateTime(strippedLocalDay.year, strippedLocalDay.month, strippedLocalDay.day));
   }
+
 
 }

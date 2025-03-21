@@ -85,7 +85,7 @@ class LogPeriodScreen extends StatelessWidget {
                           ),
                           calendarStyle: CalendarStyle(
                             selectedDecoration: BoxDecoration(
-                              color: const Color(0xffFF4A7A).withOpacity(0.3), // Updated fill color
+                              color: const Color(0xffFF4A7A).withOpacity(0.3), /// Updated fill color
                               shape: BoxShape.rectangle,
                               borderRadius: BorderRadius.circular(8.0),
                             ),
@@ -98,6 +98,9 @@ class LogPeriodScreen extends StatelessWidget {
                             ),
                             todayDecoration: const BoxDecoration(
                               shape: BoxShape.rectangle,
+                            ),
+                            todayTextStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                              color: AppColors.textColor
                             ),
                             outsideDecoration: const BoxDecoration(
                               shape: BoxShape.rectangle,
@@ -123,7 +126,7 @@ class LogPeriodScreen extends StatelessWidget {
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   color: isPreSelected
-                                      ? const Color(0xffFF4A7A)// Updated fill color
+                                      ? const Color(0xffFF4A7A) /// Updated fill color
                                       : null,
                                   shape: BoxShape.rectangle,
                                   borderRadius: BorderRadius.circular(11.r),

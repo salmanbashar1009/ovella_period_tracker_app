@@ -67,7 +67,7 @@ class PeriodDateContainer extends StatelessWidget{
           Consumer<HomeScreenProvider>(
             builder: (_, homeScreenProvider, _) {
               return SizedBox(
-                height: 75.h,
+                height: 85.h,
                 child: ListView.builder(
                   itemCount: context.read<HomeScreenProvider>().daysInMonth.length,
                     scrollDirection: Axis.horizontal,
@@ -98,6 +98,7 @@ class PeriodDateContainer extends StatelessWidget{
                         borderRadius: BorderRadius.circular(16.r),
                       ),
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text( DateFormat.E().format(date),
 
@@ -151,7 +152,8 @@ class PeriodDateContainer extends StatelessWidget{
                           builder: (_, homeScreenProvider, _) {
                             int days = homeScreenProvider.periodDaysLeft;
                             days = days < 0 ? 0 : days;
-                            return Text("$days Day Left",
+                           final String dayText = days <= 1 ? "Day" : "Days";
+                            return Text("$days $dayText Left",
                             style: Theme.of(context).textTheme.headlineMedium,);
                           }
                         ),
@@ -168,10 +170,14 @@ class PeriodDateContainer extends StatelessWidget{
                     ),
                   ),
                 ),
-                SizedBox(
-                  width: 220.w,
-                  height: 220.h,
+                Container(
+                  width: 220,
+                  height: 220,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle
+                  ),
                   child: CircularProgressIndicator(
+                    year2023: false,
                     trackGap: 2,
                     strokeWidth: 10,
                     value: 0.3,
