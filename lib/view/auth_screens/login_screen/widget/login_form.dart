@@ -31,7 +31,7 @@ class LoginForm extends StatelessWidget {
               ),
               SizedBox(height: 8.h),
               TextFormField(
-                validator: (value) {
+                /*validator: (value) {
                   if (value == null || value.isEmpty) {
                     return "Please enter your email";
                   }
@@ -44,7 +44,7 @@ class LoginForm extends StatelessWidget {
                   }
 
                   return null; // Validation passed
-                },
+                },*/
                 style: textTheme.bodyMedium!.copyWith(
                   fontWeight: FontWeight.w500,
                 ),
@@ -66,13 +66,13 @@ class LoginForm extends StatelessWidget {
               ),
               SizedBox(height: 8.h),
               TextFormField(
-                validator: (value) {
+                /*validator: (value) {
                   if (value!.isEmpty) {
                     return "please set your password";
                   } else {
                     return null;
                   }
-                },
+                },*/
                 obscureText: createAccountProvider.isObscurePassword,
                 style: textTheme.bodyMedium!.copyWith(
                   fontWeight: FontWeight.w500,

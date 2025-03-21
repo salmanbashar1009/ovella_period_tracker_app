@@ -29,13 +29,13 @@ class NewPasswordForm extends StatelessWidget {
             ),
             SizedBox(height: 8.h),
             TextFormField(
-              validator: (value) {
+              /*validator: (value) {
                 if (value!.isEmpty) {
                   return "please set your password";
                 } else {
                   return null;
                 }
-              },
+              },*/
               obscureText: newPasswordProvider.isObscurePassword,
               style: textTheme.bodyMedium!.copyWith(
                 fontWeight: FontWeight.w500,
@@ -65,13 +65,13 @@ class NewPasswordForm extends StatelessWidget {
             ),
             SizedBox(height: 8.h),
             TextFormField(
-              validator: (value) {
+              /*validator: (value) {
                 if (value!.isEmpty) {
                   return "please confirm your password";
                 } else {
                   return null;
                 }
-              },
+              },*/
               obscureText: newPasswordProvider.isObscureRePassword,
               style: textTheme.bodyMedium!.copyWith(
                 fontWeight: FontWeight.w500,

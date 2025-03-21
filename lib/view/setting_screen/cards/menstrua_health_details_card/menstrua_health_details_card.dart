@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/routing/route_name.dart';
 
 import '../../../../constant/images.dart';
 
@@ -21,7 +22,9 @@ class MenstrualHealthDetailsCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text('Menstrual & Health Details', style: textTheme.bodyLarge),
-              Image.asset(AppImages.editPencil),
+              GestureDetector(
+                  onTap: ()=>Navigator.pushNamed(context, RouteName.menstrualHealthDetails),
+                  child: Image.asset(AppImages.editPencil)),
             ],
           ),
           SizedBox(height: 10.h),
