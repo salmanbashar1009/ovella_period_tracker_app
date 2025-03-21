@@ -19,8 +19,6 @@ class MenstralScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 22.h),
-
                 //---------appbar section ------------------------------------
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -53,11 +51,12 @@ class MenstralScreen extends StatelessWidget {
                 SizedBox(height: 17.5.sp),
 
                 CategoryList(
-                  size: 800,
+                  size: 750,
                   val: 16,
                   scrollDirection: Axis.vertical,
                   categories: categories1,
                 ),
+                SizedBox(height: 50.h),
               ],
             ),
           ),
