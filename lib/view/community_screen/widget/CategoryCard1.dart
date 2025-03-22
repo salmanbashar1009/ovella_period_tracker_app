@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CategoryCard extends StatelessWidget {
   final String imagePath;
   final String title;
-  final VoidCallback? onTap; 
+  final VoidCallback? onTap;
   final double? val;
   final double? right;
   const CategoryCard({
@@ -13,13 +13,13 @@ class CategoryCard extends StatelessWidget {
     required this.title,
     this.onTap,
     this.val,
-    this.right
+    this.right,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap, 
+      onTap: onTap,
       child: Container(
         width: 270.w,
         margin: EdgeInsets.only(right: right ?? 0, bottom: val ?? 0),
@@ -27,9 +27,7 @@ class CategoryCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(24),
-          boxShadow: [
-            BoxShadow(color: Colors.grey.shade200, blurRadius: 4),
-          ],
+          boxShadow: [BoxShadow(color: Colors.grey.shade200, blurRadius: 4)],
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -46,10 +44,7 @@ class CategoryCard extends StatelessWidget {
             SizedBox(height: 5.h),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 8.w),
-              child: Text(
-                title,
-                style: Theme.of(context).textTheme.bodyLarge,
-              ),
+              child: Text(title, style: Theme.of(context).textTheme.bodyLarge),
             ),
           ],
         ),

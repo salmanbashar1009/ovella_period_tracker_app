@@ -13,13 +13,12 @@ class SexualScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BackgroundWidget(
       child: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
         child: SafeArea(
           child: Padding(
             padding: AppPadding.screenHorizontalPadding,
             child: Column(
               children: [
-                SizedBox(height: 22.h),
-
                 //---------appbar section ------------------------------------
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -52,7 +51,7 @@ class SexualScreen extends StatelessWidget {
                 SizedBox(height: 17.5.sp),
 
                 CategoryList(
-                  size: 800,
+                  size: 750,
                   val: 16,
                   scrollDirection: Axis.vertical,
                   categories: categories3,

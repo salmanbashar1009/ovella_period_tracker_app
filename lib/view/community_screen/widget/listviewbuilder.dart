@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/Forum_screen/details_screen/mensrualHealth.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/CategoryCard1.dart';
 import 'package:ovella_period_tracker_app/model/catagoryModel.dart';
-import 'package:ovella_period_tracker_app/view/community_screen/widget/categoryList.dart';
 
 // ignore: must_be_immutable
 class CategoryList extends StatelessWidget {
@@ -23,8 +22,10 @@ class CategoryList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: size ?? MediaQuery.of(context).size.height,
+      height: size ?? 250,
       child: ListView.builder(
+        shrinkWrap: true,
+        physics: BouncingScrollPhysics(),
         scrollDirection: scrollDirection ?? Axis.horizontal,
         itemCount: categories.length,
         itemBuilder: (BuildContext context, int index) {

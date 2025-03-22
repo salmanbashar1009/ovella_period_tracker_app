@@ -24,6 +24,7 @@ class AppImages {
 
   /// Icons path
   static const String homeIcon = 'assets/icons/home.png';
+  static const String arrowBackIcon = 'assets/icons/arrow_back.png';
   static const String copyIcon = 'assets/icons/copy.png';
   static const String replyIcon = 'assets/icons/reply.png';
   static const String sendIcon = 'assets/icons/send.png';

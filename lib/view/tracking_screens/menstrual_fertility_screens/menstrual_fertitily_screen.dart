@@ -217,19 +217,19 @@ class MenstrualFertilityScreen extends StatelessWidget {
     final screenHeight = MediaQuery.of(context).size.height; // Start with a ScreenUtil-based height
     final responsiveHeight = screenHeight * 0.09; // Clamp between 70.h and 90.h
 
-    return Container(
-      padding: EdgeInsets.only(left:12.r,bottom: 12.h,top: 12.h),//top: 12.r),
-      width: 175.w,
-      height: responsiveHeight,
-      decoration:BoxDecoration (
-      color: bgColor,
-        borderRadius: BorderRadius.circular(24.r),
-      ),
-      child: Row(
-        children: [
-          GestureDetector(
-            onTap: onTap,
-            child: Container(
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: EdgeInsets.only(left:12.r,bottom: 12.h,top: 12.h),//top: 12.r),
+        width: 175.w,
+        height: responsiveHeight,
+        decoration:BoxDecoration (
+        color: bgColor,
+          borderRadius: BorderRadius.circular(24.r),
+        ),
+        child: Row(
+          children: [
+            Container(
               padding: EdgeInsets.all(10.r),
               width: responsiveHeight - 30,
               height: responsiveHeight - 30,
@@ -239,14 +239,14 @@ class MenstrualFertilityScreen extends StatelessWidget {
               ),
               child: Image(image: AssetImage(imagePath)),
             ),
-          ),
-          SizedBox(width: 8.h,),
-          Text(title,style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-              color: AppColors.textColor,
-              fontWeight: FontWeight.w400
-          ),)
-        ],
-      )
+            SizedBox(width: 8.h,),
+            Text(title,style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                color: AppColors.textColor,
+                fontWeight: FontWeight.w400
+            ),)
+          ],
+        )
+      ),
     );
   }
 }

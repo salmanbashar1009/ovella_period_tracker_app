@@ -31,7 +31,7 @@ void showOvulationAlertDialogSheet(BuildContext context) {
               color: AppColors.secondary
             ),),
             content: SizedBox(
-              height: screenHeight > 800 ? screenHeight * 0.15 : screenHeight * 0.23,
+              height: screenHeight > 800 ? screenHeight * 0.20 : screenHeight * 0.23,
               width: screenWidth * 0.9,
 
               child: Column(
