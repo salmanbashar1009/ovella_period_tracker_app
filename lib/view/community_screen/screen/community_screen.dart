@@ -15,6 +15,16 @@ import 'package:ovella_period_tracker_app/view_model/community_provider.dart';
 class CommunityScreen extends StatelessWidget {
   const CommunityScreen({super.key});
 
+  // Segmented control options remain the same
+  static const List<String> _titles = ["Forum", "Groups", "Events"];
+  // AppBar titles will differ
+  static const List<String> _appBarTitles = ["Community", "Groups", "Events & Workshops"];
+  static const List<String> _searchPlaceholders = [
+    "Find topics and discussions",
+    "Find groups",
+    "Find events and discussions",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return BackgroundWidget(
@@ -22,119 +32,121 @@ class CommunityScreen extends StatelessWidget {
         child: SafeArea(
           child: Padding(
             padding: AppPadding.screenHorizontalPadding,
-            child: Column(
-              children: [
-                AppBar(
-                  elevation: 0,
-                  surfaceTintColor: Colors.transparent,
-                  leading: ClipOval(
-                    child: Image.asset(
-                      "assets/images/person/aunty.png",
-                      height: 48.h,
-                      width: 48.w,
-                    ),
-                  ),
-                  title: Text(
-                    "Community",
-                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                      fontSize: 19.sp,
-                      fontWeight: FontWeight.w500,
-                      color: Color(0xff1E1E1E),
-                    ),
-                  ),
+            child: Consumer<CommunityProvider>(
+              builder: (context, provider, child) {
+                String currentAppBarTitle = _appBarTitles[provider.selectedIndex];
+                String currentSearchPlaceholder = _searchPlaceholders[provider.selectedIndex];
 
-                  centerTitle: true,
-
-                  actions: [
-                    Utils.circleContainer(
-                      imagePath: "assets/images/icons/bell.png",
+                return Column(
+                  children: [
+                    AppBar(
+                      elevation: 0,
+                      surfaceTintColor: Colors.transparent,
+                      leading: ClipOval(
+                        child: Image.asset(
+                          "assets/images/person/aunty.png",
+                          height: 48.h,
+                          width: 48.w,
+                        ),
+                      ),
+                      title: Text(
+                        currentAppBarTitle, 
+                        style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                          fontSize: 19.sp,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xff1E1E1E),
+                        ),
+                      ),
+                      centerTitle: true,
+                      actions: [
+                        Utils.circleContainer(
+                          imagePath: "assets/images/icons/bell.png",
+                        ),
+                      ],
                     ),
+                    SizedBox(height: 21.5.sp),
+
+                    // Show subtitle section only for Forum (index 0)
+                    if (provider.selectedIndex == 0) ...[
+                      //---------Sub title section----------------------------------
+                      Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Hey Jane Doe, Welcome to the",
+                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                            fontSize: 19.sp,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xff1E1E1E),
+                          ),
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Ovella Forum", // Fixed subtitle for Forum
+                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                            fontSize: 19.sp,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 8.h),
+
+                      //-------------sub sub title ---------------------------------------------
+                      Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Join discussions, ask questions, and",
+                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w400,
+                            color: AppColors.lightTextColor,
+                          ),
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          "connect with experts!",
+                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w400,
+                            color: AppColors.lightTextColor,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 28.h),
+                    ] else
+                      SizedBox(height: 28.h), 
+
+                    
+                    CustomSegmentedControl(options: _titles),
+                    SizedBox(height: 16.h),
+
+                    //-----------search-------------------------------------------------------
+                    TextFormField(
+                      decoration: inputDecoration(
+                        context,
+                        currentSearchPlaceholder, 
+                        null,
+                        Icon(Icons.search),
+                        120.0,
+                      ),
+                    ),
+
+                    SizedBox(height: 24.h),
+
+                    if (provider.selectedIndex == 0)
+                      SizedBox(child: ForumScreen())
+                    else if (provider.selectedIndex == 1)
+                      SizedBox(child: GroupScreen())
+                    else
+                      SizedBox(child: EventScreen()),
+
+                    SizedBox(height: 24.h),
                   ],
-                ),
-
-                SizedBox(height: 21.5.sp),
-
-                //---------Sub title section----------------------------------
-                Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Hey Jane Doe, Welcome to the",
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      fontSize: 19.sp,
-                      fontWeight: FontWeight.w600,
-                      color: Color(0xff1E1E1E),
-                    ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Ovella community",
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      fontSize: 19.sp,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
-                SizedBox(height: 8.h),
-
-                //-------------sub sub title ---------------------------------------------
-                Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Join discussions, ask questions, and",
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w400,
-                      color: AppColors.lightTextColor,
-                    ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    "connect with experts!",
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w400,
-                      color: AppColors.lightTextColor,
-                    ),
-                  ),
-                ),
-                SizedBox(height: 28.h),
-
-                // Segmented Control for Switching Screens
-                CustomSegmentedControl(options: ["Forum", "Groups", "Events"]),
-                SizedBox(height: 16.h),
-
-                //-----------search-------------------------------------------------------
-                TextFormField(
-                  decoration: inputDecoration(
-                    context,
-                    "Find topics, groups, and discussions",
-                    null,
-                    Icon(Icons.search),
-                    120.0,
-                  ),
-                ),
-
-                SizedBox(height: 24.h),
-
-                // Dynamically Show the Selected Screen
-                Consumer<CommunityProvider>(
-                  builder: (context, provider, child) {
-                    if (provider.selectedIndex == 0) {
-                      return SizedBox(child: ForumScreen());
-                    } else if (provider.selectedIndex == 1) {
-                      return SizedBox(child: GroupScreen());
-                    } else {
-                      return SizedBox(child: EventScreen());
-                    }
-                  },
-                ),
-
-                SizedBox(height: 24.h),
-              ],
+                );
+              },
             ),
           ),
         ),
