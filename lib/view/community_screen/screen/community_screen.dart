@@ -34,7 +34,6 @@ class CommunityScreen extends StatelessWidget {
             padding: AppPadding.screenHorizontalPadding,
             child: Consumer<CommunityProvider>(
               builder: (context, provider, child) {
-                // Get the current AppBar title and search placeholder based on selectedIndex
                 String currentAppBarTitle = _appBarTitles[provider.selectedIndex];
                 String currentSearchPlaceholder = _searchPlaceholders[provider.selectedIndex];
 
@@ -51,7 +50,7 @@ class CommunityScreen extends StatelessWidget {
                         ),
                       ),
                       title: Text(
-                        currentAppBarTitle, // Dynamic AppBar title: Community, Groups, Events & Workshops
+                        currentAppBarTitle, 
                         style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                           fontSize: 19.sp,
                           fontWeight: FontWeight.w500,
@@ -118,9 +117,9 @@ class CommunityScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 28.h),
                     ] else
-                      SizedBox(height: 28.h), // Maintain spacing when subtitle is hidden
+                      SizedBox(height: 28.h), 
 
-                    // Segmented Control for Switching Screens
+                    
                     CustomSegmentedControl(options: _titles),
                     SizedBox(height: 16.h),
 
@@ -128,7 +127,7 @@ class CommunityScreen extends StatelessWidget {
                     TextFormField(
                       decoration: inputDecoration(
                         context,
-                        currentSearchPlaceholder, // Dynamic placeholder
+                        currentSearchPlaceholder, 
                         null,
                         Icon(Icons.search),
                         120.0,
@@ -137,7 +136,6 @@ class CommunityScreen extends StatelessWidget {
 
                     SizedBox(height: 24.h),
 
-                    // Dynamically Show the Selected Screen
                     if (provider.selectedIndex == 0)
                       SizedBox(child: ForumScreen())
                     else if (provider.selectedIndex == 1)
