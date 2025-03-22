@@ -4,7 +4,6 @@ import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/log_symtoms_card.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/widgets/checkup_vacation_list.dart';
-import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/widgets/image_slider.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/widgets/pregnancy_image_slider_container.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/widgets/section_header.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/widgets/week_list.dart';
@@ -32,6 +31,7 @@ class PregnancyScreen extends StatelessWidget {
                   fontWeight: FontWeight.w400,
                 ),
               ),
+
               Text(
                 "Week ${pregnancyScreenProvider.selectedWeek} of your pregnancy",
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
