@@ -11,6 +11,7 @@ import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertil
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/fertile_alert_sheet.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/log_symtoms_card.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/month_header.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/next_period_alert_sheet.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/ovulation_alert_sheet.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/period_alert_sheet.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/week_day_header.dart';
@@ -141,7 +142,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
           children: [
             activityTile(context: context,bgColor: Color(0xFF25C871), imagePath: "assets/icons/ovulation.png", title: "Ovulation", onTap:(){showOvulationAlertDialogSheet(context);} ),
             SizedBox(width: 12.w,),
-            activityTile(context: context,bgColor: Color(0xFFFF9CB6), imagePath: "assets/icons/next-period.png", title: "Next Period", onTap:(){} ),
+            activityTile(context: context,bgColor: Color(0xFFFF9CB6), imagePath: "assets/icons/next-period.png", title: "Next Period", onTap:(){showNextPeiodAlertDialogSheet(context);} ),
           ],
         ),
         SizedBox(height: 24.h,),

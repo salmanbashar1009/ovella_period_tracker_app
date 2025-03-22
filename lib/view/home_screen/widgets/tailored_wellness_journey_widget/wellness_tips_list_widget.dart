@@ -28,8 +28,8 @@ class WellnessTipsList extends StatelessWidget{
             children: [
               ClipRRect(
                   borderRadius: BorderRadius.circular(24.r),
-                child: Image.asset('assets/images/home_screen/wellness_tips.png',
-                  fit: BoxFit.cover,
+                child: Image.asset('assets/images/home_screen/wellness-woman.png',
+                  fit: BoxFit.contain,
                 ),
               ),
 
