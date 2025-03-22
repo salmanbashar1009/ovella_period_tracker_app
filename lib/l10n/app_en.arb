@@ -1,0 +1,506 @@
+{
+    "hellojaneDoe": "hello, Jane Doe",
+    "@hellojaneDoe": {
+        "description": "Hello greeting"
+    },
+    
+    "goodmorning": "Good Morning",
+    "@goodmorning": {
+        "description": "Morning greeting"
+    },
+ 
+    "fibroidswomen": "Fibroids mainly affect women.",
+    "@fibroidswomen": {
+        "description": "Fibroids information"
+    },
+ 
+    "fibroiddiscription": "Fibroids can disrupt cycles, cause heavy bleeding, and impact fertility.",
+    "@fibroiddiscription": {
+        "description": "Fibroids description"
+    },
+ 
+    "logperiod": "Log Period",
+    "@logperiod": {
+        "description": "Logging period option"
+    },
+ 
+    "logyoursymptoms": "Log your Symptoms",
+    "@logyoursymptoms": {
+        "description": "Logging symptoms option"
+    },
+ 
+    "logyourmood": "Log your Mood",
+    "@logyourmood": {
+        "description": "Logging mood option"
+    },
+ 
+    "tailoredwellnessjourney": "Tailored Wellness Journey",
+    "@tailoredwellnessjourney": {
+        "description": "Personalized health journey"
+    },
+ 
+    "seeall": "See all",
+    "@seeall": {
+        "description": "View all items"
+    },
+ 
+    "personalizedwellnesstips": "Personalized Wellness Tips",
+    "@personalizedwellnesstips": {
+        "description": "Wellness tips section"
+    },
+ 
+    "home": "Home",
+    "@home": {
+        "description": "Home page"
+    },
+ 
+    "tracking": "Tracking",
+    "@tracking": {
+        "description": "Tracking section"
+    },
+ 
+    "community": "Community",
+    "@community": {
+        "description": "Community section"
+    },
+ 
+    "settings": "Settings",
+    "@settings": {
+        "description": "Settings page"
+    },
+ 
+    "ai": "AI",
+    "@ai": {
+        "description": "AI assistant"
+    },
+ 
+    "symptoms": "Symptoms",
+    "@symptoms": {
+        "description": "Symptoms section"
+    },
+ 
+    "everythingisfine": "Everything is fine",
+    "@everythingisfine": {
+        "description": "Status message"
+    },
+ 
+    "cramps": "Cramps",
+    "@cramps": {
+        "description": "Symptom"
+    },
+ 
+    "acne": "Acne",
+    "@acne": {
+        "description": "Skin condition"
+    },
+ 
+    "tenderbreasts": "Tender breasts",
+    "@tenderbreasts": {
+        "description": "Symptom"
+    },
+ 
+    "milkynippledischarge": "Milky nipple discharge",
+    "@milkynippledischarge": {
+        "description": "Symptom"
+    },
+ 
+    "abdominalpain": "Abdominal pain",
+    "@abdominalpain": {
+        "description": "Symptom"
+    },
+ 
+    "fatigue": "Fatigue",
+    "@fatigue": {
+        "description": "Symptom"
+    },
+ 
+    "sleepiness": "Sleepiness",
+    "@sleepiness": {
+        "description": "Symptom"
+    },
+ 
+    "backache": "Backache",
+    "@backache": {
+        "description": "Symptom"
+    },
+ 
+    "frequenturination": "Frequent urination",
+    "@frequenturination": {
+        "description": "Symptom"
+    },
+ 
+    "cravings": "Cravings",
+    "@cravings": {
+        "description": "Symptom"
+    },
+ 
+    "insomnia": "Insomnia",
+    "@insomnia": {
+        "description": "Symptom"
+    },
+ 
+    "headache": "Headache",
+    "@headache": {
+        "description": "Symptom"
+    },
+ 
+    "legcramps": "Leg cramps",
+    "@legcramps": {
+        "description": "Symptom"
+    },
+ 
+    "bleedinggums": "Bleeding gums",
+    "@bleedinggums": {
+        "description": "Symptom"
+    },
+ 
+    "save": "Save",
+    "@save": {
+        "description": "Save button"
+    },
+ 
+    "calm": "Calm",
+    "@calm": {
+        "description": "Mood option"
+    },
+ 
+    "happy": "Happy",
+    "@happy": {
+        "description": "Mood option"
+    },
+ 
+    "energetic": "Energetic",
+    "@energetic": {
+        "description": "Mood option"
+    },
+ 
+    "moodswings": "Mood swings",
+    "@moodswings": {
+        "description": "Mood option"
+    },
+ 
+    "frisky": "Frisky",
+    "@frisky": {
+        "description": "Mood option"
+    },
+ 
+    "irritated": "Irritated",
+    "@irritated": {
+        "description": "Mood option"
+    },
+ 
+    "sad": "Sad",
+    "@sad": {
+        "description": "Mood option"
+    },
+ 
+    "anxious": "Anxious",
+    "@anxious": {
+        "description": "Mood option"
+    },
+ 
+    "depressed": "Depressed",
+    "@depressed": {
+        "description": "Mood option"
+    },
+ 
+    "veryselfcritical": "Very self critical",
+    "@veryselfcritical": {
+        "description": "Mood option"
+    },
+ 
+    "apathetic": "Apathetic",
+    "@apathetic": {
+        "description": "Mood option"
+    },
+ 
+    "confused": "Confused",
+    "@confused": {
+        "description": "Mood option"
+    },
+ 
+    "lowenergy": "Low energy",
+    "@lowenergy": {
+        "description": "Mood option"
+    },
+ 
+    "feelingguilty": "Feeling guilty",
+    "@feelingguilty": {
+        "description": "Mood option"
+    },
+ 
+    "obsessivethoughts": "Obsessive thoughts",
+    "@obsessivethoughts": {
+        "description": "Mood option"
+    },
+ 
+    "period": "Period",
+    "@period": {
+        "description": "Menstrual cycle"
+    },
+ 
+    "fertile": "Fertile",
+    "@fertile": {
+        "description": "Fertility phase"
+    },
+ 
+    "ovulation": "Ovulation",
+    "@ovulation": {
+        "description": "Ovulation phase"
+    },
+ 
+    "nextperiod": "Next Period",
+    "@nextperiod": {
+        "description": "Upcoming menstrual cycle"
+    },
+ 
+    "menstrualfertility": "Menstrual & Fertility",
+    "@menstrualfertility": {
+        "description": "Health section"
+    },
+ 
+    "pregnancy": "Pregnancy",
+    "@pregnancy": {
+        "description": "Pregnancy section"
+    },
+ 
+    "note": "Note",
+    "@note": {
+        "description": "Notes section"
+    },
+ 
+    "newnoteforexample": "New note for example",
+    "@newnoteforexample": {
+        "description": "Example note"
+    },
+ 
+    "week23ofyourpregnancy": "Week 23 of your pregnancy",
+    "@week23ofyourpregnancy": {
+        "description": "Pregnancy progress"
+    },
+ 
+    "details": "Details",
+    "@details": {
+        "description": "More information"
+    },
+ 
+    "mydailyinsights": "My Daily Insights",
+    "@mydailyinsights": {
+        "description": "Daily health insights"
+    },
+ 
+    "checkupvaccination": "Checkup & Vaccination",
+    "@checkupvaccination": {
+        "description": "Medical checkups"
+    },
+ 
+    "nextcheckup": "Next Checkup",
+    "@nextcheckup": {
+        "description": "Upcoming medical checkup"
+    },
+ 
+    "heyjaneDoe": "Hey Jane Doe, welcome to the Ovella Community!",
+    "@heyjaneDoe": {
+        "description": "Welcome message for community"
+    },
+ 
+    "joindiscussion": "Join discussions, ask questions, and connect with experts!",
+    "@joindiscussion": {
+        "description": "Encouragement to join discussions"
+    },
+ 
+    "forum": "Forum",
+    "@forum": {
+        "description": "Forum section"
+    },
+ 
+    "groups": "Groups",
+    "@groups": {
+        "description": "Groups section"
+    },
+ 
+    "events": "Events",
+    "@events": {
+        "description": "Events section"
+    },
+ 
+    "findtopic": "Find topics, groups, and discussions",
+    "@findtopic": {
+        "description": "Search feature for topics"
+    },
+ 
+    "menstrualhealth": "Menstrual Health",
+    "@menstrualhealth": {
+        "description": "Menstrual health section"
+    },
+ 
+    "fertility": "Fertility",
+    "@fertility": {
+        "description": "Fertility section"
+    },
+ 
+    "sexualhealth": "Sexual health",
+    "@sexualhealth": {
+        "description": "Sexual health section"
+    },
+ 
+    "populargroups": "Popular Groups",
+    "@populargroups": {
+        "description": "Popular community groups"
+    },
+ 
+    "findgroups": "Find groups",
+    "@findgroups": {
+        "description": "Search feature for groups"
+    },
+ 
+    "eventsworkshops": "Events & Workshops",
+    "@eventsworkshops": {
+        "description": "Events and workshops section"
+    },
+ 
+    "eventsdetails": "Events Details",
+    "@eventsdetails": {
+        "description": "Details of specific events"
+    },
+ 
+    "pregnancynutritionwebinar": "Pregnancy Nutrition Webinar",
+    "@pregnancynutritionwebinar": {
+        "description": "Webinar about pregnancy nutrition"
+    },
+ 
+    "whatlearn": "What You’ll Learn",
+    "@whatlearn": {
+        "description": "Section describing learning outcomes"
+    },
+ 
+    "speakers": "Speakers",
+    "@speakers": {
+        "description": "Speakers for an event"
+    },
+ 
+    "registernow": "Register Now",
+    "@registernow": {
+        "description": "Registration button"
+    },
+ 
+    "editprofile": "Edit Profile",
+    "@editprofile": {
+        "description": "Profile editing option"
+    },
+ 
+    "inviteyourpartnertoovella": "Invite Your Partner To Ovella",
+    "@inviteyourpartnertoovella": {
+        "description": "Option to invite a partner"
+    },
+ 
+    "clickheretoaddyourpartner": "Click here to add your partner",
+    "@clickheretoaddyourpartner": {
+        "description": "Link to add partner"
+    },
+ 
+    "personalinformation": "Personal Information",
+    "@personalinformation": {
+        "description": "User's personal information section"
+    },
+ 
+    "age": "Age",
+    "@age": {
+        "description": "User's age"
+    },
+ 
+    "gender": "Gender",
+    "@gender": {
+        "description": "User's gender"
+    },
+ 
+    "menstrualhealthdetails": "Menstrual & Health Details",
+    "@menstrualhealthdetails": {
+        "description": "Menstrual and health details"
+    },
+ 
+    "cyclelength": "Cycle Length",
+    "@cyclelength": {
+        "description": "Length of menstrual cycle"
+    },
+ 
+    "lastperiod": "Last Period",
+    "@lastperiod": {
+        "description": "Date of last period"
+    },
+ 
+    "pregnancystatus": "Pregnancy Status",
+    "@pregnancystatus": {
+        "description": "Current pregnancy status"
+    },
+ 
+    "healthconditions": "Health Conditions",
+    "@healthconditions": {
+        "description": "User's health conditions"
+    },
+ 
+    "preferencesnotifications": "Preferences & Notifications",
+    "@preferencesnotifications": {
+        "description": "User preferences and notifications"
+    },
+ 
+    "periodalerts": "Period Alerts",
+    "@periodalerts": {
+        "description": "Menstrual cycle alerts"
+    },
+ 
+    "pregnancytips": "Pregnancy Tips",
+    "@pregnancytips": {
+        "description": "Tips for pregnancy"
+    },
+ 
+    "mentalhealth": "Mental Health",
+    "@mentalhealth": {
+        "description": "Mental health section"
+    },
+ 
+    "language": "Language",
+    "@language": {
+        "description": "Language selection"
+    },
+ 
+    "privacydata": "Privacy & Data",
+    "@privacydata": {
+        "description": "Privacy and data management"
+    },
+ 
+    "viewdatainsights": "View Data Insights",
+    "@viewdatainsights": {
+        "description": "View insights on data"
+    },
+ 
+    "exportdata": "Export Data",
+    "@exportdata": {
+        "description": "Export user data"
+    },
+ 
+    "deleteaccount": "Delete Account",
+    "@deleteaccount": {
+        "description": "Delete user account"
+    },
+ 
+    "supportcommunity": "Support & Community",
+    "@supportcommunity": {
+        "description": "Support and community section"
+    },
+ 
+    "contactsupport": "Contact Support",
+    "@contactsupport": {
+        "description": "Support contact information"
+    },
+ 
+    "faqguides": "FAQ & Guides",
+    "@faqguides": {
+        "description": "Frequently asked questions and guides"
+    },
+ 
+    "joinacommunity": "Join a Community",
+    "@joinacommunity": {
+        "description": "Option to join a community"
+    }
+}

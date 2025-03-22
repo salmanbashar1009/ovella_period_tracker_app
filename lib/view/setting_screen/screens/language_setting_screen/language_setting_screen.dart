@@ -2,9 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
+import 'package:ovella_period_tracker_app/l10n/l10n.dart'; // Import L10n
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/view/setting_screen/screens/header_widget/header_widget.dart';
-import 'package:ovella_period_tracker_app/view_model/step_screen_provider.dart';
+import 'package:ovella_period_tracker_app/view_model/localization_provider.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 import 'package:provider/provider.dart';
 
@@ -19,18 +20,19 @@ class LanguageSettingScreen extends StatelessWidget {
         child: SafeArea(
           child: Padding(
             padding: AppPadding.screenHorizontalPadding,
-            child: Consumer<StepScreenProvider>(
-              builder: (_, stepScreenProvider, __) {
+            child: Consumer<LocalProvider>(
+              builder: (_, localProvider, __) {
+                // Use a TextEditingController for search
+                final searchController = TextEditingController();
                 // Filtered languages based on search query
-                List<String> filteredLanguages =
-                    stepScreenProvider.allLanguages
-                        .where(
-                          (lang) => lang.toLowerCase().contains(
-                            stepScreenProvider.languageSearchQuery
-                                .toLowerCase(),
+                List<Locale> filteredLanguages = L10n.all
+                    .where(
+                      (locale) => locale.languageCode.toLowerCase().contains(
+                            localProvider.locale?.languageCode.toLowerCase() ??
+                                '',
                           ),
-                        )
-                        .toList();
+                    )
+                    .toList();
 
                 return Column(
                   children: [
@@ -38,77 +40,77 @@ class LanguageSettingScreen extends StatelessWidget {
                     HeaderWidget(title: 'App Language'),
                     SizedBox(height: 24.h),
                     TextFormField(
-                      controller: stepScreenProvider.languageSearchController,
+                      controller: searchController,
                       style: textTheme.bodyMedium,
                       decoration: InputDecoration(
                         prefixIcon: Icon(CupertinoIcons.search),
                         hintText: 'Search',
-                        suffixIcon:
-                            stepScreenProvider.languageSearchQuery.isNotEmpty
-                                ? IconButton(
-                                  icon: Icon(Icons.clear),
-                                  onPressed: () {
-                                    stepScreenProvider.languageSearchController
-                                        .clear();
-                                    stepScreenProvider.searchingLanguage("");
-                                  },
-                                )
-                                : null,
+                        suffixIcon: searchController.text.isNotEmpty
+                            ? IconButton(
+                                icon: Icon(Icons.clear),
+                                onPressed: () {
+                                  searchController.clear();
+                                  // No need for a separate search method; filter updates automatically
+                                },
+                              )
+                            : null,
                       ),
-                      onChanged:
-                          (value) =>
-                              stepScreenProvider.searchingLanguage(value),
+                      onChanged: (value) {
+                        // Trigger rebuild with filtered list
+                        filteredLanguages = L10n.all
+                            .where(
+                              (locale) => locale.languageCode
+                                  .toLowerCase()
+                                  .contains(value.toLowerCase()),
+                            )
+                            .toList();
+                        (context as Element).markNeedsBuild(); // Force rebuild
+                      },
                     ),
                     SizedBox(height: 12.h),
                     Expanded(
-                      child:
-                          filteredLanguages.isNotEmpty
-                              ? ListView.builder(
-                                itemCount: filteredLanguages.length,
-                                itemBuilder: (BuildContext context, int index) {
-                                  return GestureDetector(
-                                    onTap: () {
-                                      stepScreenProvider.languageSelection(
-                                        filteredLanguages[index],
-                                      );
-                                    },
-                                    child: Container(
-                                      padding: EdgeInsets.symmetric(
-                                        horizontal: 14.w,
-                                        vertical: 14.h,
-                                      ),
-                                      decoration: BoxDecoration(
-                                        color:
-                                            filteredLanguages[index] ==
-                                                    stepScreenProvider
-                                                        .selectedLanguage
-                                                ? AppColors.onPrimary
-                                                : Colors.transparent,
-                                        borderRadius: BorderRadius.circular(
-                                          16.r,
-                                        ),
-                                      ),
-                                      child: Text(
-                                        filteredLanguages[index],
-                                        style: textTheme.bodyLarge!.copyWith(
-                                          fontWeight:
-                                              filteredLanguages[index] ==
-                                                      stepScreenProvider
-                                                          .selectedLanguage
-                                                  ? FontWeight.w500
-                                                  : FontWeight.normal,
-                                        ),
+                      child: filteredLanguages.isNotEmpty
+                          ? ListView.builder(
+                              itemCount: filteredLanguages.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                final locale = filteredLanguages[index];
+                                return GestureDetector(
+                                  onTap: () {
+                                    localProvider.setLocale(locale); // Update locale
+                                  },
+                                  child: Container(
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 14.w,
+                                      vertical: 14.h,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: locale.languageCode ==
+                                              localProvider.locale?.languageCode
+                                          ? AppColors.onPrimary
+                                          : Colors.transparent,
+                                      borderRadius: BorderRadius.circular(
+                                        16.r,
                                       ),
                                     ),
-                                  );
-                                },
-                              )
-                              : Center(
-                                child: Text(
-                                  "No languages found",
-                                  style: textTheme.bodyMedium,
-                                ),
+                                    child: Text(
+                                      locale.languageCode, // Display language code or customize as needed
+                                      style: textTheme.bodyLarge!.copyWith(
+                                        fontWeight: locale.languageCode ==
+                                                localProvider.locale?.languageCode
+                                            ? FontWeight.w500
+                                            : FontWeight.normal,
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              },
+                            )
+                          : Center(
+                              child: Text(
+                                "No languages found",
+                                style: textTheme.bodyMedium,
                               ),
+                            ),
                     ),
                   ],
                 );
