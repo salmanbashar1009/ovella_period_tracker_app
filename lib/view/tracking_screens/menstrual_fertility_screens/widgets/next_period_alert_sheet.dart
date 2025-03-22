@@ -6,7 +6,7 @@ import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_pal
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 import 'package:provider/provider.dart';
 
-void showFertileAlertDialogSheet(BuildContext context) {
+void showNextPeiodAlertDialogSheet(BuildContext context) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
@@ -26,7 +26,7 @@ void showFertileAlertDialogSheet(BuildContext context) {
 
 
             return AlertDialog(
-              title: Text( periodStartDate.isNotEmpty ? "Fertile Dates: \n$periodStartDate - $periodEndDate" : "Fertile Dates : Not Selected",
+              title: Text( periodStartDate.isNotEmpty ? "Next Period Dates: \n$periodStartDate - $periodEndDate" : "Next Period Dates : Not Selected",
                 style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                     color: AppColors.secondary
                 ),),
@@ -51,14 +51,14 @@ void showFertileAlertDialogSheet(BuildContext context) {
                           Navigator.of(context).pop(); // Close the dialog
                           Navigator.pushNamed(context, RouteName.editCalenderScreen);
                         },
-                        child:  Text('Edit Fertile',style: Theme.of(context).textTheme.bodyMedium,),
+                        child:  Text('Edit Next Period',style: Theme.of(context).textTheme.bodyMedium,),
                       ),
                       TextButton(
                         onPressed: () {
                           Navigator.of(context).pop(); // Close the dialog
                           context.read<TrackingScreenProvider>().removePeriodDates();
                         },
-                        child:  Text('Remove Fertile',style: Theme.of(context).textTheme.bodyMedium,),
+                        child:  Text('Remove Next Period',style: Theme.of(context).textTheme.bodyMedium,),
                       ),
                     ]
                 ),

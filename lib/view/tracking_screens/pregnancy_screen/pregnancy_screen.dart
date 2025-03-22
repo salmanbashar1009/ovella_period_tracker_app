@@ -5,6 +5,7 @@ import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_pal
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/log_symtoms_card.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/widgets/checkup_vacation_list.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/widgets/image_slider.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/widgets/pregnancy_image_slider_container.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/widgets/section_header.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/widgets/week_list.dart';
 import 'package:provider/provider.dart';
@@ -40,66 +41,16 @@ class PregnancyScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 24.h),
+
+              /// show list of weeks to track pregnancy
               WeekList(),
               SizedBox(height: 20.h),
-              Container(
-                width: 362.w,
-                // height: 40.h,
-                padding: EdgeInsets.all(20.r),
-                decoration: BoxDecoration(
-                  color: AppColors.onPrimary,
-                  borderRadius: BorderRadius.circular(24.r),
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Column(
-                          children: [
-                            Text(
-                              "Conception Date",
-                              style: Theme.of(
-                                context,
-                              ).textTheme.bodyMedium?.copyWith(
-                                color: AppColors.lightTextColor,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                            Text(
-                              "March 3, 2025",
-                              style: Theme.of(context).textTheme.bodyLarge,
-                            ),
-                          ],
-                        ),
-                        Spacer(),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Text(
-                              "Due Date",
-                              style: Theme.of(
-                                context,
-                              ).textTheme.bodyMedium?.copyWith(
-                                color: AppColors.lightTextColor,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                            Text(
-                              "December 3, 2025",
-                              style: Theme.of(context).textTheme.bodyLarge,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 24.h),
-                    ImageSlider(),
-                    SizedBox(height: 24.h),
-                    SliderDetailsButton(),
-                  ],
-                ),
-              ),
+
+              /// image slider container : shows conception and due date with baby images
+              PregnancyImageSliderContainer(),
               SectionHeader(title: "My Daily Insight"),
+
+              /// log card row for symptoms and mood
               Row(
                 children: [
                   LogCard(
@@ -128,6 +79,7 @@ class PregnancyScreen extends StatelessWidget {
                 ],
               ),
 
+              /// Show symptoms list if not empty
               Consumer<HomeScreenProvider>(
                 builder: (_, homeScreenProvider, _) {
                   return homeScreenProvider.selectedSymptoms.isNotEmpty
@@ -145,9 +97,12 @@ class PregnancyScreen extends StatelessWidget {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  debugPrint(
-                                    "\nSymptoms Edit button pressed\n",
+                                  final homeScreenProvider =
+                                  context.read<HomeScreenProvider>();
+                                  homeScreenProvider.onLog(
+                                    logTo: homeScreenProvider.symptomsLog,
                                   );
+                                  Navigator.pushNamed(context, RouteName.addLogScreen);
                                 },
                                 child: Image.asset(
                                   AppImages.editIcon,
@@ -158,21 +113,23 @@ class PregnancyScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-                          Align(
-                            alignment: Alignment.centerLeft,
-                            child: Wrap(
-                              spacing: 8.0,
-                              runSpacing: 8.0,
-                              children:
-                                  homeScreenProvider.selectedSymptoms
-                                      .map(
-                                        (symptom) => BuildLogItem(
-                                          logItem: symptom,
-                                          onSelect:
-                                              homeScreenProvider.onSelectLog,
-                                        ),
-                                      )
-                                      .toList(),
+                          IgnorePointer(
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Wrap(
+                                spacing: 8.0,
+                                runSpacing: 8.0,
+                                children:
+                                    homeScreenProvider.selectedSymptoms
+                                        .map(
+                                          (symptom) => BuildLogItem(
+                                            logItem: symptom,
+                                            onSelect:
+                                                homeScreenProvider.onSelectLog,
+                                          ),
+                                        )
+                                        .toList(),
+                              ),
                             ),
                           ),
                         ],
@@ -180,7 +137,7 @@ class PregnancyScreen extends StatelessWidget {
                       : SizedBox();
                 },
               ),
-
+              /// show mood list if not empty
               Consumer<HomeScreenProvider>(
                 builder: (_, homeScreenProvider, _) {
                   return homeScreenProvider.selectedMoods.isNotEmpty
@@ -198,7 +155,12 @@ class PregnancyScreen extends StatelessWidget {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  debugPrint("\Mood Edit button pressed\n");
+                                  final homeScreenProvider =
+                                  context.read<HomeScreenProvider>();
+                                  homeScreenProvider.onLog(
+                                    logTo: homeScreenProvider.moodLog,
+                                  );
+                                  Navigator.pushNamed(context, RouteName.addLogScreen);
                                 },
                                 child: Image.asset(
                                   AppImages.editIcon,
@@ -209,22 +171,24 @@ class PregnancyScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-
-                          Align(
-                            alignment: Alignment.centerLeft,
-                            child: Wrap(
-                              spacing: 8.0,
-                              runSpacing: 8.0,
-                              children:
-                                  homeScreenProvider.selectedMoods
-                                      .map(
-                                        (symptom) => BuildLogItem(
-                                          logItem: symptom,
-                                          onSelect:
-                                              homeScreenProvider.onSelectLog,
-                                        ),
-                                      )
-                                      .toList(),
+                      
+                          IgnorePointer(
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Wrap(
+                                spacing: 8.0,
+                                runSpacing: 8.0,
+                                children:
+                                    homeScreenProvider.selectedMoods
+                                        .map(
+                                          (symptom) => BuildLogItem(
+                                            logItem: symptom,
+                                            onSelect:
+                                                homeScreenProvider.onSelectLog,
+                                          ),
+                                        )
+                                        .toList(),
+                              ),
                             ),
                           ),
                         ],
@@ -233,7 +197,9 @@ class PregnancyScreen extends StatelessWidget {
                 },
               ),
 
+
               SectionHeader(title: "Checkup & Vacation"),
+              /// checkup and vacation card list
               CheckupVacationList(),
             ],
           ),
@@ -242,3 +208,4 @@ class PregnancyScreen extends StatelessWidget {
     );
   }
 }
+
