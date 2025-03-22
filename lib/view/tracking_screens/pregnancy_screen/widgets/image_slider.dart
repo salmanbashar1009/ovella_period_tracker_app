@@ -30,6 +30,7 @@ class ImageSlider extends StatelessWidget {
                     return Builder(
                       builder: (BuildContext context) {
                         return Container(
+
                           width: MediaQuery.of(context).size.width,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
@@ -53,44 +54,51 @@ class ImageSlider extends StatelessWidget {
             );
           }
         ),
-        buildPositionedNavigation(
-          position: 45.w,
-          icon: Icons.arrow_back_ios_rounded,
-          onTap: () {
-            carouselController.previousPage();
-          },
+
+        Center(
+          child: SizedBox(
+            height: 200.h,
+            width: MediaQuery.of(context).size.width * 0.58,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                buildPositionedNavigation(
+                  icon: Icons.arrow_back_ios_rounded,
+                  onTap: () {
+                    carouselController.previousPage();
+                  },
+                ),
+                buildPositionedNavigation(
+                  icon: Icons.arrow_forward_ios_rounded,
+                  onTap: () {
+                    carouselController.nextPage();
+                  },
+                ),
+              ],
+            ),
+          ),
         ),
-        buildPositionedNavigation(
-          position: 245.w,
-          icon: Icons.arrow_forward_ios_rounded,
-          onTap: () {
-            carouselController.nextPage();
-          },
-        ),
+
       ],
     );
   }
 
-  Positioned buildPositionedNavigation({
-    required double position,
+  Widget buildPositionedNavigation({
+    // required double position,
     required IconData icon,
-    required onTap,
+    required VoidCallback onTap,
   }) {
-    return Positioned(
-      bottom: 80.h,
-      left: position,
-      child: GestureDetector(
-        onTap: onTap,
-        child: Container(
-          width: 32.w,
-          height: 32.h,
-          decoration: BoxDecoration(
-            color: AppColors.onPrimary,
-            shape: BoxShape.circle,
-            border: Border.all(color: AppColors.textColor.withOpacity(0.12)),
-          ),
-          child: Icon(icon, size: 16.r),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 32.w,
+        height: 32.h,
+        decoration: BoxDecoration(
+          color: AppColors.onPrimary,
+          shape: BoxShape.circle,
+          border: Border.all(color: AppColors.textColor.withOpacity(0.12)),
         ),
+        child: Icon(icon, size: 16.r),
       ),
     );
   }
