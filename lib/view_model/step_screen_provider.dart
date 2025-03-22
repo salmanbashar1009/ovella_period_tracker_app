@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
-import '../view/step_screen/widget/Parts/step1.dart';
-import '../view/step_screen/widget/Parts/step2.dart';
-import '../view/step_screen/widget/Parts/step3.dart';
+import 'package:intl/intl.dart';
+
+import '../view/step_screen/Parts/step1.dart';
+import '../view/step_screen/Parts/step2.dart';
+import '../view/step_screen/Parts/step3.dart';
 
 class StepScreenProvider extends ChangeNotifier {
   ///<----------------Step Page -------->
@@ -35,40 +37,9 @@ class StepScreenProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  // age selection part
-  List<int> allAges = [
-    10,
-    11,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-    20,
-    21,
-    22,
-    23,
-    24,
-    25,
-    26,
-    27,
-    28,
-    29,
-    30,
-    31,
-    32,
-    33,
-    34,
-    35,
-    36,
-    37,
-    38,
-    39,
-    40,
-  ];
+  /// age selection part
+  List<int> allAges = List.generate(31, (i) => i + 10);
+
   int selectedAge = 28;
 
   void ageSelection(int age) {
@@ -76,20 +47,58 @@ class StepScreenProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  //Language selection part
+  ///Language selection part
   String selectedLanguage = 'English';
   List<String> allLanguages = [
-    'Bangle',
-    'English',
-    'Hindi',
-    'Urdu',
+    'Afrikaans',
     'Arabic',
-    'Tamil',
-    'Spanish',
+    'Bengali',
+    'Bulgarian',
+    'Burmese',
+    'Catalan',
+    'Chinese (Mandarin)',
+    'Croatian',
+    'Czech',
+    'Danish',
+    'Dutch',
+    'English',
+    'English(UK)',
+    'Estonian',
+    'Filipino (Tagalog)',
+    'Finnish',
+    'French',
+    'Georgian',
+    'German',
+    'Greek',
     'Gujarati',
+    'Hebrew',
+    'Hindi',
+    'Hungarian',
+    'Icelandic',
+    'Indonesian',
+    'Italian',
+    'Japanese',
+    'Kannada',
   ];
   void languageSelection(String language) {
     selectedLanguage = language;
+    notifyListeners();
+  }
+
+  //Language searching
+  TextEditingController languageSearchController = TextEditingController();
+  String languageSearchQuery = "";
+
+  void searchingLanguage(String value){
+    languageSearchQuery = value;
+    notifyListeners();
+  }
+
+  ///Gender selection part
+  String selectedGender = 'Female';
+  List<String> allGender = ['Male', 'Female', 'Other'];
+  void genderSelection(String gender) {
+    selectedGender = gender;
     notifyListeners();
   }
 
@@ -110,18 +119,22 @@ class StepScreenProvider extends ChangeNotifier {
     _isRegularCircle = value;
     notifyListeners();
   }
+
   void toggleIsCurrentlyPregnant(bool value) {
     _isCurrentlyPregnant = value;
     notifyListeners();
   }
+
   void toggleIsExperienceIrregularPeriods(bool value) {
     _isExperienceIrregularPeriods = value;
     notifyListeners();
   }
+
   void toggleIsPeriodOvulationReminders(bool value) {
     _isPeriodOvulationReminders = value;
     notifyListeners();
   }
+
   void toggleIsWhatsAppUpdatesHealthTips(bool value) {
     _isWhatsAppUpdatesHealthTips = value;
     notifyListeners();
@@ -137,16 +150,66 @@ class StepScreenProvider extends ChangeNotifier {
     diagnosedWithFibroids = value;
     notifyListeners();
   }
+
   void updateDiagnosedWithPCOS(String value) {
     diagnosedWithPCOS = value;
     notifyListeners();
   }
+
   void updateHistoryOfEndometriosis(String value) {
     historyOfEndometriosis = value;
     notifyListeners();
   }
+
   void updateFamilyHistoryOfFibroids(String value) {
     familyHistoryOfFibroids = value;
     notifyListeners();
+  }
+
+  ///<------------ Pregnancy & Fertility Tracking-------------->>
+  String areYouActivelyTryingToConceive = '';
+  String haveYouExperiencedPregnancyLoss = '';
+  String doYouHaveHistoryOfHighBloodPressure = '';
+  String haveYouBeenDiagnosedWithFertilityConditions = '';
+
+  void updateAreYouActivelyTryingToConceive(String value) {
+    areYouActivelyTryingToConceive = value;
+    notifyListeners();
+  }
+
+  void updateHaveYouExperiencedPregnancyLoss(String value) {
+    haveYouExperiencedPregnancyLoss = value;
+    notifyListeners();
+  }
+
+  void updateDoYouHaveHistoryOfHighBloodPressure(String value) {
+    doYouHaveHistoryOfHighBloodPressure = value;
+    notifyListeners();
+  }
+
+  void updateHaveYouBeenDiagnosedWithFertilityConditions(String value) {
+    haveYouBeenDiagnosedWithFertilityConditions = value;
+    notifyListeners();
+  }
+
+  ///<------------- length of Cycle & period Date ----------->
+  int selectedCycleLength = 28;
+  DateTime periodStartDate = DateTime.now();
+  DateTime periodEndDate = DateTime.now();
+  List<int> cycleLength = List.generate(35, (i) => i + 14);
+
+  void cycleLengthSelection(int age) {
+    selectedCycleLength = age;
+    notifyListeners();
+  }
+
+  void setPeriodRangeDate(DateTime start, DateTime end) {
+    periodStartDate = start;
+    periodEndDate = end;
+    notifyListeners();
+  }
+
+  String formatDate(DateTime date) {
+    return DateFormat("MMM dd, yyyy").format(date);
   }
 }

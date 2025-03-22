@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ovella_period_tracker_app/view/community_screen/screen/Forum_screen/details_screen/mensrualHealth.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/CategoryCard1.dart';
 import 'package:ovella_period_tracker_app/model/catagoryModel.dart';
 
@@ -9,13 +10,22 @@ class CategoryList extends StatelessWidget {
   double? size;
   double? val;
   double? right;
-   CategoryList({Key? key, required this.categories, this.scrollDirection , this.size, this.val,this.right}) : super(key: key);
+  CategoryList({
+    Key? key,
+    required this.categories,
+    this.scrollDirection,
+    this.size,
+    this.val,
+    this.right,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: size ?? 150, // Adjust height based on your design
+      height: size ?? 250,
       child: ListView.builder(
+        shrinkWrap: true,
+        physics: BouncingScrollPhysics(),
         scrollDirection: scrollDirection ?? Axis.horizontal,
         itemCount: categories.length,
         itemBuilder: (BuildContext context, int index) {
@@ -24,7 +34,18 @@ class CategoryList extends StatelessWidget {
             right: right,
             imagePath: categories[index].imagePath,
             title: categories[index].title,
-            onTap: () {}, // Add your onTap functionality here
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder:
+                      (context) => MenstrualHealth(
+                        categories: categories,
+                        selectedIndex: index,
+                      ),
+                ),
+              );
+            },
           );
         },
       ),

@@ -3,66 +3,62 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/menstrual_fertitily_screen.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/pregnancy_screen.dart';
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 import 'package:provider/provider.dart';
 
-class TrackingScreen extends StatefulWidget {
+class TrackingScreen extends StatelessWidget {
   const TrackingScreen({super.key});
 
-  @override
-  State<TrackingScreen> createState() => _TrackingScreenState();
-}
-
-class _TrackingScreenState extends State<TrackingScreen> {
-  int selectedIndex = 0;
-
+  // int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BackgroundWidget(
-        backgroundImage: "assets/images/community/screen_background.png",
-        child: SafeArea(
-          child: Padding(
-            padding: AppPadding.screenPadding,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Align(
-                  alignment: Alignment.center,
-                  child: Container(
-                    height: 50.h,
-                    margin: EdgeInsets.symmetric(horizontal: 12.w),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(32),
-                      color: AppColors.onSecondary,
-                    ),
-                    padding: const EdgeInsets.all(4),
-                    child: Row(
-                      children: [
-                        _buildSegmentItem(context, 0, "Menstrual & Fertility"),
-                        _buildSegmentItem(context, 1, "Pregnancy"),
-                      ],
+    return
+      BackgroundWidget(
+
+        child: SingleChildScrollView(
+          child: SafeArea(
+            child: Padding(
+              padding: AppPadding.screenHorizontalPadding,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Align(
+                    alignment: Alignment.center,
+                    child: Container(
+                      height: 56.h,
+                      margin: EdgeInsets.symmetric(horizontal: 12.w),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(32.r),
+                        color: AppColors.onSecondary,
+                      ),
+                      padding:  EdgeInsets.all(4.r),
+                      child: Row(
+                        children: [
+                          _buildSegmentItem(context, 0, "Menstrual & Fertility"),
+                          _buildSegmentItem(context, 1, "Pregnancy"),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: 24.h),
-                Expanded(
-                  child: Consumer<TrackingScreenProvider>(
+                  SizedBox(height: 24.h),
+                  Consumer<TrackingScreenProvider>(
                     builder: (context, trackingScreenProvider, child) {
                       // Display different content based on selected tab
-                      return MenstrualFertilityScreen();
+                      return trackingScreenProvider.selectedIndex == 0 ? MenstrualFertilityScreen() : PregnancyScreen();
                     },
                     // Add more content for the selected tab here
                   ),
-                ),
-              ],
+                  SizedBox(height: 50,),
+                ],
+              ),
             ),
           ),
         ),
-      ),
-    );
+      );
+
   }
 
   Widget _buildSegmentItem(BuildContext context, int index, String title) {

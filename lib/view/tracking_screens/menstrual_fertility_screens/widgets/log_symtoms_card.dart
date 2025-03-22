@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 
-class LogSymptomsCard extends StatelessWidget {
+class LogCard extends StatelessWidget {
   final VoidCallback onAddPressed;
+  final String title;
 
-  const LogSymptomsCard({Key? key, required this.onAddPressed})
+  const LogCard({Key? key, required this.onAddPressed, required this.title})
     : super(key: key);
 
   @override
@@ -28,7 +29,7 @@ class LogSymptomsCard extends StatelessWidget {
         children: [
           Expanded(
             child: Text(
-              'Log your Symptoms',
+              title,
               style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                 fontWeight: FontWeight.w500,
                 fontSize: 17.sp,

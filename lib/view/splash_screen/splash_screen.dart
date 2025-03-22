@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-import '../../theme/constant/images.dart';
+import '../../constant/images.dart';
 import '../../view_model/splash_onboarding_view_model_provider.dart';
 
 class SplashScreen extends StatelessWidget {

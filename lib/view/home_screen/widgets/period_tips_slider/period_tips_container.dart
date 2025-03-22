@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/constant/images.dart';
 
 class PeriodTipsContainer extends StatelessWidget{
   const PeriodTipsContainer({super.key});
@@ -25,15 +26,16 @@ class PeriodTipsContainer extends StatelessWidget{
               horizontal: 12.w,
               vertical: 12.h,
             ),
+
             decoration: BoxDecoration(
               color: Color(0xffFFDEE6),
               borderRadius: BorderRadius.circular(16.r),
             ),
-            child: Icon(
-              Icons.ac_unit_outlined,
-              color: Color(0xffB4193B),
-              size: 40.r,
-            ),
+            child: Image.asset(AppImages.fibroids,
+            width: 40.w,
+              height: 43.h,
+              fit: BoxFit.cover,
+            )
           ),
 
           Expanded(
