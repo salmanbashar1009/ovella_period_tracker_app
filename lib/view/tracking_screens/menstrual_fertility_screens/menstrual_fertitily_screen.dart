@@ -39,10 +39,15 @@ class MenstrualFertilityScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              /// calendar month & year header
               const MonthHeader(),
               const SizedBox(height: 20),
+
+              /// calendar week day header
               const WeekdayHeader(),
               const SizedBox(height: 10),
+
+              /// calendar day number grid list
               SizedBox(
                 height: 300.h,
                 width: double.infinity,
@@ -64,6 +69,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
 
         SizedBox(height: 24.h),
 
+        /// Added Note list
         ...List.generate(trackingScreenProvider.notes.length, (index){
           return Container(
             width: double.infinity,
@@ -130,22 +136,32 @@ class MenstrualFertilityScreen extends StatelessWidget {
         }),
 
         SizedBox(height: 8.h),
+
+        // activity tile row
         Row(
           children: [
+            /// period activity tile: can add note, edit period date and remove period date
             activityTile(context: context,bgColor: AppColors.secondary, imagePath: "assets/icons/period.png", title: "Period", onTap:(){showPeriodAlertDialogSheet(context);} ),
             SizedBox(width: 12.w,),
+            /// Fertile activity tile
             activityTile(context: context,bgColor: Color(0xFFF4D1FF), imagePath: "assets/icons/fertile.png", title: "Fertile", onTap:(){showFertileAlertDialogSheet(context);} ),
           ],
         ),
         SizedBox(height: 16.w,),
+
+        // activity tile row
         Row(
           children: [
+            /// Ovulation activity tile
             activityTile(context: context,bgColor: Color(0xFF25C871), imagePath: "assets/icons/ovulation.png", title: "Ovulation", onTap:(){showOvulationAlertDialogSheet(context);} ),
             SizedBox(width: 12.w,),
+            /// Next period activity tile
             activityTile(context: context,bgColor: Color(0xFFFF9CB6), imagePath: "assets/icons/next-period.png", title: "Next Period", onTap:(){showNextPeiodAlertDialogSheet(context);} ),
           ],
         ),
         SizedBox(height: 24.h,),
+
+        /// log your symptoms card
         LogCard(
           onAddPressed: () {
             final homeScreenProvider =
@@ -157,6 +173,8 @@ class MenstrualFertilityScreen extends StatelessWidget {
           },
           title: 'Log your Symptoms',
         ),
+
+        /// Show symptoms list if not empty
         Consumer<HomeScreenProvider>(
           builder: (_, homeScreenProvider, _) {
             return homeScreenProvider.selectedSymptoms.isNotEmpty
@@ -213,6 +231,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
     );
   }
 
+  /// custom activity tile widget
   Widget activityTile(
       {required BuildContext context,required Color bgColor , required String imagePath,required String title,required VoidCallback onTap,}) {
     final screenHeight = MediaQuery.of(context).size.height; // Start with a ScreenUtil-based height
