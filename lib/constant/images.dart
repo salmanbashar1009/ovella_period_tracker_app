@@ -37,7 +37,7 @@ class AppImages {
   static const String aiChatIcon = 'assets/icons/ai-chat-02.png';
   static const String premiumBadge = 'assets/images/setting_screen/premium_badge.png';
   static const String editPencil = 'assets/images/setting_screen/pencil-edit-02.png';
-  static const String coupleImage = 'assets/images/setting_screen/Couple 1.png';
+  static const String coupleImage = 'assets/images/setting_screen/couple.png';
   static const String editIcon = 'assets/icons/edit.png';
 
   ///Pairing Screen

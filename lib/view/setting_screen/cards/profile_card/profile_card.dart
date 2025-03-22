@@ -25,8 +25,8 @@ class ProfileCard extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(60.r),
               image: DecorationImage(
-                image: NetworkImage(
-                  'https://www.shutterstock.com/image-photo/studio-shot-red-haired-young-260nw-793320274.jpg',
+                image: AssetImage(
+                  'assets/images/person/aunty.png',
                 ),
                 fit: BoxFit.cover,
               ),

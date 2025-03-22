@@ -18,7 +18,7 @@ class InvitePartnerCard extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Image.asset(AppImages.coupleImage),
+          Image.asset(AppImages.coupleImage,height: 186.h,width: 142.w,),
           SizedBox(height: 12.h),
           Text(
             'Invite Your Partner To Ovella',
