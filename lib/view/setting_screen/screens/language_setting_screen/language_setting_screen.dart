@@ -11,13 +11,11 @@ import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LanguageSettingScreen extends StatelessWidget {
-  LanguageSettingScreen({super.key});
+  const LanguageSettingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    TextTheme textTheme = Theme
-        .of(context)
-        .textTheme;
+    TextTheme textTheme = Theme.of(context).textTheme;
 
     final appLocalization = AppLocalizations.of(context)!;
     return Scaffold(
@@ -27,123 +25,136 @@ class LanguageSettingScreen extends StatelessWidget {
             padding: AppPadding.screenHorizontalPadding,
             child: Consumer<StepScreenProvider>(
               builder: (_, stepScreenProvider, __) {
-                // Filtered languages based on search query
+                /// Filtered languages based on search query
                 List<Map<String, String>> filteredLanguages =
-                stepScreenProvider.allLanguages
-                    .where(
-                      (lang) =>
-                      lang['name']!.toLowerCase().contains(
-                        stepScreenProvider.languageSearchQuery
-                            .toLowerCase(),
-                      ),
-                )
-                    .toList();
+                    stepScreenProvider.allLanguages
+                        .where(
+                          (lang) => lang['name']!.toLowerCase().contains(
+                            stepScreenProvider.languageSearchQuery
+                                .toLowerCase(),
+                          ),
+                        )
+                        .toList();
 
                 return Column(
-                    children: [
+                  children: [
                     SizedBox(height: 12.h),
-                HeaderWidget(title: appLocalization.language),
-                SizedBox(height: 24.h),
-                TextFormField(
-                controller: stepScreenProvider.languageSearchController,
-                style: textTheme.bodyMedium,
-                decoration: InputDecoration(
-                prefixIcon: Icon(CupertinoIcons.search),
-                hintText: 'Search',
-                suffixIcon:
-                stepScreenProvider.languageSearchQuery.isNotEmpty
-                ? IconButton(
-                icon: Icon(Icons.clear),
-                onPressed: () {
-                stepScreenProvider.languageSearchController
-                    .clear();
-                stepScreenProvider.searchingLanguage("");
-                },
-                )
-                    : null,
-                ),
-                onChanged:
-                (value) =>
-                stepScreenProvider.searchingLanguage(value),
-                ),
-                SizedBox(height: 12.h),
-                Expanded(
-                child:
-                filteredLanguages.isNotEmpty
-                ? ListView.builder(
-                itemCount: filteredLanguages.length,
-                itemBuilder: (BuildContext context, int index) {
+                    HeaderWidget(title: appLocalization.language),
+                    SizedBox(height: 24.h),
+                    TextFormField(
+                      controller: stepScreenProvider.languageSearchController,
+                      style: textTheme.bodyMedium,
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(CupertinoIcons.search),
+                        hintText: 'Search',
+                        suffixIcon:
+                            stepScreenProvider.languageSearchQuery.isNotEmpty
+                                ? IconButton(
+                                  icon: Icon(Icons.clear),
+                                  onPressed: () {
+                                    stepScreenProvider.languageSearchController
+                                        .clear();
+                                    stepScreenProvider.searchingLanguage("");
+                                  },
+                                )
+                                : null,
+                      ),
+                      onChanged:
+                          (value) =>
+                              stepScreenProvider.searchingLanguage(value),
+                    ),
+                    SizedBox(height: 12.h),
+                    Expanded(
+                      child:
+                          filteredLanguages.isNotEmpty
+                              ? ListView.builder(
+                                itemCount: filteredLanguages.length,
+                                itemBuilder: (BuildContext context, int index) {
+                                  final language =
+                                      stepScreenProvider.allLanguages[index];
 
-                final language = stepScreenProvider.allLanguages[index];
+                                  return GestureDetector(
+                                    onTap: () {
+                                      stepScreenProvider.languageSelection(
+                                        filteredLanguages[index],
+                                      ); // Pass full Map
 
-                return GestureDetector(
-                  onTap: ()  {
-                    stepScreenProvider.languageSelection(filteredLanguages[index]); // Pass full Map
+                                      try {
+                                        final localProvider =
+                                            Provider.of<LocalProvider>(
+                                              context,
+                                              listen: false,
+                                            );
+                                        final selectedLocaleCode =
+                                            filteredLanguages[index]['code']!;
 
-                    try {
-                      final localProvider = Provider.of<LocalProvider>(context, listen: false);
-                      final selectedLocaleCode = filteredLanguages[index]['code']!;
-
-
-
-                      if (localProvider.locale?.languageCode != selectedLocaleCode) {
-                        // await localProvider.setLocale(Locale(selectedLocaleCode));
-                        localProvider.setLocale(Locale(selectedLocaleCode));
-                        debugPrint("Language changed to: $selectedLocaleCode");
-                      } else {
-                        debugPrint("Selected language is already active.");
-                      }
-                    } catch (e) {
-                      debugPrint("Error changing language: $e");
-                    }
-                  }
-                  ,
-                  child: Container(
-                padding: EdgeInsets.symmetric(
-                horizontal: 14.w,
-                vertical: 14.h,
-                ),
-                decoration: BoxDecoration(
-                color:
-                filteredLanguages[index]['name'] ==
-                stepScreenProvider
-                    .selectedLanguage['name']
-                ? AppColors.onPrimary
-                    : Colors.transparent,
-                borderRadius: BorderRadius.circular(
-                16.r,
-                ),
-                ),
-                child: Text(
-                filteredLanguages[index]['name']!,
-                style: textTheme.bodyLarge!.copyWith(
-                fontWeight:
-                filteredLanguages[index] ==
-                stepScreenProvider
-                    .selectedLanguage
-                ? FontWeight.w500
-                    : FontWeight.normal,
-                ),
-                ),
-                ),
+                                        if (localProvider
+                                                .locale
+                                                ?.languageCode !=
+                                            selectedLocaleCode) {
+                                          // await localProvider.setLocale(Locale(selectedLocaleCode));
+                                          localProvider.setLocale(
+                                            Locale(selectedLocaleCode),
+                                          );
+                                          debugPrint(
+                                            "Language changed to: $selectedLocaleCode",
+                                          );
+                                        } else {
+                                          debugPrint(
+                                            "Selected language is already active.",
+                                          );
+                                        }
+                                      } catch (e) {
+                                        debugPrint(
+                                          "Error changing language: $e",
+                                        );
+                                      }
+                                    },
+                                    child: Container(
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal: 14.w,
+                                        vertical: 14.h,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color:
+                                            filteredLanguages[index]['name'] ==
+                                                    stepScreenProvider
+                                                        .selectedLanguage['name']
+                                                ? AppColors.onPrimary
+                                                : Colors.transparent,
+                                        borderRadius: BorderRadius.circular(
+                                          16.r,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        filteredLanguages[index]['name']!,
+                                        style: textTheme.bodyLarge!.copyWith(
+                                          fontWeight:
+                                              filteredLanguages[index] ==
+                                                      stepScreenProvider
+                                                          .selectedLanguage
+                                                  ? FontWeight.w500
+                                                  : FontWeight.normal,
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                },
+                              )
+                              : Center(
+                                child: Text(
+                                  "No languages found",
+                                  style: textTheme.bodyMedium,
+                                ),
+                              ),
+                    ),
+                  ],
                 );
               },
-            )
-                : Center(
-            child: Text(
-            "No languages found",
-            style: textTheme.bodyMedium,
+            ),
           ),
         ),
       ),
-      ],
     );
   }
-
-  ,
-  ),
-  ),
-  ),
-  ),
-  );
-}}
+}
