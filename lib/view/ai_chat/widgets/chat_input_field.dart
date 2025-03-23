@@ -13,6 +13,10 @@ class ChatInputField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final deviceHeight = MediaQuery.of(context).size.height;
+    debugPrint("\ndevice height : $deviceHeight\n");
+
     return Consumer<ChatScreenProvider>(
       builder: (_, chatProvider, _) {
         return KeyboardVisibilityBuilder(
@@ -20,7 +24,7 @@ class ChatInputField extends StatelessWidget {
             return Positioned(
               left: 0,
               right: 0,
-              bottom: isOpenKeyBoard ? 10.h : 150.h,
+              bottom: isOpenKeyBoard ? 10 : deviceHeight < 660 ? 140 :  150,
               child: Row(
                 children: [
                   Expanded(
@@ -32,7 +36,7 @@ class ChatInputField extends StatelessWidget {
                       decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.grey.withOpacity(0.2),
+                            color: Colors.grey.withOpacity(0.1),
                             offset: Offset(0, 8),
                             blurRadius: 7.r,
                             spreadRadius: 7.r,
@@ -93,7 +97,7 @@ class ChatInputField extends StatelessWidget {
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.grey.withOpacity(0.2),
+                            color: Colors.grey.withOpacity(0.1),
                             offset: Offset(0, 8),
                             blurRadius: 7.r,
                             spreadRadius: 7.r,
