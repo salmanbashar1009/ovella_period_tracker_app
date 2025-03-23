@@ -35,8 +35,7 @@ class _EditYearPickerState extends State<EditYearPicker> {
       perspective: 0.005,
       diameterRatio: 1.5,
       overAndUnderCenterOpacity: 0.5,
-      physics: const FixedExtentScrollPhysics(),
-      clipBehavior: Clip.antiAlias,
+      physics: FixedExtentScrollPhysics(),
       onSelectedItemChanged: (index) {
         trackingScreenProvider.setYear(1951 + index); // Start from year 2000
       },
