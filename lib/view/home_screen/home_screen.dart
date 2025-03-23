@@ -190,7 +190,7 @@ class HomeScreen extends StatelessWidget{
                 SizedBox(height: 16.h,),
 
                 SizedBox(
-                  height: deviceHeight < 660 ? 280 : 325,
+                  height: deviceHeight < 660 ? 380.h : 325.h,
                   child: WellnessTipsList(),
                 ),
 
