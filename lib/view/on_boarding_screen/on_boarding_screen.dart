@@ -3,8 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
 import 'package:ovella_period_tracker_app/view/on_boarding_screen/widgets/on_boarding_points.dart';
-import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
-
 import '../../constant/images.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -12,7 +10,6 @@ class OnBoardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     TextTheme textTheme = Theme.of(context).textTheme;
     ColorScheme colorScheme = Theme.of(context).colorScheme;
@@ -20,6 +17,7 @@ class OnBoardingScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Stack(
           children: [
+            ///<------- Background Cover -------->
             SizedBox(
               height: ScreenUtil().screenHeight,
               width: ScreenUtil().screenWidth,
@@ -29,7 +27,6 @@ class OnBoardingScreen extends StatelessWidget {
               bottom: 0,
               left: 0,
               child: Container(
-
                 width: width,
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 decoration: BoxDecoration(
@@ -41,6 +38,9 @@ class OnBoardingScreen extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
+
+                    /// <-------- onboarding point ----------->
+
                     Text(
                       "Your Cycle, Your Fertility, Your Way",
                       style: textTheme.headlineMedium!.copyWith(
@@ -64,7 +64,10 @@ class OnBoardingScreen extends StatelessWidget {
                     OnBoardingPoints(
                       pointTitle: 'Accessible & Affordable Reproductive Care',
                     ),
-                    SizedBox(height: 24),
+                    SizedBox(height: 24.h),
+
+                    ///<-------- get start button ------------->
+
                     SizedBox(
                       width: double.infinity,
                       child: Utils.primaryButton(
@@ -76,7 +79,8 @@ class OnBoardingScreen extends StatelessWidget {
                         },
                       ),
                     ),
-        
+
+                    ///< -------- Login Option --------->
                     SizedBox(height: 12.h),
                     GestureDetector(
                       onTap: ()=>Navigator.pushNamed(context, RouteName.loginScreen),
@@ -87,7 +91,7 @@ class OnBoardingScreen extends StatelessWidget {
                               text: 'Already have an account? ',
                               style: TextStyle(
                                 // Ensure text is visible
-                                fontSize: 16,
+                                fontSize: 16.sp,
                                 color:
                                     Colors.black, // Change color based on theme
                               ),
@@ -96,7 +100,7 @@ class OnBoardingScreen extends StatelessWidget {
                               text: 'Login here',
                               style: TextStyle(
                                 // Ensure text is visible
-                                fontSize: 16,
+                                fontSize: 16.sp,
                                 color:
                                     colorScheme
                                         .secondary, // Change color based on theme
@@ -106,6 +110,7 @@ class OnBoardingScreen extends StatelessWidget {
                         ),
                       ),
                     ),
+                    SizedBox(height: 35.h,)
                   ],
                 ),
               ),

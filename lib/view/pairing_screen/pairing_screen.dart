@@ -25,10 +25,15 @@ class PairingScreen extends StatelessWidget {
                 SizedBox(height: 12.h),
                 Utils.backButton(context),
                 SizedBox(height: 16.h),
+                /// < ------ invitation sent card ------------->
                 InvitationSentCard(),
                 SizedBox(height: 16.h),
+
+                /// <------- Generating pairing card & send Pairing Code Button ----------->
                 PairingCodeCard(),
                 SizedBox(height: 12.h),
+
+                /// <---------- Cancel invitation button--------->
                 SizedBox(
                   width: double.infinity,
                   child: Utils.primaryButton(
@@ -40,7 +45,7 @@ class PairingScreen extends StatelessWidget {
                     textStyle: textTheme.bodyLarge!.copyWith(
                       fontWeight: FontWeight.w500,
                     ),
-                    borderColor: Color(0xff1E1E1E1F).withOpacity(0.12),
+                    borderColor: Color(0xff1e1e1e1f).withOpacity(0.12),
                   ),
                 ),
               ],
