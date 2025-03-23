@@ -11,7 +11,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LanguageSettingScreen extends StatelessWidget {
-  LanguageSettingScreen({super.key});
+  const LanguageSettingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class LanguageSettingScreen extends StatelessWidget {
             padding: AppPadding.screenHorizontalPadding,
             child: Consumer<StepScreenProvider>(
               builder: (_, stepScreenProvider, __) {
-                // Filtered languages based on search query
+                /// Filtered languages based on search query
                 List<Map<String, String>> filteredLanguages =
                     stepScreenProvider.allLanguages
                         .where(
@@ -70,7 +70,8 @@ class LanguageSettingScreen extends StatelessWidget {
                               ? ListView.builder(
                                 itemCount: filteredLanguages.length,
                                 itemBuilder: (BuildContext context, int index) {
-                                  // final language = stepScreenProvider.allLanguages[index];
+                                  final language =
+                                      stepScreenProvider.allLanguages[index];
 
                                   return GestureDetector(
                                     onTap: () {
@@ -108,7 +109,6 @@ class LanguageSettingScreen extends StatelessWidget {
                                           "Error changing language: $e",
                                         );
                                       }
-                                      Navigator.pop(context);
                                     },
                                     child: Container(
                                       padding: EdgeInsets.symmetric(

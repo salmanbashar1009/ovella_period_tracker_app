@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/view_model/create_account_provider.dart';
+import 'package:ovella_period_tracker_app/view_model/otp_provider.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../utility/utils.dart';
@@ -88,8 +90,14 @@ class CreateAccountEmailForm extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 32.w, vertical: 18.h),
                   onTap: () {
                     if(formKey.currentState!.validate()){
-                      createAccountProvider.changeIsExpand(false);
-                      createAccountProvider.updatePage(1);
+                      /*createAccountProvider.changeIsExpand(false);
+                      createAccountProvider.updatePage(1);*/
+                      final otpProvider = Provider.of<OtpProvider>(
+                        context,
+                        listen: false,
+                      );
+                      otpProvider.updatePreviousRoute("SignUp");
+                      Navigator.pushNamed(context, RouteName.otpScreen);
                     }else{
                       createAccountProvider.changeIsExpand(true);
                     }
