@@ -17,6 +17,7 @@ class AppImages {
 
   /// Home screen image
   static const String fibroids = 'assets/images/home_screen/fibroids.png';
+  static const String wellnessWoman = 'assets/images/home_screen/wellness-woman.png';
 
   /// ai chat
   static const String gptProfilePicture = "assets/images/ai_chat/gpt_pp.png";
@@ -24,6 +25,7 @@ class AppImages {
 
   /// Icons path
   static const String homeIcon = 'assets/icons/home.png';
+  static const String loveIcon = 'assets/icons/love.png';
   static const String arrowBackIcon = 'assets/icons/arrow_back.png';
   static const String copyIcon = 'assets/icons/copy.png';
   static const String replyIcon = 'assets/icons/reply.png';

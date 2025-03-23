@@ -13,28 +13,28 @@ class AddLogScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BackgroundWidget(
-      child: Column(
-        children: [
-          Padding(
-            padding: AppPadding.screenPadding,
-            child: AppBar(
-              elevation: 0,
-              surfaceTintColor: Colors.transparent,
-              leading: Utils.backButton(context),
-              title: Consumer<HomeScreenProvider>(
-                builder: (_, homeScreenProvider, child) {
-                  return Text(
-                    "Log your ${homeScreenProvider.logTo}",
-                    style: Theme.of(context).textTheme.headlineSmall,
-                  );
-                },
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: AppPadding.screenHorizontalPadding,
+              child: AppBar(
+                elevation: 0,
+                surfaceTintColor: Colors.transparent,
+                leading: Utils.backButton(context),
+                title: Consumer<HomeScreenProvider>(
+                  builder: (_, homeScreenProvider, child) {
+                    return Text(
+                      "Log your ${homeScreenProvider.logTo}",
+                      style: Theme.of(context).textTheme.headlineSmall,
+                    );
+                  },
+                ),
+                centerTitle: true,
               ),
-              centerTitle: true,
             ),
-          ),
-          Padding(
-            padding: AppPadding.screenHorizontalPadding,
-            child: SingleChildScrollView(
+            Padding(
+              padding: AppPadding.screenPadding,
               child: Column(
                 children: [
                   Container(
@@ -105,11 +105,12 @@ class AddLogScreen extends StatelessWidget {
                       padding: EdgeInsets.symmetric(vertical: 18.h),
                     ),
                   ),
+                  SizedBox(height: 16.h),
                 ],
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
