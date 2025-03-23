@@ -76,8 +76,6 @@ class HomeScreen extends StatelessWidget{
                             ],
                           ),
 
-
-
                           Consumer<HomeScreenProvider>(
                             builder: (_, homeScreenProvider, _){
                               return homeScreenProvider.selectedSymptoms.isNotEmpty ?

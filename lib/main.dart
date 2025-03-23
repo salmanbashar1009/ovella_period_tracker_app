@@ -95,6 +95,7 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
 
           final localProvider = Provider.of<LocalizationProvider>(context);
+          debugPrint("\nlocalization : ${localProvider.locale!.languageCode}\n");
           return MaterialApp(
             supportedLocales: L10n.all,
             locale: localProvider.locale,

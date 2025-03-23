@@ -35,29 +35,30 @@ class LocalizationProvider with ChangeNotifier {
     if (langCode != null) {
       _locale = L10n.all.firstWhere(
         (loc) => loc.languageCode == langCode,
-        orElse: () => Locale('ar'),
+        orElse: () => Locale('en'),
       );
     }
   }
 
-  void onTapChangeLanguage(String languageCode){
+  Future<void> onTapChangeLanguage(String languageCode) async {
     try {
 
       if (_locale?.languageCode != languageCode) {
-        setLocale(Locale(languageCode));
+       await setLocale(Locale(languageCode));
 
         debugPrint(
-          "Language changed to: $languageCode",
+          "\nLanguage changed to: $languageCode\n",
         );
 
       } else {
         debugPrint(
-          "Selected language is already active.",
+          "\nSelected language is already active.\n",
         );
       }
+      notifyListeners();
     } catch (e) {
       debugPrint(
-        "Error changing language: $e",
+        "\nError changing language: $e\n",
       );
     }
   }

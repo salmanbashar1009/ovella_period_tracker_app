@@ -74,12 +74,12 @@ class LanguageSettingScreen extends StatelessWidget {
                                       stepScreenProvider.allLanguages[index];
 
                                   return GestureDetector(
-                                    onTap: () {
+                                    onTap: () async {
                                       stepScreenProvider.languageSelection(
                                         filteredLanguages[index],
                                       ); // Pass full Map
 
-                                      Provider.of<LocalizationProvider>(context,listen: false).onTapChangeLanguage(filteredLanguages[index]['code']!);
+                                     await context.read<LocalizationProvider>().onTapChangeLanguage(filteredLanguages[index]['code']!);
 
                                     },
                                     child: Container(
