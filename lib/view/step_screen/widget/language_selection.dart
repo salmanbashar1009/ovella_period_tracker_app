@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/view_model/localization_provider.dart';
+import 'package:provider/provider.dart';
 
 import '../../../theme/theme/theme_extensions/color_palette.dart';
 import '../../../utility/utils.dart';
@@ -20,6 +22,8 @@ class LanguageSelection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -84,6 +88,7 @@ class LanguageSelection extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 32.w,vertical: 18.h),
             onTap: () {
               stepScreenProvider.updatePage(stepScreenProvider.currentIndex + 1);
+              Provider.of<LocalizationProvider>(context).setLocale(Locale(stepScreenProvider.selectedLanguage['code']!));
             },
           ),
         ),
