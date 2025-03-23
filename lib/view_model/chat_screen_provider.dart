@@ -85,11 +85,11 @@ class ChatScreenProvider with ChangeNotifier {
     }
     else if(command.isEmpty){
       chat.chat?.add(Chat(command: "",
-          reply: "ওই কিরে, ওই কিরে, মধু মধু, রসোমালাই।"));
+          reply: "Hi, Good Morning"));
     }
     else{
       chat.chat?.add(Chat(command: chatController.text,
-          reply: "কি বলছেন ভাই জানি না, রোজা রাখছি, ক্লান্ত এখন।"));
+          reply: "Hi,Good morning, how can I help you?"));
     }
 
     // if(command.toLowerCase() == DemoChat.command1.toLowerCase()){

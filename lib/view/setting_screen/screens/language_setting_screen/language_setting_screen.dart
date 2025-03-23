@@ -4,9 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/view/setting_screen/screens/header_widget/header_widget.dart';
+import 'package:ovella_period_tracker_app/view_model/localization_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/step_screen_provider.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LanguageSettingScreen extends StatelessWidget {
   const LanguageSettingScreen({super.key});
@@ -14,6 +16,8 @@ class LanguageSettingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
+
+    final appLocalization = AppLocalizations.of(context)!;
     return Scaffold(
       body: BackgroundWidget(
         child: SafeArea(
@@ -22,10 +26,10 @@ class LanguageSettingScreen extends StatelessWidget {
             child: Consumer<StepScreenProvider>(
               builder: (_, stepScreenProvider, __) {
                 /// Filtered languages based on search query
-                List<String> filteredLanguages =
+                List<Map<String, String>> filteredLanguages =
                     stepScreenProvider.allLanguages
                         .where(
-                          (lang) => lang.toLowerCase().contains(
+                          (lang) => lang['name']!.toLowerCase().contains(
                             stepScreenProvider.languageSearchQuery
                                 .toLowerCase(),
                           ),
@@ -35,9 +39,8 @@ class LanguageSettingScreen extends StatelessWidget {
                 return Column(
                   children: [
                     SizedBox(height: 12.h),
-                    HeaderWidget(title: 'App Language'),
+                    HeaderWidget(title: appLocalization.language),
                     SizedBox(height: 24.h),
-                    ///Search Field
                     TextFormField(
                       controller: stepScreenProvider.languageSearchController,
                       style: textTheme.bodyMedium,
@@ -61,19 +64,51 @@ class LanguageSettingScreen extends StatelessWidget {
                               stepScreenProvider.searchingLanguage(value),
                     ),
                     SizedBox(height: 12.h),
-
-                    ///Showing all Languages
                     Expanded(
                       child:
                           filteredLanguages.isNotEmpty
                               ? ListView.builder(
                                 itemCount: filteredLanguages.length,
                                 itemBuilder: (BuildContext context, int index) {
+                                  final language =
+                                      stepScreenProvider.allLanguages[index];
+
                                   return GestureDetector(
                                     onTap: () {
                                       stepScreenProvider.languageSelection(
                                         filteredLanguages[index],
-                                      );
+                                      ); // Pass full Map
+
+                                      try {
+                                        final localProvider =
+                                            Provider.of<LocalProvider>(
+                                              context,
+                                              listen: false,
+                                            );
+                                        final selectedLocaleCode =
+                                            filteredLanguages[index]['code']!;
+
+                                        if (localProvider
+                                                .locale
+                                                ?.languageCode !=
+                                            selectedLocaleCode) {
+                                          // await localProvider.setLocale(Locale(selectedLocaleCode));
+                                          localProvider.setLocale(
+                                            Locale(selectedLocaleCode),
+                                          );
+                                          debugPrint(
+                                            "Language changed to: $selectedLocaleCode",
+                                          );
+                                        } else {
+                                          debugPrint(
+                                            "Selected language is already active.",
+                                          );
+                                        }
+                                      } catch (e) {
+                                        debugPrint(
+                                          "Error changing language: $e",
+                                        );
+                                      }
                                     },
                                     child: Container(
                                       padding: EdgeInsets.symmetric(
@@ -82,9 +117,9 @@ class LanguageSettingScreen extends StatelessWidget {
                                       ),
                                       decoration: BoxDecoration(
                                         color:
-                                            filteredLanguages[index] ==
+                                            filteredLanguages[index]['name'] ==
                                                     stepScreenProvider
-                                                        .selectedLanguage
+                                                        .selectedLanguage['name']
                                                 ? AppColors.onPrimary
                                                 : Colors.transparent,
                                         borderRadius: BorderRadius.circular(
@@ -92,7 +127,7 @@ class LanguageSettingScreen extends StatelessWidget {
                                         ),
                                       ),
                                       child: Text(
-                                        filteredLanguages[index],
+                                        filteredLanguages[index]['name']!,
                                         style: textTheme.bodyLarge!.copyWith(
                                           fontWeight:
                                               filteredLanguages[index] ==

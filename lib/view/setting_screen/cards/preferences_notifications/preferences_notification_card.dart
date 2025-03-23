@@ -64,7 +64,7 @@ class PreferencesNotificationCard extends StatelessWidget {
                       Text('Language', style: textTheme.bodyMedium),
                       Row(
                         children: [
-                          Text(stepScreenProvider.selectedLanguage??'English', style: textTheme.bodyMedium),
+                          Text(stepScreenProvider.selectedLanguage['name'] ?? 'English', style: textTheme.bodyMedium),
                           SizedBox(width: 8.w),
                           Icon(Icons.keyboard_arrow_right_outlined),
                         ],

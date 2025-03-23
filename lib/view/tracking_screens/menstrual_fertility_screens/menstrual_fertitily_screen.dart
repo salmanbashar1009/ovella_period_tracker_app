@@ -18,6 +18,8 @@ import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertil
 import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 
 class MenstrualFertilityScreen extends StatelessWidget {
@@ -26,6 +28,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final trackingScreenProvider = Provider.of<TrackingScreenProvider>(context,listen: false);
+    final appLocalization = AppLocalizations.of(context)!;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -87,7 +90,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Note",
+                      appLocalization.note,
                       style: Theme.of(
                         context,
                       ).textTheme.bodyMedium?.copyWith(fontSize: 17.sp),
@@ -141,10 +144,10 @@ class MenstrualFertilityScreen extends StatelessWidget {
         Row(
           children: [
             /// period activity tile: can add note, edit period date and remove period date
-            activityTile(context: context,bgColor: AppColors.secondary, imagePath: "assets/icons/period.png", title: "Period", onTap:(){showPeriodAlertDialogSheet(context);} ),
+            activityTile(context: context,bgColor: AppColors.secondary, imagePath: "assets/icons/period.png", title: AppLocalizations.of(context)!.period, onTap:(){showPeriodAlertDialogSheet(context);} ),
             SizedBox(width: 12.w,),
             /// Fertile activity tile
-            activityTile(context: context,bgColor: Color(0xFFF4D1FF), imagePath: "assets/icons/fertile.png", title: "Fertile", onTap:(){showFertileAlertDialogSheet(context);} ),
+            activityTile(context: context,bgColor: Color(0xFFF4D1FF), imagePath: "assets/icons/fertile.png", title: appLocalization.fertile, onTap:(){showFertileAlertDialogSheet(context);} ),
           ],
         ),
         SizedBox(height: 16.w,),
@@ -153,10 +156,10 @@ class MenstrualFertilityScreen extends StatelessWidget {
         Row(
           children: [
             /// Ovulation activity tile
-            activityTile(context: context,bgColor: Color(0xFF25C871), imagePath: "assets/icons/ovulation.png", title: "Ovulation", onTap:(){showOvulationAlertDialogSheet(context);} ),
+            activityTile(context: context,bgColor: Color(0xFF25C871), imagePath: "assets/icons/ovulation.png", title: appLocalization.ovulation, onTap:(){showOvulationAlertDialogSheet(context);} ),
             SizedBox(width: 12.w,),
             /// Next period activity tile
-            activityTile(context: context,bgColor: Color(0xFFFF9CB6), imagePath: "assets/icons/next-period.png", title: "Next Period", onTap:(){showNextPeiodAlertDialogSheet(context);} ),
+            activityTile(context: context,bgColor: Color(0xFFFF9CB6), imagePath: "assets/icons/next-period.png", title: appLocalization.nextperiod, onTap:(){showNextPeiodAlertDialogSheet(context);} ),
           ],
         ),
         SizedBox(height: 24.h,),
@@ -240,19 +243,22 @@ class MenstrualFertilityScreen extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.only(left:12.r,bottom: 12.h,top: 12.h),//top: 12.r),
+        padding: EdgeInsets.only(left: 12.w,bottom: 12.h,top: 12.h),
+
         width: 175.w,
-        height: responsiveHeight,
+        height: responsiveHeight - 12,
         decoration:BoxDecoration (
         color: bgColor,
           borderRadius: BorderRadius.circular(24.r),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               padding: EdgeInsets.all(10.r),
-              width: responsiveHeight - 30,
-              height: responsiveHeight - 30,
+              width: 44.w,
+              height: 44.h,
               decoration: BoxDecoration(
                 color: AppColors.onPrimary,
                 shape: BoxShape.circle,
