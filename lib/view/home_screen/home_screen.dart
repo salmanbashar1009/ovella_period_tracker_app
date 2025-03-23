@@ -26,174 +26,177 @@ class HomeScreen extends StatelessWidget{
       child: SingleChildScrollView(
         controller: context.read<HomeScreenProvider>().homeScreenScrollController,
         child: SafeArea(
-            child: Padding(
-              padding: AppPadding.screenHorizontalPadding,
-              child: Column(
-                children: [
-
-                  /// App Bar
-                  Header(),
-
-                  Column(
+            child: Column(
+              children: [
+                Padding(
+                  padding: AppPadding.screenHorizontalPadding,
+                  child: Column(
                     children: [
 
-                      SizedBox(height: 10.h,),
+                      /// App Bar
+                      Header(),
 
-                      /// Page view tips with dot indicator
-                      PeriodTips(),
-
-                      /// Period date count Container
-                      PeriodDateContainer(),
-
-                      SizedBox(height: 16.h,),
-
-                      /// Log your symptoms / mood Row
-                      Row(
+                      Column(
                         children: [
-                          Expanded(
-                            child: LogWidget(
-                              text: "Log your\nSymptoms",
-                              onAdd: (){
-                                final homeScreenProvider =  context.read<HomeScreenProvider>();
-                                homeScreenProvider.onLog(logTo: homeScreenProvider.symptomsLog);
-                              Navigator.pushNamed(context, RouteName.addLogScreen);
-                                },
-                            ),
-                          ),
-                          SizedBox(width: 10.w,),
-                          Expanded(
-                            child: LogWidget(
-                              text: "Log your\nMood",
-                              onAdd: (){
-                                final homeScreenProvider =  context.read<HomeScreenProvider>();
-                              homeScreenProvider.onLog(logTo: homeScreenProvider.moodLog);
-                                Navigator.pushNamed(context, RouteName.addLogScreen);
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
 
+                          SizedBox(height: 10.h,),
 
+                          /// Page view tips with dot indicator
+                          PeriodTips(),
 
-                      Consumer<HomeScreenProvider>(
-                        builder: (_, homeScreenProvider, _){
-                          return homeScreenProvider.selectedSymptoms.isNotEmpty ?
-                          Column(
-                            spacing: 12.h,
+                          /// Period date count Container
+                          PeriodDateContainer(),
+
+                          SizedBox(height: 16.h,),
+
+                          /// Log your symptoms / mood Row
+                          Row(
                             children: [
-                              SizedBox(height: 16.h,),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text("Symptoms",
-                                  style: Theme.of(context).textTheme.headlineSmall,),
-                                  GestureDetector(
-                                      onTap:(){
-                                        debugPrint("\nSymptoms Edit button pressed\n");
-                                      },
-                                      child: Image.asset(AppImages.editIcon,
-                                      width: 24.w,
-                                        height: 24.h,
-                                        fit: BoxFit.cover,
-                                      ),)
-                                ],
-                              ),
-                              Align(
-                                alignment:Alignment.centerLeft,
-                                child: Wrap(
-                                  spacing: 8.0,
-                                  runSpacing: 8.0,
-                                  children:
-
-                                  homeScreenProvider.selectedSymptoms.map(
-                                        (symptom) =>
-                                        BuildLogItem(
-                                          logItem: symptom,
-                                          onSelect: homeScreenProvider.onSelectLog,),).toList(),
-                                ),
-                              ),
-                            ],
-                          ):SizedBox();
-                        },
-                      ),
-
-
-
-                      Consumer<HomeScreenProvider>(
-                        builder: (_, homeScreenProvider, _){
-                          return homeScreenProvider.selectedMoods.isNotEmpty ?
-                          Column(
-                            spacing: 12.h,
-                            children: [
-                              SizedBox(height: 16.h,),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text("Mood",
-                                    style: Theme.of(context).textTheme.headlineSmall,),
-                                  GestureDetector(
-                                    onTap:(){
-                                      debugPrint("\Mood Edit button pressed\n");
+                              Expanded(
+                                child: LogWidget(
+                                  text: "Log your\nSymptoms",
+                                  onAdd: (){
+                                    final homeScreenProvider =  context.read<HomeScreenProvider>();
+                                    homeScreenProvider.onLog(logTo: homeScreenProvider.symptomsLog);
+                                  Navigator.pushNamed(context, RouteName.addLogScreen);
                                     },
-                                    child: Image.asset(AppImages.editIcon,
-                                      width: 24.w,
-                                      height: 24.h,
-                                      fit: BoxFit.cover,
-                                    ),)
-                                ],
+                                ),
                               ),
-
-                              Align(
-                                alignment:Alignment.centerLeft,
-                                child: Wrap(
-                                  spacing: 8.0,
-                                  runSpacing: 8.0,
-                                  children:
-
-                                  homeScreenProvider.selectedMoods.map(
-                                        (symptom) =>
-                                        BuildLogItem(
-                                          logItem: symptom,
-                                          onSelect: homeScreenProvider.onSelectLog,),).toList(),
+                              SizedBox(width: 10.w,),
+                              Expanded(
+                                child: LogWidget(
+                                  text: "Log your\nMood",
+                                  onAdd: (){
+                                    final homeScreenProvider =  context.read<HomeScreenProvider>();
+                                  homeScreenProvider.onLog(logTo: homeScreenProvider.moodLog);
+                                    Navigator.pushNamed(context, RouteName.addLogScreen);
+                                  },
                                 ),
                               ),
                             ],
-                          ):SizedBox();
-                        },
-                      ),
+                          ),
 
-                      SizedBox(height: 16.h,),
+                          Consumer<HomeScreenProvider>(
+                            builder: (_, homeScreenProvider, _){
+                              return homeScreenProvider.selectedSymptoms.isNotEmpty ?
+                              Column(
+                                spacing: 12.h,
+                                children: [
+                                  SizedBox(height: 16.h,),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text("Symptoms",
+                                      style: Theme.of(context).textTheme.headlineSmall,),
+                                      GestureDetector(
+                                          onTap:(){
+                                            debugPrint("\nSymptoms Edit button pressed\n");
+                                          },
+                                          child: Image.asset(AppImages.editIcon,
+                                          width: 24.w,
+                                            height: 24.h,
+                                            fit: BoxFit.cover,
+                                          ),)
+                                    ],
+                                  ),
+                                  Align(
+                                    alignment:Alignment.centerLeft,
+                                    child: Wrap(
+                                      spacing: 8.0,
+                                      runSpacing: 8.0,
+                                      children:
 
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text("Tailored Wellness\njourney",
-                          style: Theme.of(context).textTheme.headlineLarge,),
+                                      homeScreenProvider.selectedSymptoms.map(
+                                            (symptom) =>
+                                            BuildLogItem(
+                                              logItem: symptom,
+                                              onSelect: homeScreenProvider.onSelectLog,),).toList(),
+                                    ),
+                                  ),
+                                ],
+                              ):SizedBox();
+                            },
+                          ),
 
-                          Text("See all",
-                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                              color: AppColors.lightTextColor
-                            ),),
+
+
+                          Consumer<HomeScreenProvider>(
+                            builder: (_, homeScreenProvider, _){
+                              return homeScreenProvider.selectedMoods.isNotEmpty ?
+                              Column(
+                                spacing: 12.h,
+                                children: [
+                                  SizedBox(height: 16.h,),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text("Mood",
+                                        style: Theme.of(context).textTheme.headlineSmall,),
+                                      GestureDetector(
+                                        onTap:(){
+                                          debugPrint("\Mood Edit button pressed\n");
+                                        },
+                                        child: Image.asset(AppImages.editIcon,
+                                          width: 24.w,
+                                          height: 24.h,
+                                          fit: BoxFit.cover,
+                                        ),)
+                                    ],
+                                  ),
+
+                                  Align(
+                                    alignment:Alignment.centerLeft,
+                                    child: Wrap(
+                                      spacing: 8.0,
+                                      runSpacing: 8.0,
+                                      children:
+
+                                      homeScreenProvider.selectedMoods.map(
+                                            (symptom) =>
+                                            BuildLogItem(
+                                              logItem: symptom,
+                                              onSelect: homeScreenProvider.onSelectLog,),).toList(),
+                                    ),
+                                  ),
+                                ],
+                              ):SizedBox();
+                            },
+                          ),
+
+                          SizedBox(height: 16.h,),
+
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("Tailored Wellness\njourney",
+                              style: Theme.of(context).textTheme.headlineLarge,),
+
+                              Text("See all",
+                                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                  color: AppColors.lightTextColor
+                                ),),
+                            ],
+                          ),
+
+
                         ],
                       ),
-
-                      SizedBox(height: 16.h,),
-
-                      SizedBox(
-                          height: deviceHeight < 660 ? 280 : 325,
-                          child: WellnessTipsList(),
-                      ),
-
-                      SizedBox(
-                        height: 80.h,
-
-                      ),
-
                     ],
                   ),
-                ],
-              ),
+                ),
+
+                SizedBox(height: 16.h,),
+
+                SizedBox(
+                  height: deviceHeight < 660 ? 380.h : 325.h,
+                  child: WellnessTipsList(),
+                ),
+
+                SizedBox(
+                  height: 80.h,
+
+                ),
+              ],
             ),
         ),
       ),

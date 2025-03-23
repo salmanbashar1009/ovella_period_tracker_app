@@ -17,13 +17,13 @@ class WellnessTipsList extends StatelessWidget{
         return Container(
           width: 271.w,
           padding: EdgeInsets.only(left: 8.w,right: 8.w,top: 8.h,bottom: 8.h),
-          margin: EdgeInsets.only(right: 16.w),
+          margin: EdgeInsets.only(left: 20.w),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(24.r),
             color: Colors.white,
           ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             spacing: 12.h,
@@ -31,7 +31,7 @@ class WellnessTipsList extends StatelessWidget{
 
               Center(
                 child: ClipRRect(
-                    borderRadius: BorderRadius.circular(24.r),
+                    borderRadius: BorderRadius.circular(20.r),
                   child: Image.asset(AppImages.wellnessWoman,
                  //   width: getWidth(290),
                   //  height: getHeight(198),
