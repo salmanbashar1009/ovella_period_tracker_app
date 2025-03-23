@@ -44,7 +44,6 @@ class MyApp extends StatelessWidget {
   static const double deviceWidth = 402.0;
   static const double deviceHeight = 874.0;
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -106,7 +105,7 @@ class MyApp extends StatelessWidget {
               GlobalWidgetsLocalizations.delegate,
             ],
             debugShowCheckedModeBanner: false,
-            title: 'Flutter Demo',
+            title: 'Ovella',
             theme: AppTheme.lightTheme,
 
             initialRoute: RouteName.splashScreen,

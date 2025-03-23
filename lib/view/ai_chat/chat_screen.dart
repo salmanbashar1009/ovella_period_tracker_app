@@ -113,8 +113,8 @@ class ChatScreen extends StatelessWidget {
                                       chatProvider.chat.chat![index].command!;
                                   final String reply =
                                       chatProvider.chat.chat![index].reply!;
-                                  return Padding(
-                                    padding:  EdgeInsets.only(bottom : 18.0),
+                                  return Container(
+                                    margin: EdgeInsets.only(top: 10.h),
                                     child: Column(
                                       spacing: 14.h,
                                       children: [
@@ -166,7 +166,7 @@ class ChatScreen extends StatelessWidget {
                                               child: Image.asset(
                                                 AppImages.userProfilePicture,
                                                 width: 44.w,
-                                                height: 44.h,
+                                                height: 44.w,
                                                 fit: BoxFit.cover,
                                               ),
                                             ),
@@ -185,7 +185,7 @@ class ChatScreen extends StatelessWidget {
                                               child: Image.asset(
                                                 AppImages.gptProfilePicture,
                                                 width: 44.w,
-                                                height: 44.h,
+                                                height: 44.w,
                                                 fit: BoxFit.cover,
                                               ),
                                             ),
@@ -264,7 +264,7 @@ class ChatScreen extends StatelessWidget {
 
                             KeyboardVisibilityBuilder(
                                 builder: (_, bool isOpenKeyBoard) {
-                                return SizedBox(height: !isOpenKeyBoard ? 100.h : 0);
+                                return SizedBox(height: !isOpenKeyBoard ? 150.h : 0);
                               }
                             ),
                           ],
