@@ -20,6 +20,8 @@ class HomeScreen extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+    final deviceHeight = MediaQuery.of(context).size.height;
+    debugPrint("\nheight : $deviceHeight\n");
     return BackgroundWidget(
       child: SingleChildScrollView(
         controller: context.read<HomeScreenProvider>().homeScreenScrollController,
@@ -179,7 +181,7 @@ class HomeScreen extends StatelessWidget{
                       SizedBox(height: 16.h,),
 
                       SizedBox(
-                          height: 380.h,
+                          height: deviceHeight < 660 ? 280 : 325,
                           child: WellnessTipsList(),
                       ),
 
