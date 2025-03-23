@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ovella_period_tracker_app/constant/images.dart';
+import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
 
@@ -29,7 +30,11 @@ class Header extends StatelessWidget {
       ),
 
       actions: [
-        Utils.circleContainer(imagePath: AppImages.notificationIcon),
+        GestureDetector(
+          onTap:
+              () => Navigator.pushNamed(context, RouteName.notificationScreen),
+          child: Utils.circleContainer(imagePath: AppImages.notificationIcon),
+        ),
       ],
     );
   }

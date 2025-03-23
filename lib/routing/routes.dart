@@ -13,6 +13,7 @@ import 'package:ovella_period_tracker_app/view/community_screen/screen/Forum_scr
 import 'package:ovella_period_tracker_app/view/home_screen/add_log_screen/add_log_screen.dart';
 import 'package:ovella_period_tracker_app/view/home_screen/log_period_screen/log_period_screen.dart';
 import 'package:ovella_period_tracker_app/view/invite_partner_screen/invite_partner_screen.dart';
+import 'package:ovella_period_tracker_app/view/notification_screen/notification_screen.dart';
 import 'package:ovella_period_tracker_app/view/pairing_screen/pairing_screen.dart';
 import 'package:ovella_period_tracker_app/view/parent_screen/parent_screen.dart';
 import 'package:ovella_period_tracker_app/view/pregnancy_fertility_tracking/pregnancy_fertility_tracking.dart';
@@ -72,6 +73,7 @@ class AppRoutes {
       RouteName.personalInformationSettingScreen: (context) => PersonalInformationSettings(),
       RouteName.selectAgeScreen: (context) => SelectAgeScreen(),
       RouteName.menstrualHealthDetails: (context) => MenstrualHealthDetails(),
+      RouteName.notificationScreen: (context) => NotificationScreen(),
     };
   }
 }
