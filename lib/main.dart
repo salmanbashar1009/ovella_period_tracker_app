@@ -22,9 +22,8 @@ import 'package:provider/provider.dart';
 import 'view_model/settings_provider.dart';
 import 'view_model/step_screen_provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter/cupertino.dart'; 
-import 'package:flutter_localizations/flutter_localizations.dart'; 
-
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,7 +32,7 @@ void main() async {
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   await Hive.initFlutter();
-await Hive.openBox('settings');
+  await Hive.openBox('settings');
   await ScreenUtil.ensureScreenSize();
 
   runApp(const MyApp());
@@ -88,10 +87,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<ChatScreenProvider>(
           create: (_) => ChatScreenProvider(),
         ),
-        ChangeNotifierProvider<LocalProvider>(
-          create: (_) => LocalProvider(),
-        ),
-        
+        ChangeNotifierProvider<LocalProvider>(create: (_) => LocalProvider()),
       ],
       child: ScreenUtilInit(
         designSize: const Size(deviceWidth, deviceHeight),
@@ -100,11 +96,12 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
           return MaterialApp(
             supportedLocales: L10n.all,
+            locale: LocalProvider().locale,
             localizationsDelegates: [
-            AppLocalizations.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate
-
+              AppLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
             ],
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
