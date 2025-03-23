@@ -38,7 +38,7 @@ class MenstrualHealth extends StatelessWidget {
                       child: Utils.backButton(context),
                     ),
                     Text(
-                      "Menstrual Health",
+                      selectedCategory.section,
                       style: Theme.of(
                         context,
                       ).textTheme.headlineMedium?.copyWith(
