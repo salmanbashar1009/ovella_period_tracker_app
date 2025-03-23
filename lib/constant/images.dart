@@ -24,6 +24,7 @@ class AppImages {
 
   /// Icons path
   static const String homeIcon = 'assets/icons/home.png';
+  static const String arrowBackIcon = 'assets/icons/arrow_back.png';
   static const String copyIcon = 'assets/icons/copy.png';
   static const String replyIcon = 'assets/icons/reply.png';
   static const String sendIcon = 'assets/icons/send.png';
@@ -36,7 +37,7 @@ class AppImages {
   static const String aiChatIcon = 'assets/icons/ai-chat-02.png';
   static const String premiumBadge = 'assets/images/setting_screen/premium_badge.png';
   static const String editPencil = 'assets/images/setting_screen/pencil-edit-02.png';
-  static const String coupleImage = 'assets/images/setting_screen/Couple 1.png';
+  static const String coupleImage = 'assets/images/setting_screen/couple.png';
   static const String editIcon = 'assets/icons/edit.png';
 
   ///Pairing Screen

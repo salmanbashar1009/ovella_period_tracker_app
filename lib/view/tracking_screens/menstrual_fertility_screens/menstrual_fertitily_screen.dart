@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,6 +11,7 @@ import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertil
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/fertile_alert_sheet.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/log_symtoms_card.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/month_header.dart';
+import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/next_period_alert_sheet.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/ovulation_alert_sheet.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/period_alert_sheet.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/widgets/week_day_header.dart';
@@ -36,12 +39,17 @@ class MenstrualFertilityScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              /// calendar month & year header
               const MonthHeader(),
               const SizedBox(height: 20),
+
+              /// calendar week day header
               const WeekdayHeader(),
               const SizedBox(height: 10),
+
+              /// calendar day number grid list
               SizedBox(
-                height: 275.h,
+                height: 300.h,
                 width: double.infinity,
                 child: Consumer<TrackingScreenProvider>(
                   builder: (context, trackingScreenProvider, _) {
@@ -61,6 +69,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
 
         SizedBox(height: 24.h),
 
+        /// Added Note list
         ...List.generate(trackingScreenProvider.notes.length, (index){
           return Container(
             width: double.infinity,
@@ -127,22 +136,32 @@ class MenstrualFertilityScreen extends StatelessWidget {
         }),
 
         SizedBox(height: 8.h),
+
+        // activity tile row
         Row(
           children: [
+            /// period activity tile: can add note, edit period date and remove period date
             activityTile(context: context,bgColor: AppColors.secondary, imagePath: "assets/icons/period.png", title: "Period", onTap:(){showPeriodAlertDialogSheet(context);} ),
             SizedBox(width: 12.w,),
+            /// Fertile activity tile
             activityTile(context: context,bgColor: Color(0xFFF4D1FF), imagePath: "assets/icons/fertile.png", title: "Fertile", onTap:(){showFertileAlertDialogSheet(context);} ),
           ],
         ),
         SizedBox(height: 16.w,),
+
+        // activity tile row
         Row(
           children: [
+            /// Ovulation activity tile
             activityTile(context: context,bgColor: Color(0xFF25C871), imagePath: "assets/icons/ovulation.png", title: "Ovulation", onTap:(){showOvulationAlertDialogSheet(context);} ),
             SizedBox(width: 12.w,),
-            activityTile(context: context,bgColor: Color(0xFFFF9CB6), imagePath: "assets/icons/next-period.png", title: "Next Period", onTap:(){} ),
+            /// Next period activity tile
+            activityTile(context: context,bgColor: Color(0xFFFF9CB6), imagePath: "assets/icons/next-period.png", title: "Next Period", onTap:(){showNextPeiodAlertDialogSheet(context);} ),
           ],
         ),
         SizedBox(height: 24.h,),
+
+        /// log your symptoms card
         LogCard(
           onAddPressed: () {
             final homeScreenProvider =
@@ -154,6 +173,8 @@ class MenstrualFertilityScreen extends StatelessWidget {
           },
           title: 'Log your Symptoms',
         ),
+
+        /// Show symptoms list if not empty
         Consumer<HomeScreenProvider>(
           builder: (_, homeScreenProvider, _) {
             return homeScreenProvider.selectedSymptoms.isNotEmpty
@@ -210,34 +231,41 @@ class MenstrualFertilityScreen extends StatelessWidget {
     );
   }
 
+  /// custom activity tile widget
   Widget activityTile(
       {required BuildContext context,required Color bgColor , required String imagePath,required String title,required VoidCallback onTap,}) {
-    return Container(
-      padding: EdgeInsets.only(left:12.r,bottom: 12.r,top: 12.r),
-      width: 175.w,
-      height: 70.h,
-      decoration:BoxDecoration (
-      color: bgColor,
-        borderRadius: BorderRadius.circular(24.r),
-      ),
-      child: ListTile(
-        horizontalTitleGap: 6.w,
-        contentPadding: EdgeInsets.zero,
-        onTap: onTap,
-        leading: Container(
-          padding: EdgeInsets.all(10.r),
-          width: 44.w,
-          height: 44.h,
-          decoration: BoxDecoration(
-            color: AppColors.onPrimary,
-            shape: BoxShape.circle,
-          ),
-          child: Image(image: AssetImage(imagePath)),
+    final screenHeight = MediaQuery.of(context).size.height; // Start with a ScreenUtil-based height
+    final responsiveHeight = screenHeight * 0.09; // Clamp between 70.h and 90.h
+
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: EdgeInsets.only(left:12.r,bottom: 12.h,top: 12.h),//top: 12.r),
+        width: 175.w,
+        height: responsiveHeight,
+        decoration:BoxDecoration (
+        color: bgColor,
+          borderRadius: BorderRadius.circular(24.r),
         ),
-        title: Text(title,style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-            color: AppColors.textColor,
-            fontWeight: FontWeight.w400
-        ),) ,
+        child: Row(
+          children: [
+            Container(
+              padding: EdgeInsets.all(10.r),
+              width: responsiveHeight - 30,
+              height: responsiveHeight - 30,
+              decoration: BoxDecoration(
+                color: AppColors.onPrimary,
+                shape: BoxShape.circle,
+              ),
+              child: Image(image: AssetImage(imagePath)),
+            ),
+            SizedBox(width: 8.h,),
+            Text(title,style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                color: AppColors.textColor,
+                fontWeight: FontWeight.w400
+            ),)
+          ],
+        )
       ),
     );
   }

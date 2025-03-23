@@ -27,8 +27,6 @@ class MenstrualHealth extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 22.h),
-
                 //---------App Bar Section ------------------------------------
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -40,7 +38,7 @@ class MenstrualHealth extends StatelessWidget {
                       child: Utils.backButton(context),
                     ),
                     Text(
-                      "Menstrual Health",
+                      selectedCategory.section,
                       style: Theme.of(
                         context,
                       ).textTheme.headlineMedium?.copyWith(

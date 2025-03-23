@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'package:ovella_period_tracker_app/L10n/L10n.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/routing/routes.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme.dart';
@@ -9,7 +10,7 @@ import 'package:ovella_period_tracker_app/view_model/chat_screen_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/community_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/create_account_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
-import 'package:ovella_period_tracker_app/view_model/listselectionProvider.dart';
+import 'package:ovella_period_tracker_app/view_model/localization_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/new_password_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/otp_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/pairing_screen_provider.dart';
@@ -20,6 +21,10 @@ import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.da
 import 'package:provider/provider.dart';
 import 'view_model/settings_provider.dart';
 import 'view_model/step_screen_provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter/cupertino.dart'; 
+import 'package:flutter_localizations/flutter_localizations.dart'; 
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,7 +33,7 @@ void main() async {
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   await Hive.initFlutter();
-
+await Hive.openBox('settings');
   await ScreenUtil.ensureScreenSize();
 
   runApp(const MyApp());
@@ -83,6 +88,10 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<ChatScreenProvider>(
           create: (_) => ChatScreenProvider(),
         ),
+        ChangeNotifierProvider<LocalProvider>(
+          create: (_) => LocalProvider(),
+        ),
+        
       ],
       child: ScreenUtilInit(
         designSize: const Size(deviceWidth, deviceHeight),
@@ -90,6 +99,13 @@ class MyApp extends StatelessWidget {
         ensureScreenSize: true,
         builder: (context, child) {
           return MaterialApp(
+            supportedLocales: L10n.all,
+            localizationsDelegates: [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate
+
+            ],
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
             theme: AppTheme.lightTheme,

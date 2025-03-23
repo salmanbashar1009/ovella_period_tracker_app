@@ -54,7 +54,7 @@ class PeriodDateContainer extends StatelessWidget{
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               _arrowButton(isLeftButton: true, onPressed: (){},),
-              Text("Mar, 2025",
+              Text(DateFormat('MMM, yyyy').format(DateTime.now()),
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                 fontWeight: FontWeight.w600
               ),),
@@ -67,26 +67,38 @@ class PeriodDateContainer extends StatelessWidget{
           Consumer<HomeScreenProvider>(
             builder: (_, homeScreenProvider, _) {
               return SizedBox(
-                height: 75.h,
+                height: 85.h,
                 child: ListView.builder(
                   itemCount: context.read<HomeScreenProvider>().daysInMonth.length,
                     scrollDirection: Axis.horizontal,
                     physics: ClampingScrollPhysics(),
                     controller: context.read<HomeScreenProvider>().periodScrollController,
                     itemBuilder: (_, index){
+
                       DateTime date = homeScreenProvider.daysInMonth[index];
                       bool isToday = date.day == DateTime.now().day &&
                           date.month == DateTime.now().month &&
                           date.year == DateTime.now().year;
+                      bool isTodayPeriodDay = false;
+                      if(isToday){
+                        debugPrint("\ntoday & list of period dates : ${homeScreenProvider.periodInformationModel!.nextPeriodDates}\n\n");
+                        isTodayPeriodDay = homeScreenProvider.periodInformationModel!.nextPeriodDates.contains(DateTime(date.year,date.month,date.day));
+                      }
 
                     return Container(
                       padding: EdgeInsets.all(14.r),
                       margin: EdgeInsets.only(right: 12.w),
                       decoration: BoxDecoration(
-                        color: isToday ? AppColors.secondary : Color(0xffF4F6F6),
+
+                        color: isToday && isTodayPeriodDay ?
+                        AppColors.secondary :
+                        isToday && isTodayPeriodDay == false ?
+                        Color(0xff25C871) : Color(0xffF4F6F6),
+
                         borderRadius: BorderRadius.circular(16.r),
                       ),
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text( DateFormat.E().format(date),
 
@@ -132,24 +144,40 @@ class PeriodDateContainer extends StatelessWidget{
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("Period",style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        Text("Period",
+                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: AppColors.lightTextColor
                         ),),
-                        Text("0 Day Left",
-                        style: Theme.of(context).textTheme.headlineMedium,),
+                        Consumer<HomeScreenProvider>(
+                          builder: (_, homeScreenProvider, _) {
+                            int days = homeScreenProvider.periodDaysLeft;
+                            days = days < 0 ? 0 : days;
+                           final String dayText = days <= 1 ? "Day" : "Days";
+                            return Text("$days $dayText Left",
+                            style: Theme.of(context).textTheme.headlineMedium,);
+                          }
+                        ),
 
-                        Text("Mar 3-Nest Period",
-                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                            fontWeight: FontWeight.w400
-                          ),),
+                        Consumer<HomeScreenProvider>(
+                          builder: (_, homeScreenProvider, _) {
+                            return Text("${DateFormat('MMM dd').format(homeScreenProvider.periodInformationModel!.nextPeriodDates[0])} Next Period",
+                              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                fontWeight: FontWeight.w400
+                              ),);
+                          }
+                        ),
                       ],
                     ),
                   ),
                 ),
-                SizedBox(
-                  width: 220.w,
-                  height: 220.h,
+                Container(
+                  width: 220,
+                  height: 220,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle
+                  ),
                   child: CircularProgressIndicator(
+                    year2023: false,
                     trackGap: 2,
                     strokeWidth: 10,
                     value: 0.3,
@@ -191,7 +219,7 @@ class PeriodDateContainer extends StatelessWidget{
                 ),
               ),
               SizedBox(width: 4,),
-              Text("Period",
+              Text("Ovulation",
                 style: Theme.of(context).textTheme.bodyMedium,),
 
             ],

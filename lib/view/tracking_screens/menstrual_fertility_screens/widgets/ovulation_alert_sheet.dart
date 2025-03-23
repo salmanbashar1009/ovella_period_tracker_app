@@ -16,10 +16,14 @@ void showOvulationAlertDialogSheet(BuildContext context) {
           String periodStartDate = "";
           String periodEndDate = "";
 
+          /// date format
           if (trackingScreenProvider.periodDates.isNotEmpty) {
             periodStartDate = DateFormat('dd MMMM').format(trackingScreenProvider.periodDates.first);
             periodEndDate = DateFormat('dd MMMM').format(trackingScreenProvider.periodDates.last);
           }
+
+          final screenHeight = MediaQuery.of(context).size.height;
+          final screenWidth = MediaQuery.of(context).size.width;
 
 
           return AlertDialog(
@@ -28,8 +32,9 @@ void showOvulationAlertDialogSheet(BuildContext context) {
               color: AppColors.secondary
             ),),
             content: SizedBox(
-              height: 150.h,
-              width: 360.w,// Set the desired height
+              height: screenHeight > 800 ? screenHeight * 0.20 : screenHeight * 0.23,
+              width: screenWidth * 0.9,
+
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
