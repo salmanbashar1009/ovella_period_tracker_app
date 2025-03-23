@@ -6,9 +6,9 @@ import 'package:ovella_period_tracker_app/l10n/l10n.dart';
 
 class LocalProvider with ChangeNotifier {
   Locale? _locale;
-  final Box settingsBox = Hive.box('settings'); 
+  final Box settingsBox = Hive.box('settings');
   LocalProvider() {
-    _loadLocale(); 
+    _loadLocale();
   }
 
   Locale? get locale => _locale;
@@ -17,13 +17,13 @@ class LocalProvider with ChangeNotifier {
     if (!L10n.all.contains(locale)) return;
 
     _locale = locale;
-    await settingsBox.put('locale', locale.languageCode); 
+    await settingsBox.put('locale', locale.languageCode);
     notifyListeners();
   }
 
   void clearLocale() async {
     _locale = null;
-    await settingsBox.delete('locale'); 
+    await settingsBox.delete('locale');
     notifyListeners();
   }
 
@@ -32,7 +32,7 @@ class LocalProvider with ChangeNotifier {
     if (langCode != null) {
       _locale = L10n.all.firstWhere(
         (loc) => loc.languageCode == langCode,
-        orElse: () => Locale('en'), 
+        orElse: () => Locale('ar'),
       );
     }
   }

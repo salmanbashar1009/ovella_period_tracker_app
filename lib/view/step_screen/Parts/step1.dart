@@ -132,7 +132,7 @@ class Step1 extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(stepScreenProvider.selectedLanguage,style: textTheme.bodyMedium,),
+                        Text(stepScreenProvider.selectedLanguage['name']!,style: textTheme.bodyMedium,),
                         Icon(Icons.keyboard_arrow_down_outlined,color: Color(0xff6B788E),)
                       ],
                     ),

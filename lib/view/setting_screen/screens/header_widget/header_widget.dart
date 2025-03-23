@@ -13,6 +13,8 @@ class HeaderWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
     return AppBar(
+      surfaceTintColor: Colors.transparent,
+      backgroundColor: null,
       centerTitle: true,
       leading: Utils.backButton(context),
       title: Text(
