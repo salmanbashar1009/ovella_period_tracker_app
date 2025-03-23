@@ -79,36 +79,8 @@ class LanguageSettingScreen extends StatelessWidget {
                                         filteredLanguages[index],
                                       ); // Pass full Map
 
-                                      try {
-                                        final localProvider =
-                                            Provider.of<LocalizationProvider>(
-                                              context,
-                                              listen: false,
-                                            );
-                                        final selectedLocaleCode =
-                                            filteredLanguages[index]['code']!;
+                                      Provider.of<LocalizationProvider>(context,listen: false).onTapChangeLanguage(filteredLanguages[index]['code']!);
 
-                                        if (localProvider
-                                                .locale
-                                                ?.languageCode !=
-                                            selectedLocaleCode) {
-                                          // await localProvider.setLocale(Locale(selectedLocaleCode));
-                                          localProvider.setLocale(
-                                            Locale(selectedLocaleCode),
-                                          );
-                                          debugPrint(
-                                            "Language changed to: $selectedLocaleCode",
-                                          );
-                                        } else {
-                                          debugPrint(
-                                            "Selected language is already active.",
-                                          );
-                                        }
-                                      } catch (e) {
-                                        debugPrint(
-                                          "Error changing language: $e",
-                                        );
-                                      }
                                     },
                                     child: Container(
                                       padding: EdgeInsets.symmetric(
