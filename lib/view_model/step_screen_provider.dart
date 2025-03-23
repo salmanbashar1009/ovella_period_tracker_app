@@ -50,8 +50,6 @@ class StepScreenProvider extends ChangeNotifier {
   ///Language selection part
   // String selectedLanguage = 'English';
 
-  Map<String,String> selectedLanguage = {"code": "en", "name": "English"};
-
   List<Map<String,String>> allLanguages = [
     {"code": "af", "name": "Afrikaans"},
     {"code": "ar", "name": "Arabic"},
@@ -83,8 +81,10 @@ class StepScreenProvider extends ChangeNotifier {
     {"code": "ja", "name": "Japanese"},
     {"code": "kn", "name": "Kannada"},
   ];
-  void languageSelection(String language) {
-    selectedLanguage['name'] = language;
+  Map<String, String> selectedLanguage = {"code": "ar", "name": "Arabic"};
+
+  void languageSelection(Map<String, String> language) {
+    selectedLanguage = language;
     notifyListeners();
   }
 

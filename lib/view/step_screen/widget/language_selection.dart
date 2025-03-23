@@ -57,7 +57,7 @@ class LanguageSelection extends StatelessWidget {
                 itemExtent: 50,
                 looping: false,
                 onSelectedItemChanged: (int index) {
-                  stepScreenProvider.languageSelection(allLanguages[index]['name']!);
+                  stepScreenProvider.languageSelection(allLanguages[index]);
                 },
                 selectionOverlay: Container(color: Colors.transparent),
                 children:
