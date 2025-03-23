@@ -30,14 +30,14 @@ class PairingCodeCard extends StatelessWidget {
                       Clipboard.setData(
                         ClipboardData(text: pairingScreenProvider.code),
                       ).whenComplete(() {
-                        ScaffoldMessenger.of(context)
+                        /*ScaffoldMessenger.of(context)
                           ..removeCurrentSnackBar()
                           ..showSnackBar(
                             SnackBar(
                               content: Text("Invitation Code is copied!"),
                               backgroundColor: Colors.green,
                             ),
-                          );
+                          );*/
                       });
                     },
                     child: Container(
