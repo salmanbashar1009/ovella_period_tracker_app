@@ -15,11 +15,12 @@ class LanguageSelection extends StatelessWidget {
   });
 
   final TextTheme textTheme;
-  final List<String> allLanguages;
+  final List<Map<String,String>> allLanguages;
   final StepScreenProvider stepScreenProvider;
 
   @override
   Widget build(BuildContext context) {
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,7 +57,7 @@ class LanguageSelection extends StatelessWidget {
                 itemExtent: 50,
                 looping: false,
                 onSelectedItemChanged: (int index) {
-                  stepScreenProvider.languageSelection(allLanguages[index]);
+                  stepScreenProvider.languageSelection(allLanguages[index]['name']!);
                 },
                 selectionOverlay: Container(color: Colors.transparent),
                 children:
@@ -65,7 +66,7 @@ class LanguageSelection extends StatelessWidget {
                         alignment: Alignment.center,
                         child: Column(
                           children: [
-                            Text(language, style: textTheme.bodyMedium),
+                            Text(language['name']!, style: textTheme.bodyMedium),
                           ],
                         ),
                       );

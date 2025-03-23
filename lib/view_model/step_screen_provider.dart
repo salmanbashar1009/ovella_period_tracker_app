@@ -48,40 +48,43 @@ class StepScreenProvider extends ChangeNotifier {
   }
 
   ///Language selection part
-  String selectedLanguage = 'English';
-  List<String> allLanguages = [
-    'Afrikaans',
-    'Arabic',
-    'Bengali',
-    'Bulgarian',
-    'Burmese',
-    'Catalan',
-    'Chinese (Mandarin)',
-    'Croatian',
-    'Czech',
-    'Danish',
-    'Dutch',
-    'English',
-    'English(UK)',
-    'Estonian',
-    'Filipino (Tagalog)',
-    'Finnish',
-    'French',
-    'Georgian',
-    'German',
-    'Greek',
-    'Gujarati',
-    'Hebrew',
-    'Hindi',
-    'Hungarian',
-    'Icelandic',
-    'Indonesian',
-    'Italian',
-    'Japanese',
-    'Kannada',
+  // String selectedLanguage = 'English';
+
+  Map<String,String> selectedLanguage = {"code": "en", "name": "English"};
+
+  List<Map<String,String>> allLanguages = [
+    {"code": "af", "name": "Afrikaans"},
+    {"code": "ar", "name": "Arabic"},
+    {"code": "bn", "name": "Bengali"},
+    {"code": "bg", "name": "Bulgarian"},
+    {"code": "my", "name": "Burmese"},
+    {"code": "ca", "name": "Catalan"},
+    {"code": "zh", "name": "Chinese (Mandarin)"},
+    {"code": "hr", "name": "Croatian"},
+    {"code": "cs", "name": "Czech"},
+    {"code": "da", "name": "Danish"},
+    {"code": "nl", "name": "Dutch"},
+    {"code": "en", "name": "English"},
+    {"code": "en-uk", "name": "English(UK)"},
+    {"code": "et", "name": "Estonian"},
+    {"code": "tl", "name": "Filipino (Tagalog)"},
+    {"code": "fi", "name": "Finnish"},
+    {"code": "fr", "name": "French"},
+    {"code": "ka", "name": "Georgian"},
+    {"code": "de", "name": "German"},
+    {"code": "el", "name": "Greek"},
+    {"code": "gu", "name": "Gujarati"},
+    {"code": "he", "name": "Hebrew"},
+    {"code": "hi", "name": "Hindi"},
+    {"code": "hu", "name": "Hungarian"},
+    {"code": "is", "name": "Icelandic"},
+    {"code": "id", "name": "Indonesian"},
+    {"code": "it", "name": "Italian"},
+    {"code": "ja", "name": "Japanese"},
+    {"code": "kn", "name": "Kannada"},
   ];
   void languageSelection(String language) {
-    selectedLanguage = language;
+    selectedLanguage['name'] = language;
     notifyListeners();
   }
 

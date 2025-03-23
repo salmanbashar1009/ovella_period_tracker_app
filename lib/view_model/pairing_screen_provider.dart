@@ -2,6 +2,8 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 
 class PairingScreenProvider extends ChangeNotifier{
+
+  /// <----------- Random Code Generate ---------->
   late String code;
 
   void generateCode() {

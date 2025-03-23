@@ -22,10 +22,10 @@ class LanguageSettingScreen extends StatelessWidget {
             child: Consumer<StepScreenProvider>(
               builder: (_, stepScreenProvider, __) {
                 // Filtered languages based on search query
-                List<String> filteredLanguages =
+                List<Map<String, String>> filteredLanguages =
                     stepScreenProvider.allLanguages
                         .where(
-                          (lang) => lang.toLowerCase().contains(
+                          (lang) => lang['name']!.toLowerCase().contains(
                             stepScreenProvider.languageSearchQuery
                                 .toLowerCase(),
                           ),
@@ -69,7 +69,7 @@ class LanguageSettingScreen extends StatelessWidget {
                                   return GestureDetector(
                                     onTap: () {
                                       stepScreenProvider.languageSelection(
-                                        filteredLanguages[index],
+                                        filteredLanguages[index]['name']!,
                                       );
                                     },
                                     child: Container(
@@ -79,9 +79,9 @@ class LanguageSettingScreen extends StatelessWidget {
                                       ),
                                       decoration: BoxDecoration(
                                         color:
-                                            filteredLanguages[index] ==
+                                            filteredLanguages[index]['name'] ==
                                                     stepScreenProvider
-                                                        .selectedLanguage
+                                                        .selectedLanguage['name']
                                                 ? AppColors.onPrimary
                                                 : Colors.transparent,
                                         borderRadius: BorderRadius.circular(
@@ -89,7 +89,7 @@ class LanguageSettingScreen extends StatelessWidget {
                                         ),
                                       ),
                                       child: Text(
-                                        filteredLanguages[index],
+                                        filteredLanguages[index]['name']!,
                                         style: textTheme.bodyLarge!.copyWith(
                                           fontWeight:
                                               filteredLanguages[index] ==

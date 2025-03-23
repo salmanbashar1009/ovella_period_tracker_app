@@ -240,19 +240,22 @@ class MenstrualFertilityScreen extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.only(left:12.r,bottom: 12.h,top: 12.h),//top: 12.r),
+        padding: EdgeInsets.only(left: 12.w,bottom: 12.h,top: 12.h),
+
         width: 175.w,
-        height: responsiveHeight,
+        height: responsiveHeight - 12,
         decoration:BoxDecoration (
         color: bgColor,
           borderRadius: BorderRadius.circular(24.r),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               padding: EdgeInsets.all(10.r),
-              width: responsiveHeight - 30,
-              height: responsiveHeight - 30,
+              width: 44.w,
+              height: 44.h,
               decoration: BoxDecoration(
                 color: AppColors.onPrimary,
                 shape: BoxShape.circle,

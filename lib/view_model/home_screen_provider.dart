@@ -133,7 +133,7 @@ class HomeScreenProvider with ChangeNotifier {
 
   void _scrollToCurrentDate() {
     int currentIndex = _currentDate.day -1 ;
-    double itemWidth = 62.w;
+    double itemWidth = 74.w;
     double screenWidth = periodScrollController.position.viewportDimension;
 
     double scrollTo = (currentIndex * itemWidth) - (screenWidth / 2) + (itemWidth / 2);

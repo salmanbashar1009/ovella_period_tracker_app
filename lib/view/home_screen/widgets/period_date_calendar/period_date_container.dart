@@ -39,6 +39,16 @@ class PeriodDateContainer extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+
+    final deviceHeight = MediaQuery.of(context).size.height;
+    final deviceWidth = MediaQuery.of(context).size.width;
+    debugPrint("\nDevice size : $deviceWidth * $deviceHeight}");
+
+    Size getContainerSize(){
+      return Size((deviceWidth*178)/411 , (deviceHeight*178)/891);
+    }
+
+
     return Container(
       width: double.infinity,
      // height: 496.h,
@@ -86,6 +96,7 @@ class PeriodDateContainer extends StatelessWidget{
                       }
 
                     return Container(
+                      width: 62.w,
                       padding: EdgeInsets.all(14.r),
                       margin: EdgeInsets.only(right: 12.w),
                       decoration: BoxDecoration(
@@ -133,7 +144,10 @@ class PeriodDateContainer extends StatelessWidget{
                 Align(
                   alignment: Alignment.center,
                   child: Container(
-                    padding: EdgeInsets.all(33.r),
+                    width: getContainerSize().width,
+                    height: getContainerSize().height,
+
+                    padding: EdgeInsets.all(23.r),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Color(0xffF6F4F6),
@@ -141,49 +155,54 @@ class PeriodDateContainer extends StatelessWidget{
                         color: Color(0xffFDE7E7)
                       )
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("Period",
-                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          color: AppColors.lightTextColor
-                        ),),
-                        Consumer<HomeScreenProvider>(
-                          builder: (_, homeScreenProvider, _) {
-                            int days = homeScreenProvider.periodDaysLeft;
-                            days = days < 0 ? 0 : days;
-                           final String dayText = days <= 1 ? "Day" : "Days";
-                            return Text("$days $dayText Left",
-                            style: Theme.of(context).textTheme.headlineMedium,);
-                          }
-                        ),
+                    child: FittedBox(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        spacing: 4.h,
+                        children: [
+                          Text("Period",
+                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            color: AppColors.lightTextColor,
+                              fontSize: 15.sp,
+                          ),),
+                          Consumer<HomeScreenProvider>(
+                            builder: (_, homeScreenProvider, _) {
+                              int days = homeScreenProvider.periodDaysLeft;
+                              days = days < 0 ? 0 : days;
+                             final String dayText = days <= 1 ? "Day" : "Days";
+                              return Text("$days $dayText Left",
+                              style: Theme.of(context).textTheme.bodyLarge,);
+                            }
+                          ),
 
-                        Consumer<HomeScreenProvider>(
-                          builder: (_, homeScreenProvider, _) {
-                            return Text("${DateFormat('MMM dd').format(homeScreenProvider.periodInformationModel!.nextPeriodDates[0])} Next Period",
-                              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                fontWeight: FontWeight.w400
-                              ),);
-                          }
-                        ),
-                      ],
+                          Consumer<HomeScreenProvider>(
+                            builder: (_, homeScreenProvider, _) {
+                              return Text("${DateFormat('MMM dd').format(homeScreenProvider.periodInformationModel!.nextPeriodDates[0])} Next\nPeriod",
+                                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 13.sp
+                                ),maxLines: 2,
+                              textAlign: TextAlign.center,);
+                            }
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
-                Container(
-                  width: 220,
-                  height: 220,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle
-                  ),
-                  child: CircularProgressIndicator(
-                    year2023: false,
-                    trackGap: 2,
-                    strokeWidth: 10,
-                    value: 0.3,
-                    color: AppColors.secondary,
-                    backgroundColor: Color(0xff25C871),
-
+                Align(
+                  alignment: Alignment.center,
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: CircularProgressIndicator(
+                      year2023: false,
+                      trackGap: 2,
+                      strokeWidth: 10,
+                      value: 0.3,
+                      color: AppColors.secondary,
+                      backgroundColor: Color(0xff25C871),
+                    ),
                   ),
                 ),
               ],
