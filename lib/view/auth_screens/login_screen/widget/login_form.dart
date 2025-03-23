@@ -7,16 +7,20 @@ import 'package:provider/provider.dart';
 import '../../../../utility/utils.dart';
 
 class LoginForm extends StatelessWidget {
-  const LoginForm({super.key});
+   LoginForm({super.key});
+
+  final formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
     ColorScheme colorScheme = Theme.of(context).colorScheme;
-    final formKey = GlobalKey<FormState>();
-    return Consumer<CreateAccountProvider>(
-      builder: (BuildContext context, createAccountProvider, Widget? child) {
-        return Form(
+
+    return
+      // Consumer<CreateAccountProvider>(
+      // builder: (BuildContext context, createAccountProvider, Widget? child) {
+      //   return
+          Form(
           key: formKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,32 +69,36 @@ class LoginForm extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 8.h),
-              TextFormField(
-                /*validator: (value) {
-                  if (value!.isEmpty) {
-                    return "please set your password";
-                  } else {
-                    return null;
-                  }
-                },*/
-                obscureText: createAccountProvider.isObscurePassword,
-                style: textTheme.bodyMedium!.copyWith(
-                  fontWeight: FontWeight.w500,
-                ),
-                decoration: InputDecoration(
-                  suffixIcon: InkWell(
-                    onTap: () => createAccountProvider.updateObscure(),
-                    child: Icon(
-                      createAccountProvider.isObscurePassword
-                          ? Icons.visibility_off_outlined
-                          : Icons.remove_red_eye_outlined,
+              Consumer<CreateAccountProvider>(
+                builder: (_,createAccountProvider,_) {
+                  return TextFormField(
+                    /*validator: (value) {
+                      if (value!.isEmpty) {
+                        return "please set your password";
+                      } else {
+                        return null;
+                      }
+                    },*/
+                    obscureText: createAccountProvider.isObscurePassword,
+                    style: textTheme.bodyMedium!.copyWith(
+                      fontWeight: FontWeight.w500,
                     ),
-                  ),
-                  hintText: 'Password',
-                  errorStyle: textTheme.bodySmall!.copyWith(
-                    color: colorScheme.onError,
-                  ),
-                ),
+                    decoration: InputDecoration(
+                      suffixIcon: InkWell(
+                        onTap: () => createAccountProvider.updateObscure(),
+                        child: Icon(
+                          createAccountProvider.isObscurePassword
+                              ? Icons.visibility_off_outlined
+                              : Icons.remove_red_eye_outlined,
+                        ),
+                      ),
+                      hintText: 'Password',
+                      errorStyle: textTheme.bodySmall!.copyWith(
+                        color: colorScheme.onError,
+                      ),
+                    ),
+                  );
+                }
               ),
               SizedBox(height: 12.h),
               Align(
@@ -123,7 +131,7 @@ class LoginForm extends StatelessWidget {
             ],
           ),
         );
-      },
-    );
+    //  },
+   // );
   }
 }
