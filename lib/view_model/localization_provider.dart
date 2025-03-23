@@ -39,4 +39,27 @@ class LocalizationProvider with ChangeNotifier {
       );
     }
   }
+
+  void onTapChangeLanguage(String languageCode){
+    try {
+
+      if (_locale?.languageCode != languageCode) {
+        setLocale(Locale(languageCode));
+
+        debugPrint(
+          "Language changed to: $languageCode",
+        );
+
+      } else {
+        debugPrint(
+          "Selected language is already active.",
+        );
+      }
+    } catch (e) {
+      debugPrint(
+        "Error changing language: $e",
+      );
+    }
+  }
+
 }
