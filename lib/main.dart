@@ -87,16 +87,18 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<ChatScreenProvider>(
           create: (_) => ChatScreenProvider(),
         ),
-        ChangeNotifierProvider<LocalProvider>(create: (_) => LocalProvider()),
+        ChangeNotifierProvider<LocalizationProvider>(create: (_) => LocalizationProvider()),
       ],
       child: ScreenUtilInit(
         designSize: const Size(deviceWidth, deviceHeight),
         minTextAdapt: true,
         ensureScreenSize: true,
         builder: (context, child) {
+
+          final localProvider = Provider.of<LocalizationProvider>(context);
           return MaterialApp(
             supportedLocales: L10n.all,
-            locale: LocalProvider().locale,
+            locale: localProvider.locale,
             localizationsDelegates: [
               AppLocalizations.delegate,
               GlobalMaterialLocalizations.delegate,

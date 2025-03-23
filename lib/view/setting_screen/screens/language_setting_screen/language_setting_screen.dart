@@ -81,7 +81,7 @@ class LanguageSettingScreen extends StatelessWidget {
 
                                       try {
                                         final localProvider =
-                                            Provider.of<LocalProvider>(
+                                            Provider.of<LocalizationProvider>(
                                               context,
                                               listen: false,
                                             );
