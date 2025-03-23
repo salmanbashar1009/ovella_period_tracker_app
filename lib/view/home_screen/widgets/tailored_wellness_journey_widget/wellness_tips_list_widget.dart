@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/constant/images.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 
 class WellnessTipsList extends StatelessWidget{
@@ -28,23 +29,22 @@ class WellnessTipsList extends StatelessWidget{
             children: [
               ClipRRect(
                   borderRadius: BorderRadius.circular(24.r),
-                child: Image.asset('assets/images/home_screen/wellness-woman.png',
+                child: Image.asset(AppImages.wellnessWoman,
                   fit: BoxFit.contain,
                 ),
               ),
 
               Text("Personalized Wellness Tips",
-              style: Theme.of(context).textTheme.headlineLarge,),
+              style: Theme.of(context).textTheme.headlineSmall,),
 
               Text("AI-driven diet, workout, and wellness tips tailored for your cycle or maternity.",
               style: Theme.of(context).textTheme.bodySmall,),
-              SizedBox(height: 12.h,),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 spacing: 6.w,
                 children: [
-                  Image.asset('assets/icons/love.png',
+                  Image.asset(AppImages.loveIcon,
                   width: 16,
                       height: 16,
                       fit: BoxFit.cover
