@@ -21,9 +21,13 @@ class EditProfileScreen extends StatelessWidget {
             padding: AppPadding.screenHorizontalPadding,
             child: Column(
               children: [
+
+                /// App bar part
                 SizedBox(height: 12.h),
                 HeaderWidget(title: 'Edit Profile'),
                 SizedBox(height: 24.h),
+
+                ///details part
                 Container(
                   padding: AppPadding.screenPadding,
                   decoration: BoxDecoration(
@@ -32,8 +36,12 @@ class EditProfileScreen extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
+
+                      ///<----- profile image ------>
                       ProfileImageWidget(),
                       SizedBox(height: 12.h,),
+
+                      ///<----- profile Details form
                       EditProfileForm(textTheme: textTheme, colorScheme: colorScheme),
                     ],
                   ),

@@ -21,7 +21,7 @@ class LanguageSettingScreen extends StatelessWidget {
             padding: AppPadding.screenHorizontalPadding,
             child: Consumer<StepScreenProvider>(
               builder: (_, stepScreenProvider, __) {
-                // Filtered languages based on search query
+                /// Filtered languages based on search query
                 List<String> filteredLanguages =
                     stepScreenProvider.allLanguages
                         .where(
@@ -37,6 +37,7 @@ class LanguageSettingScreen extends StatelessWidget {
                     SizedBox(height: 12.h),
                     HeaderWidget(title: 'App Language'),
                     SizedBox(height: 24.h),
+                    ///Search Field
                     TextFormField(
                       controller: stepScreenProvider.languageSearchController,
                       style: textTheme.bodyMedium,
@@ -60,6 +61,8 @@ class LanguageSettingScreen extends StatelessWidget {
                               stepScreenProvider.searchingLanguage(value),
                     ),
                     SizedBox(height: 12.h),
+
+                    ///Showing all Languages
                     Expanded(
                       child:
                           filteredLanguages.isNotEmpty

@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ovella_period_tracker_app/constant/padding.dart';
-import 'package:ovella_period_tracker_app/view/setting_screen/screens/header_widget/header_widget.dart';
-import 'package:ovella_period_tracker_app/view/step_screen/widget/header_widget.dart';
-import 'package:ovella_period_tracker_app/view_model/step_screen_provider.dart';
-import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
+import '../../../../constant/padding.dart';
+import '../../../../view_model/step_screen_provider.dart';
+import '../../../../widgets/background_widget.dart';
+import 'widgets/cycle_length_menstrual_setting.dart';
+import 'widgets/health_condition_menstrual_setting.dart';
+import 'widgets/pregnancy_status_menstrual_setting.dart';
+import 'widgets/last_period_date_menstrual_setting.dart';
 import 'package:provider/provider.dart';
 import '../../../../theme/theme/theme_extensions/color_palette.dart';
 import '../../../../utility/utils.dart';
-import '../../../pregnancy_fertility_tracking/cycle_selection_screen.dart';
-import '../../../pregnancy_fertility_tracking/widgets/period_date_range_selection_widget.dart';
+import '../header_widget/header_widget.dart';
 
 class MenstrualHealthDetails extends StatefulWidget {
   const MenstrualHealthDetails({super.key});
@@ -49,82 +50,31 @@ class _MenstrualHealthDetailsState extends State<MenstrualHealthDetails> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            ///<------- Cycle Length -------->
                             CycleLengthMenstrualSetting(
                               textTheme: textTheme,
                               stepScreenProvider: stepScreenProvider,
                             ),
-                            LastPeriodDateMenstrualSetting(textTheme: textTheme,stepScreenProvider: stepScreenProvider,),
-                            SizedBox(height: 8.h),
-                            Text(
-                              "Pregnancy Status",
-                              style: textTheme.bodyMedium!.copyWith(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 15.h,
-                              ),
-                            ),
-                            SizedBox(height: 8.h),
-                            GestureDetector(
-                              onTap: () {
-                              },
-                              child: Container(
-                                height: 54.h,
-                                width: double.infinity,
-                                padding: EdgeInsets.all(16.h),
-                                decoration: BoxDecoration(
-                                  color: AppColors.onPrimary,
-                                  border: Border.all(
-                                    color: Color(0xff1E1E1E).withOpacity(0.12),
-                                  ),
-                                  borderRadius: BorderRadius.circular(16.r),
-                                ),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      stepScreenProvider.isCurrentlyPregnant?'Pregnant':'Not Pregnant',
-                                      style: textTheme.bodyMedium,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            SizedBox(height: 8.h),
-                            Text(
-                              "Health Conditions",
-                              style: textTheme.bodyMedium!.copyWith(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 15.h,
-                              ),
-                            ),
-                            SizedBox(height: 8.h),
-                            GestureDetector(
-                              onTap: () {
-                              },
-                              child: Container(
-                                height: 54.h,
-                                width: double.infinity,
-                                padding: EdgeInsets.all(16.h),
-                                decoration: BoxDecoration(
-                                  color: AppColors.onPrimary,
-                                  border: Border.all(
-                                    color: Color(0xff1E1E1E).withOpacity(0.12),
-                                  ),
-                                  borderRadius: BorderRadius.circular(16.r),
-                                ),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      stepScreenProvider.diagnosedWithPCOS=='Yes'?'PCOS':'Not PCOS',
-                                      style: textTheme.bodyMedium,
-                                    ),
-                                  ],
-                                ),
-                              ),
+
+                            ///<------ Last period date -------->
+                            LastPeriodDateMenstrualSetting(
+                              textTheme: textTheme,
+                              stepScreenProvider: stepScreenProvider,
                             ),
 
+                            ///<------ Pregnancy Status -------->
+                            PregnancyStatusMenstrualSetting(
+                              textTheme: textTheme,
+                              stepScreenProvider: stepScreenProvider,
+                            ),
+
+                            ///<------ Health Conditions ------>
+                            HealthConditionMenstrualSetting(
+                              textTheme: textTheme,
+                              stepScreenProvider: stepScreenProvider,
+                            ),
+
+                            ///<------ Save Button primary ------>
                             SizedBox(height: 24.h),
                             SizedBox(
                               width: double.infinity,
@@ -149,136 +99,6 @@ class _MenstrualHealthDetailsState extends State<MenstrualHealthDetails> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class LastPeriodDateMenstrualSetting extends StatelessWidget {
-  const LastPeriodDateMenstrualSetting({
-    super.key,
-    required this.textTheme, required this.stepScreenProvider,
-  });
-
-  final TextTheme textTheme;
-  final StepScreenProvider stepScreenProvider;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(height: 8.h),
-        Text(
-          "Last Period",
-          style: textTheme.bodyMedium!.copyWith(
-            fontWeight: FontWeight.w400,
-            fontSize: 15.h,
-          ),
-        ),
-        SizedBox(height: 8.h),
-        GestureDetector(
-          onTap:
-              () => selectDateRange(
-                context,
-                stepScreenProvider,
-              ),
-          child: Container(
-            height: 54.h,
-            width: double.infinity,
-            padding: EdgeInsets.all(16.h),
-            decoration: BoxDecoration(
-              color: AppColors.onPrimary,
-              border: Border.all(
-                color: Color(0xff1E1E1E).withOpacity(0.12),
-              ),
-              borderRadius: BorderRadius.circular(16.r),
-            ),
-            child: Row(
-              mainAxisAlignment:
-                  MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.start,
-                  crossAxisAlignment:
-                      CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      stepScreenProvider.formatDate(
-                        stepScreenProvider.periodStartDate,
-                      ),
-                      style: textTheme.bodyMedium,
-                    ),
-                  ],
-                ),
-                Icon(Icons.calendar_month),
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class CycleLengthMenstrualSetting extends StatelessWidget {
-  const CycleLengthMenstrualSetting({
-    super.key,
-    required this.textTheme,
-    required this.stepScreenProvider,
-  });
-
-  final TextTheme textTheme;
-  final StepScreenProvider stepScreenProvider;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          "Cycle Length",
-          style: textTheme.bodyMedium!.copyWith(
-            fontWeight: FontWeight.w400,
-            fontSize: 15.h,
-          ),
-        ),
-        SizedBox(height: 8.h),
-        GestureDetector(
-          onTap:
-              () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder:
-                      (context) => CycleSelectionScreen(
-                        allCycleLength: stepScreenProvider.cycleLength,
-                        stepScreenProvider: stepScreenProvider,
-                      ),
-                ),
-              ),
-          child: Container(
-            height: 54.h,
-            width: double.infinity,
-            padding: EdgeInsets.all(16.h),
-            decoration: BoxDecoration(
-              color: AppColors.onPrimary,
-              border: Border.all(color: Color(0xff1E1E1E).withOpacity(0.12)),
-              borderRadius: BorderRadius.circular(16.r),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "${stepScreenProvider.selectedCycleLength} Days",
-                  style: textTheme.bodyMedium,
-                ),
-              ],
-            ),
-          ),
-        ),
-      ],
     );
   }
 }
