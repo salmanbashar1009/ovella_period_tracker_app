@@ -81,7 +81,7 @@ class StepScreenProvider extends ChangeNotifier {
     {"code": "ja", "name": "Japanese"},
     {"code": "kn", "name": "Kannada"},
   ];
-  Map<String, String> selectedLanguage = {"code": "ar", "name": "Arabic"};
+  Map<String, String> selectedLanguage = {"code": "en", "name": "English"};
 
   void languageSelection(Map<String, String> language) {
     selectedLanguage = language;

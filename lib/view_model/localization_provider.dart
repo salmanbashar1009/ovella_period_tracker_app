@@ -4,21 +4,24 @@ import 'dart:ui' show Locale;
 
 import 'package:ovella_period_tracker_app/l10n/l10n.dart';
 
-class LocalProvider with ChangeNotifier {
+class LocalizationProvider with ChangeNotifier {
   Locale? _locale;
   final Box settingsBox = Hive.box('settings');
-  LocalProvider() {
+  LocalizationProvider() {
     _loadLocale();
   }
 
   Locale? get locale => _locale;
 
   Future<void> setLocale(Locale locale) async {
-    if (!L10n.all.contains(locale)) return;
-
-    _locale = locale;
+    if (!L10n.all.contains(locale) && locale != null) {
+      return;
+    }else{
+      _locale = locale;
+      notifyListeners();
+    }
     await settingsBox.put('locale', locale.languageCode);
-    notifyListeners();
+    // notifyListeners();
   }
 
   void clearLocale() async {

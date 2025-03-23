@@ -36,6 +36,7 @@ class TrackingScreenProvider extends ChangeNotifier{
   /// Calender provider
   TrackingScreenProvider() {
     setMonthYear();
+    setSelectedIndex(0);
   }
 
 

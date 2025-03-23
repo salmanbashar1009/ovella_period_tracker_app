@@ -13,7 +13,7 @@ class L10n {
     const Locale('cs'), // Czech
     const Locale('da'), // Danish
     const Locale('nl'), // Dutch
-    const Locale('en'), // English (UK)
+    const Locale('en','GB'), // English (UK)
     const Locale('et'), // Estonian
     const Locale('tl'), // Filipino (Tagalog)
     const Locale('fi'), // Finnish
