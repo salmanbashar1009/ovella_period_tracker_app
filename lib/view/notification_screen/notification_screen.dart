@@ -66,56 +66,61 @@ class NotificationScreen extends StatelessWidget {
 
     return Scaffold(
       body: BackgroundWidget(
-        child: Padding(
-          padding: AppPadding.screenHorizontalPadding,
-          child: Column(
-            children: [
-              HeaderWidget(title: 'Notifications'),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: notifications.length,
-                  itemBuilder: (context, index) {
-                    final notification = notifications[index];
-                    return Container(
-                      padding: EdgeInsets.symmetric(vertical: 5.h),
-                      margin: EdgeInsets.symmetric(vertical: 5.h),
-                      decoration: BoxDecoration(
-                        color: AppColors.onPrimary.withOpacity(0.5),
-                        borderRadius: BorderRadius.circular(20.r),
-                      ),
-                      child: ListTile(
-                        leading: CircleAvatar(
-                          radius: 20.r,
-                          backgroundImage: NetworkImage(
-                            'https://img.freepik.com/free-photo/black-man-posing_23-2148171684.jpg?semt=ais_hybrid',
+        child: SafeArea(
+          child: Padding(
+            padding: AppPadding.screenHorizontalPadding,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                HeaderWidget(title: 'Notifications'),
+                Expanded(
+                  child: ListView.builder(
+                    itemCount: notifications.length,
+                    itemBuilder: (context, index) {
+                      final notification = notifications[index];
+                      return Container(
+                        padding: EdgeInsets.symmetric(vertical: 5.h),
+                        margin: EdgeInsets.symmetric(vertical: 5.h),
+                        decoration: BoxDecoration(
+                          color: AppColors.onPrimary.withOpacity(0.5),
+                          borderRadius: BorderRadius.circular(20.r),
+                        ),
+                        child: ListTile(
+                          leading: CircleAvatar(
+                            radius: 20.r,
+                            backgroundImage: NetworkImage(
+                              'https://img.freepik.com/free-photo/black-man-posing_23-2148171684.jpg?semt=ais_hybrid',
+                            ),
+                          ),
+                          title: Text(
+                            notification['title'] ?? 'Notification Title',
+                            style: textTheme.bodyLarge,
+                          ),
+                          subtitle: Text(
+                            notification['description'] ??
+                                'Notification description here.',
+                            style: textTheme.bodySmall,
+                          ),
+                          trailing: IconButton(
+                            onPressed: () {
+                              _showNotificationOptions(context);
+                            },
+                            icon: Icon(Icons.more_horiz_outlined),
                           ),
                         ),
-                        title: Text(
-                          notification['title'] ?? 'Notification Title',
-                          style: textTheme.bodyLarge,
-                        ),
-                        subtitle: Text(
-                          notification['description'] ??
-                              'Notification description here.',
-                          style: textTheme.bodySmall,
-                        ),
-                        trailing: IconButton(
-                          onPressed: () {
-                            _showNotificationOptions(context);
-                          },
-                          icon: Icon(Icons.more_horiz),
-                        ),
-                      ),
-                    );
-                  },
+                      );
+                    },
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
     );
   }
+
   void _showNotificationOptions(BuildContext context) {
     showModalBottomSheet(
       context: context,
@@ -126,6 +131,7 @@ class NotificationScreen extends StatelessWidget {
         ),
       ),
       builder: (BuildContext context) {
+        TextTheme textTheme = Theme.of(context).textTheme;
         return Container(
           padding: EdgeInsets.symmetric(vertical: 16.h),
           child: Column(
@@ -133,27 +139,46 @@ class NotificationScreen extends StatelessWidget {
             children: [
               // Mark as Read Option
               ListTile(
-                leading: Icon(Icons.mark_email_read),
-                title: Text('Mark as Read'),
+                leading: Icon(
+                  Icons.mark_email_read_outlined,
+                  color: AppColors.primary,
+                ),
+                title: Text(
+                  'Mark as Read',
+                  style: textTheme.bodyLarge!.copyWith(
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
                 onTap: () {
-                  Navigator.pop(context);  // Close the bottom sheet
+                  Navigator.pop(context);
                 },
               ),
-              // Mark as Unread Option
               ListTile(
-                leading: Icon(Icons.mark_email_unread),
-                title: Text('Mark as Unread'),
+                leading: Icon(
+                  Icons.mark_email_unread_outlined,
+                  color: AppColors.primary,
+                ),
+                title: Text(
+                  'Mark as Unread',
+                  style: textTheme.bodyLarge!.copyWith(
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
                 onTap: () {
-                  Navigator.pop(context);  // Close the bottom sheet
+                  Navigator.pop(context);
                 },
               ),
-              // Delete Option
               ListTile(
-                leading: Icon(Icons.delete),
-                title: Text('Delete'),
+                leading: Icon(Icons.delete_outline, color: AppColors.secondary),
+                title: Text(
+                  'Delete',
+                  style: textTheme.bodyLarge!.copyWith(
+                    fontWeight: FontWeight.normal,
+                    color: AppColors.secondary,
+                  ),
+                ),
                 onTap: () {
-                  // Implement action for deleting the notification
-                  Navigator.pop(context);  // Close the bottom sheet
+                  Navigator.pop(context);
                 },
               ),
             ],
