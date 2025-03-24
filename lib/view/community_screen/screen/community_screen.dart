@@ -21,6 +21,7 @@ class CommunityScreen extends StatelessWidget {
   static const List<String> _appBarTitles = ["Community", "Groups", "Events & Workshops"];
   static const List<String> _searchPlaceholders = [
     "Find topics and discussions",
+    "Find topics and discussions",
     "Find groups",
     "Find events and discussions",
   ];
@@ -125,6 +126,7 @@ class CommunityScreen extends StatelessWidget {
 
                     //-----------search-------------------------------------------------------
                     TextFormField(
+                      onTapOutside: (_){FocusScope.of(context).unfocus();},
                       decoration: inputDecoration(
                         context,
                         currentSearchPlaceholder, 
