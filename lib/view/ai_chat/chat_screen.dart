@@ -11,6 +11,8 @@ import 'package:ovella_period_tracker_app/view_model/chat_screen_provider.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 import 'package:provider/provider.dart';
 
+import 'widgets/new_chat.dart';
+
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
 
@@ -31,19 +33,7 @@ class ChatScreen extends StatelessWidget {
                   actions: [
                     Utils.circleContainer(imagePath: AppImages.dotMenuIcon),
                   ],
-                  title: Utils.primaryButton(
-                    padding: EdgeInsets.symmetric(horizontal: 24.w),
-                    title: "New Chat",
-                    onTap: () {
-                      context.read<ChatScreenProvider>().onNewChat();
-                    },
-                    context: context,
-                    suffixIcon: Icon(
-                      Icons.add,
-                      color: Colors.white,
-                      size: 20.r,
-                    ),
-                  ),
+                  title: NewChat(),
                 ),
 
                 Expanded(
