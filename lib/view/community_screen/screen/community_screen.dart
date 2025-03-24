@@ -13,19 +13,23 @@ import 'package:provider/provider.dart';
 import 'package:ovella_period_tracker_app/view_model/community_provider.dart';
 
 class CommunityScreen extends StatelessWidget {
-  const CommunityScreen({super.key});
+  CommunityScreen({super.key});
 
   // Segmented control options remain the same
   static const List<String> _titles = ["Forum", "Groups", "Events"];
   // AppBar titles will differ
-  static const List<String> _appBarTitles = ["Community", "Groups", "Events & Workshops"];
+  static const List<String> _appBarTitles = [
+    "Community",
+    "Groups",
+    "Events & Workshops",
+  ];
   static const List<String> _searchPlaceholders = [
     "Find topics and discussions",
     "Find topics and discussions",
     "Find groups",
     "Find events and discussions",
   ];
-
+  final FocusNode _focusNode = FocusNode();
   @override
   Widget build(BuildContext context) {
     return BackgroundWidget(
@@ -35,8 +39,10 @@ class CommunityScreen extends StatelessWidget {
             padding: AppPadding.screenHorizontalPadding,
             child: Consumer<CommunityProvider>(
               builder: (context, provider, child) {
-                String currentAppBarTitle = _appBarTitles[provider.selectedIndex];
-                String currentSearchPlaceholder = _searchPlaceholders[provider.selectedIndex];
+                String currentAppBarTitle =
+                    _appBarTitles[provider.selectedIndex];
+                String currentSearchPlaceholder =
+                    _searchPlaceholders[provider.selectedIndex];
 
                 return Column(
                   children: [
@@ -51,8 +57,10 @@ class CommunityScreen extends StatelessWidget {
                         ),
                       ),
                       title: Text(
-                        currentAppBarTitle, 
-                        style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                        currentAppBarTitle,
+                        style: Theme.of(
+                          context,
+                        ).textTheme.headlineMedium?.copyWith(
                           fontSize: 19.sp,
                           fontWeight: FontWeight.w500,
                           color: Color(0xff1E1E1E),
@@ -74,7 +82,9 @@ class CommunityScreen extends StatelessWidget {
                         alignment: Alignment.center,
                         child: Text(
                           "Hey Jane Doe, Welcome to the",
-                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          style: Theme.of(
+                            context,
+                          ).textTheme.bodyLarge?.copyWith(
                             fontSize: 19.sp,
                             fontWeight: FontWeight.w600,
                             color: Color(0xff1E1E1E),
@@ -85,7 +95,9 @@ class CommunityScreen extends StatelessWidget {
                         alignment: Alignment.center,
                         child: Text(
                           "Ovella Forum", // Fixed subtitle for Forum
-                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          style: Theme.of(
+                            context,
+                          ).textTheme.bodyLarge?.copyWith(
                             fontSize: 19.sp,
                             fontWeight: FontWeight.w600,
                           ),
@@ -98,7 +110,9 @@ class CommunityScreen extends StatelessWidget {
                         alignment: Alignment.center,
                         child: Text(
                           "Join discussions, ask questions, and",
-                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          style: Theme.of(
+                            context,
+                          ).textTheme.bodyLarge?.copyWith(
                             fontSize: 14.sp,
                             fontWeight: FontWeight.w400,
                             color: AppColors.lightTextColor,
@@ -109,7 +123,9 @@ class CommunityScreen extends StatelessWidget {
                         alignment: Alignment.center,
                         child: Text(
                           "connect with experts!",
-                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          style: Theme.of(
+                            context,
+                          ).textTheme.bodyLarge?.copyWith(
                             fontSize: 14.sp,
                             fontWeight: FontWeight.w400,
                             color: AppColors.lightTextColor,
@@ -118,18 +134,20 @@ class CommunityScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 28.h),
                     ] else
-                      SizedBox(height: 28.h), 
+                      SizedBox(height: 28.h),
 
-                    
                     CustomSegmentedControl(options: _titles),
                     SizedBox(height: 16.h),
 
                     //-----------search-------------------------------------------------------
                     TextFormField(
-                      onTapOutside: (_){FocusScope.of(context).unfocus();},
+                      onTapOutside: (_) {
+                        _focusNode.unfocus();
+                      },
+                      focusNode: _focusNode,
                       decoration: inputDecoration(
                         context,
-                        currentSearchPlaceholder, 
+                        currentSearchPlaceholder,
                         null,
                         Icon(Icons.search),
                         120.0,

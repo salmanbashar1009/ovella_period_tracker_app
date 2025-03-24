@@ -26,7 +26,6 @@ class AppImages {
   /// Pregnancy screen
   static const String babyImage = "assets/images/pregnancy/baby.png";
   static const String checkupImage = "assets/images/pregnancy/checkup.png";
-
   /// Icons path
   static const String homeIcon = 'assets/icons/home.png';
   static const String loveIcon = 'assets/icons/love.png';
@@ -45,6 +44,7 @@ class AppImages {
   static const String editPencil = 'assets/images/setting_screen/pencil-edit-02.png';
   static const String coupleImage = 'assets/images/setting_screen/couple.png';
   static const String editIcon = 'assets/icons/edit.png';
+  static const String cancelIcon = 'assets/icons/cancel.png';
   static const String periodTileIcon = "assets/icons/period.png";
   static const String fertileTileIcon = "assets/icons/fertile.png";
   static const String ovulationTileIcon = "assets/icons/ovulation.png";
@@ -52,6 +52,7 @@ class AppImages {
 
   ///Pairing Screen
   static const pairingImage = "assets/images/pairing_screen/pairing_image.png";
+  static const askImageCancelInvite = "assets/images/pairing_screen/ask_image.png";
 
 }
 

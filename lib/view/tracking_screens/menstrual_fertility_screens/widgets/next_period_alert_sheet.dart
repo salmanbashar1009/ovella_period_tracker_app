@@ -16,27 +16,39 @@ void showNextPeiodAlertDialogSheet(BuildContext context) {
 
             final nextPeriodDate = DateFormat('dd MMMM').format(menstrualFertilityScreenProvider.getNextPeriodDate());
 
-            final screenHeight = MediaQuery.of(context).size.height * 0.05 ;
-            final screenWidth = MediaQuery.of(context).size.width * 0.8;
 
 
-            return AlertDialog(
-              title: Center(
-                child: Text( "Next Period Date",
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      color: AppColors.textColor
-                  ),),
-              ),
-              content: SizedBox(
-                width: screenWidth ,
-                height: screenHeight,
-                child: Center(
-                  child: Text(nextPeriodDate, style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                    color: const Color(0xFFFF9CB6),
-                    fontSize: 30.sp,
-                  ), ),
-                ),
-              ),
+
+            return LayoutBuilder(
+                builder: (context,constraints) {
+
+                  double dialogHeight = MediaQuery.of(context).size.height * 0.22; // 30% height
+
+                  return AlertDialog(
+                    content: ConstrainedBox(
+                      constraints: BoxConstraints(
+                        maxHeight: dialogHeight,
+                        minHeight: dialogHeight * 0.2, // Minimum height fallback
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text( "Next Period Date",
+                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                color: AppColors.lightTextColor
+                            ),),
+                          SizedBox(height: 10.h,),
+                          Center(
+                            child: Text(nextPeriodDate, style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                              color: Color(0xFFFF9CB6),
+
+                            ), ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                }
             );
           }
       );

@@ -15,30 +15,38 @@ void showOvulationAlertDialogSheet(BuildContext context) {
         builder: (context,menstrualFertilityScreenProvider,child) {
 
           /// date format
-
           final ouvlationDate = DateFormat('dd MMMM').format(menstrualFertilityScreenProvider.getOvulationDate());
 
-          final screenHeight = MediaQuery.of(context).size.height * 0.05 ;
-          final screenWidth = MediaQuery.of(context).size.width * 0.8;
+          return LayoutBuilder(
+            builder: (context,constraints) {
 
+              double dialogHeight = MediaQuery.of(context).size.height * 0.22; // 30% height
 
-          return AlertDialog(
-            title: Center(
-              child: Text( "Ovulation Date",
-              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                color: AppColors.textColor
-              ),),
-            ),
-            content: SizedBox(
-              width: screenWidth ,
-              height: screenHeight,
-              child: Center(
-                child: Text(ouvlationDate, style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                  color: Color(0xFF25C871),
-                  fontSize: 30.sp,
-                ), ),
-              ),
-              ),
+              return AlertDialog(
+                content: ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxHeight: dialogHeight,
+                    minHeight: dialogHeight * 0.2, // Minimum height fallback
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text( "Ovulation Date",
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            color: AppColors.lightTextColor
+                        ),),
+                      SizedBox(height: 10.h,),
+                      Center(
+                        child: Text(ouvlationDate, style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                          color: Color(0xFF25C871),
+
+                        ), ),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            }
           );
         }
       );
