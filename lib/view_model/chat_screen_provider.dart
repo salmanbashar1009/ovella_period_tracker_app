@@ -164,18 +164,27 @@ class ChatScreenProvider with ChangeNotifier {
   bool get isOpenNewChatField => _isOpenNewChatField;
   TextEditingController newChatNameController = TextEditingController();
 
-  void toggleNewChatField(bool value){
+  void toggleNewChatField(bool value) {
     _isOpenNewChatField = value;
-    if(value==true){
+    if (value == true) {
       timeCount();
     }
     debugPrint('New Chat Field: $_isOpenNewChatField');
     notifyListeners();
   }
-  Future<void> timeCount()async {
+
+  Future<void> timeCount() async {
     await Future.delayed(Duration(seconds: 10));
-    if(newChatNameController.text.toString().isEmpty){
+    if (newChatNameController.text.toString().isEmpty) {
       toggleNewChatField(false);
     }
+  }
+
+  //dropdown menu
+  bool _isOpenMenu = false;
+  bool get isOpenMenu => _isOpenMenu;
+  void toggleOpenMenu() {
+    _isOpenMenu = !_isOpenMenu;
+    notifyListeners();
   }
 }

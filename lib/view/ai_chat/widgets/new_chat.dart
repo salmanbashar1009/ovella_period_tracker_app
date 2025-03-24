@@ -20,19 +20,18 @@ class NewChat extends StatelessWidget {
           width:
               chatScreenProvider.isOpenNewChatField
                   ? 200.w
-                  : 150.w, // Width changes
-          height:
-              chatScreenProvider.isOpenNewChatField
-                  ? 50.h
-                  : 50.h, // Height changes
+                  : 155.w, // Width changes
+          height: 50,
           decoration: BoxDecoration(
             color: AppColors.primary,
-            borderRadius: BorderRadius.circular(60),
+            borderRadius: BorderRadius.circular(60.r),
           ),
           alignment: Alignment.center,
           child:
               chatScreenProvider.isOpenNewChatField
                   ? Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Expanded(
                         child: TextFormField(
@@ -49,10 +48,9 @@ class NewChat extends StatelessWidget {
                             focusedBorder: InputBorder.none,
                             disabledBorder: InputBorder.none,
                           ),
-
                         ),
                       ),
-                      SizedBox(width: 10.w,),
+                      SizedBox(width: 10.w),
                       IconButton(
                         onPressed: () {
                           if (chatScreenProvider

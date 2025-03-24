@@ -11,6 +11,7 @@ import 'package:ovella_period_tracker_app/view_model/chat_screen_provider.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 import 'package:provider/provider.dart';
 
+import 'widgets/custom_drop_down_menu.dart';
 import 'widgets/new_chat.dart';
 
 class ChatScreen extends StatelessWidget {
@@ -31,25 +32,30 @@ class ChatScreen extends StatelessWidget {
                   centerTitle: true,
                   surfaceTintColor: Colors.transparent,
                   actions: [
-                    Utils.circleContainer(imagePath: AppImages.dotMenuIcon),
+                    GestureDetector(
+                      onTap: () {
+                        context.read<ChatScreenProvider>().toggleOpenMenu();
+                      },
+                      child: Utils.circleContainer(
+                        imagePath: AppImages.dotMenuIcon,
+                      ),
+                    ),
                   ],
                   title: NewChat(),
                 ),
-
                 Expanded(
                   child: Consumer<ChatScreenProvider>(
                     builder: (_, chatProvider, _) {
                       return SingleChildScrollView(
                         controller: chatProvider.chatScrollController,
-                        reverse: chatProvider.chat.chat == null ? false :  true,
+                        reverse: chatProvider.chat.chat == null ? false : true,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            SizedBox(height: 10.h,),
+                            SizedBox(height: 10.h),
                             Text(
                               "Hello, Jane Doe",
-                              style:
-                                  Theme.of(context).textTheme.headlineSmall,
+                              style: Theme.of(context).textTheme.headlineSmall,
                             ),
                             Text(
                               "How can i assist you today?",
@@ -61,19 +67,27 @@ class ChatScreen extends StatelessWidget {
 
                             Utils.primaryButton(
                               padding: EdgeInsets.symmetric(horizontal: 16.w),
-                              color: chatProvider.isDefaultQuestion1Pressed ? null : Colors.white,
+                              color:
+                                  chatProvider.isDefaultQuestion1Pressed
+                                      ? null
+                                      : Colors.white,
                               title: chatProvider.defaultQuestionList[0],
                               onTap: () {
                                 chatProvider.onDefaultQuestionPressed(1);
 
-                                chatProvider.chatController.text = chatProvider.defaultQuestionList[0];
+                                chatProvider.chatController.text =
+                                    chatProvider.defaultQuestionList[0];
                                 chatProvider.sendCommand();
                               },
                               context: context,
-                              textStyle: chatProvider.isDefaultQuestion1Pressed ? null : Theme.of(context)
-                                  .textTheme
-                                  .bodyMedium
-                                  ?.copyWith(color: AppColors.textColor),
+                              textStyle:
+                                  chatProvider.isDefaultQuestion1Pressed
+                                      ? null
+                                      : Theme.of(
+                                        context,
+                                      ).textTheme.bodyMedium?.copyWith(
+                                        color: AppColors.textColor,
+                                      ),
                             ),
 
                             Utils.primaryButton(
@@ -81,18 +95,26 @@ class ChatScreen extends StatelessWidget {
                               title: chatProvider.defaultQuestionList[1],
                               onTap: () {
                                 chatProvider.onDefaultQuestionPressed(2);
-                                chatProvider.chatController.text = chatProvider.defaultQuestionList[1];
-                              chatProvider.sendCommand();},
+                                chatProvider.chatController.text =
+                                    chatProvider.defaultQuestionList[1];
+                                chatProvider.sendCommand();
+                              },
                               context: context,
-                              color:  chatProvider.isDefaultQuestion2Pressed ? null : Colors.white,
-                              textStyle:  chatProvider.isDefaultQuestion2Pressed ? null : Theme.of(context)
-                                  .textTheme
-                                  .bodyMedium
-                                  ?.copyWith(color: AppColors.textColor),
+                              color:
+                                  chatProvider.isDefaultQuestion2Pressed
+                                      ? null
+                                      : Colors.white,
+                              textStyle:
+                                  chatProvider.isDefaultQuestion2Pressed
+                                      ? null
+                                      : Theme.of(
+                                        context,
+                                      ).textTheme.bodyMedium?.copyWith(
+                                        color: AppColors.textColor,
+                                      ),
                             ),
 
-                           // SizedBox(height: 10.h),
-
+                            // SizedBox(height: 10.h),
                             if (chatProvider.chat.chat != null)
                               ListView.builder(
                                 physics: NeverScrollableScrollPhysics(),
@@ -119,11 +141,18 @@ class ChatScreen extends StatelessWidget {
                                             Flexible(
                                               fit: FlexFit.loose,
                                               child: Container(
-                                                padding: EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h),
+                                                padding: EdgeInsets.symmetric(
+                                                  horizontal: 20.w,
+                                                  vertical: 20.h,
+                                                ),
                                                 decoration: BoxDecoration(
-                                                  color: Color(0xffFF5BFF).withOpacity(0.07),
-                                                  borderRadius: BorderRadius.circular(24.r)
-
+                                                  color: Color(
+                                                    0xffFF5BFF,
+                                                  ).withOpacity(0.07),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                        24.r,
+                                                      ),
                                                 ),
                                                 child: Column(
                                                   spacing: 12.h,
@@ -140,7 +169,14 @@ class ChatScreen extends StatelessWidget {
                                                               .bodyMedium,
                                                     ),
                                                     GestureDetector(
-                                                      onTap:()=> context.read<ChatScreenProvider>().onEdit(text: question),
+                                                      onTap:
+                                                          () => context
+                                                              .read<
+                                                                ChatScreenProvider
+                                                              >()
+                                                              .onEdit(
+                                                                text: question,
+                                                              ),
                                                       child: Image.asset(
                                                         AppImages.editIcon,
                                                         width: 20.w,
@@ -181,27 +217,43 @@ class ChatScreen extends StatelessWidget {
                                             ),
                                             Expanded(
                                               child: Container(
-                                                padding: EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h),
+                                                padding: EdgeInsets.symmetric(
+                                                  horizontal: 20.w,
+                                                  vertical: 20.h,
+                                                ),
                                                 decoration: BoxDecoration(
-                                                  color: Color(0xffFD7E3E).withOpacity(0.07),
-                                                  borderRadius: BorderRadius.circular(24.r),),
+                                                  color: Color(
+                                                    0xffFD7E3E,
+                                                  ).withOpacity(0.07),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                        24.r,
+                                                      ),
+                                                ),
                                                 child: Column(
                                                   spacing: 12.h,
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     DefaultTextStyle(
-                                                        style: Theme.of(context)
-                                                            .textTheme
-                                                            .bodyMedium!,
-                                                        child: AnimatedTextKit(
-                                                          repeatForever: false,
-                                                            totalRepeatCount: 1,
-                                                            animatedTexts:[
-                                                              TyperAnimatedText(reply,speed: const Duration(milliseconds: 40),
-                                                              )
-                                                            ],
-                                                        ),
+                                                      style:
+                                                          Theme.of(context)
+                                                              .textTheme
+                                                              .bodyMedium!,
+                                                      child: AnimatedTextKit(
+                                                        repeatForever: false,
+                                                        totalRepeatCount: 1,
+                                                        animatedTexts: [
+                                                          TyperAnimatedText(
+                                                            reply,
+                                                            speed:
+                                                                const Duration(
+                                                                  milliseconds:
+                                                                      40,
+                                                                ),
+                                                          ),
+                                                        ],
+                                                      ),
                                                     ),
                                                     // Text(
                                                     //   reply,
@@ -217,7 +269,14 @@ class ChatScreen extends StatelessWidget {
                                                               .start,
                                                       children: [
                                                         GestureDetector(
-                                                          onTap:()=> context.read<ChatScreenProvider>().onEdit(text: reply),
+                                                          onTap:
+                                                              () => context
+                                                                  .read<
+                                                                    ChatScreenProvider
+                                                                  >()
+                                                                  .onEdit(
+                                                                    text: reply,
+                                                                  ),
                                                           child: Image.asset(
                                                             AppImages.replyIcon,
                                                             width: 20.w,
@@ -253,9 +312,11 @@ class ChatScreen extends StatelessWidget {
                               ),
 
                             KeyboardVisibilityBuilder(
-                                builder: (_, bool isOpenKeyBoard) {
-                                return SizedBox(height: !isOpenKeyBoard ? 150.h : 0);
-                              }
+                              builder: (_, bool isOpenKeyBoard) {
+                                return SizedBox(
+                                  height: !isOpenKeyBoard ? 150.h : 0,
+                                );
+                              },
                             ),
                           ],
                         ),
@@ -265,7 +326,13 @@ class ChatScreen extends StatelessWidget {
                 ),
               ],
             ),
-
+            Consumer<ChatScreenProvider>(
+              builder: (_, chatScreenProvider, _) {
+                return chatScreenProvider.isOpenMenu
+                    ? CustomDropDownMenu()
+                    : SizedBox();
+              },
+            ),
             ChatInputField(),
           ],
         ),
