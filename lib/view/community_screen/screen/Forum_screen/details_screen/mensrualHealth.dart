@@ -10,7 +10,7 @@ class MenstrualHealth extends StatelessWidget {
   final List<CategoryModel> categories;
   final int selectedIndex;
 
-  MenstrualHealth({
+  const MenstrualHealth({
     super.key,
     required this.categories,
     required this.selectedIndex,
@@ -34,6 +34,7 @@ class MenstrualHealth extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         Navigator.pop(context);
+                        FocusScope.of(context).unfocus();
                       },
                       child: Utils.backButton(context),
                     ),

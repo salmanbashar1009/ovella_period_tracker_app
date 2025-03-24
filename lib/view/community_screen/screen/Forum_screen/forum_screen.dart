@@ -58,7 +58,7 @@ class CategorySection extends StatelessWidget {
             Text(title, style: Theme.of(context).textTheme.bodyLarge),
             Spacer(),
             GestureDetector(
-              onTap: () => Navigator.pushNamed(context, routeName),
+              onTap: () => {Navigator.pushNamed(context, routeName)},
               child: Text(
                 "See all",
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(

@@ -17,27 +17,36 @@ void showFertileAlertDialogSheet(BuildContext context) {
           final  fertileDateStart = DateFormat('dd MMMM').format(menstrualFertilityScreenProvider.getFertileDates().first);
            final fertileDateEnd = DateFormat('dd MMMM').format(menstrualFertilityScreenProvider.getFertileDates().last);
 
-            final screenHeight = MediaQuery.of(context).size.height * 0.05 ;
-            final screenWidth = MediaQuery.of(context).size.width * 0.8;
 
+            return LayoutBuilder(
+                builder: (context,constraints) {
 
-            return AlertDialog(
-              title: Center(
-                child: Text( "Fertile Date",
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      color: AppColors.textColor
-                  ),),
-              ),
-              content: SizedBox(
-                width: screenWidth ,
-                height: screenHeight,
-                child: Center(
-                  child: Text("$fertileDateStart - $fertileDateEnd"   , style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                    color:const Color(0xFFF4D1FF),
-                    fontSize: 24.sp,
-                  ), ),
-                ),
-              ),
+                  double dialogHeight = MediaQuery.of(context).size.height * 0.22; // 30% height
+
+                  return AlertDialog(
+                    content: ConstrainedBox(
+                      constraints: BoxConstraints(
+                        maxHeight: dialogHeight,
+                        minHeight: dialogHeight * 0.2, // Minimum height fallback
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text( "Fertile Date",
+                            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                color: AppColors.lightTextColor
+                            ),),
+                          SizedBox(height: 10.h,),
+                          Center(
+                            child: Text(fertileDateStart + " - " + fertileDateEnd, style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                              color: Colors.purpleAccent.shade200,
+                            ), ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                }
             );
           }
       );
