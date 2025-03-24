@@ -41,31 +41,27 @@ void showPeriodAlertDialogSheet(BuildContext context) {
                 ),),
               ],
             ),
-            content: SizedBox(
-              height: screenHeight > 800 ? screenHeight * 0.16 : screenHeight * 0.23,
-              width: screenWidth * 0.9,
-
-
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                    TextButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                        Navigator.pushNamed(context, RouteName.addNoteScreen);
-                         // Close the dialog
-                      },
-                      child:  Text('Add Note',style: Theme.of(context).textTheme.bodyMedium,),
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.of(context).pop(); // Close the dialog
-                        Navigator.pushNamed(context, RouteName.editCalenderScreen);
-                      },
-                      child:  Text('Edit Period',style: Theme.of(context).textTheme.bodyMedium,),
-                    ),
-                    Consumer2<TrackingScreenProvider, MenstrualFertilityScreenProvider>(
+            content: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                  TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                      Navigator.pushNamed(context, RouteName.addNoteScreen);
+                       // Close the dialog
+                    },
+                    child:  Text('Add Note',style: Theme.of(context).textTheme.bodyMedium,),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pop(); // Close the dialog
+                      Navigator.pushNamed(context, RouteName.editCalenderScreen);
+                    },
+                    child:  Text('Edit Period',style: Theme.of(context).textTheme.bodyMedium,),
+                  ),
+                  Expanded(
+                    child: Consumer2<TrackingScreenProvider, MenstrualFertilityScreenProvider>(
                       builder: (context,trackingScreenProvider,menstrualFertilityScreenProvider,child) {
                         return TextButton(
                           onPressed: () {
@@ -79,8 +75,8 @@ void showPeriodAlertDialogSheet(BuildContext context) {
                         );
                       }
                     ),
-                  ]
-              ),
+                  ),
+                ]
             ),
           );
         }
