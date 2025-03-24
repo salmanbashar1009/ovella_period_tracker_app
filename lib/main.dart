@@ -11,6 +11,7 @@ import 'package:ovella_period_tracker_app/view_model/community_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/create_account_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/localization_provider.dart';
+import 'package:ovella_period_tracker_app/view_model/menstrual_fertility_screen_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/new_password_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/otp_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/pairing_screen_provider.dart';
@@ -54,8 +55,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<HomeScreenProvider>(
           create: (_) => HomeScreenProvider(),
         ),
-        ChangeNotifierProvider<TrackingScreenProvider>(
-          create: (_) => TrackingScreenProvider(),
+        ChangeNotifierProxyProvider<HomeScreenProvider,TrackingScreenProvider>(
+          create: (_) => TrackingScreenProvider(HomeScreenProvider()),
+          update: (_,homeScreenProvider,_) => TrackingScreenProvider(homeScreenProvider),
         ),
         ChangeNotifierProvider<CommunityProvider>(
           create: (_) => CommunityProvider(),
@@ -87,6 +89,9 @@ class MyApp extends StatelessWidget {
           create: (_) => ChatScreenProvider(),
         ),
         ChangeNotifierProvider<LocalizationProvider>(create: (_) => LocalizationProvider()),
+        ChangeNotifierProxyProvider<TrackingScreenProvider,MenstrualFertilityScreenProvider>(
+            create: (context) => MenstrualFertilityScreenProvider(trackingScreenProvider: Provider.of<TrackingScreenProvider>(context,listen: false)),
+            update: (context,trackingScreenProvider,previous) => MenstrualFertilityScreenProvider(trackingScreenProvider: trackingScreenProvider)),
       ],
       child: ScreenUtilInit(
         designSize: const Size(deviceWidth, deviceHeight),

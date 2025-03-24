@@ -63,7 +63,6 @@ class StepScreenProvider extends ChangeNotifier {
     {"code": "da", "name": "Danish"},
     {"code": "nl", "name": "Dutch"},
     {"code": "en", "name": "English"},
-    {"code": "en-uk", "name": "English(UK)"},
     {"code": "et", "name": "Estonian"},
     {"code": "tl", "name": "Filipino (Tagalog)"},
     {"code": "fi", "name": "Finnish"},

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
-import 'package:ovella_period_tracker_app/utility/utils.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/widgets/section_header.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/widgets/week_list.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/widgets/screen_header.dart';
@@ -16,65 +15,75 @@ class PregnancyDetailScreen extends StatelessWidget {
     return Scaffold(
       body: BackgroundWidget(
         child: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Padding(
-                  padding: AppPadding.screenPadding,
-                  child: ScreenHeader(title: "Weekly",onTap: (){Navigator.pop(context);},),
-                ),
-                SizedBox(height: 24.h),
-                WeekList(),
-                Padding(
-                  padding: AppPadding.screenPadding,
-                  child: Container(
-                    width: 360.w,
-                    height: 245.h,
-                    padding: EdgeInsets.symmetric(vertical: 15.h),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFF2DFD4),
-                      borderRadius: BorderRadius.circular(24.r),
-                      border: Border.all(color: AppColors.onPrimary),
-                    ),
-                    child: Image.asset(
-                      "assets/images/pregnancy/baby.png",
-                      fit: BoxFit.contain,
-                    ),
+          child: Column(
+            children: [
+              Padding(
+                padding: AppPadding.screenHorizontalPadding,
+                child: ScreenHeader(title: "Weekly",onTap: (){Navigator.pop(context);},),
+              ),
+              SizedBox(height: 16.h),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      SizedBox(height: 8.h),
+                      Padding(
+                        padding: AppPadding.screenHorizontalPadding,
+                        child: WeekList(),
+                      ),
+                      Padding(
+                        padding: AppPadding.screenPadding,
+                        child: Container(
+                          width: 360.w,
+                          height: 245.h,
+                          padding: EdgeInsets.symmetric(vertical: 15.h),
+                          decoration: BoxDecoration(
+                            color: Color(0xFFF2DFD4),
+                            borderRadius: BorderRadius.circular(24.r),
+                            border: Border.all(color: AppColors.onPrimary),
+                          ),
+                          child: Image.asset(
+                            "assets/images/pregnancy/baby.png",
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      ),
+                      // SizedBox(height: 10.h),
+                      // Replace ListView.builder with a Column
+                      Column(
+                        children: List.generate(5, (index) {
+                          return Container(
+                            width: double.infinity,
+                            padding: EdgeInsets.all(20.r),
+                            margin: EdgeInsets.symmetric(vertical: 10.h, horizontal: 20.w),
+                            decoration: BoxDecoration(
+                              color: AppColors.onPrimary,
+                              borderRadius: BorderRadius.circular(24.r),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                SectionHeader(title: "Your Baby at 12 weeks Pregnant"),
+                                Text('''Length: Around 5.1 cm (2.1 inch) Weight: Around 58 gm Size comparison: About the size of a lime All measurements are approximate and vary within the normal range''',
+                                maxLines: 10,
+                                softWrap: true,
+                                overflow: TextOverflow.ellipsis,
+                                textAlign: TextAlign.left,
+                                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                  fontSize: 13.sp
+                                )
+                                ),
+                              ],
+                            ),
+                          );
+                        }),
+                      ),
+                    ],
                   ),
                 ),
-                // SizedBox(height: 10.h),
-                // Replace ListView.builder with a Column
-                Column(
-                  children: List.generate(5, (index) {
-                    return Container(
-                      width: double.infinity,
-                      padding: EdgeInsets.all(20.r),
-                      margin: EdgeInsets.symmetric(vertical: 10.h, horizontal: 20.w),
-                      decoration: BoxDecoration(
-                        color: AppColors.onPrimary,
-                        borderRadius: BorderRadius.circular(24.r),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          SectionHeader(title: "Your Baby at 12 weeks Pregnant"),
-                          Text('''Length: Around 5.1 cm (2.1 inch) Weight: Around 58 gm Size comparison: About the size of a lime All measurements are approximate and vary within the normal range''',
-                          maxLines: 10,
-                          softWrap: true,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.left,
-                          style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                            fontSize: 13.sp
-                          )
-                          ),
-                        ],
-                      ),
-                    );
-                  }),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
