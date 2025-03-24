@@ -165,16 +165,21 @@ class HomeScreen extends StatelessWidget{
 
                           SizedBox(height: 16.h,),
 
+                          /// Wellness tips header
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text("Tailored Wellness\njourney",
                               style: Theme.of(context).textTheme.headlineLarge,),
 
-                              Text("See all",
-                                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                  color: AppColors.lightTextColor
-                                ),),
+                              TextButton(
+                                child: Text("See all",
+                                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                      color: AppColors.lightTextColor
+                                  ),
+                                ),
+                                onPressed: ()=>Navigator.pushNamed(context,RouteName.wellnessTipsScreen),
+                              ),
                             ],
                           ),
 
@@ -187,6 +192,7 @@ class HomeScreen extends StatelessWidget{
 
                 SizedBox(height: 16.h,),
 
+                /// Wellness tips list
                 SizedBox(
                   height: deviceHeight < 660 ? 380.h : 325.h,
                   child: WellnessTipsList(),

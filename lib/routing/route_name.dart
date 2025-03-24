@@ -34,5 +34,6 @@ class RouteName{
   static const String selectAgeScreen = '/selectAgeScreen';
   static const String menstrualHealthDetails = '/menstrualHealthDetails';
   static const String notificationScreen = '/notificationScreen';
+  static const String wellnessTipsScreen = '/wellnessTipsScreen';
 
 }

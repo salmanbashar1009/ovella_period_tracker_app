@@ -31,6 +31,7 @@ import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertil
 import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/pregnancy_detail_screen.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/tracking_screen.dart';
 import '../view/home_screen/home_screen.dart';
+import '../view/home_screen/see_all_wellness_tips_screen/wellness_tips_screen.dart';
 import '../view/on_boarding_screen/on_boarding_screen.dart';
 import '../view/step_screen/step_screen.dart';
 
@@ -74,6 +75,7 @@ class AppRoutes {
       RouteName.selectAgeScreen: (context) => SelectAgeScreen(),
       RouteName.menstrualHealthDetails: (context) => MenstrualHealthDetails(),
       RouteName.notificationScreen: (context) => NotificationScreen(),
+      RouteName.wellnessTipsScreen: (context) => WellnessTipsScreen(),
     };
   }
 }
