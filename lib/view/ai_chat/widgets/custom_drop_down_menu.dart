@@ -17,7 +17,15 @@ class CustomDropDownMenu extends StatelessWidget {
         padding: AppPadding.screenPadding,
         decoration: BoxDecoration(
             color: AppColors.onPrimary,
-            borderRadius:BorderRadius.circular(20.r)
+            borderRadius:BorderRadius.circular(20.r),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.15),
+              spreadRadius: 10.r,
+              blurRadius: 10.r,
+              offset: Offset(-4, 8)
+            )
+          ]
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -38,7 +46,7 @@ class CustomDropDownMenu extends StatelessWidget {
                 horizontal: 24.w,
                 vertical: 12.h,
               ),
-              title: 'Send to Doctor',
+              title: 'Export Chat',
               textColor: AppColors.primary,
               onTap: () {},
               context: context,

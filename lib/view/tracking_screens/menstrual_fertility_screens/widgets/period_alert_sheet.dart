@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
+import 'package:ovella_period_tracker_app/view_model/menstrual_fertility_screen_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -15,10 +16,12 @@ void showPeriodAlertDialogSheet(BuildContext context) {
 
           String periodStartDate = "";
           String periodEndDate = "";
+          String periodMonth = "";
 
           if (trackingScreenProvider.periodDates.isNotEmpty) {
-            periodStartDate = DateFormat('dd MMMM').format(trackingScreenProvider.periodDates.first);
-            periodEndDate = DateFormat('dd MMMM').format(trackingScreenProvider.periodDates.last);
+            periodStartDate = DateFormat('dd').format(trackingScreenProvider.periodDates.first);
+            periodEndDate = DateFormat('dd').format(trackingScreenProvider.periodDates.last);
+            periodMonth = DateFormat('MMMM').format(trackingScreenProvider.periodDates.last);
           }
 
           final screenHeight = MediaQuery.of(context).size.height;
@@ -26,18 +29,26 @@ void showPeriodAlertDialogSheet(BuildContext context) {
 
 
           return AlertDialog(
-            title: Text( periodStartDate.isNotEmpty ? "Period Dates: \n$periodStartDate - $periodEndDate" : "Period Dates : Not Selected",
-            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-              color: AppColors.secondary
-            ),),
+
+            title: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Period Date:",style: Theme.of(context).textTheme.bodyMedium,),
+                SizedBox(height: 10.h,),
+                Text( periodStartDate.isNotEmpty ? "Period Date: $periodStartDate - $periodEndDate , $periodMonth" : "Period Dates : Not Selected",
+                style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                  color: AppColors.secondary
+                ),),
+              ],
+            ),
             content: SizedBox(
-              height: screenHeight > 800 ? screenHeight * 0.20 : screenHeight * 0.23,
+              height: screenHeight > 800 ? screenHeight * 0.16 : screenHeight * 0.23,
               width: screenWidth * 0.9,
 
 
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                     TextButton(
                       onPressed: () {
@@ -54,12 +65,19 @@ void showPeriodAlertDialogSheet(BuildContext context) {
                       },
                       child:  Text('Edit Period',style: Theme.of(context).textTheme.bodyMedium,),
                     ),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.of(context).pop(); // Close the dialog
-                        context.read<TrackingScreenProvider>().removePeriodDates();
-                      },
-                      child:  Text('Remove Period',style: Theme.of(context).textTheme.bodyMedium,),
+                    Consumer2<TrackingScreenProvider, MenstrualFertilityScreenProvider>(
+                      builder: (context,trackingScreenProvider,menstrualFertilityScreenProvider,child) {
+                        return TextButton(
+                          onPressed: () {
+                            Navigator.of(context).pop(); // Close the dialog
+
+                            trackingScreenProvider.removePeriodDates();
+                            menstrualFertilityScreenProvider.getOvulationDate();
+
+                          },
+                          child:  Text('Remove Period',style: Theme.of(context).textTheme.bodyMedium,),
+                        );
+                      }
                     ),
                   ]
               ),
