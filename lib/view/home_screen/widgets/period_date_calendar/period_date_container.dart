@@ -54,26 +54,44 @@ class PeriodDateContainer extends StatelessWidget {
       ),
       child: Column(
         children: [
+
           /// Header of the Container
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w,),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                _arrowButton(isLeftButton: true, onPressed: () {}),
-                Text(
-                  DateFormat('MMM, yyyy').format(DateTime.now()),
-                  style: Theme.of(
-                    context,
-                  ).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
+
+                _arrowButton(isLeftButton: true,
+                  onPressed: () {
+                  context.read<HomeScreenProvider>().changeMonth(-1);
+                },
                 ),
-                _arrowButton(isLeftButton: false, onPressed: () {}),
+
+                Consumer<HomeScreenProvider>(
+                  builder: (_,homeScreenProvider, _) {
+                    return Text(
+                      DateFormat('MMM, yyyy').format(homeScreenProvider.currentDate),
+                      style: Theme.of(
+                        context,
+                      ).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
+                    );
+                  }
+                ),
+
+                _arrowButton(
+                    isLeftButton: false,
+                    onPressed: () {
+                      context.read<HomeScreenProvider>().changeMonth(1);
+                    },
+                ),
               ],
             ),
           ),
 
           SizedBox(height: 16.h),
 
+          /// List view of calendar date
           Consumer<HomeScreenProvider>(
             builder: (_, homeScreenProvider, _) {
               return SizedBox(
@@ -106,7 +124,7 @@ class PeriodDateContainer extends StatelessWidget {
                     return Container(
                       width: 62.w,
                       padding: EdgeInsets.all(14.r),
-                      margin: EdgeInsets.only(left: 12.w),
+                      margin: EdgeInsets.only(left: 12.w,right: index == context.read<HomeScreenProvider>().daysInMonth.length-1 ? 12.w : 0),
                       decoration: BoxDecoration(
                         color:
                             isToday && isTodayPeriodDay
@@ -155,6 +173,7 @@ class PeriodDateContainer extends StatelessWidget {
 
           SizedBox(height: 20.h),
 
+          /// Circular progress view
           Container(
             width: 220.w,
             height: 220.h,
@@ -272,6 +291,7 @@ class PeriodDateContainer extends StatelessWidget {
 
           SizedBox(height: 24.h),
 
+          /// Log period button
           Utils.primaryButton(
             title: "Log Period",
             padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 12.h),
