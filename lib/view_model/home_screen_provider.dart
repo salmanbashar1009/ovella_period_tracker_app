@@ -64,10 +64,7 @@ class HomeScreenProvider with ChangeNotifier {
     }
 
     _setOvulationDay();
-    DateTime firstPeriodDate = _tempPeriodDaysSelection![0];
-   Duration difference = firstPeriodDate.difference(DateTime.now());
-     _periodDaysLeft = difference.inDays;
-   notifyListeners();
+updatePeriodDaysLeft();
   }
 
   Future<void> updatePeriodInformationModel({
@@ -104,40 +101,42 @@ class HomeScreenProvider with ChangeNotifier {
   DateTime _currentDate = DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day);
   int _periodDaysLeft = 0;
   int get periodDaysLeft => _periodDaysLeft;
-  DateTime? _selectedDate;
   final ScrollController periodScrollController = ScrollController();
 
   DateTime get currentDate => _currentDate;
-  DateTime? get selectedDate => _selectedDate;
   List<DateTime> get daysInMonth => _getDaysInMonth(_currentDate);
+
+  void updatePeriodDaysLeft(){
+    DateTime firstPeriodDate = _tempPeriodDaysSelection![0];
+    Duration difference = firstPeriodDate.difference(DateTime.now());
+    _periodDaysLeft = difference.inDays;
+    notifyListeners();
+  }
 
   List<DateTime> _getDaysInMonth(DateTime date) {
     int daysInMonth = DateTime(date.year, date.month + 1, 0).day;
     return List.generate(daysInMonth, (index) => DateTime(date.year, date.month, index + 1));
   }
 
-
-
-  void selectDate(DateTime date) {
-    _selectedDate = date;
-    notifyListeners();
-  }
-
   void changeMonth(int increment) {
     _currentDate = DateTime(_currentDate.year, _currentDate.month + increment, 1);
-    _selectedDate = null;
+    if(_currentDate.month == DateTime.now().month && _currentDate.year == DateTime.now().year){
+      _currentDate = DateTime.now();
+    }
     notifyListeners();
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => _scrollToCurrentDate());
+      WidgetsBinding.instance.addPostFrameCallback((_) => _scrollToCurrentDate());
+
   }
 
   void _scrollToCurrentDate() {
+    debugPrint("\nscrolling to current date\n");
     int currentIndex = _currentDate.day -1 ;
     double itemWidth = 74.w;
     double screenWidth = periodScrollController.position.viewportDimension;
 
     double scrollTo = (currentIndex * itemWidth) - (screenWidth / 2) + (itemWidth / 2);
-    periodScrollController.jumpTo(scrollTo.clamp(0, periodScrollController.position.maxScrollExtent));
+    periodScrollController.jumpTo(scrollTo.clamp(0, periodScrollController.position.maxScrollExtent,),);
   }
 
   /// All about add log
@@ -274,14 +273,9 @@ class HomeScreenProvider with ChangeNotifier {
   }
 
   Future<void> saveLogPeriod() async {
-    debugPrint("\nsaving log period...\n");
-   // if(_tempPeriodDaysSelection != _periodInformationModel!.nextPeriodDates){
-     // debugPrint("\nentered in condition\n");
+
       await updatePeriodInformationModel(nextPeriodDates: _tempPeriodDaysSelection);
-   // }
-   // else{
-    //  debugPrint("\nNot entered in condition\ntemp period days : ${_tempPeriodDaysSelection}\n and already selected : ${_periodInformationModel!.nextPeriodDates}\n");
-   // }
+    updatePeriodDaysLeft();
   }
 
   void cancelLogPeriod(){
