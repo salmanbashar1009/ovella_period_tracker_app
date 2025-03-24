@@ -41,9 +41,11 @@ class AppImages {
   static const String editPencil = 'assets/images/setting_screen/pencil-edit-02.png';
   static const String coupleImage = 'assets/images/setting_screen/couple.png';
   static const String editIcon = 'assets/icons/edit.png';
+  static const String cancelIcon = 'assets/icons/cancel.png';
 
   ///Pairing Screen
   static const pairingImage = "assets/images/pairing_screen/pairing_image.png";
+  static const askImageCancelInvite = "assets/images/pairing_screen/ask_image.png";
 
 }
 
