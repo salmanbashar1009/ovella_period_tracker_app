@@ -18,6 +18,7 @@ class AppImages {
   /// Home screen image
   static const String fibroids = 'assets/images/home_screen/fibroids.png';
   static const String wellnessWoman = 'assets/images/home_screen/wellness-woman.png';
+  static const String wellnessWoman02 = 'assets/images/home_screen/wellness_tips_02.png';
 
   /// ai chat
   static const String gptProfilePicture = "assets/images/ai_chat/gpt_pp.png";
