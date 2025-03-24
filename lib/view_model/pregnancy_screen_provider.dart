@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:ovella_period_tracker_app/constant/images.dart';
 
 class PregnancyScreenProvider extends ChangeNotifier{
   int _selectedWeek = 0;
@@ -12,11 +13,13 @@ class PregnancyScreenProvider extends ChangeNotifier{
   ///image slider provider
 
   final List<String> _imagePath = [
-    "assets/images/pregnancy/baby.png",
-    "assets/images/pregnancy/checkup.png",
-    "assets/images/pregnancy/baby.png",
-    "assets/images/pregnancy/checkup.png",
-    "assets/images/pregnancy/baby.png",
+    AppImages.babyImage,
+    AppImages.checkupImage,
+    AppImages.babyImage,
+    AppImages.checkupImage,
+    AppImages.babyImage,
+    AppImages.checkupImage,
+
   ];
 
   List<String> get imagePath => _imagePath;

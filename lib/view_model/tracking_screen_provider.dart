@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ovella_period_tracker_app/view_model/menstrual_fertility_screen_provider.dart';
 
 class TrackingScreenProvider extends ChangeNotifier{
+
   int _selectedIndex = 0;
 
   int get selectedIndex => _selectedIndex;
@@ -37,6 +39,7 @@ class TrackingScreenProvider extends ChangeNotifier{
   TrackingScreenProvider() {
     setMonthYear();
     setSelectedIndex(0);
+
   }
 
 
@@ -52,7 +55,7 @@ class TrackingScreenProvider extends ChangeNotifier{
   late DateTime _selectedMonthYear;
   final List<DateTime> _periodDates = [];
   final List<DateTime> _fertileDates =[DateTime(2025,3,5),DateTime(2025,3,12),DateTime(2025,3,1)];
-  final List<DateTime> _ovulationDates = [DateTime(2025,3,10)];
+  final List<DateTime> _ovulationDates = [];
 
   DateTime get selectedMonthYear => _selectedMonthYear;
   List<DateTime> get periodDates => _periodDates;
@@ -93,11 +96,23 @@ class TrackingScreenProvider extends ChangeNotifier{
   //  notifyListeners();
   // }
 
+
   void removePeriodDates(){
     _periodDates.clear();
+    removeOvulationDate();
+    removeFertileDate();
     notifyListeners();
   }
 
+  void removeOvulationDate(){
+    _ovulationDates.clear();
+    notifyListeners();
+  }
+
+  void removeFertileDate(){
+    _fertileDates.clear();
+    notifyListeners();
+  }
 
   final List<DateTime> _borderSet = [];
   List<DateTime> get borderSet => _borderSet;
