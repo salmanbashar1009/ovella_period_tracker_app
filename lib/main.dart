@@ -55,8 +55,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<HomeScreenProvider>(
           create: (_) => HomeScreenProvider(),
         ),
-        ChangeNotifierProvider<TrackingScreenProvider>(
-          create: (_) => TrackingScreenProvider(),
+        ChangeNotifierProxyProvider<HomeScreenProvider,TrackingScreenProvider>(
+          create: (_) => TrackingScreenProvider(HomeScreenProvider()),
+          update: (_,homeScreenProvider,_) => TrackingScreenProvider(homeScreenProvider),
         ),
         ChangeNotifierProvider<CommunityProvider>(
           create: (_) => CommunityProvider(),
@@ -99,7 +100,7 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
 
           final localProvider = Provider.of<LocalizationProvider>(context);
-          debugPrint("\nlocalization : ${localProvider.locale!.languageCode}\n");
+       //   debugPrint("\nlocalization : ${localProvider.locale!.languageCode}\n");
           return MaterialApp(
             supportedLocales: L10n.all,
             locale: localProvider.locale,

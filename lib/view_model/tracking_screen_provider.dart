@@ -1,8 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ovella_period_tracker_app/view_model/menstrual_fertility_screen_provider.dart';
+import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 
 class TrackingScreenProvider extends ChangeNotifier{
+
+  HomeScreenProvider? homeScreenProvider;
+
+  /// Constructor
+  TrackingScreenProvider(this.homeScreenProvider) {
+    _periodDates = homeScreenProvider?.tempPeriodDaysSelection ?? [];
+    setMonthYear();
+    setSelectedIndex(0);
+
+  }
 
   int _selectedIndex = 0;
 
@@ -35,12 +45,7 @@ class TrackingScreenProvider extends ChangeNotifier{
 
 
 
-  /// Calender provider
-  TrackingScreenProvider() {
-    setMonthYear();
-    setSelectedIndex(0);
 
-  }
 
 
   List<int> _monthList = [1,2,3,4,5,5,6,7,8,9,10,11,12];
@@ -53,12 +58,14 @@ class TrackingScreenProvider extends ChangeNotifier{
   int get month => _month;
 
   late DateTime _selectedMonthYear;
-  final List<DateTime> _periodDates = [];
-  final List<DateTime> _fertileDates =[DateTime(2025,3,5),DateTime(2025,3,12),DateTime(2025,3,1)];
+   List<DateTime> _periodDates = [];
+  final List<DateTime> _nextPeriodDates = [];
+  final List<DateTime> _fertileDates =[];
   final List<DateTime> _ovulationDates = [];
 
   DateTime get selectedMonthYear => _selectedMonthYear;
   List<DateTime> get periodDates => _periodDates;
+  List<DateTime> get nextPeriodDates => _nextPeriodDates;
   List<DateTime> get fertileDates => _fertileDates;
   List<DateTime> get ovulationDates => _ovulationDates;
 
@@ -84,23 +91,11 @@ class TrackingScreenProvider extends ChangeNotifier{
   }
 
 
-  // void onPeriodDayTap(int day,) {
-  //   DateTime tappedDate = DateTime(_year, _month, day);
-  //
-  //   if (_periodDays.contains(tappedDate)) {
-  //     _periodDays.remove(tappedDate);
-  //   } else {
-  //     _periodDays.add(tappedDate);
-  //   }
-  //
-  //  notifyListeners();
-  // }
-
-
   void removePeriodDates(){
     _periodDates.clear();
     removeOvulationDate();
     removeFertileDate();
+    removeNextPeriodDates();
     notifyListeners();
   }
 
@@ -111,6 +106,11 @@ class TrackingScreenProvider extends ChangeNotifier{
 
   void removeFertileDate(){
     _fertileDates.clear();
+    notifyListeners();
+  }
+
+  void removeNextPeriodDates(){
+    _nextPeriodDates.clear();
     notifyListeners();
   }
 
@@ -146,28 +146,6 @@ class TrackingScreenProvider extends ChangeNotifier{
   }
 
 
-  // void changeMonth(DateTime newMonth) {
-  //   _selectedMonthYear = newMonth;
-  //   notifyListeners();
-  // }
-  //
-  // void previousMonth() {
-  //   _selectedMonthYear = DateTime(
-  //     _selectedMonthYear.year,
-  //     _selectedMonthYear.month - 1,
-  //   );
-  //   notifyListeners();
-  // }
-  //
-  // void nextMonth() {
-  //   _selectedMonthYear = DateTime(
-  //     _selectedMonthYear.year,
-  //     _selectedMonthYear.month + 1,
-  //   );
-  //   notifyListeners();
-  // }
-
-
   Color? getDayColor(int day ) {
     DateTime tappedDate = DateTime(_year, _month, day);//bool isPeriodDateSaved
     if (_periodDates.contains(tappedDate) ) {         //&& isPeriodDateSaved == true
@@ -176,7 +154,9 @@ class TrackingScreenProvider extends ChangeNotifier{
       return const Color(0xFFF4D1FF);
     } else if (_ovulationDates.contains(tappedDate)) {
       return const Color(0xFF27C96A);
-    }else{
+    }else if(_nextPeriodDates.contains(tappedDate)){
+      return const Color(0xFFFF9CB6);
+    } else{
     return Colors.transparent;
   }
 

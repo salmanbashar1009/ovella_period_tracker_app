@@ -8,6 +8,8 @@ class MenstrualFertilityScreenProvider extends ChangeNotifier {
   MenstrualFertilityScreenProvider({required this.trackingScreenProvider}) {
     if (trackingScreenProvider.periodDates.isNotEmpty) {
       _periodStartDate = trackingScreenProvider.periodDates.first;
+      getNextPeriodDate();
+      getFertileDates();
       notifyListeners();
 
     } else {
@@ -16,22 +18,34 @@ class MenstrualFertilityScreenProvider extends ChangeNotifier {
       notifyListeners();
     }
     trackingScreenProvider.ovulationDates.add(getOvulationDate());
-    trackingScreenProvider.getDayColor(getOvulationDate().day);
+    trackingScreenProvider.fertileDates.addAll(getFertileDates());
+    trackingScreenProvider.nextPeriodDates.add(getNextPeriodDate());
+    // trackingScreenProvider.getDayColor(getOvulationDate().day);
 
   }
 
   DateTime get periodStartDate => _periodStartDate;
 
   DateTime getOvulationDate() {
-    return _periodStartDate.add(const Duration(days: 14));
+    final ovulationDate =_periodStartDate.add(const Duration(days: 14));
+    debugPrint("ovulation date : $ovulationDate");
+    return ovulationDate;
+  }
+
+  DateTime getNextPeriodDate(){
+    final nextPeriodDate = _periodStartDate.add(const Duration(days: 28));
+    debugPrint("next period date : $nextPeriodDate");
+    return nextPeriodDate;
   }
 
   List<DateTime> getFertileDates() {
     DateTime ovulationDate = getOvulationDate();
     List<DateTime> fertileDates = [];
     for (int i = 5; i >= 0; i--) {
-      fertileDates.add(ovulationDate.subtract(Duration(days: i)));
+      fertileDates.add((ovulationDate).subtract(Duration(days: i)));
     }
+    fertileDates.removeAt(5);
+    debugPrint("fertile dates : $fertileDates");
     return fertileDates;
   }
 }
