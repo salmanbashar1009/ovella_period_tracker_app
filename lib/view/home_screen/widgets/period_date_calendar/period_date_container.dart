@@ -54,36 +54,37 @@ class PeriodDateContainer extends StatelessWidget {
       ),
       child: Column(
         children: [
-
           /// Header of the Container
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.w,),
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-
-                _arrowButton(isLeftButton: true,
+                _arrowButton(
+                  isLeftButton: true,
                   onPressed: () {
-                  context.read<HomeScreenProvider>().changeMonth(-1);
-                },
+                    context.read<HomeScreenProvider>().changeMonth(-1);
+                  },
                 ),
 
                 Consumer<HomeScreenProvider>(
-                  builder: (_,homeScreenProvider, _) {
+                  builder: (_, homeScreenProvider, _) {
                     return Text(
-                      DateFormat('MMM, yyyy').format(homeScreenProvider.currentDate),
-                      style: Theme.of(
-                        context,
-                      ).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
+                      DateFormat(
+                        'MMM, yyyy',
+                      ).format(homeScreenProvider.currentDate),
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        fontWeight: FontWeight.w600,
+                      ),
                     );
-                  }
+                  },
                 ),
 
                 _arrowButton(
-                    isLeftButton: false,
-                    onPressed: () {
-                      context.read<HomeScreenProvider>().changeMonth(1);
-                    },
+                  isLeftButton: false,
+                  onPressed: () {
+                    context.read<HomeScreenProvider>().changeMonth(1);
+                  },
                 ),
               ],
             ),
@@ -124,7 +125,18 @@ class PeriodDateContainer extends StatelessWidget {
                     return Container(
                       width: 62.w,
                       padding: EdgeInsets.all(14.r),
-                      margin: EdgeInsets.only(left: 12.w,right: index == context.read<HomeScreenProvider>().daysInMonth.length-1 ? 12.w : 0),
+                      margin: EdgeInsets.only(
+                        left: 12.w,
+                        right:
+                            index ==
+                                    context
+                                            .read<HomeScreenProvider>()
+                                            .daysInMonth
+                                            .length -
+                                        1
+                                ? 12.w
+                                : 0,
+                      ),
                       decoration: BoxDecoration(
                         color:
                             isToday && isTodayPeriodDay
@@ -239,17 +251,26 @@ class PeriodDateContainer extends StatelessWidget {
                     ),
                   ),
                 ),
+
+                /// Circular progress
                 Align(
                   alignment: Alignment.center,
                   child: AspectRatio(
                     aspectRatio: 1,
-                    child: CircularProgressIndicator(
-                      year2023: false,
-                      trackGap: 2,
-                      strokeWidth: 10,
-                      value: 0.3,
-                      color: AppColors.secondary,
-                      backgroundColor: Color(0xff25C871),
+                    child: Consumer<HomeScreenProvider>(
+                      builder: (_, homeScreenProvider, _) {
+                        int days = homeScreenProvider.periodDaysLeft;
+                        double value = days/28;
+                        debugPrint("\nCircular progress value : $value\n");
+                        return CircularProgressIndicator(
+                          year2023: false,
+                          trackGap: 2,
+                          strokeWidth: 10,
+                          value: value,
+                          color: Color(0xff25C871),
+                          backgroundColor: AppColors.secondary,
+                        );
+                      },
                     ),
                   ),
                 ),

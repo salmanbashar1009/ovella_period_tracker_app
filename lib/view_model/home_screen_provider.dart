@@ -64,10 +64,7 @@ class HomeScreenProvider with ChangeNotifier {
     }
 
     _setOvulationDay();
-    DateTime firstPeriodDate = _tempPeriodDaysSelection![0];
-   Duration difference = firstPeriodDate.difference(DateTime.now());
-     _periodDaysLeft = difference.inDays;
-   notifyListeners();
+updatePeriodDaysLeft();
   }
 
   Future<void> updatePeriodInformationModel({
@@ -108,6 +105,13 @@ class HomeScreenProvider with ChangeNotifier {
 
   DateTime get currentDate => _currentDate;
   List<DateTime> get daysInMonth => _getDaysInMonth(_currentDate);
+
+  void updatePeriodDaysLeft(){
+    DateTime firstPeriodDate = _tempPeriodDaysSelection![0];
+    Duration difference = firstPeriodDate.difference(DateTime.now());
+    _periodDaysLeft = difference.inDays;
+    notifyListeners();
+  }
 
   List<DateTime> _getDaysInMonth(DateTime date) {
     int daysInMonth = DateTime(date.year, date.month + 1, 0).day;
@@ -269,14 +273,9 @@ class HomeScreenProvider with ChangeNotifier {
   }
 
   Future<void> saveLogPeriod() async {
-    debugPrint("\nsaving log period...\n");
-   // if(_tempPeriodDaysSelection != _periodInformationModel!.nextPeriodDates){
-     // debugPrint("\nentered in condition\n");
+
       await updatePeriodInformationModel(nextPeriodDates: _tempPeriodDaysSelection);
-   // }
-   // else{
-    //  debugPrint("\nNot entered in condition\ntemp period days : ${_tempPeriodDaysSelection}\n and already selected : ${_periodInformationModel!.nextPeriodDates}\n");
-   // }
+    updatePeriodDaysLeft();
   }
 
   void cancelLogPeriod(){
