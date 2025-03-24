@@ -76,7 +76,7 @@ class PeriodDateContainer extends StatelessWidget {
 
           Consumer<HomeScreenProvider>(
             builder: (_, homeScreenProvider, _) {
-              return Container(
+              return SizedBox(
                 height: 85.h,
 
                 child: ListView.builder(
