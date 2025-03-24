@@ -19,7 +19,7 @@ class NewChat extends StatelessWidget {
           curve: Curves.easeInOut,
           width:
               chatScreenProvider.isOpenNewChatField
-                  ? 200.w
+                  ? 220.w
                   : 155.w, // Width changes
           height: 50,
           decoration: BoxDecoration(
@@ -61,6 +61,7 @@ class NewChat extends StatelessWidget {
                           } else {
                             chatScreenProvider.onNewChat();
                             chatScreenProvider.toggleNewChatField(false);
+                            chatScreenProvider.newChatNameController.clear();
                           }
                         },
                         icon: Icon(
