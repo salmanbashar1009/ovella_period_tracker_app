@@ -28,60 +28,70 @@ void showPeriodAlertDialogSheet(BuildContext context) {
           final screenWidth = MediaQuery.of(context).size.width;
 
 
-          return AlertDialog(
+          return LayoutBuilder(
+            builder: (context,constraints) {
 
-            title: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text("Period Date:",style: Theme.of(context).textTheme.bodyMedium,),
-                SizedBox(height: 10.h,),
-                Text( periodStartDate.isNotEmpty ? "Period Date: $periodStartDate - $periodEndDate , $periodMonth" : "Period Dates : Not Selected",
-                style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                  color: AppColors.secondary
-                ),),
-              ],
-            ),
-            content: SizedBox(
-              height: screenHeight > 800 ? screenHeight * 0.16 : screenHeight * 0.23,
-              width: screenWidth * 0.9,
+              double dialogHeight = MediaQuery.of(context).size.height * 0.22; // 30% height
 
 
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                    TextButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                        Navigator.pushNamed(context, RouteName.addNoteScreen);
-                         // Close the dialog
-                      },
-                      child:  Text('Add Note',style: Theme.of(context).textTheme.bodyMedium,),
+              return AlertDialog(
+
+                title:  Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Period Date:",style: Theme.of(context).textTheme.bodyMedium,),
+                    SizedBox(height: 10.h,),
+                    Text( periodStartDate.isNotEmpty ? "$periodStartDate - $periodEndDate , $periodMonth" : "Not Selected",
+                      style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                          color: AppColors.secondary
+                      ),),
+                  ],
+                ),
+                content: ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxHeight: dialogHeight,
+                    minHeight: dialogHeight * 0.2, // Minimum height fallback
+                  ),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                              Navigator.pushNamed(context, RouteName.addNoteScreen);
+                               // Close the dialog
+                            },
+                            child:  Text('Add Note',style: Theme.of(context).textTheme.bodyMedium,),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop(); // Close the dialog
+                              Navigator.pushNamed(context, RouteName.editCalenderScreen);
+                            },
+                            child:  Text('Edit Period',style: Theme.of(context).textTheme.bodyMedium,),
+                          ),
+                          Consumer2<TrackingScreenProvider, MenstrualFertilityScreenProvider>(
+                            builder: (context,trackingScreenProvider,menstrualFertilityScreenProvider,child) {
+                              return TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop(); // Close the dialog
+                    
+                                  trackingScreenProvider.removePeriodDates();
+                                  menstrualFertilityScreenProvider.getOvulationDate();
+                    
+                                },
+                                child:  Text('Remove Period',style: Theme.of(context).textTheme.bodyMedium,),
+                              );
+                            }
+                          ),
+                        ]
                     ),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.of(context).pop(); // Close the dialog
-                        Navigator.pushNamed(context, RouteName.editCalenderScreen);
-                      },
-                      child:  Text('Edit Period',style: Theme.of(context).textTheme.bodyMedium,),
-                    ),
-                    Consumer2<TrackingScreenProvider, MenstrualFertilityScreenProvider>(
-                      builder: (context,trackingScreenProvider,menstrualFertilityScreenProvider,child) {
-                        return TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pop(); // Close the dialog
-
-                            trackingScreenProvider.removePeriodDates();
-                            menstrualFertilityScreenProvider.getOvulationDate();
-
-                          },
-                          child:  Text('Remove Period',style: Theme.of(context).textTheme.bodyMedium,),
-                        );
-                      }
-                    ),
-                  ]
-              ),
-            ),
+                  ),
+                ),
+              );
+            }
           );
         }
       );

@@ -7,8 +7,20 @@ import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 
-class PeriodDateContainer extends StatelessWidget {
+class PeriodDateContainer extends StatefulWidget {
   const PeriodDateContainer({super.key});
+
+  @override
+  State<PeriodDateContainer> createState() => _PeriodDateContainerState();
+}
+
+class _PeriodDateContainerState extends State<PeriodDateContainer> {
+
+  @override
+  void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((_) => context.read<HomeScreenProvider>().scrollToCurrentDate());
+    super.initState();
+  }
 
   Widget _arrowButton({
     required bool isLeftButton,
