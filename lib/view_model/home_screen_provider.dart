@@ -273,6 +273,7 @@ updatePeriodDaysLeft();
   }
 
   Future<void> saveLogPeriod() async {
+    _tempPeriodDaysSelection!.sort();
 
       await updatePeriodInformationModel(nextPeriodDates: _tempPeriodDaysSelection);
     updatePeriodDaysLeft();

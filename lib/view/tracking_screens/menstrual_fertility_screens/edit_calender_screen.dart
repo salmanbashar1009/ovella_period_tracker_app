@@ -13,6 +13,8 @@ import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.da
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 import 'package:provider/provider.dart';
 
+import '../../../view_model/home_screen_provider.dart';
+
 class EditCalenderScreen extends StatelessWidget {
   const EditCalenderScreen({super.key});
 
@@ -82,8 +84,12 @@ class EditCalenderScreen extends StatelessWidget {
                       child: Utils.primaryButton(
                         title: "Save",
                         context: context,
-                        onTap: () {
-                          trackingScreenProvider.saveSelectedDays(trackingScreenProvider.periodDates);
+                        onTap: () async {
+                          if(context.read<HomeScreenProvider>().tempPeriodDaysSelection != null && context.read<HomeScreenProvider>().tempPeriodDaysSelection!.isNotEmpty){
+                            await context.read<HomeScreenProvider>().saveLogPeriod();
+                            Navigator.pop(context);
+                          }
+                         // trackingScreenProvider.saveSelectedDays(trackingScreenProvider.periodDates);
                           Navigator.pop(context);
                         },
                       ),
