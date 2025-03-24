@@ -10,17 +10,20 @@ class NewChat extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Utils.primaryButton(
-      padding: EdgeInsets.symmetric(horizontal: 24.w),
-      title: "New Chat",
-      onTap: () {
-        context.read<ChatScreenProvider>().onNewChat();
-      },
-      context: context,
-      suffixIcon: Icon(
-        Icons.add,
-        color: Colors.white,
-        size: 20.r,
+    return AnimatedContainer(
+      duration: Duration(seconds: 2),
+      child: Utils.primaryButton(
+        padding: EdgeInsets.symmetric(horizontal: 24.w),
+        title: "New Chat",
+        onTap: () {
+          context.read<ChatScreenProvider>().onNewChat();
+        },
+        context: context,
+        suffixIcon: Icon(
+          Icons.add,
+          color: Colors.white,
+          size: 20.r,
+        ),
       ),
     );
   }
