@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -27,7 +28,7 @@ class DayCell extends StatelessWidget {
           decoration: BoxDecoration(
             color: backgroundColor,
             borderRadius: BorderRadius.circular(12.r),
-            border: context.watch<TrackingScreenProvider>().borderSet.contains(DateTime(year,month,day)) ? Border.all(color: Colors.black) : null
+            border: context.watch<TrackingScreenProvider>().borderSet.contains(DateTime(year,month,day)) ? Border.all(color: AppColors.secondary) : null
 
           ),
           child: Center(
