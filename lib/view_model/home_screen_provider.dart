@@ -56,8 +56,7 @@ class HomeScreenProvider with ChangeNotifier {
       );
     } else {
       _periodInformationModel = PeriodInformationModel.fromJson(data);
-      _tempPeriodDaysSelection = List<DateTime>.from(
-        _periodInformationModel!.nextPeriodDates,
+      _tempPeriodDaysSelection = List<DateTime>.from(_periodInformationModel!.nextPeriodDates,
       );
     }
 

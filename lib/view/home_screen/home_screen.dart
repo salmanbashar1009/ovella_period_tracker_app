@@ -173,9 +173,13 @@ class HomeScreen extends StatelessWidget{
                               style: Theme.of(context).textTheme.headlineLarge,),
 
                               TextButton(
-                                child: Text("See all",
+                                child:
+                                Text(
+                                  "See all",
                                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                      color: AppColors.lightTextColor
+                                      color: AppColors.lightTextColor,
+                                    decoration: TextDecoration.underline,
+                                    decorationColor: AppColors.lightTextColor,
                                   ),
                                 ),
                                 onPressed: ()=>Navigator.pushNamed(context,RouteName.wellnessTipsScreen),
