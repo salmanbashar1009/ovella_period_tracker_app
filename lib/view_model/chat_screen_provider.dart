@@ -4,14 +4,12 @@ import 'package:ovella_period_tracker_app/model/chat_model.dart';
 import '../utility/utils.dart';
 
 class ChatScreenProvider with ChangeNotifier {
-
   bool _isKeyboardOpened = false;
   bool get isKeyboardOpened => _isKeyboardOpened;
-  void onCheckKeyboardOpenedOrNot(BuildContext context){
+  void onCheckKeyboardOpenedOrNot(BuildContext context) {
     _isKeyboardOpened = Utils.isKeyboardOpen(context: context);
     notifyListeners();
   }
-
 
   TextEditingController chatController = TextEditingController();
   FocusNode chatFocusNode = FocusNode();
@@ -22,16 +20,14 @@ class ChatScreenProvider with ChangeNotifier {
   bool get isDefaultQuestion1Pressed => _isDefaultQuestion1Pressed;
   bool get isDefaultQuestion2Pressed => _isDefaultQuestion2Pressed;
 
-  void onDefaultQuestionPressed(int id){
-    if(id == 1){
+  void onDefaultQuestionPressed(int id) {
+    if (id == 1) {
       _isDefaultQuestion1Pressed = true;
-    }
-    else{
+    } else {
       _isDefaultQuestion2Pressed = true;
     }
-   // notifyListeners();
+    // notifyListeners();
   }
-
 
   @override
   void dispose() {
@@ -75,33 +71,44 @@ class ChatScreenProvider with ChangeNotifier {
     final String command = chatController.text.toString();
 
     int index = -1;
-    if (command.isNotEmpty && _defaultQuestionList.contains(command.toLowerCase())) {
-      index = _defaultQuestionList.indexWhere((item) => item == command.toLowerCase());
-      debugPrint("\nquestion list size : ${_defaultQuestionList.length}\nanswer list size : ${_defaultAnswerList.length}\n");
-      debugPrint("\nindex : $index\nquestion : ${_defaultQuestionList[index]}\nanswer : ${_defaultAnswerList[index]}");
-        chat.chat?.add(Chat(command: command,
-        reply: _defaultAnswerList[index]
-        ),);
-    }
-    else if(command.isEmpty){
-      chat.chat?.add(Chat(command: chatController.text,
-          reply: "চাচা বাড়ি ঘর এতো সাজানো কেনো? আর হেনা কোথায়? 😭"));
-    }
-    else if(command == "চাচা, হেনা কোথায়?"){
-      chat.chat?.add(Chat(command: chatController.text,
-          reply: "হেনার বিয়ে হয়ে গেছে 😭"));
-    }
-    else if(command == "চাচা বাড়ি ঘর এতো সাজানো কেনো? আর হেনা কোথায়?"){
-      chat.chat?.add(Chat(command: chatController.text,
-          reply: "হেনার বিয়ে হয়ে গেছে 😭"));
-    }
-    else if(command == "চাচা বাড়ি ঘর এতো সাজানো কেনো?"){
-      chat.chat?.add(Chat(command: chatController.text,
-          reply: "হেনার বিয়ে হয়ে গেছে 😭"));
-    }
-    else{
-      chat.chat?.add(Chat(command: chatController.text,
-          reply: "চাচা বাড়ি ঘর এতো সাজানো কেনো? আর হেনা কোথায়?"));
+    if (command.isNotEmpty &&
+        _defaultQuestionList.contains(command.toLowerCase())) {
+      index = _defaultQuestionList.indexWhere(
+        (item) => item == command.toLowerCase(),
+      );
+      debugPrint(
+        "\nquestion list size : ${_defaultQuestionList.length}\nanswer list size : ${_defaultAnswerList.length}\n",
+      );
+      debugPrint(
+        "\nindex : $index\nquestion : ${_defaultQuestionList[index]}\nanswer : ${_defaultAnswerList[index]}",
+      );
+      chat.chat?.add(Chat(command: command, reply: _defaultAnswerList[index]));
+    } else if (command.isEmpty) {
+      chat.chat?.add(
+        Chat(
+          command: chatController.text,
+          reply: "চাচা বাড়ি ঘর এতো সাজানো কেনো? আর হেনা কোথায়? 😭",
+        ),
+      );
+    } else if (command == "চাচা, হেনা কোথায়?") {
+      chat.chat?.add(
+        Chat(command: chatController.text, reply: "হেনার বিয়ে হয়ে গেছে 😭"),
+      );
+    } else if (command == "চাচা বাড়ি ঘর এতো সাজানো কেনো? আর হেনা কোথায়?") {
+      chat.chat?.add(
+        Chat(command: chatController.text, reply: "হেনার বিয়ে হয়ে গেছে 😭"),
+      );
+    } else if (command == "চাচা বাড়ি ঘর এতো সাজানো কেনো?") {
+      chat.chat?.add(
+        Chat(command: chatController.text, reply: "হেনার বিয়ে হয়ে গেছে 😭"),
+      );
+    } else {
+      chat.chat?.add(
+        Chat(
+          command: chatController.text,
+          reply: "চাচা বাড়ি ঘর এতো সাজানো কেনো? আর হেনা কোথায়?",
+        ),
+      );
     }
 
     // if(command.toLowerCase() == DemoChat.command1.toLowerCase()){
@@ -145,10 +152,30 @@ class ChatScreenProvider with ChangeNotifier {
     chatController.clear();
   }
 
-  void onNewChat(){
+  void onNewChat() {
     chat.chat = null;
     _isDefaultQuestion1Pressed = false;
     _isDefaultQuestion2Pressed = false;
     notifyListeners();
+  }
+
+  //new chat animation
+  bool _isOpenNewChatField = false;
+  bool get isOpenNewChatField => _isOpenNewChatField;
+  TextEditingController newChatNameController = TextEditingController();
+
+  void toggleNewChatField(bool value){
+    _isOpenNewChatField = value;
+    if(value==true){
+      timeCount();
+    }
+    debugPrint('New Chat Field: $_isOpenNewChatField');
+    notifyListeners();
+  }
+  Future<void> timeCount()async {
+    await Future.delayed(Duration(seconds: 10));
+    if(newChatNameController.text.toString().isEmpty){
+      toggleNewChatField(false);
+    }
   }
 }
