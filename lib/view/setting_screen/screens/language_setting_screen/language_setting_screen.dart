@@ -39,7 +39,7 @@ class LanguageSettingScreen extends StatelessWidget {
                 return Column(
                   children: [
                     SizedBox(height: 12.h),
-                    HeaderWidget(title: appLocalization.language),
+                    HeaderWidget(title: "Language"),
                     SizedBox(height: 24.h),
                     TextFormField(
                       controller: stepScreenProvider.languageSearchController,
