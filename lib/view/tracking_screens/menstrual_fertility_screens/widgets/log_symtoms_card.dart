@@ -45,7 +45,7 @@ class LogCard extends StatelessWidget {
                 width: 44.w,
                 height: 44.h,
                 decoration: const BoxDecoration(
-                  color: Color(0xFF1E1E1E),
+                  color: AppColors.textColor,
                   shape: BoxShape.circle,
                 ),
                 child: const Center(

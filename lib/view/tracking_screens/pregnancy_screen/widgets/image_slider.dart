@@ -34,7 +34,7 @@ class ImageSlider extends StatelessWidget {
                           width: MediaQuery.of(context).size.width,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: Color(0xFFFDE7E7),
+                            color:AppColors.sliderBGColor,
                           ),
                           child: Container(
                             margin: const EdgeInsets.all(8.0),
