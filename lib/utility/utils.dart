@@ -14,7 +14,7 @@ class Utils {
       onTap: () => Navigator.pop(context),
       child: Container(
         padding: AppPadding.iconPadding,
-        margin: AppPadding.iconPadding,
+        margin: AppPadding.iconContainerMargin,
         decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.white),
         child: Image.asset(
             AppImages.backArrowIcon,
@@ -27,10 +27,10 @@ class Utils {
   }
 
   /// Circle Container for icon
-  static Widget circleContainer({Icon? icon, String? imagePath}) {
+  static Widget circleContainer({Icon? icon, String? imagePath, EdgeInsets? margin}) {
     return Container(
       padding: AppPadding.iconPadding,
-      margin: AppPadding.iconPadding,
+      margin:margin ?? AppPadding.iconContainerMargin,
       decoration: const BoxDecoration(
         shape: BoxShape.circle,
         color: Colors.white,
