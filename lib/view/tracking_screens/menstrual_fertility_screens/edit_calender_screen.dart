@@ -90,7 +90,6 @@ class EditCalenderScreen extends StatelessWidget {
                             Navigator.pop(context);
                           }
                          // trackingScreenProvider.saveSelectedDays(trackingScreenProvider.periodDates);
-                          Navigator.pop(context);
                         },
                       ),
                     ),
