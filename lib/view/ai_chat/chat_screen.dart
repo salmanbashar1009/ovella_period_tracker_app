@@ -6,6 +6,7 @@ import 'package:ovella_period_tracker_app/constant/images.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
+import 'package:ovella_period_tracker_app/view/ai_chat/full_chat_screen.dart';
 import 'package:ovella_period_tracker_app/view/ai_chat/widgets/chat_input_field.dart';
 import 'package:ovella_period_tracker_app/view_model/chat_screen_provider.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
@@ -41,6 +42,32 @@ class ChatScreen extends StatelessWidget {
                       ),
                     ),
                   ],
+                  leading: Consumer<ChatScreenProvider>(
+                    builder: (_, chatScreenProvider, _) {
+                      return GestureDetector(
+                        onTap: () {
+                          if (!chatScreenProvider.isFullScreen) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => FullChatScreen(),
+                              ),
+                            );
+                            chatScreenProvider.toggleFullScreenMode();
+                          } else {
+                            Navigator.pop(context);
+                            chatScreenProvider.toggleFullScreenMode();
+                          }
+                        },
+                        child: Utils.circleContainer(
+                          icon:
+                              chatScreenProvider.isFullScreen
+                                  ? Icon(Icons.fullscreen_exit_outlined)
+                                  : Icon(Icons.fullscreen_outlined),
+                        ),
+                      );
+                    },
+                  ),
                   title: NewChat(),
                 ),
                 Expanded(
@@ -126,7 +153,10 @@ class ChatScreen extends StatelessWidget {
                                   final String reply =
                                       chatProvider.chat.chat![index].reply!;
                                   return Container(
-                                    margin: EdgeInsets.only(top: 10.h),
+                                    margin: EdgeInsets.only(
+                                      top: 10.h,
+                                      bottom: 10.h,
+                                    ),
                                     child: Column(
                                       spacing: 14.h,
                                       children: [
@@ -314,7 +344,7 @@ class ChatScreen extends StatelessWidget {
                             KeyboardVisibilityBuilder(
                               builder: (_, bool isOpenKeyBoard) {
                                 return SizedBox(
-                                  height: !isOpenKeyBoard ? 150.h : 0,
+                                  height: !isOpenKeyBoard ? 130.h : 0,
                                 );
                               },
                             ),
