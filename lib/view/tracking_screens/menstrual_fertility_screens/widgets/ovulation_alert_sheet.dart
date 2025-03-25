@@ -38,7 +38,7 @@ void showOvulationAlertDialogSheet(BuildContext context) {
                       SizedBox(height: 10.h,),
                       Center(
                         child: Text(ouvlationDate, style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                          color: Color(0xFF25C871),
+                          color: AppColors.ovulationColor,
 
                         ), ),
                       ),

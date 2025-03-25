@@ -167,7 +167,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
             /// Fertile activity tile
             activityTile(
               context: context,
-              bgColor: Color(0xFFF4D1FF),
+              bgColor: AppColors.fertileColor,
               imagePath: AppImages.fertileTileIcon,
               title: appLocalization.fertile,
               onTap: () {
@@ -184,7 +184,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
             /// Ovulation activity tile
             activityTile(
               context: context,
-              bgColor: Color(0xFF25C871),
+              bgColor: AppColors.ovulationColor,
               imagePath: AppImages.ovulationTileIcon,
               title: appLocalization.ovulation,
               onTap: () {
@@ -196,7 +196,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
             /// Next period activity tile
             activityTile(
               context: context,
-              bgColor: Color(0xFFFF9CB6),
+              bgColor: AppColors.nextPeriodColor,
               imagePath: AppImages.nextPeriodTileIcon,
               title: appLocalization.nextperiod,
               onTap: () {
@@ -269,6 +269,8 @@ class MenstrualFertilityScreen extends StatelessWidget {
       ],
     );
   }
+
+
 
   /// custom activity tile widget
   Widget activityTile({
