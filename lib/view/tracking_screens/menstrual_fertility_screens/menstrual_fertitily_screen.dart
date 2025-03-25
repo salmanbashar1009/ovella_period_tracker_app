@@ -58,6 +58,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
                   builder: (context, trackingScreenProvider, _) {
                     return IgnorePointer(
                       child: CalendarGrid(
+                        borderColor: Colors.transparent,
                         year: trackingScreenProvider.selectedMonthYear.year,
                         month: trackingScreenProvider.selectedMonthYear.month,
                         onTap:
