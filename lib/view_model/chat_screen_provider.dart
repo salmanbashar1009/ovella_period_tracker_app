@@ -14,6 +14,7 @@ class ChatScreenProvider with ChangeNotifier {
   TextEditingController chatController = TextEditingController();
   FocusNode chatFocusNode = FocusNode();
   ScrollController chatScrollController = ScrollController();
+  ScrollController chatScrollController2 = ScrollController();
 
   bool _isDefaultQuestion1Pressed = false;
   bool _isDefaultQuestion2Pressed = false;
@@ -65,7 +66,7 @@ class ChatScreenProvider with ChangeNotifier {
   ];
 
   void sendCommand() {
-    Utils.scrollToBottom(scrollController: chatScrollController);
+    Utils.scrollToBottom(scrollController: _isFullScreen?chatScrollController2:chatScrollController);
     chat.chat ??= [];
 
     final String command = chatController.text.toString();
