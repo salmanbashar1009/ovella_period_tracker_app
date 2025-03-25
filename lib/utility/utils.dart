@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/constant/images.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 
@@ -13,12 +14,14 @@ class Utils {
       onTap: () => Navigator.pop(context),
       child: Container(
         padding: AppPadding.iconPadding,
+        margin: AppPadding.iconPadding,
         decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.white),
-        child: Icon(
-          Icons.arrow_back_ios_outlined,
-          color: AppColors.iconColor,
-          size: 20.r,
-        ),
+        child: Image.asset(
+            AppImages.backArrowIcon,
+          width: 16.w,
+          height: 16.h,
+          fit: BoxFit.cover,
+        )
       ),
     );
   }
@@ -27,6 +30,7 @@ class Utils {
   static Widget circleContainer({Icon? icon, String? imagePath}) {
     return Container(
       padding: AppPadding.iconPadding,
+      margin: AppPadding.iconPadding,
       decoration: const BoxDecoration(
         shape: BoxShape.circle,
         color: Colors.white,
