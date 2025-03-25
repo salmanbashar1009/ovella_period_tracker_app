@@ -10,6 +10,7 @@ class WellnessTipsAppBar extends StatelessWidget{
     return Padding(
       padding: AppPadding.screenHorizontalPadding,
       child: AppBar(
+        surfaceTintColor: Colors.transparent,
         leading: Utils.backButton(context),
         title: Text("Tailored Wellness Journey"),
       ),

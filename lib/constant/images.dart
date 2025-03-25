@@ -27,8 +27,10 @@ class AppImages {
   /// Pregnancy screen
   static const String babyImage = "assets/images/pregnancy/baby.png";
   static const String checkupImage = "assets/images/pregnancy/checkup.png";
+
   /// Icons path
   static const String homeIcon = 'assets/icons/home.png';
+  static const String backArrowIcon = 'assets/icons/back_arrow.png';
   static const String loveIcon = 'assets/icons/love.png';
   static const String arrowBackIcon = 'assets/icons/arrow_back.png';
   static const String copyIcon = 'assets/icons/copy.png';

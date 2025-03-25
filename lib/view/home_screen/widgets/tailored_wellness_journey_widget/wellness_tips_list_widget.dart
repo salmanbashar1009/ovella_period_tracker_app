@@ -22,7 +22,7 @@ class WellnessTipsList extends StatelessWidget{
           imagePath:  (index+1)%2 !=0 ?  AppImages.wellnessWoman : AppImages.wellnessWoman02,
           isFromSeeAllList: false,
           listLength: 5,
-          reactAmount: 103,
+          reactAmount: (103+index*2),
           //width: ,
         );
         }
