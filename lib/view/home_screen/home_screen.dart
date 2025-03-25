@@ -16,7 +16,7 @@ import '../../widgets/background_widget.dart';
 import 'add_log_screen/widget/build_log_item_widget.dart';
 
 class HomeScreen extends StatelessWidget{
-   HomeScreen({super.key});
+   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

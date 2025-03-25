@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 
 class TrackingScreenProvider extends ChangeNotifier{
@@ -149,15 +150,15 @@ class TrackingScreenProvider extends ChangeNotifier{
 
 
   Color? getDayColor(int day ) {
-    DateTime tappedDate = DateTime(_year, _month, day);//bool isPeriodDateSaved
-    if (_periodDates.contains(tappedDate) ) {         //&& isPeriodDateSaved == true
-      return const Color(0xFFFF5B79);
+    DateTime tappedDate = DateTime(_year, _month, day);           //bool isPeriodDateSaved && isPeriodDateSaved == true
+    if (_periodDates.contains(tappedDate) ) {
+      return AppColors.secondary;
     } else if (_fertileDates.contains(tappedDate)) {
-      return const Color(0xFFF4D1FF);
+      return AppColors.fertileColor;
     } else if (_ovulationDates.contains(tappedDate)) {
-      return const Color(0xFF27C96A);
+      return AppColors.ovulationColor;
     }else if(_nextPeriodDates.contains(tappedDate)){
-      return const Color(0xFFFF9CB6);
+      return AppColors.nextPeriodColor;
     } else{
     return Colors.transparent;
   }

@@ -40,7 +40,7 @@ void showNextPeiodAlertDialogSheet(BuildContext context) {
                           SizedBox(height: 10.h,),
                           Center(
                             child: Text(nextPeriodDate, style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                              color: Color(0xFFFF9CB6),
+                              color: AppColors.nextPeriodColor,
 
                             ), ),
                           ),

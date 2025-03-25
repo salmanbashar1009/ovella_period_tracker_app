@@ -63,6 +63,7 @@ class EditCalenderScreen extends StatelessWidget {
                             height: 290.h,
                             width: double.infinity,
                             child: CalendarGrid(
+                              borderColor: AppColors.textColor.withOpacity(0.12),
                               year: trackingScreenProvider.selectedMonthYear.year,
                               month:
                                   trackingScreenProvider
@@ -85,12 +86,12 @@ class EditCalenderScreen extends StatelessWidget {
                         title: "Save",
                         context: context,
                         onTap: () async {
-                          if(context.read<HomeScreenProvider>().tempPeriodDaysSelection != null && context.read<HomeScreenProvider>().tempPeriodDaysSelection!.isNotEmpty){
-                            await context.read<HomeScreenProvider>().saveLogPeriod();
-                            Navigator.pop(context);
-                          }
-                         // trackingScreenProvider.saveSelectedDays(trackingScreenProvider.periodDates);
-                          Navigator.pop(context);
+                          // if(context.read<HomeScreenProvider>().tempPeriodDaysSelection != null && context.read<HomeScreenProvider>().tempPeriodDaysSelection!.isNotEmpty){
+                          //   await context.read<HomeScreenProvider>().saveLogPeriod();
+                          //   Navigator.pop(context);
+                          // }
+                         trackingScreenProvider.saveSelectedDays(trackingScreenProvider.periodDates);
+                         Navigator.pop(context);
                         },
                       ),
                     ),
