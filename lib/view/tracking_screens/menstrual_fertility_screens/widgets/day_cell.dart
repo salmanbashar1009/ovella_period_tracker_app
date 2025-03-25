@@ -9,13 +9,16 @@ class DayCell extends StatelessWidget {
   final int month;
   final int year;
   final Color? backgroundColor;
+  final Color? borderColor;
   final VoidCallback onTap;
-
 
   const DayCell({
     Key? key,
     required this.day,
-    this.backgroundColor, required this.onTap, required this.month, required this.year,
+    this.backgroundColor,
+    required this.onTap,
+    required this.month,
+    required this.year, this.borderColor,
   }) : super(key: key);
 
   @override
@@ -28,14 +31,21 @@ class DayCell extends StatelessWidget {
           decoration: BoxDecoration(
             color: backgroundColor,
             borderRadius: BorderRadius.circular(12.r),
-            border: context.watch<TrackingScreenProvider>().borderSet.contains(DateTime(year,month,day)) ? Border.all(color: AppColors.secondary) : null
-
+            border:
+                context.watch<TrackingScreenProvider>().borderSet.contains(
+                      DateTime(year, month, day),
+                    )
+                    ? Border.all(color: AppColors.secondary)
+                    : Border.all(color: borderColor!), // Border.all(color: AppColors.lightTextColor.withOpacity(0.2)),
           ),
           child: Center(
             child: Text(
               day.toString(),
               style: Theme.of(context).textTheme.headlineMedium!.copyWith(
-                fontWeight: FontWeight.w400
+                fontWeight: FontWeight.w400,
+                color:
+                    backgroundColor == AppColors.secondary || backgroundColor == AppColors.ovulationColor ?
+                    AppColors.onPrimary : AppColors.textColor,
               ),
             ),
           ),
@@ -44,4 +54,5 @@ class DayCell extends StatelessWidget {
     );
   }
 }
+
 // color: backgroundColor == const Color(0xFFFF5B79) ? Colors.white : Colors.black,

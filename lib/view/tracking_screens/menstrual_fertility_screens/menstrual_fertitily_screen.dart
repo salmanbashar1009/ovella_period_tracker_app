@@ -58,6 +58,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
                   builder: (context, trackingScreenProvider, _) {
                     return IgnorePointer(
                       child: CalendarGrid(
+                        borderColor: Colors.transparent,
                         year: trackingScreenProvider.selectedMonthYear.year,
                         month: trackingScreenProvider.selectedMonthYear.month,
                         onTap:
@@ -157,7 +158,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
               context: context,
               bgColor: AppColors.secondary,
               imagePath: AppImages.periodTileIcon,
-              title: AppLocalizations.of(context)!.period,
+              title: "Period",
               onTap: () {
                 showPeriodAlertDialogSheet(context);
               },
@@ -169,7 +170,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
               context: context,
               bgColor: AppColors.fertileColor,
               imagePath: AppImages.fertileTileIcon,
-              title: appLocalization.fertile,
+              title: "Fertile",
               onTap: () {
                 showFertileAlertDialogSheet(context);
               },
@@ -186,7 +187,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
               context: context,
               bgColor: AppColors.ovulationColor,
               imagePath: AppImages.ovulationTileIcon,
-              title: appLocalization.ovulation,
+              title: "Ovulation",
               onTap: () {
                 showOvulationAlertDialogSheet(context);
               },
@@ -198,7 +199,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
               context: context,
               bgColor: AppColors.nextPeriodColor,
               imagePath: AppImages.nextPeriodTileIcon,
-              title: appLocalization.nextperiod,
+              title: "Next Period",
               onTap: () {
                 showNextPeiodAlertDialogSheet(context);
               },

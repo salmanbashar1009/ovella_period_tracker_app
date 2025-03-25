@@ -42,7 +42,7 @@ class MonthHeader extends StatelessWidget {
               ],
             ),
             IconButton(
-              icon:  ImageIcon(AssetImage("assets/icons/edit.png")),
+              icon:  Icon(Icons.keyboard_arrow_down_rounded,size: 28.r,color: AppColors.textColor,),
               onPressed: () {
                 _showYearMonthPicker(context);
               },

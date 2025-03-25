@@ -7,13 +7,14 @@ import 'day_cell.dart';
 class CalendarGrid extends StatelessWidget {
   final int year;
   final int month;
+  final Color? borderColor;
   Function(int)  onTap;
 
    CalendarGrid({
     super.key,
     required this.year,
     required this.month, //required this.onTap,
-    required this.onTap,
+    required this.onTap, this.borderColor,
   });
 
   @override
@@ -51,6 +52,7 @@ class CalendarGrid extends StatelessWidget {
         return Consumer<TrackingScreenProvider>(
           builder: (context,trackingScreenProvider,child) {
             return DayCell(
+              borderColor: borderColor,
               year: year,
               month: month,
               day: dayNumber,
