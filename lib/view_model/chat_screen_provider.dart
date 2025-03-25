@@ -187,4 +187,11 @@ class ChatScreenProvider with ChangeNotifier {
     _isOpenMenu = !_isOpenMenu;
     notifyListeners();
   }
+
+  // full screen mode
+  bool _isFullScreen = false;
+  bool get isFullScreen => _isFullScreen;
+  void toggleFullScreenMode(){
+    _isFullScreen =!_isFullScreen;
+  }
 }
