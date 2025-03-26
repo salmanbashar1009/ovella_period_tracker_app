@@ -88,7 +88,7 @@ class LanguageSelection extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 32.w,vertical: 18.h),
             onTap: () {
               stepScreenProvider.updatePage(stepScreenProvider.currentIndex + 1);
-              Provider.of<LocalizationProvider>(context).setLocale(Locale(stepScreenProvider.selectedLanguage['code']!));
+              Provider.of<LocalizationProvider>(context,listen: false).setLocale(Locale(stepScreenProvider.selectedLanguage['code']!));
             },
           ),
         ),
