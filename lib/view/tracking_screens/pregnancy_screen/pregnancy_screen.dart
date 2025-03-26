@@ -75,7 +75,11 @@ class PregnancyScreen extends StatelessWidget {
                             homeScreenProvider.onLog(
                               logTo: homeScreenProvider.symptomsLog,
                             );
-                            Navigator.pushNamed(context, RouteName.addLogScreen);
+                            Navigator.pushNamed(context, RouteName.addLogScreen,arguments: AddLogScreenArguments(
+                                isBackButtonOnAppBar: true,
+                                onSave: (){},
+                                saveButtonText: "Save"
+                            ));
                           },
                           title: "Log your Symptoms",
                         ),
@@ -87,7 +91,11 @@ class PregnancyScreen extends StatelessWidget {
                             homeScreenProvider.onLog(
                               logTo: homeScreenProvider.moodLog,
                             );
-                            Navigator.pushNamed(context, RouteName.addLogScreen);
+                            Navigator.pushNamed(context, RouteName.addLogScreen,arguments: AddLogScreenArguments(
+                                isBackButtonOnAppBar: true,
+                                onSave: (){},
+                                saveButtonText: "Save"
+                            ));
                           },
                           title: "Log your Mood",
                         ),
