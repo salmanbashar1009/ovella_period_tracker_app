@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "Hei, Jane Doe",
-  "goodMorning": "Hyvää huomenta",
-  "fibroidsWomen": "Myoomit vaikuttavat yleensä naisiin.",
-  "fibroidDiscription": "Myoomit voivat vaikuttaa kuukautiskiertoon, aiheuttaa voimakasta verenvuotoa ja vaikeuttaa raskautta.",
-  "LogPeriod": "Kirjaa kuukautiset",
-  "LogYourSymptoms": "Kirjaa oireesi",
-  "LogYourMood": "Kirjaa mielialasi",
-  "TailoredWellnessJourney": "Räätälöity hyvinvointimatka",
-  "SeeAll": "Näytä kaikki",
-  "PersonalizedWellnessTips": "Personoidut hyvinvointivinkit",
-  "Home": "Koti",
-  "Tracking": "Seuranta",
-  "community": "Yhteisö",
-  "Settings": "Asetukset",
-  "Ai": "Tekoäly",
-  "symptoms": "Oireet",
-  "EverythingIsFine": "Kaikki on hyvin",
-  "Cramps": "Kivut",
-  "Acne": "Akne",
-  "TenderBreasts": "Herkkä rinnat",
-  "MilkyNippleDischarge": "Maitomaiset nännivuodot",
-  "AbdominalPain": "Vatsakipu",
-  "Fatigue": "Väsymys",
-  "Sleepiness": "Uneliaisuus",
-  "Backache": "Selkäkipu",
-  "FrequentUrination": "Usein virtsaaminen",
-  "Cravings": "Himo",
-  "Insomnia": "Unettomuus",
-  "Headache": "Päänsärky",
-  "LegCramps": "Jalkakrampit",
-  "BleedingGums": "Verenvuoto ikenistä",
-  "save": "Tallenna",
-  "Calm": "Rauhallinen",
-  "Happy": "Iloinen",
-  "Energetic": "Energiaa täynnä",
-  "MoodSwings": "Mielialan vaihtelut",
-  "Frisky": "Leikkisä",
-  "Irritated": "Ärsyyntynyt",
-  "Sad": "Surullinen",
-  "Anxious": "Ahdistunut",
-  "Depressed": "Masentunut",
-  "VerySelfCritical": "Erittäin itsekrtiinen",
-  "Apathetic": "Apatia",
-  "Confused": "Sekava",
-  "LowEnergy": "Vähän energiaa",
-  "FeelingGuilty": "Syyllinen",
-  "ObsessiveThoughts": "Pakkomielteiset ajatukset",
-  "Period": "Kuukautiset",
-  "Fertile": "Viljakas",
-  "Ovulation": "Ovulaatio",
-  "NextPeriod": "Seuraavat kuukautiset",
-  "MenstrualFertility": "Kuukautisten hedelmällisyys",
-  "Pregnancy": "Raskaus",
-  "Note": "Muistiinpano",
-  "NewNoteForExample": "Uusi muistiinpano esimerkki",
-  "Week23OfYourPregnancy": "Raskauden 23. viikko",
-  "Details": "Yksityiskohdat",
-  "MyDailyInsights": "Päivittäiset oivallukseni",
-  "CheckupVaccination": "Tarkastus ja rokotus",
-  "NextCheckup": "Seuraava tarkastus",
-  "HeyJaneDoe": "Hei, Jane Doe! Tervetuloa Ovellaan!",
-  "joinDiscussion": "Liity keskusteluun, esitä kysymyksiä ja liity asiantuntijoihin!",
-  "Forum": "Foorumi",
-  "Groups": "Ryhmät",
-  "Events": "Tapahtumat",
-  "findTopic": "Löydä aiheita ja ryhmiä",
-  "MenstrualHealth": "Kuukautisterveys",
-  "Fertility": "Hedelmällisyys",
-  "SexualHealth": "Seksuaaliterveys",
-  "PopularGroups": "Suositut ryhmät",
-  "FindGroups": "Löydä ryhmät",
-  "EventsWorkshops": "Tapahtumat ja työpajat",
-  "EventsDetails": "Tapahtumien yksityiskohdat",
-  "PregnancyNutritionWebinar": "Raskausruokavalion webinaari",
-  "WhatLearn": "Mitä haluat oppia?",
-  "Speakers": "Puhujat",
-  "RegisterNow": "Rekisteröidy nyt",
-  "EditProfile": "Muokkaa profiilia",
-  "InviteYourPartnerToOvella": "Kutsu kumppanisi Ovellaan",
-  "ClickHereToAddYourPartner": "Klikkaa tästä lisätäksesi kumppanisi",
-  "PersonalInformation": "Henkilötiedot",
-  "Age": "Ikä",
-  "Gender": "Sukupuoli",
-  "MenstrualHealthDetails": "Kuukautisterveyden tiedot",
-  "CycleLength": "Syklin pituus",
-  "LastPeriod": "Viimeiset kuukautiset",
-  "PregnancyStatus": "Raskauden tila",
-  "HealthConditions": "Terveysongelmat",
-  "PreferencesNotifications": "Asetukset ja ilmoitukset",
-  "PeriodAlerts": "Kuukautisvaroitukset",
-  "PregnancyTips": "Raskausvinkit",
-  "MentalHealth": "Mielenterveys",
-  "Language": "Kieli",
-  "PrivacyData": "Tietosuoja ja tiedot",
-  "ViewDataInsights": "Katso tiedonäkymät",
-  "ExportData": "Vie tiedot",
-  "DeleteAccount": "Poista tili",
-  "SupportCommunity": "Tuki ja yhteisö",
-  "ContactSupport": "Ota yhteyttä tukeen",
-  "FAQGuides": "UKK ja oppaat",
-  "JoinACommunity": "Liity yhteisöön"
+  "@@locale": "fi",
+  "hellojaneDoe": "hei, Jane Doe",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "hyvää huomenta",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "myoomat vaikuttavat pääasiassa naisiin.",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "myoomat voivat häiritä kuukautiskiertoa, aiheuttaa runsasta verenvuotoa ja vaikuttaa hedelmällisyyteen.",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "kirjaa kuukautisesi",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "kirjaa oireesi",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "kirjaa mielialasi",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "räätälöity hyvinvointimatka",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "näytä kaikki",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "personoidut hyvinvointivinkit",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "koti",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "seuranta",
+  "@tracking": {
+    "description": "Tracking section"
+  },
+  "community": "yhteisö",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "asetukset",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "tekoäly",
+  "@ai": {
+    "description": "AI assistant"
+  },
+  "symptoms": "oireet",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "kaikki on hyvin",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "krampit",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "akne",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "arat rinnat",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "maitomainen vuoto nännistä",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "vatsakipu",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "väsymys",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "uneliaisuus",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "selkäkipu",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "tiheä virtsaaminen",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "himo",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "unettomuus",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "päänsärky",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "jalkakrampit",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "vuotavat ikenet",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
+  "save": "tallenna",
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "rauhallinen",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "iloinen",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "energinen",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "mielialan vaihtelut",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "leikkisä",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "ärtynyt",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "surullinen",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "ahdistunut",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "masentunut",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "erittäin itsekriittinen",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "apaattinen",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "sekava",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "vähän energiaa",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "syyllisyys",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "pakkomielteiset ajatukset",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "kuukautiset",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "hedelmällinen",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "ovulaatio",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "seuraavat kuukautiset",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "kuukautiset ja hedelmällisyys",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "raskaus",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "muistiinpano",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "uusi muistiinpano esimerkiksi",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "raskautesi 23. viikko",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "yksityiskohdat",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "päivittäiset oivallukseni",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "tarkastus ja rokotus",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "seuraava tarkastus",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "hei Jane Doe, tervetuloa Ovella-yhteisöön!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "liity keskusteluun, esitä kysymyksiä ja verkostoidu asiantuntijoiden kanssa!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "foorumi",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "ryhmät",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "tapahtumat",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "etsi aiheita, ryhmiä ja keskusteluja",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "kuukautisterveys",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "hedelmällisyys",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "seksuaaliterveys",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "suositut ryhmät",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "etsi ryhmiä",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "tapahtumat ja työpajat",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "tapahtumien yksityiskohdat",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "raskausajan ravitsemuswebinaari",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "mitä opit",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "puhujat",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "rekisteröidy nyt",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "muokkaa profiilia",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "kutsu kumppanisi Ovellaan",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "klikkaa tästä lisätäksesi kumppanisi",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "henkilökohtaiset tiedot",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "ikä",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "sukupuoli",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "kuukautisterveyden yksityiskohdat",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "kierron pituus",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "viimeiset kuukautiset",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "raskauden tila",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "terveydentilat",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "asetukset ja ilmoitukset",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "kuukautishälytykset",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "raskausvinkit",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "mielenterveys",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "kieli",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "tietosuoja ja tiedot",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "katso dataoivallukset",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "vie tiedot",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "poista tili",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "tuki ja yhteisö",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "ota yhteyttä tukeen",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "usein kysytyt kysymykset ja oppaat",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "liity yhteisöön",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }

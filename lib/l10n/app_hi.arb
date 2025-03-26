@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "नमस्ते, जेन डो",
-  "goodMorning": "सुप्रभात",
-  "fibroidsWomen": "फाइब्रोइड्स आमतौर पर महिलाओं को प्रभावित करते हैं।",
-  "fibroidDiscription": "फाइब्रोइड्स मासिक धर्म को प्रभावित कर सकते हैं, भारी रक्तस्राव का कारण बन सकते हैं और गर्भधारण में कठिनाई पैदा कर सकते हैं।",
-  "LogPeriod": "अपने मासिक धर्म का रिकॉर्ड करें",
-  "LogYourSymptoms": "अपने लक्षणों का रिकॉर्ड करें",
-  "LogYourMood": "अपने मूड का रिकॉर्ड करें",
-  "TailoredWellnessJourney": "कस्टमाइज्ड वेलनेस यात्रा",
-  "SeeAll": "सभी देखें",
-  "PersonalizedWellnessTips": "व्यक्तिगत वेलनेस टिप्स",
-  "Home": "होम",
-  "Tracking": "ट्रैकिंग",
+  "@@locale": "hi",
+  "hellojaneDoe": "नमस्ते, जेन डो",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "सुप्रभात",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "फाइब्रॉइड्स मुख्य रूप से महिलाओं को प्रभावित करते हैं।",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "फाइब्रॉइड्स मासिक धर्म चक्र को प्रभावित कर सकते हैं, भारी रक्तस्राव का कारण बन सकते हैं और गर्भधारण को मुश्किल कर सकते हैं।",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "अपने मासिक धर्म को रिकॉर्ड करें",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "अपने लक्षणों को रिकॉर्ड करें",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "अपने मूड को रिकॉर्ड करें",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "वैयक्तिकृत स्वास्थ्य यात्रा",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "सभी देखें",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "वैयक्तिकृत स्वास्थ्य सुझाव",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "होम",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "ट्रैकिंग",
+  "@tracking": {
+    "description": "Tracking section"
+  },
   "community": "समुदाय",
-  "Settings": "सेटिंग्स",
-  "Ai": "आर्टिफिशियल इंटेलिजेंस",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "सेटिंग्स",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "कृत्रिम बुद्धिमत्ता",
+  "@ai": {
+    "description": "AI assistant"
+  },
   "symptoms": "लक्षण",
-  "EverythingIsFine": "सब कुछ ठीक है",
-  "Cramps": "पेट में ऐंठन",
-  "Acne": "एक्ने",
-  "TenderBreasts": "नाजुक स्तन",
-  "MilkyNippleDischarge": "दूध जैसी निपल डिस्चार्ज",
-  "AbdominalPain": "पेट में दर्द",
-  "Fatigue": "थकान",
-  "Sleepiness": "नींद",
-  "Backache": "कमर दर्द",
-  "FrequentUrination": "बार-बार पेशाब आना",
-  "Cravings": "चाहतें",
-  "Insomnia": "नींद न आना",
-  "Headache": "सिरदर्द",
-  "LegCramps": "पैरों में ऐंठन",
-  "BleedingGums": "मसूड़ों से खून आना",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "सब कुछ ठीक है",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "ऐंठन",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "मुँहासे",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "संवेदनशील स्तन",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "दूध जैसा निपल स्राव",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "पेट दर्द",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "थकान",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "नींद आना",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "कमर दर्द",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "बार-बार पेशाब लगना",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "तलब",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "अनिद्रा",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "सिरदर्द",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "पैरों में ऐंठन",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "मसूड़ों से रक्तस्राव",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
   "save": "सहेजें",
-  "Calm": "शांत",
-  "Happy": "खुश",
-  "Energetic": "ऊर्जावान",
-  "MoodSwings": "मूड स्विंग्स",
-  "Frisky": "चंचल",
-  "Irritated": "चिड़चिड़ा",
-  "Sad": "उदास",
-  "Anxious": "चिंतित",
-  "Depressed": "उदास",
-  "VerySelfCritical": "बहुत आत्म-आलोचनात्मक",
-  "Apathetic": "निराश",
-  "Confused": "भ्रमित",
-  "LowEnergy": "कम ऊर्जा",
-  "FeelingGuilty": "गिल्टी महसूस करना",
-  "ObsessiveThoughts": "आत्मसात करने वाले विचार",
-  "Period": "मासिक धर्म",
-  "Fertile": "उर्वरक",
-  "Ovulation": "अंडोत्सर्ग",
-  "NextPeriod": "अगला मासिक धर्म",
-  "MenstrualFertility": "मासिक धर्म के उर्वरक",
-  "Pregnancy": "गर्भावस्था",
-  "Note": "नोट",
-  "NewNoteForExample": "उदाहरण के लिए नया नोट",
-  "Week23OfYourPregnancy": "आपकी गर्भावस्था का 23वां सप्ताह",
-  "Details": "विवरण",
-  "MyDailyInsights": "मेरे दैनिक विचार",
-  "CheckupVaccination": "चेकअप और टीकाकरण",
-  "NextCheckup": "अगला चेकअप",
-  "HeyJaneDoe": "हाय, जेन डो! ओवेला में आपका स्वागत है!",
-  "joinDiscussion": "चर्चा में शामिल हों, सवाल पूछें और विशेषज्ञों से जुड़ें!",
-  "Forum": "फोरम",
-  "Groups": "समूह",
-  "Events": "इवेंट्स",
-  "findTopic": "विषय और समूह खोजें",
-  "MenstrualHealth": "मासिक धर्म स्वास्थ्य",
-  "Fertility": "उर्वरता",
-  "SexualHealth": "यौन स्वास्थ्य",
-  "PopularGroups": "लोकप्रिय समूह",
-  "FindGroups": "समूह खोजें",
-  "EventsWorkshops": "इवेंट्स और वर्कशॉप्स",
-  "EventsDetails": "इवेंट्स विवरण",
-  "PregnancyNutritionWebinar": "गर्भावस्था पोषण वेबिनार",
-  "WhatLearn": "आप क्या सीखना चाहते हैं?",
-  "Speakers": "वक्ताओं",
-  "RegisterNow": "अब रजिस्टर करें",
-  "EditProfile": "प्रोफाइल संपादित करें",
-  "InviteYourPartnerToOvella": "अपने साथी को ओवेला में आमंत्रित करें",
-  "ClickHereToAddYourPartner": "अपने साथी को जोड़ने के लिए यहां क्लिक करें",
-  "PersonalInformation": "व्यक्तिगत जानकारी",
-  "Age": "आयु",
-  "Gender": "लिंग",
-  "MenstrualHealthDetails": "मासिक धर्म स्वास्थ्य विवरण",
-  "CycleLength": "चक्र की लंबाई",
-  "LastPeriod": "अंतिम मासिक धर्म",
-  "PregnancyStatus": "गर्भावस्था स्थिति",
-  "HealthConditions": "स्वास्थ्य स्थितियां",
-  "PreferencesNotifications": "प्राथमिकताएं और सूचनाएं",
-  "PeriodAlerts": "मासिक धर्म अलर्ट",
-  "PregnancyTips": "गर्भावस्था टिप्स",
-  "MentalHealth": "मानसिक स्वास्थ्य",
-  "Language": "भाषा",
-  "PrivacyData": "गोपनीयता और डेटा",
-  "ViewDataInsights": "डेटा विचार देखें",
-  "ExportData": "डेटा निर्यात करें",
-  "DeleteAccount": "खाता हटाएं",
-  "SupportCommunity": "समर्थन और समुदाय",
-  "ContactSupport": "समर्थन से संपर्क करें",
-  "FAQGuides": "अक्सर पूछे जाने वाले प्रश्न और गाइड",
-  "JoinACommunity": "एक समुदाय से जुड़ें"
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "शांत",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "खुश",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "ऊर्जावान",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "मूड में उतार-चढ़ाव",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "चंचल",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "चिड़चिड़ा",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "उदास",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "चिंतित",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "अवसादग्रस्त",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "अत्यधिक आत्म-आलोचनात्मक",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "उदासीन",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "भ्रमित",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "कम ऊर्जा",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "अपराध बोध",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "जुनूनी विचार",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "मासिक धर्म",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "उपजाऊ",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "अंडोत्सर्ग",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "अगला मासिक धर्म",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "मासिक धर्म उर्वरता",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "गर्भावस्था",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "नोट",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "उदाहरण के लिए नया नोट",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "आपकी गर्भावस्था का 23वां सप्ताह",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "विवरण",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "मेरी दैनिक अंतर्दृष्टि",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "जांच और टीकाकरण",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "अगली जांच",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "हाय जेन डो, ओवेला समुदाय में आपका स्वागत है!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "चर्चा में शामिल हों, प्रश्न पूछें और विशेषज्ञों से जुड़ें!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "मंच",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "समूह",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "आयोजन",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "विषय, समूह और चर्चाएं खोजें",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "मासिक धर्म स्वास्थ्य",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "उर्वरता",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "यौन स्वास्थ्य",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "लोकप्रिय समूह",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "समूह खोजें",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "आयोजन और कार्यशालाएं",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "आयोजन का विवरण",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "गर्भावस्था पोषण वेबिनार",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "आप क्या सीखना चाहते हैं?",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "वक्ता",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "अब पंजीकरण करें",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "प्रोफाइल संपादित करें",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "अपने साथी को ओवेला में आमंत्रित करें",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "अपने साथी को जोड़ने के लिए यहाँ क्लिक करें",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "व्यक्तिगत जानकारी",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "उम्र",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "लिंग",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "मासिक धर्म स्वास्थ्य विवरण",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "चक्र की अवधि",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "अंतिम मासिक धर्म",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "गर्भावस्था की स्थिति",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "स्वास्थ्य स्थितियाँ",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "प्राथमिकताएँ और सूचनाएँ",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "मासिक धर्म अलर्ट",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "गर्भावस्था सुझाव",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "मानसिक स्वास्थ्य",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "भाषा",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "गोपनीयता और डेटा",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "डेटा अंतर्दृष्टि देखें",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "डेटा निर्यात करें",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "खाता हटाएँ",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "समर्थन और समुदाय",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "समर्थन से संपर्क करें",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "अक्सर पूछे जाने वाले प्रश्न और मार्गदर्शिकाएँ",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "एक समुदाय में शामिल हों",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }

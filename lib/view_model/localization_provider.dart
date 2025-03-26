@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'dart:ui' show Locale;
-
-import 'package:ovella_period_tracker_app/l10n/l10n.dart';
+import 'package:ovella_period_tracker_app/l10n/l10n.dart'; // Your L10n class
+import 'package:ovella_period_tracker_app/view_model/step_screen_provider.dart';
+import 'package:provider/provider.dart';
 
 class LocalizationProvider with ChangeNotifier {
   Locale? _locale;
   final Box settingsBox = Hive.box('settings');
+  
   LocalizationProvider() {
     _loadLocale();
   }
@@ -14,20 +16,11 @@ class LocalizationProvider with ChangeNotifier {
   Locale? get locale => _locale;
 
   Future<void> setLocale(Locale locale) async {
-    if (!L10n.all.contains(locale) && locale != null) {
-      return;
-    }else{
-      _locale = locale;
-      notifyListeners();
-    }
-    await settingsBox.put('locale', locale.languageCode);
-    // notifyListeners();
-  }
+    if (!L10n.all.contains(locale)) return; 
 
-  void clearLocale() async {
-    _locale = null;
-    await settingsBox.delete('locale');
-    notifyListeners();
+    _locale = locale;
+    await settingsBox.put('locale', locale.languageCode); 
+    notifyListeners(); 
   }
 
   void _loadLocale() {
@@ -35,32 +28,15 @@ class LocalizationProvider with ChangeNotifier {
     if (langCode != null) {
       _locale = L10n.all.firstWhere(
         (loc) => loc.languageCode == langCode,
-        orElse: () => Locale('en'),
+        orElse: () => Locale('en'), 
       );
     }
   }
 
-  Future<void> onTapChangeLanguage(String languageCode) async {
-    try {
-
-      if (_locale?.languageCode != languageCode) {
-       await setLocale(Locale(languageCode));
-
-        debugPrint(
-          "\nLanguage changed to: $languageCode\n",
-        );
-
-      } else {
-        debugPrint(
-          "\nSelected language is already active.\n",
-        );
-      }
-      notifyListeners();
-    } catch (e) {
-      debugPrint(
-        "\nError changing language: $e\n",
-      );
+  Future<void> onTapChangeLanguage(BuildContext context, String languageCode) async {
+    if (_locale?.languageCode != languageCode) {
+      await setLocale(Locale(languageCode)); // Set new locale
+      context.read<StepScreenProvider>().updateSelectedLanguage(languageCode);
     }
   }
-
 }

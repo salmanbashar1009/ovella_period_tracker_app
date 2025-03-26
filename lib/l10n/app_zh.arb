@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "你好，Jane Doe",
-  "goodMorning": "早安",
-  "fibroidsWomen": "子宫肌瘤通常影响女性。",
-  "fibroidDiscription": "子宫肌瘤可能会扰乱月经周期，导致严重出血，并影响生育能力。",
-  "LogPeriod": "记录月经",
-  "LogYourSymptoms": "记录你的症状",
-  "LogYourMood": "记录你的情绪",
-  "TailoredWellnessJourney": "量身定制的健康之旅",
-  "SeeAll": "查看全部",
-  "PersonalizedWellnessTips": "个性化健康建议",
-  "Home": "首页",
-  "Tracking": "追踪",
+  "@@locale": "zh",
+  "hellojaneDoe": "你好，Jane Doe",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "早上好",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "子宫肌瘤通常影响女性。",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "子宫肌瘤可能会干扰月经周期，导致严重出血，并影响生育能力。",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "记录月经",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "记录你的症状",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "记录你的心情",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "定制的健康之旅",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "查看全部",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "个性化健康建议",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "首页",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "追踪",
+  "@tracking": {
+    "description": "Tracking section"
+  },
   "community": "社区",
-  "Settings": "设置",
-  "Ai": "人工智能",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "设置",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "人工智能",
+  "@ai": {
+    "description": "AI assistant"
+  },
   "symptoms": "症状",
-  "EverythingIsFine": "一切正常",
-  "Cramps": "痉挛",
-  "Acne": "痤疮",
-  "TenderBreasts": "乳房疼痛",
-  "MilkyNippleDischarge": "乳头分泌物",
-  "AbdominalPain": "腹痛",
-  "Fatigue": "疲劳",
-  "Sleepiness": "困倦",
-  "Backache": "背痛",
-  "FrequentUrination": "频繁排尿",
-  "Cravings": "食欲",
-  "Insomnia": "失眠",
-  "Headache": "头痛",
-  "LegCramps": "腿部痉挛",
-  "BleedingGums": "牙龈出血",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "一切正常",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "痉挛",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "痤疮",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "乳房胀痛",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "乳头乳状分泌物",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "腹痛",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "疲劳",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "嗜睡",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "背痛",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "尿频",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "食欲强烈",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "失眠",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "头痛",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "腿部痉挛",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "牙龈出血",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
   "save": "保存",
-  "Calm": "冷静",
-  "Happy": "快乐",
-  "Energetic": "精力充沛",
-  "MoodSwings": "情绪波动",
-  "Frisky": "活跃",
-  "Irritated": "烦躁",
-  "Sad": "悲伤",
-  "Anxious": "焦虑",
-  "Depressed": "抑郁",
-  "VerySelfCritical": "自我批评",
-  "Apathetic": "冷漠",
-  "Confused": "困惑",
-  "LowEnergy": "低能量",
-  "FeelingGuilty": "感到内疚",
-  "ObsessiveThoughts": "强迫思维",
-  "Period": "月经",
-  "Fertile": "生育期",
-  "Ovulation": "排卵",
-  "NextPeriod": "下次月经",
-  "MenstrualFertility": "月经与生育",
-  "Pregnancy": "怀孕",
-  "Note": "备注",
-  "NewNoteForExample": "新的示例备注",
-  "Week23OfYourPregnancy": "怀孕第23周",
-  "Details": "详情",
-  "MyDailyInsights": "我的每日见解",
-  "CheckupVaccination": "健康检查与疫苗接种",
-  "NextCheckup": "下一次健康检查",
-  "HeyJaneDoe": "你好，Jane Doe，欢迎来到Ovella社区！",
-  "joinDiscussion": "参与讨论，提问并与专家交流！",
-  "Forum": "论坛",
-  "Groups": "小组",
-  "Events": "活动",
-  "findTopic": "查找话题、小组和讨论",
-  "MenstrualHealth": "月经健康",
-  "Fertility": "生育能力",
-  "SexualHealth": "性健康",
-  "PopularGroups": "热门小组",
-  "FindGroups": "查找小组",
-  "EventsWorkshops": "活动与讲座",
-  "EventsDetails": "活动详情",
-  "PregnancyNutritionWebinar": "怀孕营养网络研讨会",
-  "WhatLearn": "你将学习的内容",
-  "Speakers": "演讲者",
-  "RegisterNow": "立即注册",
-  "EditProfile": "编辑个人资料",
-  "InviteYourPartnerToOvella": "邀请你的伴侣加入Ovella",
-  "ClickHereToAddYourPartner": "点击这里添加你的伴侣",
-  "PersonalInformation": "个人信息",
-  "Age": "年龄",
-  "Gender": "性别",
-  "MenstrualHealthDetails": "月经健康详情",
-  "CycleLength": "周期长度",
-  "LastPeriod": "最后一次月经",
-  "PregnancyStatus": "怀孕状态",
-  "HealthConditions": "健康状况",
-  "PreferencesNotifications": "偏好与通知",
-  "PeriodAlerts": "月经通知",
-  "PregnancyTips": "怀孕小贴士",
-  "MentalHealth": "心理健康",
-  "Language": "语言",
-  "PrivacyData": "隐私与数据",
-  "ViewDataInsights": "查看数据见解",
-  "ExportData": "导出数据",
-  "DeleteAccount": "删除账户",
-  "SupportCommunity": "支持与社区",
-  "ContactSupport": "联系支持",
-  "FAQGuides": "常见问题与指南",
-  "JoinACommunity": "加入社区"
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "平静",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "开心",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "充满活力",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "情绪波动",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "活泼",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "烦躁",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "悲伤",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "焦虑",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "抑郁",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "非常自我批评",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "冷漠",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "困惑",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "低能量",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "感到内疚",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "强迫性思维",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "月经",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "生育期",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "排卵",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "下次月经",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "月经与生育能力",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "怀孕",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "备注",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "新备注示例",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "你怀孕第23周",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "详情",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "我的每日洞察",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "体检与疫苗",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "下次体检",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "你好Jane Doe，欢迎加入Ovella社区！",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "参与讨论，提问并与专家联系！",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "论坛",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "小组",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "活动",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "查找话题、小组和讨论",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "月经健康",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "生育能力",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "性健康",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "热门小组",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "查找小组",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "活动与工作坊",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "活动详情",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "孕期营养网络研讨会",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "你将学到什么",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "演讲者",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "立即注册",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "编辑个人资料",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "邀请你的伴侣加入Ovella",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "点击此处添加你的伴侣",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "个人信息",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "年龄",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "性别",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "月经健康详情",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "周期长度",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "最后一次月经",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "怀孕状态",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "健康状况",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "偏好与通知",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "月经提醒",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "孕期建议",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "心理健康",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "语言",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "隐私与数据",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "查看数据洞察",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "导出数据",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "删除账户",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "支持与社区",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "联系支持",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "常见问题与指南",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "加入社区",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }

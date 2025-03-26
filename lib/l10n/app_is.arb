@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "Halló, Jane Doe",
-  "goodMorning": "Góðan daginn",
-  "fibroidsWomen": "Fibroids hafa oft áhrif á konur.",
-  "fibroidDiscription": "Fibroids geta haft áhrif á blæðingar, valdið miklum blæðingum og gert þungun erfiðari.",
-  "LogPeriod": "Skráðu tíðahringinn þinn",
-  "LogYourSymptoms": "Skráðu einkenni þín",
-  "LogYourMood": "Skráðu skap þitt",
-  "TailoredWellnessJourney": "Persónulega heilsuferðin",
-  "SeeAll": "Sjá allt",
-  "PersonalizedWellnessTips": "Persónulegar heilsuráðleggingar",
-  "Home": "Heim",
-  "Tracking": "Spor",
-  "community": "Samfélag",
-  "Settings": "Stillingar",
-  "Ai": "Gervigreind",
-  "symptoms": "Einkenni",
-  "EverythingIsFine": "Allt í lagi",
-  "Cramps": "Krampar",
-  "Acne": "Bólur",
-  "TenderBreasts": "Aukin viðkvæmni í brjóstum",
-  "MilkyNippleDischarge": "Mjólkurframleiðsla úr geirvörtum",
-  "AbdominalPain": "Magaverkir",
-  "Fatigue": "Þreytu",
-  "Sleepiness": "Seyru",
-  "Backache": "Bakverkir",
-  "FrequentUrination": "Tíð þvaglát",
-  "Cravings": "Langanir",
-  "Insomnia": "Óróleiki",
-  "Headache": "Höfuðverkur",
-  "LegCramps": "Fótakrampar",
-  "BleedingGums": "Blæðandi tannhold",
-  "save": "Vista",
-  "Calm": "Rólegur",
-  "Happy": "Hamingjusamur",
-  "Energetic": "Orkumikill",
-  "MoodSwings": "Skapbreytingar",
-  "Frisky": "Áhugasamur",
-  "Irritated": "Reiður",
-  "Sad": "Hvað sem",
-  "Anxious": "Kvíðinn",
-  "Depressed": "Depurð",
-  "VerySelfCritical": "Mjög sjálfsgagnrýnn",
-  "Apathetic": "Óviðkomandi",
-  "Confused": "Virr á orðum",
-  "LowEnergy": "Lítil orka",
-  "FeelingGuilty": "Tungumál",
-  "ObsessiveThoughts": "Öfugt tilveikir meira",
-  "Period": "Tími",
-  "Fertile": "Fróur",
-  "Ovulation": "Egglos",
-  "NextPeriod": "Næsti tími",
-  "MenstrualFertility": "Tíðahringur & Frjósemi",
-  "Pregnancy": "Þungun",
-  "Note": "Athugasemd",
-  "NewNoteForExample": "Nýja staðsetningu viðtól",
-  "Week23OfYourPregnancy": "23 vika á þinni þungun",
-  "Details": "Nánari upplýsingar",
-  "MyDailyInsights": "Daglegar upplýsingar mínar",
-  "CheckupVaccination": "Heilsufar & Bólusetningar",
-  "NextCheckup": "Næsta heilsufar",
-  "HeyJaneDoe": "Halló Jane Doe, velkomin í Ovella samfélagið!",
-  "joinDiscussion": "Taktu þátt í umræðum, spurðu spurninga og tengdu við sérfræðinga!",
-  "Forum": "Umræður",
-  "Groups": "Hópar",
-  "Events": "Viðburðir",
-  "findTopic": "Finndu efni, hópa og umræður",
-  "MenstrualHealth": "Tíðahringur og heilsu",
-  "Fertility": "Frjósemi",
-  "SexualHealth": "Seksual heilsu",
-  "PopularGroups": "Vinsælar Hópar",
-  "FindGroups": "Finndu hópa",
-  "EventsWorkshops": "Viðburðir & námskeið",
-  "EventsDetails": "Viðburðir & smáatriði",
-  "PregnancyNutritionWebinar": "Vefnámskeið um næringu á þungun",
-  "WhatLearn": "Hvað þú munt læra",
-  "Speakers": "Talarar",
-  "RegisterNow": "Skráðu þig núna",
-  "EditProfile": "Breyta prófílnum",
-  "InviteYourPartnerToOvella": "Bjóða maka þínum í Ovella",
-  "ClickHereToAddYourPartner": "Smelltu hér til að bæta við maka",
-  "PersonalInformation": "Persónulegar upplýsingar",
-  "Age": "Aldur",
-  "Gender": "Kyn",
-  "MenstrualHealthDetails": "Upplýsingar um tíðahring",
-  "CycleLength": "Lengd tíðahrings",
-  "LastPeriod": "Síðasti tíðahringur",
-  "PregnancyStatus": "Þungunarstaða",
-  "HealthConditions": "Heilsubrestir",
-  "PreferencesNotifications": "Val og tilkynningar",
-  "PeriodAlerts": "Tíðahringstilkynningar",
-  "PregnancyTips": "Ábendingar um þungun",
-  "MentalHealth": "Andleg heilsa",
-  "Language": "Tungumál",
-  "PrivacyData": "Persónuvernd og gögn",
-  "ViewDataInsights": "Skoðaðu gögn og innsýn",
-  "ExportData": "Útflutningur gagna",
-  "DeleteAccount": "Eyða reikningi",
-  "SupportCommunity": "Stuðningur & samfélag",
-  "ContactSupport": "Hafa samband við stuðning",
-  "FAQGuides": "Algengar spurningar og leiðbeiningar",
-  "JoinACommunity": "Taktu þátt í samfélagi"
+  "@@locale": "is",
+  "hellojaneDoe": "halló, Jane Doe",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "góðan daginn",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "fíbróíð hafa oft áhrif á konur.",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "fíbróíð geta haft áhrif á tíðahringinn, valdið miklum blæðingum og gert þungun erfiðari.",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "skráðu tíðahringinn þinn",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "skráðu einkenni þín",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "skráðu skap þitt",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "sérsniðin heilsuferð",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "sjá allt",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "sérsniðnar heilsuráðleggingar",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "heim",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "rakning",
+  "@tracking": {
+    "description": "Tracking section"
+  },
+  "community": "samfélag",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "stillingar",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "gervigreind",
+  "@ai": {
+    "description": "AI assistant"
+  },
+  "symptoms": "einkenni",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "allt í lagi",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "krampar",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "bólur",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "viðkvæm brjóst",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "mjólkurkenndur vökvi úr geirvörtum",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "kviðverkir",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "þreyta",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "syfja",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "bakverkir",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "tíð þvaglát",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "löngun",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "svefnleysi",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "höfuðverkur",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "fótakrampar",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "blæðandi tannhold",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
+  "save": "vista",
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "rólegur",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "ánægður",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "orkumikill",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "skapbreytingar",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "lífsgladur",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "pirraður",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "leiður",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "kvíðinn",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "niðurdreginn",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "mjög sjálfsgagnrýninn",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "áhugalaus",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "ruglaður",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "lítil orka",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "samviskubit",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "þráhyggjuhugsanir",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "tíðir",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "frjór",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "eggslos",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "næstu tíðir",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "tíðafrjósemi",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "þungun",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "athugasemd",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "ný athugasemd til dæmis",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "23. vika þungunar þinnar",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "nánari upplýsingar",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "daglegar innsýnir mínar",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "heilsuskoðun og bólusetningar",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "næsta heilsuskoðun",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "halló Jane Doe, velkomin í Ovella samfélagið!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "taktu þátt í umræðum, spurðu spurninga og tengstu sérfræðingum!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "spjallborð",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "hópar",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "viðburðir",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "finndu efni, hópa og umræður",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "heilsa tengd tíðahring",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "frjósemi",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "kynheilbrigði",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "vinsælir hópar",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "finndu hópa",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "viðburðir og vinnustofur",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "upplýsingar um viðburði",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "vefnámskeið um næringu á meðgöngu",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "hvað viltu læra?",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "fyrirlesarar",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "skráðu þig núna",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "breyta prófíl",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "bjóddu maka þínum í Ovella",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "smelltu hér til að bæta við maka þínum",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "persónuupplýsingar",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "aldur",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "kyn",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "nánari upplýsingar um tíðaheilsu",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "lengd tíðahrings",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "síðustu tíðir",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "staða þungunar",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "heilsufarsvandamál",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "stillingar og tilkynningar",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "tilkynningar um tíðahring",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "ráð um þungun",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "geðheilsa",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "tungumál",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "persónuvernd og gögn",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "skoða innsýn í gögn",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "flytja út gögn",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "eyða reikningi",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "stuðningur og samfélag",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "hafa samband við stuðning",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "algengar spurningar og leiðbeiningar",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "ganga í samfélag",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }

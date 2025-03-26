@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "Bok, Jane Doe",
-  "goodMorning": "Dobro jutro",
-  "fibroidsWomen": "Fibroidi uglavnom zahvaćaju žene.",
-  "fibroidDiscription": "Fibroidi mogu ometati cikluse, uzrokovati jaku krvarenja i utjecati na plodnost.",
-  "LogPeriod": "Zabilježi svoj period",
-  "LogYourSymptoms": "Zabilježi svoje simptome",
-  "LogYourMood": "Zabilježi svoje raspoloženje",
-  "TailoredWellnessJourney": "Prilagođeno putovanje zdravlja",
-  "SeeAll": "Pogledaj sve",
-  "PersonalizedWellnessTips": "Personalizirani savjeti za zdravlje",
-  "Home": "Početna",
-  "Tracking": "Praćenje",
-  "community": "Zajednica",
-  "Settings": "Postavke",
-  "Ai": "AI",
-  "symptoms": "Simptomi",
-  "EverythingIsFine": "Sve je u redu",
-  "Cramps": "Grčevi",
-  "Acne": "Akne",
-  "TenderBreasts": "Osjetljive grudi",
-  "MilkyNippleDischarge": "Mliječna izlučevina iz bradavica",
-  "AbdominalPain": "Bol u trbuhu",
-  "Fatigue": "Umor",
-  "Sleepiness": "Pospanost",
-  "Backache": "Bol u leđima",
-  "FrequentUrination": "Često mokrenje",
-  "Cravings": "Žudnja",
-  "Insomnia": "Nesanica",
-  "Headache": "Glavobolja",
-  "LegCramps": "Grčevi u nogama",
-  "BleedingGums": "Krvarenje desni",
-  "save": "Spremi",
-  "Calm": "Smireno",
-  "Happy": "Sretan",
-  "Energetic": "Energičan",
-  "MoodSwings": "Raspoloženjske promjene",
-  "Frisky": "Veselo",
-  "Irritated": "Irritiran",
-  "Sad": "Tužan",
-  "Anxious": "Tjeskoban",
-  "Depressed": "Depresivan",
-  "VerySelfCritical": "Vrlo samokritičan",
-  "Apathetic": "Apatetičan",
-  "Confused": "Zbunjen",
-  "LowEnergy": "Niska energija",
-  "FeelingGuilty": "Osjećam se krivom",
-  "ObsessiveThoughts": "Opsesivne misli",
-  "Period": "Menstruacija",
-  "Fertile": "Plodan",
-  "Ovulation": "Ovulacija",
-  "NextPeriod": "Sljedeća menstruacija",
-  "MenstrualFertility": "Menstruacija i plodnost",
-  "Pregnancy": "Trudnoća",
-  "Note": "Bilješka",
-  "NewNoteForExample": "Nova bilješka za primjer",
-  "Week23OfYourPregnancy": "23. tjedan trudnoće",
-  "Details": "Detalji",
-  "MyDailyInsights": "Moji dnevni uvidi",
-  "CheckupVaccination": "Pregled i cijepljenje",
-  "NextCheckup": "Sljedeći pregled",
-  "HeyJaneDoe": "Bok Jane Doe, dobrodošli u Ovella zajednicu!",
-  "joinDiscussion": "Pridružite se raspravama, postavljajte pitanja i povežite se s ekspertima!",
-  "Forum": "Forum",
-  "Groups": "Grupama",
-  "Events": "Događaji",
-  "findTopic": "Pronađite teme, grupe i rasprave",
-  "MenstrualHealth": "Menstrualno zdravlje",
-  "Fertility": "Plodnost",
-  "SexualHealth": "Seksualno zdravlje",
-  "PopularGroups": "Popularne grupe",
-  "FindGroups": "Pronađite grupe",
-  "EventsWorkshops": "Događaji i radionice",
-  "EventsDetails": "Detalji događaja",
-  "PregnancyNutritionWebinar": "Webinar o prehrani u trudnoći",
-  "WhatLearn": "Što ćete naučiti",
-  "Speakers": "Govornici",
-  "RegisterNow": "Registrirajte se sada",
-  "EditProfile": "Uredi profil",
-  "InviteYourPartnerToOvella": "Pozovite svog partnera na Ovella",
-  "ClickHereToAddYourPartner": "Kliknite ovdje da dodate svog partnera",
-  "PersonalInformation": "Osobni podaci",
-  "Age": "Dob",
-  "Gender": "Spol",
-  "MenstrualHealthDetails": "Detalji menstrualnog zdravlja",
-  "CycleLength": "Duljina ciklusa",
-  "LastPeriod": "Posljednja menstruacija",
-  "PregnancyStatus": "Status trudnoće",
-  "HealthConditions": "Zdravstvene tegobe",
-  "PreferencesNotifications": "Preferencije i obavijesti",
-  "PeriodAlerts": "Obavijesti o menstruaciji",
-  "PregnancyTips": "Savjeti za trudnoću",
-  "MentalHealth": "Mentalno zdravlje",
-  "Language": "Jezik",
-  "PrivacyData": "Privatnost i podaci",
-  "ViewDataInsights": "Pogledaj uvide u podatke",
-  "ExportData": "Izvoz podataka",
-  "DeleteAccount": "Izbriši račun",
-  "SupportCommunity": "Podrška i zajednica",
-  "ContactSupport": "Kontaktirajte podršku",
-  "FAQGuides": "Često postavljana pitanja i vodiči",
-  "JoinACommunity": "Pridružite se zajednici"
+  "@@locale": "hr",
+  "hellojaneDoe": "bok, Jane Doe",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "dobro jutro",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "fibroidi uglavnom utječu na žene.",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "fibroidi mogu utjecati na menstrualni ciklus, uzrokovati obilna krvarenja i otežati trudnoću.",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "zabilježi svoj menstrualni ciklus",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "zabilježi svoje simptome",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "zabilježi svoje raspoloženje",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "prilagođeno putovanje zdravlja",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "pogledaj sve",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "personalizirani savjeti za zdravlje",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "početna",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "praćenje",
+  "@tracking": {
+    "description": "Tracking section"
+  },
+  "community": "zajednica",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "postavke",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "umjetna inteligencija",
+  "@ai": {
+    "description": "AI assistant"
+  },
+  "symptoms": "simptomi",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "sve je u redu",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "grčevi",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "akne",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "osjetljive grudi",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "mliječni iscjedak iz bradavica",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "bol u trbuhu",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "umor",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "pospanost",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "bol u leđima",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "često mokrenje",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "žudnje",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "nesanica",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "glavobolja",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "grčevi u nogama",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "krvarenje desni",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
+  "save": "spremi",
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "miran",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "sretan",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "energičan",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "promjene raspoloženja",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "razigran",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "razdražen",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "tužan",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "uznemiren",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "depresivan",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "vrlo samokritičan",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "apatetičan",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "zbunjen",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "niska energija",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "osjećaj krivnje",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "opsesivne misli",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "menstruacija",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "plodan",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "ovulacija",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "sljedeća menstruacija",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "menstrualna plodnost",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "trudnoća",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "bilješka",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "nova bilješka za primjer",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "23. tjedan tvoje trudnoće",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "detalji",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "moji dnevni uvidi",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "pregled i cijepljenje",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "sljedeći pregled",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "bok Jane Doe, dobrodošla u Ovella zajednicu!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "pridruži se raspravi, postavi pitanja i poveži se s ekspertima!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "forum",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "grupe",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "događaji",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "pronađi teme, grupe i rasprave",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "menstrualno zdravlje",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "plodnost",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "seksualno zdravlje",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "popularne grupe",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "pronađi grupe",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "događaji i radionice",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "detalji događaja",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "webinar o prehrani tijekom trudnoće",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "što želiš naučiti?",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "govornici",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "registriraj se sada",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "uredi profil",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "pozovi svog partnera na Ovella",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "klikni ovdje da dodaš svog partnera",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "osobni podaci",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "dob",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "spol",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "detalji o menstrualnom zdravlju",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "duljina ciklusa",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "zadnja menstruacija",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "status trudnoće",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "zdravstvena stanja",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "postavke i obavijesti",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "upozorenja o menstruaciji",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "savjeti za trudnoću",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "mentalno zdravlje",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "jezik",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "privatnost i podaci",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "pogledaj uvide u podatke",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "izvezi podatke",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "izbriši račun",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "podrška i zajednica",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "kontaktiraj podršku",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "često postavljana pitanja i vodiči",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "pridruži se zajednici",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }

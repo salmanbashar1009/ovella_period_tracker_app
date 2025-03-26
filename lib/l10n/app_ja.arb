@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "こんにちは、Jane Doeさん",
-  "goodMorning": "おはようございます",
-  "fibroidsWomen": "子宮筋腫は女性に多く見られます。",
-  "fibroidDiscription": "子宮筋腫は月経周期に影響を与え、過剰な出血を引き起こし、妊娠を難しくすることがあります。",
-  "LogPeriod": "月経を記録",
-  "LogYourSymptoms": "症状を記録",
-  "LogYourMood": "気分を記録",
-  "TailoredWellnessJourney": "パーソナライズされた健康の旅",
-  "SeeAll": "すべて見る",
-  "PersonalizedWellnessTips": "パーソナライズされた健康アドバイス",
-  "Home": "ホーム",
-  "Tracking": "追跡",
+  "@@locale": "ja",
+  "hellojaneDoe": "こんにちは、Jane Doeさん",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "おはようございます",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "子宮筋腫は主に女性に影響を与えます。",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "子宮筋腫は月経周期に影響を及ぼし、過多出血を引き起こしたり、妊娠を困難にしたりすることがあります。",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "月経を記録する",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "症状を記録する",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "気分を記録する",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "パーソナライズされた健康の旅",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "すべて見る",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "パーソナライズされた健康のヒント",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "ホーム",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "トラッキング",
+  "@tracking": {
+    "description": "Tracking section"
+  },
   "community": "コミュニティ",
-  "Settings": "設定",
-  "Ai": "AI",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "設定",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "人工知能",
+  "@ai": {
+    "description": "AI assistant"
+  },
   "symptoms": "症状",
-  "EverythingIsFine": "すべて順調です",
-  "Cramps": "腹痛",
-  "Acne": "ニキビ",
-  "TenderBreasts": "胸が敏感",
-  "MilkyNippleDischarge": "乳首からのミルクの分泌",
-  "AbdominalPain": "腹痛",
-  "Fatigue": "疲労",
-  "Sleepiness": "眠気",
-  "Backache": "背中の痛み",
-  "FrequentUrination": "頻尿",
-  "Cravings": "食欲",
-  "Insomnia": "不眠",
-  "Headache": "頭痛",
-  "LegCramps": "足のけいれん",
-  "BleedingGums": "歯茎からの出血",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "すべて順調です",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "けいれん",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "ニキビ",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "胸の張り",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "乳頭からの乳汁分泌",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "腹痛",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "疲労",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "眠気",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "背中の痛み",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "頻尿",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "妊娠中のつわりによる食欲",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "不眠症",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "頭痛",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "足のけいれん",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "歯茎からの出血",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
   "save": "保存",
-  "Calm": "落ち着いている",
-  "Happy": "幸せ",
-  "Energetic": "エネルギッシュ",
-  "MoodSwings": "気分の浮き沈み",
-  "Frisky": "元気",
-  "Irritated": "イライラ",
-  "Sad": "悲しい",
-  "Anxious": "不安",
-  "Depressed": "うつ病",
-  "VerySelfCritical": "非常に自己批判的",
-  "Apathetic": "無関心",
-  "Confused": "混乱",
-  "LowEnergy": "エネルギー不足",
-  "FeelingGuilty": "罪悪感",
-  "ObsessiveThoughts": "執拗な考え",
-  "Period": "月経",
-  "Fertile": "排卵期",
-  "Ovulation": "排卵",
-  "NextPeriod": "次の月経",
-  "MenstrualFertility": "月経周期と妊娠",
-  "Pregnancy": "妊娠",
-  "Note": "メモ",
-  "NewNoteForExample": "新しいメモの例",
-  "Week23OfYourPregnancy": "妊娠23週目",
-  "Details": "詳細",
-  "MyDailyInsights": "私の毎日のインサイト",
-  "CheckupVaccination": "健康診断と予防接種",
-  "NextCheckup": "次の健康診断",
-  "HeyJaneDoe": "こんにちは、Jane Doeさん！Ovellaコミュニティへようこそ！",
-  "joinDiscussion": "ディスカッションに参加して、質問したり、専門家とつながったりしましょう。",
-  "Forum": "フォーラム",
-  "Groups": "グループ",
-  "Events": "イベント",
-  "findTopic": "トピック、グループ、ディスカッションを見つける",
-  "MenstrualHealth": "月経の健康",
-  "Fertility": "妊娠力",
-  "SexualHealth": "性の健康",
-  "PopularGroups": "人気のグループ",
-  "FindGroups": "グループを探す",
-  "EventsWorkshops": "イベントとワークショップ",
-  "EventsDetails": "イベントの詳細",
-  "PregnancyNutritionWebinar": "妊娠栄養ウェビナー",
-  "WhatLearn": "学べること",
-  "Speakers": "スピーカー",
-  "RegisterNow": "今すぐ登録",
-  "EditProfile": "プロフィールを編集",
-  "InviteYourPartnerToOvella": "あなたのパートナーをOvellaに招待",
-  "ClickHereToAddYourPartner": "ここをクリックしてパートナーを追加",
-  "PersonalInformation": "個人情報",
-  "Age": "年齢",
-  "Gender": "性別",
-  "MenstrualHealthDetails": "月経の健康の詳細",
-  "CycleLength": "周期の長さ",
-  "LastPeriod": "前回の月経",
-  "PregnancyStatus": "妊娠状況",
-  "HealthConditions": "健康状態",
-  "PreferencesNotifications": "設定と通知",
-  "PeriodAlerts": "月経アラート",
-  "PregnancyTips": "妊娠のヒント",
-  "MentalHealth": "メンタルヘルス",
-  "Language": "言語",
-  "PrivacyData": "プライバシーとデータ",
-  "ViewDataInsights": "データとインサイトを見る",
-  "ExportData": "データをエクスポート",
-  "DeleteAccount": "アカウントを削除",
-  "SupportCommunity": "サポートとコミュニティ",
-  "ContactSupport": "サポートに連絡",
-  "FAQGuides": "FAQとガイド",
-  "JoinACommunity": "コミュニティに参加"
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "穏やか",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "幸せ",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "元気いっぱい",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "気分の浮き沈み",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "活発",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "苛立ち",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "悲しい",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "不安",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "落ち込んでいる",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "非常に自己批判的",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "無関心",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "混乱している",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "エネルギー不足",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "罪悪感を感じる",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "強迫観念",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "月経",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "妊娠可能期間",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "排卵",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "次の月経",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "月経と妊娠力",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "妊娠",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "メモ",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "新しいメモの例",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "妊娠23週目",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "詳細",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "私の毎日の洞察",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "健康診断と予防接種",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "次の健康診断",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "こんにちは、Jane Doeさん！Ovellaコミュニティへようこそ！",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "ディスカッションに参加し、質問をしたり、専門家とつながったりしてください！",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "フォーラム",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "グループ",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "イベント",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "トピック、グループ、ディスカッションを見つける",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "月経の健康",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "妊娠力",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "性的健康",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "人気グループ",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "グループを探す",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "イベントとワークショップ",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "イベント詳細",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "妊娠中の栄養ウェビナー",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "何を学びたい？",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "スピーカー",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "今すぐ登録",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "プロフィールを編集",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "パートナーをOvellaに招待",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "ここをクリックしてパートナーを追加",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "個人情報",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "年齢",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "性別",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "月経健康の詳細",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "周期の長さ",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "最後の月経",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "妊娠状況",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "健康状態",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "設定と通知",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "月経アラート",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "妊娠のヒント",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "精神的健康",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "言語",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "プライバシーとデータ",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "データと洞察を見る",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "データをエクスポート",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "アカウントを削除",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "サポートとコミュニティ",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "サポートに連絡",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "よくある質問とガイド",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "コミュニティに参加する",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }
