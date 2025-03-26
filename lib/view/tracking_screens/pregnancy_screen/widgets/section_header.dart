@@ -12,7 +12,7 @@ class SectionHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 24.h,),
+        // SizedBox(height: 24.h,),
         Text(title,style: Theme.of(context).textTheme.bodyLarge?.copyWith(
           color: AppColors.textColor,
           fontWeight: FontWeight.w600,
