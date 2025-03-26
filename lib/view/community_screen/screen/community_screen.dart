@@ -83,7 +83,7 @@ class CommunityScreen extends StatelessWidget {
                       Align(
                         alignment: Alignment.center,
                         child: Text(
-                 appLocalization!.abdominalpain??   "Hey Jane Doe, Welcome to the",
+              "Hey Jane Doe, Welcome to the",
                           style: Theme.of(
                             context,
                           ).textTheme.bodyLarge?.copyWith(

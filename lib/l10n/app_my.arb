@@ -1,5 +1,5 @@
 {
-  "@@locale": "ms",
+  "@@locale": "my",
   "hellojaneDoe": "hai, Jane Doe",
   "@hellojaneDoe": {
     "description": "Hello greeting"
