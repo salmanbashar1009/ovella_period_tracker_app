@@ -6,6 +6,7 @@ import 'package:ovella_period_tracker_app/constant/hive_box_name.dart';
 import 'package:ovella_period_tracker_app/constant/images.dart';
 import 'package:ovella_period_tracker_app/constant/key_name.dart';
 import 'package:ovella_period_tracker_app/model/period_information_model.dart';
+import 'package:ovella_period_tracker_app/model/period_tips_model.dart';
 import 'package:ovella_period_tracker_app/services/local_storage_services/hive_services.dart';
 
 class HomeScreenProvider with ChangeNotifier {
@@ -14,7 +15,40 @@ class HomeScreenProvider with ChangeNotifier {
     //  _appPredictedPeriodDays.sort();
 
     // debugPrint("\nlast period date : ${_appPredictedPeriodDays[0]}\n");
+
+    _getPeriodTips();
     fetchPeriodInformation();
+
+  }
+
+  PeriodTipsModel? _periodTipsModel;
+  PeriodTipsModel? get periodTipsModel => _periodTipsModel;
+
+  /// period tips map data
+  final Map<String, dynamic> _periodTips = {
+    "tips":[
+      {
+        "title": "Fibroids mainly affect women.",
+        "body": "Fibroids can disrupt cycles, cause heavy bleeding, and impact fertility.",
+        "image": AppImages.fibroids
+      },
+      {
+        "title": "Migraines affect women.",
+        "body": "Fibroids can lead to pain, bloating, and frequent urination.",
+        "image": AppImages.migraine
+      },
+      {
+        "title": "PCOS affects women.",
+        "body": "Fibroids may cause complications during pregnancy and labor.",
+        "image": AppImages.pcos
+      }
+    ]
+  };
+
+  /// fetch period tips
+  Future<void> _getPeriodTips() async {
+    _periodTipsModel = PeriodTipsModel.fromJson(_periodTips);
+    notifyListeners();
   }
 
   PeriodInformationModel? _periodInformationModel = PeriodInformationModel(
