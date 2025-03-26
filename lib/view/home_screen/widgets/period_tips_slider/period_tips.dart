@@ -11,23 +11,39 @@ class PeriodTips extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 370.w,
+      width: double.infinity,
       height: 130.h,
       child: Column(
         spacing: 5.h,
         children: [
           Expanded(
-            child: PageView(
-              onPageChanged: (index) {
-                context
-                    .read<HomeScreenProvider>()
-                    .onChangedPeriodTipsCurrentPage(index);
-              },
-              children: [
-                PeriodTipsContainer(),
-                PeriodTipsContainer(),
-                PeriodTipsContainer(),
-              ],
+            child: Consumer<HomeScreenProvider>(
+              builder: (_, homeScreenProvider, _) {
+                return PageView.builder(
+                  onPageChanged: (index) {
+                    context
+                        .read<HomeScreenProvider>()
+                        .onChangedPeriodTipsCurrentPage(index);
+
+                  },
+                  itemCount: homeScreenProvider.periodTipsModel?.tips?.length ?? 0,
+                  itemBuilder: (_, index){
+                    final tip = homeScreenProvider.periodTipsModel!.tips![index];
+                    return PeriodTipsContainer(
+                      title: tip.title!,
+                      bodyText: tip.body!,
+                      assetImagePath: tip.image!,
+                    );
+                  },
+
+                  //children:
+                  // [
+                  //   PeriodTipsContainer(),
+                  //   PeriodTipsContainer(),
+                  //   PeriodTipsContainer(),
+                  // ],
+                );
+              }
             ),
           ),
 
@@ -37,7 +53,7 @@ class PeriodTips extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: DotsIndicator(
-                  dotsCount: 3,
+                  dotsCount: homeScreenProvider.periodTipsModel!.tips!.length,
                   position: homeScreenProvider.periodTipsCurrentPage.toDouble(),
                   decorator: DotsDecorator(
                     activeColor: Theme.of(context).colorScheme.secondary,
