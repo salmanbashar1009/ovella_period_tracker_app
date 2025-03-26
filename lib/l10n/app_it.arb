@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "Ciao, Jane Doe",
-  "goodMorning": "Buongiorno",
-  "fibroidsWomen": "I fibromi colpiscono spesso le donne.",
-  "fibroidDiscription": "I fibromi possono influire sul ciclo mestruale, causando perdite ematiche abbondanti e rendendo difficile la gravidanza.",
-  "LogPeriod": "Registra il tuo ciclo",
-  "LogYourSymptoms": "Registra i tuoi sintomi",
-  "LogYourMood": "Registra il tuo umore",
-  "TailoredWellnessJourney": "Viaggio di benessere personalizzato",
-  "SeeAll": "Vedi tutto",
-  "PersonalizedWellnessTips": "Consigli di benessere personalizzati",
-  "Home": "Home",
-  "Tracking": "Monitoraggio",
-  "community": "Comunità",
-  "Settings": "Impostazioni",
-  "Ai": "IA",
-  "symptoms": "Sintomi",
-  "EverythingIsFine": "Tutto ok",
-  "Cramps": "Crampi",
-  "Acne": "Brufoli",
-  "TenderBreasts": "Seno sensibile",
-  "MilkyNippleDischarge": "Perdita di latte dai capezzoli",
-  "AbdominalPain": "Dolore addominale",
-  "Fatigue": "Affaticamento",
-  "Sleepiness": "Sonno",
-  "Backache": "Mal di schiena",
-  "FrequentUrination": "Minzione frequente",
-  "Cravings": "Desideri alimentari",
-  "Insomnia": "Insonnia",
-  "Headache": "Mal di testa",
-  "LegCramps": "Crampi alle gambe",
-  "BleedingGums": "Gengive sanguinanti",
-  "save": "Salva",
-  "Calm": "Calmo",
-  "Happy": "Felice",
-  "Energetic": "Energetico",
-  "MoodSwings": "Instabilità emotiva",
-  "Frisky": "Vivace",
-  "Irritated": "Irritato",
-  "Sad": "Triste",
-  "Anxious": "Ansioso",
-  "Depressed": "Depresso",
-  "VerySelfCritical": "Troppo auto-critico",
-  "Apathetic": "Apatico",
-  "Confused": "Confuso",
-  "LowEnergy": "Bassa energia",
-  "FeelingGuilty": "Sentirsi in colpa",
-  "ObsessiveThoughts": "Pensieri ossessivi",
-  "Period": "Ciclo",
-  "Fertile": "Fertile",
-  "Ovulation": "Ovulazione",
-  "NextPeriod": "Prossimo ciclo",
-  "MenstrualFertility": "Ciclo mestruale & Fertilità",
-  "Pregnancy": "Gravidanza",
-  "Note": "Nota",
-  "NewNoteForExample": "Nuova nota d'esempio",
-  "Week23OfYourPregnancy": "Settimana 23 della tua gravidanza",
-  "Details": "Dettagli",
-  "MyDailyInsights": "Le mie informazioni quotidiane",
-  "CheckupVaccination": "Controllo e vaccinazioni",
-  "NextCheckup": "Prossimo controllo",
-  "HeyJaneDoe": "Ciao Jane Doe, benvenuta nella comunità Ovella!",
-  "joinDiscussion": "Partecipa alle discussioni, fai domande e connettiti con esperti!",
-  "Forum": "Forum",
-  "Groups": "Gruppi",
-  "Events": "Eventi",
-  "findTopic": "Trova argomenti, gruppi e discussioni",
-  "MenstrualHealth": "Salute mestruale",
-  "Fertility": "Fertilità",
-  "SexualHealth": "Salute sessuale",
-  "PopularGroups": "Gruppi popolari",
-  "FindGroups": "Trova gruppi",
-  "EventsWorkshops": "Eventi & Workshop",
-  "EventsDetails": "Dettagli eventi",
-  "PregnancyNutritionWebinar": "Webinar sulla nutrizione durante la gravidanza",
-  "WhatLearn": "Cosa imparerai",
-  "Speakers": "Relatori",
-  "RegisterNow": "Registrati ora",
-  "EditProfile": "Modifica profilo",
-  "InviteYourPartnerToOvella": "Invita il tuo partner a Ovella",
-  "ClickHereToAddYourPartner": "Clicca qui per aggiungere il tuo partner",
-  "PersonalInformation": "Informazioni personali",
-  "Age": "Età",
-  "Gender": "Genere",
-  "MenstrualHealthDetails": "Dettagli sulla salute mestruale",
-  "CycleLength": "Durata ciclo",
-  "LastPeriod": "Ultimo ciclo",
-  "PregnancyStatus": "Stato della gravidanza",
-  "HealthConditions": "Condizioni di salute",
-  "PreferencesNotifications": "Preferenze & notifiche",
-  "PeriodAlerts": "Notifiche ciclo",
-  "PregnancyTips": "Consigli per la gravidanza",
-  "MentalHealth": "Salute mentale",
-  "Language": "Lingua",
-  "PrivacyData": "Privacy e dati",
-  "ViewDataInsights": "Visualizza i dati e le informazioni",
-  "ExportData": "Esporta dati",
-  "DeleteAccount": "Elimina account",
-  "SupportCommunity": "Supporto & Comunità",
-  "ContactSupport": "Contatta il supporto",
-  "FAQGuides": "FAQ & Guide",
-  "JoinACommunity": "Unisciti a una comunità"
+  "@@locale": "it",
+  "hellojaneDoe": "ciao, Jane Doe",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "buongiorno",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "i fibromi colpiscono spesso le donne.",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "i fibromi possono influire sul ciclo mestruale, causare sanguinamenti abbondanti e rendere difficile la gravidanza.",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "registra il tuo ciclo mestruale",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "registra i tuoi sintomi",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "registra il tuo umore",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "percorso di benessere personalizzato",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "vedi tutto",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "consigli di benessere personalizzati",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "home",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "monitoraggio",
+  "@tracking": {
+    "description": "Tracking section"
+  },
+  "community": "comunità",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "impostazioni",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "intelligenza artificiale",
+  "@ai": {
+    "description": "AI assistant"
+  },
+  "symptoms": "sintomi",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "tutto bene",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "crampi",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "acne",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "seno sensibile",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "secrezione lattea dai capezzoli",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "dolore addominale",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "stanchezza",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "sonnolenza",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "mal di schiena",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "minzione frequente",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "voglie",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "insonnia",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "mal di testa",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "crampi alle gambe",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "gengive sanguinanti",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
+  "save": "salva",
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "calmo",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "felice",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "energico",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "sbalzi d'umore",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "vivace",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "irritato",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "triste",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "ansioso",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "depresso",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "molto autocritico",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "apatico",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "confuso",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "bassa energia",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "senso di colpa",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "pensieri ossessivi",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "mestruazioni",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "fertile",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "ovulazione",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "prossime mestruazioni",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "fertilità mestruale",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "gravidanza",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "nota",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "nuova nota di esempio",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "settimana 23 della tua gravidanza",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "dettagli",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "i miei spunti quotidiani",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "visita medica e vaccinazioni",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "prossima visita medica",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "ciao Jane Doe, benvenuta nella comunità Ovella!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "partecipa alle discussioni, poni domande e connettiti con esperti!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "forum",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "gruppi",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "eventi",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "trova argomenti, gruppi e discussioni",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "salute mestruale",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "fertilità",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "salute sessuale",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "gruppi popolari",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "trova gruppi",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "eventi e workshop",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "dettagli degli eventi",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "webinar sulla nutrizione in gravidanza",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "cosa imparerai?",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "relatori",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "registrati ora",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "modifica profilo",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "invita il tuo partner su Ovella",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "clicca qui per aggiungere il tuo partner",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "informazioni personali",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "età",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "genere",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "dettagli sulla salute mestruale",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "durata del ciclo",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "ultime mestruazioni",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "stato della gravidanza",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "condizioni di salute",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "preferenze e notifiche",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "avvisi sul ciclo",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "consigli per la gravidanza",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "salute mentale",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "lingua",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "privacy e dati",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "visualizza approfondimenti sui dati",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "esporta dati",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "elimina account",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "supporto e comunità",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "contatta il supporto",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "FAQ e guide",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "unisciti a una comunità",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }

@@ -1,104 +1,407 @@
 {
   "@@locale": "bn",
-  "helloJaneDoe": "হ্যালো, জেন ডো",
-  "goodMorning": "সুপ্রভাত",
-  "fibroidsWomen": "ফাইব্রয়েড মূলত নারীদের প্রভাবিত করে।",
-  "fibroidDiscription": "ফাইব্রয়েড চক্রকে বিঘ্নিত করতে পারে, তীব্র রক্তস্রাব করতে পারে এবং প্রজনন ক্ষমতাকে প্রভাবিত করতে পারে।",
-  "LogPeriod": "পিরিয়ড লিখুন",
-  "LogYourSymptoms": "আপনার লক্ষণগুলি লিখুন",
-  "LogYourMood": "আপনার মেজাজ লিখুন",
-  "TailoredWellnessJourney": "ব্যক্তিগতভাবে সadjusted কোয়েল পরিচর্যা",
-  "SeeAll": "সব দেখুন",
-  "PersonalizedWellnessTips": "ব্যক্তিগতভাবে সument কোয়েল পরামর্শ",
-  "Home": "হোম",
-  "Tracking": "ট্র্যাকিং",
+  "hellojaneDoe": "হ্যালো, জেন ডো",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "সুপ্রভাত",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "ফাইব্রয়েড মূলত নারীদের প্রভাবিত করে।",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "ফাইব্রয়েড চক্রকে বিঘ্নিত করতে পারে, তীব্র রক্তস্রাব ঘটাতে পারে এবং প্রজনন ক্ষমতাকে প্রভাবিত করতে পারে।",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "পিরিয়ড লিখুন",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "আপনার লক্ষণগুলি লিখুন",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "আপনার মেজাজ লিখুন",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "ব্যক্তিগত সুস্থতার যাত্রা",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "সব দেখুন",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "ব্যক্তিগত সুস্থতার পরামর্শ",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "হোম",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "ট্র্যাকিং",
+  "@tracking": {
+    "description": "Tracking section"
+  },
   "community": "সম্প্রদায়",
-  "Settings": "সেটিংস",
-  "Ai": "কৃত্রিম বুদ্ধিমত্তা",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "সেটিংস",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "কৃত্রিম বুদ্ধিমত্তা",
+  "@ai": {
+    "description": "AI assistant"
+  },
   "symptoms": "লক্ষণ",
-  "EverythingIsFine": "সব কিছু ঠিক আছে",
-  "Cramps": "ক্রাম্প",
-  "Acne": "মুখে ফুসকুড়ি",
-  "TenderBreasts": "সংবেদনশীল স্তন",
-  "MilkyNippleDischarge": "দুধের মত নিপল থেকে পদার্থ বের হওয়া",
-  "AbdominalPain": "পেটে ব্যথা",
-  "Fatigue": "ক্লান্তি",
-  "Sleepiness": "ঘুমের ঝোঁক",
-  "Backache": "পিঠে ব্যথা",
-  "FrequentUrination": "বারবার মূত্রত্যাগ",
-  "Cravings": "লালসা",
-  "Insomnia": "অনিদ্রা",
-  "Headache": "মাথা ব্যথা",
-  "LegCramps": "পায়ের ক্রাম্প",
-  "BleedingGums": "মাড়ি থেকে রক্তপাত",
-  "save": "সংরক্ষণ",
-  "Calm": "শান্ত",
-  "Happy": "সুখী",
-  "Energetic": "শক্তিশালী",
-  "MoodSwings": "মেজাজ পরিবর্তন",
-  "Frisky": "উৎফুল্ল",
-  "Irritated": "বিরক্ত",
-  "Sad": "দুঃখী",
-  "Anxious": "উদ্বিগ্ন",
-  "Depressed": "বিষণ্ণ",
-  "VerySelfCritical": "নিজের প্রতি খুবই সমালোচনাত্মক",
-  "Apathetic": "অনাগ্রহী",
-  "Confused": "বিভ্রান্ত",
-  "LowEnergy": "কম শক্তি",
-  "FeelingGuilty": "দোষী বোধ",
-  "ObsessiveThoughts": "বারবার আসা চিন্তা",
-  "Period": "মাসিক",
-  "Fertile": "সন্তানসম্ভব",
-  "Ovulation": "ডিম্বমোচন",
-  "NextPeriod": "পরবর্তী মাসিক",
-  "MenstrualFertility": "মাসিক ও প্রজনন ক্ষমতা",
-  "Pregnancy": "গর্ভাবস্থা",
-  "Note": "নোট",
-  "NewNoteForExample": "নতুন নোট উদাহরণ স্বরূপ",
-  "Week23OfYourPregnancy": "আপনার গর্ভাবস্থার ২৩তম সপ্তাহ",
-  "Details": "বিশদ",
-  "MyDailyInsights": "আমার দৈনিক অন্তর্দৃষ্টি",
-  "CheckupVaccination": "পরীক্ষা ও টিকা",
-  "NextCheckup": "পরবর্তী পরীক্ষা",
-  "HeyJaneDoe": "হ্যাই জেন ডো, Ovella সম্প্রদায়ে স্বাগতম!",
-  "joinDiscussion": "আলোচনায় যোগ দিন, প্রশ্ন করুন এবং বিশেষজ্ঞদের সাথে যোগাযোগ করুন!",
-  "Forum": "ফোরাম",
-  "Groups": "দল",
-  "Events": "ইভেন্ট",
-  "findTopic": "বিষয়, দল এবং আলোচনা খুঁজুন",
-  "MenstrualHealth": "মাসিক স্বাস্থ্য",
-  "Fertility": "প্রজনন ক্ষমতা",
-  "SexualHealth": "যৌন স্বাস্থ্য",
-  "PopularGroups": "জনপ্রিয় দল",
-  "FindGroups": "দল খুঁজুন",
-  "EventsWorkshops": "ইভেন্ট ও কর্মশালা",
-  "EventsDetails": "ইভেন্টের বিবরণ",
-  "PregnancyNutritionWebinar": "গর্ভাবস্থা পুষ্টি ওয়েবিনার",
-  "WhatLearn": "আপনি কী শিখবেন",
-  "Speakers": "বক্তা",
-  "RegisterNow": "এখনই নিবন্ধন করুন",
-  "EditProfile": "প্রোফাইল সম্পাদনা",
-  "InviteYourPartnerToOvella": "আপনার সঙ্গীকে Ovella-তে আমন্ত্রণ জানান",
-  "ClickHereToAddYourPartner": "আপনার সঙ্গী যোগ করতে এখানে ক্লিক করুন",
-  "PersonalInformation": "ব্যক্তিগত তথ্য",
-  "Age": "বয়স",
-  "Gender": "লিঙ্গ",
-  "MenstrualHealthDetails": "মাসিক ও স্বাস্থ্য বিবরণ",
-  "CycleLength": "চক্রের দৈর্ঘ্য",
-  "LastPeriod": "শেষ মাসিক",
-  "PregnancyStatus": "গর্ভাবস্থার অবস্থা",
-  "HealthConditions": "স্বাস্থ্য অবস্থা",
-  "PreferencesNotifications": "পছন্দ ও বিজ্ঞপ্তি",
-  "PeriodAlerts": "মাসিক সতর্কতা",
-  "PregnancyTips": "গর্ভাবস্থা পরামর্শ",
-  "MentalHealth": "মানসিক স্বাস্থ্য",
-  "Language": "ভাষা",
-  "PrivacyData": "গোপনীয়তা ও তথ্য",
-  "ViewDataInsights": "তথ্য অন্তর্দৃষ্টি দেখুন",
-  "ExportData": "তথ্য রপ্তানি",
-  "DeleteAccount": "অ্যাকাউন্ট মুছুন",
-  "SupportCommunity": "সাপোর্ট ও সম্প্রদায়",
-  "ContactSupport": "সহায়তার সাথে যোগাযোগ",
-  "FAQGuides": "সাধারণ প্রশ্ন ও গাইড",
-  "JoinACommunity": "একটি সম্প্রদায়ে যোগ দিন"
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "সবকিছু ঠিক আছে",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "খিঁচুনি",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "ব্রণ",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "সংবেদনশীল স্তন",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "নিপল থেকে দুধের মতো স্রাব",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "পেটে ব্যথা",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "ক্লান্তি",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "ঘুমের ভাব",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "পিঠের ব্যথা",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "বারবার প্রস্রাব",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "লোভ",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "অনিদ্রা",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "মাথাব্যথা",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "পায়ে খিঁচুনি",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "মাড়ি থেকে রক্তপাত",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
+  "save": "সংরক্ষণ করুন",
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "শান্ত",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "সুখী",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "শক্তিশালী",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "মেজাজের ওঠানামা",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "উচ্ছ্বসিত",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "বিরক্ত",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "দুঃখী",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "উদ্বিগ্ন",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "বিষণ্ণ",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "অত্যন্ত আত্মসমালোচক",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "উদাসীন",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "বিভ্রান্ত",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "কম শক্তি",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "দোষী বোধ করা",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "অনিয়ন্ত্রিত চিন্তা",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "মাসিক",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "উর্বর",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "ডিম্বস্ফোরণ",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "পরবর্তী মাসিক",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "মাসিক ও উর্বরতা",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "গর্ভাবস্থা",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "নোট",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "নতুন নোট উদাহরণস্বরূপ",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "আপনার গর্ভাবস্থার ২৩তম সপ্তাহ",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "বিস্তারিত",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "আমার দৈনিক অন্তর্দৃষ্টি",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "পরীক্ষা ও টিকা",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "পরবর্তী পরীক্ষা",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "হাই জেন ডো, Ovella সম্প্রদায়ে স্বাগতম!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "আলোচনায় অংশ নিন, প্রশ্ন করুন এবং বিশেষজ্ঞদের সাথে যোগাযোগ করুন!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "ফোরাম",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "গোষ্ঠী",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "ইভেন্ট",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "বিষয়, গোষ্ঠী এবং আলোচনা খুঁজুন",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "মাসিক স্বাস্থ্য",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "উর্বরতা",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "যৌন স্বাস্থ্য",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "জনপ্রিয় গোষ্ঠী",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "গোষ্ঠী খুঁজুন",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "ইভেন্ট ও কর্মশালা",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "ইভেন্টের বিস্তারিত",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "গর্ভাবস্থায় পুষ্টি ওয়েবিনার",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "আপনি কী শিখবেন",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "বক্তা",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "এখনই নিবন্ধন করুন",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "প্রোফাইল সম্পাদনা করুন",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "আপনার সঙ্গীকে Ovella-তে আমন্ত্রণ জানান",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "আপনার সঙ্গী যোগ করতে এখানে ক্লিক করুন",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "ব্যক্তিগত তথ্য",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "বয়স",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "লিঙ্গ",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "মাসিক ও স্বাস্থ্যের বিস্তারিত",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "চক্রের দৈর্ঘ্য",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "শেষ মাসিক",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "গর্ভাবস্থার অবস্থা",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "স্বাস্থ্যের অবস্থা",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "পছন্দ ও বিজ্ঞপ্তি",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "মাসিকের সতর্কতা",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "গর্ভাবস্থার পরামর্শ",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "মানসিক স্বাস্থ্য",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "ভাষা",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "গোপনীয়তা ও তথ্য",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "তথ্যের অন্তর্দৃষ্টি দেখুন",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "তথ্য রপ্তানি করুন",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "অ্যাকাউন্ট মুছুন",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "সমর্থন ও সম্প্রদায়",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "সমর্থনের সাথে যোগাযোগ করুন",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "সাধারণ প্রশ্ন ও গাইড",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "একটি সম্প্রদায়ে যোগ দিন",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }

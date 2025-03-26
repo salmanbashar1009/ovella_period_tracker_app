@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "გამარჯობა, ჯეინ დოე",
-  "goodMorning": "დილა მშვიდობისა",
-  "fibroidsWomen": "ფიბრომები ძირითადად ქალებში გვხვდება.",
-  "fibroidDiscription": "ფიბრომები შეიძლება არღვევს ციკლს, იწვევს მძიმე სისხლდენას და გავლენას ახდენს გამრავლების უნარზე.",
-  "LogPeriod": "პერიოდის რეგისტრაცია",
-  "LogYourSymptoms": "გაიარეთ თქვენი სიმპტომები",
-  "LogYourMood": "გაიარეთ თქვენი განწყობა",
-  "TailoredWellnessJourney": "პერსონალიზებული ჯანმრთელობის მოგზაურობა",
-  "SeeAll": "ყველას ნახვა",
-  "PersonalizedWellnessTips": "პერსონალიზებული ჯანმრთელობის რჩევები",
-  "Home": "მთავარი",
-  "Tracking": "მონიტორინგი",
-  "community": "კომუნიტეტი",
-  "Settings": "პარამეტრები",
-  "Ai": "ხელოვნური ინტელექტი",
+  "@@locale": "ka",
+  "hellojaneDoe": "გამარჯობა, ჯეინ დოე",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "დილა მშვიდობისა",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "ფიბროიდები ხშირად გვხვდება ქალებში.",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "ფიბროიდებმა შეიძლება გავლენა მოახდინოს მენსტრუალურ ციკლზე, გამოიწვიოს ძლიერი სისხლდენა და გაართულოს ორსულობა.",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "მენსტრუაციის ჩაწერა",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "ჩაწერე შენი სიმპტომები",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "ჩაწერე შენი განწყობა",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "პერსონალიზებული ჯანმრთელობის მოგზაურობა",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "ყველაფრის ნახვა",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "პერსონალიზებული ჯანმრთელობის რჩევები",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "მთავარი",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "თვალყურის დევნება",
+  "@tracking": {
+    "description": "Tracking section"
+  },
+  "community": "საზოგადოება",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "პარამეტრები",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "ხელოვნური ინტელექტი",
+  "@ai": {
+    "description": "AI assistant"
+  },
   "symptoms": "სიმპტომები",
-  "EverythingIsFine": "ყველაფერი კარგად არის",
-  "Cramps": "კრამპები",
-  "Acne": "აკნე",
-  "TenderBreasts": "მომთხოვნი მკერდი",
-  "MilkyNippleDischarge": "რძე მკერდის წვის",
-  "AbdominalPain": "მუცლის ტკივილი",
-  "Fatigue": "დაფთხილი",
-  "Sleepiness": "ძილის გრძნობა",
-  "Backache": "თეძოს ტკივილი",
-  "FrequentUrination": "მუდმივი შარდი",
-  "Cravings": "საკვების წყურვილი",
-  "Insomnia": "უძილობა",
-  "Headache": "თავის ტკივილი",
-  "LegCramps": "ფეხის კრამპი",
-  "BleedingGums": "სისხლდენა ღრძილებიდან",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "ყველაფერი კარგადაა",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "კრუნჩხვები",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "აკნე",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "მგრძნობიარე მკერდი",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "რძისმაგვარი გამონადენი ძუძუსთავიდან",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "მუცლის ტკივილი",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "დაღლილობა",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "ძილიანობა",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "წელის ტკივილი",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "ხშირი შარდვა",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "ჭამის სურვილი",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "უძილობა",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "თავის ტკივილი",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "ფეხის კრუნჩხვები",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "ღრძილებიდან სისხლდენა",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
   "save": "შენახვა",
-  "Calm": "მშვიდი",
-  "Happy": "ბედნიერი",
-  "Energetic": "ენერგიული",
-  "MoodSwings": "განწყობის ცვალებადობა",
-  "Frisky": "ცელქი",
-  "Irritated": "გაღიზიანებული",
-  "Sad": "დაიღალა",
-  "Anxious": "გაშინებულია",
-  "Depressed": "დეპრესიული",
-  "VerySelfCritical": "საკუთარი თავი ძალიან კრიტიკულად",
-  "Apathetic": "აპათიური",
-  "Confused": "დაბნეული",
-  "LowEnergy": "დაბალი ენერგია",
-  "FeelingGuilty": "გრძნობთ დამნაშავედ",
-  "ObsessiveThoughts": "ოფრემილი ფიქრები",
-  "Period": "პერიოდი",
-  "Fertile": "საყოფელებელი",
-  "Ovulation": "ოვულაცია",
-  "NextPeriod": "მომდევნო პერიოდი",
-  "MenstrualFertility": "პერიოდისა და კვების უნარი",
-  "Pregnancy": "გორგო",
-  "Note": "შენიშვნა",
-  "NewNoteForExample": "ახალი შენიშვნა მაგალითისთვის",
-  "Week23OfYourPregnancy": "შენ გორგო კვირა 23",
-  "Details": "დეტალები",
-  "MyDailyInsights": "ჩემი ყოველდღიური ჭვრეტა",
-  "CheckupVaccination": "ჯანმრთელობის შემოწმება და ვაქცინაცია",
-  "NextCheckup": "მომდევნო ჯანმრთელობის შემოწმება",
-  "HeyJaneDoe": "გამარჯობა ჯეინ დოე, კეთილი იყოს თქვენი მობრძანება ოველას საზოგადოებაში!",
-  "joinDiscussion": "შეუერთდით დისკუსიებს, იკითხეთ კითხვები და დაუკავშირდით ექსპერტებს!",
-  "Forum": "ფორუმი",
-  "Groups": "ჯგუფები",
-  "Events": "ღონისძიებები",
-  "findTopic": "იპოვნეთ თემები, ჯგუფები და დისკუსიები",
-  "MenstrualHealth": "პერიოდული ჯანმრთელობა",
-  "Fertility": "გამრავლების უნარი",
-  "SexualHealth": "სექსუალური ჯანმრთელობა",
-  "PopularGroups": "პოპულარული ჯგუფები",
-  "FindGroups": "ჯგუფების მოძებნა",
-  "EventsWorkshops": "ღონისძიებები და ვორკშოპები",
-  "EventsDetails": "ღონისძიებების დეტალები",
-  "PregnancyNutritionWebinar": "გორგოს კვების ვებინარი",
-  "WhatLearn": "რა გესმით",
-  "Speakers": "სპიკერები",
-  "RegisterNow": "დარეგისტრირდით ახლა",
-  "EditProfile": "პროფილის რედაქტირება",
-  "InviteYourPartnerToOvella": "დაუკავშირდით თქვენს პარტნიორს ოველასში",
-  "ClickHereToAddYourPartner": "დააჭირეთ აქ თქვენი პარტნიორის დამატებისთვის",
-  "PersonalInformation": "პერსონალური ინფორმაცია",
-  "Age": "ასაკი",
-  "Gender": "სქესი",
-  "MenstrualHealthDetails": "პერიოდის ჯანმრთელობის დეტალები",
-  "CycleLength": "ციკლის სიგრძე",
-  "LastPeriod": "ბოლო პერიოდი",
-  "PregnancyStatus": "გორგოს სტატუსი",
-  "HealthConditions": "ჯანმრთელობის მდგომარეობები",
-  "PreferencesNotifications": "პირადი ინტერესები და შეტყობინებები",
-  "PeriodAlerts": "პერიოდის შეტყობინებები",
-  "PregnancyTips": "გორგოს რჩევები",
-  "MentalHealth": "გონებრივი ჯანმრთელობა",
-  "Language": "ენა",
-  "PrivacyData": "გაფართოებული მონაცემები",
-  "ViewDataInsights": "გაარჩევინეთ მონაცემები",
-  "ExportData": "ექსპორტირება",
-  "DeleteAccount": "ანგარიშის წაშლა",
-  "SupportCommunity": "მხარდაჭერა და საზოგადოება",
-  "ContactSupport": "დაგვიკავშირდით",
-  "FAQGuides": "კითხვები და სახელმძღვანელოები",
-  "JoinACommunity": "გაერთეთ საზოგადოებაში"
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "მშვიდი",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "ბედნიერი",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "ენერგიული",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "განწყობის ცვალებადობა",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "მხიარული",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "გაღიზიანებული",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "მოწყენილი",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "შფოთვიანი",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "დეპრესიული",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "ძალიან თვითკრიტიკული",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "აპათიური",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "დაბნეული",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "დაბალი ენერგია",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "დანაშაულის გრძნობა",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "შეპყრობილი აზრები",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "მენსტრუაცია",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "ფერტილური",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "ოვულაცია",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "შემდეგი მენსტრუაცია",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "მენსტრუაციული ფერტილობა",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "ორსულობა",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "შენიშვნა",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "ახალი შენიშვნა მაგალითად",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "შენი ორსულობის 23-ე კვირა",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "დეტალები",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "ჩემი ყოველდღიური შეხედულებები",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "ჯანმრთელობის შემოწმება და ვაქცინაცია",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "შემდეგი ჯანმრთელობის შემოწმება",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "გამარჯობა ჯეინ დოე, კეთილი იყოს შენი მობრძანება ოველას საზოგადოებაში!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "შეუერთდი განხილვებს, დასვი კითხვები და დაუკავშირდი ექსპერტებს!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "ფორუმი",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "ჯგუფები",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "ღონისძიებები",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "მოძებნე თემები, ჯგუფები და განხილვები",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "მენსტრუაციული ჯანმრთელობა",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "ფერტილობა",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "სექსუალური ჯანმრთელობა",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "პოპულარული ჯგუფები",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "ჯგუფების მოძებნა",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "ღონისძიებები და სემინარები",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "ღონისძიების დეტალები",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "ორსულობის კვების ვებინარი",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "რას ისწავლი?",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "სპიკერები",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "დარეგისტრირდი ახლა",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "პროფილის რედაქტირება",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "მოიწვიე შენი პარტნიორი ოველაში",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "დააჭირე აქ შენი პარტნიორის დასამატებლად",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "პერსონალური ინფორმაცია",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "ასაკი",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "სქესი",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "მენსტრუაციული ჯანმრთელობის დეტალები",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "ციკლის ხანგრძლივობა",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "ბოლო მენსტრუაცია",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "ორსულობის სტატუსი",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "ჯანმრთელობის მდგომარეობა",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "უპირატესობები და შეტყობინებები",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "მენსტრუაციის გაფრთხილებები",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "ორსულობის რჩევები",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "ფსიქიკური ჯანმრთელობა",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "ენა",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "კონფიდენციალურობა და მონაცემები",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "მონაცემებისა და შეხედულებების ნახვა",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "მონაცემების ექსპორტი",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "ანგარიშის წაშლა",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "მხარდაჭერა და საზოგადოება",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "მხარდაჭერასთან დაკავშირება",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "ხშირად დასმული კითხვები და სახელმძღვანელოები",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "შეუერთდი საზოგადოებას",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }

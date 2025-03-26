@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "Hej, Jane Doe",
-  "goodMorning": "Godmorgen",
-  "fibroidsWomen": "Fibroider rammer hovedsageligt kvinder.",
-  "fibroidDiscription": "Fibroider kan påvirke cyklusser, forårsage kraftig blødning og påvirke fertiliteten.",
-  "LogPeriod": "Log din periode",
-  "LogYourSymptoms": "Log dine symptomer",
-  "LogYourMood": "Log dit humør",
-  "TailoredWellnessJourney": "Skræddersyet sundhedsrejse",
-  "SeeAll": "Se alle",
-  "PersonalizedWellnessTips": "Personlige sundhedstips",
-  "Home": "Hjem",
-  "Tracking": "Sporing",
-  "community": "Fællesskab",
-  "Settings": "Indstillinger",
-  "Ai": "AI",
-  "symptoms": "Symptomer",
-  "EverythingIsFine": "Alt er fint",
-  "Cramps": "Kramper",
-  "Acne": "Akne",
-  "TenderBreasts": "Ømme bryster",
-  "MilkyNippleDischarge": "Mælkeagtig udflåd fra brystvorten",
-  "AbdominalPain": "Mavesmerter",
-  "Fatigue": "Træthed",
-  "Sleepiness": "Døsighed",
-  "Backache": "Rygsmerter",
-  "FrequentUrination": "Hyppig vandladning",
-  "Cravings": "Trangen til mad",
-  "Insomnia": "Søvnløshed",
-  "Headache": "Hovedpine",
-  "LegCramps": "Benkramp",
-  "BleedingGums": "Blødende tandkød",
-  "save": "Gem",
-  "Calm": "Rolig",
-  "Happy": "Glad",
-  "Energetic": "Energetisk",
-  "MoodSwings": "Humørsvingninger",
-  "Frisky": "Frisk",
-  "Irritated": "Irriteret",
-  "Sad": "Trist",
-  "Anxious": "Ængstelig",
-  "Depressed": "Deprimeret",
-  "VerySelfCritical": "Meget selvkritisk",
-  "Apathetic": "Apatisk",
-  "Confused": "Forvirret",
-  "LowEnergy": "Lav energi",
-  "FeelingGuilty": "Føler mig skyldig",
-  "ObsessiveThoughts": "Obsessive tanker",
-  "Period": "Periode",
-  "Fertile": "Frugtbar",
-  "Ovulation": "Ægløsning",
-  "NextPeriod": "Næste periode",
-  "MenstrualFertility": "Menstruationsfertilitet",
-  "Pregnancy": "Graviditet",
-  "Note": "Bemærkning",
-  "NewNoteForExample": "Ny bemærkning for eksempel",
-  "Week23OfYourPregnancy": "Uge 23 af din graviditet",
-  "Details": "Detaljer",
-  "MyDailyInsights": "Mine daglige indsigter",
-  "CheckupVaccination": "Tjek og vaccination",
-  "NextCheckup": "Næste tjek",
-  "HeyJaneDoe": "Hej, Jane Doe! Velkommen til Ovella fællesskabet!",
-  "joinDiscussion": "Deltag i diskussioner, stil spørgsmål og forbind med eksperter!",
-  "Forum": "Forum",
-  "Groups": "Grupper",
-  "Events": "Begivenheder",
-  "findTopic": "Find emner, grupper og diskussioner",
-  "MenstrualHealth": "Menstruationssundhed",
-  "Fertility": "Fertilitet",
-  "SexualHealth": "Seksuel sundhed",
-  "PopularGroups": "Populære grupper",
-  "FindGroups": "Find grupper",
-  "EventsWorkshops": "Begivenheder og workshops",
-  "EventsDetails": "Begivenhedsdetaljer",
-  "PregnancyNutritionWebinar": "Webinar om ernæring under graviditet",
-  "WhatLearn": "Hvad vil du lære",
-  "Speakers": "Talere",
-  "RegisterNow": "Tilmeld dig nu",
-  "EditProfile": "Rediger profil",
-  "InviteYourPartnerToOvella": "Inviter din partner til Ovella",
-  "ClickHereToAddYourPartner": "Klik her for at tilføje din partner",
-  "PersonalInformation": "Personlige oplysninger",
-  "Age": "Alder",
-  "Gender": "Køn",
-  "MenstrualHealthDetails": "Menstruations sundhedsdetaljer",
-  "CycleLength": "Cykellængde",
-  "LastPeriod": "Sidste periode",
-  "PregnancyStatus": "Graviditetsstatus",
-  "HealthConditions": "Sundhedstilstande",
-  "PreferencesNotifications": "Præferencer og notifikationer",
-  "PeriodAlerts": "Periodeadvarsler",
-  "PregnancyTips": "Graviditetstips",
-  "MentalHealth": "Mental sundhed",
-  "Language": "Sprog",
-  "PrivacyData": "Privatliv og data",
-  "ViewDataInsights": "Vis dataindsigter",
-  "ExportData": "Eksporter data",
-  "DeleteAccount": "Slet konto",
-  "SupportCommunity": "Support og fællesskab",
-  "ContactSupport": "Kontakt support",
-  "FAQGuides": "FAQ og vejledninger",
-  "JoinACommunity": "Deltag i fællesskabet"
+  "@@locale": "da",
+  "hellojaneDoe": "hej, Jane Doe",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "godmorgen",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "fibroider rammer hovedsageligt kvinder.",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "fibroider kan forstyrre cyklusser, forårsage kraftig blødning og påvirke fertiliteten.",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "log din menstruation",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "log dine symptomer",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "log dit humør",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "skræddersyet sundhedsrejse",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "se alle",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "personlige sundhedstips",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "hjem",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "sporing",
+  "@tracking": {
+    "description": "Tracking section"
+  },
+  "community": "fællesskab",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "indstillinger",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "AI",
+  "@ai": {
+    "description": "AI assistant"
+  },
+  "symptoms": "symptomer",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "alt er fint",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "kramper",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "akne",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "ømme bryster",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "mælkeagtigt udflåd fra brystvorten",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "mavesmerter",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "træthed",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "døsighed",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "rygsmerter",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "hyppig vandladning",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "sug",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "søvnløshed",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "hovedpine",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "benkramper",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "blødende tandkød",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
+  "save": "gem",
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "rolig",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "glad",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "energisk",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "humørsvingninger",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "livlig",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "irriteret",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "trist",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "ængstelig",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "deprimeret",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "meget selvkritisk",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "apatisk",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "forvirret",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "lav energi",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "følelse af skyld",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "tvangstanker",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "menstruation",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "frugtbar",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "ægløsning",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "næste menstruation",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "menstruation og fertilitet",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "graviditet",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "note",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "ny note som eksempel",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "uge 23 af din graviditet",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "detaljer",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "mine daglige indsigter",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "tjek og vaccination",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "næste tjek",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "hej Jane Doe, velkommen til Ovella-fællesskabet!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "deltag i diskussioner, stil spørgsmål og forbind med eksperter!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "forum",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "grupper",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "begivenheder",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "find emner, grupper og diskussioner",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "menstruationssundhed",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "fertilitet",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "seksuel sundhed",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "populære grupper",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "find grupper",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "begivenheder og workshops",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "detaljer om begivenheder",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "webinar om ernæring under graviditet",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "hvad du vil lære",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "talere",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "tilmeld dig nu",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "redigér profil",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "invitér din partner til Ovella",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "klik her for at tilføje din partner",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "personlige oplysninger",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "alder",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "køn",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "detaljer om menstruationssundhed",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "cykluslængde",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "sidste menstruation",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "graviditetsstatus",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "sundhedstilstande",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "præferencer og notifikationer",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "menstruationsadvarsler",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "graviditetstips",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "mental sundhed",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "sprog",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "privatliv og data",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "vis dataindsigter",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "eksporter data",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "slet konto",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "støtte og fællesskab",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "kontakt support",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "FAQ og vejledninger",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "deltag i et fællesskab",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }

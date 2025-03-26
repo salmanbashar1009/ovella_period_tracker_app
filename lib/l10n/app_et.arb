@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "Tere, Jane Doe",
-  "goodMorning": "Tere hommikust",
-  "fibroidsWomen": "Müoomid mõjutavad tavaliselt naisi.",
-  "fibroidDiscription": "Müoomid võivad mõjutada teie tsüklit, põhjustada tugevat veritsust ja raskendada rasedust.",
-  "LogPeriod": "Logi periood",
-  "LogYourSymptoms": "Logi oma sümptomid",
-  "LogYourMood": "Logi oma tuju",
-  "TailoredWellnessJourney": "Kohandatud heaolu tee",
-  "SeeAll": "Vaata kõiki",
-  "PersonalizedWellnessTips": "Isikupärastatud heaolu nõuanded",
-  "Home": "Avaleht",
-  "Tracking": "Jälgimine",
-  "community": "Kogukond",
-  "Settings": "Seaded",
-  "Ai": "Tehisintellekt",
-  "symptoms": "Sümptomid",
-  "EverythingIsFine": "Kõik on korras",
-  "Cramps": "Krambid",
-  "Acne": "Akne",
-  "TenderBreasts": "Õrn rinnad",
-  "MilkyNippleDischarge": "Piimjas nibujõud",
-  "AbdominalPain": "Kõhuvalu",
-  "Fatigue": "Väsimus",
-  "Sleepiness": "Unisus",
-  "Backache": "Seljavalu",
-  "FrequentUrination": "Sagedane urineerimine",
-  "Cravings": "Iha",
-  "Insomnia": "Unetus",
-  "Headache": "Peavalu",
-  "LegCramps": "Jalakrambid",
-  "BleedingGums": "Veritsevad igemed",
-  "save": "Salvesta",
-  "Calm": "Rahulik",
-  "Happy": "Õnnelik",
-  "Energetic": "Energiat täis",
-  "MoodSwings": "Meeleolumuutused",
-  "Frisky": "Mänguline",
-  "Irritated": "Ärritunud",
-  "Sad": "Kurb",
-  "Anxious": "Ärev",
-  "Depressed": "Depressioonis",
-  "VerySelfCritical": "Väga enesekriitiline",
-  "Apathetic": "Apaatne",
-  "Confused": "Segaduses",
-  "LowEnergy": "Madala energiaga",
-  "FeelingGuilty": "Tunne süüd",
-  "ObsessiveThoughts": "Sõltuv mõtted",
-  "Period": "Periood",
-  "Fertile": "Viljakas",
-  "Ovulation": "Ovulatsioon",
-  "NextPeriod": "Järgmine periood",
-  "MenstrualFertility": "Menstruaalne viljakus",
-  "Pregnancy": "Rasedus",
-  "Note": "Märkus",
-  "NewNoteForExample": "Uus märkus näiteks",
-  "Week23OfYourPregnancy": "Raseduse 23. nädal",
-  "Details": "Detailid",
-  "MyDailyInsights": "Minu igapäevased ülevaated",
-  "CheckupVaccination": "Kontroll ja vaktsineerimine",
-  "NextCheckup": "Järgmine kontroll",
-  "HeyJaneDoe": "Tere, Jane Doe! Tere tulemast Ovellasse!",
-  "joinDiscussion": "Liitu aruteluga, esita küsimusi ja ühendu ekspertidega!",
-  "Forum": "Foorum",
-  "Groups": "Grupid",
-  "Events": "Sündmused",
-  "findTopic": "Leia teemasid ja gruppe",
-  "MenstrualHealth": "Menstruaaltervise",
-  "Fertility": "Viljakus",
-  "SexualHealth": "Seksuaaltervis",
-  "PopularGroups": "Populaarsed grupid",
-  "FindGroups": "Leia grupid",
-  "EventsWorkshops": "Sündmused ja töötubade",
-  "EventsDetails": "Sündmuste detailid",
-  "PregnancyNutritionWebinar": "Raseduse toitumise veebiseminar",
-  "WhatLearn": "Mida soovite õppida?",
-  "Speakers": "Esinejad",
-  "RegisterNow": "Registreeru nüüd",
-  "EditProfile": "Redigeeri profiili",
-  "InviteYourPartnerToOvella": "Kutsu oma partner Ovellasse",
-  "ClickHereToAddYourPartner": "Klõpsake siin, et lisada oma partner",
-  "PersonalInformation": "Isiklik teave",
-  "Age": "Vanus",
-  "Gender": "Sugu",
-  "MenstrualHealthDetails": "Menstruaaltervise üksikasjad",
-  "CycleLength": "Tsükli pikkus",
-  "LastPeriod": "Viimane periood",
-  "PregnancyStatus": "Raseduse staatus",
-  "HealthConditions": "Tervisemurede",
-  "PreferencesNotifications": "Eelistused ja teadete",
-  "PeriodAlerts": "Perioodi hoiatuste",
-  "PregnancyTips": "Raseduse nõuanded",
-  "MentalHealth": "Vaimne tervis",
-  "Language": "Keel",
-  "PrivacyData": "Privaatsus ja andmed",
-  "ViewDataInsights": "Vaata andmete ülevaateid",
-  "ExportData": "Ekspordi andmed",
-  "DeleteAccount": "Kustuta konto",
-  "SupportCommunity": "Toetus ja kogukond",
-  "ContactSupport": "Kontaktige tuge",
-  "FAQGuides": "KKK ja juhised",
-  "JoinACommunity": "Liitu kogukonnaga"
+  "@@locale": "et",
+  "hellojaneDoe": "tere, Jane Doe",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "tere hommikust",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "müoomid mõjutavad peamiselt naisi.",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "müoomid võivad häirida tsüklit, põhjustada tugevat veritsust ja mõjutada viljakust.",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "logi oma menstruatsioon",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "logi oma sümptomid",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "logi oma tuju",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "kohandatud heaolu teekond",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "vaata kõike",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "isikupärastatud heaolu nõuanded",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "avaleht",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "jälgimine",
+  "@tracking": {
+    "description": "Tracking section"
+  },
+  "community": "kogukond",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "seaded",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "tehisintellekt",
+  "@ai": {
+    "description": "AI assistant"
+  },
+  "symptoms": "sümptomid",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "kõik on korras",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "krambid",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "akne",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "hellad rinnad",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "piimjas eritis nibust",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "kõhuvalu",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "väsimus",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "unisus",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "seljavalu",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "sagedane urineerimine",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "isud",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "unetus",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "peavalu",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "jalakrambid",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "veritsevad igemed",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
+  "save": "salvesta",
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "rahulik",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "õnnelik",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "energiline",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "meeleolumuutused",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "mänguline",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "ärritunud",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "kurb",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "ärevil",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "masendunud",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "väga enesekriitiline",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "apaatsus",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "segaduses",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "vähese energiaga",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "süütunne",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "obsessiivsed mõtted",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "menstruatsioon",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "viljakas",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "ovulatsioon",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "järgmine menstruatsioon",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "menstruatsioon ja viljakus",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "rasedus",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "märkus",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "uus märkus näiteks",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "sinu raseduse 23. nädal",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "üksikasjad",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "minu igapäevased ülevaated",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "kontroll ja vaktsineerimine",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "järgmine kontroll",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "tere Jane Doe, tere tulemast Ovella kogukonda!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "liitu aruteludega, esita küsimusi ja ühendu ekspertidega!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "foorum",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "grupid",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "sündmused",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "otsi teemasid, gruppe ja arutelusid",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "menstruaaltervis",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "viljakus",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "seksuaaltervis",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "populaarsed grupid",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "otsi gruppe",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "sündmused ja töötoad",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "sündmuste üksikasjad",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "raseduse toitumise veebiseminar",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "mida sa õpid",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "esinejad",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "registreeru nüüd",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "muuda profiili",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "kutsu oma partner Ovellasse",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "klõpsa siia, et lisada oma partner",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "isiklik teave",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "vanus",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "sugu",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "menstruaaltervise üksikasjad",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "tsükli pikkus",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "viimane menstruatsioon",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "raseduse seisund",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "tervislikud seisundid",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "eelistused ja teavitused",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "menstruatsiooni hoiatused",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "raseduse nõuanded",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "vaimne tervis",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "keel",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "privaatsus ja andmed",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "vaata andmeülevaateid",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "ekspordi andmed",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "kustuta konto",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "tugi ja kogukond",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "võta ühendust toega",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "KKK ja juhendid",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "liitu kogukonnaga",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }
