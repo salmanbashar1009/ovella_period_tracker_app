@@ -29,21 +29,22 @@ class HomeScreen extends StatelessWidget{
         child: SafeArea(
             child: Column(
               children: [
-                Padding(
-                  padding: AppPadding.screenHorizontalPadding,
-                  child: Column(
-                    children: [
+                Column(
+                  children: [
 
-                      /// App Bar
-                      Header(),
+                    /// App Bar
+                    Header(),
 
-                      Column(
+                    SizedBox(height: 10.h,),
+
+                    /// Page view tips with dot indicator
+                    PeriodTips(),
+
+                    Padding(
+                      padding: AppPadding.screenHorizontalPadding,
+                      child: Column(
                         children: [
 
-                          SizedBox(height: 10.h,),
-
-                          /// Page view tips with dot indicator
-                          PeriodTips(),
 
                           /// Period date count Container
                           PeriodDateContainer(),
@@ -201,8 +202,8 @@ class HomeScreen extends StatelessWidget{
 
                         ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
 
                 SizedBox(height: 16.h,),

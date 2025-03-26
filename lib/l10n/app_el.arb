@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "Γειά σου, Jane Doe",
-  "goodMorning": "Καλημέρα",
-  "fibroidsWomen": "Τα ινομυώματα επηρεάζουν συνήθως τις γυναίκες.",
-  "fibroidDiscription": "Τα ινομυώματα μπορεί να επηρεάσουν τον κύκλο σου, να προκαλέσουν έντονη αιμορραγία και ακόμη και να δυσκολεύουν την εγκυμοσύνη.",
-  "LogPeriod": "Καταγραφή περιόδου",
-  "LogYourSymptoms": "Καταγραφή συμπτωμάτων",
-  "LogYourMood": "Καταγραφή διάθεσης",
-  "TailoredWellnessJourney": "Προσαρμοσμένο ταξίδι ευεξίας",
-  "SeeAll": "Δες όλα",
-  "PersonalizedWellnessTips": "Προσωποποιημένες συμβουλές ευεξίας",
-  "Home": "Αρχική",
-  "Tracking": "Παρακολούθηση",
-  "community": "Κοινότητα",
-  "Settings": "Ρυθμίσεις",
-  "Ai": "Τεχνητή Νοημοσύνη",
-  "symptoms": "Συμπτώματα",
-  "EverythingIsFine": "Όλα είναι εντάξει",
-  "Cramps": "Κράμπες",
-  "Acne": "Ακμή",
-  "TenderBreasts": "Ευαίσθητο στήθος",
-  "MilkyNippleDischarge": "Λευκή έκκριση από τη θηλή",
-  "AbdominalPain": "Πόνος στην κοιλιά",
-  "Fatigue": "Κούραση",
-  "Sleepiness": "Νύστα",
-  "Backache": "Πόνος στην πλάτη",
-  "FrequentUrination": "Συχνή ούρηση",
-  "Cravings": "Λαχτάρες",
-  "Insomnia": "Αϋπνία",
-  "Headache": "Πονοκέφαλος",
-  "LegCramps": "Κράμπες στα πόδια",
-  "BleedingGums": "Αιμορραγία στα ούλα",
-  "save": "Αποθήκευση",
-  "Calm": "Ηρεμία",
-  "Happy": "Χαρούμενος",
-  "Energetic": "Με ενέργεια",
-  "MoodSwings": "Αλλαγές διάθεσης",
-  "Frisky": "Παιχνιδιάρικο",
-  "Irritated": "Ενοχλημένος",
-  "Sad": "Λυπημένος",
-  "Anxious": "Ανησυχητικός",
-  "Depressed": "Καταθλιπτικός",
-  "VerySelfCritical": "Πολύ αυτοκριτικός",
-  "Apathetic": "Απάθεια",
-  "Confused": "Μπερδεμένος",
-  "LowEnergy": "Χαμηλή ενέργεια",
-  "FeelingGuilty": "Νιώθω ένοχος",
-  "ObsessiveThoughts": "Δαγκωτικές σκέψεις",
-  "Period": "Περίοδος",
-  "Fertile": "Γόνιμος",
-  "Ovulation": "Ωορρηξία",
-  "NextPeriod": "Επόμενη περίοδος",
-  "MenstrualFertility": "Μηνιαία γονιμότητα",
-  "Pregnancy": "Εγκυμοσύνη",
-  "Note": "Σημείωση",
-  "NewNoteForExample": "Νέα σημείωση για παράδειγμα",
-  "Week23OfYourPregnancy": "Εβδομάδα 23 της εγκυμοσύνης σας",
-  "Details": "Λεπτομέρειες",
-  "MyDailyInsights": "Η καθημερινή μου ανασκόπηση",
-  "CheckupVaccination": "Έλεγχος και εμβολιασμός",
-  "NextCheckup": "Επόμενος έλεγχος",
-  "HeyJaneDoe": "Γειά σου, Jane Doe! Καλώς ήρθες στο Ovella!",
-  "joinDiscussion": "Συμμετοχή στη συζήτηση, κάνε ερωτήσεις και σύνδεση με ειδικούς!",
-  "Forum": "Φόρουμ",
-  "Groups": "Ομάδες",
-  "Events": "Εκδηλώσεις",
-  "findTopic": "Βρες θέματα και ομάδες",
-  "MenstrualHealth": "Υγεία της περιόδου",
-  "Fertility": "Γονιμότητα",
-  "SexualHealth": "Σεξουαλική υγεία",
-  "PopularGroups": "Δημοφιλείς ομάδες",
-  "FindGroups": "Βρες ομάδες",
-  "EventsWorkshops": "Εκδηλώσεις και εργαστήρια",
-  "EventsDetails": "Λεπτομέρειες εκδηλώσεων",
-  "PregnancyNutritionWebinar": "Διαδικτυακό σεμινάριο για τη διατροφή στην εγκυμοσύνη",
-  "WhatLearn": "Τι θέλεις να μάθεις;",
-  "Speakers": "Ομιλητές",
-  "RegisterNow": "Εγγραφείτε τώρα",
-  "EditProfile": "Επεξεργασία προφίλ",
-  "InviteYourPartnerToOvella": "Πρόσκληση του συντρόφου σας στο Ovella",
-  "ClickHereToAddYourPartner": "Κάντε κλικ εδώ για να προσθέσετε τον σύντροφό σας",
-  "PersonalInformation": "Προσωπικές πληροφορίες",
-  "Age": "Ηλικία",
-  "Gender": "Φύλο",
-  "MenstrualHealthDetails": "Λεπτομέρειες για την υγεία της περιόδου",
-  "CycleLength": "Μήκος κύκλου",
-  "LastPeriod": "Τελευταία περίοδος",
-  "PregnancyStatus": "Κατάσταση εγκυμοσύνης",
-  "HealthConditions": "Υγειονομικές καταστάσεις",
-  "PreferencesNotifications": "Προτιμήσεις και ειδοποιήσεις",
-  "PeriodAlerts": "Ειδοποιήσεις περιόδου",
-  "PregnancyTips": "Συμβουλές εγκυμοσύνης",
-  "MentalHealth": "Ψυχική Υγεία",
-  "Language": "Γλώσσα",
-  "PrivacyData": "Προστασία προσωπικών δεδομένων",
-  "ViewDataInsights": "Δες τα δεδομένα",
-  "ExportData": "Εξαγωγή δεδομένων",
-  "DeleteAccount": "Διαγραφή λογαριασμού",
-  "SupportCommunity": "Υποστήριξη και Κοινότητα",
-  "ContactSupport": "Επικοινωνία με την υποστήριξη",
-  "FAQGuides": "Συχνές ερωτήσεις και Οδηγίες",
-  "JoinACommunity": "Συμμετοχή σε μια κοινότητα"
+  "@@locale": "el",
+  "hellojaneDoe": "γειά σου, Jane Doe",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "καλημέρα",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "τα ινομυώματα επηρεάζουν κυρίως τις γυναίκες.",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "τα ινομυώματα μπορεί να διαταράξουν τον κύκλο, να προκαλέσουν έντονη αιμορραγία και να επηρεάσουν τη γονιμότητα.",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "καταγράψτε την περίοδό σας",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "καταγράψτε τα συμπτώματά σας",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "καταγράψτε τη διάθεσή σας",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "προσαρμοσμένο ταξίδι ευεξίας",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "δείτε όλα",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "προσωποποιημένες συμβουλές ευεξίας",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "αρχική",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "παρακολούθηση",
+  "@tracking": {
+    "description": "Tracking section"
+  },
+  "community": "κοινότητα",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "ρυθμίσεις",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "τεχνητή νοημοσύνη",
+  "@ai": {
+    "description": "AI assistant"
+  },
+  "symptoms": "συμπτώματα",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "όλα είναι εντάξει",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "κράμπες",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "ακμή",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "ευαίσθητο στήθος",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "γαλακτώδης έκκριση από τη θηλή",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "κοιλιακός πόνος",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "κόπωση",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "υπνηλία",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "πόνος στην πλάτη",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "συχνή ούρηση",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "λαχτάρα",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "αϋπνία",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "πονοκέφαλος",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "κράμπες στα πόδια",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "αιμορραγία ούλων",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
+  "save": "αποθήκευση",
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "ήρεμος",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "χαρούμενος",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "ενεργητικός",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "αλλαγές διάθεσης",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "παιχνιδιάρης",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "ενοχλημένος",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "λυπημένος",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "ανήσυχος",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "καταθλιπτικός",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "πολύ αυτοκριτικός",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "απαθής",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "μπερδεμένος",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "χαμηλή ενέργεια",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "αίσθημα ενοχής",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "εμμονικές σκέψεις",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "περίοδος",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "γόνιμος",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "ωορρηξία",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "επόμενη περίοδος",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "περίοδος και γονιμότητα",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "εγκυμοσύνη",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "σημείωση",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "νέα σημείωση ως παράδειγμα",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "23η εβδομάδα της εγκυμοσύνης σας",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "λεπτομέρειες",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "οι καθημερινές μου παρατηρήσεις",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "έλεγχος και εμβολιασμός",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "επόμενος έλεγχος",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "γειά σου Jane Doe, καλώς ήρθες στην κοινότητα Ovella!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "συμμετέχετε σε συζητήσεις, κάντε ερωτήσεις και συνδεθείτε με ειδικούς!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "φόρουμ",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "ομάδες",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "εκδηλώσεις",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "βρείτε θέματα, ομάδες και συζητήσεις",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "υγεία περιόδου",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "γονιμότητα",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "σεξουαλική υγεία",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "δημοφιλείς ομάδες",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "βρείτε ομάδες",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "εκδηλώσεις και εργαστήρια",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "λεπτομέρειες εκδηλώσεων",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "διαδικτυακό σεμινάριο για τη διατροφή στην εγκυμοσύνη",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "τι θα μάθετε",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "ομιλητές",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "εγγραφείτε τώρα",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "επεξεργασία προφίλ",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "προσκαλέστε τον σύντροφό σας στο Ovella",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "κάντε κλικ εδώ για να προσθέσετε τον σύντροφό σας",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "προσωπικές πληροφορίες",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "ηλικία",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "φύλο",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "λεπτομέρειες υγείας περιόδου",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "διάρκεια κύκλου",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "τελευταία περίοδος",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "κατάσταση εγκυμοσύνης",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "καταστάσεις υγείας",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "προτιμήσεις και ειδοποιήσεις",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "ειδοποιήσεις περιόδου",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "συμβουλές για την εγκυμοσύνη",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "ψυχική υγεία",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "γλώσσα",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "απόρρητο και δεδομένα",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "προβολή δεδομένων και πληροφοριών",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "εξαγωγή δεδομένων",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "διαγραφή λογαριασμού",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "υποστήριξη και κοινότητα",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "επικοινωνία με την υποστήριξη",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "συχνές ερωτήσεις και οδηγοί",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "συμμετοχή σε κοινότητα",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }

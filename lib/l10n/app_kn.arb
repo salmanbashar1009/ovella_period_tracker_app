@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "ಹೈ, ಜೆನ್ ಡೋ",
-  "goodMorning": "ಶುಭೋದಯ",
-  "fibroidsWomen": "ಫೈಬ್ರಾಯ್ಡ್ ಸಾಮಾನ್ಯವಾಗಿ ಮಹಿಳೆಯರಲ್ಲಿ ಕಂಡುಬರುತ್ತದೆ.",
-  "fibroidDiscription": "ಫೈಬ್ರಾಯ್ಡ್ ಮಾಸಿಕ ಧ್ರುವಣವನ್ನು ವ್ಯತ್ಯಯಗೊಳಿಸಬಹುದು, ಗಂಭೀರ ರಕ್ತಸ್ರಾವವನ್ನು ಉಂಟುಮಾಡಬಹುದು ಮತ್ತು ಫಲಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಪ್ರಭಾವಿತಗೊಳಿಸಬಹುದು.",
-  "LogPeriod": "ಪಿರಿಯಡ್ ಲಾಗ್ ಮಾಡಿ",
-  "LogYourSymptoms": "ನಿಮ್ಮ ಲಕ್ಷಣಗಳನ್ನು ಲಾಗ್ ಮಾಡಿ",
-  "LogYourMood": "ನಿಮ್ಮ ಮನೋಭಾವವನ್ನು ಲಾಗ್ ಮಾಡಿ",
-  "TailoredWellnessJourney": "ಆವಶ್ಯಕತೆಗೆ ಅನುಗುಣವಾದ ಆರೋಗ್ಯ ಪ್ರಯಾಣ",
-  "SeeAll": "ಎಲ್ಲಾವನ್ನೂ ನೋಡಿ",
-  "PersonalizedWellnessTips": "ವೈಯಕ್ತಿಕ ಸ್ವಾಸ್ಥ್ಯ ಸಲಹೆಗಳು",
-  "Home": "ಮುಖಪುಟ",
-  "Tracking": "ಟ್ರ್ಯಾಕಿಂಗ್",
+  "@@locale": "kn",
+  "hellojaneDoe": "ಹಾಯ್, ಜೇನ್ ಡೋ",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "ಶುಭೋದಯ",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "ಫೈಬ್ರಾಯ್ಡ್‌ಗಳು ಸಾಮಾನ್ಯವಾಗಿ ಮಹಿಳೆಯರಲ್ಲಿ ಕಂಡುಬರುತ್ತವೆ.",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "ಫೈಬ್ರಾಯ್ಡ್‌ಗಳು ಮಾಸಿಕ ಚಕ್ರದ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರಬಹುದು, ತೀವ್ರ ರಕ್ತಸ್ರಾವಕ್ಕೆ ಕಾರಣವಾಗಬಹುದು ಮತ್ತು ಗರ್ಭಧಾರಣೆಯನ್ನು ಕಷ್ಟಕರವಾಗಿಸಬಹುದು.",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "ನಿಮ್ಮ ಮಾಸಿಕ ಚಕ್ರವನ್ನು ದಾಖಲಿಸಿ",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "ನಿಮ್ಮ ಲಕ್ಷಣಗಳನ್ನು ದಾಖಲಿಸಿ",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "ನಿಮ್ಮ ಮನಸ್ಥಿತಿಯನ್ನು ದಾಖಲಿಸಿ",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "ವೈಯಕ್ತೀಕರಿಸಿದ ಆರೋಗ್ಯ ಪ್ರಯಾಣ",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "ಎಲ್ಲವನ್ನೂ ನೋಡಿ",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "ವೈಯಕ್ತೀಕರಿಸಿದ ಆರೋಗ್ಯ ಸಲಹೆಗಳು",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "ಮುಖಪುಟ",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "ಟ್ರ್ಯಾಕಿಂಗ್",
+  "@tracking": {
+    "description": "Tracking section"
+  },
   "community": "ಸಮುದಾಯ",
-  "Settings": "ಸೆಟ್ಟಿಂಗ್ಗಳು",
-  "Ai": "ಕೃತ್ರಿಮ ಬುದ್ಧಿಮತ್ತೆ",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "ಕೃತ್ರಿಮ ಬುದ್ಧಿಮತ್ತೆ",
+  "@ai": {
+    "description": "AI assistant"
+  },
   "symptoms": "ಲಕ್ಷಣಗಳು",
-  "EverythingIsFine": "ಎಲ್ಲವೂ ಸರಿಯಾಗಿದೆ",
-  "Cramps": "ಅಸ್ತಿತ್ವವಲ್ಲದ ನೋವು",
-  "Acne": "ಮುಂಡೂ",
-  "TenderBreasts": "ನಾರ್ಮಿಕ ಹೂಳುಗಳು",
-  "MilkyNippleDischarge": "ಹಾಲಿನ ನಿಪ್ಪಲ್ ಡಿಸ್ಚಾರ್ಜ್",
-  "AbdominalPain": "ಪೆಟ್ನ ನೋವು",
-  "Fatigue": "ತಣಿವು",
-  "Sleepiness": "ನಿದ್ರಾ ಪರಿಧಿ",
-  "Backache": "ಹಿರಿಯ ಹಿಂಜರಿಯೋ",
-  "FrequentUrination": "ಪರಿಶುದ್ಧ ಮಾಡುತ್ತಿರುವ ಪ್ರಚಂಡದೆಯೇ",
-  "Cravings": "ಆಹಾರದ ಕೆಂಪು",
-  "Insomnia": "ನಿದ್ರಾಹೀನತೆ",
-  "Headache": "ಹೆಡ್ ಸೆಟ್ಟಿದ ಪ್ರಕಾರ",
-  "LegCramps": "ಕಾಲು ನೋವು",
-  "BleedingGums": "ಗುದಗುದಿಯ ಹೆಚ್ಚ",
-  "save": "ಉಳಿಸು",
-  "Calm": "ಶಾಂತ",
-  "Happy": "ಸಂತೋಷ",
-  "Energetic": "ಉಜ್ವಲ",
-  "MoodSwings": "ಮನೋಭಾವ ಬದಲಾವಣೆ",
-  "Frisky": "ನಗುವ ಗುಂಪು",
-  "Irritated": "ಹೆಚ್ಚಾಗಿವೆ",
-  "Sad": "ದುಃಖ",
-  "Anxious": "ಕೋಪನೆ",
-  "Depressed": "ಖರ್ಚಿದ",
-  "VerySelfCritical": "ಹೆಚ್ಚು ಸ್ವಯಂನದ್ವಿಷ",
-  "Apathetic": "ಅಪ್ರಭುದ",
-  "Confused": "ಧಾರ್ಮಿಕ",
-  "LowEnergy": "ಸಂತೋಷ",
-  "FeelingGuilty": "ಪೂರ್ವಬೇಲಿ",
-  "ObsessiveThoughts": "ರೋಪಲು ನೆಲಕೆ",
-  "Period": "ಪರಿಪಕ್ವ",
-  "Fertile": "ಸಂಗ್ರಹಣ",
-  "Ovulation": "ಅಪ್ಲಭಿಲೇಶ",
-  "NextPeriod": "ಅಂಚು",
-  "MenstrualFertility": "ಪರಿಪಕ್ವ ಹಿತೈ",
-  "Pregnancy": "ಮೂಲಕ್ಷಾಣ",
-  "Note": "ಗಮನಿಸಿದ",
-  "NewNoteForExample": "ನೋಟ್ ಬರೆಯಿರಿ",
-  "Week23OfYourPregnancy": "ನೀವು ಅರ್ಧ ಹಣದುರು ಹಿಂದೀಲು",
-  "Details": "ಬರಹ",
-  "MyDailyInsights": "ನಾನು ದೈನಂದಿನ ಒಳಗೊಮ್ಮಲು",
-  "CheckupVaccination": "ಪೂರ್ವಸೂಚನಾ ಮೋಗ",
-  "NextCheckup": "ಮರು ನಿರ್ಧಾರ",
-  "HeyJaneDoe": "ಹೇ, ಜೆನ್ ಡೋ, ಒವೇಲಾ ಸಮುದಾಯಕ್ಕೆ ಸ್ವಾಗತ!",
-  "joinDiscussion": "ಚರ್ಚೆಗೆ ಭಾಗವಹಿಸಿ, ಪ್ರಶ್ನೆಗಳನ್ನು ಕೇಳಿ ಮತ್ತು ತಜ್ಞರೊಂದಿಗೆ ಸಂಪರ್ಕ ಸಾಧಿಸಿ!",
-  "Forum": "ಫೋರಂ",
-  "Groups": "ಗುಂಪುಗಳು",
-  "Events": "ಕಾರ್ಯಕ್ರಮಗಳು",
-  "findTopic": "ವಿಷಯಗಳು, ಗುಂಪುಗಳು ಮತ್ತು ಚರ್ಚೆಗಳನ್ನ ಹುಡುಕಿ",
-  "MenstrualHealth": "ಮಾಸಿಕ ಆರೋಗ್ಯ",
-  "Fertility": "ಪ್ರজনನಕ್ಷಮತೆ",
-  "SexualHealth": "ಲಿಂಗಯುಕ್ತ ಆರೋಗ್ಯ",
-  "PopularGroups": "ಜನಪ್ರಿಯ ಗುಂಪುಗಳು",
-  "FindGroups": "ಗುಂಪುಗಳನ್ನು ಹುಡುಕಿ",
-  "EventsWorkshops": "ಕಾರ್ಯಕ್ರಮಗಳು ಮತ್ತು ಕಾರ್ಯಾಗಾರಗಳು",
-  "EventsDetails": "ಕಾರ್ಯಕ್ರಮ ವಿವರಗಳು",
-  "PregnancyNutritionWebinar": "ಗರ್ಭವತಿ ಆಹಾರ ವೆಬಿನಾರ್",
-  "WhatLearn": "ನೀವು ಕಲಿತಿದ್ದೀರಿ",
-  "Speakers": "ವಕ್ತಾರರು",
-  "RegisterNow": "ಈಗ ನೋಂದಣಿ ಮಾಡಿ",
-  "EditProfile": "ಪ್ರೊಫೈಲ್ ಸಂಪಾದಿಸಿ",
-  "InviteYourPartnerToOvella": "ನಿಮ್ಮ ಪಾಲುದಾರರನ್ನು ಓವೆರ್ಲಾ ಗೆ ಆಮಂತ್ರಿಸಿ",
-  "ClickHereToAddYourPartner": "ನಿಮ್ಮ ಪಾಲುದಾರರನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ",
-  "PersonalInformation": "ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ",
-  "Age": "ವಯಸ್ಸು",
-  "Gender": "ಲಿಂಗ",
-  "MenstrualHealthDetails": "ಮಾಸಿಕ ಆರೋಗ್ಯ ವಿವರಗಳು",
-  "CycleLength": "ಚಕ್ರದ ಉದ್ದ",
-  "LastPeriod": "ಕೊನೆಯ ಪಿರಿಯಡ್",
-  "PregnancyStatus": "ಗರ್ಭಾವಸ್ಥೆ ಸ್ಥಿತಿ",
-  "HealthConditions": "ಆರೋಗ್ಯ ಸ್ಥಿತಿಗಳು",
-  "PreferencesNotifications": "ಆನೇಕ ಪ್ರೀತಿಗಳು ಮತ್ತು ಜ್ಞಾಪನಿಗಳು",
-  "PeriodAlerts": "ಪಿರಿಯಡ್ ಅಲರ್ಟ್",
-  "PregnancyTips": "ಗರ್ಭಧಾರಣೆ ಸಲಹೆಗಳು",
-  "MentalHealth": "ಮನೋಶಕ್ತಿಯ ಆರೋಗ್ಯ",
-  "Language": "ಭಾಷೆ",
-  "PrivacyData": "ಗೋಪ್ಯತೆ ಮತ್ತು ಡೇಟಾ",
-  "ViewDataInsights": "ಡೇಟಾ ಪರಿಚಯಗಳನ್ನು ವೀಕ್ಷಿಸಿ",
-  "ExportData": "ಡೇಟಾ ಎಕ್ಸ್‌ಪೋರ್ಟ್ ಮಾಡಿ",
-  "DeleteAccount": "ಖಾತೆ ಅಳಿಸಿ",
-  "SupportCommunity": "ಸಹಾಯ ಮತ್ತು ಸಮುದಾಯ",
-  "ContactSupport": "ಸಹಾಯವನ್ನು ಸಂಪರ್ಕಿಸಿ",
-  "FAQGuides": "ಹೆಚ್ಚುವರಿ ಪ್ರಶ್ನೆಗಳು ಮತ್ತು ಮಾರ್ಗದರ್ಶಿಗಳು",
-  "JoinACommunity": "ಒಂದು ಸಮುದಾಯವನ್ನು ಸೇರಿ"
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "ಎಲ್ಲವೂ ಚೆನ್ನಾಗಿದೆ",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "ಪಿಡುಗುಗಳು",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "ಮೊಡವೆ",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "ಸೂಕ್ಷ್ಮ ಸ್ತನಗಳು",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "ಕ್ಷೀರದಂತಹ ಮೊಲೆತೊಟ್ಟಿನ ಸ್ರಾವ",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "ಹೊಟ್ಟೆ ನೋವು",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "ಆಯಾಸ",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "ನಿದ್ರಾಲಸ್ಯ",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "ಬೆನ್ನುನೋವು",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "ಪದೇ ಪದೇ ಮೂತ್ರವಿಸರ್ಜನೆ",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "ತೀವ್ರ ಆಸೆಗಳು",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "ನಿದ್ರಾಹೀನತೆ",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "ತಲೆನೋವು",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "ಕಾಲಿನ ಪಿಡುಗುಗಳು",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "ಒಸಡುಗಳಿಂದ ರಕ್ತಸ್ರಾವ",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
+  "save": "ಉಳಿಸಿ",
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "ಶಾಂತ",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "ಸಂತೋಷ",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "ಚೈತನ್ಯದಾಯಕ",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "ಮನಸ್ಥಿತಿ ಏರಿಳಿತಗಳು",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "ಉತ್ಸಾಹಿ",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "ಕಿರಿಕಿರಿ",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "ದುಃಖ",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "ಆತಂಕ",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "ಖಿನ್ನತೆ",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "ತುಂಬಾ ಸ್ವಯಂವಿಮರ್ಶಕ",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "ಉದಾಸೀನ",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "ಗೊಂದಲ",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "ಕಡಿಮೆ ಶಕ್ತಿ",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "ಅಪರಾಧ ಭಾವನೆ",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "ಒತ್ತಾಯದ ಆಲೋಚನೆಗಳು",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "ಮಾಸಿಕ",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "ಪ್ರಜನನ ಸಾಮರ್ಥ್ಯ",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "ಅಂಡೋತ್ಪತ್ತಿ",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "ಮುಂದಿನ ಮಾಸಿಕ",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "ಮಾಸಿಕ ಮತ್ತು ಪ್ರಜನನ ಸಾಮರ್ಥ್ಯ",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "ಗರ್ಭಾವಸ್ಥೆ",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "ಟಿಪ್ಪಣಿ",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "ಹೊಸ ಟಿಪ್ಪಣಿ ಉದಾಹರಣೆಗೆ",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "ನಿಮ್ಮ ಗರ್ಭಾವಸ್ಥೆಯ 23ನೇ ವಾರ",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "ವಿವರಗಳು",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "ನನ್ನ ದೈನಂದಿನ ಒಳನೋಟಗಳು",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "ತಪಾಸಣೆ ಮತ್ತು ಲಸಿಕೆ",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "ಮುಂದಿನ ತಪಾಸಣೆ",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "ಹಾಯ್ ಜೇನ್ ಡೋ, ಒವೆಲ್ಲಾ ಸಮುದಾಯಕ್ಕೆ ಸ್ವಾಗತ!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "ಚರ್ಚೆಯಲ್ಲಿ ಭಾಗವಹಿಸಿ, ಪ್ರಶ್ನೆಗಳನ್ನು ಕೇಳಿ ಮತ್ತು ತಜ್ಞರೊಂದಿಗೆ ಸಂಪರ್ಕಿಸಿ!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "ವೇದಿಕೆ",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "ಗುಂಪುಗಳು",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "ಕಾರ್ಯಕ್ರಮಗಳು",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "ವಿಷಯಗಳು, ಗುಂಪುಗಳು ಮತ್ತು ಚರ್ಚೆಗಳನ್ನು ಹುಡುಕಿ",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "ಮಾಸಿಕ ಆರೋಗ್ಯ",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "ಪ್ರಜನನ ಸಾಮರ್ಥ್ಯ",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "ಲೈಂಗಿಕ ಆರೋಗ್ಯ",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "ಜನಪ್ರಿಯ ಗುಂಪುಗಳು",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "ಗುಂಪುಗಳನ್ನು ಹುಡುಕಿ",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "ಕಾರ್ಯಕ್ರಮಗಳು ಮತ್ತು ಕಾರ್ಯಾಗಾರಗಳು",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "ಕಾರ್ಯಕ್ರಮದ ವಿವರಗಳು",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "ಗರ್ಭಾವಸ್ಥೆಯ ಪೋಷಣೆ ವೆಬಿನಾರ್",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "ನೀವು ಏನು ಕಲಿಯುತ್ತೀರಿ?",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "ವಕ್ತಾರರು",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "ಈಗ ನೋಂದಾಯಿಸಿ",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "ಪ್ರೊಫೈಲ್ ಸಂಪಾದಿಸಿ",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "ನಿಮ್ಮ ಸಂಗಾತಿಯನ್ನು ಒವೆಲ್ಲಾಗೆ ಆಹ್ವಾನಿಸಿ",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "ನಿಮ್ಮ ಸಂಗಾತಿಯನ್ನು ಸೇರಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "ವಯಸ್ಸು",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "ಲಿಂಗ",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "ಮಾಸಿಕ ಆರೋಗ್ಯ ವಿವರಗಳು",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "ಚಕ್ರದ ಉದ್ದ",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "ಕೊನೆಯ ಮಾಸಿಕ",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "ಗರ್ಭಾವಸ್ಥೆ ಸ್ಥಿತಿ",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "ಆರೋಗ್ಯ ಪರಿಸ್ಥಿತಿಗಳು",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "ಆದ್ಯತೆಗಳು ಮತ್ತು ಸೂಚನೆಗಳು",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "ಮಾಸಿಕ ಸೂಚನೆಗಳು",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "ಗರ್ಭಾವಸ್ಥೆ ಸಲಹೆಗಳು",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "ಮಾನಸಿಕ ಆರೋಗ್ಯ",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "ಭಾಷೆ",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "ಗೌಪ್ಯತೆ ಮತ್ತು ಡೇಟಾ",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "ಡೇಟಾ ಒಳನೋಟಗಳನ್ನು ವೀಕ್ಷಿಸಿ",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "ಡೇಟಾವನ್ನು ರಫ್ತು ಮಾಡಿ",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "ಖಾತೆಯನ್ನು ಅಳಿಸಿ",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "ಬೆಂಬಲ ಮತ್ತು ಸಮುದಾಯ",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "FAQ ಮತ್ತು ಮಾರ್ಗದರ್ಶಿಗಳು",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "ಸಮುದಾಯದಲ್ಲಿ ಸೇರಿ",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }
