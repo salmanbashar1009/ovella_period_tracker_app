@@ -37,7 +37,7 @@ class AddLogScreen extends StatelessWidget {
               child: AppBar(
                 elevation: 0,
                 surfaceTintColor: Colors.transparent,
-                leading: Utils.backButton(context),
+                leading: isBackButtonOnAppBar ?  Utils.backButton(context) : null,
                 title: Consumer<HomeScreenProvider>(
                   builder: (_, homeScreenProvider, child) {
                     return Text(
