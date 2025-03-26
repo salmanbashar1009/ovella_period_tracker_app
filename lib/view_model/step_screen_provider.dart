@@ -214,4 +214,6 @@ class StepScreenProvider extends ChangeNotifier {
   String formatDate(DateTime date) {
     return DateFormat("MMM dd, yyyy").format(date);
   }
+
+  void updateSelectedLanguage(String languageCode) {}
 }

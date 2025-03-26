@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "Hola, Jane Doe",
-  "goodMorning": "Bon dia",
-  "fibroidsWomen": "Els fibromes afecten majoritàriament les dones.",
-  "fibroidDiscription": "Els fibromes poden desordenar els cicles, causar hemorràgies importants i afectar la fertilitat.",
-  "LogPeriod": "Registra el període",
-  "LogYourSymptoms": "Registra els teus símptomes",
-  "LogYourMood": "Registra el teu estat d'ànim",
-  "TailoredWellnessJourney": "Viatge de salut personalitzat",
-  "SeeAll": "Veure tot",
-  "PersonalizedWellnessTips": "Consells de salut personalitzats",
-  "Home": "Inici",
-  "Tracking": "Seguiment",
-  "community": "Comunitat",
-  "Settings": "Configuració",
-  "Ai": "IA",
-  "symptoms": "Símptomes",
-  "EverythingIsFine": "Tot està bé",
-  "Cramps": "Cramps",
-  "Acne": "Acne",
-  "TenderBreasts": "Seins sensibles",
-  "MilkyNippleDischarge": "Excreció de llet dels mugrons",
-  "AbdominalPain": "Dolor abdominal",
-  "Fatigue": "Fatiga",
-  "Sleepiness": "Son",
-  "Backache": "Mal d'esquena",
-  "FrequentUrination": "Micció freqüent",
-  "Cravings": "Desitjos",
-  "Insomnia": "Insomni",
-  "Headache": "Mal de cap",
-  "LegCramps": "Cramps a les cames",
-  "BleedingGums": "Sagnat de les genives",
-  "save": "Desar",
-  "Calm": "Calmat",
-  "Happy": "Feliç",
-  "Energetic": "Energetic",
-  "MoodSwings": "Canvis d'humor",
-  "Frisky": "Joguineix",
-  "Irritated": "Irritat",
-  "Sad": "Trist",
-  "Anxious": "Anxiós",
-  "Depressed": "Depressiu",
-  "VerySelfCritical": "Molt autocrític",
-  "Apathetic": "Apàtic",
-  "Confused": "Confós",
-  "LowEnergy": "Baixa energia",
-  "FeelingGuilty": "Sentir-se culpable",
-  "ObsessiveThoughts": "Pensaments obsessius",
-  "Period": "Període",
-  "Fertile": "Fèrtil",
-  "Ovulation": "Ovulació",
-  "NextPeriod": "Proper període",
-  "MenstrualFertility": "Cicle menstrual i fertilitat",
-  "Pregnancy": "Embaràs",
-  "Note": "Nota",
-  "NewNoteForExample": "Nova nota per exemple",
-  "Week23OfYourPregnancy": "Setmana 23 del teu embaràs",
-  "Details": "Detalls",
-  "MyDailyInsights": "Les meves observacions diàries",
-  "CheckupVaccination": "Control de salut i vacunació",
-  "NextCheckup": "Proper control de salut",
-  "HeyJaneDoe": "Hola Jane Doe, benvinguda a la comunitat Ovella!",
-  "joinDiscussion": "Uneix-te a les discussions, fes preguntes i connecta't amb experts!",
-  "Forum": "Fòrum",
-  "Groups": "Grups",
-  "Events": "Esdeveniments",
-  "findTopic": "Troba temes, grups i discussions",
-  "MenstrualHealth": "Salut menstrual",
-  "Fertility": "Fertilitat",
-  "SexualHealth": "Salut sexual",
-  "PopularGroups": "Grups populars",
-  "FindGroups": "Troba grups",
-  "EventsWorkshops": "Esdeveniments i tallers",
-  "EventsDetails": "Detalls dels esdeveniments",
-  "PregnancyNutritionWebinar": "Webinar sobre nutrició durant l'embaràs",
-  "WhatLearn": "Què aprendràs",
-  "Speakers": "Ponents",
-  "RegisterNow": "Registra't ara",
-  "EditProfile": "Editar perfil",
-  "InviteYourPartnerToOvella": "Convida la teva parella a Ovella",
-  "ClickHereToAddYourPartner": "Fes clic aquí per afegir la teva parella",
-  "PersonalInformation": "Informació personal",
-  "Age": "Edat",
-  "Gender": "Gènere",
-  "MenstrualHealthDetails": "Detalls de la salut menstrual",
-  "CycleLength": "Durada del cicle",
-  "LastPeriod": "Últim període",
-  "PregnancyStatus": "Estat de l'embaràs",
-  "HealthConditions": "Condicions de salut",
-  "PreferencesNotifications": "Preferències i notificacions",
-  "PeriodAlerts": "Alertes de període",
-  "PregnancyTips": "Consells durant l'embaràs",
-  "MentalHealth": "Salut mental",
-  "Language": "Idioma",
-  "PrivacyData": "Privadesa i dades",
-  "ViewDataInsights": "Veure informació sobre dades",
-  "ExportData": "Exportar dades",
-  "DeleteAccount": "Esborrar compte",
-  "SupportCommunity": "Suport i comunitat",
-  "ContactSupport": "Contacta amb el suport",
-  "FAQGuides": "Preguntes freqüents i guies",
-  "JoinACommunity": "Uneix-te a una comunitat"
+  "@@locale": "ca",
+  "hellojaneDoe": "hola, Jane Doe",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "bon dia",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "els fibromes afecten majoritàriament les dones.",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "els fibromes poden alterar els cicles, causar hemorràgies greus i afectar la fertilitat.",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "registra el període",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "registra els teus símptomes",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "registra el teu estat d'ànim",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "viatge de benestar personalitzat",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "veure-ho tot",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "consells de benestar personalitzats",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "inici",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "seguiment",
+  "@tracking": {
+    "description": "Tracking section"
+  },
+  "community": "comunitat",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "configuració",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "IA",
+  "@ai": {
+    "description": "AI assistant"
+  },
+  "symptoms": "símptomes",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "tot està bé",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "rampes",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "acne",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "pits sensibles",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "secreció lletosa dels mugrons",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "dolor abdominal",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "fatiga",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "son",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "mal d'esquena",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "micció freqüent",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "desitjos",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "insomni",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "mal de cap",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "rampes a les cames",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "sagnat de les genives",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
+  "save": "desar",
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "calmat",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "feliç",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "enèrgic",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "canvis d'humor",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "juguetó",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "irritat",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "trist",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "anxiós",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "depressiu",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "molt autocrític",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "apàtic",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "confós",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "baixa energia",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "sentir-se culpable",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "pensaments obsessius",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "període",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "fèrtil",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "ovulació",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "proper període",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "cicle menstrual i fertilitat",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "embaràs",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "nota",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "nova nota com a exemple",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "setmana 23 del teu embaràs",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "detalls",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "les meves observacions diàries",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "control i vacunació",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "proper control",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "hola Jane Doe, benvinguda a la comunitat d'Ovella!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "uneix-te a les discussions, fes preguntes i connecta amb experts!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "fòrum",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "grups",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "esdeveniments",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "troba temes, grups i discussions",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "salut menstrual",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "fertilitat",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "salut sexual",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "grups populars",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "troba grups",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "esdeveniments i tallers",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "detalls dels esdeveniments",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "webinar sobre nutrició durant l'embaràs",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "què aprendràs",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "ponents",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "registra't ara",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "edita el perfil",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "convida la teva parella a Ovella",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "fes clic aquí per afegir la teva parella",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "informació personal",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "edat",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "gènere",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "detalls de la salut menstrual",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "durada del cicle",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "últim període",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "estat de l'embaràs",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "condicions de salut",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "preferències i notificacions",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "alertes de període",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "consells per a l'embaràs",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "salut mental",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "idioma",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "privadesa i dades",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "veure informació de dades",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "exportar dades",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "eliminar el compte",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "suport i comunitat",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "contacta amb el suport",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "preguntes freqüents i guies",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "uneix-te a una comunitat",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }

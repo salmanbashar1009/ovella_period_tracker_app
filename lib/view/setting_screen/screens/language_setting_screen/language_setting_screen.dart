@@ -16,109 +16,92 @@ class LanguageSettingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
+    final appLocalization = AppLocalizations.of(context);
 
-    final appLocalization = AppLocalizations.of(context)!;
     return Scaffold(
       body: BackgroundWidget(
         child: SafeArea(
           child: Padding(
             padding: AppPadding.screenHorizontalPadding,
-            child: Consumer<StepScreenProvider>(
-              builder: (_, stepScreenProvider, __) {
-                /// Filtered languages based on search query
+            child: Consumer2<StepScreenProvider, LocalizationProvider>(
+              builder: (_, stepScreenProvider, localizationProvider, __) {
                 List<Map<String, String>> filteredLanguages =
                     stepScreenProvider.allLanguages
-                        .where(
-                          (lang) => lang['name']!.toLowerCase().contains(
-                            stepScreenProvider.languageSearchQuery
-                                .toLowerCase(),
-                          ),
-                        )
+                        .where((lang) => lang['name']!
+                            .toLowerCase()
+                            .contains(stepScreenProvider.languageSearchQuery.toLowerCase()))
                         .toList();
 
                 return Column(
                   children: [
                     SizedBox(height: 12.h),
-                    HeaderWidget(title: "Language"),
+                    HeaderWidget(title: appLocalization?.language ?? "Language"),
                     SizedBox(height: 24.h),
                     TextFormField(
                       controller: stepScreenProvider.languageSearchController,
                       style: textTheme.bodyMedium,
                       decoration: InputDecoration(
                         prefixIcon: Icon(CupertinoIcons.search),
-                        hintText: 'Search',
-                        suffixIcon:
-                            stepScreenProvider.languageSearchQuery.isNotEmpty
-                                ? IconButton(
-                                  icon: Icon(Icons.clear),
-                                  onPressed: () {
-                                    stepScreenProvider.languageSearchController
-                                        .clear();
-                                    stepScreenProvider.searchingLanguage("");
-                                  },
-                                )
-                                : null,
+                        hintText: "Search", // Corrected the key
+                        suffixIcon: stepScreenProvider.languageSearchQuery.isNotEmpty
+                            ? IconButton(
+                                icon: Icon(Icons.clear),
+                                onPressed: () {
+                                  stepScreenProvider.languageSearchController.clear();
+                                  stepScreenProvider.searchingLanguage("");
+                                },
+                              )
+                            : null,
                       ),
-                      onChanged:
-                          (value) =>
-                              stepScreenProvider.searchingLanguage(value),
+                      onChanged: (value) => stepScreenProvider.searchingLanguage(value),
                     ),
                     SizedBox(height: 12.h),
                     Expanded(
-                      child:
-                          filteredLanguages.isNotEmpty
-                              ? ListView.builder(
-                                itemCount: filteredLanguages.length,
-                                itemBuilder: (BuildContext context, int index) {
-                                  final language =
-                                      stepScreenProvider.allLanguages[index];
+                      child: filteredLanguages.isNotEmpty
+                          ? ListView.builder(
+                              itemCount: filteredLanguages.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                final language = filteredLanguages[index];
 
-                                  return GestureDetector(
-                                    onTap: () async {
-                                      stepScreenProvider.languageSelection(
-                                        filteredLanguages[index],
-                                      ); // Pass full Map
+                                return GestureDetector(
+                                  onTap: () async {
+                                    stepScreenProvider.languageSelection(language);
 
-                                     await context.read<LocalizationProvider>().onTapChangeLanguage(filteredLanguages[index]['code']!);
-
-                                    },
-                                    child: Container(
-                                      padding: EdgeInsets.symmetric(
-                                        horizontal: 14.w,
-                                        vertical: 14.h,
-                                      ),
-                                      decoration: BoxDecoration(
-                                        color:
-                                            filteredLanguages[index]['name'] ==
-                                                    stepScreenProvider
-                                                        .selectedLanguage['name']
-                                                ? AppColors.onPrimary
-                                                : Colors.transparent,
-                                        borderRadius: BorderRadius.circular(
-                                          16.r,
-                                        ),
-                                      ),
-                                      child: Text(
-                                        filteredLanguages[index]['name']!,
-                                        style: textTheme.bodyLarge!.copyWith(
-                                          fontWeight:
-                                              filteredLanguages[index] ==
-                                                      stepScreenProvider
-                                                          .selectedLanguage
-                                                  ? FontWeight.w500
-                                                  : FontWeight.normal,
-                                        ),
+                                    if (language.containsKey('code') && language['code'] != null) {
+                                      await localizationProvider.onTapChangeLanguage(
+                                      context,language['code']!,
+                                      
+                                      );
+                                    } else {
+                                      debugPrint("Error: Missing language code for ${language['name']}");
+                                    }
+                                  },
+                                  child: Container(
+                                    padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 14.h),
+                                    decoration: BoxDecoration(
+                                      color: language['code'] == localizationProvider.locale?.languageCode
+                                          ? AppColors.onPrimary
+                                          : Colors.transparent,
+                                      borderRadius: BorderRadius.circular(16.r),
+                                    ),
+                                    child: Text(
+                                      language['name'] ?? "Unknown", // Fallback to prevent null issues
+                                      style: textTheme.bodyLarge!.copyWith(
+                                        fontWeight: language['code'] == localizationProvider.locale?.languageCode
+                                            ? FontWeight.w500
+                                            : FontWeight.normal,
                                       ),
                                     ),
-                                  );
-                                },
-                              )
-                              : Center(
-                                child: Text(
-                                  "No languages found",
-                                  style: textTheme.bodyMedium,
-                                ),
+                                  ),
+                                );
+                              },
+                            )
+                          : Center(
+                              child: Text(
+                               "No languages found", // Corrected the key
+                                style: textTheme.bodyMedium,
                               ),
+                            ),
                     ),
                   ],
                 );

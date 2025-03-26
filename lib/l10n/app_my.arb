@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "Hai, Jane Doe",
-  "goodMorning": "Selamat pagi",
-  "fibroidsWomen": "Fibroid biasanya berlaku pada wanita.",
-  "fibroidDiscription": "Fibroid boleh mengganggu kitaran haid, menyebabkan pendarahan yang teruk dan mempengaruhi kesuburan.",
-  "LogPeriod": "Log Tempoh",
-  "LogYourSymptoms": "Log Gejala Anda",
-  "LogYourMood": "Log Mood Anda",
-  "TailoredWellnessJourney": "Perjalanan Kesejahteraan yang Disesuaikan",
-  "SeeAll": "Lihat Semua",
-  "PersonalizedWellnessTips": "Tip Kesejahteraan Peribadi",
-  "Home": "Utama",
-  "Tracking": "Penjejakan",
-  "community": "Komuniti",
-  "Settings": "Tetapan",
-  "Ai": "AI",
-  "symptoms": "Gejala",
-  "EverythingIsFine": "Semua baik-baik saja",
-  "Cramps": "Senggugut",
-  "Acne": "Jerawat",
-  "TenderBreasts": "Payudara Sensitif",
-  "MilkyNippleDischarge": "Keluarnya Susu dari Puting",
-  "AbdominalPain": "Sakit Perut",
-  "Fatigue": "Kelesuan",
-  "Sleepiness": "Mengantuk",
-  "Backache": "Sakit Belakang",
-  "FrequentUrination": "Kencing Kerap",
-  "Cravings": "Keinginan Makan",
-  "Insomnia": "Susah Tidur",
-  "Headache": "Sakit Kepala",
-  "LegCramps": "Kejang Kaki",
-  "BleedingGums": "Gusi Berdarah",
-  "save": "Simpan",
-  "Calm": "Tenang",
-  "Happy": "Gembira",
-  "Energetic": "Bertenaga",
-  "MoodSwings": "Perubahan Mood",
-  "Frisky": "Lincah",
-  "Irritated": "Terganggu",
-  "Sad": "Sedih",
-  "Anxious": "Cemas",
-  "Depressed": "Tertekan",
-  "VerySelfCritical": "Sangat Kritikal Terhadap Diri Sendiri",
-  "Apathetic": "Apatetik",
-  "Confused": "Bingung",
-  "LowEnergy": "Tenaga Rendah",
-  "FeelingGuilty": "Rasa Bersalah",
-  "ObsessiveThoughts": "Fikiran Obsesif",
-  "Period": "Haid",
-  "Fertile": "Subur",
-  "Ovulation": "Ovulasi",
-  "NextPeriod": "Haid Seterusnya",
-  "MenstrualFertility": "Kesuburan & Haid",
-  "Pregnancy": "Kehamilan",
-  "Note": "Nota",
-  "NewNoteForExample": "Nota Baru untuk Contoh",
-  "Week23OfYourPregnancy": "Minggu 23 Kehamilan Anda",
-  "Details": "Butiran",
-  "MyDailyInsights": "Pandangan Harian Saya",
-  "CheckupVaccination": "Kesihatan & Vaksinasi",
-  "NextCheckup": "Pemeriksaan Seterusnya",
-  "HeyJaneDoe": "Hai Jane Doe, selamat datang ke Komuniti Ovella!",
-  "joinDiscussion": "Sertai perbincangan, tanya soalan dan berhubung dengan pakar!",
-  "Forum": "Forum",
-  "Groups": "Kumpulan",
-  "Events": "Acara",
-  "findTopic": "Cari topik, kumpulan, dan perbincangan",
-  "MenstrualHealth": "Kesihatan Menstruasi",
-  "Fertility": "Kesuburan",
-  "SexualHealth": "Kesihatan Seksual",
-  "PopularGroups": "Kumpulan Popular",
-  "FindGroups": "Cari Kumpulan",
-  "EventsWorkshops": "Acara & Bengkel",
-  "EventsDetails": "Butiran Acara",
-  "PregnancyNutritionWebinar": "Webinar Pemakanan Semasa Kehamilan",
-  "WhatLearn": "Apa yang Akan Dipelajari",
-  "Speakers": "Penceramah",
-  "RegisterNow": "Daftar Sekarang",
-  "EditProfile": "Edit Profil",
-  "InviteYourPartnerToOvella": "Ajak pasangan anda ke Ovella",
-  "ClickHereToAddYourPartner": "Klik di sini untuk menambah pasangan anda",
-  "PersonalInformation": "Maklumat Peribadi",
-  "Age": "Umur",
-  "Gender": "Jantina",
-  "MenstrualHealthDetails": "Butiran Kesihatan Menstruasi",
-  "CycleLength": "Panjang Kitaran",
-  "LastPeriod": "Haid Terakhir",
-  "PregnancyStatus": "Status Kehamilan",
-  "HealthConditions": "Keadaan Kesihatan",
-  "PreferencesNotifications": "Keutamaan & Pemberitahuan",
-  "PeriodAlerts": "Pemberitahuan Haid",
-  "PregnancyTips": "Petua Kehamilan",
-  "MentalHealth": "Kesihatan Mental",
-  "Language": "Bahasa",
-  "PrivacyData": "Privasi & Data",
-  "ViewDataInsights": "Lihat Pandangan Data",
-  "ExportData": "Eksport Data",
-  "DeleteAccount": "Padam Akaun",
-  "SupportCommunity": "Sokongan & Komuniti",
-  "ContactSupport": "Hubungi Sokongan",
-  "FAQGuides": "Soalan Lazim & Panduan",
-  "JoinACommunity": "Sertai Komuniti"
+  "@@locale": "ms",
+  "hellojaneDoe": "hai, Jane Doe",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "selamat pagi",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "fibroid biasanya menjejaskan wanita.",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "fibroid boleh mengganggu kitaran haid, menyebabkan pendarahan teruk dan mempengaruhi kesuburan.",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "log kitaran haid",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "log gejala anda",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "log mood anda",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "perjalanan kesejahteraan tersuai",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "lihat semua",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "tip kesejahteraan peribadi",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "laman utama",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "penjejakan",
+  "@tracking": {
+    "description": "Tracking section"
+  },
+  "community": "komuniti",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "tetapan",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "kecerdasan buatan",
+  "@ai": {
+    "description": "AI assistant"
+  },
+  "symptoms": "gejala",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "semuanya baik",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "senggugut",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "jerawat",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "payudara sensitif",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "keluarnya susu dari puting",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "sakit perut",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "kelesuan",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "mengantuk",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "sakit belakang",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "kerap kencing",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "mengidam",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "insomnia",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "sakit kepala",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "kejang kaki",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "gusi berdarah",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
+  "save": "simpan",
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "tenang",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "gembira",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "bertenaga",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "perubahan mood",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "ceria",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "terganggu",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "sedih",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "cemas",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "tertekan",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "sangat kritikal terhadap diri sendiri",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "apatetik",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "bingung",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "tenaga rendah",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "rasa bersalah",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "fikiran obsesif",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "haid",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "subur",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "ovulasi",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "haid seterusnya",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "kesuburan dan haid",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "kehamilan",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "nota",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "nota baru sebagai contoh",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "minggu ke-23 kehamilan anda",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "butiran",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "pandangan harian saya",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "pemeriksaan kesihatan dan vaksinasi",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "pemeriksaan seterusnya",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "hai Jane Doe, selamat datang ke komuniti Ovella!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "sertai perbincangan, ajukan soalan dan berhubung dengan pakar!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "forum",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "kumpulan",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "acara",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "cari topik, kumpulan dan perbincangan",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "kesihatan haid",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "kesuburan",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "kesihatan seksual",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "kumpulan popular",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "cari kumpulan",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "acara dan bengkel",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "butiran acara",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "webinar pemakanan semasa kehamilan",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "apa yang anda akan pelajari",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "penceramah",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "daftar sekarang",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "edit profil",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "jemput pasangan anda ke Ovella",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "klik di sini untuk tambah pasangan anda",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "maklumat peribadi",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "umur",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "jantina",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "butiran kesihatan haid",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "panjang kitaran",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "haid terakhir",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "status kehamilan",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "keadaan kesihatan",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "keutamaan dan pemberitahuan",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "amaran haid",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "petua kehamilan",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "kesihatan mental",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "bahasa",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "privasi dan data",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "lihat pandangan data",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "eksport data",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "padam akaun",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "sokongan dan komuniti",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "hubungi sokongan",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "soalan lazim dan panduan",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "sertai komuniti",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }

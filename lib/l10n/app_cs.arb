@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "Ahoj, Jane Doe",
-  "goodMorning": "Dobré ráno",
-  "fibroidsWomen": "Myomy postihují většinou ženy.",
-  "fibroidDiscription": "Myomy mohou ovlivnit cykly, způsobovat silné krvácení a mít vliv na plodnost.",
-  "LogPeriod": "Zaznamenejte svůj cyklus",
-  "LogYourSymptoms": "Zaznamenejte své příznaky",
-  "LogYourMood": "Zaznamenejte svou náladu",
-  "TailoredWellnessJourney": "Přizpůsobená cesta k pohodě",
-  "SeeAll": "Zobrazit vše",
-  "PersonalizedWellnessTips": "Personalizované tipy na pohodu",
-  "Home": "Domů",
-  "Tracking": "Sledování",
-  "community": "Komunita",
-  "Settings": "Nastavení",
-  "Ai": "AI",
-  "symptoms": "Příznaky",
-  "EverythingIsFine": "Všechno je v pořádku",
-  "Cramps": "Křeče",
-  "Acne": "Akné",
-  "TenderBreasts": "Citlivé prsy",
-  "MilkyNippleDischarge": "Mléčný výtok z bradavky",
-  "AbdominalPain": "Bolest břicha",
-  "Fatigue": "Únava",
-  "Sleepiness": "Spavost",
-  "Backache": "Bolest zad",
-  "FrequentUrination": "Časté močení",
-  "Cravings": "Chuť na jídlo",
-  "Insomnia": "Nespavost",
-  "Headache": "Bolest hlavy",
-  "LegCramps": "Křeče v nohou",
-  "BleedingGums": "Krvácení dásní",
-  "save": "Uložit",
-  "Calm": "Klidný",
-  "Happy": "Šťastný",
-  "Energetic": "Energetický",
-  "MoodSwings": "Výkyvy nálady",
-  "Frisky": "Veselý",
-  "Irritated": "Naštvaný",
-  "Sad": "Smutný",
-  "Anxious": "Úzkostný",
-  "Depressed": "Depresivní",
-  "VerySelfCritical": "Velmi sebekritický",
-  "Apathetic": "Apatický",
-  "Confused": "Zmatený",
-  "LowEnergy": "Nízká energie",
-  "FeelingGuilty": "Cítím se vinen",
-  "ObsessiveThoughts": "Obsessivní myšlenky",
-  "Period": "Menstruace",
-  "Fertile": "Plodný",
-  "Ovulation": "Ovulace",
-  "NextPeriod": "Další menstruace",
-  "MenstrualFertility": "Menstruační plodnost",
-  "Pregnancy": "Těhotenství",
-  "Note": "Poznámka",
-  "NewNoteForExample": "Nová poznámka pro příklad",
-  "Week23OfYourPregnancy": "23. týden těhotenství",
-  "Details": "Detaily",
-  "MyDailyInsights": "Moje denní postřehy",
-  "CheckupVaccination": "Prohlídka a očkování",
-  "NextCheckup": "Další prohlídka",
-  "HeyJaneDoe": "Ahoj Jane Doe, vítej v Ovella komunitě!",
-  "joinDiscussion": "Připojte se k diskusím, ptejte se a spojte se s odborníky!",
-  "Forum": "Fórum",
-  "Groups": "Skupiny",
-  "Events": "Události",
-  "findTopic": "Najděte témata, skupiny a diskuse",
-  "MenstrualHealth": "Menstruační zdraví",
-  "Fertility": "Plodnost",
-  "SexualHealth": "Sexuální zdraví",
-  "PopularGroups": "Populární skupiny",
-  "FindGroups": "Najít skupiny",
-  "EventsWorkshops": "Události a workshopy",
-  "EventsDetails": "Detaily události",
-  "PregnancyNutritionWebinar": "Webinář o výživě v těhotenství",
-  "WhatLearn": "Co se naučíte",
-  "Speakers": "Přednášející",
-  "RegisterNow": "Registrujte se nyní",
-  "EditProfile": "Upravit profil",
-  "InviteYourPartnerToOvella": "Pozvěte svého partnera do Ovella",
-  "ClickHereToAddYourPartner": "Klikněte sem pro přidání partnera",
-  "PersonalInformation": "Osobní údaje",
-  "Age": "Věk",
-  "Gender": "Pohlaví",
-  "MenstrualHealthDetails": "Detaily menstruačního zdraví",
-  "CycleLength": "Délka cyklu",
-  "LastPeriod": "Poslední menstruace",
-  "PregnancyStatus": "Stav těhotenství",
-  "HealthConditions": "Zdravotní podmínky",
-  "PreferencesNotifications": "Preference a oznámení",
-  "PeriodAlerts": "Oznámení o menstruaci",
-  "PregnancyTips": "Tipy na těhotenství",
-  "MentalHealth": "Duševní zdraví",
-  "Language": "Jazyk",
-  "PrivacyData": "Ochrana soukromí a data",
-  "ViewDataInsights": "Zobrazit postřehy z dat",
-  "ExportData": "Exportovat data",
-  "DeleteAccount": "Smazat účet",
-  "SupportCommunity": "Podpora a komunita",
-  "ContactSupport": "Kontaktujte podporu",
-  "FAQGuides": "FAQ a příručky",
-  "JoinACommunity": "Připojte se k komunitě"
+  "@@locale": "cs",
+  "hellojaneDoe": "ahoj, Jane Doe",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "dobré ráno",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "myomy postihují převážně ženy.",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "myomy mohou narušit cykly, způsobit silné krvácení a ovlivnit plodnost.",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "zaznamenejte menstruaci",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "zaznamenejte své příznaky",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "zaznamenejte svou náladu",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "přizpůsobená cesta k pohodě",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "zobrazit vše",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "personalizované tipy na pohodu",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "domů",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "sledování",
+  "@tracking": {
+    "description": "Tracking section"
+  },
+  "community": "komunita",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "nastavení",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "AI",
+  "@ai": {
+    "description": "AI assistant"
+  },
+  "symptoms": "příznaky",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "všechno je v pořádku",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "křeče",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "akné",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "citlivá prsa",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "mléčný výtok z bradavky",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "bolest břicha",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "únava",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "ospalost",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "bolest zad",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "časté močení",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "chutě",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "nespavost",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "bolest hlavy",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "křeče v nohou",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "krvácení dásní",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
+  "save": "uložit",
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "klidný",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "šťastný",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "energický",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "výkyvy nálady",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "hravý",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "podrážděný",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "smutný",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "úzkostný",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "depresivní",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "velmi sebekritický",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "apatický",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "zmatený",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "nízká energie",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "pocit viny",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "obsesivní myšlenky",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "menstruace",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "plodný",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "ovulace",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "další menstruace",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "menstruace a plodnost",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "těhotenství",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "poznámka",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "nová poznámka jako příklad",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "23. týden vašeho těhotenství",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "podrobnosti",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "moje denní postřehy",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "kontrola a očkování",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "další kontrola",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "ahoj Jane Doe, vítej v komunitě Ovella!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "připojte se k diskuzím, ptejte se a spojte se s odborníky!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "fórum",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "skupiny",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "události",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "najděte témata, skupiny a diskuze",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "menstruační zdraví",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "plodnost",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "sexuální zdraví",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "populární skupiny",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "najít skupiny",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "události a workshopy",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "podrobnosti událostí",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "webinář o výživě v těhotenství",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "co se naučíte",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "přednášející",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "zaregistrujte se nyní",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "upravit profil",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "pozvěte svého partnera do Ovella",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "klikněte zde pro přidání partnera",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "osobní údaje",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "věk",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "pohlaví",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "podrobnosti o menstruačním zdraví",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "délka cyklu",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "poslední menstruace",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "stav těhotenství",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "zdravotní stav",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "preference a oznámení",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "upozornění na menstruaci",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "tipy pro těhotenství",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "duševní zdraví",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "jazyk",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "ochrana soukromí a data",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "zobrazit postřehy z dat",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "exportovat data",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "smazat účet",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "podpora a komunita",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "kontaktovat podporu",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "časté otázky a průvodce",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "připojte se ke komunitě",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }

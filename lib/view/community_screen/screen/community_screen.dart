@@ -11,6 +11,7 @@ import 'package:ovella_period_tracker_app/view/community_screen/widget/segment_b
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 import 'package:provider/provider.dart';
 import 'package:ovella_period_tracker_app/view_model/community_provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CommunityScreen extends StatelessWidget {
   CommunityScreen({super.key});
@@ -32,6 +33,7 @@ class CommunityScreen extends StatelessWidget {
   final FocusNode _focusNode = FocusNode();
   @override
   Widget build(BuildContext context) {
+      final appLocalization = AppLocalizations.of(context);
     return BackgroundWidget(
       child: SingleChildScrollView(
         child: SafeArea(
@@ -81,7 +83,7 @@ class CommunityScreen extends StatelessWidget {
                       Align(
                         alignment: Alignment.center,
                         child: Text(
-                          "Hey Jane Doe, Welcome to the",
+                 appLocalization!.abdominalpain??   "Hey Jane Doe, Welcome to the",
                           style: Theme.of(
                             context,
                           ).textTheme.bodyLarge?.copyWith(
