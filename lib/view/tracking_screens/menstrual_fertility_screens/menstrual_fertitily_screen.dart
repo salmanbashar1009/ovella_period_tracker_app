@@ -217,7 +217,11 @@ class MenstrualFertilityScreen extends StatelessWidget {
             onAddPressed: () {
               final homeScreenProvider = context.read<HomeScreenProvider>();
               homeScreenProvider.onLog(logTo: homeScreenProvider.symptomsLog);
-              Navigator.pushNamed(context, RouteName.addLogScreen);
+              Navigator.pushNamed(context, RouteName.addLogScreen,arguments: AddLogScreenArguments(
+                  isBackButtonOnAppBar: true,
+                  onSave: (){},
+                  saveButtonText: "Save"
+              ));
             },
             title: 'Log your Symptoms',
           ),

@@ -15,54 +15,53 @@ class TrackingScreen extends StatelessWidget {
   // int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return
-      BackgroundWidget(
-
-        child: SingleChildScrollView(
-          child: SafeArea(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: 10.h),
-                Padding(
-                  padding: AppPadding.screenHorizontalPadding,
-                  child: Align(
-                    // alignment: Alignment.center,
-                    child: Container(
-                      height: 56.h,
-                      width: MediaQuery.of(context).size.width * 0.8,
-                      // margin: EdgeInsets.symmetric(horizontal: 12.w),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(32.r),
-                        color: AppColors.onSecondary,
-                      ),
-                      padding:  EdgeInsets.all(4.r),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          _buildSegmentItem(context, 0, "Menstrual & Fertility"),
-                          _buildSegmentItem(context, 1, "Pregnancy"),
-                        ],
-                      ),
+    return BackgroundWidget(
+      child: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 10.h),
+              Padding(
+                padding: AppPadding.screenHorizontalPadding,
+                child: Align(
+                  // alignment: Alignment.center,
+                  child: Container(
+                    height: 56.h,
+                    width: MediaQuery.of(context).size.width * 0.8,
+                    // margin: EdgeInsets.symmetric(horizontal: 12.w),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(32.r),
+                      color: AppColors.onSecondary,
+                    ),
+                    padding: EdgeInsets.all(4.r),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        _buildSegmentItem(context, 0, "Menstrual & Fertility"),
+                        _buildSegmentItem(context, 1, "Pregnancy"),
+                      ],
                     ),
                   ),
                 ),
-                SizedBox(height: 24.h),
-                Consumer<TrackingScreenProvider>(
-                  builder: (context, trackingScreenProvider, child) {
-                    // Display different content based on selected tab
-                    return trackingScreenProvider.selectedIndex == 0 ? MenstrualFertilityScreen() : PregnancyScreen();
-                  },
-                  // Add more content for the selected tab here
-                ),
-                SizedBox(height: 50,),
-              ],
-            ),
+              ),
+              SizedBox(height: 24.h),
+              Consumer<TrackingScreenProvider>(
+                builder: (context, trackingScreenProvider, child) {
+                  // Display different content based on selected tab
+                  return trackingScreenProvider.selectedIndex == 0
+                      ? MenstrualFertilityScreen()
+                      : PregnancyScreen();
+                },
+                // Add more content for the selected tab here
+              ),
+              SizedBox(height: 50),
+            ],
           ),
         ),
-      );
-
+      ),
+    );
   }
 
   Widget _buildSegmentItem(BuildContext context, int index, String title) {
@@ -81,7 +80,7 @@ class TrackingScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 24.w),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(99.r),
-              color:isSelected ? Colors.black : Colors.transparent,
+              color: isSelected ? Colors.black : Colors.transparent,
             ),
             alignment: Alignment.center,
             child: Text(
@@ -91,7 +90,7 @@ class TrackingScreen extends StatelessWidget {
                 color: isSelected ? Colors.white : Colors.black,
               ),
             ),
-          )  ,
+          ),
         );
       },
     );
