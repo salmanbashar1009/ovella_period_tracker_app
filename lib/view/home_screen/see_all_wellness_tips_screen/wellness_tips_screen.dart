@@ -118,7 +118,7 @@ class WellnessTipsScreen extends StatelessWidget {
                                 "AI-driven diet, workout, and wellness tips tailored for your cycle or maternity.",
                                 style: Theme.of(context).textTheme.bodySmall,
                                 overflow: TextOverflow.ellipsis,
-                                maxLines: 4,
+                                maxLines: 3,
                               ),
                             ],
                           ),

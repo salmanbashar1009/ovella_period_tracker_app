@@ -10,6 +10,7 @@ class WeekList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
+
     return Consumer<PregnancyScreenProvider>(
       builder: (BuildContext context, pregnancyScreenProvider, Widget? child) {
         return SizedBox(
@@ -26,7 +27,9 @@ class WeekList extends StatelessWidget {
                 },
                 child: Container(
                   width: 85.w,
-                  margin: EdgeInsets.only(right: 8.w),
+                  margin: EdgeInsets.only(
+                      left: index == pregnancyScreenProvider.weekList.first ? 24.w : 0,
+                      right: index == pregnancyScreenProvider.weekList.last ? 24.w : 8.w),
                   decoration: BoxDecoration(
                     color:
                         pregnancyScreenProvider.selectedWeek == index
