@@ -33,19 +33,12 @@ class PregnancyDetailScreen extends StatelessWidget {
                       ),
                       Padding(
                         padding: AppPadding.screenPadding,
-                        child: Container(
-                          width: 360.w,
-                          height: 245.h,
-                          padding: EdgeInsets.symmetric(vertical: 15.h),
-                          decoration: BoxDecoration(
-                            color: Color(0xFFF2DFD4),
-                            borderRadius: BorderRadius.circular(24.r),
-                            border: Border.all(color: AppColors.onPrimary),
-                          ),
-                          child: Image.asset(
-                            "assets/images/pregnancy/baby.png",
-                            fit: BoxFit.contain,
-                          ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            ImageContainer(imagePath:  "assets/images/pregnancy/baby.png"),
+                            ImageContainer(imagePath:  "assets/images/pregnancy/apple.png"),
+                          ],
                         ),
                       ),
                       // SizedBox(height: 10.h),
@@ -89,6 +82,23 @@ class PregnancyDetailScreen extends StatelessWidget {
       ),
     );
 
+  }
+
+  Widget ImageContainer({required String imagePath}) {
+    return Container(
+                        width: 170.w,
+                        height: 150.h,
+                        padding: EdgeInsets.symmetric(vertical: 15.h),
+                        decoration: BoxDecoration(
+                          color: Color(0xFFF2DFD4),
+                          borderRadius: BorderRadius.circular(24.r),
+                          border: Border.all(color: AppColors.onPrimary),
+                        ),
+                        child: Image.asset(
+                         imagePath,
+                          fit: BoxFit.contain,
+                        ),
+                      );
   }
 }
 

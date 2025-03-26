@@ -48,6 +48,7 @@ class PregnancyScreen extends StatelessWidget {
 
               /// image slider container : shows conception and due date with baby images
               PregnancyImageSliderContainer(),
+              SizedBox(height: 24.h,),
               SectionHeader(title: "My Daily Insight"),
 
               /// log card row for symptoms and mood
@@ -102,7 +103,7 @@ class PregnancyScreen extends StatelessWidget {
                                   homeScreenProvider.onLog(
                                     logTo: homeScreenProvider.symptomsLog,
                                   );
-                                  Navigator.pushNamed(context, RouteName.addLogScreen);
+                                  Navigator.pushNamed(context, RouteName.addLogScreen,);
                                 },
                                 child: Image.asset(
                                   AppImages.editIcon,
@@ -196,8 +197,7 @@ class PregnancyScreen extends StatelessWidget {
                       : SizedBox();
                 },
               ),
-
-
+              SizedBox(height: 24.h,),
               SectionHeader(title: "Checkup & Vacation"),
               /// checkup and vacation card list
               CheckupVacationList(),
