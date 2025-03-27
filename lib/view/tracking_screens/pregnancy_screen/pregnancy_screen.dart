@@ -13,6 +13,8 @@ import 'package:provider/provider.dart';
 import '../../../constant/images.dart';
 import '../../../view_model/home_screen_provider.dart';
 import '../../../view_model/pregnancy_screen_provider.dart';
+import '../../community_screen/screen/Forum_screen/forum_screen.dart';
+import '../../community_screen/widget/categoryList.dart';
 import '../../home_screen/add_log_screen/widget/build_log_item_widget.dart';
 
 class PregnancyScreen extends StatelessWidget {
@@ -235,6 +237,12 @@ class PregnancyScreen extends StatelessWidget {
                     SectionHeader(title: "Checkup & Vacation"),
                     /// checkup and vacation card list
                     CheckupVacationList(),
+                    SizedBox(height: 24.h),
+                    CategorySection(
+                      title: "Fertility",
+                      categories: categories2,
+                      routeName: RouteName.menstralScreen,
+                    ),
                   ],
                 ),
               )

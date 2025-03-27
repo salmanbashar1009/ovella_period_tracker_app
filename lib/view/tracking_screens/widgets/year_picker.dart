@@ -15,6 +15,15 @@ class _EditYearPickerState extends State<EditYearPicker> {
   final FixedExtentScrollController _controller = FixedExtentScrollController();
 
   @override
+  void initState() {
+    // TODO: implement initState
+    // Set initial position when the widget is built
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _controller.jumpToItem(DateTime.now().year - 1951);
+    });
+  }
+
+  @override
   void dispose() {
     _controller.dispose();
     super.dispose();
@@ -23,11 +32,6 @@ class _EditYearPickerState extends State<EditYearPicker> {
   @override
   Widget build(BuildContext context) {
     final trackingScreenProvider = Provider.of<TrackingScreenProvider>(context);
-
-    // Set initial position when the widget is built
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _controller.jumpToItem(trackingScreenProvider.year - 1951);
-    });
 
     return ListWheelScrollView.useDelegate(
       controller: _controller,
