@@ -38,7 +38,7 @@ class StepScreenProvider extends ChangeNotifier {
   }
 
   /// age selection part
-  List<int> allAges = List.generate(31, (i) => i + 10);
+  List<int> allAges = List.generate(91, (i) => i + 10);
 
   int selectedAge = 28;
 
@@ -50,7 +50,7 @@ class StepScreenProvider extends ChangeNotifier {
   ///Language selection part
   // String selectedLanguage = 'English';
 
-  List<Map<String,String>> allLanguages = [
+  List<Map<String, String>> allLanguages = [
     {"code": "af", "name": "Afrikaans"},
     {"code": "ar", "name": "Arabic"},
     {"code": "bn", "name": "Bengali"},
@@ -91,7 +91,7 @@ class StepScreenProvider extends ChangeNotifier {
   TextEditingController languageSearchController = TextEditingController();
   String languageSearchQuery = "";
 
-  void searchingLanguage(String value){
+  void searchingLanguage(String value) {
     languageSearchQuery = value;
     notifyListeners();
   }
@@ -196,8 +196,6 @@ class StepScreenProvider extends ChangeNotifier {
 
   ///<------------- length of Cycle & period Date ----------->
   int selectedCycleLength = 28;
-  DateTime periodStartDate = DateTime.now();
-  DateTime periodEndDate = DateTime.now();
   List<int> cycleLength = List.generate(35, (i) => i + 14);
 
   void cycleLengthSelection(int age) {
@@ -205,14 +203,31 @@ class StepScreenProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void setPeriodRangeDate(DateTime start, DateTime end) {
-    periodStartDate = start;
-    periodEndDate = end;
-    notifyListeners();
+  String formatDate(DateTime? date) {
+    return DateFormat("MMM dd, yyyy").format(date ?? DateTime.now());
   }
 
-  String formatDate(DateTime date) {
-    return DateFormat("MMM dd, yyyy").format(date);
+  DateTime? _startDate;
+  DateTime? _endDate;
+
+  DateTime? get periodStartDate => _startDate;
+  DateTime? get periodEndDate => _endDate;
+
+  void selectDate(DateTime selectedDay) {
+    if (_startDate == null || (_startDate != null && _endDate != null)) {
+      // Reset selection and start a new range
+      _startDate = selectedDay;
+      _endDate = null;
+    } else if (_startDate != null && _endDate == null) {
+      // Ensure end date is after start date
+      if (selectedDay.isAfter(_startDate!)) {
+        _endDate = selectedDay;
+      } else {
+        // If the user selects a day before start date, make it the new start
+        _startDate = selectedDay;
+      }
+    }
+    notifyListeners();
   }
 
   void updateSelectedLanguage(String languageCode) {}

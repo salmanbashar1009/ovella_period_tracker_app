@@ -28,7 +28,7 @@ class CycleSelectionScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 12.h,),
-                Text("Select Your Age", style: textTheme.headlineLarge),
+                Text("Select Your Cycle Length", style: textTheme.headlineLarge),
                 Stack(
                   children: [
                     SizedBox(height: 302.h),
