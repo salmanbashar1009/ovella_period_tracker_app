@@ -240,7 +240,7 @@ class PregnancyScreen extends StatelessWidget {
                           },
                         ),
                         SizedBox(height: 24.h,),
-                        SectionHeader(title: "Checkup & Vacation"),
+                        SectionHeader(title: "Checkup & Vacation",textButton: "See all",onTap: (){},),
                       ],
                     ),
                   )
@@ -257,7 +257,8 @@ class PregnancyScreen extends StatelessWidget {
               // SizedBox(height: 24.h,),
               Padding(
                 padding: AppPadding.screenHorizontalPadding,
-                child: SectionHeader(title: "Tailored Wellness Journey"),
+                child: SectionHeader(title: "Tailored Wellness Journey", textButton: "See all",onTap: (){Navigator.pushNamed(context,RouteName.wellnessTipsScreen);},
+                    ),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height < 660 ? 380.h : 325.h,

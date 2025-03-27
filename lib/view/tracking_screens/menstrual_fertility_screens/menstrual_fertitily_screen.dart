@@ -322,7 +322,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
 
         Padding(
           padding: AppPadding.screenHorizontalPadding,
-          child: SectionHeader(title: "Tailored Wellness Journey"),
+          child: SectionHeader(title: "Tailored Wellness Journey",textButton: "See all",onTap: (){Navigator.pushNamed(context,RouteName.wellnessTipsScreen);},),
         ),
         /// Wellness tips list
         SizedBox(
