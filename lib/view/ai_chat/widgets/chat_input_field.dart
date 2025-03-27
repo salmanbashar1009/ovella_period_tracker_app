@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/model/chat_model.dart';
+import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
 import 'package:ovella_period_tracker_app/view_model/chat_screen_provider.dart';
 import 'package:provider/provider.dart';
@@ -90,11 +91,18 @@ class ChatInputField extends StatelessWidget {
                   ),
                   SizedBox(width: 12.w),
                   GestureDetector(
+                    onTap: ()async{
+                      chatProvider.isListening
+                          ? chatProvider.stopListening()
+                          : chatProvider.startListening();
+                      debugPrint(chatProvider.isListening.toString());
+                      debugPrint(chatProvider.isListening.toString());
+                    },
                     child: Container(
                       padding: EdgeInsets.all(14.r),
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Colors.white,
+                        color: chatProvider.isListening?AppColors.secondary:Colors.white,
                         boxShadow: [
                           BoxShadow(
                             color: Colors.grey.withOpacity(0.1),

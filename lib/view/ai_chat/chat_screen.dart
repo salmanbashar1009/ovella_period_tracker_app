@@ -218,9 +218,9 @@ class ChatScreen extends StatelessWidget {
                                                 ),
                                               ),
                                             ),
-                                            ClipRRect(
+                                            ClipOval(
                                               child: Image.asset(
-                                                AppImages.userProfilePicture,
+                                                AppImages.pinkAvator,
                                                 width: 44.w,
                                                 height: 44.w,
                                                 fit: BoxFit.cover,

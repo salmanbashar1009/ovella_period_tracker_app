@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/constant/images.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 
 import '../../../../constant/padding.dart';
@@ -25,9 +26,7 @@ class ProfileCard extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(60.r),
               image: DecorationImage(
-                image: AssetImage(
-                  'assets/images/person/aunty.png',
-                ),
+                image: AssetImage(AppImages.pinkAvator),
                 fit: BoxFit.cover,
               ),
             ),
