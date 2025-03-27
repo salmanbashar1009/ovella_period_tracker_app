@@ -35,8 +35,8 @@ class LocalizationProvider with ChangeNotifier {
 
   Future<void> onTapChangeLanguage(BuildContext context, String languageCode) async {
     if (_locale?.languageCode != languageCode) {
-      await setLocale(Locale(languageCode)); // Set new locale
-      context.read<StepScreenProvider>().updateSelectedLanguage(languageCode);
+      await setLocale(Locale(languageCode)); 
+      context.read<StepScreenProvider>().loadSelectedLanguage();
     }
   }
 }
