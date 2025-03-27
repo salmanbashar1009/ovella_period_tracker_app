@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
@@ -16,6 +15,15 @@ class _EditMonthPickerState extends State<EditMonthPicker> {
   final FixedExtentScrollController _controller = FixedExtentScrollController();
 
   @override
+  void initState() {
+    // TODO: implement initState
+    // Set initial position when the widget is built
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _controller.jumpToItem(DateTime.now().month - 1);
+    });
+  }
+
+  @override
   void dispose() {
     _controller.dispose();
     super.dispose();
@@ -25,10 +33,10 @@ class _EditMonthPickerState extends State<EditMonthPicker> {
   Widget build(BuildContext context) {
     final trackingScreenProvider = Provider.of<TrackingScreenProvider>(context);
 
-    // Set initial position when the widget is built
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _controller.jumpToItem(trackingScreenProvider.month - 1);
-    });
+    // // Set initial position when the widget is built
+    // WidgetsBinding.instance.addPostFrameCallback((_) {
+    //   _controller.jumpToItem(trackingScreenProvider.month - 1);
+    // });
 
     return ListWheelScrollView.useDelegate(
       controller: _controller,
@@ -36,7 +44,7 @@ class _EditMonthPickerState extends State<EditMonthPicker> {
       perspective: 0.005,
       diameterRatio: 1.5,
       overAndUnderCenterOpacity: 0.5,
-      physics:  FixedExtentScrollPhysics(),
+      physics: FixedExtentScrollPhysics(),
       clipBehavior: Clip.antiAlias,
       onSelectedItemChanged: (index) {
         trackingScreenProvider.setMonth(index + 1);
@@ -48,11 +56,15 @@ class _EditMonthPickerState extends State<EditMonthPicker> {
             child: Text(
               "${trackingScreenProvider.monthList[index]}",
               style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                color: index + 1 == trackingScreenProvider.month ? AppColors.secondary : AppColors.textColor,
+                color:
+                    index + 1 == trackingScreenProvider.month
+                        ? AppColors.secondary
+                        : AppColors.textColor,
                 fontSize: 24.sp,
-                fontWeight: index + 1 == trackingScreenProvider.month
-                    ? FontWeight.bold
-                    : FontWeight.normal,
+                fontWeight:
+                    index + 1 == trackingScreenProvider.month
+                        ? FontWeight.bold
+                        : FontWeight.normal,
               ),
             ),
           );
