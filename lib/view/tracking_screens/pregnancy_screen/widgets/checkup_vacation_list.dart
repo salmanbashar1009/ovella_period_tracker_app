@@ -21,7 +21,8 @@ class CheckupVacationList extends StatelessWidget {
             width: MediaQuery.of(context).size.height > 800 ? 271.w : 220.w,
             height: MediaQuery.of(context).size.height > 800 ? 269.h : 260.h ,
             padding: EdgeInsets.all(8.r),
-            margin: EdgeInsets.only(right: 12),
+            margin: EdgeInsets.only(right: index == 5 ? 20 : 12,left: index == 0 ? 20 : 0),
+
             decoration: BoxDecoration(
                 color: AppColors.onPrimary,
                 borderRadius: BorderRadius.circular(24.r)

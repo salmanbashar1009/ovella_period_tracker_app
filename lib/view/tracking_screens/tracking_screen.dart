@@ -46,6 +46,36 @@ class TrackingScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              // SizedBox(height: 24.h),
+              // Padding(
+              //   padding: AppPadding.screenHorizontalPadding,
+              //   child: Align(
+              //     // alignment: Alignment.center,
+              //     child: Container(
+              //       // height: 56.h,
+              //       width: MediaQuery.of(context).size.width * 0.8,
+              //       margin: EdgeInsets.symmetric(horizontal: 12.w),
+              //       decoration: BoxDecoration(
+              //         borderRadius: BorderRadius.circular(32.r),
+              //         color: AppColors.onSecondary,
+              //       ),
+              //       padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 24.w),
+              //       child: Row(
+              //         crossAxisAlignment: CrossAxisAlignment.center,
+              //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //         children: [
+              //           Text("Menstrual & Fertility",style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+              //             color: AppColors.textColor,
+              //             fontWeight: FontWeight.w600
+              //           )),
+              //           Icon(Icons.keyboard_arrow_down_rounded)
+              //         ],
+              //       ),
+              //     ),
+              //   ),
+              // ),
+              // SizedBox(height: 24.h),
+
               SizedBox(height: 24.h),
               Consumer<TrackingScreenProvider>(
                 builder: (context, trackingScreenProvider, child) {

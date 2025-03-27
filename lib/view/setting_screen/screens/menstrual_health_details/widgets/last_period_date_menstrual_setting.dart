@@ -30,7 +30,7 @@ class LastPeriodDateMenstrualSetting extends StatelessWidget {
         ),
         SizedBox(height: 8.h),
         GestureDetector(
-          onTap: () => selectDateRange(context, stepScreenProvider),
+          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>PeriodDateRangeSelection())),
           child: Container(
             height: 54.h,
             width: double.infinity,
