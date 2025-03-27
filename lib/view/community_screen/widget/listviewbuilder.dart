@@ -33,7 +33,7 @@ class CategoryList extends StatelessWidget {
         itemCount: categories.length,
         itemBuilder: (BuildContext context, int index) {
           return Padding(
-         padding: scrollDirection == null ? EdgeInsets.only(left: 15.w) : EdgeInsets.zero,
+         padding: scrollDirection == null ? EdgeInsets.only(left: 12.w) : EdgeInsets.zero,
 
 
             child: CategoryCard(

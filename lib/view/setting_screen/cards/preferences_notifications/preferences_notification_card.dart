@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
+import 'package:ovella_period_tracker_app/view_model/localization_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/settings_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/step_screen_provider.dart';
 import 'package:provider/provider.dart';
@@ -64,7 +65,9 @@ class PreferencesNotificationCard extends StatelessWidget {
                       Text('Language', style: textTheme.bodyMedium),
                       Row(
                         children: [
-                          Text(stepScreenProvider.selectedLanguage['name'] ?? 'English', style: textTheme.bodyMedium),
+                          Text(
+                          
+                            stepScreenProvider.selectedLanguage['name'] ?? 'English', style: textTheme.bodyMedium),
                           SizedBox(width: 8.w),
                           Icon(Icons.keyboard_arrow_right_outlined),
                         ],
