@@ -31,7 +31,7 @@ class TipsContainer extends StatelessWidget{
     return Container(
       width: width.w,
       padding: EdgeInsets.only(left: 8.w,right: 8.w,top: 8.h,bottom: 8.h),
-      margin: EdgeInsets.only(left: 20.w, right: !isFromSeeAllList ?  index  == listLength-1 ? 20.w : 0 : 20.w,
+      margin: EdgeInsets.only(left: 20.w, right: !isFromSeeAllList ?  index  == listLength-1 ? 20.w : 0 : 12.w,
       bottom: isFromSeeAllList ? 20.h : 0
       ),
       decoration: BoxDecoration(

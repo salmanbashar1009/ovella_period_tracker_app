@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/model/catagoryModel.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/categoryList.dart';
@@ -40,12 +41,13 @@ class CategorySection extends StatelessWidget {
   final String title;
   final List<CategoryModel> categories;
   final String routeName;
-
+  final TextStyle? textTheme;
   const CategorySection({
     Key? key,
     required this.title,
     required this.categories,
     required this.routeName,
+    this.textTheme
   });
 
   @override
@@ -53,22 +55,26 @@ class CategorySection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          children: [
-            Text(title, style: Theme.of(context).textTheme.bodyLarge),
-            Spacer(),
-            GestureDetector(
-              onTap: () => {Navigator.pushNamed(context, routeName)},
-              child: Text(
-                "See all",
-                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w500,
-                  color: Color(0xff1E1E1E),
+        Padding(
+                      padding: AppPadding.screenHorizontalPadding,
+
+          child: Row(
+            children: [
+              Text(title, style: Theme.of(context).textTheme.bodyLarge),
+              Spacer(),
+              GestureDetector(
+                onTap: () => {Navigator.pushNamed(context, routeName)},
+                child: Text(
+                  "See all",
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xff1E1E1E),
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
         SizedBox(height: 16.h),
         SizedBox(
