@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "Здравейте, Джейн Доу",
-  "goodMorning": "Добро утро",
-  "fibroidsWomen": "Фиброидите обикновено засягат жени.",
-  "fibroidDiscription": "Фиброидите могат да причинят проблеми с менструалния цикъл, тежко кървене и затруднения при забременяване.",
-  "LogPeriod": "Запишете менструацията си",
-  "LogYourSymptoms": "Запишете симптомите си",
-  "LogYourMood": "Запишете настроението си",
-  "TailoredWellnessJourney": "Персонализирано пътуване за благополучие",
-  "SeeAll": "Виж всички",
-  "PersonalizedWellnessTips": "Персонализирани съвети за благополучие",
-  "Home": "Начало",
-  "Tracking": "Проследяване",
-  "community": "Общество",
-  "Settings": "Настройки",
-  "Ai": "Изкуствен интелект",
-  "symptoms": "Симптоми",
-  "EverythingIsFine": "Всичко е наред",
-  "Cramps": "Коремни болки",
-  "Acne": "Акне",
-  "TenderBreasts": "Чувствителни гърди",
-  "MilkyNippleDischarge": "Млечен секрет от зърната",
-  "AbdominalPain": "Коремна болка",
-  "Fatigue": "Умора",
-  "Sleepiness": "Сънливост",
-  "Backache": "Болки в гърба",
-  "FrequentUrination": "Често уриниране",
-  "Cravings": "Желания за храна",
-  "Insomnia": "Безсъние",
-  "Headache": "Главоболие",
-  "LegCramps": "Крампи в краката",
-  "BleedingGums": "Кървене от венците",
-  "save": "Запази",
-  "Calm": "Спокоен",
-  "Happy": "Щастлив",
-  "Energetic": "Енергичен",
-  "MoodSwings": "Настроение",
-  "Frisky": "Жив и енергичен",
-  "Irritated": "Раздразнен",
-  "Sad": "Тъжен",
-  "Anxious": "Тревожен",
-  "Depressed": "Депресиран",
-  "VerySelfCritical": "Много самообвиняващ се",
-  "Apathetic": "Апатичен",
-  "Confused": "Объркан",
-  "LowEnergy": "Ниска енергия",
-  "FeelingGuilty": "Чувство на вина",
-  "ObsessiveThoughts": "Обсесивни мисли",
-  "Period": "Менструация",
-  "Fertile": "Плодородна",
-  "Ovulation": "Овулация",
-  "NextPeriod": "Следваща менструация",
-  "MenstrualFertility": "Менструален цикъл и фертилност",
-  "Pregnancy": "Бременност",
-  "Note": "Забележка",
-  "NewNoteForExample": "Нова бележка като пример",
-  "Week23OfYourPregnancy": "23-та седмица от вашата бременност",
-  "Details": "Подробности",
-  "MyDailyInsights": "Моите ежедневни прозорци",
-  "CheckupVaccination": "Прегледи и ваксинации",
-  "NextCheckup": "Следващ преглед",
-  "HeyJaneDoe": "Здравейте, Джейн Доу, добре дошли в Обелла Общността!",
-  "joinDiscussion": "Присъединете се към дискусиите, задавайте въпроси и се свързвайте със специалисти!",
-  "Forum": "Форум",
-  "Groups": "Групи",
-  "Events": "Събития",
-  "findTopic": "Намерете тема, групи и дискусии",
-  "MenstrualHealth": "Здраве на менструацията",
-  "Fertility": "Фертилност",
-  "SexualHealth": "Сексуално здраве",
-  "PopularGroups": "Популярни групи",
-  "FindGroups": "Намерете групи",
-  "EventsWorkshops": "Събития и работилници",
-  "EventsDetails": "Подробности за събитията",
-  "PregnancyNutritionWebinar": "Уебинар за хранене при бременност",
-  "WhatLearn": "Какво ще научите",
-  "Speakers": "Лектори",
-  "RegisterNow": "Регистрирайте се сега",
-  "EditProfile": "Редактирайте профила си",
-  "InviteYourPartnerToOvella": "Поканете партньора си в Обела",
-  "ClickHereToAddYourPartner": "Кликнете тук, за да добавите партньора си",
-  "PersonalInformation": "Лична информация",
-  "Age": "Възраст",
-  "Gender": "Пол",
-  "MenstrualHealthDetails": "Подробности за менструалното здраве",
-  "CycleLength": "Дължина на цикъла",
-  "LastPeriod": "Последна менструация",
-  "PregnancyStatus": "Статус на бременността",
-  "HealthConditions": "Здравословни състояния",
-  "PreferencesNotifications": "Предпочитания и известия",
-  "PeriodAlerts": "Известия за менструацията",
-  "PregnancyTips": "Съвети за бременност",
-  "MentalHealth": "Психично здраве",
-  "Language": "Език",
-  "PrivacyData": "Конфиденциалност и данни",
-  "ViewDataInsights": "Прегледайте анализа на данните",
-  "ExportData": "Експортиране на данни",
-  "DeleteAccount": "Изтриване на акаунта",
-  "SupportCommunity": "Подкрепа и общност",
-  "ContactSupport": "Контактирайте поддръжка",
-  "FAQGuides": "ЧЗВ и ръководства",
-  "JoinACommunity": "Присъединете се към общност"
+  "@@locale": "bg",
+  "hellojaneDoe": "здравейте, Джейн Доу",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "добро утро",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "фиброидите засягат предимно жени.",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "фиброидите могат да нарушат менструалния цикъл, да предизвикат обилно кървене и да повлияят на фертилността.",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "запишете менструацията",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "запишете симптомите си",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "запишете настроението си",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "персонализирано пътуване за благополучие",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "виж всички",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "персонализирани съвети за благополучие",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "начало",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "проследяване",
+  "@tracking": {
+    "description": "Tracking section"
+  },
+  "community": "общност",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "настройки",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "изкуствен интелект",
+  "@ai": {
+    "description": "AI assistant"
+  },
+  "symptoms": "симптоми",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "всичко е наред",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "спазми",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "акне",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "чувствителни гърди",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "млечен секрет от зърната",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "коремна болка",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "умора",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "сънливост",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "болки в гърба",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "често уриниране",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "желания за храна",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "безсъние",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "главоболие",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "крампи в краката",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "кървене на венците",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
+  "save": "запази",
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "спокоен",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "щастлив",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "енергичен",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "промени в настроението",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "жизнерадостен",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "раздразнен",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "тъжен",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "тревожен",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "депресиран",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "много самокритичен",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "апатичен",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "объркан",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "ниска енергия",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "чувство на вина",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "обсесивни мисли",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "менструация",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "фертилна",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "овулация",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "следваща менструация",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "менструация и фертилност",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "бременност",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "бележка",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "нова бележка за пример",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "23-та седмица от бременността ви",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "подробности",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "моите ежедневни прозрения",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "прегледи и ваксинации",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "следващ преглед",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "здравейте, Джейн Доу, добре дошли в общността на Ovella!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "присъединете се към дискусии, задавайте въпроси и се свързвайте с експерти!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "форум",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "групи",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "събития",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "намери теми, групи и дискусии",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "здраве на менструацията",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "фертилност",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "сексуално здраве",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "популярни групи",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "намери групи",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "събития и работилници",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "подробности за събитията",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "уебинар за хранене по време на бременност",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "какво ще научите",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "лектори",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "регистрирайте се сега",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "редактирайте профила",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "поканете партньора си в Ovella",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "кликнете тук, за да добавите партньора си",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "лична информация",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "възраст",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "пол",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "подробности за менструалното здраве",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "дължина на цикъла",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "последна менструация",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "статус на бременността",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "здравословни състояния",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "предпочитания и известия",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "известия за менструация",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "съвети за бременност",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "психично здраве",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "език",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "поверителност и данни",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "преглед на анализ на данни",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "експортиране на данни",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "изтриване на акаунт",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "подкрепа и общност",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "свържете се с поддръжката",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "често задавани въпроси и ръководства",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "присъединете се към общност",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }

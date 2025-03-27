@@ -7,11 +7,27 @@ import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 import 'package:provider/provider.dart';
 
+import 'arguments_model/arguments_model.dart';
+
 class AddLogScreen extends StatelessWidget {
-  const AddLogScreen({super.key});
+  final bool isBackButtonOnAppBar;
+  final String saveButtonText;
+  final Function onSave;
+
+  const AddLogScreen({
+    super.key,
+    required this.isBackButtonOnAppBar,
+    required this.saveButtonText,
+    required this.onSave
+
+  });
 
   @override
   Widget build(BuildContext context) {
+
+    final args = ModalRoute.of(context)!.settings.arguments as AddLogScreenArguments;
+
+
     return BackgroundWidget(
       child: SingleChildScrollView(
         child: Column(
@@ -21,7 +37,7 @@ class AddLogScreen extends StatelessWidget {
               child: AppBar(
                 elevation: 0,
                 surfaceTintColor: Colors.transparent,
-                leading: Utils.backButton(context),
+                leading: isBackButtonOnAppBar ?  Utils.backButton(context) : null,
                 title: Consumer<HomeScreenProvider>(
                   builder: (_, homeScreenProvider, child) {
                     return Text(

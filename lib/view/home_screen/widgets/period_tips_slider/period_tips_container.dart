@@ -1,25 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/images.dart';
+import 'package:ovella_period_tracker_app/constant/padding.dart';
 
 class PeriodTipsContainer extends StatelessWidget{
-  const PeriodTipsContainer({super.key});
+  final String title;
+  final String bodyText;
+  final String assetImagePath;
+  const PeriodTipsContainer({super.key, required this.title, required this.bodyText, required this.assetImagePath});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
-        horizontal: 14.w,
-        vertical: 14.h,
+        horizontal: 10.w,
+        vertical: 10.h,
       ),
-      margin: EdgeInsets.only(right: 10.w),
+      margin: AppPadding.screenHorizontalPadding,
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20.r),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
-        spacing: 12.w,
+        spacing: 10.w,
         children: [
           Container(
             padding: EdgeInsets.symmetric(
@@ -31,7 +35,7 @@ class PeriodTipsContainer extends StatelessWidget{
               color: Color(0xffFFDEE6),
               borderRadius: BorderRadius.circular(16.r),
             ),
-            child: Image.asset(AppImages.fibroids,
+            child: Image.asset(assetImagePath,
             width: 40.w,
               height: 43.h,
               fit: BoxFit.cover,
@@ -41,22 +45,26 @@ class PeriodTipsContainer extends StatelessWidget{
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.max,
               children: [
                 Text(
-                  "Fibroids mainly affect women.",
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  title,
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontWeight: FontWeight.w600
                   ),
-                  // maxLines: 3,
+                   maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
 
                 Expanded(
-                  child: Text(
-                    "Fibroids can disrupt cycles, cause heavy bleeding, and impact fertility.",
-                    style: Theme.of(context).textTheme.bodySmall,
-                    //  maxLines: 3,
+                  child: SingleChildScrollView(
+                    child: Text(
+                      bodyText,
+                      style: Theme.of(context).textTheme.bodySmall,
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ),
                 ),
               ],

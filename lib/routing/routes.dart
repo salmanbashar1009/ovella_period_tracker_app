@@ -30,6 +30,7 @@ import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertil
 import 'package:ovella_period_tracker_app/view/tracking_screens/menstrual_fertility_screens/edit_calender_screen.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen/pregnancy_detail_screen.dart';
 import 'package:ovella_period_tracker_app/view/tracking_screens/tracking_screen.dart';
+import '../view/home_screen/add_log_screen/arguments_model/arguments_model.dart';
 import '../view/home_screen/home_screen.dart';
 import '../view/home_screen/see_all_wellness_tips_screen/wellness_tips_screen.dart';
 import '../view/on_boarding_screen/on_boarding_screen.dart';
@@ -52,7 +53,14 @@ class AppRoutes {
       RouteName.pregnancyFertilityTracking:
           (context) => PregnancyFertilityTracking(),
       RouteName.logPeriodScreen: (context) => LogPeriodScreen(),
-      RouteName.addLogScreen: (context) => AddLogScreen(),
+      RouteName.addLogScreen: (context)  {
+        final args = ModalRoute.of(context)!.settings.arguments as AddLogScreenArguments;
+        return AddLogScreen(
+          isBackButtonOnAppBar: args.isBackButtonOnAppBar,
+          saveButtonText: args.saveButtonText,
+          onSave: args.onSave,
+        );
+      },
       RouteName.addNoteScreen: (context) => AddNoteScreen(),
       RouteName.createAccountScreen: (context) => CreateAccountScreen(),
       RouteName.loginScreen: (context) => LoginScreen(),
@@ -75,7 +83,9 @@ class AppRoutes {
       RouteName.selectAgeScreen: (context) => SelectAgeScreen(),
       RouteName.menstrualHealthDetails: (context) => MenstrualHealthDetails(),
       RouteName.notificationScreen: (context) => NotificationScreen(),
-      RouteName.wellnessTipsScreen: (context) => WellnessTipsScreen(),
+      RouteName.wellnessTipsScreen: (context) {
+        return WellnessTipsScreen();
+      } ,
     };
   }
 }

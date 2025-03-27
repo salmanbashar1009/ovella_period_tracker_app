@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/Forum_screen/details_screen/mensrualHealth.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/CategoryCard1.dart';
 import 'package:ovella_period_tracker_app/model/catagoryModel.dart';
@@ -24,6 +25,7 @@ class CategoryList extends StatelessWidget {
     return SizedBox(
       height: size ?? 250,
       child: ListView.builder(
+       padding: scrollDirection != null ? EdgeInsets.only(bottom: 200.h) : null,
         shrinkWrap: true,
         physics: BouncingScrollPhysics(),
         scrollDirection: scrollDirection ?? Axis.horizontal,

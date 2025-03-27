@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "Hallo, Jane Doe",
-  "goodMorning": "Guten Morgen",
-  "fibroidsWomen": "Myome betreffen normalerweise Frauen.",
-  "fibroidDiscription": "Myome können deinen Zyklus beeinflussen, starke Blutungen verursachen und sogar die Schwangerschaft erschweren.",
-  "LogPeriod": "Menstruation protokollieren",
-  "LogYourSymptoms": "Deine Symptome protokollieren",
-  "LogYourMood": "Deine Stimmung protokollieren",
-  "TailoredWellnessJourney": "Maßgeschneiderte Wellness-Reise",
-  "SeeAll": "Alle anzeigen",
-  "PersonalizedWellnessTips": "Personalisierte Wellness-Tipps",
-  "Home": "Startseite",
-  "Tracking": "Verfolgung",
+  "@@locale": "de",
+  "hellojaneDoe": "hallo, Jane Doe",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "guten Morgen",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "Myome betreffen hauptsächlich Frauen.",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "Myome können den Zyklus stören, starke Blutungen verursachen und die Fruchtbarkeit beeinträchtigen.",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "Menstruation protokollieren",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "deine Symptome protokollieren",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "deine Stimmung protokollieren",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "maßgeschneiderte Wellness-Reise",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "alle anzeigen",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "personalisierte Wellness-Tipps",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "Startseite",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "Verfolgung",
+  "@tracking": {
+    "description": "Tracking section"
+  },
   "community": "Gemeinschaft",
-  "Settings": "Einstellungen",
-  "Ai": "Künstliche Intelligenz",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "Einstellungen",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "Künstliche Intelligenz",
+  "@ai": {
+    "description": "AI assistant"
+  },
   "symptoms": "Symptome",
-  "EverythingIsFine": "Alles ist in Ordnung",
-  "Cramps": "Krämpfe",
-  "Acne": "Akne",
-  "TenderBreasts": "Empfindliche Brüste",
-  "MilkyNippleDischarge": "Milchiger Ausfluss aus der Brustwarze",
-  "AbdominalPain": "Bauchschmerzen",
-  "Fatigue": "Müdigkeit",
-  "Sleepiness": "Schläfrigkeit",
-  "Backache": "Rückenschmerzen",
-  "FrequentUrination": "Häufiges Wasserlassen",
-  "Cravings": "Heißhunger",
-  "Insomnia": "Schlaflosigkeit",
-  "Headache": "Kopfschmerzen",
-  "LegCramps": "Beinkrämpfe",
-  "BleedingGums": "Blutendes Zahnfleisch",
-  "save": "Speichern",
-  "Calm": "Ruhig",
-  "Happy": "Glücklich",
-  "Energetic": "Energiegeladen",
-  "MoodSwings": "Launen",
-  "Frisky": "Verspielt",
-  "Irritated": "Genervt",
-  "Sad": "Traurig",
-  "Anxious": "Ängstlich",
-  "Depressed": "Depressiv",
-  "VerySelfCritical": "Sehr selbstkritisch",
-  "Apathetic": "Apathisch",
-  "Confused": "Verwirrt",
-  "LowEnergy": "Geringe Energie",
-  "FeelingGuilty": "Schuldgefühle",
-  "ObsessiveThoughts": "Zwangsgedanken",
-  "Period": "Periode",
-  "Fertile": "Fruchtbar",
-  "Ovulation": "Ovulation",
-  "NextPeriod": "Nächste Periode",
-  "MenstrualFertility": "Menstruelle Fruchtbarkeit",
-  "Pregnancy": "Schwangerschaft",
-  "Note": "Notiz",
-  "NewNoteForExample": "Neue Notiz als Beispiel",
-  "Week23OfYourPregnancy": "Woche 23 deiner Schwangerschaft",
-  "Details": "Details",
-  "MyDailyInsights": "Meine täglichen Einblicke",
-  "CheckupVaccination": "Untersuchung und Impfung",
-  "NextCheckup": "Nächster Check-up",
-  "HeyJaneDoe": "Hallo, Jane Doe! Willkommen bei Ovella!",
-  "joinDiscussion": "Tritt der Diskussion bei, stelle Fragen und verbinde dich mit Experten!",
-  "Forum": "Forum",
-  "Groups": "Gruppen",
-  "Events": "Veranstaltungen",
-  "findTopic": "Finde Themen und Gruppen",
-  "MenstrualHealth": "Menstruationsgesundheit",
-  "Fertility": "Fruchtbarkeit",
-  "SexualHealth": "Sexuelle Gesundheit",
-  "PopularGroups": "Beliebte Gruppen",
-  "FindGroups": "Gruppen finden",
-  "EventsWorkshops": "Veranstaltungen und Workshops",
-  "EventsDetails": "Veranstaltungsdetails",
-  "PregnancyNutritionWebinar": "Webinar zur Schwangerschaftsernährung",
-  "WhatLearn": "Was möchtest du lernen?",
-  "Speakers": "Referenten",
-  "RegisterNow": "Jetzt registrieren",
-  "EditProfile": "Profil bearbeiten",
-  "InviteYourPartnerToOvella": "Lade deinen Partner zu Ovella ein",
-  "ClickHereToAddYourPartner": "Klicke hier, um deinen Partner hinzuzufügen",
-  "PersonalInformation": "Persönliche Informationen",
-  "Age": "Alter",
-  "Gender": "Geschlecht",
-  "MenstrualHealthDetails": "Details zur Menstruationsgesundheit",
-  "CycleLength": "Zykluslänge",
-  "LastPeriod": "Letzte Periode",
-  "PregnancyStatus": "Schwangerschaftsstatus",
-  "HealthConditions": "Gesundheitszustände",
-  "PreferencesNotifications": "Einstellungen und Benachrichtigungen",
-  "PeriodAlerts": "Periode Benachrichtigungen",
-  "PregnancyTips": "Schwangerschaftstipps",
-  "MentalHealth": "Mentale Gesundheit",
-  "Language": "Sprache",
-  "PrivacyData": "Datenschutz und Daten",
-  "ViewDataInsights": "Daten einsehen",
-  "ExportData": "Daten exportieren",
-  "DeleteAccount": "Konto löschen",
-  "SupportCommunity": "Support und Community",
-  "ContactSupport": "Support kontaktieren",
-  "FAQGuides": "Häufig gestellte Fragen und Anleitungen",
-  "JoinACommunity": "Tritt einer Community bei"
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "alles ist in Ordnung",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "Krämpfe",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "Akne",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "empfindliche Brüste",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "milchiger Ausfluss aus der Brustwarze",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "Bauchschmerzen",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "Müdigkeit",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "Schläfrigkeit",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "Rückenschmerzen",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "häufiges Wasserlassen",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "Heißhunger",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "Schlaflosigkeit",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "Kopfschmerzen",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "Beinkrämpfe",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "blutendes Zahnfleisch",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
+  "save": "speichern",
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "ruhig",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "glücklich",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "energiegeladen",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "Stimmungsschwankungen",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "verspielt",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "gereizt",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "traurig",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "ängstlich",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "depressiv",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "sehr selbstkritisch",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "apathisch",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "verwirrt",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "wenig Energie",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "Schuldgefühle",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "Zwangsgedanken",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "Menstruation",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "fruchtbar",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "Eisprung",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "nächste Menstruation",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "Menstruation und Fruchtbarkeit",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "Schwangerschaft",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "Notiz",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "neue Notiz als Beispiel",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "Woche 23 deiner Schwangerschaft",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "Details",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "meine täglichen Einblicke",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "Untersuchung und Impfung",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "nächste Untersuchung",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "hallo Jane Doe, willkommen in der Ovella-Gemeinschaft!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "nimm an Diskussionen teil, stelle Fragen und vernetze dich mit Experten!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "Forum",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "Gruppen",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "Veranstaltungen",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "finde Themen, Gruppen und Diskussionen",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "Menstruationsgesundheit",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "Fruchtbarkeit",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "sexuelle Gesundheit",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "beliebte Gruppen",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "Gruppen finden",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "Veranstaltungen und Workshops",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "Details zu Veranstaltungen",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "Webinar zur Ernährung in der Schwangerschaft",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "was du lernen wirst",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "Referenten",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "jetzt registrieren",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "Profil bearbeiten",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "lade deinen Partner zu Ovella ein",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "klicke hier, um deinen Partner hinzuzufügen",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "persönliche Informationen",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "Alter",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "Geschlecht",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "Details zur Menstruationsgesundheit",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "Zykluslänge",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "letzte Menstruation",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "Schwangerschaftsstatus",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "Gesundheitszustände",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "Einstellungen und Benachrichtigungen",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "Menstruationsbenachrichtigungen",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "Schwangerschaftstipps",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "mentale Gesundheit",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "Sprache",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "Datenschutz und Daten",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "Dateneinblicke anzeigen",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "Daten exportieren",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "Konto löschen",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "Support und Gemeinschaft",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "Support kontaktieren",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "häufig gestellte Fragen und Anleitungen",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "einer Gemeinschaft beitreten",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }

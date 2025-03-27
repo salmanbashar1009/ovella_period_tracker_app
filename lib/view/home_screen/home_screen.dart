@@ -13,6 +13,7 @@ import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:provider/provider.dart';
 
 import '../../widgets/background_widget.dart';
+import 'add_log_screen/arguments_model/arguments_model.dart';
 import 'add_log_screen/widget/build_log_item_widget.dart';
 
 class HomeScreen extends StatelessWidget{
@@ -28,21 +29,22 @@ class HomeScreen extends StatelessWidget{
         child: SafeArea(
             child: Column(
               children: [
-                Padding(
-                  padding: AppPadding.screenHorizontalPadding,
-                  child: Column(
-                    children: [
+                Column(
+                  children: [
 
-                      /// App Bar
-                      Header(),
+                    /// App Bar
+                    Header(),
 
-                      Column(
+                    SizedBox(height: 10.h,),
+
+                    /// Page view tips with dot indicator
+                    PeriodTips(),
+
+                    Padding(
+                      padding: AppPadding.screenHorizontalPadding,
+                      child: Column(
                         children: [
 
-                          SizedBox(height: 10.h,),
-
-                          /// Page view tips with dot indicator
-                          PeriodTips(),
 
                           /// Period date count Container
                           PeriodDateContainer(),
@@ -58,7 +60,14 @@ class HomeScreen extends StatelessWidget{
                                   onAdd: (){
                                     final homeScreenProvider =  context.read<HomeScreenProvider>();
                                     homeScreenProvider.onLog(logTo: homeScreenProvider.symptomsLog);
-                                  Navigator.pushNamed(context, RouteName.addLogScreen);
+                                  Navigator.pushNamed(
+                                      context, RouteName.addLogScreen,
+                                    arguments: AddLogScreenArguments(
+                                      isBackButtonOnAppBar: true,
+                                      onSave: (){},
+                                      saveButtonText: "Save"
+                                    )
+                                  );
                                     },
                                 ),
                               ),
@@ -69,7 +78,11 @@ class HomeScreen extends StatelessWidget{
                                   onAdd: (){
                                     final homeScreenProvider =  context.read<HomeScreenProvider>();
                                   homeScreenProvider.onLog(logTo: homeScreenProvider.moodLog);
-                                    Navigator.pushNamed(context, RouteName.addLogScreen);
+                                    Navigator.pushNamed(context, RouteName.addLogScreen,
+                                        arguments: AddLogScreenArguments(
+                                        isBackButtonOnAppBar: true,
+                                        onSave: (){},
+                                    saveButtonText: "Save"));
                                   },
                                 ),
                               ),
@@ -182,7 +195,10 @@ class HomeScreen extends StatelessWidget{
                                     decorationColor: AppColors.lightTextColor,
                                   ),
                                 ),
-                                onPressed: ()=>Navigator.pushNamed(context,RouteName.wellnessTipsScreen),
+                                onPressed: (){
+                                  /// After additional screen proposal offer accept this route should be comment out
+                                 // Navigator.pushNamed(context,RouteName.wellnessTipsScreen);
+                                  },
                               ),
                             ],
                           ),
@@ -190,8 +206,8 @@ class HomeScreen extends StatelessWidget{
 
                         ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
 
                 SizedBox(height: 16.h,),

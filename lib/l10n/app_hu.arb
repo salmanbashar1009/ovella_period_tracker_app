@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "Helló, Jane Doe",
-  "goodMorning": "Jó reggelt",
-  "fibroidsWomen": "A miómák gyakran érintik a nőket.",
-  "fibroidDiscription": "A miómák hatással lehetnek a menstruációra, erős vérzést okozhatnak, és nehezíthetik a teherbeesést.",
-  "LogPeriod": "Rögzítse a menstruációját",
-  "LogYourSymptoms": "Rögzítse a tüneteit",
-  "LogYourMood": "Rögzítse a hangulatát",
-  "TailoredWellnessJourney": "Személyre szabott wellness útvonal",
-  "SeeAll": "Mindet megtekint",
-  "PersonalizedWellnessTips": "Személyre szabott wellness tippek",
-  "Home": "Főoldal",
-  "Tracking": "Nyomon követés",
-  "community": "Közösség",
-  "Settings": "Beállítások",
-  "Ai": "Mesterséges intelligencia",
-  "symptoms": "Tünetek",
-  "EverythingIsFine": "Minden rendben van",
-  "Cramps": "Görcsök",
-  "Acne": "Pattanások",
-  "TenderBreasts": "Fájdalmas mellek",
-  "MilkyNippleDischarge": "Tejszerű mellbimbóváladék",
-  "AbdominalPain": "Hasi fájdalom",
-  "Fatigue": "Fáradtság",
-  "Sleepiness": "Álmatlanság",
-  "Backache": "Hátfájás",
-  "FrequentUrination": "Gyakori vizelés",
-  "Cravings": "Éhségrohamok",
-  "Insomnia": "Inszomnia",
-  "Headache": "Fejfájás",
-  "LegCramps": "Lábgörcsök",
-  "BleedingGums": "Vérző íny",
-  "save": "Mentés",
-  "Calm": "Nyugodt",
-  "Happy": "Boldog",
-  "Energetic": "Energiával teli",
-  "MoodSwings": "Hangulati ingadozások",
-  "Frisky": "Játékos",
-  "Irritated": "Irritált",
-  "Sad": "Szomorú",
-  "Anxious": "Szorongó",
-  "Depressed": "Depressziós",
-  "VerySelfCritical": "Nagyon önkritikus",
-  "Apathetic": "Apatikus",
-  "Confused": "Zavart",
-  "LowEnergy": "Alacsony energia",
-  "FeelingGuilty": "Bűntudat",
-  "ObsessiveThoughts": "Gyakori gondolatok",
-  "Period": "Menstruáció",
-  "Fertile": "Termékeny",
-  "Ovulation": "Ovuláció",
-  "NextPeriod": "Következő menstruáció",
-  "MenstrualFertility": "Menstruációs termékenység",
-  "Pregnancy": "Terhesség",
-  "Note": "Megjegyzés",
-  "NewNoteForExample": "Új megjegyzés például",
-  "Week23OfYourPregnancy": "Terhességed 23. hete",
-  "Details": "Részletek",
-  "MyDailyInsights": "Napi áttekintés",
-  "CheckupVaccination": "Ellenőrzés és oltások",
-  "NextCheckup": "Következő ellenőrzés",
-  "HeyJaneDoe": "Szia, Jane Doe! Üdvözlünk az Ovellában!",
-  "joinDiscussion": "Csatlakozz a beszélgetéshez, tedd fel kérdéseidet és csatlakozz a szakértőkhöz!",
-  "Forum": "Fórum",
-  "Groups": "Csoportok",
-  "Events": "Események",
-  "findTopic": "Téma és csoport keresése",
-  "MenstrualHealth": "Menstruációs egészség",
-  "Fertility": "Termékenység",
-  "SexualHealth": "Szexuális egészség",
-  "PopularGroups": "Népszerű csoportok",
-  "FindGroups": "Csoportok keresése",
-  "EventsWorkshops": "Események és workshopok",
-  "EventsDetails": "Események részletei",
-  "PregnancyNutritionWebinar": "Terhességi táplálkozás webinárium",
-  "WhatLearn": "Mit szeretnél tanulni?",
-  "Speakers": "Előadók",
-  "RegisterNow": "Regisztrálj most",
-  "EditProfile": "Profil szerkesztése",
-  "InviteYourPartnerToOvella": "Hívd meg a partnered az Ovellába",
-  "ClickHereToAddYourPartner": "Kattints ide a partnered hozzáadásához",
-  "PersonalInformation": "Személyes információk",
-  "Age": "Életkor",
-  "Gender": "Nem",
-  "MenstrualHealthDetails": "Menstruációs egészség részletei",
-  "CycleLength": "Ciklus hossza",
-  "LastPeriod": "Utolsó menstruáció",
-  "PregnancyStatus": "Terhességi állapot",
-  "HealthConditions": "Egészségügyi állapotok",
-  "PreferencesNotifications": "Preferenciák és értesítések",
-  "PeriodAlerts": "Menstruációs értesítők",
-  "PregnancyTips": "Terhességi tippek",
-  "MentalHealth": "Mentális egészség",
-  "Language": "Nyelv",
-  "PrivacyData": "Adatvédelem és adatkezelés",
-  "ViewDataInsights": "Adat áttekintés megtekintése",
-  "ExportData": "Adatok exportálása",
-  "DeleteAccount": "Fiók törlése",
-  "SupportCommunity": "Támogatás és közösség",
-  "ContactSupport": "Támogatás elérése",
-  "FAQGuides": "GYIK és útmutatók",
-  "JoinACommunity": "Csatlakozz egy közösséghez"
+  "@@locale": "hu",
+  "hellojaneDoe": "helló, Jane Doe",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "jó reggelt",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "a miómák általában a nőket érintik.",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "a miómák befolyásolhatják a menstruációs ciklust, erős vérzést okozhatnak és megnehezíthetik a teherbeesést.",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "rögzítsd a menstruációdat",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "rögzítsd a tüneteidet",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "rögzítsd a hangulatodat",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "személyre szabott wellness utazás",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "mindent megnéz",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "személyre szabott wellness tippek",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "főoldal",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "nyomkövetés",
+  "@tracking": {
+    "description": "Tracking section"
+  },
+  "community": "közösség",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "beállítások",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "mesterséges intelligencia",
+  "@ai": {
+    "description": "AI assistant"
+  },
+  "symptoms": "tünetek",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "minden rendben van",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "görcsök",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "pattanások",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "érzékeny mellek",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "tejszerű mellbimbó-váladék",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "hasi fájdalom",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "fáradtság",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "álmosság",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "hátfájás",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "gyakori vizelés",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "kívánósság",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "álmatlanság",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "fejfájás",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "lábgörcsök",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "vérző íny",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
+  "save": "mentés",
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "nyugodt",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "boldog",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "energikus",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "hangulatingadozások",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "játékos",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "ingerlékeny",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "szomorú",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "szorongó",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "depressziós",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "nagyon önkritikus",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "apatikus",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "zavarodott",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "alacsony energiaszint",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "bűntudat érzése",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "kényszeres gondolatok",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "menstruáció",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "termékeny",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "ovuláció",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "következő menstruáció",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "menstruációs termékenység",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "terhesség",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "jegyzet",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "új jegyzet például",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "terhességed 23. hete",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "részletek",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "napi betekintéseim",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "ellenőrzés és oltás",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "következő ellenőrzés",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "szia Jane Doe, üdvözlünk az Ovella közösségben!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "csatlakozz a beszélgetéshez, tedd fel kérdéseidet és kapcsolódj szakértőkhöz!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "fórum",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "csoportok",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "események",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "témák és csoportok keresése",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "menstruációs egészség",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "termékenység",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "szexuális egészség",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "népszerű csoportok",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "csoportok keresése",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "események és műhelyek",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "események részletei",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "terhességi táplálkozási webinárium",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "mit szeretnél megtanulni?",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "előadók",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "regisztrálj most",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "profil szerkesztése",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "hívd meg a partneredet az Ovellába",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "kattints ide a partnered hozzáadásához",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "személyes információk",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "kor",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "nem",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "menstruációs egészség részletei",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "ciklus hossza",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "utolsó menstruáció",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "terhességi állapot",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "egészségügyi állapotok",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "beállítások és értesítések",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "menstruációs figyelmeztetések",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "terhességi tippek",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "mentális egészség",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "nyelv",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "adatvédelem és adatok",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "adatbetekintések megtekintése",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "adatok exportálása",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "fiók törlése",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "támogatás és közösség",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "kapcsolatfelvétel a támogatással",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "gyakori kérdések és útmutatók",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "csatlakozz egy közösséghez",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }

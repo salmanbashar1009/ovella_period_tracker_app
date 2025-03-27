@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "Kamusta, Jane Doe",
-  "goodMorning": "Magandang Umaga",
-  "fibroidsWomen": "Ang fibroids ay karaniwang nakakaapekto sa mga kababaihan.",
-  "fibroidDiscription": "Ang fibroids ay maaaring magdulot ng pagkaabala sa mga cycle, matinding pagdurugo, at makaapekto sa fertility.",
-  "LogPeriod": "I-log ang Panaho",
-  "LogYourSymptoms": "I-log ang Iyong mga Sintomas",
-  "LogYourMood": "I-log ang Iyong Mood",
-  "TailoredWellnessJourney": "Personalized na Paglalakbay sa Kalusugan",
-  "SeeAll": "Tingnan Lahat",
-  "PersonalizedWellnessTips": "Personalized na mga Tip sa Kalusugan",
-  "Home": "Tahanan",
-  "Tracking": "Pagsubaybay",
-  "community": "Komunidad",
-  "Settings": "Mga Setting",
-  "Ai": "AI",
-  "symptoms": "Sintomas",
-  "EverythingIsFine": "Lahat ay Maayos",
-  "Cramps": "Krampe",
-  "Acne": "Acne",
-  "TenderBreasts": "Masakit na mga Dibdib",
-  "MilkyNippleDischarge": "Melkig na Paglabas mula sa Nipple",
-  "AbdominalPain": "Paninakit ng Tiyan",
-  "Fatigue": "Pagkapagod",
-  "Sleepiness": "Pagkainip",
-  "Backache": "Paninakit ng Likod",
-  "FrequentUrination": "Madalas na Pag-ihi",
-  "Cravings": "Pagkahilig sa Pagkain",
-  "Insomnia": "Insomnia",
-  "Headache": "Sakit ng Ulo",
-  "LegCramps": "Panghihilab ng mga Paa",
-  "BleedingGums": "Pagdurugo ng mga Gilagid",
-  "save": "I-save",
-  "Calm": "Kalmado",
-  "Happy": "Masaya",
-  "Energetic": "Masigla",
-  "MoodSwings": "Pagbabago ng Buwi",
-  "Frisky": "Masigla",
-  "Irritated": "Na-irita",
-  "Sad": "Malungkot",
-  "Anxious": "Nababalisa",
-  "Depressed": "Malungkot",
-  "VerySelfCritical": "Napaka Self-critical",
-  "Apathetic": "Apatiko",
-  "Confused": "Nalilito",
-  "LowEnergy": "Mababang Enerhiya",
-  "FeelingGuilty": "Nakaramdam ng Pagkakasala",
-  "ObsessiveThoughts": "Mga Obsesibong Pag-iisip",
-  "Period": "Panaho",
-  "Fertile": "Fertile",
-  "Ovulation": "Ovulasyon",
-  "NextPeriod": "Susunod na Panaho",
-  "MenstrualFertility": "Menstrwal & Fertility",
-  "Pregnancy": "Pagbubuntis",
-  "Note": "Tala",
-  "NewNoteForExample": "Bagong Tala para sa Halimbawa",
-  "Week23OfYourPregnancy": "Linggo 23 ng Iyong Pagbubuntis",
-  "Details": "Detalye",
-  "MyDailyInsights": "Aking Pang-araw-araw na mga Pagsusuri",
-  "CheckupVaccination": "Pagsusuri at Pagbabakuna",
-  "NextCheckup": "Susunod na Pagsusuri",
-  "HeyJaneDoe": "Hey Jane Doe, maligayang pagdating sa Ovella Komunidad!",
-  "joinDiscussion": "Sumali sa mga talakayan, magtanong, at kumonekta sa mga eksperto!",
-  "Forum": "Forum",
-  "Groups": "Mga Grupo",
-  "Events": "Mga Kaganapan",
-  "findTopic": "Maghanap ng mga paksa, grupo, at talakayan",
-  "MenstrualHealth": "Menstrual na Kalusugan",
-  "Fertility": "Fertility",
-  "SexualHealth": "Kalusugan sa Sekswalidad",
-  "PopularGroups": "Mga Popular na Grupo",
-  "FindGroups": "Maghanap ng mga Grupo",
-  "EventsWorkshops": "Mga Kaganapan at Workshop",
-  "EventsDetails": "Detalye ng Kaganapan",
-  "PregnancyNutritionWebinar": "Pagbubuntis Nutrisyon Webinar",
-  "WhatLearn": "Ano ang Matututuhan Mo",
-  "Speakers": "Mga Tagapagsalita",
-  "RegisterNow": "Magrehistro Ngayon",
-  "EditProfile": "I-edit ang Profile",
-  "InviteYourPartnerToOvella": "I-imbita ang Iyong Kasosyo sa Ovella",
-  "ClickHereToAddYourPartner": "I-click dito upang magdagdag ng iyong kasosyo",
-  "PersonalInformation": "Personal na Impormasyon",
-  "Age": "Edad",
-  "Gender": "Kasarian",
-  "MenstrualHealthDetails": "Menstrual & Kalusugan na mga detalye",
-  "CycleLength": "Haba ng Cycle",
-  "LastPeriod": "Huling Panaho",
-  "PregnancyStatus": "Katayuan ng Pagbubuntis",
-  "HealthConditions": "Mga Kondisyon sa Kalusugan",
-  "PreferencesNotifications": "Mga Paborito & Abiso",
-  "PeriodAlerts": "Mga Abiso ng Panaho",
-  "PregnancyTips": "Mga Tip para sa Pagbubuntis",
-  "MentalHealth": "Mental na Kalusugan",
-  "Language": "Wika",
-  "PrivacyData": "Pribasiya & Data",
-  "ViewDataInsights": "Tingnan ang mga Insight ng Data",
-  "ExportData": "I-export ang Data",
-  "DeleteAccount": "Tanggalin ang Account",
-  "SupportCommunity": "Suporta at Komunidad",
-  "ContactSupport": "Makipag-ugnayan sa Suporta",
-  "FAQGuides": "FAQ & Gabay",
-  "JoinACommunity": "Sumali sa Komunidad"
+  "@@locale": "tl",
+  "hellojaneDoe": "kamusta, Jane Doe",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "magandang umaga",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "ang mga fibroid ay karaniwang nakakaapekto sa mga kababaihan.",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "ang mga fibroid ay maaaring makagambala sa siklo ng regla, magdulot ng matinding pagdurugo, at makaapekto sa pagkamabunga.",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "i-record ang iyong regla",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "i-record ang iyong mga sintomas",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "i-record ang iyong mood",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "personalized na paglalakbay sa kalusugan",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "tingnan lahat",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "personalized na mga tip sa kalusugan",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "tahanan",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "pagsubaybay",
+  "@tracking": {
+    "description": "Tracking section"
+  },
+  "community": "komunidad",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "mga setting",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "artipisyal na intelihensiya",
+  "@ai": {
+    "description": "AI assistant"
+  },
+  "symptoms": "mga sintomas",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "ayos lahat",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "pamamanhid",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "tagihawat",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "maselang suso",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "malabnaw na paglabas mula sa utong",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "sakit sa tiyan",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "pagod",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "antok",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "sakit sa likod",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "madalas na pag-ihi",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "pagkagusto sa pagkain",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "hindi makatulog",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "sakit ng ulo",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "pamamanhid ng binti",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "pagdurugo ng gilagid",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
+  "save": "i-save",
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "kalmado",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "masaya",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "masigla",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "pagbabago ng mood",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "malikot",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "naiirita",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "malungkot",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "balisa",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "depresyon",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "labis na kritikal sa sarili",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "walang pakialam",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "nalilito",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "mababang enerhiya",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "damdamin ng kasalanan",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "mga obsessibong pag-iisip",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "regla",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "mataba",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "obulasyon",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "susunod na regla",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "regla at pagkamabunga",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "pagbubuntis",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "tala",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "bagong tala bilang halimbawa",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "linggo 23 ng iyong pagbubuntis",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "mga detalye",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "aking pang-araw-araw na pananaw",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "check-up at bakuna",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "susunod na check-up",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "kamusta Jane Doe, maligayang pagdating sa komunidad ng Ovella!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "sumali sa talakayan, magtanong, at makipag-ugnayan sa mga eksperto!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "forum",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "mga grupo",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "mga kaganapan",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "maghanap ng paksa, grupo, at talakayan",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "kalusugan sa regla",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "pagkamabunga",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "kalusugan sa sekswalidad",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "mga sikat na grupo",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "maghanap ng mga grupo",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "mga kaganapan at workshop",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "mga detalye ng kaganapan",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "webinar sa nutrisyon ng pagbubuntis",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "ano ang matututuhan mo",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "mga nagsasalita",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "magrehistro ngayon",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "i-edit ang profile",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "imbitahan ang iyong kapareha sa Ovella",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "i-click dito upang idagdag ang iyong kapareha",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "personal na impormasyon",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "edad",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "kasarian",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "mga detalye ng kalusugan sa regla",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "haba ng siklo",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "huling regla",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "katayuan ng pagbubuntis",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "mga kondisyon ng kalusugan",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "mga kagustuhan at abiso",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "mga alerto sa regla",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "mga tip sa pagbubuntis",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "kalusugan ng isip",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "wika",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "pribasiya at datos",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "tingnan ang mga pananaw sa datos",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "i-export ang datos",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "burahin ang account",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "suporta at komunidad",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "kontakin ang suporta",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "mga FAQ at gabay",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "sumali sa isang komunidad",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }

@@ -1,103 +1,407 @@
 {
-  "helloJaneDoe": "שלום, ג'ין דו",
-  "goodMorning": "בוקר טוב",
-  "fibroidsWomen": "פיברואידים משפיעים בדרך כלל על נשים.",
-  "fibroidDiscription": "פיברואידים יכולים להשפיע על מחזור חודשי, לגרום לדימומים כבדים ולהקשות על הריון.",
-  "LogPeriod": "עקוב אחרי המחזור שלך",
-  "LogYourSymptoms": "עקוב אחרי התסמינים שלך",
-  "LogYourMood": "עקוב אחרי מצב הרוח שלך",
-  "TailoredWellnessJourney": "מסע בריאות מותאם אישית",
-  "SeeAll": "ראה הכל",
-  "PersonalizedWellnessTips": "טיפים מותאמים אישית לבריאות",
-  "Home": "בית",
-  "Tracking": "מעקב",
+  "@@locale": "he",
+  "hellojaneDoe": "שלום, ג'יין דו",
+  "@hellojaneDoe": {
+    "description": "Hello greeting"
+  },
+  "goodmorning": "בוקר טוב",
+  "@goodmorning": {
+    "description": "Morning greeting"
+  },
+  "fibroidswomen": "פיברואידים משפיעים בעיקר על נשים.",
+  "@fibroidswomen": {
+    "description": "Fibroids information"
+  },
+  "fibroiddiscription": "פיברואידים עלולים להשפיע על המחזור החודשי, לגרום לדימומים כבדים ולהקשות על ההיריון.",
+  "@fibroiddiscription": {
+    "description": "Fibroids description"
+  },
+  "logperiod": "רשום את המחזור שלך",
+  "@logperiod": {
+    "description": "Logging period option"
+  },
+  "logyoursymptoms": "רשום את התסמינים שלך",
+  "@logyoursymptoms": {
+    "description": "Logging symptoms option"
+  },
+  "logyourmood": "רשום את מצב הרוח שלך",
+  "@logyourmood": {
+    "description": "Logging mood option"
+  },
+  "tailoredwellnessjourney": "מסע בריאות מותאם אישית",
+  "@tailoredwellnessjourney": {
+    "description": "Personalized health journey"
+  },
+  "seeall": "ראה הכול",
+  "@seeall": {
+    "description": "View all items"
+  },
+  "personalizedwellnesstips": "טיפים לבריאות מותאמים אישית",
+  "@personalizedwellnesstips": {
+    "description": "Wellness tips section"
+  },
+  "home": "בית",
+  "@home": {
+    "description": "Home page"
+  },
+  "tracking": "מעקב",
+  "@tracking": {
+    "description": "Tracking section"
+  },
   "community": "קהילה",
-  "Settings": "הגדרות",
-  "Ai": "בינה מלאכותית",
+  "@community": {
+    "description": "Community section"
+  },
+  "settings": "הגדרות",
+  "@settings": {
+    "description": "Settings page"
+  },
+  "ai": "בינה מלאכותית",
+  "@ai": {
+    "description": "AI assistant"
+  },
   "symptoms": "תסמינים",
-  "EverythingIsFine": "הכל בסדר",
-  "Cramps": "התכווצויות",
-  "Acne": "אקנה",
-  "TenderBreasts": "חזה רגיש",
-  "MilkyNippleDischarge": "הפרשה חלבית מהפטמה",
-  "AbdominalPain": "כאב בבטן",
-  "Fatigue": "עייפות",
-  "Sleepiness": "עייפות",
-  "Backache": "כאב גב",
-  "FrequentUrination": "שתן תכוף",
-  "Cravings": "חשקים",
-  "Insomnia": "נדודי שינה",
-  "Headache": "כאב ראש",
-  "LegCramps": "התכווצויות רגליים",
-  "BleedingGums": "חניכיים מדממות",
+  "@symptoms": {
+    "description": "Symptoms section"
+  },
+  "everythingisfine": "הכול בסדר",
+  "@everythingisfine": {
+    "description": "Status message"
+  },
+  "cramps": "התכווצויות",
+  "@cramps": {
+    "description": "Symptom"
+  },
+  "acne": "אקנה",
+  "@acne": {
+    "description": "Skin condition"
+  },
+  "tenderbreasts": "שדיים רגישים",
+  "@tenderbreasts": {
+    "description": "Symptom"
+  },
+  "milkynippledischarge": "הפרשה חלבית מהפטמות",
+  "@milkynippledischarge": {
+    "description": "Symptom"
+  },
+  "abdominalpain": "כאב בטני",
+  "@abdominalpain": {
+    "description": "Symptom"
+  },
+  "fatigue": "עייפות",
+  "@fatigue": {
+    "description": "Symptom"
+  },
+  "sleepiness": "ישנוניות",
+  "@sleepiness": {
+    "description": "Symptom"
+  },
+  "backache": "כאב גב",
+  "@backache": {
+    "description": "Symptom"
+  },
+  "frequenturination": "השתנה תכופה",
+  "@frequenturination": {
+    "description": "Symptom"
+  },
+  "cravings": "תאוות",
+  "@cravings": {
+    "description": "Symptom"
+  },
+  "insomnia": "נדודי שינה",
+  "@insomnia": {
+    "description": "Symptom"
+  },
+  "headache": "כאב ראש",
+  "@headache": {
+    "description": "Symptom"
+  },
+  "legcramps": "התכווצויות ברגליים",
+  "@legcramps": {
+    "description": "Symptom"
+  },
+  "bleedinggums": "חניכיים מדממות",
+  "@bleedinggums": {
+    "description": "Symptom"
+  },
   "save": "שמור",
-  "Calm": "רגוע",
-  "Happy": "שמח",
-  "Energetic": "אנרגטי",
-  "MoodSwings": "שינויים במצב הרוח",
-  "Frisky": "עליז",
-  "Irritated": "מעוצבן",
-  "Sad": "עצבני",
-  "Anxious": "חרד",
-  "Depressed": "מדוכא",
-  "VerySelfCritical": "ביקורתי מאוד כלפי עצמי",
-  "Apathetic": "אדיש",
-  "Confused": "מבולבל",
-  "LowEnergy": "אנרגיה נמוכה",
-  "FeelingGuilty": "מרגיש אשם",
-  "ObsessiveThoughts": "מחשבות טורדניות",
-  "Period": "מחזור",
-  "Fertile": "פורה",
-  "Ovulation": "ביצית",
-  "NextPeriod": "המחזור הבא",
-  "MenstrualFertility": "פורה במונחים של מחזור חודשי",
-  "Pregnancy": "הריון",
-  "Note": "הערה",
-  "NewNoteForExample": "הערה חדשה לדוגמה",
-  "Week23OfYourPregnancy": "שבוע 23 של ההריון שלך",
-  "Details": "פרטים",
-  "MyDailyInsights": "הבנות יומיות שלי",
-  "CheckupVaccination": "בדיקות חיסונים",
-  "NextCheckup": "הבדיקה הבאה",
-  "HeyJaneDoe": "היי, ג'ין דו! ברוכה הבאה לאוולה!",
-  "joinDiscussion": "הצטרף לדיון, שאל שאלות והתחבר עם מומחים!",
-  "Forum": "פורום",
-  "Groups": "קבוצות",
-  "Events": "אירועים",
-  "findTopic": "מצא נושא וקבוצות",
-  "MenstrualHealth": "בריאות מחזור",
-  "Fertility": "פיריון",
-  "SexualHealth": "בריאות מינית",
-  "PopularGroups": "קבוצות פופולריות",
-  "FindGroups": "מצא קבוצות",
-  "EventsWorkshops": "אירועים וסדנאות",
-  "EventsDetails": "פרטי אירועים",
-  "PregnancyNutritionWebinar": "וובינר על תזונה בהריון",
-  "WhatLearn": "מה אתה רוצה ללמוד?",
-  "Speakers": "דוברים",
-  "RegisterNow": "הירשם עכשיו",
-  "EditProfile": "ערוך פרופיל",
-  "InviteYourPartnerToOvella": "הזמן את בן הזוג שלך לאוולה",
-  "ClickHereToAddYourPartner": "לחץ כאן כדי להוסיף את בן הזוג שלך",
-  "PersonalInformation": "מידע אישי",
-  "Age": "גיל",
-  "Gender": "מין",
-  "MenstrualHealthDetails": "פרטי בריאות מחזור",
-  "CycleLength": "אורך מחזור",
-  "LastPeriod": "המחזור האחרון",
-  "PregnancyStatus": "סטטוס הריון",
-  "HealthConditions": "מחלות בריאות",
-  "PreferencesNotifications": "העדפות והודעות",
-  "PeriodAlerts": "התראות מחזור",
-  "PregnancyTips": "טיפים להריון",
-  "MentalHealth": "בריאות נפשית",
-  "Language": "שפה",
-  "PrivacyData": "פרטיות ונתונים",
-  "ViewDataInsights": "צפה בהבנות נתונים",
-  "ExportData": "יצוא נתונים",
-  "DeleteAccount": "מחק חשבון",
-  "SupportCommunity": "תמיכה וקהילה",
-  "ContactSupport": "צור קשר עם תמיכה",
-  "FAQGuides": "שאלות נפוצות ומדריכים",
-  "JoinACommunity": "הצטרף לקהילה"
+  "@save": {
+    "description": "Save button"
+  },
+  "calm": "רגוע",
+  "@calm": {
+    "description": "Mood option"
+  },
+  "happy": "שמח",
+  "@happy": {
+    "description": "Mood option"
+  },
+  "energetic": "מלא אנרגיה",
+  "@energetic": {
+    "description": "Mood option"
+  },
+  "moodswings": "שינויי מצב רוח",
+  "@moodswings": {
+    "description": "Mood option"
+  },
+  "frisky": "עליז",
+  "@frisky": {
+    "description": "Mood option"
+  },
+  "irritated": "עצבני",
+  "@irritated": {
+    "description": "Mood option"
+  },
+  "sad": "עצוב",
+  "@sad": {
+    "description": "Mood option"
+  },
+  "anxious": "חרד",
+  "@anxious": {
+    "description": "Mood option"
+  },
+  "depressed": "מדוכא",
+  "@depressed": {
+    "description": "Mood option"
+  },
+  "veryselfcritical": "ביקורתי מאוד כלפי עצמי",
+  "@veryselfcritical": {
+    "description": "Mood option"
+  },
+  "apathetic": "אדיש",
+  "@apathetic": {
+    "description": "Mood option"
+  },
+  "confused": "מבולבל",
+  "@confused": {
+    "description": "Mood option"
+  },
+  "lowenergy": "אנרגיה נמוכה",
+  "@lowenergy": {
+    "description": "Mood option"
+  },
+  "feelingguilty": "תחושת אשמה",
+  "@feelingguilty": {
+    "description": "Mood option"
+  },
+  "obsessivethoughts": "מחשבות אובססיביות",
+  "@obsessivethoughts": {
+    "description": "Mood option"
+  },
+  "period": "מחזור חודשי",
+  "@period": {
+    "description": "Menstrual cycle"
+  },
+  "fertile": "פורייה",
+  "@fertile": {
+    "description": "Fertility phase"
+  },
+  "ovulation": "ביוץ",
+  "@ovulation": {
+    "description": "Ovulation phase"
+  },
+  "nextperiod": "המחזור הבא",
+  "@nextperiod": {
+    "description": "Upcoming menstrual cycle"
+  },
+  "menstrualfertility": "פוריות מחזורית",
+  "@menstrualfertility": {
+    "description": "Health section"
+  },
+  "pregnancy": "הריון",
+  "@pregnancy": {
+    "description": "Pregnancy section"
+  },
+  "note": "הערה",
+  "@note": {
+    "description": "Notes section"
+  },
+  "newnoteforexample": "הערה חדשה לדוגמה",
+  "@newnoteforexample": {
+    "description": "Example note"
+  },
+  "week23ofyourpregnancy": "שבוע 23 להריונך",
+  "@week23ofyourpregnancy": {
+    "description": "Pregnancy progress"
+  },
+  "details": "פרטים",
+  "@details": {
+    "description": "More information"
+  },
+  "mydailyinsights": "התובנות היומיות שלי",
+  "@mydailyinsights": {
+    "description": "Daily health insights"
+  },
+  "checkupvaccination": "בדיקה וחיסון",
+  "@checkupvaccination": {
+    "description": "Medical checkups"
+  },
+  "nextcheckup": "הבדיקה הבאה",
+  "@nextcheckup": {
+    "description": "Upcoming medical checkup"
+  },
+  "heyjaneDoe": "היי ג'יין דו, ברוכה הבאה לקהילת אוולה!",
+  "@heyjaneDoe": {
+    "description": "Welcome message for community"
+  },
+  "joindiscussion": "הצטרף לדיונים, שאל שאלות והתחבר למומחים!",
+  "@joindiscussion": {
+    "description": "Encouragement to join discussions"
+  },
+  "forum": "פורום",
+  "@forum": {
+    "description": "Forum section"
+  },
+  "groups": "קבוצות",
+  "@groups": {
+    "description": "Groups section"
+  },
+  "events": "אירועים",
+  "@events": {
+    "description": "Events section"
+  },
+  "findtopic": "חפש נושאים, קבוצות ודיונים",
+  "@findtopic": {
+    "description": "Search feature for topics"
+  },
+  "menstrualhealth": "בריאות מחזורית",
+  "@menstrualhealth": {
+    "description": "Menstrual health section"
+  },
+  "fertility": "פוריות",
+  "@fertility": {
+    "description": "Fertility section"
+  },
+  "sexualhealth": "בריאות מינית",
+  "@sexualhealth": {
+    "description": "Sexual health section"
+  },
+  "populargroups": "קבוצות פופולריות",
+  "@populargroups": {
+    "description": "Popular community groups"
+  },
+  "findgroups": "חפש קבוצות",
+  "@findgroups": {
+    "description": "Search feature for groups"
+  },
+  "eventsworkshops": "אירועים וסדנאות",
+  "@eventsworkshops": {
+    "description": "Events and workshops section"
+  },
+  "eventsdetails": "פרטי האירועים",
+  "@eventsdetails": {
+    "description": "Details of specific events"
+  },
+  "pregnancynutritionwebinar": "וובינר על תזונה בזמן הריון",
+  "@pregnancynutritionwebinar": {
+    "description": "Webinar about pregnancy nutrition"
+  },
+  "whatlearn": "מה תרצה ללמוד?",
+  "@whatlearn": {
+    "description": "Section describing learning outcomes"
+  },
+  "speakers": "דוברים",
+  "@speakers": {
+    "description": "Speakers for an event"
+  },
+  "registernow": "הירשם עכשיו",
+  "@registernow": {
+    "description": "Registration button"
+  },
+  "editprofile": "ערוך פרופיל",
+  "@editprofile": {
+    "description": "Profile editing option"
+  },
+  "inviteyourpartnertoovella": "הזמן את בן/בת הזוג שלך לאוולה",
+  "@inviteyourpartnertoovella": {
+    "description": "Option to invite a partner"
+  },
+  "clickheretoaddyourpartner": "לחץ כאן כדי להוסיף את בן/בת הזוג שלך",
+  "@clickheretoaddyourpartner": {
+    "description": "Link to add partner"
+  },
+  "personalinformation": "מידע אישי",
+  "@personalinformation": {
+    "description": "User's personal information section"
+  },
+  "age": "גיל",
+  "@age": {
+    "description": "User's age"
+  },
+  "gender": "מגדר",
+  "@gender": {
+    "description": "User's gender"
+  },
+  "menstrualhealthdetails": "פרטי בריאות מחזורית",
+  "@menstrualhealthdetails": {
+    "description": "Menstrual and health details"
+  },
+  "cyclelength": "אורך המחזור",
+  "@cyclelength": {
+    "description": "Length of menstrual cycle"
+  },
+  "lastperiod": "המחזור האחרון",
+  "@lastperiod": {
+    "description": "Date of last period"
+  },
+  "pregnancystatus": "מצב הריון",
+  "@pregnancystatus": {
+    "description": "Current pregnancy status"
+  },
+  "healthconditions": "מצבים בריאותיים",
+  "@healthconditions": {
+    "description": "User's health conditions"
+  },
+  "preferencesnotifications": "העדפות והתראות",
+  "@preferencesnotifications": {
+    "description": "User preferences and notifications"
+  },
+  "periodalerts": "התראות מחזור חודשי",
+  "@periodalerts": {
+    "description": "Menstrual cycle alerts"
+  },
+  "pregnancytips": "טיפים להריון",
+  "@pregnancytips": {
+    "description": "Tips for pregnancy"
+  },
+  "mentalhealth": "בריאות נפשית",
+  "@mentalhealth": {
+    "description": "Mental health section"
+  },
+  "language": "שפה",
+  "@language": {
+    "description": "Language selection"
+  },
+  "privacydata": "פרטיות ונתונים",
+  "@privacydata": {
+    "description": "Privacy and data management"
+  },
+  "viewdatainsights": "צפה בתובנות הנתונים",
+  "@viewdatainsights": {
+    "description": "View insights on data"
+  },
+  "exportdata": "ייצא נתונים",
+  "@exportdata": {
+    "description": "Export user data"
+  },
+  "deleteaccount": "מחק חשבון",
+  "@deleteaccount": {
+    "description": "Delete user account"
+  },
+  "supportcommunity": "תמיכה וקהילה",
+  "@supportcommunity": {
+    "description": "Support and community section"
+  },
+  "contactsupport": "צור קשר עם התמיכה",
+  "@contactsupport": {
+    "description": "Support contact information"
+  },
+  "faqguides": "שאלות נפוצות ומדריכים",
+  "@faqguides": {
+    "description": "Frequently asked questions and guides"
+  },
+  "joinacommunity": "הצטרף לקהילה",
+  "@joinacommunity": {
+    "description": "Option to join a community"
+  }
 }
