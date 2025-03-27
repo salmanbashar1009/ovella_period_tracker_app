@@ -18,6 +18,21 @@ class HomeScreenProvider with ChangeNotifier {
 
     _getPeriodTips();
     fetchPeriodInformation();
+    _symptoms[0]["selected"] = !_symptoms[0]["selected"];
+    _selectedSymptoms.add(_symptoms[0]);
+    _symptoms[1]["selected"] = !_symptoms[1]["selected"];
+    _selectedSymptoms.add(_symptoms[1]);
+    _symptoms[2]["selected"] = !_symptoms[2]["selected"];
+    _selectedSymptoms.add(_symptoms[2]);
+
+
+    _moods[0]["selected"] = !_moods[0]["selected"];
+    _selectedMoods.add(_moods[0]);
+    _moods[1]["selected"] = !_moods[1]["selected"];
+    _selectedMoods.add(_moods[1]);
+    _moods[2]["selected"] = !_moods[2]["selected"];
+    _selectedMoods.add(_moods[2]);
+
 
   }
 
@@ -307,6 +322,22 @@ class HomeScreenProvider with ChangeNotifier {
       }
     }
 
+    notifyListeners();
+  }
+
+  bool _isSymptomsEditMode = false;
+  bool get isSymptomsEditMode =>_isSymptomsEditMode;
+
+  void onEditSymptomsPressed(){
+    _isSymptomsEditMode = !_isSymptomsEditMode;
+    notifyListeners();
+  }
+
+  bool _isMoodsEditMode = false;
+  bool get isMoodsEditMode =>_isMoodsEditMode;
+
+  void onEditMoodsPressed(){
+    _isMoodsEditMode = !_isMoodsEditMode;
     notifyListeners();
   }
 
