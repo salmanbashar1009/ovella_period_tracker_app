@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/categoryList.dart';
@@ -14,9 +13,8 @@ class EventScreen extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-                                          padding: AppPadding.screenHorizontalPadding,
-
-          child: Text("Upcoming Events", style: Theme.of(context).textTheme.bodyLarge)),
+        padding: AppPadding.screenHorizontalPadding,
+        child: Text("Upcoming Events", style: Theme.of(context).textTheme.bodyLarge)),
         SizedBox(height: 12.h),
         SizedBox(
           height: 350.h,

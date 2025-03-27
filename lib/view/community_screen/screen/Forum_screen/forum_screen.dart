@@ -41,12 +41,13 @@ class CategorySection extends StatelessWidget {
   final String title;
   final List<CategoryModel> categories;
   final String routeName;
-
+  final TextStyle? textTheme;
   const CategorySection({
     Key? key,
     required this.title,
     required this.categories,
     required this.routeName,
+    this.textTheme
   });
 
   @override
