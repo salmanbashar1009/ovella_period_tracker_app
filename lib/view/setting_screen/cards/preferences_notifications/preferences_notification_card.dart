@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
-import 'package:ovella_period_tracker_app/view_model/localization_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/settings_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/step_screen_provider.dart';
 import 'package:provider/provider.dart';
-import '../../../../constant/images.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class PreferencesNotificationCard extends StatelessWidget {
   const PreferencesNotificationCard({super.key});
   @override
   Widget build(BuildContext context) {
+     final appLocalization = AppLocalizations.of(context);
     TextTheme textTheme = Theme.of(context).textTheme;
     ColorScheme colorScheme = Theme.of(context).colorScheme;
     return Consumer<SettingsProvider>(

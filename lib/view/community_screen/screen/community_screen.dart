@@ -16,9 +16,13 @@ import 'package:ovella_period_tracker_app/view_model/community_provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CommunityScreen extends StatelessWidget {
-  CommunityScreen({super.key});
+       
 
-  static const List<String> _titles = ["Forum", "Groups", "Events"];
+  CommunityScreen({super.key});
+  
+  static const List<String> _titles = [
+    
+    "Forum", "Groups", "Events"];
   static const List<String> _appBarTitles = [
     "Community",
     "Groups",
@@ -33,6 +37,15 @@ class CommunityScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
       final appLocalization = AppLocalizations.of(context);
+       List<String> titles = [
+      appLocalization?.forum ?? "Forum",
+      appLocalization?.groups ?? "Groups",
+      appLocalization?.events ?? "Events"
+    ];
+
+ 
+
+
     return BackgroundWidget(
       child: SingleChildScrollView(
         child: SafeArea(
@@ -146,7 +159,7 @@ class CommunityScreen extends StatelessWidget {
                   Padding(
                                 padding: AppPadding.screenHorizontalPadding,
 
-                    child: CustomSegmentedControl(options: _titles)),
+                    child: CustomSegmentedControl(options: titles)),
                   SizedBox(height: 16.h),
           
                   //-----------search-------------------------------------------------------
