@@ -6,7 +6,6 @@ import 'package:ovella_period_tracker_app/model/eventModel.dart';
 import 'package:ovella_period_tracker_app/model/healthCardModel.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
-import 'package:ovella_period_tracker_app/view/community_screen/widget/joinButton.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/speakerTile.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 
@@ -55,9 +54,6 @@ class EventdetailsScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 16.h),
                 Container(
-                  width: 362.w,
-                  height: 213.h,
-
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.r),
                     color: Color(0xffFFFFFF),
