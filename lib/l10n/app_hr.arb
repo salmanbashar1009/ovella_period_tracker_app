@@ -20,6 +20,7 @@
   "@logperiod": {
     "description": "Logging period option"
   },
+  "eventsAndWorkshops": "Događaji i Radionice",
   "logyoursymptoms": "zabilježi svoje simptome",
   "@logyoursymptoms": {
     "description": "Logging symptoms option"

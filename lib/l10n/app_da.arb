@@ -16,6 +16,7 @@
   "@fibroiddiscription": {
     "description": "Fibroids description"
   },
+  "eventsAndWorkshops": "Begivenheder og Workshops",
   "logperiod": "log din menstruation",
   "@logperiod": {
     "description": "Logging period option"

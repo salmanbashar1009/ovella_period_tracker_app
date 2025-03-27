@@ -20,6 +20,7 @@
   "@logperiod": {
     "description": "Logging period option"
   },
+  "eventsAndWorkshops": "Εκδηλώσεις και Εργαστήρια",
   "logyoursymptoms": "καταγράψτε τα συμπτώματά σας",
   "@logyoursymptoms": {
     "description": "Logging symptoms option"

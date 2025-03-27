@@ -403,5 +403,7 @@
   "joinacommunity": "انضم إلى مجتمع",
   "@joinacommunity": {
     "description": "Option to join a community"
-  }
+  },
+  "eventsAndWorkshops": "الفعاليات وورش العمل"
+
 }

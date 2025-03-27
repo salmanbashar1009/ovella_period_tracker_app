@@ -20,6 +20,7 @@
   "@logperiod": {
     "description": "Logging period option"
   },
+  "eventsAndWorkshops": "Tapahtumat ja Työpajat",
   "logyoursymptoms": "kirjaa oireesi",
   "@logyoursymptoms": {
     "description": "Logging symptoms option"

@@ -24,6 +24,7 @@
   "@logyoursymptoms": {
     "description": "Logging symptoms option"
   },
+  "eventsAndWorkshops": "Események és Műhelyek",
   "logyourmood": "rögzítsd a hangulatodat",
   "@logyourmood": {
     "description": "Logging mood option"

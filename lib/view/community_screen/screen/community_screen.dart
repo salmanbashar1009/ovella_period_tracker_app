@@ -42,7 +42,13 @@ class CommunityScreen extends StatelessWidget {
       appLocalization?.groups ?? "Groups",
       appLocalization?.events ?? "Events"
     ];
+ List<String> appBarTitles = [
+      appLocalization?.community ?? "Community",
+      appLocalization?.groups ?? "Groups",
+      appLocalization?.eventsworkshops ?? "Events & Workshops"
+    ];
 
+ 
  
 
 
@@ -52,7 +58,7 @@ class CommunityScreen extends StatelessWidget {
           child: Consumer<CommunityProvider>(
             builder: (context, provider, child) {
               String currentAppBarTitle =
-                  _appBarTitles[provider.selectedIndex];
+                  appBarTitles[provider.selectedIndex];
               String currentSearchPlaceholder =
                   _searchPlaceholders[provider.selectedIndex];
           
