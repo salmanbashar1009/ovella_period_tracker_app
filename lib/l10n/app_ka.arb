@@ -28,6 +28,7 @@
   "@logyourmood": {
     "description": "Logging mood option"
   },
+  "eventsAndWorkshops": "ღონისძიებები და სემინარები",
   "tailoredwellnessjourney": "პერსონალიზებული ჯანმრთელობის მოგზაურობა",
   "@tailoredwellnessjourney": {
     "description": "Personalized health journey"

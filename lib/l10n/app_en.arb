@@ -504,5 +504,10 @@
     "joinacommunity": "Join a Community",
     "@joinacommunity": {
         "description": "Option to join a community"
+    },
+
+    "eventsAndWorkshops": "Events & Workshops",
+    "@eventsAndWorkshops": {
+        "description": "Option to join a community"
     }
 }

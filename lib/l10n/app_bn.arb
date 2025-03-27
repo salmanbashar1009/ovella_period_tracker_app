@@ -403,5 +403,6 @@
   "joinacommunity": "একটি সম্প্রদায়ে যোগ দিন",
   "@joinacommunity": {
     "description": "Option to join a community"
-  }
+  },
+  "eventsAndWorkshops": "ইভেন্ট এবং কর্মশালা"
 }

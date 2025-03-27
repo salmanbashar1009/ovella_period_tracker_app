@@ -28,6 +28,7 @@
   "@logyourmood": {
     "description": "Logging mood option"
   },
+  "eventsAndWorkshops": "Evenementen en Workshops",
   "tailoredwellnessjourney": "op maat gemaakte welzijnsreis",
   "@tailoredwellnessjourney": {
     "description": "Personalized health journey"

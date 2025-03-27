@@ -400,6 +400,9 @@
   "@faqguides": {
     "description": "Frequently asked questions and guides"
   },
+  "eventsAndWorkshops": "Esdeveniments i Tallers",
+
+  
   "joinacommunity": "uneix-te a una comunitat",
   "@joinacommunity": {
     "description": "Option to join a community"

@@ -24,6 +24,7 @@
   "@logyoursymptoms": {
     "description": "Logging symptoms option"
   },
+  "eventsAndWorkshops": "ပွဲများနှင့် အလုပ်ရုံဆွေးနွေးပွဲများ",
   "logyourmood": "log mood anda",
   "@logyourmood": {
     "description": "Logging mood option"

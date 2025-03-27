@@ -28,6 +28,7 @@
   "@logyourmood": {
     "description": "Logging mood option"
   },
+  "eventsAndWorkshops": "活动与研讨会",
   "tailoredwellnessjourney": "定制的健康之旅",
   "@tailoredwellnessjourney": {
     "description": "Personalized health journey"

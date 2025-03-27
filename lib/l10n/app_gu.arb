@@ -24,6 +24,7 @@
   "@logyoursymptoms": {
     "description": "Logging symptoms option"
   },
+  "eventsAndWorkshops": "ઇવેન્ટ્સ અને વર્કશોપ્સ",
   "logyourmood": "તમારો મૂડ નોંધો",
   "@logyourmood": {
     "description": "Logging mood option"

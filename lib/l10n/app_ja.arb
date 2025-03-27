@@ -28,6 +28,7 @@
   "@logyourmood": {
     "description": "Logging mood option"
   },
+  "eventsAndWorkshops": "イベントとワークショップ",
   "tailoredwellnessjourney": "パーソナライズされた健康の旅",
   "@tailoredwellnessjourney": {
     "description": "Personalized health journey"

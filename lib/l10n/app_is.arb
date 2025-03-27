@@ -28,6 +28,7 @@
   "@logyourmood": {
     "description": "Logging mood option"
   },
+  "eventsAndWorkshops": "Viðburðir og Vinnustofur",
   "tailoredwellnessjourney": "sérsniðin heilsuferð",
   "@tailoredwellnessjourney": {
     "description": "Personalized health journey"

@@ -24,6 +24,7 @@
   "@logyoursymptoms": {
     "description": "Logging symptoms option"
   },
+  "eventsAndWorkshops": "Événements et Ateliers",
   "logyourmood": "enregistrer votre humeur",
   "@logyourmood": {
     "description": "Logging mood option"

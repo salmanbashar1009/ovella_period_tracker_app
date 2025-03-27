@@ -20,6 +20,7 @@
   "@logperiod": {
     "description": "Logging period option"
   },
+  "eventsAndWorkshops": "Veranstaltungen und Workshops",
   "logyoursymptoms": "deine Symptome protokollieren",
   "@logyoursymptoms": {
     "description": "Logging symptoms option"

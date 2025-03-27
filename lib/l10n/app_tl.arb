@@ -28,6 +28,7 @@
   "@logyourmood": {
     "description": "Logging mood option"
   },
+  "eventsAndWorkshops": "Mga Kaganapan at Workshop",
   "tailoredwellnessjourney": "personalized na paglalakbay sa kalusugan",
   "@tailoredwellnessjourney": {
     "description": "Personalized health journey"

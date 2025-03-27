@@ -92,6 +92,7 @@
   "@fatigue": {
     "description": "Symptom"
   },
+  "eventsAndWorkshops": "Sündmused ja Töötubade",
   "sleepiness": "unisus",
   "@sleepiness": {
     "description": "Symptom"
