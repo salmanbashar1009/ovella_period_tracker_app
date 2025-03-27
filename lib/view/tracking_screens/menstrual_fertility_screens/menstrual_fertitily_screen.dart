@@ -270,6 +270,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
                               homeScreenProvider.selectedSymptoms
                                   .map(
                                     (symptom) => BuildLogItem(
+                                      isEditMode: homeScreenProvider.isSymptomsEditMode,
                                       logItem: symptom,
                                       onSelect: homeScreenProvider.onSelectLog,
                                     ),

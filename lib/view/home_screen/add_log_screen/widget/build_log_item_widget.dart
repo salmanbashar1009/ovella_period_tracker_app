@@ -5,10 +5,11 @@ import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:provider/provider.dart';
 
 class BuildLogItem extends StatelessWidget{
+  final bool isEditMode;
   final Map<String, dynamic> logItem;
   final void Function(Map<String, dynamic>) onSelect;
 
-  const BuildLogItem({super.key, required this.logItem, required this.onSelect});
+  const BuildLogItem({super.key, required this.logItem, required this.onSelect,required this.isEditMode});
   @override
   Widget build(BuildContext context) {
     return Consumer<HomeScreenProvider>(

@@ -15,10 +15,11 @@ class PeriodDateContainer extends StatefulWidget {
 }
 
 class _PeriodDateContainerState extends State<PeriodDateContainer> {
-
   @override
   void initState() {
-    WidgetsBinding.instance.addPostFrameCallback((_) => context.read<HomeScreenProvider>().scrollToCurrentDate());
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) => context.read<HomeScreenProvider>().scrollToCurrentDate(),
+    );
     super.initState();
   }
 
@@ -222,14 +223,33 @@ class _PeriodDateContainerState extends State<PeriodDateContainer> {
                         mainAxisSize: MainAxisSize.min,
                         spacing: 4.h,
                         children: [
-                          Text(
-                            "Period",
-                            style: Theme.of(
-                              context,
-                            ).textTheme.bodyMedium?.copyWith(
-                              color: AppColors.lightTextColor,
-                              fontSize: 15.sp,
-                            ),
+                          Consumer<HomeScreenProvider>(
+                            builder: (_, homeScreenProvider, _) {
+                              DateTime now = DateTime.now();
+                              bool isTodayPeriodDay = false;
+                              debugPrint(
+                                "\ntoday & list of period dates : ${homeScreenProvider.periodInformationModel!.nextPeriodDates}\n\n",
+                              );
+                              isTodayPeriodDay = homeScreenProvider
+                                  .periodInformationModel!
+                                  .nextPeriodDates
+                                  .contains(
+                                    DateTime(now.year, now.month, now.day),
+                                  );
+                              final String txt =
+                                  isTodayPeriodDay ? "Period" : "Ovulation";
+
+                              return Text(
+                                txt,
+                                style: Theme.of(
+                                  context,
+                                ).textTheme.bodyMedium?.copyWith(
+                                  color: isTodayPeriodDay ? AppColors.primary :  AppColors.ovulationColor,
+                                  fontSize: 15.sp,
+                                  fontWeight: FontWeight.w600
+                                ),
+                              );
+                            },
                           ),
                           Consumer<HomeScreenProvider>(
                             builder: (_, homeScreenProvider, _) {
@@ -246,7 +266,7 @@ class _PeriodDateContainerState extends State<PeriodDateContainer> {
                           Consumer<HomeScreenProvider>(
                             builder: (_, homeScreenProvider, _) {
                               return Text(
-                                "${DateFormat('MMM dd').format(homeScreenProvider.periodInformationModel!.nextPeriodDates[0])} Next\nPeriod",
+                                "${DateFormat('MMM dd').format(homeScreenProvider.periodInformationModel!.nextPeriodDates[0])} Next Period",
                                 style: Theme.of(
                                   context,
                                 ).textTheme.bodyMedium?.copyWith(
@@ -272,7 +292,7 @@ class _PeriodDateContainerState extends State<PeriodDateContainer> {
                     child: Consumer<HomeScreenProvider>(
                       builder: (_, homeScreenProvider, _) {
                         int days = homeScreenProvider.periodDaysLeft;
-                        double value = days/28;
+                        double value = days / 28;
                         debugPrint("\nCircular progress value : $value\n");
                         return CircularProgressIndicator(
                           year2023: false,
@@ -326,7 +346,7 @@ class _PeriodDateContainerState extends State<PeriodDateContainer> {
 
           /// Log period button
           Utils.primaryButton(
-            title: "Log Period",
+            title: "Edit Period",
             padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 12.h),
             context: context,
             onTap: () {

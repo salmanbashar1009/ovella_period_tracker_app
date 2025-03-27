@@ -152,6 +152,7 @@ class PregnancyScreen extends StatelessWidget {
                                   homeScreenProvider.selectedSymptoms
                                       .map(
                                         (symptom) => BuildLogItem(
+                                          isEditMode: homeScreenProvider.isSymptomsEditMode,
                                       logItem: symptom,
                                       onSelect:
                                       homeScreenProvider.onSelectLog,
@@ -217,6 +218,7 @@ class PregnancyScreen extends StatelessWidget {
                                   homeScreenProvider.selectedMoods
                                       .map(
                                         (symptom) => BuildLogItem(
+                                          isEditMode: homeScreenProvider.isMoodsEditMode,
                                       logItem: symptom,
                                       onSelect:
                                       homeScreenProvider.onSelectLog,

@@ -86,6 +86,7 @@ class AddLogScreen extends StatelessWidget {
                                       ? homeScreenProvider.symptoms
                                           .map(
                                             (symptom) => BuildLogItem(
+                                              isEditMode: false,
                                               logItem: symptom,
                                               onSelect:
                                                   homeScreenProvider
@@ -96,6 +97,7 @@ class AddLogScreen extends StatelessWidget {
                                       : homeScreenProvider.moods
                                           .map(
                                             (mood) => BuildLogItem(
+                                              isEditMode: false,
                                               logItem: mood,
                                               onSelect:
                                                   homeScreenProvider
