@@ -13,11 +13,15 @@ class SectionHeader extends StatelessWidget {
     return Column(
       children: [
         // SizedBox(height: 24.h,),
-        Text(title,style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-          color: AppColors.textColor,
-          fontWeight: FontWeight.w600,
-          fontSize: 17.sp
-        ),),
+        Row(
+          children: [
+            Text(title,style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+              color: AppColors.textColor,
+              fontWeight: FontWeight.w600,
+              fontSize: 17.sp
+            ),),
+          ],
+        ),
         SizedBox(
           height: 16.h,
         )

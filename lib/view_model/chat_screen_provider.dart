@@ -88,26 +88,15 @@ class ChatScreenProvider with ChangeNotifier {
       chat.chat?.add(
         Chat(
           command: chatController.text,
-          reply: "চাচা বাড়ি ঘর এতো সাজানো কেনো? আর হেনা কোথায়? 😭",
+          reply: "Hello, Our backend has not been developed yet. We will work on it later. Please try again later.",
         ),
       );
-    } else if (command == "চাচা, হেনা কোথায়?") {
-      chat.chat?.add(
-        Chat(command: chatController.text, reply: "হেনার বিয়ে হয়ে গেছে 😭"),
-      );
-    } else if (command == "চাচা বাড়ি ঘর এতো সাজানো কেনো? আর হেনা কোথায়?") {
-      chat.chat?.add(
-        Chat(command: chatController.text, reply: "হেনার বিয়ে হয়ে গেছে 😭"),
-      );
-    } else if (command == "চাচা বাড়ি ঘর এতো সাজানো কেনো?") {
-      chat.chat?.add(
-        Chat(command: chatController.text, reply: "হেনার বিয়ে হয়ে গেছে 😭"),
-      );
-    } else {
+    }
+    else {
       chat.chat?.add(
         Chat(
           command: chatController.text,
-          reply: "চাচা বাড়ি ঘর এতো সাজানো কেনো? আর হেনা কোথায়?",
+          reply: "Hello, Our backend has not been developed yet. We will work on it later. Please try again later.",
         ),
       );
     }

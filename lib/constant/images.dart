@@ -21,6 +21,8 @@ class AppImages {
   static const String wellnessWoman02 = 'assets/images/home_screen/wellness_tips_02.png';
   static const String pcos = 'assets/images/home_screen/pcos.png';
   static const String migraine = 'assets/images/home_screen/migraine.png';
+  static const String girlAvator = 'assets/images/home_screen/girl_avator.jpg';
+  static const String pinkAvator = 'assets/images/home_screen/pink_avatar.jpeg';
 
   /// ai chat
   static const String gptProfilePicture = "assets/images/ai_chat/gpt_pp.png";

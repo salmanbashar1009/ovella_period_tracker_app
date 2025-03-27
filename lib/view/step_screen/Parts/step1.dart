@@ -22,6 +22,7 @@ class Step1 extends StatelessWidget {
             textTheme: textTheme,
             allAges: stepScreenProvider.allAges,
             stepScreenProvider: stepScreenProvider,
+            isScreen: true,
           );
         } else if (stepScreenProvider.stepOneMode == 'language') {
           return LanguageSelection(
@@ -147,7 +148,7 @@ class Step1 extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 32.w,vertical: 18.h),
                     onTap: () {
                       if (formkey.currentState!.validate()) {
-                        stepScreenProvider.stepOneModeSelection('age');
+                        stepScreenProvider.updatePage(1);
                       }
                     },
                   ),
