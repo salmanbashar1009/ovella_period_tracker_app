@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/Forum_screen/details_screen/mensrualHealth.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/CategoryCard1.dart';
 import 'package:ovella_period_tracker_app/model/catagoryModel.dart';
@@ -31,23 +32,29 @@ class CategoryList extends StatelessWidget {
         scrollDirection: scrollDirection ?? Axis.horizontal,
         itemCount: categories.length,
         itemBuilder: (BuildContext context, int index) {
-          return CategoryCard(
-            val: val,
-            right: right,
-            imagePath: categories[index].imagePath,
-            title: categories[index].title,
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder:
-                      (context) => MenstrualHealth(
-                        categories: categories,
-                        selectedIndex: index,
-                      ),
-                ),
-              );
-            },
+          return Padding(
+         padding: scrollDirection == null ? EdgeInsets.only(left: 15.w) : EdgeInsets.zero,
+
+
+            child: CategoryCard(
+            
+              val: val,
+              right: right,
+              imagePath: categories[index].imagePath,
+              title: categories[index].title,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder:
+                        (context) => MenstrualHealth(
+                          categories: categories,
+                          selectedIndex: index,
+                        ),
+                  ),
+                );
+              },
+            ),
           );
         },
       ),

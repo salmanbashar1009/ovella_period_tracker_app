@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/categoryList.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/groupCard.dart';
 
@@ -13,7 +14,10 @@ class GroupScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Popular Groups", style: Theme.of(context).textTheme.bodyLarge),
+          Padding(
+                                            padding: AppPadding.screenHorizontalPadding,
+
+            child: Text("Popular Groups", style: Theme.of(context).textTheme.bodyLarge)),
           SizedBox(height: 10),
           Expanded(
             child: ListView.builder(
@@ -21,7 +25,10 @@ class GroupScreen extends StatelessWidget {
               shrinkWrap: true,
               physics: BouncingScrollPhysics(),
               itemBuilder: (BuildContext context, int index) {
-                return GroupCard(group: group1[index]);
+                return Padding(
+                                                  padding: AppPadding.screenHorizontalPadding,
+
+                  child: GroupCard(group: group1[index]));
               },
             ),
           ),

@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
@@ -16,19 +18,16 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class CommunityScreen extends StatelessWidget {
   CommunityScreen({super.key});
 
-  // Segmented control options remain the same
   static const List<String> _titles = ["Forum", "Groups", "Events"];
-  // AppBar titles will differ
   static const List<String> _appBarTitles = [
     "Community",
     "Groups",
     "Events & Workshops",
   ];
   static const List<String> _searchPlaceholders = [
-    "Find topics and discussions",
+    "Find topics",
     "Find topics and discussions",
     "Find groups",
-    "Find events and discussions",
   ];
   final FocusNode _focusNode = FocusNode();
   @override
@@ -37,18 +36,19 @@ class CommunityScreen extends StatelessWidget {
     return BackgroundWidget(
       child: SingleChildScrollView(
         child: SafeArea(
-          child: Padding(
-            padding: AppPadding.screenHorizontalPadding,
-            child: Consumer<CommunityProvider>(
-              builder: (context, provider, child) {
-                String currentAppBarTitle =
-                    _appBarTitles[provider.selectedIndex];
-                String currentSearchPlaceholder =
-                    _searchPlaceholders[provider.selectedIndex];
+          child: Consumer<CommunityProvider>(
+            builder: (context, provider, child) {
+              String currentAppBarTitle =
+                  _appBarTitles[provider.selectedIndex];
+              String currentSearchPlaceholder =
+                  _searchPlaceholders[provider.selectedIndex];
+          
+              return Column(
+                children: [
+                  Padding(
+                                padding: AppPadding.screenHorizontalPadding,
 
-                return Column(
-                  children: [
-                    AppBar(
+                    child: AppBar(
                       elevation: 0,
                       surfaceTintColor: Colors.transparent,
                       leading: ClipOval(
@@ -75,15 +75,19 @@ class CommunityScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 21.5.sp),
+                  ),
+                  SizedBox(height: 21.5.sp),
+          
+                  // Show subtitle section only for Forum (index 0)
+                  if (provider.selectedIndex == 0) ...[
+                    //---------Sub title section----------------------------------
+                    Padding(
+                                  padding: AppPadding.screenHorizontalPadding,
 
-                    // Show subtitle section only for Forum (index 0)
-                    if (provider.selectedIndex == 0) ...[
-                      //---------Sub title section----------------------------------
-                      Align(
+                      child: Align(
                         alignment: Alignment.center,
                         child: Text(
-              "Hey Jane Doe, Welcome to the",
+                                  "Hey Jane Doe, Welcome to the",
                           style: Theme.of(
                             context,
                           ).textTheme.bodyLarge?.copyWith(
@@ -93,56 +97,63 @@ class CommunityScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Align(
-                        alignment: Alignment.center,
-                        child: Text(
-                          "Ovella Forum", // Fixed subtitle for Forum
-                          style: Theme.of(
-                            context,
-                          ).textTheme.bodyLarge?.copyWith(
-                            fontSize: 19.sp,
-                            fontWeight: FontWeight.w600,
-                          ),
+                    ),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Ovella Forum", // Fixed subtitle for Forum
+                        style: Theme.of(
+                          context,
+                        ).textTheme.bodyLarge?.copyWith(
+                          fontSize: 19.sp,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
-                      SizedBox(height: 8.h),
-
-                      //-------------sub sub title ---------------------------------------------
-                      Align(
-                        alignment: Alignment.center,
-                        child: Text(
-                          "Join discussions, ask questions, and",
-                          style: Theme.of(
-                            context,
-                          ).textTheme.bodyLarge?.copyWith(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w400,
-                            color: AppColors.lightTextColor,
-                          ),
+                    ),
+                    SizedBox(height: 8.h),
+          
+                    //-------------sub sub title ---------------------------------------------
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Join discussions, ask questions, and",
+                        style: Theme.of(
+                          context,
+                        ).textTheme.bodyLarge?.copyWith(
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w400,
+                          color: AppColors.lightTextColor,
                         ),
                       ),
-                      Align(
-                        alignment: Alignment.center,
-                        child: Text(
-                          "connect with experts!",
-                          style: Theme.of(
-                            context,
-                          ).textTheme.bodyLarge?.copyWith(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w400,
-                            color: AppColors.lightTextColor,
-                          ),
+                    ),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        "connect with experts!",
+                        style: Theme.of(
+                          context,
+                        ).textTheme.bodyLarge?.copyWith(
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w400,
+                          color: AppColors.lightTextColor,
                         ),
                       ),
-                      SizedBox(height: 28.h),
-                    ] else
-                      SizedBox(height: 28.h),
+                    ),
+                    SizedBox(height: 28.h),
+                  ] else
+                    SizedBox(height: 28.h),
+          
+                  Padding(
+                                padding: AppPadding.screenHorizontalPadding,
 
-                    CustomSegmentedControl(options: _titles),
-                    SizedBox(height: 16.h),
+                    child: CustomSegmentedControl(options: _titles)),
+                  SizedBox(height: 16.h),
+          
+                  //-----------search-------------------------------------------------------
+                  Padding(
+                                padding: AppPadding.screenHorizontalPadding,
 
-                    //-----------search-------------------------------------------------------
-                    TextFormField(
+                    child: TextFormField(
                       onTapOutside: (_) {
                         _focusNode.unfocus();
                       },
@@ -155,21 +166,21 @@ class CommunityScreen extends StatelessWidget {
                         120.0,
                       ),
                     ),
-
-                    SizedBox(height: 24.h),
-
-                    if (provider.selectedIndex == 0)
-                      SizedBox(child: ForumScreen())
-                    else if (provider.selectedIndex == 1)
-                      SizedBox(child: GroupScreen())
-                    else
-                      SizedBox(child: EventScreen()),
-
-                    SizedBox(height: 24.h),
-                  ],
-                );
-              },
-            ),
+                  ),
+          
+                  SizedBox(height: 24.h),
+          
+                  if (provider.selectedIndex == 0)
+                    SizedBox(child: ForumScreen())
+                  else if (provider.selectedIndex == 1)
+                    SizedBox(child: GroupScreen())
+                  else
+                    SizedBox(child: EventScreen()),
+          
+                  SizedBox(height: 24.h),
+                ],
+              );
+            },
           ),
         ),
       ),
