@@ -91,12 +91,12 @@ class ChatInputField extends StatelessWidget {
                   ),
                   SizedBox(width: 12.w),
                   GestureDetector(
-                    onTap: (){
+                    onTap: ()async{
                       chatProvider.isListening
                           ? chatProvider.stopListening()
                           : chatProvider.startListening();
                       debugPrint(chatProvider.isListening.toString());
-                      debugPrint(chatProvider.text.toString());
+                      debugPrint(chatProvider.isListening.toString());
                     },
                     child: Container(
                       padding: EdgeInsets.all(14.r),

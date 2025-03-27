@@ -224,5 +224,4 @@ class ChatScreenProvider with ChangeNotifier {
     _speech.stop();
     notifyListeners();
   }
-
 }
