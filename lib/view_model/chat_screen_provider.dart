@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ovella_period_tracker_app/model/chat_model.dart';
+import 'package:speech_to_text/speech_to_text.dart';
 
 import '../utility/utils.dart';
 
@@ -184,4 +185,44 @@ class ChatScreenProvider with ChangeNotifier {
   void toggleFullScreenMode(){
     _isFullScreen =!_isFullScreen;
   }
+
+
+  // voice to text
+  final SpeechToText _speech = SpeechToText();
+  bool _isListening = false;
+  String _text = '';
+
+  bool get isListening => _isListening;
+  String get text => _text;
+
+  Future<void> initializeSpeech() async {
+    bool available = await _speech.initialize();
+    if (!available) {
+      _text = "Speech recognition not available";
+      notifyListeners();
+    }
+  }
+  void startListening() async {
+    bool available = await _speech.initialize();
+    if (available) {
+      _isListening = true;
+      notifyListeners();
+
+      _speech.listen(
+        onResult: (result) {
+          _text = result.recognizedWords;
+          debugPrint('My speech: $_text');
+          debugPrint('Listening: $_isListening');
+          notifyListeners();
+        },
+      );
+    }
+  }
+  /// Stop listening
+  void stopListening() {
+    _isListening = false;
+    _speech.stop();
+    notifyListeners();
+  }
+
 }
