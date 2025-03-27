@@ -211,6 +211,7 @@ class ChatScreenProvider with ChangeNotifier {
       _speech.listen(
         onResult: (result) {
           _text = result.recognizedWords;
+          chatController.text = result.recognizedWords;
           debugPrint('My speech: $_text');
           debugPrint('Listening: $_isListening');
           notifyListeners();

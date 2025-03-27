@@ -81,7 +81,7 @@ class OnBoardingScreen extends StatelessWidget {
                     ),
 
                     ///< -------- Login Option --------->
-                    SizedBox(height: 12.h),
+                    SizedBox(height: 24.h),
                     GestureDetector(
                       onTap: ()=>Navigator.pushNamed(context, RouteName.loginScreen),
                       child: RichText(
