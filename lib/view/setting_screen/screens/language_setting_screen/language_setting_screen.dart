@@ -42,7 +42,7 @@ class LanguageSettingScreen extends StatelessWidget {
                       style: textTheme.bodyMedium,
                       decoration: InputDecoration(
                         prefixIcon: Icon(CupertinoIcons.search),
-                        hintText: "Search", // Corrected the key
+                        hintText: "Search", 
                         suffixIcon: stepScreenProvider.languageSearchQuery.isNotEmpty
                             ? IconButton(
                                 icon: Icon(Icons.clear),

@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:intl/intl.dart';
 
 import '../view/step_screen/Parts/step1.dart';
@@ -6,6 +7,8 @@ import '../view/step_screen/Parts/step2.dart';
 import '../view/step_screen/Parts/step3.dart';
 
 class StepScreenProvider extends ChangeNotifier {
+
+
   ///<----------------Step Page -------->
   int _currentIndex = 0;
   final PageController _pageController = PageController();
@@ -80,13 +83,30 @@ class StepScreenProvider extends ChangeNotifier {
     {"code": "ja", "name": "Japanese"},
     {"code": "kn", "name": "Kannada"},
   ];
-  Map<String, String> selectedLanguage = {"code": "en", "name": "English"};
+ final Box settingsBox = Hive.box('settings');
+  Map<String, String> selectedLanguage = {"code": "en", "name": "English"}; // Default language
 
-  void languageSelection(Map<String, String> language) {
+  StepScreenProvider() {
+    loadSelectedLanguage(); // Load the saved language on startup
+  }
+
+  void languageSelection(Map<String, String> language) async {
+    await settingsBox.put('language', language);
     selectedLanguage = language;
     notifyListeners();
   }
 
+  void loadSelectedLanguage() {
+    final storedLanguage = settingsBox.get('language');
+
+    if (storedLanguage != null && storedLanguage is Map) {
+      selectedLanguage = Map<String, String>.from(storedLanguage);
+    } else {
+      selectedLanguage = {"code": "en", "name": "English"}; // Default fallback
+    }
+
+    notifyListeners();
+  }
   //Language searching
   TextEditingController languageSearchController = TextEditingController();
   String languageSearchQuery = "";
@@ -230,5 +250,8 @@ class StepScreenProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void updateSelectedLanguage(String languageCode) {}
+  void updateSelectedLanguage(String languageCode) {
+
+    selectedLanguage ={"code":languageCode };
+  }
 }
