@@ -78,7 +78,11 @@ class HomeScreen extends StatelessWidget{
                                   onAdd: (){
                                     final homeScreenProvider =  context.read<HomeScreenProvider>();
                                   homeScreenProvider.onLog(logTo: homeScreenProvider.moodLog);
-                                    Navigator.pushNamed(context, RouteName.addLogScreen);
+                                    Navigator.pushNamed(context, RouteName.addLogScreen,
+                                        arguments: AddLogScreenArguments(
+                                        isBackButtonOnAppBar: true,
+                                        onSave: (){},
+                                    saveButtonText: "Save"));
                                   },
                                 ),
                               ),
