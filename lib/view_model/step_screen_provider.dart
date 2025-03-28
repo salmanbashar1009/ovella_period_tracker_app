@@ -102,7 +102,8 @@ class StepScreenProvider extends ChangeNotifier {
     if (storedLanguage != null && storedLanguage is Map) {
       selectedLanguage = Map<String, String>.from(storedLanguage);
     } else {
-      selectedLanguage = {"code": "en", "name": "English"}; // Default fallback
+       selectedLanguage = {"code": "en", "name": "English"}; // Set default to English
+       settingsBox.put('language', selectedLanguage); // Save the default language
     }
 
     notifyListeners();

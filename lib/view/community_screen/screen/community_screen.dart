@@ -106,7 +106,7 @@ class CommunityScreen extends StatelessWidget {
                       child: Align(
                         alignment: Alignment.center,
                         child: Text(
-                                  "Hey Jane Doe, Welcome to the",
+                              "Hey Jane Doe, Welcome to the",
                           style: Theme.of(
                             context,
                           ).textTheme.bodyLarge?.copyWith(
