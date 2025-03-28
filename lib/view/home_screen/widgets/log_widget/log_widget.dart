@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ovella_period_tracker_app/constant/images.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 
 class LogWidget extends StatelessWidget{
 
   final String text;
   final GestureTapCallback onAdd;
+  final String imageIconPath;
 
-   const LogWidget({super.key, required this.text, required this.onAdd});
+   const LogWidget({super.key, required this.text, required this.onAdd, required this.imageIconPath});
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +26,21 @@ class LogWidget extends StatelessWidget{
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        spacing: 36.h,
+        spacing: 30.h,
         children: [
-          Text(text,
-          style: Theme.of(context).textTheme.bodyLarge,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(text,
+              style: Theme.of(context).textTheme.bodyLarge,),
+
+              Image.asset(imageIconPath,
+              width: 35.w,
+                height: 35.w,
+                fit: BoxFit.cover,
+              )
+            ],
+          ),
 
           Align(
             alignment: Alignment.bottomRight,

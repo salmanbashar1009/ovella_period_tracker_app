@@ -54,6 +54,7 @@ class HomeScreen extends StatelessWidget {
                           children: [
                             Expanded(
                               child: LogWidget(
+                                imageIconPath: AppImages.symptomsIcon,
                                 text: "Log your\nSymptoms",
                                 onAdd: () {
                                   final homeScreenProvider =
@@ -76,6 +77,7 @@ class HomeScreen extends StatelessWidget {
                             SizedBox(width: 10.w),
                             Expanded(
                               child: LogWidget(
+                                imageIconPath: AppImages.moodIcon,
                                 text: "Log your\nMood",
                                 onAdd: () {
                                   final homeScreenProvider =
