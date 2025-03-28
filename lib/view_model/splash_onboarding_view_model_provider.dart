@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ovella_period_tracker_app/constant/key_name.dart';
-import 'package:ovella_period_tracker_app/view/on_boarding_screen/on_boarding_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../routing/route_name.dart';

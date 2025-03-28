@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:intl/intl.dart';
+import 'package:ovella_period_tracker_app/constant/hive_box_name.dart';
+import 'package:ovella_period_tracker_app/services/local_storage_services/hive_services.dart';
 
 import '../view/step_screen/Parts/step1.dart';
 import '../view/step_screen/Parts/step2.dart';
@@ -83,31 +85,69 @@ class StepScreenProvider extends ChangeNotifier {
     {"code": "ja", "name": "Japanese"},
     {"code": "kn", "name": "Kannada"},
   ];
- final Box settingsBox = Hive.box('settings');
-  Map<String, String> selectedLanguage = {"code": "en", "name": "English"}; // Default language
+
+   Map<String, String> selectedLanguage = {"code": "en", "name": "English"}; // Default language
 
   StepScreenProvider() {
     loadSelectedLanguage(); // Load the saved language on startup
   }
 
   void languageSelection(Map<String, String> language) async {
-    await settingsBox.put('language', language);
+    await HiveServices.saveToHive(
+      boxName: BoxName.settingsBox, 
+      modelName: 'language', 
+      jsonData: language
+    );
+
     selectedLanguage = language;
     notifyListeners();
   }
 
-  void loadSelectedLanguage() {
-    final storedLanguage = settingsBox.get('language');
+  void loadSelectedLanguage() async {
+    var storedLanguage = await HiveServices.fetchHiveData(
+      boxName: BoxName.settingsBox, 
+      modelName: 'language'
+    );
 
-    if (storedLanguage != null && storedLanguage is Map) {
+    if (storedLanguage != null && storedLanguage is Map<String, dynamic>) {
       selectedLanguage = Map<String, String>.from(storedLanguage);
     } else {
-       selectedLanguage = {"code": "en", "name": "English"}; // Set default to English
-       settingsBox.put('language', selectedLanguage); // Save the default language
+      selectedLanguage = {"code": "en", "name": "English"}; // Default to English
+      await HiveServices.saveToHive(
+      boxName: BoxName.settingsBox, 
+        modelName: 'language', 
+        jsonData: selectedLanguage
+      );
     }
 
     notifyListeners();
   }
+
+//  final Box settingsBox = Hive.box('settings');
+//   Map<String, String> selectedLanguage = {"code": "en", "name": "English"}; // Default language
+
+//   StepScreenProvider() {
+//     loadSelectedLanguage(); // Load the saved language on startup
+//   }
+
+//   void languageSelection(Map<String, String> language) async {
+//     await settingsBox.put('language', language);
+//     selectedLanguage = language;
+//     notifyListeners();
+//   }
+
+//   void loadSelectedLanguage() {
+//     final storedLanguage = settingsBox.get('language');
+
+//     if (storedLanguage != null && storedLanguage is Map) {
+//       selectedLanguage = Map<String, String>.from(storedLanguage);
+//     } else {
+//        selectedLanguage = {"code": "en", "name": "English"}; // Set default to English
+//        settingsBox.put('language', selectedLanguage); // Save the default language
+//     }
+
+//     notifyListeners();
+//   }
   //Language searching
   TextEditingController languageSearchController = TextEditingController();
   String languageSearchQuery = "";
