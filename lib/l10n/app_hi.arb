@@ -241,7 +241,7 @@
   "@nextcheckup": {
     "description": "Upcoming medical checkup"
   },
-  "heyjaneDoe": "हाय जेन डो, ओवेला समुदाय में आपका स्वागत है!",
+  "heyjaneDoe": "हाय जेन डो,समुदाय",
   "@heyjaneDoe": {
     "description": "Welcome message for community"
   },
