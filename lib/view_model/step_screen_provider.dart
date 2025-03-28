@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:hive_flutter/adapters.dart';
 import 'package:intl/intl.dart';
 import 'package:ovella_period_tracker_app/constant/hive_box_name.dart';
 import 'package:ovella_period_tracker_app/services/local_storage_services/hive_services.dart';
@@ -95,7 +94,7 @@ class StepScreenProvider extends ChangeNotifier {
   void languageSelection(Map<String, String> language) async {
     await HiveServices.saveToHive(
       boxName: BoxName.settingsBox, 
-      modelName: 'language', 
+      modelName: ModelName.languageModelName, 
       jsonData: language
     );
 
@@ -106,7 +105,7 @@ class StepScreenProvider extends ChangeNotifier {
   void loadSelectedLanguage() async {
     var storedLanguage = await HiveServices.fetchHiveData(
       boxName: BoxName.settingsBox, 
-      modelName: 'language'
+      modelName: ModelName.languageModelName, 
     );
 
     if (storedLanguage != null && storedLanguage is Map<String, dynamic>) {
@@ -115,7 +114,7 @@ class StepScreenProvider extends ChangeNotifier {
       selectedLanguage = {"code": "en", "name": "English"}; // Default to English
       await HiveServices.saveToHive(
       boxName: BoxName.settingsBox, 
-        modelName: 'language', 
+      modelName: ModelName.languageModelName, 
         jsonData: selectedLanguage
       );
     }
