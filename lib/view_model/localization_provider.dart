@@ -29,8 +29,11 @@ class LocalizationProvider with ChangeNotifier {
       _locale = L10n.all.firstWhere(
         (loc) => loc.languageCode == langCode,
         orElse: () => Locale('en'), 
-      );
-    }
+      );}else {
+    _locale = const Locale('en');
+    settingsBox.put('locale', 'en'); // Save default language
+  }
+    
   }
 
   Future<void> onTapChangeLanguage(BuildContext context, String languageCode) async {
