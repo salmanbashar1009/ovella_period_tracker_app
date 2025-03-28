@@ -65,7 +65,7 @@ class CommunityScreen extends StatelessWidget {
               return Column(
                 children: [
                   Padding(
-                                padding: AppPadding.screenHorizontalPadding,
+                  padding: AppPadding.screenHorizontalPadding,
 
                     child: AppBar(
                       elevation: 0,
@@ -106,7 +106,8 @@ class CommunityScreen extends StatelessWidget {
                       child: Align(
                         alignment: Alignment.center,
                         child: Text(
-                              "Hey Jane Doe, Welcome to the",
+                          appLocalization!.heyjaneDoe,
+                              // "Hey Jane Doe, Welcome to the",
                           style: Theme.of(
                             context,
                           ).textTheme.bodyLarge?.copyWith(
@@ -120,7 +121,7 @@ class CommunityScreen extends StatelessWidget {
                     Align(
                       alignment: Alignment.center,
                       child: Text(
-                        "Ovella Forum", // Fixed subtitle for Forum
+                        "Ovella ${appLocalization.forum}", 
                         style: Theme.of(
                           context,
                         ).textTheme.bodyLarge?.copyWith(

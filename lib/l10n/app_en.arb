@@ -301,7 +301,7 @@
         "description": "Upcoming medical checkup"
     },
  
-    "heyjaneDoe": "Hey Jane Doe, welcome to the Ovella Community!",
+    "heyjaneDoe": "Hey Jane Doe, welcome to the",
     "@heyjaneDoe": {
         "description": "Welcome message for community"
     },

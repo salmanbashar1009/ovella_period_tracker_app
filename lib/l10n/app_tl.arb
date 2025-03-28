@@ -241,7 +241,7 @@
   "@nextcheckup": {
     "description": "Upcoming medical checkup"
   },
-  "heyjaneDoe": "kamusta Jane Doe, maligayang pagdating sa komunidad ng Ovella!",
+  "heyjaneDoe": "kamusta Jane Doe, maligayang pagdating sa",
   "@heyjaneDoe": {
     "description": "Welcome message for community"
   },

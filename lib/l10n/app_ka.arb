@@ -241,7 +241,7 @@
   "@nextcheckup": {
     "description": "Upcoming medical checkup"
   },
-  "heyjaneDoe": "გამარჯობა ჯეინ დოე, კეთილი იყოს შენი მობრძანება ოველას საზოგადოებაში!",
+  "heyjaneDoe": "გამარჯობა, ჯეინ დოე, კეთილი იყოს შენი მობრძანება",
   "@heyjaneDoe": {
     "description": "Welcome message for community"
   },
