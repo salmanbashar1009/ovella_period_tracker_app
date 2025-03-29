@@ -397,6 +397,10 @@
   "@contactsupport": {
     "description": "Support contact information"
   },
+  "upComingEvent": "આગામી ઇવેન્ટ્સ",
+  "@upComingEvent": {
+      "description": "આગામી ઇવેન્ટ"
+  },
   "faqguides": "FAQ અને માર્ગદર્શિકાઓ",
   "@faqguides": {
     "description": "Frequently asked questions and guides"

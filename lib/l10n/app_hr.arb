@@ -233,6 +233,10 @@
   "@mydailyinsights": {
     "description": "Daily health insights"
   },
+  "upComingEvent": "Nadolazeći događaji",
+    "@upComingEvent": {
+        "description": "Sljedeći događaj"
+    },
   "checkupvaccination": "pregled i cijepljenje",
   "@checkupvaccination": {
     "description": "Medical checkups"

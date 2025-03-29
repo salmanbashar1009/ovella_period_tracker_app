@@ -401,6 +401,10 @@
   "@faqguides": {
     "description": "Frequently asked questions and guides"
   },
+  "upComingEvent": "Kommende Veranstaltungen",
+    "@upComingEvent": {
+        "description": "Nächstes Ereignis"
+    },
   "joinacommunity": "einer Gemeinschaft beitreten",
   "@joinacommunity": {
     "description": "Option to join a community"

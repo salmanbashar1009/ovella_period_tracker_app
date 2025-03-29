@@ -233,6 +233,10 @@
   "@mydailyinsights": {
     "description": "Daily health insights"
   },
+  "upComingEvent": "今後のイベント",
+    "@upComingEvent": {
+        "description": "次のイベント"
+    },
   "checkupvaccination": "健康診断と予防接種",
   "@checkupvaccination": {
     "description": "Medical checkups"

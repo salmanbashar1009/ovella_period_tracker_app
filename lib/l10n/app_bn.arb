@@ -248,6 +248,10 @@
   "@joindiscussion": {
     "description": "Encouragement to join discussions"
   },
+  "upComingEvent": "আসন্ন ইভেন্ট",
+  "@upComingEvent": {
+      "description": "পরবর্তী ইভেন্ট"
+  },
   "forum": "ফোরাম",
   "@forum": {
     "description": "Forum section"

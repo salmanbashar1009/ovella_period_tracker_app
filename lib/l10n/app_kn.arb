@@ -261,6 +261,10 @@
   "@events": {
     "description": "Events section"
   },
+  "upComingEvent": "ಮುಂಬರುವ ಈವೆಂಟ್ಗಳು",
+    "@upComingEvent": {
+        "description": "ಮುಂದಿನ ಈವೆಂಟ್"
+    },
   "findtopic": "ವಿಷಯಗಳು, ಗುಂಪುಗಳು ಮತ್ತು ಚರ್ಚೆಗಳನ್ನು ಹುಡುಕಿ",
   "@findtopic": {
     "description": "Search feature for topics"

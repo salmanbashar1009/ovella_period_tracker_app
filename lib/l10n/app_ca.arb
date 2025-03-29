@@ -252,6 +252,10 @@
   "@forum": {
     "description": "Forum section"
   },
+  "upComingEvent": "Esdeveniments propers",
+  "@upComingEvent": {
+      "description": "Pròxim esdeveniment"
+  },
   "groups": "grups",
   "@groups": {
     "description": "Groups section"

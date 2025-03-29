@@ -237,6 +237,10 @@
   "@checkupvaccination": {
     "description": "Medical checkups"
   },
+  "upComingEvent": "Tulevat tapahtumat",
+  "@upComingEvent": {
+      "description": "Seuraava tapahtuma"
+  },
   "nextcheckup": "seuraava tarkastus",
   "@nextcheckup": {
     "description": "Upcoming medical checkup"
