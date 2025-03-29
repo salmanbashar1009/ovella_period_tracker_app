@@ -1,3 +1,6 @@
+import 'dart:ui';
+import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -102,8 +105,9 @@ class MyApp extends StatelessWidget {
           final localProvider = Provider.of<LocalizationProvider>(context);
        //   debugPrint("\nlocalization : ${localProvider.locale!.languageCode}\n");
           return MaterialApp(
+            
             supportedLocales: L10n.all,
-            locale: localProvider.locale,
+          locale: localProvider.locale ,
             localizationsDelegates: [
               AppLocalizations.delegate,
               GlobalMaterialLocalizations.delegate,

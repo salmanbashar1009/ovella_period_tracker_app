@@ -233,6 +233,10 @@
   "@mydailyinsights": {
     "description": "Daily health insights"
   },
+  "upComingEvent": "მომავალი ღონისძიებები",
+    "@upComingEvent": {
+        "description": "შემდეგი ღონისძიება"
+    },
   "checkupvaccination": "ჯანმრთელობის შემოწმება და ვაქცინაცია",
   "@checkupvaccination": {
     "description": "Medical checkups"

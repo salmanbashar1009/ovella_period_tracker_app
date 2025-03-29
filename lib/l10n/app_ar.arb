@@ -248,6 +248,10 @@
   "@joindiscussion": {
     "description": "Encouragement to join discussions"
   },
+  "upComingEvent": "الأحداث القادمة",
+    "@upComingEvent": {
+        "description": "الحدث القادم"
+    },
   "forum": "المنتدى",
   "@forum": {
     "description": "Forum section"

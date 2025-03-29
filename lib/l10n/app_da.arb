@@ -225,6 +225,10 @@
   "@week23ofyourpregnancy": {
     "description": "Pregnancy progress"
   },
+  "upComingEvent": "Kommende begivenheder",
+  "@upComingEvent": {
+      "description": "Næste begivenhed"
+  },
   "details": "detaljer",
   "@details": {
     "description": "More information"

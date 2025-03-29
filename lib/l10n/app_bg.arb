@@ -248,6 +248,10 @@
   "@joindiscussion": {
     "description": "Encouragement to join discussions"
   },
+  "upComingEvent": "Предстоящи събития",
+    "@upComingEvent": {
+        "description": "Следващо събитие"
+    },
   "forum": "форум",
   "@forum": {
     "description": "Forum section"

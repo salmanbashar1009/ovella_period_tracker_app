@@ -241,6 +241,10 @@
   "@nextcheckup": {
     "description": "Upcoming medical checkup"
   },
+  "upComingEvent": "Aankomende evenementen",
+  "@upComingEvent": {
+      "description": "Volgend evenement"
+  },
   "heyjaneDoe": "hallo Jane Doe, welkom bij de",
   "@heyjaneDoe": {
     "description": "Welcome message for community"

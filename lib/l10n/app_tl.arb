@@ -257,6 +257,10 @@
   "@groups": {
     "description": "Groups section"
   },
+  "upComingEvent": "Paparating na mga Kaganapan",
+  "@upComingEvent": {
+      "description": "Susunod na kaganapan"
+  },
   "events": "mga kaganapan",
   "@events": {
     "description": "Events section"

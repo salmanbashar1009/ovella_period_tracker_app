@@ -401,6 +401,10 @@
   "@faqguides": {
     "description": "Frequently asked questions and guides"
   },
+  "upComingEvent": "Acara Mendatang",
+  "@upComingEvent": {
+      "description": "Acara berikutnya"
+  },
   "joinacommunity": "bergabung dengan komunitas",
   "@joinacommunity": {
     "description": "Option to join a community"

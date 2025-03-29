@@ -229,6 +229,11 @@
   "@details": {
     "description": "More information"
   },
+  "upComingEvent": "Eventi in arrivo",
+    "@upComingEvent": {
+        "description": "Prossimo evento"
+    },
+    
   "mydailyinsights": "i miei spunti quotidiani",
   "@mydailyinsights": {
     "description": "Daily health insights"

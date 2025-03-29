@@ -237,6 +237,10 @@
   "@checkupvaccination": {
     "description": "Medical checkups"
   },
+  "upComingEvent": "即将举行的活动",
+  "@upComingEvent": {
+      "description": "下一个活动"
+  },
   "nextcheckup": "下次体检",
   "@nextcheckup": {
     "description": "Upcoming medical checkup"
