@@ -11,7 +11,7 @@ import 'package:ovella_period_tracker_app/view/home_screen/widgets/period_tips_s
 import 'package:ovella_period_tracker_app/view/home_screen/widgets/tailored_wellness_journey_widget/wellness_tips_list_widget.dart';
 import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:provider/provider.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../widgets/background_widget.dart';
 import 'add_log_screen/arguments_model/arguments_model.dart';
 import 'add_log_screen/widget/build_log_item_widget.dart';
@@ -23,6 +23,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final deviceHeight = MediaQuery.of(context).size.height;
     debugPrint("\nheight : $deviceHeight\n");
+
+    final translate = AppLocalizations.of(context);
+
     return BackgroundWidget(
       child: SingleChildScrollView(
         controller:
@@ -91,7 +94,7 @@ class HomeScreen extends StatelessWidget {
                                     arguments: AddLogScreenArguments(
                                       isBackButtonOnAppBar: true,
                                       onSave: () {},
-                                      saveButtonText: "Save",
+                                      saveButtonText: translate!.save,
                                     ),
                                   );
                                 },
@@ -114,7 +117,7 @@ class HomeScreen extends StatelessWidget {
                                           MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text(
-                                          "Symptoms",
+                                          translate!.symptoms,
                                           style:
                                               Theme.of(
                                                 context,

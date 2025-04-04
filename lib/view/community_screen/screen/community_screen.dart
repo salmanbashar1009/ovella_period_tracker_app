@@ -34,21 +34,23 @@ class CommunityScreen extends StatelessWidget {
     "Find groups",
   ];
   final FocusNode _focusNode = FocusNode();
+
   @override
   Widget build(BuildContext context) {
+
       final appLocalization = AppLocalizations.of(context);
        List<String> titles = [
       appLocalization?.forum ?? "Forum",
       appLocalization?.groups ?? "Groups",
       appLocalization?.events ?? "Events"
     ];
- List<String> appBarTitles = [
+       List<String> appBarTitles = [
       appLocalization?.community ?? "Community",
       appLocalization?.groups ?? "Groups",
       appLocalization?.eventsworkshops ?? "Events & Workshops"
     ];
 
- 
+
  
 
 
