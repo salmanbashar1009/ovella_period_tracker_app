@@ -233,6 +233,10 @@
   "@mydailyinsights": {
     "description": "Daily health insights"
   },
+  "upComingEvent": "आगामी कार्यक्रम",
+    "@upComingEvent": {
+        "description": "अगला कार्यक्रम"
+    },
   "checkupvaccination": "जांच और टीकाकरण",
   "@checkupvaccination": {
     "description": "Medical checkups"

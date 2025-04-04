@@ -509,5 +509,11 @@
     "eventsAndWorkshops": "Events & Workshops",
     "@eventsAndWorkshops": {
         "description": "Option to join a community"
+    },
+
+    "upComingEvent":"Upcoming Events",
+    "@upComingEvent":{
+        "description": "Next event"
+
     }
 }

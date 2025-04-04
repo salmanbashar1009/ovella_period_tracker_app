@@ -401,8 +401,14 @@
   "@faqguides": {
     "description": "Frequently asked questions and guides"
   },
+  "upComingEvent": "Επερχόμενες εκδηλώσεις",
+  "@upComingEvent": {
+      "description": "Επόμενη εκδήλωση"
+  },
+  
   "joinacommunity": "συμμετοχή σε κοινότητα",
   "@joinacommunity": {
     "description": "Option to join a community"
   }
+
 }

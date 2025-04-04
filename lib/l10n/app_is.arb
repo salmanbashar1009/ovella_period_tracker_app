@@ -397,6 +397,10 @@
   "@contactsupport": {
     "description": "Support contact information"
   },
+  "upComingEvent": "Væntanlegir viðburðir",
+    "@upComingEvent": {
+        "description": "Næsti viðburður"
+    },
   "faqguides": "algengar spurningar og leiðbeiningar",
   "@faqguides": {
     "description": "Frequently asked questions and guides"

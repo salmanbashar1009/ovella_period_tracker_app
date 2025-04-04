@@ -23,6 +23,7 @@ class LanguageSettingScreen extends StatelessWidget {
         child: SafeArea(
           child: Padding(
             padding: AppPadding.screenHorizontalPadding,
+            // padding:AppPadding.screenVerticalPadding,
             child: Consumer2<StepScreenProvider, LocalizationProvider>(
               builder: (_, stepScreenProvider, localizationProvider, __) {
                 List<Map<String, String>> filteredLanguages =

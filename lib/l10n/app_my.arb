@@ -257,6 +257,10 @@
   "@groups": {
     "description": "Groups section"
   },
+  "upComingEvent": "ဖြစ်လာမည့်ပွဲများ",
+  "@upComingEvent": {
+      "description": "နောက်ထပ်ပွဲ"
+  },
   "events": "acara",
   "@events": {
     "description": "Events section"

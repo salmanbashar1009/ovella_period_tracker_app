@@ -404,5 +404,9 @@
   "joinacommunity": "csatlakozz egy közösséghez",
   "@joinacommunity": {
     "description": "Option to join a community"
+  },
+  "upComingEvent": "Közelgő események",
+  "@upComingEvent": {
+      "description": "Következő esemény"
   }
 }
