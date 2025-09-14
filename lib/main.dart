@@ -23,11 +23,11 @@ import 'package:ovella_period_tracker_app/view_model/pregnancy_screen_provider.d
 import 'package:ovella_period_tracker_app/view_model/splash_onboarding_view_model_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 import 'package:provider/provider.dart';
+import 'l10n/app_localizations.dart';
 import 'view_model/settings_provider.dart';
 import 'view_model/step_screen_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProxyProvider<HomeScreenProvider,TrackingScreenProvider>(
           create: (_) => TrackingScreenProvider(HomeScreenProvider()),
-          update: (_,homeScreenProvider,_) => TrackingScreenProvider(homeScreenProvider),
+          update: (_,homeScreenProvider,__) => TrackingScreenProvider(homeScreenProvider),
         ),
         ChangeNotifierProvider<CommunityProvider>(
           create: (_) => CommunityProvider(),

@@ -18,7 +18,7 @@ class PeriodTips extends StatelessWidget {
         children: [
           Expanded(
             child: Consumer<HomeScreenProvider>(
-              builder: (_, homeScreenProvider, _) {
+              builder: (_, homeScreenProvider, child) {
                 return PageView.builder(
                   onPageChanged: (index) {
                     context

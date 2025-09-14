@@ -13,7 +13,7 @@ import 'package:ovella_period_tracker_app/view/community_screen/widget/segment_b
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 import 'package:provider/provider.dart';
 import 'package:ovella_period_tracker_app/view_model/community_provider.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../../../l10n/app_localizations.dart';
 
 class CommunityScreen extends StatelessWidget {
        

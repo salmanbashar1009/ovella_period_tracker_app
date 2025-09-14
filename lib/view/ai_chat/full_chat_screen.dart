@@ -36,7 +36,7 @@ class FullChatScreen extends StatelessWidget {
                   ),
                 ],
                 leading: Consumer<ChatScreenProvider>(
-                  builder: (_, chatScreenProvider, _) {
+                  builder: (_, chatScreenProvider, child) {
                     return GestureDetector(
                       onTap: () {
                         if (!chatScreenProvider.isFullScreen) {
@@ -67,7 +67,7 @@ class FullChatScreen extends StatelessWidget {
               ///
               Expanded(
                 child: Consumer<ChatScreenProvider>(
-                  builder: (_, chatProvider, _) {
+                  builder: (_, chatProvider, child) {
                     return SingleChildScrollView(
                       controller: chatProvider.chatScrollController2,
                       reverse: chatProvider.chat.chat == null ? false : true,
@@ -347,7 +347,7 @@ class FullChatScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: Consumer<ChatScreenProvider>(
-        builder: (_, chatProvider, _) {
+        builder: (_, chatProvider, child) {
           return KeyboardVisibilityBuilder(
             builder: (_, bool isOpenKeyBoard) {
               return Padding(

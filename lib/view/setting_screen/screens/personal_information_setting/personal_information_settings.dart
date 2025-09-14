@@ -20,7 +20,7 @@ class PersonalInformationSettings extends StatelessWidget {
         child: SafeArea(
           child: Padding(
             padding: AppPadding.screenHorizontalPadding,
-            child: Consumer<StepScreenProvider>(builder: (_,stepScreenProvider,_) {
+            child: Consumer<StepScreenProvider>(builder: (_,stepScreenProvider,child) {
               return Column(
                 children: [
                   HeaderWidget(title: 'Personal Information'),

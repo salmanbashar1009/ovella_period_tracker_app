@@ -21,8 +21,9 @@ import 'package:ovella_period_tracker_app/view/tracking_screens/pregnancy_screen
 import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import '../../../l10n/app_localizations.dart';
 import '../../home_screen/widgets/tailored_wellness_journey_widget/wellness_tips_list_widget.dart';
 
 class MenstrualFertilityScreen extends StatelessWidget {
@@ -249,7 +250,7 @@ class MenstrualFertilityScreen extends StatelessWidget {
 
               /// Show symptoms list if not empty
               Consumer<HomeScreenProvider>(
-                builder: (_, homeScreenProvider, _) {
+                builder: (_, homeScreenProvider, chil) {
                   return homeScreenProvider.selectedSymptoms.isNotEmpty
                       ? Column(
                         spacing: 12.h,

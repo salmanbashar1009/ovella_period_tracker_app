@@ -41,7 +41,7 @@ class ImageSlider extends StatelessWidget {
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               image: DecorationImage(image: AssetImage(imagePath),
-                                onError: (_,_){
+                                onError: (_,__){
                                    Icon(Icons.image);
                                 }
                               )

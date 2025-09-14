@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ovella_period_tracker_app/model/chat_model.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
-import 'package:ovella_period_tracker_app/utility/utils.dart';
 import 'package:ovella_period_tracker_app/view_model/chat_screen_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -19,7 +17,7 @@ class ChatInputField extends StatelessWidget {
     debugPrint("\ndevice height : $deviceHeight\n");
 
     return Consumer<ChatScreenProvider>(
-      builder: (_, chatProvider, _) {
+      builder: (_, chatProvider, child) {
         return KeyboardVisibilityBuilder(
           builder: (_, bool isOpenKeyBoard) {
             return Positioned(

@@ -43,7 +43,7 @@ class ChatScreen extends StatelessWidget {
                     ),
                   ],
                   leading: Consumer<ChatScreenProvider>(
-                    builder: (_, chatScreenProvider, _) {
+                    builder: (_, chatScreenProvider, child) {
                       return GestureDetector(
                         onTap: () {
                           if (!chatScreenProvider.isFullScreen) {
@@ -72,7 +72,7 @@ class ChatScreen extends StatelessWidget {
                 ),
                 Expanded(
                   child: Consumer<ChatScreenProvider>(
-                    builder: (_, chatProvider, _) {
+                    builder: (_, chatProvider, child) {
                       return SingleChildScrollView(
                         controller: chatProvider.chatScrollController,
                         reverse: chatProvider.chat.chat == null ? false : true,
@@ -357,7 +357,7 @@ class ChatScreen extends StatelessWidget {
               ],
             ),
             Consumer<ChatScreenProvider>(
-              builder: (_, chatScreenProvider, _) {
+              builder: (_, chatScreenProvider, child) {
                 return chatScreenProvider.isOpenMenu
                     ? CustomDropDownMenu()
                     : SizedBox();

@@ -5,7 +5,7 @@ import 'package:ovella_period_tracker_app/model/catagoryModel.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/categoryList.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/listviewbuilder.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../../../l10n/app_localizations.dart';
 
 class ForumScreen extends StatelessWidget {
   const ForumScreen({super.key});

@@ -24,7 +24,7 @@ class SelectGenderScreen extends StatelessWidget {
                   SizedBox(height: 12.h),
                   HeaderWidget(title: 'Select Your Age'),
                   Consumer<StepScreenProvider>(
-                    builder: (_, stepScreenProvider, _) {
+                    builder: (_, stepScreenProvider, child) {
                       return GenderSelection(
                         textTheme: textTheme,
                         allGender: stepScreenProvider.allGender,

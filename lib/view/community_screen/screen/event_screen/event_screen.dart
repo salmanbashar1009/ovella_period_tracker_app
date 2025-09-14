@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/categoryList.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/eventCard.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../../../l10n/app_localizations.dart';
 
 class EventScreen extends StatelessWidget {
   const EventScreen({super.key});

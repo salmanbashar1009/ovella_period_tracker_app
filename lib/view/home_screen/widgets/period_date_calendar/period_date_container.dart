@@ -81,7 +81,7 @@ class _PeriodDateContainerState extends State<PeriodDateContainer> {
                 ),
 
                 Consumer<HomeScreenProvider>(
-                  builder: (_, homeScreenProvider, _) {
+                  builder: (_, homeScreenProvider, child) {
                     return Text(
                       DateFormat(
                         'MMM, yyyy',
@@ -107,7 +107,7 @@ class _PeriodDateContainerState extends State<PeriodDateContainer> {
 
           /// List view of calendar date
           Consumer<HomeScreenProvider>(
-            builder: (_, homeScreenProvider, _) {
+            builder: (_, homeScreenProvider, child) {
               return SizedBox(
                 height: 85.h,
 
@@ -224,7 +224,7 @@ class _PeriodDateContainerState extends State<PeriodDateContainer> {
                         spacing: 4.h,
                         children: [
                           Consumer<HomeScreenProvider>(
-                            builder: (_, homeScreenProvider, _) {
+                            builder: (_, homeScreenProvider, child) {
                               DateTime now = DateTime.now();
                               bool isTodayPeriodDay = false;
                               debugPrint(
@@ -252,7 +252,7 @@ class _PeriodDateContainerState extends State<PeriodDateContainer> {
                             },
                           ),
                           Consumer<HomeScreenProvider>(
-                            builder: (_, homeScreenProvider, _) {
+                            builder: (_, homeScreenProvider, child) {
                               int days = homeScreenProvider.periodDaysLeft;
                               days = days < 0 ? 0 : days;
                               final String dayText = days <= 1 ? "Day" : "Days";
@@ -264,7 +264,7 @@ class _PeriodDateContainerState extends State<PeriodDateContainer> {
                           ),
 
                           Consumer<HomeScreenProvider>(
-                            builder: (_, homeScreenProvider, _) {
+                            builder: (_, homeScreenProvider, child) {
                               return Text(
                                 "${DateFormat('MMM dd').format(homeScreenProvider.periodInformationModel!.nextPeriodDates[0])} Next Period",
                                 style: Theme.of(
@@ -290,7 +290,7 @@ class _PeriodDateContainerState extends State<PeriodDateContainer> {
                   child: AspectRatio(
                     aspectRatio: 1,
                     child: Consumer<HomeScreenProvider>(
-                      builder: (_, homeScreenProvider, _) {
+                      builder: (_, homeScreenProvider,child) {
                         int days = homeScreenProvider.periodDaysLeft;
                         double value = days / 28;
                         debugPrint("\nCircular progress value : $value\n");

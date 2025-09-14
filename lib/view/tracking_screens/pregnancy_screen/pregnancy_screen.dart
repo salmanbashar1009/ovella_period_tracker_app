@@ -110,7 +110,7 @@ class PregnancyScreen extends StatelessWidget {
 
                         /// Show symptoms list if not empty
                         Consumer<HomeScreenProvider>(
-                          builder: (_, homeScreenProvider, _) {
+                          builder: (_, homeScreenProvider,child) {
                             return homeScreenProvider.selectedSymptoms.isNotEmpty
                                 ? Column(
                               spacing: 12.h,
@@ -175,7 +175,7 @@ class PregnancyScreen extends StatelessWidget {
                         ),
                         /// show mood list if not empty
                         Consumer<HomeScreenProvider>(
-                          builder: (_, homeScreenProvider, _) {
+                          builder: (_, homeScreenProvider, child) {
                             return homeScreenProvider.selectedMoods.isNotEmpty
                                 ? Column(
                               spacing: 12.h,
