@@ -351,7 +351,7 @@ class HomeScreenProvider with ChangeNotifier {
   // ];
   //List<DateTime> get appPredictedPeriodDays => _appPredictedPeriodDays;
 
-  List<DateTime> _userSelectedPeriodDays = [];
+  final List<DateTime> _userSelectedPeriodDays = [];
   List<DateTime> get userSelectedPeriodDays => _userSelectedPeriodDays;
 
   /// List of ovulation days
