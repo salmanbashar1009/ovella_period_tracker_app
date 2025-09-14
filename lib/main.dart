@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'L10n/L10n.dart';
+import 'package:ovella_period_tracker_app/L10n/L10n.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
 import 'package:ovella_period_tracker_app/routing/routes.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme.dart';
