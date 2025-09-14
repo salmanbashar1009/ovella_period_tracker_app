@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 
 import '../../../constant/padding.dart';
 import '../../../theme/theme/theme_extensions/color_palette.dart';
-import '../../../utility/utils.dart';
 
 class StepScreenHeaderWidget extends StatelessWidget {
   const StepScreenHeaderWidget({super.key, required this.textTheme});

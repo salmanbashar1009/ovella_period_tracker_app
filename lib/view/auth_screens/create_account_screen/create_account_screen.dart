@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
-import 'package:ovella_period_tracker_app/view/auth_screens/create_account_screen/widgets/create_account_footer_widget.dart';
 import 'package:ovella_period_tracker_app/view_model/create_account_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';

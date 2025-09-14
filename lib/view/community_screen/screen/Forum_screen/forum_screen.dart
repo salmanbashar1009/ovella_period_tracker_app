@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
-import 'package:ovella_period_tracker_app/model/catagoryModel.dart';
+import 'package:ovella_period_tracker_app/model/catagory_model.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
-import 'package:ovella_period_tracker_app/view/community_screen/widget/categoryList.dart';
+import 'package:ovella_period_tracker_app/view/community_screen/widget/category_list.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/listviewbuilder.dart';
 import '../../../../l10n/app_localizations.dart';
 
@@ -19,17 +19,17 @@ class ForumScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CategorySection(
-            title: appLocalization!.menstrualhealth ?? "Menstrual Health",
+            title: appLocalization!.menstrualhealth,
             categories: categories1,
             routeName: RouteName.menstralScreen,
           ),
           CategorySection(
-            title:appLocalization!.fertility ?? "Fertility",
+            title:appLocalization.fertility,
             categories: categories2,
             routeName: RouteName.fertilityScreen,
           ),
           CategorySection(
-            title:appLocalization!.sexualhealth ?? "Sexual Health",
+            title:appLocalization.sexualhealth,
             categories: categories3,
             routeName: RouteName.sexualScreen,
           ),
@@ -45,8 +45,7 @@ class CategorySection extends StatelessWidget {
   final List<CategoryModel> categories;
   final String routeName;
   final TextStyle? textTheme;
-  const CategorySection({
-    Key? key,
+  const CategorySection({super.key,
     required this.title,
     required this.categories,
     required this.routeName,
@@ -70,7 +69,7 @@ class CategorySection extends StatelessWidget {
               GestureDetector(
                 onTap: () => {Navigator.pushNamed(context, routeName)},
                 child: Text(
-                appLocalization!.seeall ??  "See all",
+                appLocalization!.seeall,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w500,

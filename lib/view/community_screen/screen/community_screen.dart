@@ -1,5 +1,3 @@
-// ignore_for_file: unused_local_variable
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
@@ -8,7 +6,7 @@ import 'package:ovella_period_tracker_app/utility/utils.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/event_screen/event_screen.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/Forum_screen/forum_screen.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/screen/group_screen/group_screen.dart';
-import 'package:ovella_period_tracker_app/view/community_screen/widget/inputDecoration.dart';
+import 'package:ovella_period_tracker_app/view/community_screen/widget/input_decoration.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/segment_button.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 import 'package:provider/provider.dart';
@@ -20,14 +18,15 @@ class CommunityScreen extends StatelessWidget {
 
   CommunityScreen({super.key});
   
-  static const List<String> _titles = [
-    
-    "Forum", "Groups", "Events"];
-  static const List<String> _appBarTitles = [
-    "Community",
-    "Groups",
-    "Events & Workshops",
-  ];
+  // static const List<String> _titles = [
+  //
+  //   "Forum", "Groups", "Events"];
+
+  // static const List<String> _appBarTitles = [
+  //   "Community",
+  //   "Groups",
+  //   "Events & Workshops",
+  // ];
   static const List<String> _searchPlaceholders = [
     "Find topics",
     "Find topics and discussions",

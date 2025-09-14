@@ -14,7 +14,7 @@ import '../../../constant/images.dart';
 import '../../../view_model/home_screen_provider.dart';
 import '../../../view_model/pregnancy_screen_provider.dart';
 import '../../community_screen/screen/Forum_screen/forum_screen.dart';
-import '../../community_screen/widget/categoryList.dart';
+import '../../community_screen/widget/category_list.dart';
 import '../../home_screen/add_log_screen/widget/build_log_item_widget.dart';
 import '../../home_screen/widgets/tailored_wellness_journey_widget/wellness_tips_list_widget.dart';
 

@@ -173,7 +173,7 @@ class FullChatScreen extends StatelessWidget {
                                               decoration: BoxDecoration(
                                                 color: Color(
                                                   0xffFF5BFF,
-                                                ).withOpacity(0.07),
+                                                ).withAlpha(80),
                                                 borderRadius:
                                                 BorderRadius.circular(
                                                   24.r,
@@ -249,7 +249,7 @@ class FullChatScreen extends StatelessWidget {
                                               decoration: BoxDecoration(
                                                 color: Color(
                                                   0xffFD7E3E,
-                                                ).withOpacity(0.07),
+                                                ).withAlpha(80),
                                                 borderRadius:
                                                 BorderRadius.circular(
                                                   24.r,
@@ -363,7 +363,7 @@ class FullChatScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.grey.withOpacity(0.1),
+                              color: Colors.grey.withAlpha(100),
                               offset: Offset(0, 8),
                               blurRadius: 7.r,
                               spreadRadius: 7.r,
@@ -425,7 +425,7 @@ class FullChatScreen extends StatelessWidget {
                           color: Colors.white,
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.grey.withOpacity(0.1),
+                              color: Colors.grey.withAlpha(100),
                               offset: Offset(0, 8),
                               blurRadius: 7.r,
                               spreadRadius: 7.r,

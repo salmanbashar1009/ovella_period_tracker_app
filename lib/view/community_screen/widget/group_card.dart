@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ovella_period_tracker_app/view/community_screen/widget/joinButton.dart';
-import 'package:ovella_period_tracker_app/model/groupModel.dart'; // Import your model
+import 'package:ovella_period_tracker_app/view/community_screen/widget/join_button.dart';
+import 'package:ovella_period_tracker_app/model/group_model.dart'; // Import your model
 
 class GroupCard extends StatelessWidget {
   final GroupModel group;

@@ -16,6 +16,7 @@ class _EditYearPickerState extends State<EditYearPicker> {
 
   @override
   void initState() {
+    super.initState();
     // TODO: implement initState
     // Set initial position when the widget is built
     WidgetsBinding.instance.addPostFrameCallback((_) {

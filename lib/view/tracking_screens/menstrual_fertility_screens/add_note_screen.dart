@@ -11,7 +11,7 @@ import 'package:provider/provider.dart';
 class AddNoteScreen extends StatelessWidget {
    AddNoteScreen({super.key});
 
-  TextEditingController _textEditingController = TextEditingController();
+  final _textEditingController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +63,7 @@ class AddNoteScreen extends StatelessWidget {
                               decoration: InputDecoration(
                                 hintText: 'Write your note here...',
                                 hintStyle: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                    color: AppColors.lightTextColor.withOpacity(0.5),
+                                    color: AppColors.lightTextColor.withAlpha(300),
                                     fontSize: 13.sp,
                                     fontWeight: FontWeight.w400
                                 ),

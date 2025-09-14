@@ -1,23 +1,21 @@
-// ignore_for_file: unused_local_variable
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart'
     show AppPadding;
-import 'package:ovella_period_tracker_app/model/eventModel.dart';
-import 'package:ovella_period_tracker_app/model/healthCardModel.dart';
+import 'package:ovella_period_tracker_app/model/event_model.dart';
+import 'package:ovella_period_tracker_app/model/health_card_model.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
-import 'package:ovella_period_tracker_app/view/community_screen/widget/speakerTile.dart';
+import 'package:ovella_period_tracker_app/view/community_screen/widget/speaker_tile.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 
-class EventdetailsScreen extends StatelessWidget {
+class EventDetailsScreen extends StatelessWidget {
   final Event event;
-  const EventdetailsScreen({super.key, required this.event});
+  const EventDetailsScreen({super.key, required this.event});
 
   @override
   Widget build(BuildContext context) {
-    final Healthcardmodel? card;
+    final HealthCardModel? card;
 
     return BackgroundWidget(
       child: SingleChildScrollView(
@@ -207,13 +205,13 @@ class EventdetailsScreen extends StatelessWidget {
                 SizedBox(height: 16.h),
                 Row(
                   children: [
-                    Speakertile(
+                    SpeakerTile(
                       img: "assets/images/person/blackdoc.png",
                       title: "Dr. Emily Carter",
                       subtitle: "Certified Prenatal Nutritionist",
                     ),
                     SizedBox(width: 16.w),
-                    Speakertile(
+                    SpeakerTile(
                       img: "assets/images/person/doc.png",
                       title: "Dr. Alex Mitchell",
                       subtitle: " Obstetrician & Gynecologist",

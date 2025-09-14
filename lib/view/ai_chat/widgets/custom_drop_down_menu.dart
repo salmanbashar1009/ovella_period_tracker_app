@@ -20,7 +20,7 @@ class CustomDropDownMenu extends StatelessWidget {
             borderRadius:BorderRadius.circular(20.r),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.15),
+              color: Colors.grey.withAlpha(150),
               spreadRadius: 10.r,
               blurRadius: 10.r,
               offset: Offset(-4, 8)

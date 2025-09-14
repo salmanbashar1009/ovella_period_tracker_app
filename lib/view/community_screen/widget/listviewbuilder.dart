@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ovella_period_tracker_app/constant/padding.dart';
-import 'package:ovella_period_tracker_app/view/community_screen/screen/Forum_screen/details_screen/mensrualHealth.dart';
-import 'package:ovella_period_tracker_app/view/community_screen/widget/CategoryCard1.dart';
-import 'package:ovella_period_tracker_app/model/catagoryModel.dart';
+import 'package:ovella_period_tracker_app/view/community_screen/screen/Forum_screen/details_screen/mensrual_health.dart';
+import 'package:ovella_period_tracker_app/view/community_screen/widget/category_card1.dart';
+import 'package:ovella_period_tracker_app/model/catagory_model.dart';
 
 // ignore: must_be_immutable
 class CategoryList extends StatelessWidget {
@@ -13,13 +12,13 @@ class CategoryList extends StatelessWidget {
   double? val;
   double? right;
   CategoryList({
-    Key? key,
+    super.key,
     required this.categories,
     this.scrollDirection,
     this.size,
     this.val,
     this.right,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

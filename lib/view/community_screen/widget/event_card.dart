@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ovella_period_tracker_app/model/eventModel.dart';
+import 'package:ovella_period_tracker_app/model/event_model.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
-import 'package:ovella_period_tracker_app/view/community_screen/screen/event_screen/eventDetails_screen.dart';
-import 'package:ovella_period_tracker_app/view/community_screen/widget/getdetailButton.dart';
+import 'package:ovella_period_tracker_app/view/community_screen/screen/event_screen/event_details_screen.dart';
+import 'package:ovella_period_tracker_app/view/community_screen/widget/getdetail_button.dart';
 
 class EventCard extends StatelessWidget {
   final Event event;
@@ -81,7 +81,7 @@ class EventCard extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => EventdetailsScreen(event: event),
+                    builder: (context) => EventDetailsScreen(event: event),
                   ),
                 );
               },

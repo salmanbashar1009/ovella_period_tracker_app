@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/view_model/settings_provider.dart';
 import 'package:provider/provider.dart';
-import '../../../../constant/images.dart';
 
 class SupportCommunityCard extends StatelessWidget {
   const SupportCommunityCard({super.key});

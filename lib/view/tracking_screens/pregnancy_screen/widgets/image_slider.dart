@@ -96,7 +96,7 @@ class ImageSlider extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.onPrimary,
           shape: BoxShape.circle,
-          border: Border.all(color: AppColors.textColor.withOpacity(0.12)),
+          border: Border.all(color: AppColors.textColor.withAlpha(100)),
         ),
         child: Icon(icon, size: 16.r),
       ),

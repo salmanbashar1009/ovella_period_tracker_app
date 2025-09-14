@@ -1,4 +1,4 @@
-import 'package:ovella_period_tracker_app/model/healthCardModel.dart';
+import 'package:ovella_period_tracker_app/model/health_card_model.dart';
 
 class Event {
   final String imagePath;
@@ -6,7 +6,7 @@ class Event {
   final String date;
   final String location;
   final String discription;
-  final List<Healthcardmodel> card;
+  final List<HealthCardModel> card;
 
   Event({
     required this.imagePath,

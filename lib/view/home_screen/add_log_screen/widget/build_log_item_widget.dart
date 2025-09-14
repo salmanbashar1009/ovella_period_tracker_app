@@ -25,7 +25,7 @@ class BuildLogItem extends StatelessWidget{
               color: logItem["selected"] ? Color(0xffFFEEF2) : Colors.white,
               borderRadius: BorderRadius.circular(33.r),
               border: Border.all(
-                color: logItem["selected"] ? AppColors.secondary :  Color(0xff1E1E1E).withOpacity(0.12),
+                color: logItem["selected"] ? AppColors.secondary :  Color(0xff1E1E1E).withAlpha(120),
               ),
             ),
             child: Row(

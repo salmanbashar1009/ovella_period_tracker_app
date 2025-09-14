@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 
-class Speakertile extends StatelessWidget {
+class SpeakerTile extends StatelessWidget {
   final String title;
   final String img;
   final String subtitle;
-  const Speakertile({
+  const SpeakerTile({
     super.key,
     required this.title,
     required this.subtitle,

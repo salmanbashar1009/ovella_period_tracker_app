@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../theme_extensions/color_palette.dart';
 
 class AppInputDecorationTheme {
   static InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
@@ -9,11 +8,11 @@ class AppInputDecorationTheme {
     labelStyle: TextStyle(color: Color(0xff676364)), // Hint text color
     hintStyle: TextStyle(color: Color(0xff676364)), // Hint text color
     border: OutlineInputBorder(
-      borderSide: BorderSide(color: Color(0xff1E1E1E).withOpacity(0.12)), // Stroke color
+      borderSide: BorderSide(color: Color(0xff1E1E1E).withAlpha(120)), // Stroke color
       borderRadius: BorderRadius.circular(16), // Match inputDecoration
     ),
     enabledBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: Color(0xff1E1E1E).withOpacity(0.12)), // Stroke color
+      borderSide: BorderSide(color: Color(0xff1E1E1E).withAlpha(120)), // Stroke color
       borderRadius: BorderRadius.circular(16),
     ),
     disabledBorder: OutlineInputBorder(

@@ -9,12 +9,12 @@ class CustomSegmentedControl extends StatelessWidget {
   final double borderRadius;
 
   const CustomSegmentedControl({
-    Key? key,
+    super.key,
     required this.options,
     this.selectedColor = Colors.black,
     this.unselectedColor = Colors.transparent,
     this.borderRadius = 25.0,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

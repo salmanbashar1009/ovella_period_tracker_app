@@ -299,7 +299,7 @@ class _PeriodDateContainerState extends State<PeriodDateContainer> {
                           trackGap: 2,
                           strokeWidth: 10,
                           value: value,
-                          color: Color(0xff25C871),
+                          color: Color(0xFF25C871),
                           backgroundColor: AppColors.secondary,
                         );
                       },

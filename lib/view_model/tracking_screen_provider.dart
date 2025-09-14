@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
@@ -51,7 +50,7 @@ class TrackingScreenProvider extends ChangeNotifier{
 
   /// Calendar related variables and methods
 
-  List<int> _monthList = [1,2,3,4,5,5,6,7,8,9,10,11,12];
+  final List<int> _monthList = [1,2,3,4,5,5,6,7,8,9,10,11,12];
   List<int> get monthList => _monthList;
 
     int _year = DateTime.now().year;
@@ -78,20 +77,16 @@ class TrackingScreenProvider extends ChangeNotifier{
   }
 
   void setYear(int newYear){
-    if(newYear != null){
-      _year = newYear;
-      notifyListeners();
+    _year = newYear;
+    notifyListeners();
     }
-  }
 
 
 
   void setMonth(int newMonth){
-    if(newMonth != null){
-      _month = newMonth;
-      notifyListeners();
+    _month = newMonth;
+    notifyListeners();
     }
-  }
 
 
   void removePeriodDates(){
@@ -128,7 +123,7 @@ class TrackingScreenProvider extends ChangeNotifier{
       debugPrint("\nRemove date : $day");
     } else {
       _borderSet.add(tappedDate);
-      debugPrint("\Added date : $day");
+      debugPrint("Added date : $day");
     }
     notifyListeners();
   }

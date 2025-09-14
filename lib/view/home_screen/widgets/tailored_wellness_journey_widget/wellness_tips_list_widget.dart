@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/images.dart';
-import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 import 'package:ovella_period_tracker_app/view/home_screen/widgets/tailored_wellness_journey_widget/tips_container.dart';
 
 class WellnessTipsList extends StatelessWidget{

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ovella_period_tracker_app/routing/route_name.dart';
-import 'package:ovella_period_tracker_app/view_model/create_account_provider.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../utility/utils.dart';

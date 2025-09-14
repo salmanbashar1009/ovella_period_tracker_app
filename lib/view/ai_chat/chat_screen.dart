@@ -178,7 +178,7 @@ class ChatScreen extends StatelessWidget {
                                                 decoration: BoxDecoration(
                                                   color: Color(
                                                     0xffFF5BFF,
-                                                  ).withOpacity(0.07),
+                                                  ).withAlpha(80),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                         24.r,
@@ -254,7 +254,7 @@ class ChatScreen extends StatelessWidget {
                                                 decoration: BoxDecoration(
                                                   color: Color(
                                                     0xffFD7E3E,
-                                                  ).withOpacity(0.07),
+                                                  ).withAlpha(80),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                         24.r,

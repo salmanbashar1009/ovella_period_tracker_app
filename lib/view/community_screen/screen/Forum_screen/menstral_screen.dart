@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/constant/padding.dart';
 import 'package:ovella_period_tracker_app/utility/utils.dart';
-import 'package:ovella_period_tracker_app/view/community_screen/widget/categoryList.dart';
+import 'package:ovella_period_tracker_app/view/community_screen/widget/category_list.dart';
 import 'package:ovella_period_tracker_app/view/community_screen/widget/listviewbuilder.dart';
 import 'package:ovella_period_tracker_app/widgets/background_widget.dart';
 

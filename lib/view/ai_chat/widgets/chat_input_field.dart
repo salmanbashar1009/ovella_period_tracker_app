@@ -35,7 +35,7 @@ class ChatInputField extends StatelessWidget {
                       decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.grey.withOpacity(0.1),
+                            color: Colors.grey.withAlpha(100),
                             offset: Offset(0, 8),
                             blurRadius: 7.r,
                             spreadRadius: 7.r,
@@ -103,7 +103,7 @@ class ChatInputField extends StatelessWidget {
                         color: chatProvider.isListening?AppColors.secondary:Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.grey.withOpacity(0.1),
+                            color: Colors.grey.withAlpha(100),
                             offset: Offset(0, 8),
                             blurRadius: 7.r,
                             spreadRadius: 7.r,

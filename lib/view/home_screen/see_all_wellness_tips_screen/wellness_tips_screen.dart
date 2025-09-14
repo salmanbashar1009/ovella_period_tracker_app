@@ -70,7 +70,7 @@ class WellnessTipsScreen extends StatelessWidget {
                                       sigmaY: 5.0,
                                     ), // Adjust blur intensity
                                     child: Container(
-                                      color: Colors.white.withOpacity(0.2),
+                                      color: Colors.white.withAlpha(100),
                                       padding: EdgeInsets.all(3.r),
                                       child: Row(
                                         mainAxisAlignment:

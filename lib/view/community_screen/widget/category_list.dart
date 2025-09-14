@@ -1,7 +1,7 @@
-import 'package:ovella_period_tracker_app/model/catagoryModel.dart';
-import 'package:ovella_period_tracker_app/model/eventModel.dart';
-import 'package:ovella_period_tracker_app/model/groupModel.dart';
-import 'package:ovella_period_tracker_app/model/healthCardModel.dart';
+import 'package:ovella_period_tracker_app/model/catagory_model.dart';
+import 'package:ovella_period_tracker_app/model/event_model.dart';
+import 'package:ovella_period_tracker_app/model/group_model.dart';
+import 'package:ovella_period_tracker_app/model/health_card_model.dart';
 
 List<CategoryModel> categories1 = [
   CategoryModel(
@@ -183,9 +183,9 @@ final List<Event> events = [
   ),
 ];
 
-final List<Healthcardmodel> healthCard = [
-  Healthcardmodel(title: "Importance of prenatal vitamins and supplements"),
-  Healthcardmodel(title: "Healthy meal planning for each trimester"),
-  Healthcardmodel(title: " Foods to avoid and safe alternatives"),
-  Healthcardmodel(title: "Q&A session with a certified nutritionist"),
+final List<HealthCardModel> healthCard = [
+  HealthCardModel(title: "Importance of prenatal vitamins and supplements"),
+  HealthCardModel(title: "Healthy meal planning for each trimester"),
+  HealthCardModel(title: " Foods to avoid and safe alternatives"),
+  HealthCardModel(title: "Q&A session with a certified nutritionist"),
 ];

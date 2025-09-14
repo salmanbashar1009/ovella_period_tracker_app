@@ -185,7 +185,7 @@ class HomeScreen extends StatelessWidget {
                                         GestureDetector(
                                           onTap: () {
                                             debugPrint(
-                                              "\Mood Edit button pressed\n",
+                                              "\nMood Edit button pressed\n",
                                             );
                                           },
                                           child: Image.asset(

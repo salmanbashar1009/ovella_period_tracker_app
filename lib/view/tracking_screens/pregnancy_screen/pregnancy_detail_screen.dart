@@ -122,22 +122,4 @@ class PregnancyDetailScreen extends StatelessWidget {
     );
   }
 
-  void _showFullScreenImage(BuildContext context, String imageUrl) {
-    showDialog(
-      context: context,
-      builder: (context) => Dialog(
-        backgroundColor: Colors.transparent,
-        child: InteractiveViewer(
-          panEnabled: true,
-          boundaryMargin: EdgeInsets.all(20),
-          minScale: 0.5,
-          maxScale: 4.0,
-          child: GestureDetector(
-            onTap: () => Navigator.pop(context),
-            child: Image.asset(imageUrl, fit: BoxFit.contain),
-          ),
-        ),
-      ),
-    );
-  }
 }

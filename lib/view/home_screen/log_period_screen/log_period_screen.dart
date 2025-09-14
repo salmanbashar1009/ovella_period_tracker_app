@@ -85,7 +85,7 @@ class LogPeriodScreen extends StatelessWidget {
                           ),
                           calendarStyle: CalendarStyle(
                             selectedDecoration: BoxDecoration(
-                              color: const Color(0xffFF4A7A).withOpacity(0.3), /// Updated fill color
+                              color: const Color(0xffFF4A7A).withAlpha(150), /// Updated fill color
                               shape: BoxShape.rectangle,
                               borderRadius: BorderRadius.circular(8.0),
                             ),

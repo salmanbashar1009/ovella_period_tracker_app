@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ovella_period_tracker_app/model/catagoryModel.dart';
+import 'package:ovella_period_tracker_app/model/catagory_model.dart';
 
 class CategoryProvider with ChangeNotifier {
   int _selectedIndex = 0; // Default index

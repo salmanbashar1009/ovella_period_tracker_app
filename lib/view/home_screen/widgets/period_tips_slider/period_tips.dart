@@ -6,7 +6,9 @@ import 'package:ovella_period_tracker_app/view_model/home_screen_provider.dart';
 import 'package:provider/provider.dart';
 
 class PeriodTips extends StatelessWidget {
-  final PageController _controller = PageController();
+  // final PageController _controller = PageController();
+
+  const PeriodTips({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +59,7 @@ class PeriodTips extends StatelessWidget {
                   position: homeScreenProvider.periodTipsCurrentPage.toDouble(),
                   decorator: DotsDecorator(
                     activeColor: Theme.of(context).colorScheme.secondary,
-                    color: Colors.grey.withOpacity(0.3 ),
+                    color: Colors.grey.withAlpha(150 ),
                     size: Size(8.0, 8.0),
                     activeSize: Size(8.0, 8.0),
                   ),

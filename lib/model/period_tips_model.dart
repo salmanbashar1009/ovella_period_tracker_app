@@ -7,15 +7,15 @@ class PeriodTipsModel {
     if (json['tips'] != null) {
       tips = <Tips>[];
       json['tips'].forEach((v) {
-        tips!.add(new Tips.fromJson(v));
+        tips!.add( Tips.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.tips != null) {
-      data['tips'] = this.tips!.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data =  <String, dynamic>{};
+    if (tips != null) {
+      data['tips'] = tips!.map((v) => v.toJson()).toList();
     }
     return data;
   }
@@ -35,10 +35,10 @@ class Tips {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['title'] = this.title;
-    data['body'] = this.body;
-    data['image'] = this.image;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['title'] = title;
+    data['body'] = body;
+    data['image'] = image;
     return data;
   }
 }
