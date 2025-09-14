@@ -9,7 +9,7 @@ import '../theme/theme/theme_extensions/color_palette.dart';
 import '../view/tracking_screens/menstrual_fertility_screens/widgets/calender_grid.dart' show CalendarGrid;
 
 class CustomCalendar extends StatelessWidget {
-  CustomCalendar({
+  const CustomCalendar({
     super.key,required this.onTap
   });
 
