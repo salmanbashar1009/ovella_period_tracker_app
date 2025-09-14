@@ -1,5 +1,3 @@
-import 'dart:ui';
-import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -26,7 +24,6 @@ import 'package:provider/provider.dart';
 import 'l10n/app_localizations.dart';
 import 'view_model/settings_provider.dart';
 import 'view_model/step_screen_provider.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() async {
