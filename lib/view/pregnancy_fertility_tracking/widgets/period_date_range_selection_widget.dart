@@ -80,12 +80,12 @@ class PeriodDateRangeSelection extends StatelessWidget {
                         ),
                         calendarStyle: CalendarStyle(
                           todayDecoration: BoxDecoration(
-                            color: AppColors.secondary.withOpacity(0.3),
+                            color: AppColors.secondary.withAlpha(150),
                             shape: BoxShape.rectangle,
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           selectedDecoration: BoxDecoration(
-                            color: AppColors.secondary.withOpacity(0.3),
+                            color: AppColors.secondary.withAlpha(150),
                             shape: BoxShape.rectangle,
                             borderRadius: BorderRadius.circular(8.0),
                           ),
@@ -109,7 +109,7 @@ class PeriodDateRangeSelection extends StatelessWidget {
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   border: Border.all(
-                                    color: AppColors.secondary.withOpacity(0.3),
+                                    color: AppColors.secondary.withAlpha(150),
                                   ),
                                   shape: BoxShape.rectangle,
                                   borderRadius: BorderRadius.circular(8.0),

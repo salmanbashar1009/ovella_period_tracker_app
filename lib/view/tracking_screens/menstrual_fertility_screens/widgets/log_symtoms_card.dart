@@ -6,8 +6,7 @@ class LogCard extends StatelessWidget {
   final VoidCallback onAddPressed;
   final String title;
 
-  const LogCard({Key? key, required this.onAddPressed, required this.title})
-    : super(key: key);
+  const LogCard({super.key, required this.onAddPressed, required this.title});
 
   @override
   Widget build(BuildContext context) {

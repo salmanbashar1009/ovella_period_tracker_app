@@ -23,7 +23,7 @@ class SupportCommunityCard extends StatelessWidget {
             children: [
               Text('Support & Community', style: textTheme.bodyLarge),
               SizedBox(height: 10.h),
-              Divider(color: Color(0xff1E1E1E).withOpacity(0.12)),
+              Divider(color: Color(0xff1E1E1E).withAlpha(120)),
               _buildDetails(title: 'Contact Support', context: context),
               _buildDetails(title: 'FAQ & Guides', context: context),
               _buildDetails(title: 'Join a Community ', context: context),

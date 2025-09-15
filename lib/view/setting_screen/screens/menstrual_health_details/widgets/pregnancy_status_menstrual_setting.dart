@@ -36,7 +36,7 @@ class PregnancyStatusMenstrualSetting extends StatelessWidget {
             decoration: BoxDecoration(
               color: AppColors.onPrimary,
               border: Border.all(
-                color: Color(0xff1E1E1E).withOpacity(0.12),
+                color: Color(0xff1E1E1E).withAlpha(120),
               ),
               borderRadius: BorderRadius.circular(16.r),
             ),

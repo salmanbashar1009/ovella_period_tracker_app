@@ -28,7 +28,7 @@ class MenstrualHealthDetailsCard extends StatelessWidget {
             ],
           ),
           SizedBox(height: 10.h),
-          Divider(color: Color(0xff1E1E1E).withOpacity(0.12)),
+          Divider(color: Color(0xff1E1E1E).withAlpha(120)),
           _buildDetails(
             textTheme: textTheme,
             title: 'Cycle Length',

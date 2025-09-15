@@ -47,7 +47,7 @@ class _StepScreenState extends State<StepScreen> {
                               color:
                                   stepScreenProvider.currentIndex >= index
                                       ? colorScheme.secondary
-                                      : Color(0xff1E1E1E).withOpacity(0.12),
+                                      : Color(0xff1E1E1E).withAlpha(120),
                               borderRadius: BorderRadius.circular(8),
                             ),
                           );

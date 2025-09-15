@@ -34,7 +34,7 @@ class CycleSelectWidget extends StatelessWidget {
         padding: EdgeInsets.all(16.h),
         decoration: BoxDecoration(
           color: AppColors.onPrimary,
-          border: Border.all(color: Color(0xff1E1E1E).withOpacity(0.12)),
+          border: Border.all(color: Color(0xff1E1E1E).withAlpha(120)),
           borderRadius: BorderRadius.circular(16.r),
         ),
         child: Row(

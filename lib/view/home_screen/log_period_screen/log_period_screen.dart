@@ -255,10 +255,23 @@ class LogPeriodScreen extends StatelessWidget {
                         title: "Save",
                         context: context,
                         onTap: () async {
-                         // debugPrint("\nsaving...\n");
-                          if(context.read<HomeScreenProvider>().tempPeriodDaysSelection != null && context.read<HomeScreenProvider>().tempPeriodDaysSelection!.isNotEmpty){
-                            await context.read<HomeScreenProvider>().saveLogPeriod();
-                            Navigator.pop(context);
+                          /// error: using context inside async method
+                         // // debugPrint("\nsaving...\n");
+                         //  if(context.read<HomeScreenProvider>().tempPeriodDaysSelection != null && context.read<HomeScreenProvider>().tempPeriodDaysSelection!.isNotEmpty){
+                         //    await context.read<HomeScreenProvider>().saveLogPeriod();
+                         //    Navigator.pop(context);
+                         //  }
+
+                          /// solution: use context.mounted to check if the widget is still in the tree
+                          final homeScreenProvider = context.read<HomeScreenProvider>();
+
+                          if (homeScreenProvider.tempPeriodDaysSelection != null &&
+                              homeScreenProvider.tempPeriodDaysSelection!.isNotEmpty) {
+                            await homeScreenProvider.saveLogPeriod();
+
+                            if (context.mounted) { // ensures the widget is still in the tree
+                              Navigator.pop(context);
+                            }
                           }
 
                           },

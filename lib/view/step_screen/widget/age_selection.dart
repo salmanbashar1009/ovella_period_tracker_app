@@ -7,7 +7,7 @@ import '../../../utility/utils.dart';
 import '../../../view_model/step_screen_provider.dart';
 
 class AgeSelection extends StatelessWidget {
-  AgeSelection({
+  const AgeSelection({
     super.key,
     required this.textTheme,
     required List<int> allAges,
@@ -18,7 +18,7 @@ class AgeSelection extends StatelessWidget {
   final TextTheme textTheme;
   final List<int> _allAges;
   final StepScreenProvider stepScreenProvider;
-  bool isScreen;
+  final bool isScreen;
 
   @override
   Widget build(BuildContext context) {

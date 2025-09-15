@@ -60,7 +60,7 @@ class EditCalenderScreen extends StatelessWidget {
                             height: 290.h,
                             width: double.infinity,
                             child: CalendarGrid(
-                              borderColor: AppColors.textColor.withOpacity(0.12),
+                              borderColor: AppColors.textColor.withAlpha(120),
                               year: trackingScreenProvider.selectedMonthYear.year,
                               month:
                                   trackingScreenProvider

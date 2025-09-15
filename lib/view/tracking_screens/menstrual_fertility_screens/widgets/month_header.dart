@@ -7,7 +7,7 @@ import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.da
 import 'package:provider/provider.dart';
 
 class MonthHeader extends StatelessWidget {
-  const MonthHeader({Key? key}) : super(key: key);
+  const MonthHeader({super.key});
 
   void _showYearMonthPicker(BuildContext context) {
     showDialog(

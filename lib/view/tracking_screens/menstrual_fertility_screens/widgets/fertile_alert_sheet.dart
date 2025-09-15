@@ -38,7 +38,7 @@ void showFertileAlertDialogSheet(BuildContext context) {
                             ),),
                           SizedBox(height: 10.h,),
                           Center(
-                            child: Text(fertileDateStart + " - " + fertileDateEnd, style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                            child: Text("$fertileDateStart - $fertileDateEnd", style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                               color: Colors.purpleAccent.shade200,
                             ), ),
                           ),

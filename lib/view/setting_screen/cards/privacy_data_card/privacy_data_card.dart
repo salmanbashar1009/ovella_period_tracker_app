@@ -19,7 +19,7 @@ class PrivacyDataCard extends StatelessWidget {
         children: [
           Text('Privacy & Data', style: textTheme.bodyLarge),
           SizedBox(height: 10.h),
-          Divider(color: Color(0xff1E1E1E).withOpacity(0.12)),
+          Divider(color: Color(0xff1E1E1E).withAlpha(120)),
 
           _buildDetails(title: 'View Data Insights', context: context),
           _buildDetails(title: 'Export Data', context: context),

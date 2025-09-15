@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class FAQCard extends StatelessWidget {
-  const FAQCard({super.key});
+class FaqCard extends StatelessWidget {
+  const FaqCard({super.key});
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
@@ -19,7 +19,7 @@ class FAQCard extends StatelessWidget {
         children: [
           Text('FAQ', style: textTheme.bodyLarge),
           SizedBox(height: 10.h),
-          Divider(color: Color(0xff1E1E1E).withOpacity(0.12)),
+          Divider(color: Color(0xff1E1E1E).withAlpha(120)),
 
           _buildDetails(title: 'Is My Data Secure', context: context),
           _buildDetails(title: 'Can I Stop Sharing?', context: context),

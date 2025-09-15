@@ -16,8 +16,9 @@ class AppBottomNavBar extends StatelessWidget {
         ),
         child: FloatingActionButton(
           backgroundColor: AppColors.secondary,
-          onPressed: (){},child: Text("AI"),
+          onPressed: (){},
           shape: CircleBorder(),
+          child: Text("AI"),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

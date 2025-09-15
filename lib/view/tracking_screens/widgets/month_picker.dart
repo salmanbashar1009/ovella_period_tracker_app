@@ -5,7 +5,7 @@ import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.da
 import 'package:provider/provider.dart';
 
 class EditMonthPicker extends StatefulWidget {
-  EditMonthPicker({Key? key}) : super(key: key);
+  const EditMonthPicker({super.key});
 
   @override
   State<EditMonthPicker> createState() => _EditMonthPickerState();

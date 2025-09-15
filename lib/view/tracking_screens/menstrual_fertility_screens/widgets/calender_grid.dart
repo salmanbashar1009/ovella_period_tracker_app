@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.dart';
 import 'package:provider/provider.dart';
-
 import 'day_cell.dart';
 
 class CalendarGrid extends StatelessWidget {
   final int year;
   final int month;
   final Color? borderColor;
-  Function(int)  onTap;
+  final void Function(int)  onTap;
 
-   CalendarGrid({
+   const CalendarGrid({
     super.key,
     required this.year,
     required this.month, //required this.onTap,
-    required this.onTap, this.borderColor,
+    required this.onTap,
+     this.borderColor,
   });
 
   @override

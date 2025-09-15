@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/theme/theme/theme_extensions/color_palette.dart';
 
 class WeekdayHeader extends StatelessWidget {
-  const WeekdayHeader({Key? key}) : super(key: key);
+  const WeekdayHeader({super.key});
 
   @override
   Widget build(BuildContext context) {

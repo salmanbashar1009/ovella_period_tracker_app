@@ -31,7 +31,7 @@ class PreferencesNotificationCard extends StatelessWidget {
                 style: textTheme.bodyLarge,
               ),
               SizedBox(height: 10.h),
-              Divider(color: Color(0xff1E1E1E).withOpacity(0.12)),
+              Divider(color: Color(0xff1E1E1E).withAlpha(120)),
 
               _buildDetails(
                 title: 'Period Alerts',

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
-import 'package:ovella_period_tracker_app/view/invite_partner_screen/cards/FAQ_card/FAQ_card.dart';
+import 'package:ovella_period_tracker_app/view/invite_partner_screen/cards/FAQ_card/faq_card.dart';
 import 'package:ovella_period_tracker_app/view/invite_partner_screen/cards/step_card/step_card.dart';
 import '../../constant/padding.dart';
 import '../../utility/utils.dart';
@@ -76,7 +76,7 @@ class InvitePartnerScreen extends StatelessWidget {
                   SizedBox(height: 16.h),
 
                   /// <-------------- FAQ Card -------------->
-                  FAQCard(),
+                  FaqCard(),
                   SizedBox(height: 16.h),
 
                   ///<<<------- How to Invite partner(Step) card-------->

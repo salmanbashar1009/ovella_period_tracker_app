@@ -34,7 +34,7 @@ class _PeriodDateContainerState extends State<PeriodDateContainer> {
         decoration: BoxDecoration(
           color: Colors.transparent,
           shape: BoxShape.circle,
-          border: Border.all(color: const Color(0Xff1e1e1e1f)),
+          border: Border.all(color: const Color(0XFF1e1e1f)),
         ),
         child:
             isLeftButton
@@ -295,7 +295,7 @@ class _PeriodDateContainerState extends State<PeriodDateContainer> {
                         double value = days / 28;
                         debugPrint("\nCircular progress value : $value\n");
                         return CircularProgressIndicator(
-                          year2023: false,
+                          // year2023: false,
                           trackGap: 2,
                           strokeWidth: 10,
                           value: value,

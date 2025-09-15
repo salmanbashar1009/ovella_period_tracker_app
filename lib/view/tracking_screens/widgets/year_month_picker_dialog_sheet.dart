@@ -6,7 +6,7 @@ import 'package:ovella_period_tracker_app/view_model/tracking_screen_provider.da
 import 'package:provider/provider.dart';
 
 class YearMonthPickerDialog extends StatelessWidget {
-  const YearMonthPickerDialog({Key? key}) : super(key: key);
+  const YearMonthPickerDialog({super.key});
 
   @override
   Widget build(BuildContext context) {

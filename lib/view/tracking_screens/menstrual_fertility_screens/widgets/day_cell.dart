@@ -13,13 +13,13 @@ class DayCell extends StatelessWidget {
   final VoidCallback onTap;
 
   const DayCell({
-    Key? key,
+    super.key,
     required this.day,
     this.backgroundColor,
     required this.onTap,
     required this.month,
     required this.year, this.borderColor,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

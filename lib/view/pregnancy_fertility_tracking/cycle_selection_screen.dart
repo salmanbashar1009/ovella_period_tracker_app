@@ -41,7 +41,7 @@ class CycleSelectionScreen extends StatelessWidget {
                           color: AppColors.onPrimary,
                           borderRadius: BorderRadius.circular(16.r),
                           border: Border.all(
-                            color: Color(0xff1E1E1E).withOpacity(0.12),
+                            color: Color(0xff1E1E1E).withAlpha(120),
                           ),
                         ),
                       ),

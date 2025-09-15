@@ -21,7 +21,7 @@ import 'package:ovella_period_tracker_app/view/setting_screen/screens/edit_profi
 import 'package:ovella_period_tracker_app/view/setting_screen/screens/language_setting_screen/language_setting_screen.dart';
 import 'package:ovella_period_tracker_app/view/setting_screen/screens/menstrual_health_details/menstrual_health_details.dart';
 import 'package:ovella_period_tracker_app/view/setting_screen/screens/personal_information_setting/personal_information_settings.dart';
-import 'package:ovella_period_tracker_app/view/setting_screen/screens/personal_information_setting/select_Age_screen.dart';
+import 'package:ovella_period_tracker_app/view/setting_screen/screens/personal_information_setting/select_age_screen.dart';
 import 'package:ovella_period_tracker_app/view/setting_screen/screens/personal_information_setting/select_gender_screen.dart';
 import 'package:ovella_period_tracker_app/view/setting_screen/setting_screen.dart';
 import 'package:ovella_period_tracker_app/view/splash_screen/splash_screen.dart';

@@ -38,7 +38,7 @@ class InvitePartnerCard extends StatelessWidget {
               color: colorScheme.onPrimary,
               textColor: colorScheme.primary,
               textStyle: textTheme.bodyMedium,
-              borderColor: Color(0xff1E1E1E).withOpacity(0.12),
+              borderColor: Color(0xff1E1E1E).withAlpha(120),
               onTap: () {
                 Navigator.pushNamed(context, RouteName.invitePartnerScreen);
               },

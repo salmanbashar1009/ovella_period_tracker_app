@@ -49,7 +49,7 @@ class PairingScreen extends StatelessWidget {
                     textStyle: textTheme.bodyLarge!.copyWith(
                       fontWeight: FontWeight.w500,
                     ),
-                    borderColor: Color(0xff1e1e1e1f).withOpacity(0.12),
+                    borderColor: Color(0xff1e1e1f).withAlpha(100),
                   ),
                 ),
               ],
@@ -116,7 +116,7 @@ class PairingScreen extends StatelessWidget {
                   },
                   padding: EdgeInsets.symmetric(horizontal: 32, vertical: 18),
                   context: context,
-                  borderColor: Color(0xff1e1e1e1f).withOpacity(0.12),
+                  borderColor: Color(0xff1e1e1f).withAlpha(120),
                 ),
               ),
               SizedBox(height: 12.h),
@@ -133,7 +133,7 @@ class PairingScreen extends StatelessWidget {
                   textStyle: textTheme.bodyLarge!.copyWith(
                     fontWeight: FontWeight.w500,
                   ),
-                  borderColor: Color(0xff1e1e1e1f).withOpacity(0.12),
+                  borderColor: Color(0xff1e1e1f).withAlpha(120),
                 ),
               ),
             ],

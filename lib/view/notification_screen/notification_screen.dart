@@ -83,7 +83,7 @@ class NotificationScreen extends StatelessWidget {
                         padding: EdgeInsets.symmetric(vertical: 5.h),
                         margin: EdgeInsets.symmetric(vertical: 5.h),
                         decoration: BoxDecoration(
-                          color: AppColors.onPrimary.withOpacity(0.5),
+                          color: AppColors.onPrimary.withAlpha(150),
                           borderRadius: BorderRadius.circular(20.r),
                         ),
                         child: ListTile(
