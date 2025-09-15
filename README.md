@@ -4,8 +4,6 @@ Ovella Period Tracker App is a modern, user-friendly Flutter application designe
 
 ---
 
-![period_tracker_ss.png](assets/period_tracker_ss.png)
-
 ## Features
 
 ### 1. Menstrual Cycle Tracking
@@ -79,7 +77,7 @@ Ovella Period Tracker App is a modern, user-friendly Flutter application designe
 
 ## Screenshots
 
-*(Add screenshots of the app’s main screens here)*
+![period_tracker_ss.png](assets/period_tracker_ss.png)
 
 ---
 
