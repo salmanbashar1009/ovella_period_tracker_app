@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ovella_period_tracker_app/routing/route_name.dart';
-import 'package:ovella_period_tracker_app/view/invite_partner_screen/cards/FAQ_card/faq_card.dart';
 import 'package:ovella_period_tracker_app/view/invite_partner_screen/cards/step_card/step_card.dart';
 import '../../constant/padding.dart';
 import '../../utility/utils.dart';
 import '../../widgets/background_widget.dart';
+import 'cards/FAQ_card/faq_card.dart';
 import 'cards/journey_together_card/journey_together_card.dart';
 import 'cards/invite_partner_theme_card/invite_partner_theme_card.dart';
 import 'cards/what_your_partner_get/what_your_partner_get.dart';
